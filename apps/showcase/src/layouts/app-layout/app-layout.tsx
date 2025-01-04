@@ -18,14 +18,10 @@ function AppLayout(props: PropsWithChildren) {
     <Layout>
       <LayoutMask />
       <LayoutSidebar>
-        <header className="sidebar__header">
-          <span>Adam Aho</span>
-        </header>
         <LayoutSidebarResizeHandle />
       </LayoutSidebar>
       <LayoutContent>
         <LayoutSidebarToggle icon={<PanelLeft />} />
-        Breadcrumbs
         {props.children}
       </LayoutContent>
     </Layout>

@@ -722,10 +722,12 @@ function LayoutContent({
       {...props}
       className={clsx(className, "wui-layout__content")}
       data-slot="content"
-      ref={ref}
       data-sidebar-dragging={context.sidebarDragging}
+      ref={ref}
     >
-      {children}
+      <div className="wui-layout__page" data-component="page">
+        {children}
+      </div>
     </main>
   );
 }

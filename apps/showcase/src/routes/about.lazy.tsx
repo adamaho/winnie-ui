@@ -18,10 +18,10 @@ function About() {
 
   return (
     <div className="p-2">
-      <button onClick={addUser}>Add User</button>
-      {users.map((u) => (
-        <div key={u.id}>{u.name}</div>
-      ))}
+      {/* <button onClick={addUser}>Add User</button> */}
+      {/* {users.map((u) => ( */}
+      {/*   <div key={u.id}>{u.name}</div> */}
+      {/* ))} */}
     </div>
   );
 }
