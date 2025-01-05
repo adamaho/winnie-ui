@@ -396,9 +396,9 @@
       justify-items: center;
       padding: 0;
       position: absolute;
-      left: var(--wui-space-6);
+      left: var(--wui-space-4);
       opacity: 1;
-      top: var(--wui-space-6);
+      top: var(--wui-space-4);
       width: var(--wui-button-height, var(--wui-button-md-height));
 
       @media (prefers-reduced-motion: no-preference) {
@@ -406,6 +406,11 @@
         transition-delay: var(--wui-duration-2);
         transition-duration: var(--wui-duration-3);
         transition-timing-function: ease-in-out;
+      }
+
+      @media (min-width: 768px) {
+        left: var(--wui-space-6);
+        top: var(--wui-space-6);
       }
 
       @starting-style {
