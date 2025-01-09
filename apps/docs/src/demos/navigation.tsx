@@ -34,34 +34,34 @@ export function NavigationDemo() {
   return (
     <Navigation className="not-content" style={{ maxWidth: "250px" }}>
       <NavigationItem>
-        {/* <NavigationItemIcon> */}
-        {/*   <HomeDoor /> */}
-        {/* </NavigationItemIcon> */}
+        <NavigationItemIcon>
+          <HomeDoor />
+        </NavigationItemIcon>
         <NavigationItemLabel>Home</NavigationItemLabel>
       </NavigationItem>
       <NavigationItem>
-        {/* <NavigationItemIcon> */}
-        {/*   <Burger /> */}
-        {/* </NavigationItemIcon> */}
+        <NavigationItemIcon>
+          <Burger />
+        </NavigationItemIcon>
         <NavigationItemLabel>Dishes</NavigationItemLabel>
       </NavigationItem>
       <NavigationItem>
-        {/* <NavigationItemIcon> */}
-        {/*   <Cocktail /> */}
-        {/* </NavigationItemIcon> */}
+        <NavigationItemIcon>
+          <Cocktail />
+        </NavigationItemIcon>
         <NavigationItemLabel>Drinks</NavigationItemLabel>
       </NavigationItem>
       <NavigationItem>
-        {/* <NavigationItemIcon> */}
-        {/*   <LayoutGrid /> */}
-        {/* </NavigationItemIcon> */}
+        <NavigationItemIcon>
+          <LayoutGrid />
+        </NavigationItemIcon>
         <NavigationItemLabel>Menus</NavigationItemLabel>
       </NavigationItem>
       <NavigationDisclosure defaultExpanded>
         <NavigationDisclosureTrigger>
-          {/* <NavigationDisclosureTriggerIcon> */}
-          {/*   <Store /> */}
-          {/* </NavigationDisclosureTriggerIcon> */}
+          <NavigationDisclosureTriggerIcon>
+            <Store />
+          </NavigationDisclosureTriggerIcon>
           <NavigationDisclosureTriggerLabel>
             Locations
           </NavigationDisclosureTriggerLabel>
@@ -98,9 +98,6 @@ export function NavigationDemo() {
             <NavigationItemLabel>Vancouver</NavigationItemLabel>
           </NavigationItem>
           <NavigationItem>
-            {/* <NavigationItemIcon> */}
-            {/*   <LayoutGrid /> */}
-            {/* </NavigationItemIcon> */}
             <NavigationItemLabel>Waterloo</NavigationItemLabel>
           </NavigationItem>
         </NavigationDisclosureContent>
