@@ -2,10 +2,14 @@
   [data-component="page"] {
     --wui-page-inline-space: calc(var(--wui-space-9) + var(--wui-space-4));
 
+    border-radius: 0px;
     display: flex;
-    border-radius: min(var(--wui-border-radius-3), 18px);
     flex-direction: column;
     flex: 1;
+
+    @media (min-width: 768px) {
+      border-radius: min(var(--wui-border-radius-3), 18px);
+    }
 
     [data-slot="header"] {
       align-items: center;

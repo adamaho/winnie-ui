@@ -103,7 +103,6 @@ const { title, description, documentation, headings } = Astro.props;
           }
 
           .wui-docs-article-documentation {
-            cursor: pointer;
             margin-top: var(--wui-space-5);
           }
         }
@@ -160,10 +159,18 @@ const { title, description, documentation, headings } = Astro.props;
               padding-bottom: var(--wui-space-1);
             }
 
-            ul:not(:where(.not-content)) {
+            ul:not(:where(.not-content, )) {
               list-style-type: disc;
               margin: var(--wui-space-6) 0;
               padding-left: var(--wui-space-8);
+            }
+
+            .wui-navigation__disclosure-content {
+              ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+              }
             }
           }
         }

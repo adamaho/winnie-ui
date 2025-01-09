@@ -98,6 +98,7 @@ function Button({
   radius = undefined,
   size = "md",
   variant = "solid",
+  slot,
   width = "auto",
   ref,
   ...props
@@ -114,12 +115,14 @@ function Button({
       <AriaButton
         {...props}
         className={clsx("wui-button", className)}
+        data-slot={slot}
         data-accent-color={color}
         data-component="button"
         data-radius={radius}
         data-size={size}
         data-variant={variant}
         data-width={width}
+        slot={slot}
         ref={ref}
       >
         {children}

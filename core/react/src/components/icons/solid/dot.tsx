@@ -31,7 +31,7 @@ function Dot({
     <svg
       {...props}
       {...getIconProps({ color, contrast, size })}
-      className={clsx("wui-icon wui-icon-solid wui-icon-dot", className)}
+      className={clsx("wui-icon wui-icon-solid wui-icon__dot", className)}
       data-component="icon"
       width="16"
       height="16"

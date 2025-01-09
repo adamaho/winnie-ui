@@ -3,7 +3,7 @@ import { type IconProps, getIconProps } from "../../../utils/get-icon-props";
 
 import clsx from "clsx";
 
-type ChevronRightProps = IconProps & {
+type CocktailProps = IconProps & {
   /**
    * Ref to button element
    */
@@ -11,47 +11,48 @@ type ChevronRightProps = IconProps & {
 };
 
 /**
- * # Outlined - ChevronRight
+ * # Outlined - Cocktail
  *
  *
  * ```tsx
- * <ChevronRight />
+ * <Cocktail />
  * ```
  *
  * See {@link https://winnie-ui.com/react/docs/components/icons Documentation} for examples.
  */
-function ChevronRight({
+function Cocktail({
   className,
   color = undefined,
   contrast = "high",
   size = "3",
   ...props
-}: ChevronRightProps) {
+}: CocktailProps) {
   return (
     <svg
       {...props}
       {...getIconProps({ color, contrast, size })}
       className={clsx(
-        "wui-icon wui-icon-outlined wui-icon__chevron-right",
+        "wui-icon wui-icon-outlined wui-icon__cocktail",
         className,
       )}
       data-component="icon"
-      width="16"
-      height="16"
+      width="24"
+      height="24"
       strokeWidth="1.5"
-      viewBox="0 0 16 16"
+      viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z"
-        fill="currentColor"
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        d="M12.0006 13.0147V21.25M12.0006 13.0147L3.09608 5.51486C2.3827 4.91402 2.80758 3.75 3.74028 3.75H20.261C21.1937 3.75 21.6186 4.91402 20.9052 5.51486L12.0006 13.0147ZM12.0006 21.25H7.75061M12.0006 21.25H16.2506"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
       />
     </svg>
   );
 }
 
-export { ChevronRight };
-export type { ChevronRightProps };
+export { Cocktail };
+export type { CocktailProps };

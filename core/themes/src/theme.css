@@ -7,6 +7,7 @@
     border: var(--wui-button-border);
     box-shadow: var(--wui-button-box-shadow);
     color: var(--wui-button-color);
+    cursor: var(--wui-cursor-pressable, default);
     font-weight: var(--wui-button-font-weight);
 
     &[data-variant="solid"] {
@@ -271,7 +272,7 @@
   /* -------------------------------------------------------------------------------------------------
    * Icon 
    * -----------------------------------------------------------------------------------------------*/
-  [data-component="icon"]:not([data-slot="indicator"]) {
+  [data-component="icon"]:not([data-slot="indicator"], [data-slot="icon"]) {
     &[data-contrast="low"] {
       color: var(--wui-icon-low-color);
     }
@@ -333,7 +334,7 @@
           var(--wui-layout-content-space) *
           2 -
           var(--wui-space-4) *
-          2
+          theme 2
         );
         margin-inline: calc(-1 * var(--wui-space-3));
         outline: none;
@@ -439,7 +440,7 @@
    * Link 
    * -----------------------------------------------------------------------------------------------*/
   [data-component="link"] {
-    cursor: var(--wui-cursor-linkable, pointer);
+    cursor: var(--wui-cursor-linkable, default);
     font-family: var(--wui-link-font-family, var(--wui-font-family-sans));
     letter-spacing: var(--wui-link-letter-spacing);
     text-decoration: var(--wui-link-text-decoration);
@@ -565,12 +566,33 @@
   }
 
   /* -------------------------------------------------------------------------------------------------
+   * Navigation 
+   * -----------------------------------------------------------------------------------------------*/
+  [data-component="navigation"] {
+    li,
+    ul,
+    h3,
+    [data-component="disclosure"] {
+      display: grid;
+      grid-template-columns: subgrid;
+      grid-column: 1 / -1;
+    }
+
+    [data-component="navigation-item"] {
+      font-weight: var(--wui-navigation__item-font-weight);
+    }
+  }
+
+  /* -------------------------------------------------------------------------------------------------
    * Page 
    * -----------------------------------------------------------------------------------------------*/
   [data-component="page"] {
     background: var(--wui-page-background);
-    border: var(--wui-page-border);
-    box-shadow: var(--wui-page-box-shadow);
+
+    @media (min-width: 768px) {
+      border: var(--wui-page-border);
+      box-shadow: var(--wui-page-box-shadow);
+    }
   }
 
   /* -------------------------------------------------------------------------------------------------

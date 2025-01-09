@@ -48,6 +48,12 @@
         "types": "./src/components/menu.tsx"
       }
     },
+    "./navigation": {
+      "import": {
+        "default": "./src/components/navigation.tsx",
+        "types": "./src/components/navigation.tsx"
+      }
+    },
     "./text": {
       "import": {
         "default": "./src/components/text.tsx",

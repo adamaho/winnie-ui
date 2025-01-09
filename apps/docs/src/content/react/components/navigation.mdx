@@ -1,0 +1,131 @@
+---
+title: Navigation 
+description: Provides users the ability to navigate an application.
+documentation: https://react-spectrum.adobe.com/react-aria/Disclosure.html
+---
+
+import {
+  NavigationDemo,
+} from "~/demos/navigation";
+
+import Demo from "~/components/demo/demo.astro";
+
+<Demo>
+  <NavigationDemo client:load />
+  <Fragment slot="footer">
+    ```tsx
+    <Navigation>
+      <NavigationItem>
+        <NavigationItemLabel>Home</NavigationItemLabel>
+      </NavigationItem>
+      <NavigationItem>
+        <NavigationItemLabel>Dishes</NavigationItemLabel>
+      </NavigationItem>
+      <NavigationItem>
+        <NavigationItemLabel>Drinks</NavigationItemLabel>
+      </NavigationItem>
+      <NavigationItem>
+        <NavigationItemLabel>Menus</NavigationItemLabel>
+      </NavigationItem>
+      <NavigationDisclosure>
+        <NavigationDisclosureTrigger>
+          <NavigationDisclosureTriggerLabel>
+            Locations
+          </NavigationDisclosureTriggerLabel>
+          <MenuProvider>
+            <Button slot="action" color="grey" variant="plain" size="sm">
+              <ButtonIcon>
+                <DotGrid1x3 />
+              </ButtonIcon>
+            </Button>
+            <MenuPopover placement="bottom right">
+              <Menu>
+                <MenuItem>
+                  <MenuItemLabel>Add</MenuItemLabel>
+                </MenuItem>
+                <MenuItem>
+                  <MenuItemLabel>Edit</MenuItemLabel>
+                </MenuItem>
+                <MenuItem>
+                  <MenuItemLabel>Duplicate</MenuItemLabel>
+                </MenuItem>
+                <MenuSeparator />
+                <MenuItem color="red">
+                  <MenuItemLabel>Delete</MenuItemLabel>
+                </MenuItem>
+              </Menu>
+            </MenuPopover>
+          </MenuProvider>
+        </NavigationDisclosureTrigger>
+        <NavigationDisclosureContent>
+          <NavigationItem>
+            <NavigationItemLabel>Toronto</NavigationItemLabel>
+          </NavigationItem>
+          <NavigationItem>
+            <NavigationItemLabel>Vancouver</NavigationItemLabel>
+          </NavigationItem>
+          <NavigationItem>
+            <NavigationItemLabel>Waterloo</NavigationItemLabel>
+          </NavigationItem>
+        </NavigationDisclosureContent>
+      </NavigationDisclosure>
+    </Navigation>
+    ```
+  </Fragment>
+</Demo>
+
+## Import
+
+Import all of the parts of the navigation.
+
+```tsx
+import {
+  Navigation,
+  NavigationItem,
+  NavigationItemIcon,
+  NavigationItemLabel
+  NavigationDisclosure,
+  NavigationDisclosureTrigger,
+  NavigationDisclosureTriggerLabel,
+  NavigationDisclosureTriggerIcon,
+  NavigationDisclosureContent,
+} from "@winnie-ui/react/navigation";
+```
+
+## Anatomy
+
+Arrange the components in the structure below.
+
+```tsx
+<Navigation>
+  <NavigationDisclosure>
+    <NavigationDisclosureTrigger>
+      <NavigationDisclosureTriggerLabel />
+      <NavigationDisclosureTriggerIcon />
+    </NavigationDisclosureTrigger>
+    <NavigationDisclosureContent>
+      <NavigationItem>
+        <NavigationItemIcon />
+        <NavigationItemLabel />
+      </NavigationItem>
+    </NavigationDisclosureContent>
+  </NavigationDisclosure>
+  <NavigationItem>
+    <NavigationItemIcon />
+    <NavigationItemLabel />
+  </NavigationItem>
+</Navigation>
+```
+
+## Examples
+
+## Reference
+
+### NavigationDisclosure
+
+Refer to React Aria Components [documentation](https://react-spectrum.adobe.com/react-aria/Disclosure.html#props) for more details about the other props and events available on NavigationDisclosure.
+
+### NavigationItem
+
+Refer to React Aria Components [documentation](https://react-spectrum.adobe.com/react-aria/Link.html#props) for more details about the other props and events available on NavigationItem.
+

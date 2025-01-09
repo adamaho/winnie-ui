@@ -31,7 +31,7 @@ function Check({
     <svg
       {...props}
       {...getIconProps({ color, contrast, size })}
-      className={clsx("wui-icon wui-icon-outlined wui-icon-check", className)}
+      className={clsx("wui-icon wui-icon-outlined wui-icon__check", className)}
       data-component="icon"
       width="16"
       height="16"
