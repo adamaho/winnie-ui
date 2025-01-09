@@ -32,7 +32,16 @@ import { Store } from "@winnie-ui/react/icons/outlined/store.tsx";
  * -----------------------------------------------------------------------------------------------*/
 export function NavigationDemo() {
   return (
-    <Navigation className="not-content" style={{ maxWidth: "250px" }}>
+    <Navigation
+      className="not-content"
+      style={{
+        background: "var(--wui-color-grey-1)",
+        border: "var(--wui-border-width-1) solid var(--wui-color-grey-a4)",
+        borderRadius: "min(var(--wui-border-radius-3), 12px)",
+        maxWidth: "250px",
+        padding: "var(--wui-space-3",
+      }}
+    >
       <NavigationItem>
         <NavigationItemIcon>
           <HomeDoor />

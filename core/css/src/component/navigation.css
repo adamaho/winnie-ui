@@ -10,7 +10,7 @@
       display: grid;
       grid-template-columns: subgrid;
       grid-column: 1 / -1;
-      height: calc(34px * var(--wui-scale));
+      height: calc(32px * var(--wui-scale));
       margin-bottom: var(--wui-space-1);
       padding-inline: var(--wui-space-3);
       width: 100%;
@@ -31,7 +31,7 @@
       }
 
       & > [data-slot="icon"] {
-        margin-right: var(--wui-space-3);
+        margin-right: var(--wui-space-4);
         height: 1.1em;
         width: 1.1em;
       }

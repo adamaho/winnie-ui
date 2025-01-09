@@ -127,7 +127,13 @@
      * Navigation 
      * -----------------------------------------------------------------------------------------------*/
     [data-component="navigation"] {
-      --wui-navigation__item-font-weight: var(--wui-font-weight-medium);
+      [data-component="navigation-item"] {
+        --wui-navigation__item-background: transparent;
+        --wui-navigation__item-background-hovered: var(--wui-color-grey-a3);
+        --wui-navigation__item-background-pressed: var(--wui-color-grey-a3);
+        --wui-navigation__item-color: var(--wui-color-grey-11);
+        --wui-navigation__item-font-weight: var(--wui-font-weight-medium);
+      }
     }
 
     /* -------------------------------------------------------------------------------------------------
