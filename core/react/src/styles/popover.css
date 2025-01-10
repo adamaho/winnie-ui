@@ -1,0 +1,8 @@
+@layer component {
+  [data-component="popover"] {
+    background: var(--wui-popover-background);
+    border: var(--wui-popover-border);
+    border-radius: var(--wui-popover-border-radius);
+    box-shadow: var(--wui-popover-box-shadow);
+  }
+}

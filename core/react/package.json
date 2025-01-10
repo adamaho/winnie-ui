@@ -8,11 +8,11 @@
   "exports": {
     "./button": {
       "import": {
-        "default": "./src/components/button/button.tsx",
-        "types": "./src/components/button/button.tsx"
+        "default": "./src/components/button.tsx",
+        "types": "./src/components/button.tsx"
       }
     },
-    "./button.css": "./src/components/button/button.css",
+    "./button.css": "./src/styles/button.css",
     "./heading": {
       "import": {
         "default": "./src/components/typography/heading.tsx",
@@ -31,19 +31,21 @@
         "types": "./src/components/layout.tsx"
       }
     },
+    "./layout.css": "./src/styles/layout.css",
     "./link": {
       "import": {
         "default": "./src/components/typography/link.tsx",
         "types": "./src/components/typography/link.tsx"
       }
     },
-    "./link.css": "./src/components/typography/link.css",
+    "./link.css": "./src/styles/link.css",
     "./link-button": {
       "import": {
         "default": "./src/components/link-button.tsx",
         "types": "./src/components/link-button.tsx"
       }
     },
+    "./listbox.css": "./src/styles/listbox.css",
     "./menu": {
       "import": {
         "default": "./src/components/menu.tsx",
@@ -56,13 +58,18 @@
         "types": "./src/components/navigation.tsx"
       }
     },
+    "./navigation.css": "./src/styles/navigation.css",
     "./text": {
       "import": {
         "default": "./src/components/typography/text.tsx",
         "types": "./src/components/typography/text.tsx"
       }
     },
-    "./typography.css": "./src/components/typography/typography.css"
+    "./page.css": "./src/styles/page.css",
+    "./popover.css": "./src/styles/popover.css",
+    "./separator.css": "./src/styles/separator.css",
+    "./styles.css": "./src/styles/index.css",
+    "./typography.css": "./src/styles/typography.css"
   },
   "scripts": {
     "clean": "rimraf node_modules",

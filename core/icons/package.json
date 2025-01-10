@@ -7,6 +7,7 @@
   "type": "module",
   "files": ["dist", "package.json"],
   "exports": {
+    "./styles.css": "./src/index.css",
     "./line/home-door": {
       "import": {
         "default": "./src/line/home-door.tsx",

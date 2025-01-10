@@ -15,7 +15,7 @@ import {
   Text as AriaText,
   LinkContext as LinkButtonContext,
 } from "react-aria-components";
-import { WinnieButtonProps } from "./button/button";
+import { WinnieButtonProps } from "./button";
 
 /* -------------------------------------------------------------------------------------------------
  * LinkButton

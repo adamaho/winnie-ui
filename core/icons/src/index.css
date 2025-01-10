@@ -1,0 +1,15 @@
+@layer component {
+  [data-component="icon"]:not([data-slot="indicator"], [data-slot="icon"]) {
+    &[data-contrast="low"] {
+      color: var(--wui-icon-low-color);
+    }
+
+    &[data-contrast="normal"] {
+      color: var(--wui-icon-normal-color);
+    }
+
+    &[data-contrast="high"] {
+      color: var(--wui-icon-high-color);
+    }
+  }
+}

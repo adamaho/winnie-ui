@@ -17,7 +17,7 @@ import {
 import { mergeProps, mergeRefs } from "@react-aria/utils";
 import { useFocusRing, useHover, useMove, usePress } from "react-aria";
 
-import { Button, ButtonIcon } from "./button/button";
+import { Button, ButtonIcon } from "./button";
 
 import clsx from "clsx";
 
