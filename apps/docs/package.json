@@ -30,6 +30,7 @@
     "@radix-ui/react-scroll-area": "1.2.2",
     "@react-aria/utils": "3.26.0",
     "@winnie-ui/css": "workspace:*",
+    "@winnie-ui/icons": "workspace:*",
     "@winnie-ui/react": "workspace:*",
     "@winnie-ui/themes": "workspace:*",
     "astro": "5.1.1",

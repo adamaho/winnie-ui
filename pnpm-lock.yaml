@@ -65,6 +65,9 @@ importers:
       '@winnie-ui/css':
         specifier: workspace:*
         version: link:../../core/css
+      '@winnie-ui/icons':
+        specifier: workspace:*
+        version: link:../../core/icons
       '@winnie-ui/react':
         specifier: workspace:*
         version: link:../../core/react
@@ -229,6 +232,34 @@ importers:
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
+
+  core/icons:
+    dependencies:
+      clsx:
+        specifier: 2.1.1
+        version: 2.1.1
+    devDependencies:
+      '@types/react':
+        specifier: 19.0.2
+        version: 19.0.2
+      '@types/react-dom':
+        specifier: 19.0.2
+        version: 19.0.2(@types/react@19.0.2)
+      '@winnie-ui/ts-config':
+        specifier: workspace:*
+        version: link:../../tools/tsconfig
+      react:
+        specifier: 19.0.0
+        version: 19.0.0
+      react-dom:
+        specifier: 19.0.0
+        version: 19.0.0(react@19.0.0)
+      rimraf:
+        specifier: 6.0.1
+        version: 6.0.1
+      typescript:
+        specifier: 5.7.2
+        version: 5.7.2
 
   core/react:
     dependencies:

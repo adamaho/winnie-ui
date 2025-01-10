@@ -19,13 +19,14 @@ import {
   MenuSeparator,
 } from "@winnie-ui/react/menu";
 
+import { Cocktail } from "@winnie-ui/icons/solid/cocktail";
+import { DotGrid1x3Horizontal } from "@winnie-ui/icons/solid/dot-grid-1x3-horizontal";
+import { ForkKnife } from "@winnie-ui/icons/solid/fork-knife";
+import { HomeDoor } from "@winnie-ui/icons/solid/home-door";
+import { LayoutGrid2 } from "@winnie-ui/icons/solid/layout-grid-2";
+import { Store1 } from "@winnie-ui/icons/solid/store-1";
+
 import { Button, ButtonIcon } from "@winnie-ui/react/button";
-import { Burger } from "@winnie-ui/react/icons/outlined/burger.tsx";
-import { Cocktail } from "@winnie-ui/react/icons/outlined/cocktail.tsx";
-import { DotGrid1x3 } from "@winnie-ui/react/icons/outlined/dot-grid-1x3.tsx";
-import { HomeDoor } from "@winnie-ui/react/icons/outlined/home-door.tsx";
-import { LayoutGrid } from "@winnie-ui/react/icons/outlined/layout-grid.tsx";
-import { Store } from "@winnie-ui/react/icons/outlined/store.tsx";
 
 /* -------------------------------------------------------------------------------------------------
  * NavigationDemo
@@ -50,7 +51,7 @@ export function NavigationDemo() {
       </NavigationItem>
       <NavigationItem>
         <NavigationItemIcon>
-          <Burger />
+          <ForkKnife />
         </NavigationItemIcon>
         <NavigationItemLabel>Dishes</NavigationItemLabel>
       </NavigationItem>
@@ -62,14 +63,14 @@ export function NavigationDemo() {
       </NavigationItem>
       <NavigationItem>
         <NavigationItemIcon>
-          <LayoutGrid />
+          <LayoutGrid2 />
         </NavigationItemIcon>
         <NavigationItemLabel>Menus</NavigationItemLabel>
       </NavigationItem>
       <NavigationDisclosure defaultExpanded>
         <NavigationDisclosureTrigger>
           <NavigationDisclosureTriggerIcon>
-            <Store />
+            <Store1 />
           </NavigationDisclosureTriggerIcon>
           <NavigationDisclosureTriggerLabel>
             Locations
@@ -77,7 +78,7 @@ export function NavigationDemo() {
           <MenuProvider>
             <Button slot="action" color="grey" variant="plain" size="sm">
               <ButtonIcon>
-                <DotGrid1x3 />
+                <DotGrid1x3Horizontal />
               </ButtonIcon>
             </Button>
             <MenuPopover placement="bottom right">
