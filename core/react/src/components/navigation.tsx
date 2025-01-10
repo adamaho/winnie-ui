@@ -230,6 +230,34 @@ function NavigationDisclosureContent({
 }
 
 /* -------------------------------------------------------------------------------------------------
+ * NavigationGroup
+ * -----------------------------------------------------------------------------------------------*/
+type NavigationGroupProps = ComponentPropsWithoutRef<"ul"> & {
+  /**
+   * Ref to group element
+   */
+  ref?: ForwardedRef<ComponentRef<"ul">>;
+};
+
+function NavigationGroup({
+  children,
+  className,
+  ref,
+  ...props
+}: NavigationGroupProps) {
+  return (
+    <ul
+      {...props}
+      className={clsx("wui-navigation__group", className)}
+      data-component="navigation-group"
+      ref={ref}
+    >
+      {children}
+    </ul>
+  );
+}
+
+/* -------------------------------------------------------------------------------------------------
  * NavigationItem
  * -----------------------------------------------------------------------------------------------*/
 type NavigationItemProps = AriaLinkProps & {
@@ -323,6 +351,7 @@ export {
   NavigationItem,
   NavigationItemLabel,
   NavigationItemIcon,
+  NavigationGroup,
   NavigationDisclosure,
   NavigationDisclosureTrigger,
   NavigationDisclosureTriggerIcon,
@@ -334,6 +363,7 @@ export type {
   NavigationItemProps,
   NavigationItemIconProps,
   NavigationItemLabelProps,
+  NavigationGroupProps,
   NavigationDisclosureProps,
   NavigationDisclosureTriggerProps,
   NavigationDisclosureTriggerIconProps,

@@ -570,7 +570,7 @@
    * -----------------------------------------------------------------------------------------------*/
   [data-component="navigation"] {
     li,
-    ul,
+    ul:not([data-component="navigation-group"]),
     h3,
     [data-component="disclosure"] {
       display: grid;

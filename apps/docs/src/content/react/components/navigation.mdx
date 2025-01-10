@@ -14,7 +14,13 @@ documentation:
   ]
 ---
 
-import { NavigationDemo } from "~/demos/navigation";
+import {
+  NavigationDemo,
+  NavigationIconDemo,
+  NavigationGroupDemo,
+  NavigationDisclosureDemo,
+  NavigationActionDemo
+} from "~/demos/navigation";
 
 import Demo from "~/components/demo/demo.astro";
 
@@ -24,61 +30,22 @@ import Demo from "~/components/demo/demo.astro";
     ```tsx
     <Navigation>
       <NavigationItem>
-        <NavigationItemIcon>
-          <HomeDoor />
-        </NavigationItemIcon>
         <NavigationItemLabel>Home</NavigationItemLabel>
       </NavigationItem>
       <NavigationItem>
-        <NavigationItemIcon>
-          <Burger />
-        </NavigationItemIcon>
         <NavigationItemLabel>Dishes</NavigationItemLabel>
       </NavigationItem>
       <NavigationItem>
-        <NavigationItemIcon>
-          <Cocktail />
-        </NavigationItemIcon>
         <NavigationItemLabel>Drinks</NavigationItemLabel>
       </NavigationItem>
       <NavigationItem>
-        <NavigationItemIcon>
-          <LayoutGrid />
-        </NavigationItemIcon>
         <NavigationItemLabel>Menus</NavigationItemLabel>
       </NavigationItem>
-      <NavigationDisclosure>
+      <NavigationDisclosure defaultExpanded>
         <NavigationDisclosureTrigger>
-          <NavigationDisclosureTriggerIcon>
-            <Store />
-          </NavigationDisclosureTriggerIcon>
           <NavigationDisclosureTriggerLabel>
             Locations
           </NavigationDisclosureTriggerLabel>
-          <MenuProvider>
-            <Button slot="action" color="grey" variant="plain" size="sm">
-              <ButtonIcon>
-                <DotGrid1x3 />
-              </ButtonIcon>
-            </Button>
-            <MenuPopover placement="bottom right">
-              <Menu>
-                <MenuItem>
-                  <MenuItemLabel>Add</MenuItemLabel>
-                </MenuItem>
-                <MenuItem>
-                  <MenuItemLabel>Edit</MenuItemLabel>
-                </MenuItem>
-                <MenuItem>
-                  <MenuItemLabel>Duplicate</MenuItemLabel>
-                </MenuItem>
-                <MenuSeparator />
-                <MenuItem color="red">
-                  <MenuItemLabel>Delete</MenuItemLabel>
-                </MenuItem>
-              </Menu>
-            </MenuPopover>
-          </MenuProvider>
         </NavigationDisclosureTrigger>
         <NavigationDisclosureContent>
           <NavigationItem>
@@ -142,15 +109,130 @@ Arrange the components in the structure below.
 
 ## Examples
 
-### Icons
+### With Icons
+
+Add an icon with the `NavigationItemIcon` slot component as a child of the `NavigationItem`.
+
+<Demo>
+  <NavigationIconDemo client:load />
+  <Fragment slot="footer">
+    ```tsx mark={3-5}
+    <Navigation>
+      <NavigationItem>
+        <NavigationItemIcon>
+          <HomeDoor />
+        </NavigationItemIcon>
+        <NavigationItemLabel>Home</NavigationItemLabel>
+      </NavigationItem>
+      ...
+    </Navigation>
+    ```
+  </Fragment>
+</Demo>
 
 ### Group
 
+Add a group with the `NavigationGroup` component.
+
+<Demo>
+  <NavigationGroupDemo client:load />
+  <Fragment slot="footer">
+    ```tsx mark={6-16}
+    <Navigation>
+      ...
+      <NavigationItem>
+        <NavigationItemLabel>Locations</NavigationItemLabel>
+      </NavigationItem>
+      <NavigationGroup>
+        <NavigationItem>
+          <NavigationItemLabel>Toronto</NavigationItemLabel>
+        </NavigationItem>
+        <NavigationItem>
+          <NavigationItemLabel>Vancouver</NavigationItemLabel>
+        </NavigationItem>
+        <NavigationItem>
+          <NavigationItemLabel>Waterloo</NavigationItemLabel>
+        </NavigationItem>
+      </NavigationGroup>
+    </Navigation>
+    ```
+  </Fragment>
+</Demo>
+
 ### Disclosure
+
+Add a disclosure using the `NavigationDisclosure` components.
+
+<Demo>
+  <NavigationDisclosureDemo client:load />
+  <Fragment slot="footer">
+    ```tsx mark={3-20}
+    <Navigation>
+      ...
+      <NavigationDisclosure>
+        <NavigationDisclosureTrigger>
+          <NavigationDisclosureTriggerLabel>
+            Locations
+          </NavigationDisclosureTriggerLabel>
+        </NavigationDisclosureTrigger>
+        <NavigationDisclosureContent>
+          <NavigationItem>
+            <NavigationItemLabel>Toronto</NavigationItemLabel>
+          </NavigationItem>
+          <NavigationItem>
+            <NavigationItemLabel>Vancouver</NavigationItemLabel>
+          </NavigationItem>
+          <NavigationItem>
+            <NavigationItemLabel>Waterloo</NavigationItemLabel>
+          </NavigationItem>
+        </NavigationDisclosureContent>
+      </NavigationDisclosure>
+    </Navigation>
+    ```
+  </Fragment>
+</Demo>
 
 ### Actions
 
-### Accessories
+Add actions to as a child to `NavigationItem` or `NavigationDisclosureTrigger` components using the [Menu](/react/docs/components/menu) component and adding the `slot="action"` prop to the button.
+
+<Demo>
+  <NavigationActionDemo client:load />
+  <Fragment slot="footer">
+    ```tsx mark={8-24} 
+    <Navigation>
+      ...
+      <NavigationDisclosure>
+        <NavigationDisclosureTrigger>
+          <NavigationDisclosureTriggerLabel>
+            Locations
+          </NavigationDisclosureTriggerLabel>
+          <MenuProvider>
+            <Button color="grey" variant="plain" slot="action" size="sm">
+              <ButtonIcon>
+                <DotGrid1x3Horizontal />
+              </ButtonIcon>
+            </Button>
+            <MenuPopover>
+              <Menu>
+                <MenuItem>
+                  <MenuItemLabel>Add</MenuItemLabel>
+                </MenuItem>
+                <MenuItem>
+                  <MenuItemLabel>Manage</MenuItemLabel>
+                </MenuItem>
+              </Menu>
+            </MenuPopover>
+          </MenuProvider>
+        </NavigationDisclosureTrigger>
+        ...
+      </NavigationDisclosure>
+    </Navigation>
+    ```
+  </Fragment>
+</Demo>
+
+### With Badge 
 
 ## Reference
 

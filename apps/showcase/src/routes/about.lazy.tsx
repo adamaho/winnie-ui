@@ -1,8 +1,8 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
 
-import { useZero } from "@rocicorp/zero/react";
+// import { useZero } from "@rocicorp/zero/react";
 
-import { type Schema } from "~/singletons/zero";
+// import { type Schema } from "~/singletons/zero";
 
 export const Route = createLazyFileRoute("/about")({
   component: About,
