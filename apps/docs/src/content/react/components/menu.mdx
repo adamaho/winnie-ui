@@ -1,7 +1,8 @@
 ---
-title: Menu 
+title: Menu
 description: Displays a list of actions for a user to take.
-documentation: https://react-spectrum.adobe.com/react-aria/Menu.html
+documentation:
+  [{ label: Menu, link: https://react-spectrum.adobe.com/react-aria/Menu.html }]
 ---
 
 import {
@@ -13,7 +14,7 @@ import {
   MenuDescriptionColumnDemo,
   MenuDescriptionRowDemo,
   MenuDescriptionInlineDemo,
-  MenuShortcutDemo
+  MenuShortcutDemo,
 } from "~/demos/menu";
 
 import Demo from "~/components/demo/demo.astro";
@@ -52,7 +53,7 @@ import Demo from "~/components/demo/demo.astro";
 
 ## Import
 
-Import all of the parts of the menu. 
+Import all of the parts of the menu.
 
 ```tsx
 import {
@@ -64,7 +65,7 @@ import {
   MenuItemGroup,
   MenuItemLabel,
   MenuItemDescription,
-  MenuItemIcon
+  MenuItemIcon,
 } from "@winnie-ui/react/menu";
 ```
 
@@ -121,7 +122,7 @@ Add an icon with the `MenuItemIcon` slot component as a child of the `MenuItem`.
 <Demo>
   <MenuIconDemo client:load />
   <Fragment slot="footer">
-    ```tsx mark={4-6}
+    ```tsx mark={4 - 6}
     <MenuProvider>
       ...
       <MenuItem>
@@ -142,7 +143,7 @@ Add a section using the `MenuSection`, `MenuHeader` and `MenuSeparator` componen
 <Demo>
   <MenuSectionDemo client:load />
   <Fragment slot="footer">
-    ```tsx mark={3-6,19}
+    ```tsx mark={(3 - 6, 19)}
     <MenuProvider>
       ...
       <MenuSection>
@@ -213,7 +214,7 @@ You can create a column layout using the `MenuItemGroup` component and placing t
 <Demo>
   <MenuDescriptionColumnDemo client:only="react" />
   <Fragment slot="footer">
-    ```tsx mark={8-11}
+    ```tsx mark={8 - 11}
     <MenuProvider>
       ...
       <Menu
@@ -234,14 +235,14 @@ You can create a column layout using the `MenuItemGroup` component and placing t
   </Fragment>
 </Demo>
 
-#### Row 
+#### Row
 
 Similar to the column layout, You can create a row layout using the `MenuItemGroup` component and placing the `MenuItemLabel` and `MenuItemDescription` components as children.
 
 <Demo>
   <MenuDescriptionRowDemo client:only="react" />
   <Fragment slot="footer">
-    ```tsx ins=orientation="row" 
+    ```tsx ins=orientation="row"
     <MenuProvider>
       ...
       <Menu
@@ -268,8 +269,8 @@ Finally, if you prefer to inline all descriptions, youp can skip the `MenuItemGr
 
 <Demo>
   <MenuDescriptionInlineDemo client:only="react" />
-    <Fragment slot="footer">
-    ```tsx mark={9-10}
+  <Fragment slot="footer">
+    ```tsx mark={9 - 10}
     <MenuProvider>
       ...
       <Menu
@@ -294,8 +295,8 @@ Use the `MenuItemShortcut` component as a child to `MenuItem` to show a keyboard
 
 <Demo>
   <MenuShortcutDemo client:load />
-    <Fragment slot="footer">
-    ```tsx mark={6-9}
+  <Fragment slot="footer">
+    ```tsx mark={6 - 9}
     <MenuProvider>
       ...
       <Menu>
@@ -321,27 +322,26 @@ Refer to React Aria Components [documentation](https://react-spectrum.adobe.com/
 
 An individual item group that a user can interact with in the menu. Typically used to change the layout of the `MenuItemLabel` and `MenuItemDescription`.
 
-| Prop            | Type                | Default     |
-| --------------- | ------------------- | ----------- |
-| `orientation`   | `"column" \| "row"` | `undefined` |
-
+| Prop          | Type                | Default     |
+| ------------- | ------------------- | ----------- |
+| `orientation` | `"column" \| "row"` | `undefined` |
 
 ### MenuItem
 
 An individual item that a user can interact with in the menu.
 
-| Prop      | Type                                                                                            | Default     |
-| --------- | ----------------------------------------------------------------------------------------------- | ----------- |
-| `color`   | `"brand" \| "red" \| "orange" \| "yellow" \| "green" \| "blue" \| "purple" \| "pink" \| "grey"` | `undefined` |
+| Prop    | Type                                                                                            | Default     |
+| ------- | ----------------------------------------------------------------------------------------------- | ----------- |
+| `color` | `"brand" \| "red" \| "orange" \| "yellow" \| "green" \| "blue" \| "purple" \| "pink" \| "grey"` | `undefined` |
 
-| Selector                    | Description                                                   |
-| --------------------------- | ------------------------------------------------------------- |
-| `data-has-submenu`          | When the menu item has a submenu                              |
-| `data-open`                 | When the menu item has an open submenu                        |
-| `data-hovered`              | When the menu item is hovered with mouse                      |
-| `data-pressed`              | When the menu item is pressed                                 |
-| `data-focused`              | When the menu item is focused with either a keyboard or mouse |
-| `data-focus-visible`        | When the menu item is focused with keyboard                   |
-| `data-disabled`             | When the menu item is disabled                                |
-| `data-pending`              | When the menu item is in a pending state                      |
-| `data-selection-mode`       | When the type of selection allowed on the collection          |
+| Selector              | Description                                                   |
+| --------------------- | ------------------------------------------------------------- |
+| `data-has-submenu`    | When the menu item has a submenu                              |
+| `data-open`           | When the menu item has an open submenu                        |
+| `data-hovered`        | When the menu item is hovered with mouse                      |
+| `data-pressed`        | When the menu item is pressed                                 |
+| `data-focused`        | When the menu item is focused with either a keyboard or mouse |
+| `data-focus-visible`  | When the menu item is focused with keyboard                   |
+| `data-disabled`       | When the menu item is disabled                                |
+| `data-pending`        | When the menu item is in a pending state                      |
+| `data-selection-mode` | When the type of selection allowed on the collection          |

@@ -12,7 +12,8 @@
       "@winnie-ui/css",
       "@winnie-ui/tailwind",
       "@winnie-ui/themes",
-      "@winnie-ui/react"
+      "@winnie-ui/react",
+      "@winnie-ui/icons"
     ]
   ],
   "linked": [],

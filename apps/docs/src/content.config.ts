@@ -1,6 +1,16 @@
 import { defineCollection, z } from "astro:content";
 import { glob } from "astro/loaders";
 
+const docsSchema = z.object({
+  title: z.string(),
+  description: z.string(),
+  documentation: z
+    .array(z.object({ label: z.string(), link: z.string() }))
+    .optional(),
+});
+
+export type DocsSchema = z.infer<typeof docsSchema>;
+
 const css = defineCollection({
   loader: glob({
     pattern: ["**/*.mdx"],
@@ -13,11 +23,7 @@ const react = defineCollection({
     pattern: ["**/*.mdx"],
     base: "./src/content/react",
   }),
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    documentation: z.string().optional(),
-  }),
+  schema: docsSchema,
 });
 
 export const collections = { css, react };

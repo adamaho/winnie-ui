@@ -6,18 +6,20 @@ import {
 import { SquareArrowOutUpRight } from "lucide-react";
 
 type DocumentationLinkButtonProps = {
-  documentation: string;
+  link: string;
+  label: string;
 };
 
 export function DocumentationLinkButton({
-  documentation,
+  link,
+  label,
 }: DocumentationLinkButtonProps) {
   return (
     <LinkButton
       color="grey"
       size="sm"
       variant="soft"
-      href={documentation}
+      href={link}
       target="_blank"
       className="wui-docs-article-documentation"
     >
@@ -33,7 +35,7 @@ export function DocumentationLinkButton({
           <polygon points="15,9.6 22.1,26 17.5,26 15.4,20.8 10.2,20.8"></polygon>
         </svg>
       </LinkButtonIcon>
-      <LinkButtonLabel>React Aria</LinkButtonLabel>
+      <LinkButtonLabel>{label}</LinkButtonLabel>
       <LinkButtonIcon>
         <SquareArrowOutUpRight data-slot="icon" />
       </LinkButtonIcon>
