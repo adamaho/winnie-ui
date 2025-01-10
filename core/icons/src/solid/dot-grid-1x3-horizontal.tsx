@@ -1,0 +1,18 @@
+/*
+ * Iconists Central Icon System.
+ * Distribution of this file is not permitted.
+ *
+ * For more information, see:
+ * https://iconists.co/license
+ */
+import { createIcon } from "../utilities/create-icon";
+
+export const DotGrid1x3Horizontal = createIcon({
+  name: "dot-grid-1x3-horizontal",
+  type: "solid",
+  paths: [
+    "M3.75 10.25C2.7835 10.25 2 11.0335 2 12C2 12.9665 2.7835 13.75 3.75 13.75C4.7165 13.75 5.5 12.9665 5.5 12C5.5 11.0335 4.7165 10.25 3.75 10.25Z",
+    "M12 10.25C11.0335 10.25 10.25 11.0335 10.25 12C10.25 12.9665 11.0335 13.75 12 13.75C12.9665 13.75 13.75 12.9665 13.75 12C13.75 11.0335 12.9665 10.25 12 10.25Z",
+    "M20.25 10.25C19.2835 10.25 18.5 11.0335 18.5 12C18.5 12.9665 19.2835 13.75 20.25 13.75C21.2165 13.75 22 12.9665 22 12C22 11.0335 21.2165 10.25 20.25 10.25Z",
+  ],
+});

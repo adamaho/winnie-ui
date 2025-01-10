@@ -1,0 +1,74 @@
+{
+  "name": "@winnie-ui/icons",
+  "version": "0.0.1",
+  "description": "Internal set of used for apps and documentation",
+  "author": "Adam Aho",
+  "private": "true",
+  "type": "module",
+  "files": ["dist", "package.json"],
+  "exports": {
+    "./line/home-door": {
+      "import": {
+        "default": "./src/line/home-door.tsx",
+        "types": "./src/line/home-door.tsx"
+      }
+    },
+    "./solid/cocktail": {
+      "import": {
+        "default": "./src/solid/cocktail.tsx",
+        "types": "./src/solid/cocktail.tsx"
+      }
+    },
+    "./solid/dot-grid-1x3-horizontal": {
+      "import": {
+        "default": "./src/solid/dot-grid-1x3-horizontal.tsx",
+        "types": "./src/solid/dot-grid-1x3-horizontal.tsx"
+      }
+    },
+    "./solid/fork-knife": {
+      "import": {
+        "default": "./src/solid/fork-knife.tsx",
+        "types": "./src/solid/fork-knife.tsx"
+      }
+    },
+    "./solid/home-door": {
+      "import": {
+        "default": "./src/solid/home-door.tsx",
+        "types": "./src/solid/home-door.tsx"
+      }
+    },
+    "./solid/layout-grid-2": {
+      "import": {
+        "default": "./src/solid/layout-grid-2.tsx",
+        "types": "./src/solid/layout-grid-2.tsx"
+      }
+    },
+    "./solid/store-1": {
+      "import": {
+        "default": "./src/solid/store-1.tsx",
+        "types": "./src/solid/store-1.tsx"
+      }
+    }
+  },
+  "scripts": {
+    "clean": "rimraf node_modules",
+    "format:check": "biome format ./src --no-errors-on-unmatched",
+    "format:write": "biome format ./src --write --no-errors-on-unmatched"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "dependencies": {
+    "clsx": "2.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "19.0.2",
+    "@types/react-dom": "19.0.2",
+    "@winnie-ui/ts-config": "workspace:*",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "rimraf": "6.0.1",
+    "typescript": "5.7.2"
+  }
+}
