@@ -11,7 +11,7 @@
     --wui-button-lg-font-size: var(--wui-font-size-3);
 
     /* height */
-    --wui-button-sm-height: calc(26px * var(--wui-scale));
+    --wui-button-sm-height: calc(24px * var(--wui-scale));
     --wui-button-md-height: calc(32px * var(--wui-scale));
     --wui-button-lg-height: calc(40px * var(--wui-scale));
 

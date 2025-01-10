@@ -19,7 +19,8 @@ import {
   NavigationIconDemo,
   NavigationGroupDemo,
   NavigationDisclosureDemo,
-  NavigationActionDemo
+  NavigationActionDemo,
+  NavigationCurrentDemo
 } from "~/demos/navigation";
 
 import Demo from "~/components/demo/demo.astro";
@@ -199,7 +200,7 @@ Add actions to as a child to `NavigationItem` or `NavigationDisclosureTrigger` c
 <Demo>
   <NavigationActionDemo client:load />
   <Fragment slot="footer">
-    ```tsx mark={8-24} 
+    ```tsx mark={8-24}
     <Navigation>
       ...
       <NavigationDisclosure>
@@ -232,7 +233,26 @@ Add actions to as a child to `NavigationItem` or `NavigationDisclosureTrigger` c
   </Fragment>
 </Demo>
 
-### With Badge 
+### Current
+
+Use the `isCurrent` prop to inform the user which navigation item represents the current page.
+
+<Demo>
+  <NavigationCurrentDemo client:load />
+  <Fragment slot="footer">
+    ```tsx ins=isCurrent
+    <Navigation>
+      ...
+      <NavigationItem isCurrent>
+      	<NavigationItemIcon>
+       		<Cocktail />
+        </NavigationItemIcon>
+        <NavigationItemLabel>Drinks</NavigationItemLabel>
+      </NavigationItem>
+    </Navigation>
+    ```
+  </Fragment>
+</Demo>
 
 ## Reference
 
@@ -243,3 +263,16 @@ Refer to React Aria Components [documentation](https://react-spectrum.adobe.com/
 ### NavigationItem
 
 Refer to React Aria Components [documentation](https://react-spectrum.adobe.com/react-aria/Link.html#props) for more details about the other props and events available on NavigationItem.
+
+| Prop        | Type      | Default     |
+| ----------- | --------- | ----------- |
+| `isCurrent` | `boolean` | `false`     |
+
+| Selector             | Description                                              |
+| -------------------- | -------------------------------------------------------- |
+| `data-hovered`       | When the navigation item is hovered with mouse                      |
+| `data-pressed`       | When the navigation item is pressed                                 |
+| `data-focused`       | When the navigation item is focused with either a keyboard or mouse |
+| `data-focus-visible` | When the navigation item is focused with keyboard                   |
+| `data-disabled`      | When the navigation item is disabled                                |
+| `data-current`       | When the navigation item is the current item in a list              |

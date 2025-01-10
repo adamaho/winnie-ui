@@ -66,7 +66,7 @@
     }
 
     /* -------------------------------------------------------------------------------------------------
-     * Layout 
+     * Layout
      * -----------------------------------------------------------------------------------------------*/
     [data-component="layout"] {
       --wui-layout__resize-handle-opacity-dragging: 1;
@@ -76,7 +76,7 @@
     }
 
     /* -------------------------------------------------------------------------------------------------
-     * Icon 
+     * Icon
      * -----------------------------------------------------------------------------------------------*/
     [data-component="icon"] {
       --wui-icon-low-color: var(--wui-color-accent-10);
@@ -85,7 +85,7 @@
     }
 
     /* -------------------------------------------------------------------------------------------------
-     * Link 
+     * Link
      * -----------------------------------------------------------------------------------------------*/
     [data-component="link"] {
       --wui-link-text-decoration-hovered: underline solid
@@ -93,7 +93,7 @@
     }
 
     /* -------------------------------------------------------------------------------------------------
-     * Listbox 
+     * Listbox
      * -----------------------------------------------------------------------------------------------*/
     [data-component="listbox"] {
       --wui-listbox__section-header-label-color: var(--wui-color-grey-11);
@@ -124,27 +124,29 @@
     }
 
     /* -------------------------------------------------------------------------------------------------
-     * Navigation 
+     * Navigation
      * -----------------------------------------------------------------------------------------------*/
     [data-component="navigation"] {
       [data-component="navigation-item"] {
         --wui-navigation__item-background: transparent;
         --wui-navigation__item-background-hovered: var(--wui-color-grey-a3);
         --wui-navigation__item-background-pressed: var(--wui-color-grey-a3);
+        --wui-navigation__item-background-current: var(--wui-color-grey-a3);
         --wui-navigation__item-color: var(--wui-color-grey-11);
+        --wui-navigation__item-color-current: var(--wui-color-grey-12);
         --wui-navigation__item-font-weight: var(--wui-font-weight-medium);
       }
     }
 
     /* -------------------------------------------------------------------------------------------------
-     * Popover 
+     * Popover
      * -----------------------------------------------------------------------------------------------*/
     [data-component="popover"] {
       --wui-popover-border-radius: min(var(--wui-border-radius-2), 12px);
     }
 
     /* -------------------------------------------------------------------------------------------------
-     * Typography 
+     * Typography
      * -----------------------------------------------------------------------------------------------*/
     [data-component="text"],
     [data-component="heading"],

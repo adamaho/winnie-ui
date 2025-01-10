@@ -270,7 +270,7 @@
   }
 
   /* -------------------------------------------------------------------------------------------------
-   * Icon 
+   * Icon
    * -----------------------------------------------------------------------------------------------*/
   [data-component="icon"]:not([data-slot="indicator"], [data-slot="icon"]) {
     &[data-contrast="low"] {
@@ -287,7 +287,7 @@
   }
 
   /* -------------------------------------------------------------------------------------------------
-   * Layout 
+   * Layout
    * -----------------------------------------------------------------------------------------------*/
   [data-component="layout"] {
     background: var(--wui-layout-background);
@@ -437,7 +437,7 @@
   }
 
   /* -------------------------------------------------------------------------------------------------
-   * Link 
+   * Link
    * -----------------------------------------------------------------------------------------------*/
   [data-component="link"] {
     cursor: var(--wui-cursor-linkable, default);
@@ -566,7 +566,7 @@
   }
 
   /* -------------------------------------------------------------------------------------------------
-   * Navigation 
+   * Navigation
    * -----------------------------------------------------------------------------------------------*/
   [data-component="navigation"] {
     li,
@@ -576,6 +576,29 @@
       display: grid;
       grid-template-columns: subgrid;
       grid-column: 1 / -1;
+
+      /** not expanded but has an item that is the current item in it */
+      &:not([data-expanded]):has(
+          [data-component="navigation-group"]
+            [data-component="navigation-item"][data-current]
+        ) {
+        h3 {
+          [data-component="navigation-item"] {
+            background: var(
+              --wui-navigation__item-background-current,
+              var(--wui-navigation__item-background)
+            );
+            border: var(
+              --wui-navigation__item-border-current,
+              var(--wui-navigation__item-border)
+            );
+            color: var(
+              --wui-navigation__item-color-current,
+              var(--wui-navigation__item-color)
+            );
+          }
+        }
+      }
     }
 
     [data-component="navigation-item"] {
@@ -584,6 +607,10 @@
       color: var(--wui-navigation__item-color);
       outline: none;
       font-weight: var(--wui-navigation__item-font-weight);
+
+      [data-slot="indicator"] {
+        transition: transform var(--wui-duration-3) var(--wui-bezier-1);
+      }
 
       &[data-hovered] {
         background: var(
@@ -629,11 +656,17 @@
           var(--wui-navigation__item-color)
         );
       }
+
+      &[aria-expanded="true"] {
+        [data-slot="indicator"] {
+          transform: rotate(90deg);
+        }
+      }
     }
   }
 
   /* -------------------------------------------------------------------------------------------------
-   * Page 
+   * Page
    * -----------------------------------------------------------------------------------------------*/
   [data-component="page"] {
     background: var(--wui-page-background);
@@ -645,7 +678,7 @@
   }
 
   /* -------------------------------------------------------------------------------------------------
-   * Popover 
+   * Popover
    * -----------------------------------------------------------------------------------------------*/
   [data-component="popover"] {
     background: var(--wui-popover-background);
@@ -655,14 +688,14 @@
   }
 
   /* -------------------------------------------------------------------------------------------------
-   * Separator 
+   * Separator
    * -----------------------------------------------------------------------------------------------*/
   [data-component="separator"] {
     background: var(--wui-separator-background);
   }
 
   /* -------------------------------------------------------------------------------------------------
-   * Typography 
+   * Typography
    * -----------------------------------------------------------------------------------------------*/
   [data-component="text"],
   [data-component="heading"],

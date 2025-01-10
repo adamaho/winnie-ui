@@ -274,3 +274,37 @@ export function NavigationActionDemo() {
     </Navigation>
   );
 }
+
+/* -------------------------------------------------------------------------------------------------
+ * NavigationCurrentDemo
+ * -----------------------------------------------------------------------------------------------*/
+export function NavigationCurrentDemo() {
+  return (
+    <Navigation className="not-content" style={navigationDemoStyles}>
+      <NavigationItem>
+        <NavigationItemIcon>
+          <HomeDoor />
+        </NavigationItemIcon>
+        <NavigationItemLabel>Home</NavigationItemLabel>
+      </NavigationItem>
+      <NavigationItem>
+        <NavigationItemIcon>
+          <ForkKnife />
+        </NavigationItemIcon>
+        <NavigationItemLabel>Dishes</NavigationItemLabel>
+      </NavigationItem>
+      <NavigationItem isCurrent>
+        <NavigationItemIcon>
+          <Cocktail />
+        </NavigationItemIcon>
+        <NavigationItemLabel>Drinks</NavigationItemLabel>
+      </NavigationItem>
+      <NavigationItem>
+        <NavigationItemIcon>
+          <LayoutGrid2 />
+        </NavigationItemIcon>
+        <NavigationItemLabel>Menus</NavigationItemLabel>
+      </NavigationItem>
+    </Navigation>
+  );
+}

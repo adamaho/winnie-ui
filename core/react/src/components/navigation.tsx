@@ -262,6 +262,13 @@ function NavigationGroup({
  * -----------------------------------------------------------------------------------------------*/
 type NavigationItemProps = AriaLinkProps & {
   /**
+   * If true, the navigation item is represents the current page
+   *
+   * @default false
+   */
+  isCurrent?: boolean;
+
+  /**
    * Ref to nav item element
    */
   ref?: ForwardedRef<ComponentRef<typeof AriaLink>>;
@@ -270,6 +277,7 @@ type NavigationItemProps = AriaLinkProps & {
 function NavigationItem({
   children,
   className,
+  isCurrent = false,
   ref,
   ...props
 }: NavigationItemProps) {
@@ -279,6 +287,7 @@ function NavigationItem({
         {...props}
         className={clsx("wui-navigation__item", className)}
         data-component="navigation-item"
+        aria-current={isCurrent ? "page" : undefined}
         ref={ref}
       >
         {children}
