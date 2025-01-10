@@ -1,6 +1,6 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
 
-import { useQuery, useZero } from "@rocicorp/zero/react";
+import { useZero } from "@rocicorp/zero/react";
 
 import { type Schema } from "~/singletons/zero";
 
@@ -9,12 +9,12 @@ export const Route = createLazyFileRoute("/about")({
 });
 
 function About() {
-  const z = useZero<Schema>();
-  const [users] = useQuery(z.query.user);
+  // const z = useZero<Schema>();
+  // const [users] = useQuery(z.query.user);
 
-  function addUser() {
-    z.mutate.user.insert({ id: crypto.randomUUID(), name: "Adam Aho" });
-  }
+  // function addUser() {
+  //   z.mutate.user.insert({ id: crypto.randomUUID(), name: "Adam Aho" });
+  // }
 
   return (
     <div className="p-2">
