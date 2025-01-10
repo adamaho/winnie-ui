@@ -5,10 +5,7 @@ import {
   type LinkProps as AriaLinkProps,
 } from "react-aria-components";
 
-import {
-  type TypographyProps,
-  getTypographyProps,
-} from "../utils/get-typography-props";
+import { type TypographyProps, getTypographyProps } from "./props";
 
 type LinkTextProps = AriaLinkProps &
   Omit<TypographyProps, "align"> & {

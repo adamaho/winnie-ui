@@ -1,0 +1,37 @@
+@layer component {
+  [data-component="link"] {
+    cursor: var(--wui-cursor-linkable, default);
+    font-family: var(--wui-link-font-family, var(--wui-font-family-sans));
+    letter-spacing: var(--wui-link-letter-spacing);
+    text-decoration: var(--wui-link-text-decoration);
+
+    &[data-hovered] {
+      text-decoration: var(
+        --wui-link-text-decoration-hovered,
+        var(--wui-link-text-decoration)
+      );
+    }
+
+    &[data-pressed] {
+      text-decoration: var(
+        --wui-link-text-decoration-pressed,
+        var(--wui-link-text-decoration)
+      );
+    }
+
+    &[data-current] {
+      text-decoration: var(
+        --wui-link-text-decoration-current,
+        var(--wui-link-text-decoration)
+      );
+    }
+
+    &[data-disabled] {
+      color: var(--wui-typography-normal-color);
+      text-decoration: var(
+        --wui-link-text-decoration-disabled,
+        var(--wui-link-text-decoration)
+      );
+    }
+  }
+}

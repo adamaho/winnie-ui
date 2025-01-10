@@ -1,62 +1,59 @@
 import clsx from "clsx";
 import { ComponentRef, ForwardedRef } from "react";
 import {
-  Text as AriaText,
-  type TextProps as AriaTextProps,
+  Heading as AriaHeading,
+  type HeadingProps as AriaHeadingProps,
 } from "react-aria-components";
 
-import {
-  type TypographyProps,
-  getTypographyProps,
-} from "../utils/get-typography-props";
+import { type TypographyProps, getTypographyProps } from "./props";
 
 /* -------------------------------------------------------------------------------------------------
- * Text
+ * Heading
  * -----------------------------------------------------------------------------------------------*/
-type TextProps = AriaTextProps &
+type HeadingProps = AriaHeadingProps &
   TypographyProps & {
     /**
-     * Ref to text element
+     * Ref to heading element
      */
-    ref?: ForwardedRef<ComponentRef<typeof AriaText>>;
+    ref?: ForwardedRef<ComponentRef<typeof AriaHeading>>;
   };
 
 /**
- * # Text
- * Foundational text component
+ * # Heading
+ * Foundational heading component
  *
  * ## Anatomy
  * Arrange the components in the structure below.
  *
  * ```tsx
- * <Text />
+ * <Heading />
  * ```
  *
- * See {@link https://winnie-ui.com/react/docs/components/text Documentation} for examples.
+ * See {@link https://winnie-ui.com/react/docs/components/heading Documentation} for examples.
  */
-function Text({
+function Heading({
   align,
   color = "grey",
   className,
   children,
   contrast,
-  size,
-  weight,
+  size = "5",
+  weight = "semibold",
   ref,
   ...props
-}: TextProps) {
+}: HeadingProps) {
   return (
-    <AriaText
+    <AriaHeading
       {...props}
-      data-component="text"
+      data-component="heading"
       {...getTypographyProps({ align, color, contrast, size, weight })}
-      className={clsx("wui-text", className)}
+      className={clsx("wui-heading", className)}
       ref={ref}
     >
       {children}
-    </AriaText>
+    </AriaHeading>
   );
 }
 
-export { Text };
-export type { TextProps };
+export { Heading };
+export type { HeadingProps };

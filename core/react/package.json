@@ -8,14 +8,15 @@
   "exports": {
     "./button": {
       "import": {
-        "default": "./src/components/button.tsx",
-        "types": "./src/components/button.tsx"
+        "default": "./src/components/button/button.tsx",
+        "types": "./src/components/button/button.tsx"
       }
     },
+    "./button.css": "./src/components/button/button.css",
     "./heading": {
       "import": {
-        "default": "./src/components/heading.tsx",
-        "types": "./src/components/heading.tsx"
+        "default": "./src/components/typography/heading.tsx",
+        "types": "./src/components/typography/heading.tsx"
       }
     },
     "./icons/*": {
@@ -32,10 +33,11 @@
     },
     "./link": {
       "import": {
-        "default": "./src/components/link.tsx",
-        "types": "./src/components/link.tsx"
+        "default": "./src/components/typography/link.tsx",
+        "types": "./src/components/typography/link.tsx"
       }
     },
+    "./link.css": "./src/components/typography/link.css",
     "./link-button": {
       "import": {
         "default": "./src/components/link-button.tsx",
@@ -56,10 +58,11 @@
     },
     "./text": {
       "import": {
-        "default": "./src/components/text.tsx",
-        "types": "./src/components/text.tsx"
+        "default": "./src/components/typography/text.tsx",
+        "types": "./src/components/typography/text.tsx"
       }
-    }
+    },
+    "./typography.css": "./src/components/typography/typography.css"
   },
   "scripts": {
     "clean": "rimraf node_modules",
