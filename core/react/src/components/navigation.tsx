@@ -138,7 +138,6 @@ function NavigationDisclosureTrigger({
       render={<li />}
     >
       {children}
-      <ChevronRight data-slot="indicator" />
     </BaseUICollapsible.Trigger>
   );
 }
@@ -168,6 +167,7 @@ function NavigationDisclosureTriggerLabel({
       ref={ref}
     >
       {children}
+      <ChevronRight />
     </span>
   );
 }

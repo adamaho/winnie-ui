@@ -232,8 +232,25 @@ export function NavigationActionDemo() {
           <LayoutGrid2 />
         </NavigationItemIcon>
         <NavigationItemLabel>Menus</NavigationItemLabel>
+        <MenuProvider>
+          <Button color="grey" variant="plain" slot="action" size="sm">
+            <ButtonIcon>
+              <DotGrid1x3Horizontal />
+            </ButtonIcon>
+          </Button>
+          <MenuPopover placement="bottom right">
+            <Menu>
+              <MenuItem>
+                <MenuItemLabel>Add</MenuItemLabel>
+              </MenuItem>
+              <MenuItem>
+                <MenuItemLabel>Manage</MenuItemLabel>
+              </MenuItem>
+            </Menu>
+          </MenuPopover>
+        </MenuProvider>
       </NavigationItem>
-      <NavigationDisclosure onOpenChange={(e) => console.log(e)}>
+      <NavigationDisclosure>
         <NavigationDisclosureTrigger>
           <NavigationDisclosureTriggerIcon>
             <Store1 />

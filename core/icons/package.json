@@ -7,7 +7,7 @@
   "type": "module",
   "files": ["dist", "package.json"],
   "exports": {
-    "./styles.css": "./src/index.css",
+    "./css": "./src/index.css",
     "./line/checkmark": {
       "import": {
         "default": "./src/line/checkmark.tsx",

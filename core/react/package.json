@@ -62,7 +62,7 @@
     "./page.css": "./src/styles/page.css",
     "./popover.css": "./src/styles/popover.css",
     "./separator.css": "./src/styles/separator.css",
-    "./styles.css": "./src/styles/index.css",
+    "./css": "./src/styles/index.css",
     "./typography.css": "./src/styles/typography.css"
   },
   "scripts": {
