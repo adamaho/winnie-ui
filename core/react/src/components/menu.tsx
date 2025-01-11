@@ -181,6 +181,7 @@ function MenuItem<T extends object>({
       data-component="listbox-item"
       data-accent-color={color}
       className={clsx(className, "wui-menu__item")}
+      data-hovered="true"
       ref={ref}
       textValue={textValue}
     >
@@ -188,7 +189,9 @@ function MenuItem<T extends object>({
         // @ts-ignore
         <>
           {renderProps.selectionMode === "single" && renderProps.isSelected && (
-            <span data-slot="indicator">•</span>
+            <span data-slot="indicator" data-selection-mode="single">
+              ●
+            </span>
           )}
           {renderProps.selectionMode === "multiple" &&
             renderProps.isSelected && <Checkmark data-slot="indicator" />}

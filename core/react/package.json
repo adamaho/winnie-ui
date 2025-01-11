@@ -75,6 +75,7 @@
     "react-dom": "^19.0.0"
   },
   "dependencies": {
+    "@base-ui-components/react": "1.0.0-alpha.5",
     "@react-aria/utils": "3.26.0",
     "@winnie-ui/icons": "workspace:*",
     "clsx": "2.1.1",
