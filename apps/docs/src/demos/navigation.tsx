@@ -56,13 +56,13 @@ export function NavigationDemo() {
       <NavigationItem>
         <NavigationItemLabel>Menus</NavigationItemLabel>
       </NavigationItem>
-      <NavigationDisclosure defaultExpanded>
+      <NavigationDisclosure defaultOpen>
         <NavigationDisclosureTrigger>
           <NavigationDisclosureTriggerLabel>
             Locations
           </NavigationDisclosureTriggerLabel>
         </NavigationDisclosureTrigger>
-        <NavigationDisclosureContent>
+        <NavigationDisclosureContent className="not-content">
           <NavigationItem>
             <NavigationItemLabel>Toronto</NavigationItemLabel>
           </NavigationItem>
@@ -187,7 +187,7 @@ export function NavigationDisclosureDemo() {
             Locations
           </NavigationDisclosureTriggerLabel>
         </NavigationDisclosureTrigger>
-        <NavigationDisclosureContent>
+        <NavigationDisclosureContent className="not-content">
           <NavigationItem>
             <NavigationItemLabel>Toronto</NavigationItemLabel>
           </NavigationItem>
@@ -233,7 +233,7 @@ export function NavigationActionDemo() {
         </NavigationItemIcon>
         <NavigationItemLabel>Menus</NavigationItemLabel>
       </NavigationItem>
-      <NavigationDisclosure>
+      <NavigationDisclosure onOpenChange={(e) => console.log(e)}>
         <NavigationDisclosureTrigger>
           <NavigationDisclosureTriggerIcon>
             <Store1 />
@@ -259,7 +259,7 @@ export function NavigationActionDemo() {
             </MenuPopover>
           </MenuProvider>
         </NavigationDisclosureTrigger>
-        <NavigationDisclosureContent>
+        <NavigationDisclosureContent className="not-content">
           <NavigationItem>
             <NavigationItemLabel>Toronto</NavigationItemLabel>
           </NavigationItem>

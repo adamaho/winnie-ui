@@ -20,6 +20,8 @@ import {
   type LinkProps as AriaLinkProps,
 } from "react-aria-components";
 
+import { Collapsible as BaseUICollapsible } from "@base-ui-components/react/collapsible";
+
 import { ChevronRight } from "@winnie-ui/icons/line/chevron-right";
 
 /* -------------------------------------------------------------------------------------------------
@@ -78,11 +80,11 @@ function Navigation({ children, className, ref, ...props }: NavigationProps) {
 /* -------------------------------------------------------------------------------------------------
  * NavigationDisclosure
  * -----------------------------------------------------------------------------------------------*/
-type NavigationDisclosureProps = AriaDisclosureProps & {
+type NavigationDisclosureProps = BaseUICollapsible.Root.Props & {
   /**
    * Ref to disclosure element
    */
-  ref?: ForwardedRef<ComponentRef<typeof AriaDisclosure>>;
+  ref?: ForwardedRef<ComponentRef<typeof BaseUICollapsible.Root>>;
 };
 
 function NavigationDisclosure({
@@ -92,25 +94,28 @@ function NavigationDisclosure({
   ...props
 }: NavigationDisclosureProps) {
   return (
-    <AriaDisclosure
+    <BaseUICollapsible.Root
       {...props}
       className={clsx("wui-navigation__disclosure")}
       data-component="disclosure"
       ref={ref}
     >
       {children}
-    </AriaDisclosure>
+    </BaseUICollapsible.Root>
   );
 }
 
 /* -------------------------------------------------------------------------------------------------
  * NavigationDisclosureTrigger
  * -----------------------------------------------------------------------------------------------*/
-type NavigationDisclosureTriggerProps = Omit<AriaButtonProps, "children"> & {
+type NavigationDisclosureTriggerProps = Omit<
+  BaseUICollapsible.Trigger.Props,
+  "children"
+> & {
   /**
    * Ref to disclosure trigger element
    */
-  ref?: ForwardedRef<ComponentRef<typeof AriaButton>>;
+  ref?: ForwardedRef<ComponentRef<typeof BaseUICollapsible.Trigger>>;
 };
 
 function NavigationDisclosureTrigger({
@@ -120,22 +125,21 @@ function NavigationDisclosureTrigger({
   ...props
 }: PropsWithChildren<NavigationDisclosureTriggerProps>) {
   return (
-    <AriaHeading>
-      <AriaButton
-        {...props}
-        className={clsx(
-          "wui-navigation__item",
-          "wui-navigation__disclosure-trigger",
-          className,
-        )}
-        data-component="navigation-item"
-        ref={ref}
-        slot="trigger"
-      >
-        {children}
-        <ChevronRight data-slot="indicator" />
-      </AriaButton>
-    </AriaHeading>
+    <BaseUICollapsible.Trigger
+      {...props}
+      className={clsx(
+        "wui-navigation__item",
+        "wui-navigation__disclosure-trigger",
+        className,
+      )}
+      data-component="navigation-item"
+      ref={ref}
+      slot="trigger"
+      render={<li />}
+    >
+      {children}
+      <ChevronRight data-slot="indicator" />
+    </BaseUICollapsible.Trigger>
   );
 }
 
@@ -204,28 +208,31 @@ const NavigationDisclosureTriggerIcon = ({
 /* -------------------------------------------------------------------------------------------------
  * NavigationDisclosureContent
  * -----------------------------------------------------------------------------------------------*/
-type NavigationDisclosureContentProps = AriaDisclosurePanelProps & {
+type NavigationDisclosureContentProps = BaseUICollapsible.Panel.Props & {
   /**
    * Ref to disclosure content element
    */
-  ref?: ForwardedRef<ComponentRef<typeof AriaDisclosurePanel>>;
+  ref?: ForwardedRef<ComponentRef<typeof BaseUICollapsible.Panel>>;
 };
 
 function NavigationDisclosureContent({
   children,
   className,
+  hiddenUntilFound = true,
   ref,
   ...props
 }: NavigationDisclosureContentProps) {
   return (
-    <AriaDisclosurePanel
+    <BaseUICollapsible.Panel
       {...props}
       className={clsx("wui-navigation__disclosure-content", className)}
       data-component="navigation-group"
+      hiddenUntilFound={hiddenUntilFound}
+      render={<ul />}
       ref={ref}
     >
-      <ul>{children}</ul>
-    </AriaDisclosurePanel>
+      {children}
+    </BaseUICollapsible.Panel>
   );
 }
 
