@@ -45,7 +45,6 @@ export function DocumentationLinkButton({
   label,
   icon,
 }: DocumentationLinkButtonProps) {
-  console.log(icon);
   return (
     <LinkButton
       color="grey"
