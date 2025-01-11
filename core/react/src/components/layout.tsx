@@ -496,7 +496,7 @@ function LayoutSidebarToggle({
     <Button
       {...props}
       className={clsx(className, "wui-layout__sidebar-toggle")}
-      data-slot="toggle"
+      slot="toggle"
       color="grey"
       variant="plain"
       onPress={onPress}
