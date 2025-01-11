@@ -266,6 +266,9 @@ importers:
       '@react-aria/utils':
         specifier: 3.26.0
         version: 3.26.0(react@19.0.0)
+      '@winnie-ui/icons':
+        specifier: workspace:*
+        version: link:../icons
       clsx:
         specifier: 2.1.1
         version: 2.1.1

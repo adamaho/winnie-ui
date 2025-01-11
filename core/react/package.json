@@ -19,12 +19,6 @@
         "types": "./src/components/typography/heading.tsx"
       }
     },
-    "./icons/*": {
-      "import": {
-        "default": "./src/components/icons/*",
-        "types": "./src/components/icons/*"
-      }
-    },
     "./layout": {
       "import": {
         "default": "./src/components/layout.tsx",
@@ -82,6 +76,7 @@
   },
   "dependencies": {
     "@react-aria/utils": "3.26.0",
+    "@winnie-ui/icons": "workspace:*",
     "clsx": "2.1.1",
     "react-aria": "3.36.0",
     "react-aria-components": "1.5.0"

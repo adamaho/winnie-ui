@@ -26,6 +26,8 @@
       [data-slot="indicator"] {
         grid-column-start: -1;
         justify-self: end;
+        height: calc(20px * var(--wui-scale));
+        width: calc(20px * var(--wui-scale));
       }
 
       [data-slot="action"] {

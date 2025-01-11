@@ -29,8 +29,8 @@ import {
   type Selection,
 } from "react-aria-components";
 
-import { Check } from "./icons/outlined/check";
-import { Dot } from "./icons/solid/dot";
+import { Checkmark } from "@winnie-ui/icons/line/checkmark";
+import { Dot } from "@winnie-ui/icons/solid/dot";
 
 /* -------------------------------------------------------------------------------------------------
  * MenuProvider
@@ -188,10 +188,10 @@ function MenuItem<T extends object>({
         // @ts-ignore
         <>
           {renderProps.selectionMode === "single" && renderProps.isSelected && (
-            <Dot data-slot="indicator" />
+            <span data-slot="indicator">•</span>
           )}
           {renderProps.selectionMode === "multiple" &&
-            renderProps.isSelected && <Check data-slot="indicator" />}
+            renderProps.isSelected && <Checkmark data-slot="indicator" />}
           {children}
         </>
       )}

@@ -20,7 +20,7 @@ import {
   type LinkProps as AriaLinkProps,
 } from "react-aria-components";
 
-import { ChevronRight } from "./icons/outlined/chevron-right";
+import { ChevronRight } from "@winnie-ui/icons/line/chevron-right";
 
 /* -------------------------------------------------------------------------------------------------
  * Navigation

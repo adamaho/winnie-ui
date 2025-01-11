@@ -8,6 +8,18 @@
   "files": ["dist", "package.json"],
   "exports": {
     "./styles.css": "./src/index.css",
+    "./line/checkmark": {
+      "import": {
+        "default": "./src/line/checkmark.tsx",
+        "types": "./src/line/checkmark.tsx"
+      }
+    },
+    "./line/chevron-right": {
+      "import": {
+        "default": "./src/line/chevron-right.tsx",
+        "types": "./src/line/chevron-right.tsx"
+      }
+    },
     "./line/home-door": {
       "import": {
         "default": "./src/line/home-door.tsx",
@@ -18,6 +30,12 @@
       "import": {
         "default": "./src/solid/cocktail.tsx",
         "types": "./src/solid/cocktail.tsx"
+      }
+    },
+    "./solid/dot": {
+      "import": {
+        "default": "./src/solid/dot.tsx",
+        "types": "./src/solid/dot.tsx"
       }
     },
     "./solid/dot-grid-1x3-horizontal": {

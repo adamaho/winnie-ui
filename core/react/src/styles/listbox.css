@@ -18,6 +18,11 @@
       color: var(--wui-listbox__item-color);
       outline: none;
 
+      [data-slot="indicator"] {
+        height: auto;
+        width: auto;
+      }
+
       [data-slot="shortcut"] {
         color: var(--wui-listbox__item-shortcut-color);
         font-family: var(--wui-listbox__item-shortcut-font-family);
