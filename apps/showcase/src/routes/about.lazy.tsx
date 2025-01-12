@@ -1,4 +1,5 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
+import { Link } from "@winnie-ui/react/components";
 
 // import { useZero } from "@rocicorp/zero/react";
 
@@ -18,6 +19,7 @@ function About() {
 
   return (
     <div className="p-2">
+      <Link href="/about">To index</Link>
       {/* <button onClick={addUser}>Add User</button> */}
       {/* {users.map((u) => ( */}
       {/*   <div key={u.id}>{u.name}</div> */}

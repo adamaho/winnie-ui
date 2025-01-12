@@ -1,8 +1,15 @@
-import { RouterProvider, createRouter } from "@tanstack/react-router";
+import {
+  type NavigateOptions,
+  RouterProvider,
+  type ToOptions,
+  createRouter,
+  useRouter,
+} from "@tanstack/react-router";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
 import { ZeroProvider } from "@rocicorp/zero/react";
+import { RouterProvider as WinnieRouterProvider } from "@winnie-ui/react/router-provider";
 
 import { routeTree } from "./routeTree.gen";
 import { zero } from "./singletons/zero";
@@ -14,18 +21,44 @@ import "@fontsource/inter/700.css";
 import "@fontsource/inter/800.css";
 import "./main.css";
 
-// Create a new router instance
+/**
+ * Create instance of Router
+ */
 const router = createRouter({
   routeTree,
-  Wrap: ({ children }) => {
+  Wrap: function Wrap({ children }) {
     return <ZeroProvider zero={zero}>{children}</ZeroProvider>;
+  },
+  InnerWrap: function InnerWrap({ children }) {
+    const router = useRouter();
+    return (
+      <WinnieRouterProvider
+        navigate={(to, options) => router.navigate({ to, ...options })}
+        useHref={(to) => router.buildLocation({ to }).href}
+      >
+        {children}
+      </WinnieRouterProvider>
+    );
   },
 });
 
-// Register the router instance for type safety
+/**
+ * Register the router instance for type safety
+ */
 declare module "@tanstack/react-router" {
   interface Register {
     router: typeof router;
+  }
+}
+
+/**
+ * Register router instance for use with winnie react component type safety on components
+ * that use links
+ */
+declare module "@winnie-ui/react/components" {
+  interface RouterConfig {
+    href: ToOptions["to"];
+    routerOptions: Omit<NavigateOptions, keyof ToOptions>;
   }
 }
 

@@ -19,6 +19,12 @@
         "types": "./src/components/typography/heading.tsx"
       }
     },
+    "./components": {
+      "import": {
+        "default": "./src/components/index.ts",
+        "types": "./src/components/index.ts"
+      }
+    },
     "./layout": {
       "import": {
         "default": "./src/components/layout.tsx",
@@ -53,6 +59,12 @@
       }
     },
     "./navigation.css": "./src/styles/navigation.css",
+    "./router-provider": {
+      "import": {
+        "default": "./src/components/router-provider.tsx",
+        "types": "./src/components/router-provider.tsx"
+      }
+    },
     "./text": {
       "import": {
         "default": "./src/components/typography/text.tsx",
