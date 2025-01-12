@@ -5,12 +5,10 @@ import {
   LayoutSidebar,
   LayoutSidebarResizeHandle,
   LayoutSidebarToggle,
-} from "@winnie-ui/react/layout";
-import {
   Tooltip,
   TooltipLabel,
   TooltipProvider,
-} from "@winnie-ui/react/tooltip";
+} from "@winnie-ui/react";
 
 import type { PropsWithChildren } from "react";
 

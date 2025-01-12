@@ -9,7 +9,7 @@ import {
   NavigationItem,
   NavigationItemIcon,
   NavigationItemLabel,
-} from "@winnie-ui/react/navigation";
+} from "@winnie-ui/react";
 
 import {
   Menu,
@@ -17,8 +17,7 @@ import {
   MenuItemLabel,
   MenuPopover,
   MenuProvider,
-  MenuSeparator,
-} from "@winnie-ui/react/menu";
+} from "@winnie-ui/react";
 
 import { Cocktail } from "@winnie-ui/icons/solid/cocktail";
 import { DotGrid1x3Horizontal } from "@winnie-ui/icons/solid/dot-grid-1x3-horizontal";
@@ -27,7 +26,7 @@ import { HomeDoor } from "@winnie-ui/icons/solid/home-door";
 import { LayoutGrid2 } from "@winnie-ui/icons/solid/layout-grid-2";
 import { Store1 } from "@winnie-ui/icons/solid/store-1";
 
-import { Button, ButtonIcon } from "@winnie-ui/react/button";
+import { Button, ButtonIcon } from "@winnie-ui/react";
 import type { CSSProperties } from "react";
 
 const navigationDemoStyles = {

@@ -1,4 +1,4 @@
-import type { LegacyRef, PropsWithChildren } from "react";
+import type { PropsWithChildren, Ref } from "react";
 
 import {
   ScrollArea as RadixScrollArea,
@@ -16,7 +16,7 @@ import "./scroll-area.css";
 type ScrollAreaProps = {
   className?: string;
   type?: RadixScrollAreaProps["type"];
-  viewportRef?: LegacyRef<HTMLDivElement>;
+  viewportRef?: Ref<HTMLDivElement>;
   orientation?: RadixScrollAreaScrollbarProps["orientation"];
 };
 

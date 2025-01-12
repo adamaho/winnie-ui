@@ -1,4 +1,4 @@
-import { Link } from "@winnie-ui/react/link";
+import { Link } from "@winnie-ui/react";
 
 /* -------------------------------------------------------------------------------------------------
  * LinkDemo

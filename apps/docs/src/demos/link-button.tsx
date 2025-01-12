@@ -3,7 +3,7 @@ import {
   LinkButtonContext,
   LinkButtonIcon,
   LinkButtonLabel,
-} from "@winnie-ui/react/link-button";
+} from "@winnie-ui/react";
 
 import { Utensils } from "lucide-react";
 

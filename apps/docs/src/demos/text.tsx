@@ -1,4 +1,4 @@
-import { Text } from "@winnie-ui/react/text";
+import { Text } from "@winnie-ui/react";
 
 /* -------------------------------------------------------------------------------------------------
  * TextDemo

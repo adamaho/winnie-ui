@@ -1,6 +1,6 @@
-import { Heading } from "@winnie-ui/react/heading";
-import { Link } from "@winnie-ui/react/link";
-import { Text } from "@winnie-ui/react/text";
+import { Heading } from "@winnie-ui/react";
+import { Link } from "@winnie-ui/react";
+import { Text } from "@winnie-ui/react";
 
 export function TypographyDemo() {
   return (
