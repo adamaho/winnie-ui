@@ -7,91 +7,25 @@
   "type": "module",
   "files": ["dist", "package.json"],
   "exports": {
-    "./css": "./src/index.css",
-    "./line/checkmark": {
+    ".": {
       "import": {
-        "default": "./src/line/checkmark.tsx",
-        "types": "./src/line/checkmark.tsx"
+        "default": "./src/index.ts",
+        "types": "./src/index.ts"
       }
     },
-    "./line/chevron-right": {
+    "./line": {
       "import": {
-        "default": "./src/line/chevron-right.tsx",
-        "types": "./src/line/chevron-right.tsx"
+        "default": "./src/line/index.ts",
+        "types": "./src/line/index.ts"
       }
     },
-    "./line/home-door": {
+    "./solid": {
       "import": {
-        "default": "./src/line/home-door.tsx",
-        "types": "./src/line/home-door.tsx"
+        "default": "./src/solid/index.ts",
+        "types": "./src/solid/index.ts"
       }
     },
-    "./line/sidebar-simple-left-square": {
-      "import": {
-        "default": "./src/line/sidebar-simple-left-square.tsx",
-        "types": "./src/line/sidebar-simple-left-square.tsx"
-      }
-    },
-    "./line/square-arrow-top-right": {
-      "import": {
-        "default": "./src/line/square-arrow-top-right.tsx",
-        "types": "./src/line/square-arrow-top-right.tsx"
-      }
-    },
-    "./solid/arrow-triangle-right": {
-      "import": {
-        "default": "./src/solid/arrow-triangle-right.tsx",
-        "types": "./src/solid/arrow-triangle-right.tsx"
-      }
-    },
-    "./solid/cocktail": {
-      "import": {
-        "default": "./src/solid/cocktail.tsx",
-        "types": "./src/solid/cocktail.tsx"
-      }
-    },
-    "./solid/dot": {
-      "import": {
-        "default": "./src/solid/dot.tsx",
-        "types": "./src/solid/dot.tsx"
-      }
-    },
-    "./solid/dot-grid-1x3-horizontal": {
-      "import": {
-        "default": "./src/solid/dot-grid-1x3-horizontal.tsx",
-        "types": "./src/solid/dot-grid-1x3-horizontal.tsx"
-      }
-    },
-    "./solid/fork-knife": {
-      "import": {
-        "default": "./src/solid/fork-knife.tsx",
-        "types": "./src/solid/fork-knife.tsx"
-      }
-    },
-    "./solid/home-door": {
-      "import": {
-        "default": "./src/solid/home-door.tsx",
-        "types": "./src/solid/home-door.tsx"
-      }
-    },
-    "./solid/layout-grid-2": {
-      "import": {
-        "default": "./src/solid/layout-grid-2.tsx",
-        "types": "./src/solid/layout-grid-2.tsx"
-      }
-    },
-    "./solid/sidebar-simple-left-square": {
-      "import": {
-        "default": "./src/solid/sidebar-simple-left-square.tsx",
-        "types": "./src/solid/sidebar-simple-left-square.tsx"
-      }
-    },
-    "./solid/store-1": {
-      "import": {
-        "default": "./src/solid/store-1.tsx",
-        "types": "./src/solid/store-1.tsx"
-      }
-    }
+    "./css": "./src/index.css"
   },
   "scripts": {
     "clean": "rimraf node_modules",

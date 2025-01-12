@@ -15,7 +15,7 @@ import {
 
 import { Collapsible as BaseUICollapsible } from "@base-ui-components/react/collapsible";
 
-import { ArrowTriangleRight } from "@winnie-ui/icons/solid/arrow-triangle-right";
+import { ArrowTriangleRight } from "@winnie-ui/icons/solid";
 
 /* -------------------------------------------------------------------------------------------------
  * Navigation

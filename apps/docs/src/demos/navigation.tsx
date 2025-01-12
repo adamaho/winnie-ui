@@ -19,12 +19,12 @@ import {
   MenuProvider,
 } from "@winnie-ui/react";
 
-import { Cocktail } from "@winnie-ui/icons/solid/cocktail";
-import { DotGrid1x3Horizontal } from "@winnie-ui/icons/solid/dot-grid-1x3-horizontal";
-import { ForkKnife } from "@winnie-ui/icons/solid/fork-knife";
-import { HomeDoor } from "@winnie-ui/icons/solid/home-door";
-import { LayoutGrid2 } from "@winnie-ui/icons/solid/layout-grid-2";
-import { Store1 } from "@winnie-ui/icons/solid/store-1";
+import { Cocktail } from "@winnie-ui/icons/solid";
+import { DotGrid1x3Horizontal } from "@winnie-ui/icons/solid";
+import { ForkKnife } from "@winnie-ui/icons/solid";
+import { HomeDoor } from "@winnie-ui/icons/solid";
+import { LayoutGrid2 } from "@winnie-ui/icons/solid";
+import { Store1 } from "@winnie-ui/icons/solid";
 
 import { Button, ButtonIcon } from "@winnie-ui/react";
 import type { CSSProperties } from "react";
