@@ -1,5 +1,4 @@
 import { LinkButton, LinkButtonIcon, LinkButtonLabel } from "@winnie-ui/react";
-import { SquareArrowOutUpRight } from "lucide-react";
 import type { ReactNode } from "react";
 import type { DocType } from "~/content.config";
 

@@ -17,7 +17,6 @@ import {
   MenuItemLabel,
   MenuPopover,
   MenuProvider,
-  MenuSeparator,
 } from "@winnie-ui/react";
 
 import { Cocktail } from "@winnie-ui/icons/solid/cocktail";
