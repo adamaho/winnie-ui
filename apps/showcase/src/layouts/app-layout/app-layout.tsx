@@ -6,8 +6,12 @@ import {
   LayoutSidebarResizeHandle,
   LayoutSidebarToggle,
 } from "@winnie-ui/react/layout";
+import {
+  Tooltip,
+  TooltipLabel,
+  TooltipProvider,
+} from "@winnie-ui/react/tooltip";
 
-import { PanelLeft } from "lucide-react";
 import type { PropsWithChildren } from "react";
 
 /* -------------------------------------------------------------------------------------------------
@@ -21,8 +25,23 @@ function AppLayout(props: PropsWithChildren) {
         <LayoutSidebarResizeHandle />
       </LayoutSidebar>
       <LayoutContent>
-        <LayoutSidebarToggle icon={<PanelLeft />} />
-        {props.children}
+        {({ sidebarState }) => {
+          return (
+            <>
+              <TooltipProvider>
+                <LayoutSidebarToggle />
+                <Tooltip>
+                  <TooltipLabel>
+                    {sidebarState === "docked"
+                      ? "Close sidebar"
+                      : "Expand sidebar"}
+                  </TooltipLabel>
+                </Tooltip>
+              </TooltipProvider>
+              {props.children}
+            </>
+          );
+        }}
       </LayoutContent>
     </Layout>
   );

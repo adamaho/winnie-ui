@@ -131,6 +131,17 @@
       @starting-style {
         opacity: 0;
       }
+
+      .wui-layout__toggle-hover-action {
+        height: calc(
+          var(--wui-layout__page-header-height, calc(48px * var(--wui-scale))) +
+          var(--wui-layout-content-space)
+        );
+        position: absolute;
+        top: calc(-1 * var(--wui-layout-content-space) - var(--wui-space-4));
+        width: calc(70px * var(--wui-scale));
+        z-index: 96;
+      }
     }
 
     &:has(

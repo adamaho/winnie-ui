@@ -59,6 +59,13 @@
         "types": "./src/components/typography/text.tsx"
       }
     },
+    "./tooltip": {
+      "import": {
+        "default": "./src/components/tooltip.tsx",
+        "types": "./src/components/tooltip.tsx"
+      }
+    },
+    "./tooltip.css": "./src/styles/tooltip.css",
     "./page.css": "./src/styles/page.css",
     "./popover.css": "./src/styles/popover.css",
     "./separator.css": "./src/styles/separator.css",

@@ -30,7 +30,6 @@ import {
 } from "react-aria-components";
 
 import { Checkmark } from "@winnie-ui/icons/line/checkmark";
-import { Dot } from "@winnie-ui/icons/solid/dot";
 
 /* -------------------------------------------------------------------------------------------------
  * MenuProvider
@@ -50,11 +49,9 @@ type MenuProviderProps = AriaMenuTriggerProps;
  *    <Menu>
  *      <MenuItem />
  *    </Menu>
- *  </Popover>
+ *  </MenuPopover>
  * </MenuProvider>
  * ```
- *
- * > Note: This component uses the `MenuTrigger` component from react-aria-components under the hood.
  *
  * See {@link https://winnie-ui.com/react/docs/components/menu Documentation} for examples.
  */

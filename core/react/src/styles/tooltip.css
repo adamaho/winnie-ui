@@ -1,0 +1,8 @@
+@layer component {
+  [data-component="tooltip"] {
+    background: var(--wui-tooltip-background);
+    border: var(--wui-tooltip-border);
+    box-shadow: var(--wui-tooltip-box-shadow);
+    color: var(--wui-tooltip-color);
+  }
+}

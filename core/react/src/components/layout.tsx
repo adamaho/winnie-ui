@@ -514,17 +514,9 @@ function LayoutSidebarToggle({
           <SidebarSimpleLeftSquareLine />
         </ButtonIcon>
       )}
-
       <span
         {...hoverProps}
-        style={{
-          zIndex: 96,
-          height:
-            "calc(var(--wui-layout__page-header-height, 48px) + var(--wui-layout-content-space))",
-          top: "calc(-1 * var(--wui-layout-content-space) - var(--wui-space-4))",
-          position: "absolute",
-          width: "calc(70px * var(--wui-scale))",
-        }}
+        className="wui-layout__toggle-hover-action"
         ref={context.triggerRef}
       />
     </Button>
@@ -711,7 +703,13 @@ function LayoutMask({ className, ref, ...props }: LayoutMaskProps) {
 /* -------------------------------------------------------------------------------------------------
  * LayoutContent
  * -----------------------------------------------------------------------------------------------*/
-type LayoutContentProps = ComponentPropsWithoutRef<"main"> & {
+type LayoutContentChildrenProps = Pick<LayoutContextProps, "sidebarState">;
+type LayoutContentProps = Omit<ComponentPropsWithoutRef<"main">, "children"> & {
+  /**
+   * Children of the layout component
+   */
+  children?: ReactNode | ((props: LayoutContentChildrenProps) => ReactNode);
+
   /**
    * Ref to mask element
    */
@@ -738,7 +736,9 @@ function LayoutContent({
       ref={ref}
     >
       <div className="wui-layout__page" data-component="page">
-        {children}
+        {typeof children === "function"
+          ? children({ sidebarState: context.sidebarState })
+          : children}
       </div>
     </main>
   );
@@ -757,6 +757,7 @@ export type {
   LayoutMaskProps,
   LayoutSidebarProps,
   LayoutContentProps,
+  LayoutContentChildrenProps,
   LayoutSidebarToggleProps,
   LayoutSidebarResizeHandleProps,
 };

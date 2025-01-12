@@ -146,6 +146,12 @@
     }
 
     /* -------------------------------------------------------------------------------------------------
+     * Tooltip 
+     * -----------------------------------------------------------------------------------------------*/
+    [data-component="tooltip"] {
+    }
+
+    /* -------------------------------------------------------------------------------------------------
      * Typography
      * -----------------------------------------------------------------------------------------------*/
     [data-component="text"],
@@ -200,6 +206,14 @@
     [data-component="separator"] {
       --wui-separator-background: var(--wui-color-grey-5);
     }
+
+    [data-component="tooltip"] {
+      --wui-tooltip-background: var(--wui-color-white);
+      --wui-tooltip-border: var(--wui-border-width-1) solid
+        var(--wui-color-grey-5);
+      --wui-tooltip-box-shadow: var(--wui-shadow-2);
+      --wui-tooltip-color: var(--wui-color-grey-11);
+    }
   }
 
   :where([data-color-scheme="winnie"][data-theme="dark"]) {
@@ -231,6 +245,14 @@
 
     [data-component="separator"] {
       --wui-separator-background: var(--wui-color-grey-5);
+    }
+
+    [data-component="tooltip"] {
+      --wui-tooltip-background: var(--wui-color-grey-3);
+      --wui-tooltip-border: var(--wui-border-width-1) solid
+        var(--wui-color-grey-6);
+      --wui-tooltip-box-shadow: var(--wui-shadow-2);
+      --wui-tooltip-color: var(--wui-color-grey-11);
     }
   }
 }
