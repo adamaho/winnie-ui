@@ -29,7 +29,7 @@ import {
   type Selection,
 } from "react-aria-components";
 
-import { Checkmark } from "@winnie-ui/icons/line/checkmark";
+import { Checkmark } from "@winnie-ui/icons/line";
 
 /* -------------------------------------------------------------------------------------------------
  * MenuProvider

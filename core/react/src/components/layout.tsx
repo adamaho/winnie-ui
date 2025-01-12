@@ -19,8 +19,8 @@ import { useFocusRing, useHover, useMove, usePress } from "react-aria";
 
 import { Button, ButtonIcon } from "./button";
 
-import { SidebarSimpleLeftSquare as SidebarSimpleLeftSquareLine } from "@winnie-ui/icons/line/sidebar-simple-left-square";
-import { SidebarSimpleLeftSquare as SidebarSimpleLeftSquareSolid } from "@winnie-ui/icons/solid/sidebar-simple-left-square";
+import { SidebarSimpleLeftSquare as SidebarSimpleLeftSquareLine } from "@winnie-ui/icons/line";
+import { SidebarSimpleLeftSquare as SidebarSimpleLeftSquareSolid } from "@winnie-ui/icons/solid";
 
 import clsx from "clsx";
 

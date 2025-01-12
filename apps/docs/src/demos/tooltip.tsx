@@ -1,7 +1,7 @@
 import { Button, ButtonIcon } from "@winnie-ui/react";
 import { Tooltip, TooltipLabel, TooltipProvider } from "@winnie-ui/react";
 
-import { SidebarSimpleLeftSquare } from "@winnie-ui/icons/solid/sidebar-simple-left-square";
+import { SidebarSimpleLeftSquare } from "@winnie-ui/icons/solid";
 
 /* -------------------------------------------------------------------------------------------------
  * TooltipDemo

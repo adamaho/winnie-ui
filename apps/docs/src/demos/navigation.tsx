@@ -1,4 +1,11 @@
 import {
+  Button,
+  ButtonIcon,
+  Menu,
+  MenuItem,
+  MenuItemLabel,
+  MenuPopover,
+  MenuProvider,
   Navigation,
   NavigationDisclosure,
   NavigationDisclosureContent,
@@ -12,21 +19,14 @@ import {
 } from "@winnie-ui/react";
 
 import {
-  Menu,
-  MenuItem,
-  MenuItemLabel,
-  MenuPopover,
-  MenuProvider,
-} from "@winnie-ui/react";
+  Cocktail,
+  DotGrid1x3Horizontal,
+  ForkKnife,
+  HomeDoor,
+  LayoutGrid2,
+  Store1,
+} from "@winnie-ui/icons/solid";
 
-import { Cocktail } from "@winnie-ui/icons/solid/cocktail";
-import { DotGrid1x3Horizontal } from "@winnie-ui/icons/solid/dot-grid-1x3-horizontal";
-import { ForkKnife } from "@winnie-ui/icons/solid/fork-knife";
-import { HomeDoor } from "@winnie-ui/icons/solid/home-door";
-import { LayoutGrid2 } from "@winnie-ui/icons/solid/layout-grid-2";
-import { Store1 } from "@winnie-ui/icons/solid/store-1";
-
-import { Button, ButtonIcon } from "@winnie-ui/react";
 import type { CSSProperties } from "react";
 
 const navigationDemoStyles = {
