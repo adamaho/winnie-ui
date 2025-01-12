@@ -1,0 +1,59 @@
+---
+title: Tooltip 
+description: A helpful description of an element when hovered or focused.
+documentation:
+  [{ label: Tooltip, link: https://react-spectrum.adobe.com/react-aria/Tooltip.html, icon: react-aria }]
+---
+
+import {
+  TooltipDemo,
+} from "~/demos/tooltip.tsx";
+
+import Demo from "~/components/demo/demo.astro";
+
+<Demo>
+  <TooltipDemo client:load />
+  <Fragment slot="footer">
+    ```tsx
+    <TooltipProvider>
+      <Button>
+        <ButtonIcon>
+          <SidebarSimpleLeftSquare />
+        </ButtonIcon>
+      </Button>
+      <Tooltip>
+        <TooltipLabel>Close navigation sidebar</TooltipLabel>
+      </Tooltip>
+    </TooltipProvider>
+    ```
+  </Fragment>
+</Demo>
+
+## Import
+
+Import the tooltip component.
+
+```tsx
+import {
+  TooltipProvider,
+  Tooltip,
+  TooltipLabel
+} from "@winnie-ui/react/tooltip";
+```
+
+## Anatomy
+
+Arrange the components in the structure below.
+
+```tsx
+<TooltipProvider>
+  <Button />
+  <Tooltip>
+    <TooltipLabel />
+  </Tooltip>
+</TooltipProvider>
+```
+
+## Reference
+
+Refer to React Aria Components [documentation](https://react-spectrum.adobe.com/react-aria/Tooltip.html#props) for more details about the other props and events available on Tooltip.

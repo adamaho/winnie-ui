@@ -33,10 +33,11 @@ type TooltipProviderProps = AriaTooltipTriggerProps;
 function TooltipProvider({
   children,
   delay = 800,
+  closeDelay = 0,
   ...props
 }: TooltipProviderProps) {
   return (
-    <AriaTooltipTrigger {...props} delay={delay}>
+    <AriaTooltipTrigger {...props} closeDelay={0} delay={delay}>
       {children}
     </AriaTooltipTrigger>
   );
