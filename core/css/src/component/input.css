@@ -38,8 +38,7 @@
 
     &[data-radius="round"] {
       padding-inline: calc(
-        var(--wui-input-space, var(--wui-input-md-space)) *
-        1.5
+        var(--wui-input-space, var(--wui-input-md-space)) * 1.5
       );
     }
 

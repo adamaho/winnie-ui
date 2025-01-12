@@ -1,3 +1,5 @@
+import type { CSSProperties } from "react";
+
 import {
   Button,
   ButtonIcon,
@@ -26,8 +28,6 @@ import {
   LayoutGrid2,
   Store1,
 } from "@winnie-ui/icons/solid";
-
-import type { CSSProperties } from "react";
 
 const navigationDemoStyles = {
   background: "var(--wui-color-grey-1)",

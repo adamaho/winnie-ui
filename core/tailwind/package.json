@@ -8,7 +8,10 @@
   "exports": {
     ".": "./src/index.css"
   },
-  "files": ["src", "package.json"],
+  "files": [
+    "src",
+    "package.json"
+  ],
   "scripts": {
     "clean": "rimraf node_modules",
     "format:check": "biome format ./src --no-errors-on-unmatched",

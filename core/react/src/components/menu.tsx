@@ -1,4 +1,3 @@
-import clsx from "clsx";
 import {
   Children,
   ComponentPropsWithoutRef,
@@ -8,7 +7,6 @@ import {
   ReactElement,
   cloneElement,
 } from "react";
-
 import {
   Header as AriaHeader,
   Keyboard as AriaKeyboard,
@@ -30,6 +28,8 @@ import {
 } from "react-aria-components";
 
 import { Checkmark } from "@winnie-ui/icons/line";
+
+import clsx from "clsx";
 
 /* -------------------------------------------------------------------------------------------------
  * MenuProvider

@@ -8,7 +8,6 @@ import {
   ScrollAreaThumb as RadixScrollAreaThumb,
   ScrollAreaViewport as RadixScrollAreaViewport,
 } from "@radix-ui/react-scroll-area";
-
 import clsx from "clsx";
 
 import "./scroll-area.css";

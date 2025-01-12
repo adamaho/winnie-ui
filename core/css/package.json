@@ -82,7 +82,10 @@
       "./reset": "./dist/reset.min.css"
     }
   },
-  "files": ["dist", "package.json"],
+  "files": [
+    "dist",
+    "package.json"
+  ],
   "scripts": {
     "build": "rimraf dist && concurrently pnpm:dist:* -m 25",
     "format:check": "biome format ./src --no-errors-on-unmatched",

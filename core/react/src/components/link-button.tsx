@@ -1,4 +1,3 @@
-import clsx from "clsx";
 import {
   Children,
   type ComponentPropsWithoutRef,
@@ -8,13 +7,15 @@ import {
   type ReactElement,
   cloneElement,
 } from "react";
-
 import {
   Link as AriaLink,
   LinkProps as AriaLinkProps,
   Text as AriaText,
   LinkContext as LinkButtonContext,
 } from "react-aria-components";
+
+import clsx from "clsx";
+
 import { WinnieButtonProps } from "./button";
 
 /* -------------------------------------------------------------------------------------------------

@@ -7,15 +7,16 @@ import {
   ModalOverlay,
 } from "react-aria-components";
 
+import type { CollectionKey } from "astro:content";
 import { Command } from "cmdk";
 import Flexsearch from "flexsearch";
 import { Search } from "lucide-react";
+
 import type { CollectionResponse, ContentResponse } from "~/types/collections";
 
 import { getMarkedDescription, getMarkedTitle } from "./utils";
 
 import "./search-command-menu.css";
-import type { CollectionKey } from "astro:content";
 
 type SearchCommandMenuProps = {
   collection: CollectionKey;

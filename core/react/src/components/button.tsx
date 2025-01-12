@@ -1,4 +1,3 @@
-import clsx from "clsx";
 import {
   Children,
   type ComponentPropsWithoutRef,
@@ -8,7 +7,6 @@ import {
   type ReactElement,
   cloneElement,
 } from "react";
-
 import {
   Button as AriaButton,
   type ButtonProps as AriaButtonProps,
@@ -17,6 +15,8 @@ import {
   useContextProps,
   useSlottedContext,
 } from "react-aria-components";
+
+import clsx from "clsx";
 
 /* -------------------------------------------------------------------------------------------------
  * Button

@@ -1,6 +1,6 @@
-import { createLazyFileRoute } from "@tanstack/react-router";
-
 import { Link } from "@winnie-ui/react";
+
+import { createLazyFileRoute } from "@tanstack/react-router";
 
 export const Route = createLazyFileRoute("/")({
   component: Index,
