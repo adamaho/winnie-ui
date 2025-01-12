@@ -4,7 +4,7 @@ import {
   ButtonIcon,
   ButtonLabel,
   ButtonPending,
-} from "@winnie-ui/react/button";
+} from "@winnie-ui/react";
 
 import { Loader, Utensils } from "lucide-react";
 

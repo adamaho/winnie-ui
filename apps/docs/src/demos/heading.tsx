@@ -1,4 +1,4 @@
-import { Heading } from "@winnie-ui/react/heading";
+import { Heading } from "@winnie-ui/react";
 
 /* -------------------------------------------------------------------------------------------------
  * HeadingDemo

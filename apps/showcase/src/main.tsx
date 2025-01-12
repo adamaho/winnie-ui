@@ -9,7 +9,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
 import { ZeroProvider } from "@rocicorp/zero/react";
-import { RouterProvider as WinnieRouterProvider } from "@winnie-ui/react/router-provider";
+import { RouterProvider as WinnieRouterProvider } from "@winnie-ui/react";
 
 import { routeTree } from "./routeTree.gen";
 import { zero } from "./singletons/zero";
@@ -55,7 +55,7 @@ declare module "@tanstack/react-router" {
  * Register router instance for use with winnie react component type safety on components
  * that use links
  */
-declare module "@winnie-ui/react/components" {
+declare module "@winnie-ui/react" {
   interface RouterConfig {
     href: ToOptions["to"];
     routerOptions: Omit<NavigateOptions, keyof ToOptions>;

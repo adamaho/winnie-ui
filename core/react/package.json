@@ -6,82 +6,22 @@
   "type": "module",
   "files": ["dist", "package.json"],
   "exports": {
-    "./button": {
-      "import": {
-        "default": "./src/components/button.tsx",
-        "types": "./src/components/button.tsx"
-      }
-    },
-    "./button.css": "./src/styles/button.css",
-    "./heading": {
-      "import": {
-        "default": "./src/components/typography/heading.tsx",
-        "types": "./src/components/typography/heading.tsx"
-      }
-    },
-    "./components": {
+    ".": {
       "import": {
         "default": "./src/components/index.ts",
         "types": "./src/components/index.ts"
       }
     },
-    "./layout": {
-      "import": {
-        "default": "./src/components/layout.tsx",
-        "types": "./src/components/layout.tsx"
-      }
-    },
+    "./css": "./src/styles/index.css",
+    "./button.css": "./src/styles/button.css",
     "./layout.css": "./src/styles/layout.css",
-    "./link": {
-      "import": {
-        "default": "./src/components/typography/link.tsx",
-        "types": "./src/components/typography/link.tsx"
-      }
-    },
     "./link.css": "./src/styles/link.css",
-    "./link-button": {
-      "import": {
-        "default": "./src/components/link-button.tsx",
-        "types": "./src/components/link-button.tsx"
-      }
-    },
     "./listbox.css": "./src/styles/listbox.css",
-    "./menu": {
-      "import": {
-        "default": "./src/components/menu.tsx",
-        "types": "./src/components/menu.tsx"
-      }
-    },
-    "./navigation": {
-      "import": {
-        "default": "./src/components/navigation.tsx",
-        "types": "./src/components/navigation.tsx"
-      }
-    },
     "./navigation.css": "./src/styles/navigation.css",
-    "./router-provider": {
-      "import": {
-        "default": "./src/components/router-provider.tsx",
-        "types": "./src/components/router-provider.tsx"
-      }
-    },
-    "./text": {
-      "import": {
-        "default": "./src/components/typography/text.tsx",
-        "types": "./src/components/typography/text.tsx"
-      }
-    },
-    "./tooltip": {
-      "import": {
-        "default": "./src/components/tooltip.tsx",
-        "types": "./src/components/tooltip.tsx"
-      }
-    },
     "./tooltip.css": "./src/styles/tooltip.css",
     "./page.css": "./src/styles/page.css",
     "./popover.css": "./src/styles/popover.css",
     "./separator.css": "./src/styles/separator.css",
-    "./css": "./src/styles/index.css",
     "./typography.css": "./src/styles/typography.css"
   },
   "scripts": {

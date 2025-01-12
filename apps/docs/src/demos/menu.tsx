@@ -1,4 +1,4 @@
-import { Button, ButtonIcon, ButtonLabel } from "@winnie-ui/react/button";
+import { Button, ButtonIcon, ButtonLabel } from "@winnie-ui/react";
 import {
   Menu,
   MenuItem,
@@ -14,7 +14,7 @@ import {
   MenuSectionLabel,
   MenuSeparator,
   type Selection,
-} from "@winnie-ui/react/menu";
+} from "@winnie-ui/react";
 import { ChevronDown, Cog, Info, LogOut, Moon, User } from "lucide-react";
 import { useState } from "react";
 
