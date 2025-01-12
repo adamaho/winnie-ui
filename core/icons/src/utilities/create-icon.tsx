@@ -62,6 +62,7 @@ type CreateIconArgs = {
  *
  * @param name name of the icon
  * @param paths array of paths for the icon
+ * @param type type of icon (line or solid)
  * @returns icon component
  */
 function createIcon({ name, paths, type }: CreateIconArgs) {

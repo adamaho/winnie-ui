@@ -152,6 +152,9 @@ importers:
       "@tanstack/react-router":
         specifier: 1.92.1
         version: 1.92.1(@tanstack/router-generator@1.87.7)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      "@winnie-ui/icons":
+        specifier: workspace:*
+        version: link:../../core/icons
       "@winnie-ui/react":
         specifier: workspace:*
         version: link:../../core/react

@@ -16,10 +16,38 @@ import { Route as rootRoute } from "./routes/__root";
 
 // Create Virtual Routes
 
+const MenusLazyImport = createFileRoute("/menus")();
+const HomeLazyImport = createFileRoute("/home")();
+const DrinksLazyImport = createFileRoute("/drinks")();
+const DishesLazyImport = createFileRoute("/dishes")();
 const AboutLazyImport = createFileRoute("/about")();
 const IndexLazyImport = createFileRoute("/")();
 
 // Create/Update Routes
+
+const MenusLazyRoute = MenusLazyImport.update({
+  id: "/menus",
+  path: "/menus",
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import("./routes/menus.lazy").then((d) => d.Route));
+
+const HomeLazyRoute = HomeLazyImport.update({
+  id: "/home",
+  path: "/home",
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import("./routes/home.lazy").then((d) => d.Route));
+
+const DrinksLazyRoute = DrinksLazyImport.update({
+  id: "/drinks",
+  path: "/drinks",
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import("./routes/drinks.lazy").then((d) => d.Route));
+
+const DishesLazyRoute = DishesLazyImport.update({
+  id: "/dishes",
+  path: "/dishes",
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import("./routes/dishes.lazy").then((d) => d.Route));
 
 const AboutLazyRoute = AboutLazyImport.update({
   id: "/about",
@@ -51,6 +79,34 @@ declare module "@tanstack/react-router" {
       preLoaderRoute: typeof AboutLazyImport;
       parentRoute: typeof rootRoute;
     };
+    "/dishes": {
+      id: "/dishes";
+      path: "/dishes";
+      fullPath: "/dishes";
+      preLoaderRoute: typeof DishesLazyImport;
+      parentRoute: typeof rootRoute;
+    };
+    "/drinks": {
+      id: "/drinks";
+      path: "/drinks";
+      fullPath: "/drinks";
+      preLoaderRoute: typeof DrinksLazyImport;
+      parentRoute: typeof rootRoute;
+    };
+    "/home": {
+      id: "/home";
+      path: "/home";
+      fullPath: "/home";
+      preLoaderRoute: typeof HomeLazyImport;
+      parentRoute: typeof rootRoute;
+    };
+    "/menus": {
+      id: "/menus";
+      path: "/menus";
+      fullPath: "/menus";
+      preLoaderRoute: typeof MenusLazyImport;
+      parentRoute: typeof rootRoute;
+    };
   }
 }
 
@@ -59,36 +115,56 @@ declare module "@tanstack/react-router" {
 export interface FileRoutesByFullPath {
   "/": typeof IndexLazyRoute;
   "/about": typeof AboutLazyRoute;
+  "/dishes": typeof DishesLazyRoute;
+  "/drinks": typeof DrinksLazyRoute;
+  "/home": typeof HomeLazyRoute;
+  "/menus": typeof MenusLazyRoute;
 }
 
 export interface FileRoutesByTo {
   "/": typeof IndexLazyRoute;
   "/about": typeof AboutLazyRoute;
+  "/dishes": typeof DishesLazyRoute;
+  "/drinks": typeof DrinksLazyRoute;
+  "/home": typeof HomeLazyRoute;
+  "/menus": typeof MenusLazyRoute;
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute;
   "/": typeof IndexLazyRoute;
   "/about": typeof AboutLazyRoute;
+  "/dishes": typeof DishesLazyRoute;
+  "/drinks": typeof DrinksLazyRoute;
+  "/home": typeof HomeLazyRoute;
+  "/menus": typeof MenusLazyRoute;
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath;
-  fullPaths: "/" | "/about";
+  fullPaths: "/" | "/about" | "/dishes" | "/drinks" | "/home" | "/menus";
   fileRoutesByTo: FileRoutesByTo;
-  to: "/" | "/about";
-  id: "__root__" | "/" | "/about";
+  to: "/" | "/about" | "/dishes" | "/drinks" | "/home" | "/menus";
+  id: "__root__" | "/" | "/about" | "/dishes" | "/drinks" | "/home" | "/menus";
   fileRoutesById: FileRoutesById;
 }
 
 export interface RootRouteChildren {
   IndexLazyRoute: typeof IndexLazyRoute;
   AboutLazyRoute: typeof AboutLazyRoute;
+  DishesLazyRoute: typeof DishesLazyRoute;
+  DrinksLazyRoute: typeof DrinksLazyRoute;
+  HomeLazyRoute: typeof HomeLazyRoute;
+  MenusLazyRoute: typeof MenusLazyRoute;
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexLazyRoute: IndexLazyRoute,
   AboutLazyRoute: AboutLazyRoute,
+  DishesLazyRoute: DishesLazyRoute,
+  DrinksLazyRoute: DrinksLazyRoute,
+  HomeLazyRoute: HomeLazyRoute,
+  MenusLazyRoute: MenusLazyRoute,
 };
 
 export const routeTree = rootRoute
@@ -102,7 +178,11 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
-        "/about"
+        "/about",
+        "/dishes",
+        "/drinks",
+        "/home",
+        "/menus"
       ]
     },
     "/": {
@@ -110,6 +190,18 @@ export const routeTree = rootRoute
     },
     "/about": {
       "filePath": "about.lazy.tsx"
+    },
+    "/dishes": {
+      "filePath": "dishes.lazy.tsx"
+    },
+    "/drinks": {
+      "filePath": "drinks.lazy.tsx"
+    },
+    "/home": {
+      "filePath": "home.lazy.tsx"
+    },
+    "/menus": {
+      "filePath": "menus.lazy.tsx"
     }
   }
 }

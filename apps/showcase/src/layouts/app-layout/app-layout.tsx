@@ -12,6 +12,8 @@ import {
   TooltipProvider,
 } from "@winnie-ui/react";
 
+import { AppNavigation } from "./app-navigation";
+
 /* -------------------------------------------------------------------------------------------------
  * AppLayout
  * -----------------------------------------------------------------------------------------------*/
@@ -20,6 +22,7 @@ function AppLayout(props: PropsWithChildren) {
     <Layout>
       <LayoutMask />
       <LayoutSidebar>
+        <AppNavigation />
         <LayoutSidebarResizeHandle />
       </LayoutSidebar>
       <LayoutContent>

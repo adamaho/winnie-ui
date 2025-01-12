@@ -2,7 +2,7 @@ import { Suspense, lazy } from "react";
 
 import { Outlet, createRootRoute } from "@tanstack/react-router";
 
-import { AppLayout } from "../layouts/app-layout/app-layout";
+import { AppLayout } from "~/layouts/app-layout/app-layout";
 
 const TanStackRouterDevtools = import.meta.env.PROD
   ? () => null // Render nothing in production
