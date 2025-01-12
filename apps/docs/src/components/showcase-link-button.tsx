@@ -1,6 +1,6 @@
 import { LinkButton, LinkButtonIcon, LinkButtonLabel } from "@winnie-ui/react";
 
-import { SquareArrowTopRight } from "@winnie-ui/icons/line";
+import { SquareArrowTopRight } from "@winnie-ui/icons/solid";
 
 export function ShowcaseLinkButton() {
   return (

@@ -16,6 +16,9 @@ import { ReactNode, ToOptions } from "@tanstack/react-router";
 
 import { useIsActiveLink } from "~/hooks/use-is-active-link";
 
+/* -------------------------------------------------------------------------------------------------
+ * AppNavigationItem
+ * -----------------------------------------------------------------------------------------------*/
 type AppNavigationItemProps = {
   href: ToOptions["to"];
   icon: ReactNode;
@@ -33,6 +36,9 @@ function AppNavigationItem({ href, icon, label }: AppNavigationItemProps) {
   );
 }
 
+/* -------------------------------------------------------------------------------------------------
+ * AppNavigation
+ * -----------------------------------------------------------------------------------------------*/
 export function AppNavigation() {
   return (
     <Navigation>

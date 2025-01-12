@@ -27,7 +27,7 @@ import {
   type Selection,
 } from "react-aria-components";
 
-import { Checkmark } from "@winnie-ui/icons/line";
+import { Checkmark } from "@winnie-ui/icons/solid";
 
 import clsx from "clsx";
 

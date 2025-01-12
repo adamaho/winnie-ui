@@ -1,8 +1,11 @@
+export { Checkmark } from "./checkmark";
+export { ChevronRight } from "./chevron-right";
 export { Dot } from "./dot";
 export { ForkKnife } from "./fork-knife";
 export { HomeDoor } from "./home-door";
 export { LayoutGrid2 } from "./layout-grid-2";
 export { SidebarSimpleLeftSquare } from "./sidebar-simple-left-square";
+export { SquareArrowTopRight } from "./square-arrow-top-right";
 export { Store1 } from "./store-1";
 export { ArrowTriangleRight } from "./arrow-triangle-right";
 export { Cocktail } from "./cocktail";

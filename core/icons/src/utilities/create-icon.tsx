@@ -23,12 +23,7 @@ type PathProps = ComponentPropsWithoutRef<"path">;
 function getSharedPathProps(type: IconType): PathProps {
   switch (type) {
     case "line": {
-      return {
-        stroke: "currentColor",
-        strokeWidth: "1.5",
-        strokeLinecap: "round",
-        strokeLinejoin: "round",
-      };
+      return {};
     }
     case "solid": {
       return {
@@ -55,6 +50,7 @@ type CreateIconArgs = {
   name: string;
   paths: string[];
   type: "line" | "solid";
+  pathProps?: PathProps;
 };
 
 /**
@@ -63,9 +59,10 @@ type CreateIconArgs = {
  * @param name name of the icon
  * @param paths array of paths for the icon
  * @param type type of icon (line or solid)
+ * @param pathPrrops extra props for path element
  * @returns icon component
  */
-function createIcon({ name, paths, type }: CreateIconArgs) {
+function createIcon({ name, paths, type, pathProps }: CreateIconArgs) {
   return function Icon({
     className,
     color = undefined,
@@ -85,7 +82,9 @@ function createIcon({ name, paths, type }: CreateIconArgs) {
         xmlns="http://www.w3.org/2000/svg"
       >
         {paths.map((d, i) => {
-          return <path key={i} d={d} {...getSharedPathProps(type)} />;
+          return (
+            <path key={i} d={d} {...getSharedPathProps(type)} {...pathProps} />
+          );
         })}
       </svg>
     );
