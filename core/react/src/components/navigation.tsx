@@ -9,20 +9,13 @@ import {
   cloneElement,
 } from "react";
 import {
-  Button as AriaButton,
-  type ButtonProps as AriaButtonProps,
-  Disclosure as AriaDisclosure,
-  DisclosurePanel as AriaDisclosurePanel,
-  type DisclosurePanelProps as AriaDisclosurePanelProps,
-  type DisclosureProps as AriaDisclosureProps,
-  Heading as AriaHeading,
   Link as AriaLink,
   type LinkProps as AriaLinkProps,
 } from "react-aria-components";
 
 import { Collapsible as BaseUICollapsible } from "@base-ui-components/react/collapsible";
 
-import { ChevronRight } from "@winnie-ui/icons/line/chevron-right";
+import { ArrowTriangleRight } from "@winnie-ui/icons/solid/arrow-triangle-right";
 
 /* -------------------------------------------------------------------------------------------------
  * Navigation
@@ -167,7 +160,7 @@ function NavigationDisclosureTriggerLabel({
       ref={ref}
     >
       {children}
-      <ChevronRight />
+      <ArrowTriangleRight />
     </span>
   );
 }

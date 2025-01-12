@@ -26,9 +26,10 @@
         overflow: hidden;
 
         [data-component="icon"] {
+          color: inherit;
           margin-left: var(--wui-space-3);
-          height: calc(20px * var(--wui-scale));
-          width: calc(20px * var(--wui-scale));
+          height: calc(9px * var(--wui-scale));
+          width: calc(9px * var(--wui-scale));
         }
       }
 

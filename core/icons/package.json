@@ -26,6 +26,12 @@
         "types": "./src/line/home-door.tsx"
       }
     },
+    "./solid/arrow-triangle-right": {
+      "import": {
+        "default": "./src/solid/arrow-triangle-right.tsx",
+        "types": "./src/solid/arrow-triangle-right.tsx"
+      }
+    },
     "./solid/cocktail": {
       "import": {
         "default": "./src/solid/cocktail.tsx",

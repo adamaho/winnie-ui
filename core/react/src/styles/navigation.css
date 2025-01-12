@@ -57,8 +57,10 @@
       outline: none;
       font-weight: var(--wui-navigation__item-font-weight);
 
-      [data-slot="indicator"] {
-        transition: transform var(--wui-duration-3) var(--wui-bezier-1);
+      [data-slot="label"] {
+        [data-component="icon"] {
+          transition: transform var(--wui-duration-3) var(--wui-bezier-1);
+        }
       }
 
       &:is([data-hovered], :hover) {
@@ -107,8 +109,10 @@
       }
 
       &[aria-expanded="true"] {
-        [data-slot="indicator"] {
-          transform: rotate(90deg);
+        [data-slot="label"] {
+          [data-component="icon"] {
+            transform: rotate(90deg);
+          }
         }
       }
     }
