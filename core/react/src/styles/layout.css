@@ -90,6 +90,10 @@
     [data-slot="content"] {
       background: var(--wui-layout__content-background);
 
+      [data-component="page"] {
+        position: relative;
+      }
+
       @media (prefers-reduced-motion: no-preference) {
         &:not([data-sidebar-dragging="true"]) {
           transition-property: padding-left;
@@ -120,8 +124,8 @@
       }
 
       @media (min-width: 768px) {
-        left: var(--wui-space-6);
-        top: var(--wui-space-6);
+        left: var(--wui-space-4);
+        top: var(--wui-space-4);
       }
 
       @starting-style {
@@ -134,14 +138,6 @@
       ) {
       [data-component="resize-handle"] {
         display: none;
-      }
-    }
-
-    &:has([data-slot="sidebar"]:is([data-state="docked"])) {
-      [data-slot="toggle"] {
-        @media (min-width: 768px) {
-          display: none;
-        }
       }
     }
   }

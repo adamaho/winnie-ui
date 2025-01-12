@@ -19,7 +19,8 @@ import { useFocusRing, useHover, useMove, usePress } from "react-aria";
 
 import { Button, ButtonIcon } from "./button";
 
-import { SidebarSimpleLeftSquare } from "@winnie-ui/icons/line/sidebar-simple-left-square";
+import { SidebarSimpleLeftSquare as SidebarSimpleLeftSquareLine } from "@winnie-ui/icons/line/sidebar-simple-left-square";
+import { SidebarSimpleLeftSquare as SidebarSimpleLeftSquareSolid } from "@winnie-ui/icons/solid/sidebar-simple-left-square";
 
 import clsx from "clsx";
 
@@ -478,7 +479,8 @@ function LayoutSidebarToggle({
         if (!breakpoint.matches) {
           return context.setSidebarState("open");
         }
-        break;
+
+        return context.setSidebarState("closed");
       }
       case "closed": {
         if (breakpoint.matches) {
@@ -503,9 +505,16 @@ function LayoutSidebarToggle({
       onPress={onPress}
       ref={ref}
     >
-      <ButtonIcon>
-        <SidebarSimpleLeftSquare />
-      </ButtonIcon>
+      {context.sidebarState === "docked" ? (
+        <ButtonIcon>
+          <SidebarSimpleLeftSquareSolid />
+        </ButtonIcon>
+      ) : (
+        <ButtonIcon>
+          <SidebarSimpleLeftSquareLine />
+        </ButtonIcon>
+      )}
+
       <span
         {...hoverProps}
         style={{

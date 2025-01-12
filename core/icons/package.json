@@ -80,6 +80,12 @@
         "types": "./src/solid/layout-grid-2.tsx"
       }
     },
+    "./solid/sidebar-simple-left-square": {
+      "import": {
+        "default": "./src/solid/sidebar-simple-left-square.tsx",
+        "types": "./src/solid/sidebar-simple-left-square.tsx"
+      }
+    },
     "./solid/store-1": {
       "import": {
         "default": "./src/solid/store-1.tsx",
