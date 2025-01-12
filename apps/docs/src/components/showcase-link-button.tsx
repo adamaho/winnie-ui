@@ -2,10 +2,6 @@ import { LinkButton, LinkButtonIcon, LinkButtonLabel } from "@winnie-ui/react";
 
 import { SquareArrowTopRight } from "@winnie-ui/icons/line/square-arrow-top-right";
 
-import { HomeDoor } from "@winnie-ui/icons/solid/home-door";
-
-import { Checkmark } from "@winnie-ui/icons/line/checkmark";
-
 export function ShowcaseLinkButton() {
   return (
     <LinkButton
