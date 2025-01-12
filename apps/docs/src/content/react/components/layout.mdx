@@ -1,0 +1,126 @@
+---
+title: Layout
+description: An opinionated application layout with sidebar.
+---
+
+import Demo from "~/components/demo/demo.astro";
+
+import { ShowcaseLinkButton } from "~/components/showcase-link-button"
+import { SquareArrowOutUpRight } from "lucide-react";
+
+import "~/demos/layout.css";
+
+<Demo>
+  <div className="layout-demo-container">
+    <div data-component="layout" className="layout-demo">
+      <div data-slot="mask" className="layout-demo-mask" />
+      <nav
+        data-slot="sidebar"
+        className="layout-demo-sidebar"
+        data-state="docked"
+      ></nav>
+      <main data-slot="content" className="layout-demo-content"></main>
+    </div>
+    <ShowcaseLinkButton client:load />
+  </div>
+  <Fragment slot="footer">
+    ```tsx
+    <Layout>
+      <LayoutMask />
+      <LayoutSidebar>
+        <LayoutSidebarResizeHandle />
+      </LayoutSidebar>
+      <LayoutContent />
+    </Layout>
+    ```
+  </Fragment>
+</Demo>
+
+## Import
+
+Import all of the parts of the layout.
+
+```tsx
+import {
+  Layout,
+  LayoutMask,
+  LayoutSidebar,
+  LayoutSidebarToggle,
+  LayoutSidebarResizeHandle
+  LayoutContent,
+} from "@winnie-ui/react/layout";
+```
+
+## Anatomy
+
+Arrange the components in the structure below.
+
+```tsx
+<Layout>
+  <LayoutMask />
+  <LayoutSidebar>
+    <LayoutSidebarResizeHandle />
+  </LayoutSidebar>
+  <LayoutContent>
+    <LayoutSidebarToggle />
+  </LayoutContent>
+</Layout>
+```
+
+## State
+
+The `Sidebar` moves between three different states. It uses a breakpoint of 768px to determine when to hide and close the sidebar. Due to a limitation in css, we do not provide an easy way to overwrite this since we cannot use variables in media queries. So, this means that when the sidebar is `docked` it will close when the screen width becomes less than 768px.
+
+### Docked
+
+The `docked` state occurs when the screen width is greater than 768px and the user has decided to have the sidebar open.
+
+<Demo>
+  <div className="layout-demo-container">
+    <div data-component="layout" className="layout-demo">
+      <div data-slot="mask" className="layout-demo-mask" />
+      <nav
+        data-slot="sidebar"
+        className="layout-demo-sidebar"
+        data-state="docked"
+      ></nav>
+      <main data-slot="content" className="layout-demo-content"></main>
+    </div>
+  </div>
+</Demo>
+
+### Open
+
+Allows the user to interact with the sidebar while it overlays the `LayoutContent`. However, you'll notice that when the breakpoint is hit, the sidebar goes full height, similar to the traditional mobile sidebar menus.
+
+<Demo>
+  <div className="layout-demo-container">
+    <div data-component="layout" className="layout-demo">
+      <div data-slot="mask" className="layout-demo-mask" />
+      <nav
+        data-slot="sidebar"
+        className="layout-demo-sidebar"
+        data-state="open"
+      ></nav>
+      <main data-slot="content" className="layout-demo-content"></main>
+    </div>
+  </div>
+</Demo>
+
+### Closed
+
+Closes the `Sidebar` and hides it from the user. 
+
+<Demo>
+  <div className="layout-demo-container">
+    <div data-component="layout" className="layout-demo">
+      <div data-slot="mask" className="layout-demo-mask" />
+      <nav
+        data-slot="sidebar"
+        className="layout-demo-sidebar"
+        data-state="closed"
+      ></nav>
+      <main data-slot="content" className="layout-demo-content"></main>
+    </div>
+  </div>
+</Demo>

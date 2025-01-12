@@ -73,26 +73,10 @@
   }
 
   .layout-demo-showcase-link {
-    background: var(--wui-color-grey-9);
     bottom: var(--wui-space-7);
-    color: var(--wui-color-accent-contrast);
-    font-weight: var(--wui-font-weight-medium);
     position: absolute;
     right: var(--wui-space-7);
     z-index: 98;
-
-    &:hover {
-      background: var(--wui-color-grey-10);
-    }
-
-    &:active {
-      background: oklch(from var(--wui-color-grey-10) calc(l * 0.9) c h);
-    }
-
-    &:focus-visible {
-      outline: var(--wui-border-width-2) solid var(--wui-color-accent-8);
-      outline-offset: 2px;
-    }
   }
 }
 

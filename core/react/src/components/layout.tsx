@@ -19,6 +19,8 @@ import { useFocusRing, useHover, useMove, usePress } from "react-aria";
 
 import { Button, ButtonIcon } from "./button";
 
+import { SidebarSimpleLeftSquare } from "@winnie-ui/icons/line/sidebar-simple-left-square";
+
 import clsx from "clsx";
 
 /* -------------------------------------------------------------------------------------------------
@@ -441,7 +443,6 @@ type LayoutSidebarToggleProps = ComponentPropsWithoutRef<typeof Button> & {
 
 function LayoutSidebarToggle({
   className,
-  icon,
   ref,
   ...props
 }: LayoutSidebarToggleProps) {
@@ -502,7 +503,9 @@ function LayoutSidebarToggle({
       onPress={onPress}
       ref={ref}
     >
-      <ButtonIcon>{icon}</ButtonIcon>
+      <ButtonIcon>
+        <SidebarSimpleLeftSquare />
+      </ButtonIcon>
       <span
         {...hoverProps}
         style={{

@@ -8,6 +8,41 @@ import { type BaseIconProps, getIconProps } from "./get-icon-props";
 
 import clsx from "clsx";
 
+type IconType = "line" | "solid";
+
+/* -------------------------------------------------------------------------------------------------
+ * Utilities
+ * -----------------------------------------------------------------------------------------------*/
+type PathProps = ComponentPropsWithoutRef<"path">;
+/**
+ * Computes the shared path props based on the provided icon type
+ *
+ * @param type type of the icon
+ * @returns object of shared path props
+ */
+function getSharedPathProps(type: IconType): PathProps {
+  switch (type) {
+    case "line": {
+      return {
+        stroke: "currentColor",
+        strokeWidth: "1.5",
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+      };
+    }
+    case "solid": {
+      return {
+        fill: "currentColor",
+        fillRule: "evenodd",
+        clipRule: "evenodd",
+      };
+    }
+  }
+}
+
+/* -------------------------------------------------------------------------------------------------
+ * CreateIcon
+ * -----------------------------------------------------------------------------------------------*/
 type IconProps = BaseIconProps &
   ComponentPropsWithoutRef<"svg"> & {
     /**
@@ -49,15 +84,7 @@ function createIcon({ name, paths, type }: CreateIconArgs) {
         xmlns="http://www.w3.org/2000/svg"
       >
         {paths.map((d, i) => {
-          return (
-            <path
-              key={i}
-              d={d}
-              fill="currentColor"
-              fillRule="evenodd"
-              clipRule="evenodd"
-            />
-          );
+          return <path key={i} d={d} {...getSharedPathProps(type)} />;
         })}
       </svg>
     );
