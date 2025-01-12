@@ -2,13 +2,13 @@
 /* tslint:disable */
 /* eslint-disable */
 /* deno-fmt-ignore-file */
-import "sst"
-export {}
+import "sst";
+export {};
 declare module "sst" {
   export interface Resource {
-    "WinnieDocs": {
-      "type": "sst.aws.Astro"
-      "url": string
-    }
+    WinnieDocs: {
+      type: "sst.aws.Astro";
+      url: string;
+    };
   }
 }

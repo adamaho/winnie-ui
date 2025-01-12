@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import { Button, ButtonIcon, ButtonLabel } from "@winnie-ui/react";
 import {
   Menu,
@@ -15,8 +17,8 @@ import {
   MenuSeparator,
   type Selection,
 } from "@winnie-ui/react";
+
 import { ChevronDown, Cog, Info, LogOut, Moon, User } from "lucide-react";
-import { useState } from "react";
 
 /* -------------------------------------------------------------------------------------------------
  * DishActionButton

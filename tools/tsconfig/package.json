@@ -4,7 +4,10 @@
   "description": "Shared tsconfigs for winnie-ui",
   "author": "Adam Aho",
   "private": true,
-  "files": ["base.json", "react.json"],
+  "files": [
+    "base.json",
+    "react.json"
+  ],
   "scripts": {
     "clean": "rimraf node_modules"
   },

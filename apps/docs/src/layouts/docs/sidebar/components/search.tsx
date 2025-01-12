@@ -1,4 +1,5 @@
 import type { CollectionKey } from "astro:content";
+
 import { SearchCommandMenu } from "~/components/search-command-menu/search-command-menu";
 import { useMediaQuery } from "~/hooks/use-media-query";
 

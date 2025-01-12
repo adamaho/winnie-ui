@@ -38,8 +38,7 @@
     );
     min-width: max-content;
     padding-block: calc(
-      var(--wui-tooltip-space, var(--wui-tooltip-sm-space)) /
-      3
+      var(--wui-tooltip-space, var(--wui-tooltip-sm-space)) / 3
     );
     padding-inline: var(--wui-tooltip-space, var(--wui-tooltip-sm-space));
     user-select: none;

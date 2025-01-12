@@ -1,9 +1,10 @@
-import clsx from "clsx";
 import { ComponentRef, ForwardedRef } from "react";
 import {
   Link as AriaLink,
   type LinkProps as AriaLinkProps,
 } from "react-aria-components";
+
+import clsx from "clsx";
 
 import { type TypographyProps, getTypographyProps } from "./props";
 

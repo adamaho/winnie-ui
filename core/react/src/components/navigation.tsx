@@ -1,4 +1,3 @@
-import clsx from "clsx";
 import {
   Children,
   type ComponentPropsWithoutRef,
@@ -13,9 +12,10 @@ import {
   type LinkProps as AriaLinkProps,
 } from "react-aria-components";
 
-import { Collapsible as BaseUICollapsible } from "@base-ui-components/react/collapsible";
-
 import { ArrowTriangleRight } from "@winnie-ui/icons/solid";
+
+import { Collapsible as BaseUICollapsible } from "@base-ui-components/react/collapsible";
+import clsx from "clsx";
 
 /* -------------------------------------------------------------------------------------------------
  * Navigation

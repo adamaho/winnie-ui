@@ -4,9 +4,9 @@ import {
   type ForwardedRef,
 } from "react";
 
-import { type BaseIconProps, getIconProps } from "./get-icon-props";
-
 import clsx from "clsx";
+
+import { type BaseIconProps, getIconProps } from "./get-icon-props";
 
 type IconType = "line" | "solid";
 

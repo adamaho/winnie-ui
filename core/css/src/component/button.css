@@ -60,12 +60,10 @@
 
       & > svg {
         height: calc(
-          var(--wui-button-icon-size, var(--wui-button-md-icon-size)) *
-          1.2
+          var(--wui-button-icon-size, var(--wui-button-md-icon-size)) * 1.2
         );
         width: calc(
-          var(--wui-button-icon-size, var(--wui-button-md-icon-size)) *
-          1.2
+          var(--wui-button-icon-size, var(--wui-button-md-icon-size)) * 1.2
         );
       }
     }

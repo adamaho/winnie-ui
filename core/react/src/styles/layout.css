@@ -40,21 +40,15 @@
 
         cursor: col-resize;
         height: calc(
-          100% -
-          var(--wui-layout-content-space) *
-          2 -
-          var(--wui-space-4) *
-          2
+          100% - var(--wui-layout-content-space) * 2 - var(--wui-space-4) * 2
         );
         margin-inline: calc(-1 * var(--wui-space-3));
         outline: none;
         padding-inline: var(--wui-space-3);
         position: absolute;
         right: calc(
-          -1 *
-          var(--wui-layout-content-space) +
-          var(--wui-layout__resize-handle-width) /
-          2
+          -1 * var(--wui-layout-content-space) +
+            var(--wui-layout__resize-handle-width) / 2
         );
         top: 50%;
         transform: translateY(-50%);
@@ -135,7 +129,7 @@
       .wui-layout__toggle-hover-action {
         height: calc(
           var(--wui-layout__page-header-height, calc(48px * var(--wui-scale))) +
-          var(--wui-layout-content-space)
+            var(--wui-layout-content-space)
         );
         position: absolute;
         top: calc(-1 * var(--wui-layout-content-space) - var(--wui-space-4));

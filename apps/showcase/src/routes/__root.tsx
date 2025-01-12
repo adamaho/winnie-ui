@@ -1,5 +1,6 @@
-import { Outlet, createRootRoute } from "@tanstack/react-router";
 import { Suspense, lazy } from "react";
+
+import { Outlet, createRootRoute } from "@tanstack/react-router";
 
 import { AppLayout } from "../layouts/app-layout/app-layout";
 

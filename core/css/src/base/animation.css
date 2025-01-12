@@ -150,10 +150,10 @@
      * cases where the popper is mounted and unmounted from the dom
      */
     :is(
-        .wui-popper-animate,
-        [data-component="popover"],
-        [data-component="tooltip"]
-      ) {
+      .wui-popper-animate,
+      [data-component="popover"],
+      [data-component="tooltip"]
+    ) {
       animation-timing-function: var(--wui-bezier-1);
 
       &:where(

@@ -17,6 +17,7 @@ import {
   Volume,
   Volume2,
 } from "lucide-react";
+
 import albumCover from "~/images/album-cover.jpg";
 import { type Theme, getTheme } from "~/utils/theme";
 

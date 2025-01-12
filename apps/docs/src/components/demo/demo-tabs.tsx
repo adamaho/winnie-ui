@@ -1,5 +1,4 @@
 import type { ReactNode } from "react";
-
 import { Tab, TabList, TabPanel, Tabs } from "react-aria-components";
 
 import "./demo-tabs.css";

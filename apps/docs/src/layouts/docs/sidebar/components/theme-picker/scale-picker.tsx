@@ -1,4 +1,5 @@
 import type { Theme } from "~/utils/theme";
+
 import { ThemePickerRadioGroup } from "./theme-picker-radio-group";
 
 function ScalePicker() {

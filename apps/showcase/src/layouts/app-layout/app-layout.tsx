@@ -1,3 +1,5 @@
+import type { PropsWithChildren } from "react";
+
 import {
   Layout,
   LayoutContent,
@@ -9,8 +11,6 @@ import {
   TooltipLabel,
   TooltipProvider,
 } from "@winnie-ui/react";
-
-import type { PropsWithChildren } from "react";
 
 /* -------------------------------------------------------------------------------------------------
  * AppLayout

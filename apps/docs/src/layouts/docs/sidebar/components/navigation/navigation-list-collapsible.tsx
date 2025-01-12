@@ -11,6 +11,7 @@ import {
   CollapsibleTrigger,
 } from "@radix-ui/react-collapsible";
 import { ChevronRight } from "lucide-react";
+
 import type { NavigationItem } from "./types";
 
 type NavigationListCollapsibleProps = {

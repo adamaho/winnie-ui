@@ -1,6 +1,7 @@
-import { BoxSelect, DollarSign, Palette } from "lucide-react";
 import { type ReactNode, useState } from "react";
 import { Radio, RadioGroup } from "react-aria-components";
+
+import { BoxSelect, DollarSign, Palette } from "lucide-react";
 
 import "./spatial-toggle.css";
 

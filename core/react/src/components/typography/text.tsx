@@ -1,9 +1,10 @@
-import clsx from "clsx";
 import { ComponentRef, ForwardedRef } from "react";
 import {
   Text as AriaText,
   type TextProps as AriaTextProps,
 } from "react-aria-components";
+
+import clsx from "clsx";
 
 import { type TypographyProps, getTypographyProps } from "./props";
 
