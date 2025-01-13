@@ -33,7 +33,7 @@ function AppLayout(props: PropsWithChildren) {
           return (
             <Page>
               <PageHeader>
-                <TooltipProvider>
+                <TooltipProvider closeDelay={1000}>
                   <LayoutSidebarToggle />
                   <Tooltip>
                     <TooltipLabel>

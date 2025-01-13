@@ -335,10 +335,14 @@ function Layout({ children, className, ref, ...props }: LayoutProps) {
         return;
       }
 
-      // if the current target is within the button of the sidebar
+      // if the current target is within the button or the sidebar
+      // Or if the current target is a tooltip or tooltip label
       if (
         triggerRef.current?.contains(e.target as Node) ||
-        sidebarRef.current?.contains(e.target as Node)
+        sidebarRef.current?.contains(e.target as Node) ||
+        (e.target as HTMLElement).getAttribute("data-component") ===
+          "tooltip" ||
+        (e.target as HTMLElement).getAttribute("data-slot") === "label"
       ) {
         clearTimeout(timerRef.current);
         return;
