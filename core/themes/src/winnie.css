@@ -225,22 +225,23 @@
 
   :where([data-color-scheme="winnie"][data-theme="dark"]) {
     [data-component="layout"] {
-      --wui-layout-background: var(--wui-color-grey-3);
-      --wui-layout__mask-background: var(--wui-color-black-a2);
+      --wui-layout-background: var(--wui-color-black);
+      --wui-layout__mask-background: var(--wui-color-black-a4);
       --wui-layout__sidebar-background-open-xs: var(--wui-color-white);
-      --wui-layout__sidebar-open-background: var(--wui-color-white);
-      --wui-layout__sidebar-open-border-color: var(--wui-color-grey-6);
-      --wui-layout__sidebar-background-open: var(--wui-color-white);
+      --wui-layout__sidebar-background-open: var(--wui-color-black);
+      --wui-layout__sidebar-box-shadow-open: var(--wui-shadow-4);
       --wui-layout__sidebar-box-shadow-open: var(--wui-shadow-4);
       --wui-layout__sidebar-border-right-open: var(--wui-border-width-1) solid
-        var(--wui-color-grey-6);
+        var(--wui-color-grey-3);
       --wui-layout__sidebar-border-open-lg: var(--wui-border-width-1) solid
-        var(--wui-color-grey-6);
-      --wui-layout__resize-handle-background: var(--wui-color-grey-9);
+        var(--wui-color-grey-3);
+      --wui-layout__resize-handle-background: var(--wui-color-grey-7);
     }
 
     [data-component="page"] {
-      --wui-page-background: var(--wui-color-white);
+      --wui-page-background: var(--wui-color-grey-1);
+      --wui-page-border: var(--wui-border-width-1) solid var(--wui-color-grey-3);
+      --wui-page-box-shadow: var(--wui-shadow-3);
     }
 
     [data-component="popover"] {

@@ -6,6 +6,7 @@ import {
 } from "@winnie-ui/react";
 
 import {
+  BooleanGroupSubtract,
   Cocktail,
   ForkKnife,
   HomeDoor,
@@ -45,6 +46,11 @@ export function AppNavigation() {
       <AppNavigationItem href="/home" icon={<HomeDoor />} label="Home" />
       <AppNavigationItem href="/dishes" icon={<ForkKnife />} label="Dishes" />
       <AppNavigationItem href="/drinks" icon={<Cocktail />} label="Drinks" />
+      <AppNavigationItem
+        href="/sections"
+        icon={<BooleanGroupSubtract />}
+        label="Sections"
+      />
       <AppNavigationItem href="/menus" icon={<LayoutGrid2 />} label="Menus" />
     </Navigation>
   );

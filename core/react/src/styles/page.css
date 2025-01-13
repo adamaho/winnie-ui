@@ -1,6 +1,7 @@
-@layer {
+@layer component {
   [data-component="page"] {
     background: var(--wui-page-background);
+    position: relative;
 
     @media (min-width: 768px) {
       border: var(--wui-page-border);

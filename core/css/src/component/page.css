@@ -14,7 +14,7 @@
     [data-slot="header"] {
       align-items: center;
       display: grid;
-      height: var(--wui-page-header-height, calc(52px * var(--wui-scale)));
+      height: var(--wui-page-header-height, calc(56px * var(--wui-scale)));
       padding-inline: var(--wui-page-inline-space);
       width: 100%;
     }

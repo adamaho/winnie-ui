@@ -734,11 +734,9 @@ function LayoutContent({
       data-sidebar-dragging={context.sidebarDragging}
       ref={ref}
     >
-      <div className="wui-layout__page" data-component="page">
-        {typeof children === "function"
-          ? children({ sidebarState: context.sidebarState })
-          : children}
-      </div>
+      {typeof children === "function"
+        ? children({ sidebarState: context.sidebarState })
+        : children}
     </main>
   );
 }

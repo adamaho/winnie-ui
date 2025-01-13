@@ -86,10 +86,6 @@
     [data-slot="content"] {
       background: var(--wui-layout__content-background);
 
-      [data-component="page"] {
-        position: relative;
-      }
-
       @media (prefers-reduced-motion: no-preference) {
         &:not([data-sidebar-dragging="true"]) {
           transition-property: padding-left;
