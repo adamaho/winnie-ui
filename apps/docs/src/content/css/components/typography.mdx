@@ -1,5 +1,5 @@
 ---
-title: Typography 
+title: Typography
 description: Foundational text primitives.
 ---
 
@@ -7,11 +7,7 @@ import "@winnie-ui/themes";
 
 import { TypographyDemo } from "~/demos/typography";
 
-import {
-  TextSizeDemo,
-  TextWeightDemo,
-  TextAlignDemo,
-} from "~/demos/text.tsx";
+import { TextAlignDemo, TextSizeDemo, TextWeightDemo } from "~/demos/text.tsx";
 
 import Demo from "~/components/demo/demo.astro";
 
@@ -19,7 +15,9 @@ import Demo from "~/components/demo/demo.astro";
   <TypographyDemo />
   <Fragment slot="footer">
     ```html
-    <span data-component="text">Thin crust pizza topped with melting mozzarella.</span>
+    <span data-component="text">
+      Thin crust pizza topped with melting mozzarella.
+    </span>
     ```
   </Fragment>
 </Demo>
@@ -29,7 +27,7 @@ import Demo from "~/components/demo/demo.astro";
 Import just the text styles.
 
 ```css
-@import "@winnie-ui/component/typography";
+@import "@winnie-ui/css/spatial/typography";
 ```
 
 ## Anatomy
@@ -87,8 +85,8 @@ Use the `data-align` attribute to change how the text is aligned.
 
 React Aria does not provide documentation for this component.
 
-| Attribute | Type                                                                                            | 
-| ---------- | ----------------------------------------------------------------------------------------------- |
-| `data-align`    | `"left" \| "center" \| "right"`                                                                 |
-| `data-size`     | `"1" \| "2" \| "3" \| "3" \| "4" \| "5" \| "6" \| "7" \| "8" \| "9"`                            |
-| `data-weight`   | `"normal" \| "medium" \| "semibold" \| "bold" \| "extra-bold"`                                  |
+| Attribute     | Type                                                                 |
+| ------------- | -------------------------------------------------------------------- |
+| `data-align`  | `"left" \| "center" \| "right"`                                      |
+| `data-size`   | `"1" \| "2" \| "3" \| "3" \| "4" \| "5" \| "6" \| "7" \| "8" \| "9"` |
+| `data-weight` | `"normal" \| "medium" \| "semibold" \| "bold" \| "extra-bold"`       |

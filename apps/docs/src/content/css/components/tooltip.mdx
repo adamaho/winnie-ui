@@ -4,19 +4,20 @@ description: A helpful description of an element when hovered or focused.
 ---
 
 import Demo from "~/components/demo/demo.astro";
+
 import "./_components/tooltip/tooltip.css";
 
 <Demo>
-	<div data-component="tooltip" class="tooltip-demo">
+  <div data-component="tooltip" class="tooltip-demo">
     <span data-slot="label">New Dish</span>
-	</div>
-	<Fragment slot="footer">
+  </div>
+  <Fragment slot="footer">
     ```html
     <div data-component="tooltip">
-    	<span data-slot="label">New Dish</span>
+      <span data-slot="label">New Dish</span>
     </div>
     ```
-	</Fragment>
+  </Fragment>
 </Demo>
 
 ## Import
@@ -24,7 +25,7 @@ import "./_components/tooltip/tooltip.css";
 Import just the tooltip styles.
 
 ```css
-@import "@winnie-ui/component/tooltip";
+@import "@winnie-ui/css/spatial/tooltip";
 ```
 
 ## Anatomy
@@ -45,28 +46,38 @@ Attach the appropriate `data` attributes in the structure below.
 Use the `data-radius` attribute to change the radius of the tooltip.
 
 <Demo>
-	<div data-component="tooltip" data-radius="none" class="tooltip-demo" style={{ marginRight: "var(--wui-space-3)" }}>
+  <div
+    data-component="tooltip"
+    data-radius="none"
+    class="tooltip-demo"
+    style={{ marginRight: "var(--wui-space-3)" }}
+  >
     <span data-slot="label">View Dish</span>
-	</div>
-	<div data-component="tooltip" data-radius="md" class="tooltip-demo" style={{ marginRight: "var(--wui-space-3)" }}>
+  </div>
+  <div
+    data-component="tooltip"
+    data-radius="md"
+    class="tooltip-demo"
+    style={{ marginRight: "var(--wui-space-3)" }}
+  >
     <span data-slot="label">View Dish</span>
-	</div>
-	<div data-component="tooltip" data-radius="round" class="tooltip-demo">
+  </div>
+  <div data-component="tooltip" data-radius="round" class="tooltip-demo">
     <span data-slot="label">View Dish</span>
-	</div>
-	<Fragment slot="footer">
+  </div>
+  <Fragment slot="footer">
     ```html ins=data-radius="none" ins=data-radius="md" ins=data-radius="round"
     <div data-component="tooltip" data-radius="none">
-    	<span data-slot="label">View Dish</span>
+      <span data-slot="label">View Dish</span>
     </div>
     <div data-component="tooltip" data-radius="md">
-    	<span data-slot="label">View Dish</span>
+      <span data-slot="label">View Dish</span>
     </div>
     <div data-component="tooltip" data-radius="round">
-    	<span data-slot="label">View Dish</span>
+      <span data-slot="label">View Dish</span>
     </div>
     ```
-	</Fragment>
+  </Fragment>
 </Demo>
 
 ### Shortcuts
@@ -74,24 +85,24 @@ Use the `data-radius` attribute to change the radius of the tooltip.
 Use the `shortcut` slot as a child of the tooltip to show a keyboard shortcut.
 
 <Demo>
-	<div data-component="tooltip" class="tooltip-demo">
+  <div data-component="tooltip" class="tooltip-demo">
     <span data-slot="label">Delete Dish</span>
     <kbd data-slot="shortcut">
       <kbd>⌘</kbd>
       <kbd>D</kbd>
     </kbd>
-	</div>
-	<Fragment slot="footer">
+  </div>
+  <Fragment slot="footer">
     ```html ins=data-slot="shortcut"
     <div data-component="tooltip">
-    <span data-slot="label">Delete Dish</span>
-	    <kbd data-slot="shortcut">
-		    <kbd>⌘</kbd>
-		    <kbd>D</kbd>
-	    </kbd>
+      <span data-slot="label">Delete Dish</span>
+      <kbd data-slot="shortcut">
+        <kbd>⌘</kbd>
+        <kbd>D</kbd>
+      </kbd>
     </div>
     ```
-	</Fragment>
+  </Fragment>
 </Demo>
 
 ### Multiline
@@ -99,26 +110,23 @@ Use the `shortcut` slot as a child of the tooltip to show a keyboard shortcut.
 While long tooltips are supported by Winnie, we do not recommend them as a UI practice. Ideally, tooltips are short, descriptive text used to describe the intent of an action or subject.
 
 <Demo>
-	<div data-component="tooltip" class="tooltip-demo">
+  <div data-component="tooltip" class="tooltip-demo">
     <span data-slot="label">
-	    Today's Special:
-	    Grilled Lemon Herb Chicken with seasonal vegetables.
-	    Served with a side of garlic mashed potatoes.
-	    Click to view the full menu!
+      Today's Special: Grilled Lemon Herb Chicken with seasonal vegetables.
+      Served with a side of garlic mashed potatoes. Click to view the full menu!
     </span>
-	</div>
-	<Fragment slot="footer">
+  </div>
+  <Fragment slot="footer">
     ```html
     <div data-component="tooltip">
-	    <span data-slot="label">
-		    Today's Special:
-		    Grilled Lemon Herb Chicken with seasonal vegetables.
-		    Served with a side of garlic mashed potatoes.
-		    Click to view the full menu!
-	    </span>
+      <span data-slot="label">
+        Today's Special: Grilled Lemon Herb Chicken with seasonal vegetables.
+        Served with a side of garlic mashed potatoes. Click to view the full
+        menu!
+      </span>
     </div>
     ```
-	</Fragment>
+  </Fragment>
 </Demo>
 
 ## Reference

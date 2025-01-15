@@ -3,22 +3,14 @@ title: Listbox
 description: A list of options that allows a user to optionally select one or more of them.
 ---
 
-import {
-  Cog,
-  Dot,
-  Info,
-  LogOut,
-  Moon,
-  UserRound,
-  Check,
-} from "lucide-react";
+import { Check, Cog, Dot, Info, LogOut, Moon, UserRound } from "lucide-react";
 
 import Demo from "~/components/demo/demo.astro";
 
 import ListboxMode from "./_components/listbox/listbox-mode.astro";
-import { ListboxWithCheckbox } from "./_components/listbox/listbox-with-checkbox";
 import ListboxRadius from "./_components/listbox/listbox-radius.astro";
 import ListboxSize from "./_components/listbox/listbox-size.astro";
+import { ListboxWithCheckbox } from "./_components/listbox/listbox-with-checkbox";
 
 import "./_components/listbox/listbox-demo.css";
 
@@ -60,7 +52,7 @@ import "./_components/listbox/listbox-demo.css";
 Import just the listbox styles.
 
 ```css
-@import "@winnie-ui/component/listbox";
+@import "@winnie-ui/css/spatial/listbox";
 ```
 
 ## Anatomy
@@ -253,7 +245,8 @@ Use the `section`, `header`, and `separator` attributes to group items.
     </ul>
   </div>
   <Fragment slot="footer">
-    ```html ins=data-component="section" ins=data-component="header" ins=data-component="separator"
+    ```html ins=data-component="section" ins=data-component="header"
+    ins=data-component="separator"
     <ul data-component="listbox">
       <section data-component="section">
         <header data-component="header">
@@ -427,10 +420,7 @@ You can create a column layout with the help of `group` component and placing th
 
 <Demo>
   <div class="demo-listbox-container">
-    <ul
-      data-component="listbox"
-      class="demo-listbox not-content"
-    >
+    <ul data-component="listbox" class="demo-listbox not-content">
       <li data-component="listbox-item">
         <Check data-slot="indicator" />
         <div data-component="group">

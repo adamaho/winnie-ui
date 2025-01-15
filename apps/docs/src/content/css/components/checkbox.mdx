@@ -5,8 +5,13 @@ description: Captures binary user input.
 
 import Demo from "~/components/demo/demo.astro";
 
-import { Checkbox, CheckboxWithLabel, CheckboxWithLabelAndDescription } from "./_components/checkbox/checkbox";
 import { Check } from "lucide-react";
+
+import {
+  Checkbox,
+  CheckboxWithLabel,
+  CheckboxWithLabelAndDescription,
+} from "./_components/checkbox/checkbox";
 
 <Demo>
   <Checkbox client:load />
@@ -24,7 +29,7 @@ import { Check } from "lucide-react";
 Import just the checkbox styles.
 
 ```css
-@import "@winnie-ui/component/checkbox";
+@import "@winnie-ui/css/spatial/checkbox";
 ```
 
 ## Anatomy
@@ -120,7 +125,9 @@ Use the `field` component and `label` and `description` slots beside the checkbo
         <i data-slot="indicator" class="check"></i>
       </button>
       <label data-slot="label">Display full names</label>
-      <span data-slot="description">Show full names of users instead of shorter usernames.</span>
+      <span data-slot="description">
+        Show full names of users instead of shorter usernames.
+      </span>
     </div>
     ```
   </Fragment>
@@ -130,7 +137,7 @@ Use the `field` component and `label` and `description` slots beside the checkbo
 
 Below is a list of the available `data-` attributes available for Checkbox.
 
-| Attribute     | Value                                       |
-| ------------- | ------------------------------------------- |
-| `data-radius` | `"none" \| "sm" \| "md" \| "lg"`            |
-| `data-size`   | `"sm" \| "md" \| "lg"`                      |
+| Attribute     | Value                            |
+| ------------- | -------------------------------- |
+| `data-radius` | `"none" \| "sm" \| "md" \| "lg"` |
+| `data-size`   | `"sm" \| "md" \| "lg"`           |

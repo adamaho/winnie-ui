@@ -5,20 +5,22 @@ description: Trigger an event, action or operation.
 
 import Demo from "~/components/demo/demo.astro";
 
-import ButtonHero from "./_components/button/button-hero.astro";
-import ButtonIcon from "./_components/button/button-icon.astro";
-import ButtonSize from "./_components/button/button-size.astro";
-import ButtonRadius from "./_components/button/button-radius.astro";
-import ButtonLoading from "./_components/button/button-loading.astro";
-import ButtonWidth from "./_components/button/button-width.astro";
+import {
+  ButtonIconOnlyDemo,
+  ButtonPendingDemo,
+  ButtonRadiusDemo,
+  ButtonSizeDemo,
+  ButtonWidthDemo,
+  NewDishButton,
+} from "~/demos/button";
 
 <Demo>
-  <ButtonHero />
+  <NewDishButton client:load/>
   <Fragment slot="footer">
     ```tsx
     <button data-component="button">
-      <i class="organization" data-slot="icon"></i>
-      <span data-slot="label">Create Organization</span>
+      <i class="fork-knife" data-slot="icon"></i>
+      <span data-slot="label">New Dish</span>
     <button>
     ```
   </Fragment>
@@ -29,7 +31,7 @@ import ButtonWidth from "./_components/button/button-width.astro";
 Import just the button styles.
 
 ```css
-@import "@winnie-ui/component/button";
+@import "@winnie-ui/css/spatial/button";
 ```
 
 ## Anatomy
@@ -51,17 +53,17 @@ Attach the appropriate `data` attributes in the structure below.
 Use the `data-size` attribute to change the size.
 
 <Demo>
-  <ButtonSize />
+  <ButtonSizeDemo client:load />
   <Fragment slot="footer">
     ```tsx ins=data-size="sm" ins=data-size="md" ins=data-size="lg"
     <button data-component="button" data-size="sm">
-      <span data-slot="label">New Issue</span>
+      <span data-slot="label">Edit Dish</span>
     </button>
     <button data-component="button" data-size="md">
-      <span data-slot="slot">New Issue</span>
+      <span data-slot="slot">Edit Dish</span>
     </button>
     <button data-component="button" data-size="lg">
-      <span data-slot="slot">New Issue</span>
+      <span data-slot="slot">Edit Dish</span>
     </button>
     ```
   </Fragment>
@@ -72,17 +74,17 @@ Use the `data-size` attribute to change the size.
 Use the `data-radius` attribute to change the radius.
 
 <Demo>
-  <ButtonRadius />
+  <ButtonRadiusDemo client:load />
   <Fragment slot="footer">
     ```tsx ins=data-radius="none" ins=data-radius="md" ins=data-radius="round"
     <button data-component="button" data-radius="none">
-      <span data-slot="slot">New Issue</span>
+      <span data-slot="slot">Edit Dish</span>
     </button>
     <button data-component="button" data-radius="md">
-      <span data-slot="slot">New Issue</span>
+      <span data-slot="slot">Edit Dish</span>
     </button>
     <button data-component="button" data-radius="round">
-      <span data-slot="slot">New Issue</span>
+      <span data-slot="slot">Edit Dish</span>
     </button>
     ```
   </Fragment>
@@ -93,12 +95,12 @@ Use the `data-radius` attribute to change the radius.
 Add an icon with the `icon` slot attribute as a child of the button.
 
 <Demo>
-  <ButtonHero />
+  <NewDishButton client:load/>
   <Fragment slot="footer">
     ```tsx
     <button data-component="button">
-      <i class="organization" data-slot="icon"></i>
-      <span data-component="text">Create Organization</span>
+      <i class="fork-knife" data-slot="icon"></i>
+      <span data-component="text">New Dish</span>
     <button>
     ```
   </Fragment>
@@ -109,7 +111,7 @@ Add an icon with the `icon` slot attribute as a child of the button.
 Create an icon button by only passing an icon with the `icon` slot attribute as a child of the button.
 
 <Demo>
-  <ButtonIcon />
+  <ButtonIconOnlyDemo client:load/>
   <Fragment slot="footer">
     ```tsx
     <button data-component="button">
@@ -124,7 +126,7 @@ Create an icon button by only passing an icon with the `icon` slot attribute as 
 If a child of the button is rendered with the `pending` attribute, any text and icons rendered in the button will be hidden and the `pending` slot will be rendered.
 
 <Demo>
-  <ButtonLoading />
+  <ButtonPendingDemo client:load />
   <Fragment slot="footer">
     ```tsx ins=data-slot="pending"
     <button data-component="button">
@@ -142,7 +144,7 @@ If a child of the button is rendered with the `pending` attribute, any text and 
 Use the `data-width` attribute to modify the overall width of the button.
 
 <Demo>
-  <ButtonWidth />
+  <ButtonWidthDemo client:load />
   <Fragment slot="footer">
     ```tsx ins=data-width="full"
     <button data-component="button" data-width="full">

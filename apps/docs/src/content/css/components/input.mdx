@@ -1,10 +1,10 @@
 ---
 title: Input
-description: Captures user input. 
+description: Captures user input.
 ---
 
-import Aside from "~/components/markdown/aside.astro";
 import Demo from "~/components/demo/demo.astro";
+import Aside from "~/components/markdown/aside.astro";
 
 import InputHero from "./_components/input/input-hero.astro";
 import InputIcon from "./_components/input/input-icon.astro";
@@ -28,7 +28,7 @@ import InputSize from "./_components/input/input-size.astro";
 Import just the input styles.
 
 ```css
-@import "@winnie-ui/component/input";
+@import "@winnie-ui/css/spatial/input";
 ```
 
 ## Anatomy
@@ -56,7 +56,7 @@ Use the `data-size` attribute to change the size.
   </Fragment>
 </Demo>
 
-### Radius 
+### Radius
 
 Use the `data-radius` attribute to change the size.
 
@@ -78,9 +78,10 @@ Wrap the input in an element with the `data-component="group"` attribute define 
 <Aside type="info">
   If you are just importing the input styles, you will need to also import the group styles for this to work.
 
-  ```css
-  @import "@winnie-ui/component/group";
-  ```
+```css
+@import "@winnie-ui/css/spatial/group";
+```
+
 </Aside>
 
 <Demo>
@@ -99,8 +100,7 @@ Wrap the input in an element with the `data-component="group"` attribute define 
 
 Below is a list of the available input `data-` attributes available for input.
 
-| Attribute           | Value                                       |
-| ------------------- | --------------------------------------------|
-| `data-radius`       | `"none" \| "sm" \| "md" \| "lg" \| "round"` |
-| `data-size`         | `"sm" \| "md" \| "lg"`                      |
-
+| Attribute     | Value                                       |
+| ------------- | ------------------------------------------- |
+| `data-radius` | `"none" \| "sm" \| "md" \| "lg" \| "round"` |
+| `data-size`   | `"sm" \| "md" \| "lg"`                      |
