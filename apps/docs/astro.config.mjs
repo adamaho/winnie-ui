@@ -21,7 +21,7 @@ export default defineConfig({
     sentry({
       dsn: "https://33f77d84c33d318cf8557e4ec13ea1dd@o4508645218516992.ingest.us.sentry.io/4508645220089856",
       sourceMapsUploadOptions: {
-        project: "javascript-astro",
+        project: "winnie-docs",
         authToken: process.env.SENTRY_AUTH_TOKEN,
       },
     }),
