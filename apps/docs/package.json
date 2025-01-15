@@ -20,10 +20,10 @@
   },
   "dependencies": {
     "@astrojs/check": "0.9.4",
-    "@astrojs/mdx": "4.0.3",
-    "@astrojs/react": "4.1.2",
-    "@fontsource/geist-mono": "5.1.0",
-    "@fontsource/inter": "5.1.0",
+    "@astrojs/mdx": "4.0.6",
+    "@astrojs/react": "4.1.5",
+    "@fontsource/geist-mono": "5.1.1",
+    "@fontsource/inter": "5.1.1",
     "@radix-ui/react-checkbox": "1.1.3",
     "@radix-ui/react-collapsible": "1.1.2",
     "@radix-ui/react-dialog": "1.1.4",
@@ -33,12 +33,12 @@
     "@winnie-ui/icons": "workspace:*",
     "@winnie-ui/react": "workspace:*",
     "@winnie-ui/themes": "workspace:*",
-    "astro": "5.1.1",
-    "astro-expressive-code": "0.38.3",
+    "astro": "5.1.7",
+    "astro-expressive-code": "0.40.0",
     "clsx": "2.1.1",
     "cmdk": "1.0.4",
     "flexsearch": "0.7.43",
-    "lucide-react": "0.469.0",
+    "lucide-react": "0.471.1",
     "react": "19.0.0",
     "react-aria": "3.36.0",
     "react-aria-components": "1.5.0",
@@ -46,14 +46,14 @@
     "recharts": "2.15.0"
   },
   "devDependencies": {
-    "@tanstack/router-devtools": "1.92.1",
-    "@tanstack/router-plugin": "1.91.1",
+    "@tanstack/router-devtools": "1.97.0",
+    "@tanstack/router-plugin": "1.97.0",
     "@types/flexsearch": "0.7.6",
-    "@types/react": "19.0.2",
-    "@types/react-dom": "19.0.2",
+    "@types/react": "19.0.7",
+    "@types/react-dom": "19.0.3",
     "astro-sst": "2.45.2",
     "rimraf": "6.0.1",
-    "sst": "3.4.27",
-    "typescript": "5.7.2"
+    "sst": "3.5.13",
+    "typescript": "5.7.3"
   }
 }

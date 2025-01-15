@@ -1,5 +1,5 @@
 @layer skin {
-  :where([data-color-scheme="winnie"]) {
+  :where([data-skin="winnie"]) {
     /* -------------------------------------------------------------------------------------------------
     * Button
     * -----------------------------------------------------------------------------------------------*/
@@ -179,7 +179,7 @@
     }
   }
 
-  :where([data-color-scheme="winnie"][data-theme="light"]) {
+  :where([data-skin="winnie"][data-theme="light"]) {
     [data-component="layout"] {
       --wui-layout-background: var(--wui-color-grey-3);
       --wui-layout__mask-background: var(--wui-color-black-a2);
@@ -223,7 +223,7 @@
     }
   }
 
-  :where([data-color-scheme="winnie"][data-theme="dark"]) {
+  :where([data-skin="winnie"][data-theme="dark"]) {
     [data-component="layout"] {
       --wui-layout-background: var(--wui-color-black);
       --wui-layout__mask-background: var(--wui-color-black-a4);

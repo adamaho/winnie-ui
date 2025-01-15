@@ -15,11 +15,11 @@ export function DemoThemeSelector() {
 
         switch (value) {
           case "spatial": {
-            demoArea?.setAttribute("data-color-scheme", "minimal");
+            demoArea?.setAttribute("data-skin", "minimal");
             break;
           }
           case "presentation": {
-            demoArea?.setAttribute("data-color-scheme", "winnie");
+            demoArea?.setAttribute("data-skin", "winnie");
             break;
           }
         }
