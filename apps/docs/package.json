@@ -29,6 +29,7 @@
     "@radix-ui/react-dialog": "1.1.4",
     "@radix-ui/react-scroll-area": "1.2.2",
     "@react-aria/utils": "3.26.0",
+    "@sentry/astro": "^8.48.0",
     "@winnie-ui/css": "workspace:*",
     "@winnie-ui/icons": "workspace:*",
     "@winnie-ui/react": "workspace:*",

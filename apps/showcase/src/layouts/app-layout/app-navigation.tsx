@@ -15,7 +15,7 @@ import {
 
 import { ReactNode, ToOptions } from "@tanstack/react-router";
 
-import { useIsActiveLink } from "~/hooks/use-is-active-link";
+import { useIsCurrent } from "~/hooks/use-is-current";
 
 /* -------------------------------------------------------------------------------------------------
  * AppNavigationItem
@@ -27,7 +27,10 @@ type AppNavigationItemProps = {
 };
 
 function AppNavigationItem({ href, icon, label }: AppNavigationItemProps) {
-  const isCurrent = useIsActiveLink({ to: href });
+  /**
+   * Check if the current route is active
+   */
+  const isCurrent = useIsCurrent({ to: href });
 
   return (
     <NavigationItem href={href} isCurrent={isCurrent}>

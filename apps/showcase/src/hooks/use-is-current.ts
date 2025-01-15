@@ -14,7 +14,7 @@ import { useMemo } from "react";
 import { isExactPath } from "~/utils/is-exact-path";
 import { removeTrailingSlash } from "~/utils/remove-trailing-slash";
 
-type UseIsActiveLinkOptions = {
+type UseIsCurrentOptions = {
   to: ToOptions["to"];
   exact?: boolean;
   explicitUndefined?: boolean;
@@ -22,7 +22,7 @@ type UseIsActiveLinkOptions = {
   includeHash?: boolean;
 };
 
-export function useIsActiveLink(options: UseIsActiveLinkOptions) {
+export function useIsCurrent(options: UseIsCurrentOptions) {
   /**
    * Get an instance of the router
    */
