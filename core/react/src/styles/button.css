@@ -1,4 +1,4 @@
-@layer component {
+@layer spatial {
   [data-component="button"] {
     background: var(--wui-button-background);
     border: var(--wui-button-border);

@@ -14,6 +14,7 @@ import "./scroll-area.css";
 
 type ScrollAreaProps = {
   className?: string;
+  id?: string;
   type?: RadixScrollAreaProps["type"];
   viewportRef?: Ref<HTMLDivElement>;
   orientation?: RadixScrollAreaScrollbarProps["orientation"];
@@ -23,12 +24,14 @@ export function ScrollArea({
   className,
   children,
   type = "scroll",
+  id,
   viewportRef,
   orientation = "vertical",
 }: PropsWithChildren<ScrollAreaProps>) {
   return (
     <RadixScrollArea
       className={clsx("wui-scroll-area", className)}
+      id={id}
       type={type}
       data-orientation={orientation}
     >

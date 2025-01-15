@@ -1,4 +1,4 @@
-@layer component {
+@layer spatial {
   [data-component="tooltip"] {
     /* border radius */
     --wui-tooltip-sm-border-radius: var(--wui-border-radius-2);

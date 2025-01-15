@@ -1,4 +1,4 @@
-@layer component {
+@layer spatial {
   [data-component="layout"] {
     --wui-layout-sidebar-width: calc(296px * var(--wui-scale));
     --wui-layout-content-header-height: calc(48px * var(--wui-scale));

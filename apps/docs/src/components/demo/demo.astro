@@ -1,20 +1,34 @@
 ---
 import { ScrollArea } from "../scroll-area/scroll-area";
 import { DemoTabs } from "./demo-tabs";
+import { DemoThemeSelector } from "./demo-theme-selector";
+
+export type Props = {
+  showThemeSelector?: boolean;
+};
 
 const hasTabs =
   Astro.slots.has("tsx") || Astro.slots.has("css") || Astro.slots.has("html");
+
+const { showThemeSelector = false } = Astro.props;
 ---
 
 <div class="demo not-content">
   <header class="demo-header">
     <slot name="header" />
   </header>
-  <main class="background-polka demo-content">
-    <ScrollArea client:load orientation="horizontal">
+  <div class="background-polka demo-content" id="demo-content">
+    {
+      showThemeSelector && (
+        <div class="demo-theme-selector-container">
+          <DemoThemeSelector client:load />
+        </div>
+      )
+    }
+    <ScrollArea client:load orientation="horizontal" id="demo-area">
       <slot />
     </ScrollArea>
-  </main>
+  </div>
   {
     hasTabs && Object.values(Astro.slots).length > 2 && (
       <div class="demo-footer">
@@ -67,6 +81,13 @@ const hasTabs =
       background-size: 10px 10px;
       border-radius: var(--border-radius);
       position: relative;
+
+      .demo-theme-selector-container {
+        position: absolute;
+        top: var(--wui-space-3);
+        right: var(--wui-space-3);
+        z-index: 1;
+      }
     }
 
     .demo-footer {

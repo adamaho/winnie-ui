@@ -1,4 +1,4 @@
-@layer component {
+@layer spatial {
   [data-component="tooltip"] {
     background: var(--wui-tooltip-background);
     border: var(--wui-tooltip-border);

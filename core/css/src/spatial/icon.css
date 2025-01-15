@@ -1,4 +1,4 @@
-@layer component {
+@layer spatial {
   [data-component="icon"] {
     &[data-size="1"] {
       font-size: var(--wui-font-size-1);

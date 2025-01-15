@@ -1,4 +1,4 @@
-@layer component {
+@layer spatial {
   [data-component="page"] {
     background: var(--wui-page-background);
     position: relative;

@@ -8,7 +8,7 @@ All tokens and styles in Winnie CSS make use of a concept in CSS called [Layers]
 Winnie CSS defines tokens an styles in the following order from least to most precedence:
 
 ```css title="layer.css"
-@layer reset, base, component;
+@layer reset, base, spatial, visual, skin;
 ```
 
 Any styles defined outside of the layer will take precedence. This means that in your apps, if there are styles that you don't quite like, you can easily override them with no additional specificity.
@@ -69,15 +69,14 @@ The base layer is where most of the tokens and base styles are applied. This inc
 }
 ```
 
-## Component
+## Spatial
 
-The component layer is reserved for styles that pertain to design system components like buttons, selects and inputs.
+The spatial layer is reserved for styles that pertain to design system components like buttons, selects and inputs that only have layout relatived styles applied. For more information on how to use spatial styles, see the components [Introduction](/css/docs/components/introduction).
 
 ```css title="button.css"
-@layer component {
+@layer spatial {
   .[data-component="button"] {
-    background: var(--wui-color-purple-9);
-    color: var(--wui-color-purple-contrast);
+    padding: var(--wui-space-3);
   }
 }
 ```

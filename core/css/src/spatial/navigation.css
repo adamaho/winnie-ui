@@ -1,4 +1,4 @@
-@layer component {
+@layer spatial {
   [data-component="navigation"] {
     display: grid;
     grid-template-columns: auto 1fr auto auto;

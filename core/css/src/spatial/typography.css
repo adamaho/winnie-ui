@@ -1,4 +1,4 @@
-@layer component {
+@layer spatial {
   [data-component="text"],
   [data-component="heading"],
   [data-component="link"] {

@@ -1,4 +1,4 @@
-@layer component {
+@layer spatial {
   [data-component="checkbox"] {
     /* border radius */
     --wui-checkbox-sm-border-radius: min(var(--wui-border-radius-2), 5px);

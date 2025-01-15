@@ -1,4 +1,4 @@
-@layer component {
+@layer spatial {
   [data-component="link"] {
     cursor: var(--wui-cursor-linkable, default);
     font-family: var(--wui-link-font-family, var(--wui-font-family-sans));

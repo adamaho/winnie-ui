@@ -1,4 +1,4 @@
-@layer component {
+@layer spatial {
   [data-component="button"] {
     /* border radius */
     --wui-button-sm-border-radius: var(--wui-border-radius-2);
