@@ -22,7 +22,7 @@ export default $config({
     new sst.aws.StaticSite("WinnieShowcase", {
       domain,
       build: {
-        command: "pnpm build",
+        command: "turbo run build --filter=showcase",
         output: "dist",
       },
     });

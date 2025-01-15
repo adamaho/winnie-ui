@@ -20,6 +20,7 @@ export default $config({
 
     new sst.aws.Astro("WinnieDocs", {
       domain,
+      buildCommand: "turbo run build --filter=docs",
     });
   },
 });
