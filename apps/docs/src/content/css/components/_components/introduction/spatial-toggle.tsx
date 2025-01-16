@@ -1,14 +1,14 @@
 import { type ReactNode, useState } from "react";
 import { Radio, RadioGroup } from "react-aria-components";
 
-import { BoxSelect, DollarSign, Palette } from "lucide-react";
+import { DollarSign, Palette, SquareDashed } from "lucide-react";
 
 import "./spatial-toggle.css";
 
 type Mode = "spatial" | "color";
 
 const MODE_ICON_MAP = {
-  spatial: <BoxSelect />,
+  spatial: <SquareDashed />,
   color: <Palette />,
 } satisfies Record<Mode, ReactNode>;
 

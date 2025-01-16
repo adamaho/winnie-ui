@@ -2,6 +2,7 @@
 @import "@winnie-ui/css/reset";
 @import "@winnie-ui/css/base";
 @import "@winnie-ui/css/spatial";
+@import "@winnie-ui/css/visual";
 @import "tailwindcss/utilities" layer(utilities);
 
 @layer utilities {

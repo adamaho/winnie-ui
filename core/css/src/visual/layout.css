@@ -1,4 +1,4 @@
-@layer spatial {
+@layer visual {
   [data-component="layout"] {
     background: var(--wui-layout-background);
 

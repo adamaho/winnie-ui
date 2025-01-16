@@ -1,4 +1,4 @@
-@layer spatial {
+@layer visual {
   [data-component="separator"] {
     background: var(--wui-separator-background);
   }

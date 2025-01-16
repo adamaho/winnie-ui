@@ -1,4 +1,4 @@
-@layer spatial {
+@layer visual {
   [data-component="text"],
   [data-component="heading"],
   [data-component="link"] {

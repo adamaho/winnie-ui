@@ -1,4 +1,4 @@
-@layer spatial {
+@layer visual {
   [data-component="popover"] {
     background: var(--wui-popover-background);
     border: var(--wui-popover-border);

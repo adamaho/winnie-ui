@@ -1,4 +1,4 @@
-@layer spatial {
+@layer visual {
   [data-component="navigation"] {
     li,
     ul:not([data-component="navigation-group"]),

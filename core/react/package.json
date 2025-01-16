@@ -11,21 +11,10 @@
   "exports": {
     ".": {
       "import": {
-        "default": "./src/components/index.ts",
-        "types": "./src/components/index.ts"
+        "default": "./src/index.ts",
+        "types": "./src/index.ts"
       }
-    },
-    "./css": "./src/styles/index.css",
-    "./button.css": "./src/styles/button.css",
-    "./layout.css": "./src/styles/layout.css",
-    "./link.css": "./src/styles/link.css",
-    "./listbox.css": "./src/styles/listbox.css",
-    "./navigation.css": "./src/styles/navigation.css",
-    "./tooltip.css": "./src/styles/tooltip.css",
-    "./page.css": "./src/styles/page.css",
-    "./popover.css": "./src/styles/popover.css",
-    "./separator.css": "./src/styles/separator.css",
-    "./typography.css": "./src/styles/typography.css"
+    }
   },
   "scripts": {
     "clean": "rimraf node_modules",
@@ -38,11 +27,11 @@
   },
   "dependencies": {
     "@base-ui-components/react": "1.0.0-alpha.5",
-    "@react-aria/utils": "3.26.0",
+    "@react-aria/utils": "3.27.0",
     "@winnie-ui/icons": "workspace:*",
     "clsx": "2.1.1",
-    "react-aria": "3.36.0",
-    "react-aria-components": "1.5.0"
+    "react-aria": "3.37.0",
+    "react-aria-components": "1.6.0"
   },
   "devDependencies": {
     "@types/react": "19.0.7",
