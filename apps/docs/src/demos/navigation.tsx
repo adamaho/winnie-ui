@@ -27,7 +27,7 @@ import {
   HomeDoor,
   LayoutGrid2,
   Store1,
-} from "@winnie-ui/icons/solid";
+} from "@winnie-ui/icons/react/solid";
 
 const navigationDemoStyles = {
   background: "var(--wui-color-grey-1)",

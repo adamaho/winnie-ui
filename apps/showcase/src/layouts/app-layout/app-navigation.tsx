@@ -11,7 +11,7 @@ import {
   ForkKnife,
   HomeDoor,
   LayoutGrid2,
-} from "@winnie-ui/icons/solid";
+} from "@winnie-ui/icons/react/solid";
 
 import { ReactNode, ToOptions } from "@tanstack/react-router";
 

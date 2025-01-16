@@ -15,8 +15,8 @@ import {
 } from "react";
 import { useFocusRing, useHover, useMove, usePress } from "react-aria";
 
-import { SidebarSimpleLeftSquare as SidebarSimpleLeftSquareLine } from "@winnie-ui/icons/line";
-import { SidebarSimpleLeftSquare as SidebarSimpleLeftSquareSolid } from "@winnie-ui/icons/solid";
+import { SidebarSimpleLeftSquare as SidebarSimpleLeftSquareLine } from "@winnie-ui/icons/react/line";
+import { SidebarSimpleLeftSquare as SidebarSimpleLeftSquareSolid } from "@winnie-ui/icons/react/solid";
 
 import { mergeProps, mergeRefs } from "@react-aria/utils";
 import clsx from "clsx";

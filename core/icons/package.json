@@ -10,25 +10,18 @@
     "package.json"
   ],
   "exports": {
-    ".": {
-      "import": {
-        "default": "./src/index.ts",
-        "types": "./src/index.ts"
-      }
-    },
-    "./line": {
+    "./react/line": {
       "import": {
         "default": "./src/line/index.ts",
         "types": "./src/line/index.ts"
       }
     },
-    "./solid": {
+    "./react/solid": {
       "import": {
         "default": "./src/solid/index.ts",
         "types": "./src/solid/index.ts"
       }
-    },
-    "./css": "./src/index.css"
+    }
   },
   "scripts": {
     "clean": "rimraf node_modules",

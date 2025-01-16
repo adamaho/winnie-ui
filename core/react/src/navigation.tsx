@@ -12,7 +12,7 @@ import {
   type LinkProps as AriaLinkProps,
 } from "react-aria-components";
 
-import { ArrowTriangleRight } from "@winnie-ui/icons/solid";
+import { ArrowTriangleRight } from "@winnie-ui/icons/react/solid";
 
 import { Collapsible as BaseUICollapsible } from "@base-ui-components/react/collapsible";
 import clsx from "clsx";

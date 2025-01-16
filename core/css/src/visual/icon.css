@@ -1,4 +1,4 @@
-@layer spatial {
+@layer visual {
   [data-component="icon"]:not([data-slot="indicator"], [data-slot="icon"]) {
     &[data-contrast="low"] {
       color: var(--wui-icon-low-color);

@@ -11,3 +11,5 @@ export { SidebarSimpleLeftSquare } from "./sidebar-simple-left-square";
 export { SquareArrowTopRight } from "./square-arrow-top-right";
 export { Store1 } from "./store-1";
 export { DotGrid1x3Horizontal } from "./dot-grid-1x3-horizontal";
+
+export type { IconProps } from "../utilities/create-icon";
