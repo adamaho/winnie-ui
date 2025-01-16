@@ -1,0 +1,16 @@
+/*
+ * Iconists Central Icon System.
+ * Distribution of this file is not permitted.
+ *
+ * For more information, see:
+ * https://iconists.co/license
+ */
+import { createIcon } from "../utilities/create-icon";
+
+export const TriangleExclamation = createIcon({
+  name: "triangle-exclamation",
+  type: "solid",
+  paths: [
+    "M9.63618 3.25763C10.7021 1.46491 13.2977 1.4649 14.3636 3.25763L21.8476 15.8443C22.9376 17.6774 21.6165 19.9998 19.4839 19.9998H4.51593C2.38326 19.9998 1.06225 17.6774 2.15221 15.8443L9.63618 3.25763ZM12 7.99976C12.4142 7.99976 12.75 8.33554 12.75 8.74976V12.7498C12.75 13.164 12.4142 13.4998 12 13.4998C11.5858 13.4998 11.25 13.164 11.25 12.7498V8.74976C11.25 8.33554 11.5858 7.99976 12 7.99976ZM13 15.4998C13 16.052 12.5523 16.4998 12 16.4998C11.4477 16.4998 11 16.052 11 15.4998C11 14.9475 11.4477 14.4998 12 14.4998C12.5523 14.4998 13 14.9475 13 15.4998Z",
+  ],
+});

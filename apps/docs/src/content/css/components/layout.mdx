@@ -5,7 +5,7 @@ description: An opinionated application layout with sidebar.
 
 import Demo from "~/components/demo/demo.astro";
 
-import { SquareArrowOutUpRight } from "lucide-react";
+import { ShowcaseLinkButton } from "~/components/showcase-link-button";
 
 import "~/demos/layout.css";
 
@@ -20,15 +20,7 @@ import "~/demos/layout.css";
       ></nav>
       <main data-slot="content" className="layout-demo-content"></main>
     </div>
-    <a
-      href="https://showcase.winnie-ui.com"
-      target="blank"
-      data-component="button"
-      className="layout-demo-showcase-link"
-    >
-      <span data-slot="label">Showcase</span>
-      <SquareArrowOutUpRight data-slot="icon" />
-    </a>
+    <ShowcaseLinkButton client:load />
   </div>
   <Fragment slot="footer">
     ```html

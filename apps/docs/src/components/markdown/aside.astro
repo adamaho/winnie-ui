@@ -1,5 +1,9 @@
 ---
-import { FlaskConical, Info, TriangleAlert } from "lucide-react";
+import {
+  Lab,
+  CircleInfo,
+  TriangleExclamation,
+} from "@winnie-ui/icons/react/solid";
 
 type Props = {
   type: "experimental" | "info" | "warning";
@@ -8,15 +12,15 @@ type Props = {
 
 const icon = {
   experimental: {
-    icon: FlaskConical,
+    icon: Lab,
     title: "Experimental",
   },
   info: {
-    icon: Info,
+    icon: CircleInfo,
     title: "Info",
   },
   warning: {
-    icon: TriangleAlert,
+    icon: TriangleExclamation,
     title: "Warning",
   },
 } satisfies Record<Props["type"], any>;
@@ -39,6 +43,7 @@ const Icon = icon[type].icon;
     background: var(--wui-aside-background);
     border-radius: min(var(--wui-border-radius-3), 20px);
     border: var(--wui-border-width-1) solid var(--wui-aside-border-color);
+    color: var(--wui-aside-color);
     display: flex;
     margin-block: var(--wui-space-6);
     padding: var(--wui-space-5);
@@ -65,7 +70,6 @@ const Icon = icon[type].icon;
       --size: 20px;
 
       height: var(--size);
-      stroke: var(--wui-aside-color);
       width: var(--size);
     }
 

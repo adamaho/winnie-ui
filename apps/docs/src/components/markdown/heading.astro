@@ -1,5 +1,5 @@
 ---
-import { Link } from "lucide-react";
+import { ChainLink4 } from "@winnie-ui/icons/react/solid";
 
 export type Props = {
   element: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
@@ -13,7 +13,7 @@ const { element: Element = "h2", id } = Astro.props;
   <a id={id} href={`#${id}`} class="heading-anchor">
     <slot />
   </a>
-  <Link className="heading-link-icon" />
+  <ChainLink4 className="heading-link-icon" />
 </Element>
 
 <style>

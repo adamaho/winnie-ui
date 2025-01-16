@@ -13,7 +13,11 @@
       --wui-button-border: var(--wui-button-solid-border);
       --wui-button-color: var(--wui-button-solid-color);
 
-      &:is([data-hovered], :hover) {
+      &:is([data-hovered], :hover):not(
+          [data-pending],
+          [aria-disabled="true"],
+          [data-disabled]
+        ) {
         --wui-button-background: var(
           --wui-button-solid-background-hovered,
           var(--wui-button-solid-background)
@@ -32,7 +36,11 @@
         );
       }
 
-      &:is([data-pressed], :active) {
+      &:is([data-pressed], :active):not(
+          [data-pending],
+          [aria-disabled="true"],
+          [data-disabled]
+        ) {
         --wui-button-background: var(
           --wui-button-solid-background-pressed,
           var(--wui-button-solid-background)
@@ -78,7 +86,11 @@
       --wui-button-border: var(--wui-button-soft-border);
       --wui-button-color: var(--wui-button-soft-color);
 
-      &:is([data-hovered], :hover) {
+      &:is([data-hovered], :hover):not(
+          [data-pending],
+          [aria-disabled="true"],
+          [data-disabled]
+        ) {
         --wui-button-background: var(
           --wui-button-soft-background-hovered,
           var(--wui-button-soft-background)
@@ -97,7 +109,11 @@
         );
       }
 
-      &:is([data-pressed], :active) {
+      &:is([data-pressed], :active):not(
+          [data-pending],
+          [aria-disabled="true"],
+          [data-disabled]
+        ) {
         --wui-button-background: var(
           --wui-button-soft-background-pressed,
           var(--wui-button-soft-background)
@@ -142,7 +158,11 @@
       --wui-button-border: var(--wui-button-outlined-border);
       --wui-button-color: var(--wui-button-outlined-color);
 
-      &:is([data-hovered], :hover) {
+      &:is([data-hovered], :hover):not(
+          [data-pending],
+          [aria-disabled="true"],
+          [data-disabled]
+        ) {
         --wui-button-background: var(
           --wui-button-outlined-background-hovered,
           var(--wui-button-outlined-background)
@@ -161,7 +181,11 @@
         );
       }
 
-      &:is([data-pressed], :active) {
+      &:is([data-pressed], :active):not(
+          [data-pending],
+          [aria-disabled="true"],
+          [data-disabled]
+        ) {
         --wui-button-background: var(
           --wui-button-outlined-background-pressed,
           var(--wui-button-outlined-background)
@@ -207,7 +231,11 @@
       --wui-button-border: var(--wui-button-plain-border);
       --wui-button-color: var(--wui-button-plain-color);
 
-      &:is([data-hovered], :hover) {
+      &:is([data-hovered], :hover):not(
+          [data-pending],
+          [aria-disabled="true"],
+          [data-disabled]
+        ) {
         --wui-button-background: var(
           --wui-button-plain-background-hovered,
           var(--wui-button-plain-background)
@@ -226,7 +254,11 @@
         );
       }
 
-      &:is([data-pressed], :active) {
+      &:is([data-pressed], :active):not(
+          [data-pending],
+          [aria-disabled="true"],
+          [data-disabled]
+        ) {
         --wui-button-background: var(
           --wui-button-plain-background-pressed,
           var(--wui-button-plain-background)

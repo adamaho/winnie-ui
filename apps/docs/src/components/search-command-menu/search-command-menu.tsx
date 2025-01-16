@@ -7,10 +7,11 @@ import {
   ModalOverlay,
 } from "react-aria-components";
 
+import { MagnifyingGlass } from "@winnie-ui/icons/react/line";
+
 import type { CollectionKey } from "astro:content";
 import { Command } from "cmdk";
 import Flexsearch from "flexsearch";
-import { Search } from "lucide-react";
 
 import type { CollectionResponse, ContentResponse } from "~/types/collections";
 
@@ -188,7 +189,7 @@ export function SearchCommandMenu({ collection }: SearchCommandMenuProps) {
     <DialogTrigger isOpen={open} onOpenChange={handleOnOpenChange}>
       <Button className="search-trigger">
         <div className="search-trigger-text-container">
-          <Search />
+          <MagnifyingGlass />
           <span className="search-trigger-text">Search docs...</span>
         </div>
         <kbd className="search-trigger-kbd">/</kbd>
@@ -198,7 +199,7 @@ export function SearchCommandMenu({ collection }: SearchCommandMenuProps) {
           <Dialog className="search-dialog">
             <Command className="search-command-menu" shouldFilter={false}>
               <div className="search-command-menu-input-container">
-                <Search />
+                <MagnifyingGlass />
                 <Command.Input
                   value={searchTerm}
                   onValueChange={handleSearch}
@@ -213,7 +214,7 @@ export function SearchCommandMenu({ collection }: SearchCommandMenuProps) {
                 <Command.List className="search-command-menu-list">
                   <>
                     <Command.Empty className="search-command-menu-empty">
-                      <Search />
+                      <MagnifyingGlass />
                       <div className="search-command-menu-empty-title">
                         No docs found
                       </div>
@@ -221,14 +222,6 @@ export function SearchCommandMenu({ collection }: SearchCommandMenuProps) {
                         We couldn't find docs with text matching "{searchTerm}"
                       </div>
                     </Command.Empty>
-                    {/* <Command.Item */}
-                    {/*   value="ai" */}
-                    {/*   className="search-command-menu-item ai" */}
-                    {/* > */}
-                    {/*   <Sparkles /> */}
-                    {/*   Ask Winnie AI:{" "} */}
-                    {/*   <span className="ai-search-term">{searchTerm}</span> */}
-                    {/* </Command.Item> */}
                     {items.map((item) => {
                       return (
                         <Command.Item
