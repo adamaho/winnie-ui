@@ -1,7 +1,7 @@
 import { defineCollection, z } from "astro:content";
 import { glob } from "astro/loaders";
 
-const docsTypeSchema = z.enum(["react-aria", "base-ui"]);
+const docsTypeSchema = z.enum(["react-aria", "base-ui", "react"]);
 
 const docsSchema = z.object({
   title: z.string(),

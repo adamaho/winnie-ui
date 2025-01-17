@@ -21,7 +21,7 @@
     --wui-button-lg-icon-size: 1em;
 
     /* space */
-    --wui-button-sm-space: var(--wui-space-4);
+    --wui-button-sm-space: var(--wui-space-3);
     --wui-button-md-space: var(--wui-space-4);
     --wui-button-lg-space: var(--wui-space-5);
 
