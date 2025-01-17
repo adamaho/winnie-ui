@@ -186,7 +186,11 @@ function MenuItem<T extends object>({
         // @ts-ignore
         <>
           {renderProps.selectionMode === "single" && renderProps.isSelected && (
-            <span data-slot="indicator" data-selection-mode="single">
+            <span
+              data-slot="indicator"
+              data-selection-mode="single"
+              data-ascii-dot="true"
+            >
               ●
             </span>
           )}

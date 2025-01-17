@@ -1,3 +1,4 @@
+export { ArrowBoxLeft } from "./arrow-box-left";
 export { ArrowTriangleRight } from "./arrow-triangle-right";
 export { BooleanGroupSubtract } from "./boolean-group-subtract";
 export { ChainLink4 } from "./chain-link-4";
@@ -11,6 +12,9 @@ export { ForkKnife } from "./fork-knife";
 export { HomeDoor } from "./home-door";
 export { Lab } from "./lab";
 export { LayoutGrid2 } from "./layout-grid-2";
+export { Moon } from "./moon";
+export { People } from "./people";
+export { SettingsGear3 } from "./settings-gear-3";
 export { SidebarSimpleLeftSquare } from "./sidebar-simple-left-square";
 export { SquareArrowTopRight } from "./square-arrow-top-right";
 export { Store1 } from "./store-1";
