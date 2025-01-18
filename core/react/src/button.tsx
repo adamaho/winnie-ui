@@ -109,9 +109,7 @@ function Button({
   [props, ref] = useContextProps(props, ref!, ButtonContext);
 
   return (
-    <ButtonContext.Provider
-      value={{ isPending: props.isPending, isDisabled: props.isPending }}
-    >
+    <ButtonContext.Provider value={props}>
       <AriaButton
         {...props}
         className={clsx("wui-button", className)}

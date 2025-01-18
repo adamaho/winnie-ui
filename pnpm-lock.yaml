@@ -1617,12 +1617,6 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  "@internationalized/date@3.6.0":
-    resolution:
-      {
-        integrity: sha512-+z6ti+CcJnRlLHok/emGEsWQhe7kfSmEW+/6qCzvKY67YPh7YOBfvc7+/+NXq+zJlbArg30tYpqLjNgcAYv2YQ==,
-      }
-
   "@internationalized/date@3.7.0":
     resolution:
       {
@@ -10390,10 +10384,6 @@ snapshots:
   "@img/sharp-win32-x64@0.33.5":
     optional: true
 
-  "@internationalized/date@3.6.0":
-    dependencies:
-      "@swc/helpers": 0.5.15
-
   "@internationalized/date@3.7.0":
     dependencies:
       "@swc/helpers": 0.5.15
@@ -11164,7 +11154,7 @@ snapshots:
     dependencies:
       "@react-aria/interactions": 3.22.5(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       "@react-aria/utils": 3.27.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      "@react-types/shared": 3.26.0(react@19.0.0)
+      "@react-types/shared": 3.27.0(react@19.0.0)
       "@swc/helpers": 0.5.15
       clsx: 2.1.1
       react: 19.0.0
@@ -11227,13 +11217,13 @@ snapshots:
 
   "@react-aria/i18n@3.12.4(react-dom@19.0.0(react@19.0.0))(react@19.0.0)":
     dependencies:
-      "@internationalized/date": 3.6.0
+      "@internationalized/date": 3.7.0
       "@internationalized/message": 3.1.6
       "@internationalized/number": 3.6.0
       "@internationalized/string": 3.2.5
       "@react-aria/ssr": 3.9.7(react@19.0.0)
       "@react-aria/utils": 3.27.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      "@react-types/shared": 3.26.0(react@19.0.0)
+      "@react-types/shared": 3.27.0(react@19.0.0)
       "@swc/helpers": 0.5.15
       react: 19.0.0
     transitivePeerDependencies:
@@ -11256,7 +11246,7 @@ snapshots:
     dependencies:
       "@react-aria/ssr": 3.9.7(react@19.0.0)
       "@react-aria/utils": 3.27.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      "@react-types/shared": 3.26.0(react@19.0.0)
+      "@react-types/shared": 3.27.0(react@19.0.0)
       "@swc/helpers": 0.5.15
       react: 19.0.0
     transitivePeerDependencies:
@@ -11638,7 +11628,7 @@ snapshots:
     dependencies:
       "@react-aria/interactions": 3.22.5(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       "@react-aria/utils": 3.27.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      "@react-types/shared": 3.26.0(react@19.0.0)
+      "@react-types/shared": 3.27.0(react@19.0.0)
       "@swc/helpers": 0.5.15
       react: 19.0.0
     transitivePeerDependencies:
@@ -11928,7 +11918,7 @@ snapshots:
 
   "@react-types/button@3.10.1(react@19.0.0)":
     dependencies:
-      "@react-types/shared": 3.26.0(react@19.0.0)
+      "@react-types/shared": 3.27.0(react@19.0.0)
       react: 19.0.0
 
   "@react-types/button@3.10.2(react@19.0.0)":
@@ -12010,7 +12000,7 @@ snapshots:
 
   "@react-types/overlays@3.8.11(react@19.0.0)":
     dependencies:
-      "@react-types/shared": 3.26.0(react@19.0.0)
+      "@react-types/shared": 3.27.0(react@19.0.0)
       react: 19.0.0
 
   "@react-types/overlays@3.8.12(react@19.0.0)":
