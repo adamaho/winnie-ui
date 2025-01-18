@@ -8,49 +8,39 @@ import "./checkbox.css";
 
 export function Checkbox(props: any) {
   return (
-    <RadixCheckbox {...props} defaultChecked data-component="checkbox">
-      <RadixCheckboxIndicator asChild>
-        <Check data-slot="indicator" strokeWidth={3} />
-      </RadixCheckboxIndicator>
-    </RadixCheckbox>
+    <label data-component="checkbox">
+      <RadixCheckbox {...props} defaultChecked data-slot="indicator">
+        <RadixCheckboxIndicator asChild>
+          <Check data-slot="icon" strokeWidth={3} />
+        </RadixCheckboxIndicator>
+      </RadixCheckbox>
+    </label>
   );
 }
 
 export function CheckboxWithLabel(props: any) {
   return (
-    <div data-component="field">
-      <RadixCheckbox
-        {...props}
-        defaultChecked
-        data-component="checkbox"
-        id="wl"
-      >
+    <label data-component="checkbox">
+      <RadixCheckbox {...props} defaultChecked data-slot="indicator">
         <RadixCheckboxIndicator asChild>
-          <Check data-slot="indicator" strokeWidth={3} />
+          <Check data-slot="icon" strokeWidth={3} />
         </RadixCheckboxIndicator>
       </RadixCheckbox>
-      <label data-slot="label" htmlFor="wl">
-        Accept terms and conditions.
-      </label>
-    </div>
+      <span data-slot="label">Accept terms and conditions.</span>
+    </label>
   );
 }
 
 export function CheckboxWithLabelAndDescription(props: any) {
   return (
     <div data-component="field">
-      <RadixCheckbox
-        {...props}
-        defaultChecked
-        data-component="checkbox"
-        id="wld"
-      >
-        <RadixCheckboxIndicator asChild>
-          <Check data-slot="indicator" strokeWidth={3} />
-        </RadixCheckboxIndicator>
-      </RadixCheckbox>
-      <label data-slot="label" htmlFor="wld" className="label">
-        Display full names
+      <label data-component="checkbox" className="label">
+        <RadixCheckbox {...props} defaultChecked data-slot="indicator" id="wld">
+          <RadixCheckboxIndicator asChild>
+            <Check data-slot="icon" strokeWidth={3} />
+          </RadixCheckboxIndicator>
+        </RadixCheckbox>
+        <span data-slot="label">Display full names</span>
       </label>
       <span data-slot="description" className="description">
         Show full names of users instead of shorter usernames.

@@ -8,6 +8,7 @@ export {
   ButtonPending,
   ButtonContext,
 } from "./button";
+export { Checkbox } from "./checkbox";
 export { Heading } from "./typography/heading";
 export {
   Layout,
@@ -66,6 +67,7 @@ export type {
   ButtonPendingProps,
   WinnieButtonProps,
 } from "./button";
+export type { CheckboxProps } from "./checkbox";
 export type { HeadingProps } from "./typography/heading";
 export type {
   LayoutProps,

@@ -13,7 +13,7 @@
   color: var(--wui-color-grey-11);
 }
 
-[data-component="checkbox"] {
+[data-slot="indicator"] {
   background: var(--checkbox-background);
   border: var(--wui-border-width-1) solid var(--wui-color-grey-6);
   color: var(--wui-color-accent-contrast);

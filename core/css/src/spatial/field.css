@@ -82,19 +82,20 @@
     /* checkbox followed by label or description or error */
     &:has(
         :is([data-component="checkbox"])
-          + :is(
-            [data-slot="label"],
-            [data-slot="description"],
-            [data-slot="error"]
-          )
+          + :is([data-slot="description"], [data-slot="error"])
       ) {
       display: grid;
       grid-template-columns: auto 1fr;
 
-      [data-slot="label"],
+      [data-component="checkbox"] {
+        grid-template-columns: subgrid;
+        grid-column: 1 / -1;
+      }
+
       [data-slot="description"] {
         grid-column-start: 2;
         margin-left: var(--wui-space-4);
+        margin-top: var(--wui-space-3);
       }
 
       [data-slot="error"] {

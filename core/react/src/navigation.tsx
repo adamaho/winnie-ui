@@ -160,7 +160,7 @@ function NavigationDisclosureTriggerLabel({
       ref={ref}
     >
       {children}
-      <ArrowTriangleRight />
+      <ArrowTriangleRight aria-hidden="true" />
     </span>
   );
 }

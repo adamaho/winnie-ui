@@ -1,0 +1,27 @@
+---
+title: Checkbox
+description: Captures binary user input.
+documentation:
+  [
+    {
+      label: Checkbox,
+      link: https://react-spectrum.adobe.com/react-aria/Checkbox.html,
+      icon: react-aria,
+    },
+  ]
+---
+
+import { CheckboxDemo } from "~/demos/checkbox";
+
+import Demo from "~/components/demo/demo.astro";
+
+<Demo>
+  <CheckboxDemo client:load />
+  <Fragment slot="footer">
+    ```tsx
+    <Checkbox>
+      <CheckboxLabel>Pineapple</CheckboxLabel>
+    </Checkbox>
+    ```
+  </Fragment>
+</Demo>
