@@ -89,17 +89,12 @@
     }
 
     /* icon followed by text followed by an icon */
-    &:has(> [data-slot="icon"] + [data-slot="label"] + [data-slot="icon"])
-      [data-slot="label"] {
+    &:has(> [data-slot="icon"] + [data-slot="label"] + [data-slot="icon"]) [data-slot="label"] {
       grid-column: 2 / 3;
     }
 
     /* only a single icon in the button or icon followed by pending slot */
-    &:has(
-        [data-slot="icon"]:only-child,
-        [data-slot="icon"] + [data-slot="pending"],
-        [data-slot="pending"] + [data-slot="icon"]
-      ):not([data-slot="label"]) {
+    &:has([data-slot="icon"]:only-child, [data-slot="icon"] + [data-slot="pending"], [data-slot="pending"] + [data-slot="icon"]):not([data-slot="label"]) {
       grid-template-columns: 1fr;
       height: var(--wui-button-height, var(--wui-button-md-height));
       justify-items: center;
