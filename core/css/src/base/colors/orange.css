@@ -1,8 +1,5 @@
 @layer base {
-  :root,
-  .light,
-  .light-theme,
-  [data-theme="light"] {
+  :root, [data-theme="light"] {
     --wui-color-orange-1: #fefcfb;
     --wui-color-orange-2: #fff5f0;
     --wui-color-orange-3: #ffebdf;
@@ -34,10 +31,7 @@
 
   @supports (color: color(display-p3 1 1 1)) {
     @media (color-gamut: p3) {
-      :root,
-      .light,
-      .light-theme,
-      [data-theme="light"] {
+      :root, [data-theme="light"] {
         --wui-color-orange-1: oklch(99.2% 0.003 47.6);
         --wui-color-orange-2: oklch(97.9% 0.014 47.6);
         --wui-color-orange-3: oklch(95.7% 0.035 47.6);
@@ -69,8 +63,6 @@
     }
   }
 
-  .dark,
-  .dark-theme,
   [data-theme="dark"] {
     --wui-color-orange-1: #16100d;
     --wui-color-orange-2: #1f1510;
@@ -103,8 +95,6 @@
 
   @supports (color: color(display-p3 1 1 1)) {
     @media (color-gamut: p3) {
-      .dark,
-      .dark-theme,
       [data-theme="dark"] {
         --wui-color-orange-1: oklch(17.8% 0.012 47.6);
         --wui-color-orange-2: oklch(20.7% 0.019 47.6);
