@@ -149,18 +149,10 @@
     /* animates a popper relative to an anchor position. This is typically used in
      * cases where the popper is mounted and unmounted from the dom
      */
-    :is(
-      .wui-popper-animate,
-      [data-component="popover"],
-      [data-component="tooltip"]
-    ) {
+    :is(.wui-popper-animate, [data-component="popover"], [data-component="tooltip"]) {
       animation-timing-function: var(--wui-bezier-1);
 
-      &:where(
-          [data-state="delayed-open"],
-          [data-state="open"],
-          [data-entering]
-        ) {
+      &:where([data-state="delayed-open"], [data-state="open"], [data-entering]) {
         animation-duration: var(--wui-duration-2);
 
         &:where([data-side="top"], [data-placement="top"]) {
@@ -211,11 +203,7 @@
       transform-origin: var(--popover-transform-origin);
 
       opacity: 0;
-      transform: translate(
-          var(--wui-popper-translateX, 0),
-          var(--wui-popper-translateY, 0)
-        )
-        scale(var(--wui-popper-scale));
+      transform: translate(var(--wui-popper-translateX, 0), var(--wui-popper-translateY, 0)) scale(var(--wui-popper-scale));
 
       &[data-placement="bottom"] {
         --wui-popper-translateY: -6px;
