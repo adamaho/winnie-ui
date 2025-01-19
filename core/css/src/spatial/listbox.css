@@ -1,10 +1,8 @@
+/* prettier-ignore */
 @layer spatial {
   [data-component="listbox"] {
     --wui-listbox-grid-columns: auto auto 1fr auto auto;
-    --wui-listbox-column-gap: var(
-      --wui-listbox-item-space,
-      var(--wui-listbox-item-md-space)
-    );
+    --wui-listbox-column-gap: var(--wui-listbox-item-space, var(--wui-listbox-item-md-space));
 
     /* border radius */
     --wui-listbox-item-sm-border-radius: var(--wui-border-radius-1);
@@ -39,29 +37,12 @@
     grid-template-columns: var(--wui-listbox-grid-columns);
     min-width: max-content;
 
-    &:is(
-        [data-mode="selection"],
-        [data-selection-mode],
-        &:has([data-selection-mode])
-      ) {
-      --wui-listbox-grid-columns: minmax(
-          calc(
-            var(
-                --wui-listbox-item-font-size,
-                var(--wui-listbox-item-md-font-size)
-              ) +
-              var(--wui-listbox-item-space, var(--wui-listbox-item-md-space)) +
-              var(--wui-listbox-item-space, var(--wui-listbox-item-md-space))
-          ),
-          auto
-        )
-        auto 1fr auto auto;
+    &:is([data-mode="selection"], [data-selection-mode], &:has([data-selection-mode])) {
+      --wui-listbox-grid-columns: minmax(calc(var(--wui-listbox-item-font-size, var(--wui-listbox-item-md-font-size)) + var(--wui-listbox-item-space, var(--wui-listbox-item-md-space)) + var(--wui-listbox-item-space, var(--wui-listbox-item-md-space))), auto) auto 1fr auto auto;
     }
 
     &[data-size="sm"] {
-      --wui-listbox-item-border-radius: var(
-        --wui-listbox-item-sm-border-radius
-      );
+      --wui-listbox-item-border-radius: var(--wui-listbox-item-sm-border-radius);
       --wui-listbox-item-font-size: var(--wui-listbox-item-sm-font-size);
       --wui-listbox-header-font-size: var(--wui-listbox-header-sm-font-size);
       --wui-listbox-item-height: var(--wui-listbox-item-sm-height);
@@ -71,9 +52,7 @@
     }
 
     &[data-size="md"] {
-      --wui-listbox-item-border-radius: var(
-        --wui-listbox-item-md-border-radius
-      );
+      --wui-listbox-item-border-radius: var(--wui-listbox-item-md-border-radius);
       --wui-listbox-item-font-size: var(--wui-listbox-item-md-font-size);
       --wui-listbox-header-font-size: var(--wui-listbox-header-md-font-size);
       --wui-listbox-item-height: var(--wui-listbox-item-md-height);
@@ -83,9 +62,7 @@
     }
 
     &[data-size="lg"] {
-      --wui-listbox-item-border-radius: var(
-        --wui-listbox-item-lg-border-radius
-      );
+      --wui-listbox-item-border-radius: var(--wui-listbox-item-lg-border-radius);
       --wui-listbox-item-font-size: var(--wui-listbox-item-lg-font-size);
       --wui-listbox-header-font-size: var(--wui-listbox-header-lg-font-size);
       --wui-listbox-item-height: var(--wui-listbox-item-lg-height);
@@ -103,16 +80,10 @@
         align-items: center;
         grid-column-start: 3;
         display: grid;
-        height: var(
-          --wui-listbox-item-height,
-          var(--wui-listbox-item-md-height)
-        );
+        height: var(--wui-listbox-item-height, var(--wui-listbox-item-md-height));
 
         [data-slot="label"] {
-          font-size: var(
-            --wui-listbox-header-font-size,
-            var(--wui-listbox-header-md-font-size)
-          );
+          font-size: var(--wui-listbox-header-font-size, var(--wui-listbox-header-md-font-size));
         }
       }
     }
@@ -125,48 +96,27 @@
 
     [data-component="listbox-item"] {
       align-items: center;
-      border-radius: var(
-        --wui-listbox-item-border-radius,
-        var(--wui-listbox-item-md-border-radius)
-      );
+      border-radius: var(--wui-listbox-item-border-radius, var(--wui-listbox-item-md-border-radius));
       cursor: var(--wui-cursor-pressable, default);
       display: grid;
-      font-size: var(
-        --wui-listbox-item-font-size,
-        var(--wui-listbox-item-md-font-size)
-      );
+      font-size: var(--wui-listbox-item-font-size, var(--wui-listbox-item-md-font-size));
       height: var(--wui-listbox-item-height, var(--wui-listbox-item-md-height));
       grid-template-columns: subgrid;
       grid-column: 1 / -1;
-      padding-inline: var(
-        --wui-listbox-item-space,
-        var(--wui-listbox-item-md-space)
-      );
+      padding-inline: var(--wui-listbox-item-space, var(--wui-listbox-item-md-space));
       user-select: none;
 
       [data-slot="indicator"] {
-        height: var(
-          --wui-listbox-item-icon-size,
-          var(--wui-listbox-item-md-icon-size)
-        );
+        height: var(--wui-listbox-item-icon-size, var(--wui-listbox-item-md-icon-size));
         grid-column-start: 1;
-        width: var(
-          --wui-listbox-item-icon-size,
-          var(--wui-listbox-item-md-icon-size)
-        );
+        width: var(--wui-listbox-item-icon-size, var(--wui-listbox-item-md-icon-size));
         font-size: 1em;
       }
 
       [data-slot="icon"] {
-        height: var(
-          --wui-listbox-item-icon-size,
-          var(--wui-listbox-item-md-icon-size)
-        );
+        height: var(--wui-listbox-item-icon-size, var(--wui-listbox-item-md-icon-size));
         grid-column-start: 2;
-        width: var(
-          --wui-listbox-item-icon-size,
-          var(--wui-listbox-item-md-icon-size)
-        );
+        width: var(--wui-listbox-item-icon-size, var(--wui-listbox-item-md-icon-size));
         line-height: 1;
       }
 
@@ -180,26 +130,18 @@
 
         &[data-orientation="row"] {
           flex-direction: row;
-          gap: calc(
-            var(--wui-listbox-item-space, var(--wui-listbox-item-md-space)) / 2
-          );
+          gap: calc(var(--wui-listbox-item-space, var(--wui-listbox-item-md-space)) / 2);
         }
       }
 
       [data-slot="label"] {
-        font-size: var(
-          --wui-listbox-item-font-size,
-          var(--wui-listbox-item-md-font-size)
-        );
+        font-size: var(--wui-listbox-item-font-size, var(--wui-listbox-item-md-font-size));
         grid-column-start: 3;
         white-space: nowrap;
       }
 
       [data-slot="description"] {
-        font-size: var(
-          --wui-listbox-item-font-size,
-          var(--wui-listbox-item-md-font-size)
-        );
+        font-size: var(--wui-listbox-item-font-size, var(--wui-listbox-item-md-font-size));
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
@@ -208,9 +150,7 @@
       [data-slot="shortcut"] {
         grid-column-start: 5;
         justify-self: end;
-        margin-left: calc(
-          var(--wui-listbox-item-space, var(--wui-listbox-item-md-space)) * 2
-        );
+        margin-left: calc(var(--wui-listbox-item-space, var(--wui-listbox-item-md-space)) * 2);
         min-width: 2ch;
         text-align: center;
         text-transform: capitalize;
@@ -224,41 +164,20 @@
         }
       }
 
-      &:not(:has([data-component="group"])):has(
-          [data-slot="label"] + [data-slot="description"]
-        ) {
+      &:not(:has([data-component="group"])):has([data-slot="label"] + [data-slot="description"]) {
         [data-slot="description"] {
-          margin-left: var(
-            --wui-listbox-item-space,
-            var(--wui-listbox-item-md-space)
-          );
+          margin-left: var(--wui-listbox-item-space, var(--wui-listbox-item-md-space));
         }
       }
 
       &:has([data-component="group"]:not([data-orientation="row"])) {
         height: auto;
-        padding: var(
-          --wui-listbox-item-space,
-          var(--wui-listbox-item-md-space)
-        );
+        padding: var(--wui-listbox-item-space, var(--wui-listbox-item-md-space));
 
         [data-slot="indicator"],
         [data-slot="icon"] {
           align-self: start;
           margin-top: calc(1em * 0.2);
-        }
-      }
-
-      /* icon followed by label or group */
-      &:has(
-          [data-slot="icon"] + [data-slot="label"],
-          [data-slot="icon"] + [data-component="group"]
-        ) {
-        [data-slot="icon"] {
-          margin-right: var(
-            --wui-listbox-item-space,
-            var(--wui-listbox-item-md-space)
-          );
         }
       }
     }

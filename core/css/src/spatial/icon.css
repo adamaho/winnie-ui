@@ -1,3 +1,4 @@
+/* prettier-ignore */
 @layer spatial {
   [data-component="icon"]:not([data-slot="icon"]) {
     &[data-size="1"] {

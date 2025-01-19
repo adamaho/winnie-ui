@@ -1,3 +1,4 @@
+/* prettier-ignore */
 @layer spatial {
   [data-component="page"] {
     --wui-page-inline-space: calc(var(--wui-space-9) + var(--wui-space-4));

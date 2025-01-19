@@ -1,3 +1,4 @@
+/* prettier-ignore */
 @layer spatial {
   [data-component="field"] {
     width: 100%;
@@ -22,10 +23,7 @@
     }
 
     /* label control */
-    &:has(
-        [data-slot="label"]
-          + :is([data-component="group"], [data-component="input"])
-      ) {
+    &:has([data-slot="label"] + :is([data-component="group"], [data-component="input"])) {
       [data-slot="label"] {
         margin-bottom: var(--wui-space-4);
       }
@@ -39,51 +37,35 @@
     }
 
     /* description control */
-    &:has(
-        [data-slot="description"]
-          + :is([data-component="group"], [data-component="input"])
-      ) {
+    &:has([data-slot="description"] + :is([data-component="group"], [data-component="input"])) {
       [data-slot="description"] {
         margin-bottom: var(--wui-space-4);
       }
     }
 
     /* control description */
-    &:has(
-        :is([data-component="group"], [data-component="input"])
-          + [data-slot="description"]
-      ) {
+    &:has(:is([data-component="group"], [data-component="input"]) + [data-slot="description"]) {
       [data-slot="description"] {
         margin-top: var(--wui-space-4);
       }
     }
 
     /* control description error */
-    &:has(
-        :is([data-component="group"], [data-component="input"])
-          + [data-slot="error"]
-      ) {
+    &:has(:is([data-component="group"], [data-component="input"]) + [data-slot="error"]) {
       [data-slot="error"] {
         margin-top: var(--wui-space-4);
       }
     }
 
     /* control error */
-    &:has(
-        :is([data-component="group"], [data-component="input"])
-          + [data-slot="description"]
-          + [data-slot="error"]
-      ) {
+    &:has(:is([data-component="group"], [data-component="input"]) + [data-slot="description"] + [data-slot="error"]) {
       [data-slot="error"] {
         margin-top: var(--wui-space-4);
       }
     }
 
     /* checkbox followed by label or description or error */
-    &:has(
-        :is([data-component="checkbox"])
-          + :is([data-slot="description"], [data-slot="error"])
-      ) {
+    &:has(:is([data-component="checkbox"]) + :is([data-slot="description"], [data-slot="error"])) {
       display: grid;
       grid-template-columns: auto 1fr;
 
