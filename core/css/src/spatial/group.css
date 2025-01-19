@@ -52,10 +52,7 @@
 
     &:has([data-slot="icon"]:first-child) {
       [data-slot="control"] {
-        padding-left: calc(
-          (var(--wui-group-space, var(--wui-group-md-space)) * 2) +
-            var(--wui-group-icon-size, var(--wui-group-md-icon-size))
-        );
+        padding-left: calc((var(--wui-group-space, var(--wui-group-md-space)) * 2) + var(--wui-group-icon-size, var(--wui-group-md-icon-size)));
       }
 
       [data-slot="icon"]:first-child {
@@ -65,10 +62,7 @@
 
     &:has([data-slot="icon"]:last-child) {
       [data-slot="control"] {
-        padding-right: calc(
-          (var(--wui-group-space, var(--wui-group-md-space)) * 2) +
-            var(--wui-group-icon-size, var(--wui-group-md-icon-size))
-        );
+        padding-right: calc((var(--wui-group-space, var(--wui-group-md-space)) * 2) + var(--wui-group-icon-size, var(--wui-group-md-icon-size)));
       }
 
       [data-slot="icon"]:last-child {
