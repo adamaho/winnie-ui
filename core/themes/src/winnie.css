@@ -10,20 +10,12 @@
       --wui-button-solid-background: var(--wui-color-accent-9);
       --wui-button-solid-border: none;
       --wui-button-solid-border-color: transparent;
-      --wui-button-solid-box-shadow: 0 -1px 0 1px var(--wui-color-black-a4)
-          inset,
-        0 0 0 1px var(--wui-color-black-a4) inset,
-        0 1px 0 1px var(--wui-color-white-a4) inset;
+      --wui-button-solid-box-shadow: 0 -1px 0 1px var(--wui-color-black-a4) inset, 0 0 0 1px var(--wui-color-black-a4) inset, 0 1px 0 1px var(--wui-color-white-a4) inset;
       --wui-button-solid-color: var(--wui-color-accent-contrast);
       --wui-button-solid-font-weight: var(--wui-font-weight-medium);
       --wui-button-solid-background-hovered: var(--wui-color-accent-10);
-      --wui-button-solid-background-pressed: oklch(
-        from var(--wui-color-accent-10) calc(l * 0.9) c h
-      );
-      --wui-button-solid-box-shadow-disabled: 0 -1px 0 1px
-          var(--wui-color-grey-a3) inset,
-        0 0 0 1px var(--wui-color-grey-a3) inset,
-        0 1px 0 1px var(--wui-color-white-a4) inset;
+      --wui-button-solid-background-pressed: oklch(from var(--wui-color-accent-10) calc(l * 0.9) c h);
+      --wui-button-solid-box-shadow-disabled: 0 -1px 0 1px var(--wui-color-grey-a3) inset, 0 0 0 1px var(--wui-color-grey-a3) inset, 0 1px 0 1px var(--wui-color-white-a4) inset;
       --wui-button-solid-background-disabled: var(--wui-color-grey-3);
       --wui-button-solid-color-disabled: var(--wui-color-grey-9);
       --wui-button-solid-box-shadow-pressed: none;
@@ -44,18 +36,14 @@
       --wui-button-outlined-background: var(--wui-color-accent-1);
       --wui-button-outlined-border: none;
       --wui-button-outlined-border-color: transparent;
-      --wui-button-outlined-box-shadow: 0 -1px 0 1px var(--wui-color-accent-a4)
-          inset,
-        0 0 0 1px var(--wui-color-accent-a4) inset;
+      --wui-button-outlined-box-shadow: 0 -1px 0 1px var(--wui-color-accent-a4) inset, 0 0 0 1px var(--wui-color-accent-a4) inset;
       --wui-button-outlined-color: var(--wui-color-accent-11);
       --wui-button-outlined-color-disabled: var(--wui-color-grey-9);
       --wui-button-outlined-background-hovered: var(--wui-color-accent-3);
       --wui-button-outlined-background-pressed: var(--wui-color-accent-3);
       --wui-button-outlined-background-disabled: var(--wui-color-grey-2);
-      --wui-button-outlined-box-shadow-pressed: 0px 0px 1px 1px
-        var(--wui-color-accent-a4) inset;
-      --wui-button-outlined-box-shadow-disabled: 0 0 1px 1px
-        var(--wui-color-grey-5);
+      --wui-button-outlined-box-shadow-pressed: 0px 0px 1px 1px var(--wui-color-accent-a4) inset;
+      --wui-button-outlined-box-shadow-disabled: 0 0 1px 1px var(--wui-color-grey-5);
 
       /* Plain */
       --wui-button-plain-background: transparent;
@@ -75,25 +63,13 @@
       [data-slot="indicator"] {
         --wui-checkbox-indicator-background-selected: var(--wui-color-accent-9);
         --wui-checkbox-indicator-background-disabled: var(--wui-color-grey-3);
-        --wui-checkbox-indicator-background-selected-disabled: var(
-          --wui-color-grey-5
-        );
-        --wui-checkbox-indicator-background-selected-invalid: var(
-          --wui-color-red-9
-        );
-        --wui-checkbox-indicator-color-selected: var(
-          --wui-color-accent-contrast
-        );
-        --wui-checkbox-indicator-color-selected-disabled: var(
-          --wui-color-grey-10
-        );
+        --wui-checkbox-indicator-background-selected-disabled: var(--wui-color-grey-5);
+        --wui-checkbox-indicator-background-selected-invalid: var(--wui-color-red-9);
+        --wui-checkbox-indicator-color-selected: var(--wui-color-accent-contrast);
+        --wui-checkbox-indicator-color-selected-disabled: var(--wui-color-grey-10);
         --wui-checkbox-indicator-color-disabled: var(--wui-color-grey-9);
-        --wui-checkbox-indicator-border-selected: var(--wui-border-width-1)
-          solid var(--wui-color-accent-9);
-        --wui-checkbox-indicator-border-selected-invalid: var(
-            --wui-border-width-1
-          )
-          solid var(--wui-color-red-9);
+        --wui-checkbox-indicator-border-selected: var(--wui-border-width-1) solid var(--wui-color-accent-9);
+        --wui-checkbox-indicator-border-selected-invalid: var(--wui-border-width-1) solid var(--wui-color-red-9);
         --wui-checkbox-indicator-box-shadow: var(--wui-shadow-1);
       }
 
@@ -101,9 +77,7 @@
         --wui-checkbox-label-color: var(--wui-color-grey-12);
         --wui-checkbox-label-color-disabled: var(--wui-color-grey-10);
         --wui-checkbox-label-font-weight: var(--wui-font-weight-normal);
-        --wui-checkbox-label-font-weight-with-description: var(
-          --wui-font-weight-medium
-        );
+        --wui-checkbox-label-font-weight-with-description: var(--wui-font-weight-medium);
       }
     }
 
@@ -142,8 +116,7 @@
      * Link
      * -----------------------------------------------------------------------------------------------*/
     [data-component="link"] {
-      --wui-link-text-decoration-hovered: underline solid
-        var(--wui-color-accent-a7);
+      --wui-link-text-decoration-hovered: underline solid var(--wui-color-accent-a7);
     }
 
     /* -------------------------------------------------------------------------------------------------
@@ -151,9 +124,7 @@
      * -----------------------------------------------------------------------------------------------*/
     [data-component="listbox"] {
       --wui-listbox__section-header-label-color: var(--wui-color-grey-11);
-      --wui-listbox__section-header-label-font-weight: var(
-        --wui-font-weight-medium
-      );
+      --wui-listbox__section-header-label-font-weight: var(--wui-font-weight-medium);
     }
 
     [data-component="listbox-item"] {
@@ -166,17 +137,11 @@
       --wui-listbox__item-color-hovered: var(--wui-color-accent-contrast);
       --wui-listbox__item-color-pressed: var(--wui-color-accent-contrast);
       --wui-listbox__item-group-label-color: var(--wui-color-grey-12);
-      --wui-listbox__item-group-label-font-weight: var(
-        --wui-font-weight-medium
-      );
+      --wui-listbox__item-group-label-font-weight: var(--wui-font-weight-medium);
       --wui-listbox__item-group-label-color: var(--wui-color-grey-12);
-      --wui-listbox__item-group-label-font-weight: var(
-        --wui-font-weight-medium
-      );
+      --wui-listbox__item-group-label-font-weight: var(--wui-font-weight-medium);
       --wui-listbox__item-group-description-color: var(--wui-color-grey-11);
-      --wui-listbox__item-group-description-font-weight: var(
-        --wui-font-weight-normal
-      );
+      --wui-listbox__item-group-description-font-weight: var(--wui-font-weight-normal);
       --wui-listbox__item-shortcut-color: var(--wui-color-grey-10);
       --wui-listbox__item-shortcut-font-family: var(--wui-font-family-sans);
     }
@@ -233,8 +198,7 @@
   [data-skin="winnie"]:where([data-theme="light"]) {
     [data-component="checkbox"] {
       --wui-checkbox-indicator-background: var(--wui-color-white);
-      --wui-checkbox-indicator-border: var(--wui-border-width-1) solid
-        var(--wui-color-grey-6);
+      --wui-checkbox-indicator-border: var(--wui-border-width-1) solid var(--wui-color-grey-6);
     }
 
     [data-component="layout"] {
@@ -247,10 +211,8 @@
       --wui-layout__sidebar-open-border-color: var(--wui-color-grey-6);
       --wui-layout__sidebar-background-open: var(--wui-color-white);
       --wui-layout__sidebar-box-shadow-open: var(--wui-shadow-4);
-      --wui-layout__sidebar-border-right-open: var(--wui-border-width-1) solid
-        var(--wui-color-grey-6);
-      --wui-layout__sidebar-border-open-lg: var(--wui-border-width-1) solid
-        var(--wui-color-grey-6);
+      --wui-layout__sidebar-border-right-open: var(--wui-border-width-1) solid var(--wui-color-grey-6);
+      --wui-layout__sidebar-border-open-lg: var(--wui-border-width-1) solid var(--wui-color-grey-6);
       --wui-layout__resize-handle-background: var(--wui-color-grey-9);
     }
 
@@ -262,8 +224,7 @@
 
     [data-component="popover"] {
       --wui-popover-background: var(--wui-color-white);
-      --wui-popover-border: var(--wui-border-width-1) solid
-        var(--wui-color-grey-5);
+      --wui-popover-border: var(--wui-border-width-1) solid var(--wui-color-grey-5);
       --wui-popover-box-shadow: var(--wui-shadow-4);
     }
 
@@ -273,8 +234,7 @@
 
     [data-component="tooltip"] {
       --wui-tooltip-background: var(--wui-color-white);
-      --wui-tooltip-border: var(--wui-border-width-1) solid
-        var(--wui-color-grey-5);
+      --wui-tooltip-border: var(--wui-border-width-1) solid var(--wui-color-grey-5);
       --wui-tooltip-box-shadow: var(--wui-shadow-2);
       --wui-tooltip-color: var(--wui-color-grey-11);
     }
@@ -283,8 +243,7 @@
   [data-skin="winnie"]:where([data-theme="dark"]) {
     [data-component="checkbox"] {
       --wui-checkbox-indicator-background: var(--wui-color-grey-3);
-      --wui-checkbox-indicator-border: var(--wui-border-width-1) solid
-        var(--wui-color-grey-6);
+      --wui-checkbox-indicator-border: var(--wui-border-width-1) solid var(--wui-color-grey-6);
       --wui-checkbox-indicator-background-disabled: var(--wui-color-grey-5);
     }
 
@@ -295,10 +254,8 @@
       --wui-layout__sidebar-background-open: var(--wui-color-black);
       --wui-layout__sidebar-box-shadow-open: var(--wui-shadow-4);
       --wui-layout__sidebar-box-shadow-open: var(--wui-shadow-4);
-      --wui-layout__sidebar-border-right-open: var(--wui-border-width-1) solid
-        var(--wui-color-grey-3);
-      --wui-layout__sidebar-border-open-lg: var(--wui-border-width-1) solid
-        var(--wui-color-grey-3);
+      --wui-layout__sidebar-border-right-open: var(--wui-border-width-1) solid var(--wui-color-grey-3);
+      --wui-layout__sidebar-border-open-lg: var(--wui-border-width-1) solid var(--wui-color-grey-3);
       --wui-layout__resize-handle-background: var(--wui-color-grey-7);
     }
 
@@ -310,8 +267,7 @@
 
     [data-component="popover"] {
       --wui-popover-background: var(--wui-color-grey-2);
-      --wui-popover-border: var(--wui-border-width-1) solid
-        var(--wui-color-grey-5);
+      --wui-popover-border: var(--wui-border-width-1) solid var(--wui-color-grey-5);
       --wui-popover-box-shadow: var(--wui-shadow-4);
     }
 
@@ -321,8 +277,7 @@
 
     [data-component="tooltip"] {
       --wui-tooltip-background: var(--wui-color-grey-3);
-      --wui-tooltip-border: var(--wui-border-width-1) solid
-        var(--wui-color-grey-6);
+      --wui-tooltip-border: var(--wui-border-width-1) solid var(--wui-color-grey-6);
       --wui-tooltip-box-shadow: var(--wui-shadow-2);
       --wui-tooltip-color: var(--wui-color-grey-11);
     }
