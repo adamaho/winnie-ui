@@ -1,4 +1,3 @@
-/* prettier-ignore */
 @layer spatial {
   [data-component="layout"] {
     --wui-layout-sidebar-width: calc(296px * var(--wui-scale));

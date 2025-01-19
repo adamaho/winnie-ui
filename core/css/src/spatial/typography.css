@@ -1,8 +1,5 @@
-/* prettier-ignore */
 @layer spatial {
-  [data-component="text"],
-  [data-component="heading"],
-  [data-component="link"] {
+  [data-component="text"], [data-component="heading"], [data-component="link"] {
     &[data-align="left"] {
       text-align: left;
     }

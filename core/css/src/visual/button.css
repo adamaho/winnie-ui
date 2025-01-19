@@ -13,70 +13,26 @@
       --wui-button-border: var(--wui-button-solid-border);
       --wui-button-color: var(--wui-button-solid-color);
 
-      &:is([data-hovered], :hover):not(
-          [data-pending],
-          [aria-disabled="true"],
-          [data-disabled]
-        ) {
-        --wui-button-background: var(
-          --wui-button-solid-background-hovered,
-          var(--wui-button-solid-background)
-        );
-        --wui-button-box-shadow: var(
-          --wui-button-solid-box-shadow-hovered,
-          var(--wui-button-solid-box-shadow)
-        );
-        --wui-button-border: var(
-          --wui-button-solid-border-hovered,
-          var(--wui-button-solid-border)
-        );
-        --wui-button-color: var(
-          --wui-button-solid-color-hovered,
-          var(--wui-button-solid-color)
-        );
+      &:is([data-hovered], :hover):not([data-pending], [aria-disabled="true"], [data-disabled]) {
+        --wui-button-background: var(--wui-button-solid-background-hovered, var(--wui-button-solid-background));
+        --wui-button-box-shadow: var(--wui-button-solid-box-shadow-hovered, var(--wui-button-solid-box-shadow));
+        --wui-button-border: var(--wui-button-solid-border-hovered, var(--wui-button-solid-border));
+        --wui-button-color: var(--wui-button-solid-color-hovered, var(--wui-button-solid-color));
       }
 
-      &:is([data-pressed], :active):not(
-          [data-pending],
-          [aria-disabled="true"],
-          [data-disabled]
-        ) {
-        --wui-button-background: var(
-          --wui-button-solid-background-pressed,
-          var(--wui-button-solid-background)
-        );
-        --wui-button-box-shadow: var(
-          --wui-button-solid-box-shadow-pressed,
-          var(--wui-button-solid-box-shadow)
-        );
-        --wui-button-border: var(
-          --wui-button-solid-border-pressed,
-          var(--wui-button-solid-border)
-        );
-        --wui-button-color: var(
-          --wui-button-solid-color-pressed,
-          var(--wui-button-solid-color)
-        );
+      &:is([data-pressed], :active):not([data-pending], [aria-disabled="true"], [data-disabled]) {
+        --wui-button-background: var(--wui-button-solid-background-pressed, var(--wui-button-solid-background));
+        --wui-button-box-shadow: var(--wui-button-solid-box-shadow-pressed, var(--wui-button-solid-box-shadow));
+        --wui-button-border: var(--wui-button-solid-border-pressed, var(--wui-button-solid-border));
+        --wui-button-color: var(--wui-button-solid-color-pressed, var(--wui-button-solid-color));
         padding-top: var(--wui-space-1);
       }
 
       &:is([data-disabled], [aria-disabled="true"]):not([data-pending]) {
-        --wui-button-background: var(
-          --wui-button-solid-background-disabled,
-          var(--wui-button-solid-background)
-        );
-        --wui-button-box-shadow: var(
-          --wui-button-solid-box-shadow-disabled,
-          var(--wui-button-solid-box-shadow)
-        );
-        --wui-button-border: var(
-          --wui-button-solid-border-disabled,
-          var(--wui-button-solid-border)
-        );
-        --wui-button-color: var(
-          --wui-button-solid-color-disabled,
-          var(--wui-button-solid-color)
-        );
+        --wui-button-background: var(--wui-button-solid-background-disabled, var(--wui-button-solid-background));
+        --wui-button-box-shadow: var(--wui-button-solid-box-shadow-disabled, var(--wui-button-solid-box-shadow));
+        --wui-button-border: var(--wui-button-solid-border-disabled, var(--wui-button-solid-border));
+        --wui-button-color: var(--wui-button-solid-color-disabled, var(--wui-button-solid-color));
       }
     }
 
@@ -86,69 +42,25 @@
       --wui-button-border: var(--wui-button-soft-border);
       --wui-button-color: var(--wui-button-soft-color);
 
-      &:is([data-hovered], :hover):not(
-          [data-pending],
-          [aria-disabled="true"],
-          [data-disabled]
-        ) {
-        --wui-button-background: var(
-          --wui-button-soft-background-hovered,
-          var(--wui-button-soft-background)
-        );
-        --wui-button-box-shadow: var(
-          --wui-button-soft-box-shadow-hovered,
-          var(--wui-button-soft-box-shadow)
-        );
-        --wui-button-border: var(
-          --wui-button-soft-border-hovered,
-          var(--wui-button-soft-border)
-        );
-        --wui-button-color: var(
-          --wui-button-soft-color-hovered,
-          var(--wui-button-soft-color)
-        );
+      &:is([data-hovered], :hover):not([data-pending], [aria-disabled="true"], [data-disabled]) {
+        --wui-button-background: var(--wui-button-soft-background-hovered, var(--wui-button-soft-background));
+        --wui-button-box-shadow: var(--wui-button-soft-box-shadow-hovered, var(--wui-button-soft-box-shadow));
+        --wui-button-border: var(--wui-button-soft-border-hovered, var(--wui-button-soft-border));
+        --wui-button-color: var(--wui-button-soft-color-hovered, var(--wui-button-soft-color));
       }
 
-      &:is([data-pressed], :active):not(
-          [data-pending],
-          [aria-disabled="true"],
-          [data-disabled]
-        ) {
-        --wui-button-background: var(
-          --wui-button-soft-background-pressed,
-          var(--wui-button-soft-background)
-        );
-        --wui-button-box-shadow: var(
-          --wui-button-soft-box-shadow-pressed,
-          var(--wui-button-soft-box-shadow)
-        );
-        --wui-button-border: var(
-          --wui-button-soft-border-pressed,
-          var(--wui-button-soft-border)
-        );
-        --wui-button-color: var(
-          --wui-button-soft-color-pressed,
-          var(--wui-button-soft-color)
-        );
+      &:is([data-pressed], :active):not([data-pending], [aria-disabled="true"], [data-disabled]) {
+        --wui-button-background: var(--wui-button-soft-background-pressed, var(--wui-button-soft-background));
+        --wui-button-box-shadow: var(--wui-button-soft-box-shadow-pressed, var(--wui-button-soft-box-shadow));
+        --wui-button-border: var(--wui-button-soft-border-pressed, var(--wui-button-soft-border));
+        --wui-button-color: var(--wui-button-soft-color-pressed, var(--wui-button-soft-color));
       }
 
       &:is([data-disabled], [aria-disabled="true"]):not([data-pending]) {
-        --wui-button-background: var(
-          --wui-button-soft-background-disabled,
-          var(--wui-button-soft-background)
-        );
-        --wui-button-box-shadow: var(
-          --wui-button-soft-box-shadow-disabled,
-          var(--wui-button-soft-box-shadow)
-        );
-        --wui-button-border: var(
-          --wui-button-soft-border-disabled,
-          var(--wui-button-soft-border)
-        );
-        --wui-button-color: var(
-          --wui-button-soft-color-disabled,
-          var(--wui-button-soft-color)
-        );
+        --wui-button-background: var(--wui-button-soft-background-disabled, var(--wui-button-soft-background));
+        --wui-button-box-shadow: var(--wui-button-soft-box-shadow-disabled, var(--wui-button-soft-box-shadow));
+        --wui-button-border: var(--wui-button-soft-border-disabled, var(--wui-button-soft-border));
+        --wui-button-color: var(--wui-button-soft-color-disabled, var(--wui-button-soft-color));
       }
     }
 
@@ -158,70 +70,26 @@
       --wui-button-border: var(--wui-button-outlined-border);
       --wui-button-color: var(--wui-button-outlined-color);
 
-      &:is([data-hovered], :hover):not(
-          [data-pending],
-          [aria-disabled="true"],
-          [data-disabled]
-        ) {
-        --wui-button-background: var(
-          --wui-button-outlined-background-hovered,
-          var(--wui-button-outlined-background)
-        );
-        --wui-button-box-shadow: var(
-          --wui-button-outlined-box-shadow-hovered,
-          var(--wui-button-outlined-box-shadow)
-        );
-        --wui-button-border: var(
-          --wui-button-outlined-border-hovered,
-          var(--wui-button-outlined-border)
-        );
-        --wui-button-color: var(
-          --wui-button-outlined-color-hovered,
-          var(--wui-button-outlined-color)
-        );
+      &:is([data-hovered], :hover):not([data-pending], [aria-disabled="true"], [data-disabled]) {
+        --wui-button-background: var(--wui-button-outlined-background-hovered, var(--wui-button-outlined-background));
+        --wui-button-box-shadow: var(--wui-button-outlined-box-shadow-hovered, var(--wui-button-outlined-box-shadow));
+        --wui-button-border: var(--wui-button-outlined-border-hovered, var(--wui-button-outlined-border));
+        --wui-button-color: var(--wui-button-outlined-color-hovered, var(--wui-button-outlined-color));
       }
 
-      &:is([data-pressed], :active):not(
-          [data-pending],
-          [aria-disabled="true"],
-          [data-disabled]
-        ) {
-        --wui-button-background: var(
-          --wui-button-outlined-background-pressed,
-          var(--wui-button-outlined-background)
-        );
-        --wui-button-box-shadow: var(
-          --wui-button-outlined-box-shadow-pressed,
-          var(--wui-button-outlined-box-shadow)
-        );
-        --wui-button-border: var(
-          --wui-button-outlined-border-pressed,
-          var(--wui-button-outlined-border)
-        );
-        --wui-button-color: var(
-          --wui-button-outlined-color-pressed,
-          var(--wui-button-outlined-color)
-        );
+      &:is([data-pressed], :active):not([data-pending], [aria-disabled="true"], [data-disabled]) {
+        --wui-button-background: var(--wui-button-outlined-background-pressed, var(--wui-button-outlined-background));
+        --wui-button-box-shadow: var(--wui-button-outlined-box-shadow-pressed, var(--wui-button-outlined-box-shadow));
+        --wui-button-border: var(--wui-button-outlined-border-pressed, var(--wui-button-outlined-border));
+        --wui-button-color: var(--wui-button-outlined-color-pressed, var(--wui-button-outlined-color));
         padding-top: var(--wui-space-1);
       }
 
       &:is([data-disabled], [aria-disabled="true"]):not([data-pending]) {
-        --wui-button-background: var(
-          --wui-button-outlined-background-disabled,
-          var(--wui-button-outlined-background)
-        );
-        --wui-button-box-shadow: var(
-          --wui-button-outlined-box-shadow-disabled,
-          var(--wui-button-outlined-box-shadow)
-        );
-        --wui-button-border: var(
-          --wui-button-outlined-border-disabled,
-          var(--wui-button-outlined-border)
-        );
-        --wui-button-color: var(
-          --wui-button-outlined-color-disabled,
-          var(--wui-button-outlined-color)
-        );
+        --wui-button-background: var(--wui-button-outlined-background-disabled, var(--wui-button-outlined-background));
+        --wui-button-box-shadow: var(--wui-button-outlined-box-shadow-disabled, var(--wui-button-outlined-box-shadow));
+        --wui-button-border: var(--wui-button-outlined-border-disabled, var(--wui-button-outlined-border));
+        --wui-button-color: var(--wui-button-outlined-color-disabled, var(--wui-button-outlined-color));
       }
     }
 
@@ -231,69 +99,25 @@
       --wui-button-border: var(--wui-button-plain-border);
       --wui-button-color: var(--wui-button-plain-color);
 
-      &:is([data-hovered], :hover):not(
-          [data-pending],
-          [aria-disabled="true"],
-          [data-disabled]
-        ) {
-        --wui-button-background: var(
-          --wui-button-plain-background-hovered,
-          var(--wui-button-plain-background)
-        );
-        --wui-button-box-shadow: var(
-          --wui-button-plain-box-shadow-hovered,
-          var(--wui-button-plain-box-shadow)
-        );
-        --wui-button-border: var(
-          --wui-button-plain-border-hovered,
-          var(--wui-button-plain-border)
-        );
-        --wui-button-color: var(
-          --wui-button-plain-color-hovered,
-          var(--wui-button-plain-color)
-        );
+      &:is([data-hovered], :hover):not([data-pending], [aria-disabled="true"], [data-disabled]) {
+        --wui-button-background: var(--wui-button-plain-background-hovered, var(--wui-button-plain-background));
+        --wui-button-box-shadow: var(--wui-button-plain-box-shadow-hovered, var(--wui-button-plain-box-shadow));
+        --wui-button-border: var(--wui-button-plain-border-hovered, var(--wui-button-plain-border));
+        --wui-button-color: var(--wui-button-plain-color-hovered, var(--wui-button-plain-color));
       }
 
-      &:is([data-pressed], :active):not(
-          [data-pending],
-          [aria-disabled="true"],
-          [data-disabled]
-        ) {
-        --wui-button-background: var(
-          --wui-button-plain-background-pressed,
-          var(--wui-button-plain-background)
-        );
-        --wui-button-box-shadow: var(
-          --wui-button-plain-box-shadow-pressed,
-          var(--wui-button-plain-box-shadow)
-        );
-        --wui-button-border: var(
-          --wui-button-plain-border-pressed,
-          var(--wui-button-plain-border)
-        );
-        --wui-button-color: var(
-          --wui-button-plain-color-pressed,
-          var(--wui-button-plain-color)
-        );
+      &:is([data-pressed], :active):not([data-pending], [aria-disabled="true"], [data-disabled]) {
+        --wui-button-background: var(--wui-button-plain-background-pressed, var(--wui-button-plain-background));
+        --wui-button-box-shadow: var(--wui-button-plain-box-shadow-pressed, var(--wui-button-plain-box-shadow));
+        --wui-button-border: var(--wui-button-plain-border-pressed, var(--wui-button-plain-border));
+        --wui-button-color: var(--wui-button-plain-color-pressed, var(--wui-button-plain-color));
       }
 
       &:is([data-disabled], [aria-disabled="true"]):not([data-pending]) {
-        --wui-button-background: var(
-          --wui-button-plain-background-disabled,
-          var(--wui-button-plain-background)
-        );
-        --wui-button-box-shadow: var(
-          --wui-button-plain-box-shadow-disabled,
-          var(--wui-button-plain-box-shadow)
-        );
-        --wui-button-border: var(
-          --wui-button-plain-border-disabled,
-          var(--wui-button-plain-border)
-        );
-        --wui-button-color: var(
-          --wui-button-plain-color-disabled,
-          var(--wui-button-plain-color)
-        );
+        --wui-button-background: var(--wui-button-plain-background-disabled, var(--wui-button-plain-background));
+        --wui-button-box-shadow: var(--wui-button-plain-box-shadow-disabled, var(--wui-button-plain-box-shadow));
+        --wui-button-border: var(--wui-button-plain-border-disabled, var(--wui-button-plain-border));
+        --wui-button-color: var(--wui-button-plain-color-disabled, var(--wui-button-plain-color));
       }
     }
   }

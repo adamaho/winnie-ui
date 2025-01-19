@@ -1,8 +1,5 @@
 @layer base {
-  :root,
-  .light,
-  .light-theme,
-  [data-theme="light"] {
+  :root, .light, .light-theme, [data-theme="light"] {
     --wui-color-red-1: #fffcfc;
     --wui-color-red-2: #fff7f6;
     --wui-color-red-3: #ffebe9;
@@ -34,10 +31,7 @@
 
   @supports (color: color(display-p3 1 1 1)) {
     @media (color-gamut: p3) {
-      :root,
-      .light,
-      .light-theme,
-      [data-theme="light"] {
+      :root, .light, .light-theme, [data-theme="light"] {
         --wui-color-red-1: oklch(99.4% 0.003 25.33);
         --wui-color-red-2: oklch(98.3% 0.009 25.33);
         --wui-color-red-3: oklch(95.6% 0.023 25.33);
@@ -69,9 +63,7 @@
     }
   }
 
-  .dark,
-  .dark-theme,
-  [data-theme="dark"] {
+  .dark, .dark-theme, [data-theme="dark"] {
     --wui-color-red-1: #170f0e;
     --wui-color-red-2: #201312;
     --wui-color-red-3: #3c1210;
@@ -103,9 +95,7 @@
 
   @supports (color: color(display-p3 1 1 1)) {
     @media (color-gamut: p3) {
-      .dark,
-      .dark-theme,
-      [data-theme="dark"] {
+      .dark, .dark-theme, [data-theme="dark"] {
         --wui-color-red-1: oklch(17.8% 0.014 25.33);
         --wui-color-red-2: oklch(20.4% 0.022 25.33);
         --wui-color-red-3: oklch(25% 0.067 25.33);
