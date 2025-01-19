@@ -25,21 +25,13 @@
     --wui-tooltip-md-space: var(--wui-space-3);
     --wui-tooltip-lg-space: var(--wui-space-3);
 
-    border-radius: var(
-      --wui-tooltip-border-radius,
-      var(--wui-tooltip-sm-border-radius)
-    );
+    border-radius: var(--wui-tooltip-border-radius, var(--wui-tooltip-sm-border-radius));
     display: inline-grid;
     grid-template-columns: 1fr auto;
     font-size: var(--wui-tooltip-font-size, var(--wui-tooltip-sm-font-size));
-    line-height: var(
-      --wui-tooltip-line-height,
-      var(--wui-tooltip-sm-line-height)
-    );
+    line-height: var(--wui-tooltip-line-height, var(--wui-tooltip-sm-line-height));
     min-width: max-content;
-    padding-block: calc(
-      var(--wui-tooltip-space, var(--wui-tooltip-sm-space)) / 3
-    );
+    padding-block: calc(var(--wui-tooltip-space, var(--wui-tooltip-sm-space)) / 3);
     padding-inline: var(--wui-tooltip-space, var(--wui-tooltip-sm-space));
     user-select: none;
 
@@ -47,10 +39,7 @@
       font-size: var(--wui-tooltip-font-size, var(--wui-tooltip-sm-font-size));
       grid-column-start: 1;
       max-width: var(--wui-tooltip-max-width, var(--wui-tooltip-sm-max-width));
-      line-height: var(
-        --wui-tooltip-line-height,
-        var(--wui-tooltip-sm-line-height)
-      );
+      line-height: var(--wui-tooltip-line-height, var(--wui-tooltip-sm-line-height));
     }
 
     [data-slot="shortcut"] {
