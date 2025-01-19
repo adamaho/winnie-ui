@@ -8,7 +8,9 @@ export {
   ButtonPending,
   ButtonContext,
 } from "./button";
-export { Checkbox } from "./checkbox";
+export { Checkbox, CheckboxField, CheckboxLabel } from "./checkbox";
+export { Description } from "./description";
+export { Error } from "./error";
 export { Heading } from "./typography/heading";
 export {
   Layout,
@@ -67,7 +69,13 @@ export type {
   ButtonPendingProps,
   WinnieButtonProps,
 } from "./button";
-export type { CheckboxProps } from "./checkbox";
+export type {
+  CheckboxProps,
+  CheckboxFieldProps,
+  CheckboxLabelProps,
+} from "./checkbox";
+export type { DescriptionProps } from "./description";
+export type { ErrorProps } from "./error";
 export type { HeadingProps } from "./typography/heading";
 export type {
   LayoutProps,

@@ -11,7 +11,15 @@ documentation:
   ]
 ---
 
-import { CheckboxDemo } from "~/demos/checkbox";
+import {
+  CheckboxDemo,
+  CheckboxDisabledDemo,
+  CheckboxFieldDemo,
+  CheckboxIndeterminateDemo,
+  CheckboxInvalidDemo,
+  CheckboxLabelDemo,
+  CheckboxSizeDemo,
+} from "~/demos/checkbox";
 
 import Demo from "~/components/demo/demo.astro";
 
@@ -25,3 +33,134 @@ import Demo from "~/components/demo/demo.astro";
     ```
   </Fragment>
 </Demo>
+
+## Import
+
+Import all of the parts of the checkbox.
+
+```tsx
+import { Checkbox, CheckboxField, CheckboxLabel } from "@winnie-ui/react";
+```
+
+## Anatomy
+
+Arrange the components in the structure below.
+
+```tsx
+<CheckboxField>
+  <Checkbox>
+    <CheckboxLabel />
+  </Checkbox>
+</CheckboxField>
+```
+
+## Examples
+
+### Size
+
+Use the `size` prop to change the size of the checkbox.
+
+<Demo>
+  <CheckboxSizeDemo client:load />
+  <Fragment slot="footer">
+    ```tsx
+    <Checkbox size="<size>" />
+    ```
+  </Fragment>
+</Demo>
+
+### Label
+
+Use the `CheckboxLabel` slot component to add a label to the checkbox.
+
+<Demo>
+  <CheckboxLabelDemo client:load />
+  <Fragment slot="footer">
+    ```tsx mark={2}
+    <Checkbox>
+      <CheckboxLabel>Pineapple</CheckboxLabel>
+    </Checkbox>
+    ```
+  </Fragment>
+</Demo>
+
+### Field
+
+Wrap the checkbox in the `CheckboxField` to use as a form field. This allows you to add a description using the `Description` component and and error message using the `Error` component.
+
+<Demo>
+  <CheckboxFieldDemo client:load />
+  <Fragment slot="footer">
+    ```tsx mark={1,5-9} <!-- prettier-ignore -->
+    <CheckboxField>
+      <Checkbox>
+        <CheckboxLabel>Pineapple</CheckboxLabel>
+      </Checkbox>
+      <Description>
+        Only if you dare to admit you like pineapple on your pizza.
+      </Description>
+      <Error>Not allowed pineapple on your pizza.</Error>
+    </CheckboxField>
+    ```
+  </Fragment>
+</Demo>
+
+### Disabled
+
+Use the `isDisabled` prop to disable the checkbox.
+
+<Demo>
+  <CheckboxDisabledDemo client:load />
+  <Fragment slot="footer">
+    ```tsx ins=isDisabled
+    <Checkbox isDisabled />
+    ```
+  </Fragment>
+</Demo>
+
+### Indeterminate
+
+Use the `isIndeterminate` prop to set the checkbox to an indeterminate state.
+
+<Demo>
+  <CheckboxIndeterminateDemo client:load />
+  <Fragment slot="footer">
+    ```tsx ins=isIndeterminate
+    <Checkbox isIndeterminate />
+    ```
+  </Fragment>
+</Demo>
+
+### Invalid
+
+Use the `isInvalid` prop to set the checkbox to an invalid state.
+
+<Demo>
+  <CheckboxInvalidDemo client:load />
+  <Fragment slot="footer">
+    ```tsx ins=isInvalid
+    <Checkbox isInvalid />
+    ```
+  </Fragment>
+</Demo>
+
+## Reference
+
+Refer to React Aria Components [documentation](https://react-spectrum.adobe.com/react-aria/Checkbox.html#props) for more details about the other props and events available on Checkbox.
+
+| Prop   | Type                   | Default |
+| ------ | ---------------------- | ------- |
+| `size` | `"sm" \| "md" \| "lg"` | `"md"`  |
+
+| Selector             | Description                                                  |
+| -------------------- | ------------------------------------------------------------ |
+| `data-selected`      | When the checkbox is selected                                |
+| `data-indeterminate` | When the checkbox is indeterminate                           |
+| `data-hovered`       | When the checkbox is hovered with mouse                      |
+| `data-pressed`       | When the checkbox is pressed                                 |
+| `data-focused`       | When the checkbox is focused with either a keyboard or mouse |
+| `data-focus-visible` | When the checkbox is focused with keyboard                   |
+| `data-disabled`      | When the checkbox is disabled                                |
+| `data-readonly`      | When the checkbox is readonly                                |
+| `data-invalid`       | When the checkbox is invalid                                 |
+| `data-required`      | When the checkbox is required                                |

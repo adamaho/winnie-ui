@@ -1,4 +1,4 @@
-import { ComponentRef, ForwardedRef } from "react";
+import { ComponentPropsWithoutRef, ComponentRef, ForwardedRef } from "react";
 import {
   Checkbox as AriaCheckbox,
   CheckboxProps as AriaCheckboxProps,
@@ -11,6 +11,34 @@ import { Checkmark, MinusSmall } from "@winnie-ui/icons/react/solid";
 import clsx from "clsx";
 
 /* -------------------------------------------------------------------------------------------------
+ * CheckboxField
+ * -----------------------------------------------------------------------------------------------*/
+type CheckboxFieldProps = ComponentPropsWithoutRef<"div"> & {
+  /**
+   * Ref to checkbox element
+   */
+  ref?: ForwardedRef<ComponentRef<"div">>;
+};
+
+function CheckboxField({
+  children,
+  className,
+  ref,
+  ...props
+}: CheckboxFieldProps) {
+  return (
+    <div
+      {...props}
+      data-component="field"
+      className={clsx(className, "wui-field")}
+      ref={ref}
+    >
+      {children}
+    </div>
+  );
+}
+
+/* -------------------------------------------------------------------------------------------------
  * Checkbox
  * -----------------------------------------------------------------------------------------------*/
 type CheckboxProps = AriaCheckboxProps & {
@@ -18,6 +46,13 @@ type CheckboxProps = AriaCheckboxProps & {
    * Ref to checkbox element
    */
   ref?: ForwardedRef<ComponentRef<typeof AriaCheckbox>>;
+
+  /**
+   * Changes the size of the checkbox
+   *
+   * @default "md"
+   */
+  size?: "sm" | "md" | "lg";
 };
 
 /**
@@ -35,7 +70,13 @@ type CheckboxProps = AriaCheckboxProps & {
  *
  * See {@link https://winnie-ui.com/react/docs/components/checkbox Documentation} for examples.
  */
-function Checkbox({ className, children, ref, ...props }: CheckboxProps) {
+function Checkbox({
+  className,
+  children,
+  ref,
+  size = "md",
+  ...props
+}: CheckboxProps) {
   return (
     <AriaCheckbox
       {...props}
@@ -46,7 +87,11 @@ function Checkbox({ className, children, ref, ...props }: CheckboxProps) {
       {({ isIndeterminate, isSelected }) => {
         return (
           <>
-            <div data-slot="indicator" className="wui-checkbox__indicator">
+            <div
+              data-slot="indicator"
+              className="wui-checkbox__indicator"
+              data-size={size}
+            >
               {isIndeterminate && isSelected && (
                 <MinusSmall
                   aria-hidden="true"
@@ -98,5 +143,5 @@ function CheckboxLabel({
   );
 }
 
-export { Checkbox, CheckboxLabel };
-export type { CheckboxProps, CheckboxLabelProps };
+export { Checkbox, CheckboxField, CheckboxLabel };
+export type { CheckboxProps, CheckboxFieldProps, CheckboxLabelProps };

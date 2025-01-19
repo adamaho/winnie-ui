@@ -69,6 +69,57 @@
     }
 
     /* -------------------------------------------------------------------------------------------------
+     * Checkbox 
+     * -----------------------------------------------------------------------------------------------*/
+    [data-component="checkbox"] {
+      [data-slot="indicator"] {
+        --wui-checkbox-indicator-background-selected: var(--wui-color-accent-9);
+        --wui-checkbox-indicator-background-disabled: var(--wui-color-grey-3);
+        --wui-checkbox-indicator-background-selected-disabled: var(
+          --wui-color-grey-5
+        );
+        --wui-checkbox-indicator-background-selected-invalid: var(
+          --wui-color-red-9
+        );
+        --wui-checkbox-indicator-color-selected: var(
+          --wui-color-accent-contrast
+        );
+        --wui-checkbox-indicator-color-selected-disabled: var(
+          --wui-color-grey-10
+        );
+        --wui-checkbox-indicator-color-disabled: var(--wui-color-grey-9);
+        --wui-checkbox-indicator-border-selected: var(--wui-border-width-1)
+          solid var(--wui-color-accent-9);
+        --wui-checkbox-indicator-border-selected-invalid: var(
+            --wui-border-width-1
+          )
+          solid var(--wui-color-red-9);
+        --wui-checkbox-indicator-box-shadow: var(--wui-shadow-1);
+      }
+
+      [data-slot="label"] {
+        --wui-checkbox-label-color: var(--wui-color-grey-12);
+        --wui-checkbox-label-color-disabled: var(--wui-color-grey-10);
+        --wui-checkbox-label-font-weight: var(--wui-font-weight-normal);
+        --wui-checkbox-label-font-weight-with-description: var(
+          --wui-font-weight-medium
+        );
+      }
+    }
+
+    /* -------------------------------------------------------------------------------------------------
+     * Field 
+     * -----------------------------------------------------------------------------------------------*/
+    [data-component="field"] {
+      --wui-field-label-color: var(--wui-color-grey-12);
+      --wui-field-label-font-weight: var(--wui-font-weight-medium);
+      --wui-field-description-color: var(--wui-color-grey-11);
+      --wui-field-description-font-weight: var(--wui-font-weight-normal);
+      --wui-field-error-color: var(--wui-color-red-11);
+      --wui-field-error-font-weight: var(--wui-font-weight-normal);
+    }
+
+    /* -------------------------------------------------------------------------------------------------
      * Layout
      * -----------------------------------------------------------------------------------------------*/
     [data-component="layout"] {
@@ -180,6 +231,12 @@
   }
 
   [data-skin="winnie"]:where([data-theme="light"]) {
+    [data-component="checkbox"] {
+      --wui-checkbox-indicator-background: var(--wui-color-white);
+      --wui-checkbox-indicator-border: var(--wui-border-width-1) solid
+        var(--wui-color-grey-6);
+    }
+
     [data-component="layout"] {
       --wui-layout-background: var(--wui-color-grey-3);
       --wui-layout__mask-background: var(--wui-color-black-a2);
@@ -224,6 +281,13 @@
   }
 
   [data-skin="winnie"]:where([data-theme="dark"]) {
+    [data-component="checkbox"] {
+      --wui-checkbox-indicator-background: var(--wui-color-grey-3);
+      --wui-checkbox-indicator-border: var(--wui-border-width-1) solid
+        var(--wui-color-grey-6);
+      --wui-checkbox-indicator-background-disabled: var(--wui-color-grey-5);
+    }
+
     [data-component="layout"] {
       --wui-layout-background: var(--wui-color-black);
       --wui-layout__mask-background: var(--wui-color-black-a4);

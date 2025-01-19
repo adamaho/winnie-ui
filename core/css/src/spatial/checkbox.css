@@ -4,8 +4,14 @@
     grid-template-columns: auto 1fr;
 
     [data-slot="label"] {
+      align-self: center;
+      cursor: var(--wui-cursor-pressable, default);
+      display: block;
+      font-size: var(--wui-field-label-font-size, var(--wui-font-size-2));
       grid-column-start: 2;
       margin-left: var(--wui-space-4);
+      user-select: none;
+      white-space: nowrap;
     }
 
     [data-slot="indicator"] {

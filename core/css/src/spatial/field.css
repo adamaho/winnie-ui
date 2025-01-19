@@ -99,8 +99,9 @@
       }
 
       [data-slot="error"] {
+        margin-left: var(--wui-space-4);
         margin-top: var(--wui-space-4);
-        grid-column: -1 / 1;
+        grid-column-start: 2;
       }
     }
   }

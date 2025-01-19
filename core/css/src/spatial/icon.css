@@ -1,5 +1,5 @@
 @layer spatial {
-  [data-component="icon"] {
+  [data-component="icon"]:not([data-slot="icon"]) {
     &[data-size="1"] {
       font-size: var(--wui-font-size-1);
       height: var(--wui-font-size-1);

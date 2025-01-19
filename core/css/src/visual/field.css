@@ -1,0 +1,18 @@
+@layer visual {
+  [data-component="field"] {
+    [data-slot="label"] {
+      color: var(--wui-field-label-color);
+      font-weight: var(--wui-field-label-font-weight);
+    }
+
+    [data-slot="description"] {
+      color: var(--wui-field-description-color);
+      font-weight: var(--wui-field-description-font-weight);
+    }
+
+    [data-slot="error"] {
+      color: var(--wui-field-error-color);
+      font-weight: var(--wui-field-error-font-weight);
+    }
+  }
+}
