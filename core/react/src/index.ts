@@ -9,8 +9,8 @@ export {
   ButtonContext,
 } from "./button";
 export { Checkbox, CheckboxField, CheckboxLabel } from "./checkbox";
-export { Description } from "./description";
-export { Error } from "./error";
+export { FieldDescription } from "./field-description";
+export { FieldError } from "./field-error";
 export { Heading } from "./typography/heading";
 export {
   Layout,
@@ -74,8 +74,8 @@ export type {
   CheckboxFieldProps,
   CheckboxLabelProps,
 } from "./checkbox";
-export type { DescriptionProps } from "./description";
-export type { ErrorProps } from "./error";
+export type { FieldDescriptionProps } from "./field-description";
+export type { FieldErrorProps } from "./field-error";
 export type { HeadingProps } from "./typography/heading";
 export type {
   LayoutProps,

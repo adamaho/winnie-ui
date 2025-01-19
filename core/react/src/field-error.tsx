@@ -7,34 +7,33 @@ import {
 import clsx from "clsx";
 
 /* -------------------------------------------------------------------------------------------------
- * Description
+ * FieldError
  * -----------------------------------------------------------------------------------------------*/
-type DescriptionProps = AriaTextProps & {
+type FieldErrorProps = AriaTextProps & {
   /**
-   * Ref to description element
+   * Ref to error element
    */
   ref?: ForwardedRef<ComponentRef<typeof AriaText>>;
 };
 
 /**
- * # Description
- * Displays additional information about a form field.
+ * # Error
+ * Displays an error message for a form field.
  *
  * ## Anatomy
  * Arrange the components in the structure below.
  *
  * ```tsx
- * <Description />
+ * <Error />
  * ```
  */
-function Description({ children, className, ref, ...props }: DescriptionProps) {
+function FieldError({ children, className, ref, ...props }: FieldErrorProps) {
   return (
     <AriaText
       {...props}
-      slot="description"
-      data-component="description"
-      data-slot="description"
-      className={clsx("wui-description", className)}
+      data-component="error"
+      data-slot="error"
+      className={clsx("wui-error", className)}
       ref={ref}
     >
       {children}
@@ -42,5 +41,5 @@ function Description({ children, className, ref, ...props }: DescriptionProps) {
   );
 }
 
-export { Description };
-export type { DescriptionProps };
+export { FieldError };
+export type { FieldErrorProps };

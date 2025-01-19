@@ -2,9 +2,11 @@ import {
   Checkbox,
   CheckboxField,
   CheckboxLabel,
-  Description,
-  Error,
+  FieldDescription,
+  FieldError,
 } from "@winnie-ui/react";
+
+import { Description } from "@radix-ui/react-dialog";
 
 /* -------------------------------------------------------------------------------------------------
  * CheckboxDemo
@@ -50,10 +52,10 @@ export function CheckboxFieldDemo() {
       <Checkbox defaultSelected>
         <CheckboxLabel>Pineapple</CheckboxLabel>
       </Checkbox>
-      <Description>
+      <FieldDescription>
         Only if you dare to admit you like pineapple on your pizza.
-      </Description>
-      <Error>Not allowed pineapple on your pizza.</Error>
+      </FieldDescription>
+      <FieldError>Not allowed pineapple on your pizza.</FieldError>
     </CheckboxField>
   );
 }

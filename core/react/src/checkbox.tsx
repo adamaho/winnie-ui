@@ -6,7 +6,7 @@ import {
   TextProps as AriaTextProps,
 } from "react-aria-components";
 
-import { Checkmark, MinusSmall } from "@winnie-ui/icons/react/solid";
+import { Checkmark, MinusLarge } from "@winnie-ui/icons/react/solid";
 
 import clsx from "clsx";
 
@@ -93,7 +93,7 @@ function Checkbox({
               data-size={size}
             >
               {isIndeterminate && isSelected && (
-                <MinusSmall
+                <MinusLarge
                   aria-hidden="true"
                   data-slot="icon"
                   className="wui-checkbox__icon"

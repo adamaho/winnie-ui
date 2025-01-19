@@ -16,6 +16,7 @@ export { Lab } from "./lab";
 export { LayoutGrid2 } from "./layout-grid-2";
 export { Moon } from "./moon";
 export { MinusSmall } from "./minus-small";
+export { MinusLarge } from "./minus-large";
 export { People } from "./people";
 export { SettingsGear3 } from "./settings-gear-3";
 export { SidebarSimpleLeftSquare } from "./sidebar-simple-left-square";

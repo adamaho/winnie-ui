@@ -86,7 +86,7 @@ Use the `CheckboxLabel` slot component to add a label to the checkbox.
 
 ### Field
 
-Wrap the checkbox in the `CheckboxField` to use as a form field. This allows you to add a description using the `Description` component and and error message using the `Error` component.
+Wrap the checkbox in the `CheckboxField` to use as a form field. This allows you to add a description using the `FieldDescription` component and and error message using the `FieldError` component.
 
 <Demo>
   <CheckboxFieldDemo client:load />
@@ -96,10 +96,10 @@ Wrap the checkbox in the `CheckboxField` to use as a form field. This allows you
       <Checkbox>
         <CheckboxLabel>Pineapple</CheckboxLabel>
       </Checkbox>
-      <Description>
+      <FieldDescription>
         Only if you dare to admit you like pineapple on your pizza.
-      </Description>
-      <Error>Not allowed pineapple on your pizza.</Error>
+      </FieldDescription>
+      <FieldError>Not allowed pineapple on your pizza.</FieldError>
     </CheckboxField>
     ```
   </Fragment>
