@@ -5,7 +5,7 @@ import {
   LinkButtonLabel,
 } from "@winnie-ui/react";
 
-import { Utensils } from "lucide-react";
+import { ForkKnife, SettingsGear3 } from "@winnie-ui/icons/react/solid";
 
 /* -------------------------------------------------------------------------------------------------
  * NewDishLinkButton
@@ -14,7 +14,7 @@ export function NewDishLinkButton() {
   return (
     <LinkButton>
       <LinkButtonIcon>
-        <Utensils />
+        <ForkKnife />
       </LinkButtonIcon>
       <LinkButtonLabel>New Dish</LinkButtonLabel>
     </LinkButton>
@@ -28,7 +28,7 @@ export function LinkButtonIconOnlyDemo() {
   return (
     <LinkButton variant="outlined">
       <LinkButtonIcon>
-        <Utensils />
+        <SettingsGear3 />
       </LinkButtonIcon>
     </LinkButton>
   );

@@ -1,3 +1,5 @@
+import { CrossLarge, SettingsSliderHor } from "@winnie-ui/icons/react/line";
+
 import {
   Dialog,
   DialogClose,
@@ -8,7 +10,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@radix-ui/react-dialog";
-import { Settings2, X } from "lucide-react";
 
 import { ThemePicker } from "./theme-picker";
 
@@ -24,7 +25,7 @@ function ThemePickerDialog() {
         className="theme-picker-modal-trigger"
         aria-label="Customize Theme"
       >
-        <Settings2 />
+        <SettingsSliderHor />
       </DialogTrigger>
       <DialogPortal>
         <DialogOverlay className="theme-picker-modal-overlay" />
@@ -41,7 +42,7 @@ function ThemePickerDialog() {
             <ThemePicker />
           </div>
           <DialogClose className="theme-picker-dialog-close">
-            <X />
+            <CrossLarge />
           </DialogClose>
         </DialogContent>
       </DialogPortal>

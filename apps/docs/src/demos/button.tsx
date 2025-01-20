@@ -6,7 +6,7 @@ import {
   ButtonPending,
 } from "@winnie-ui/react";
 
-import { Loader, Utensils } from "lucide-react";
+import { ForkKnife, Loader, SettingsGear3 } from "@winnie-ui/icons/react/solid";
 
 /* -------------------------------------------------------------------------------------------------
  * NewDishButton
@@ -15,7 +15,7 @@ export function NewDishButton() {
   return (
     <Button>
       <ButtonIcon>
-        <Utensils />
+        <ForkKnife />
       </ButtonIcon>
       <ButtonLabel>New Dish</ButtonLabel>
     </Button>
@@ -29,7 +29,7 @@ export function ButtonIconOnlyDemo() {
   return (
     <Button variant="outlined">
       <ButtonIcon>
-        <Utensils />
+        <SettingsGear3 />
       </ButtonIcon>
     </Button>
   );

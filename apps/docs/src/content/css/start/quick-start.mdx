@@ -3,7 +3,12 @@ title: Quick Start
 description: Install Winnie CSS and start styling your next application in minutes.
 ---
 
-import { Circle, Fullscreen, Layers, SwatchBook } from "lucide-react";
+import {
+  CirclePlaceholderOn,
+  ColorSwatch,
+  FocusSquare,
+  LayersThree,
+} from "@winnie-ui/icons/react/line";
 
 import WhatsNextCardGrid from "./_components/whats-next-card-grid.astro";
 import WhatsNextCard from "./_components/whats-next-card.astro";
@@ -74,7 +79,7 @@ Congrats! You are now ready to start working with Winnie CSS in your project. If
     description="Precision crafted colors that personalize your application."
     link="/css/docs/concepts/accent-color"
   >
-    <SwatchBook />
+    <ColorSwatch />
   </WhatsNextCard>
   <WhatsNextCard
     color="purple"
@@ -82,7 +87,7 @@ Congrats! You are now ready to start working with Winnie CSS in your project. If
     description="Control the cascade of Winnie CSS with layers."
     link="/css/docs/concepts/layers"
   >
-    <Layers />
+    <LayersThree />
   </WhatsNextCard>
   <WhatsNextCard
     color="red"
@@ -90,7 +95,7 @@ Congrats! You are now ready to start working with Winnie CSS in your project. If
     description="Adjust the feeling of your application is by changing the radius of corners."
     link="/css/docs/concepts/radius"
   >
-    <Circle />
+    <CirclePlaceholderOn />
   </WhatsNextCard>
   <WhatsNextCard
     color="green"
@@ -98,6 +103,6 @@ Congrats! You are now ready to start working with Winnie CSS in your project. If
     description="Change the density of your application."
     link="/css/docs/concepts/scaling"
   >
-    <Fullscreen />
+    <FocusSquare />
   </WhatsNextCard>
 </WhatsNextCardGrid>

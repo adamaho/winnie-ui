@@ -1,5 +1,5 @@
 ---
-import { ChevronRight, Menu } from "lucide-react";
+import { BarsThree, ChevronRight } from "@winnie-ui/icons/react/solid";
 
 import type { CollectionKey } from "astro:content";
 import { Actions } from "./components/actions";
@@ -64,7 +64,7 @@ for (const section of navigation) {
       <ChevronRight />
       <span class="wui-mobile-page">{pageTitle}</span>
     </div>
-    <Menu />
+    <BarsThree />
   </label>
   <div class="wui-docs-sidebar-search">
     <Search client:only="react" transition:persist collection={collection} />

@@ -1,7 +1,7 @@
 ---
 import type { MarkdownHeading } from "astro";
 
-import { AlignLeft } from "lucide-react";
+import { AlignmentLeft } from "@winnie-ui/icons/react/line";
 
 type Props = {
   headings: MarkdownHeading[];
@@ -14,7 +14,7 @@ const { headings } = Astro.props;
   headings.length > 0 && (
     <nav class="toc">
       <div class="toc-header">
-        <AlignLeft />
+        <AlignmentLeft />
         <h2 class="toc-title">On this page</h2>
       </div>
       <ul class="toc-list">

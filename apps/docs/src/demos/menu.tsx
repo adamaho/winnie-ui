@@ -18,7 +18,13 @@ import {
   type Selection,
 } from "@winnie-ui/react";
 
-import { ChevronDown, Cog, Info, LogOut, Moon, User } from "lucide-react";
+import {
+  CircleInfo,
+  Moon,
+  People,
+  SettingsGear3,
+} from "@winnie-ui/icons/react/line";
+import { ArrowBoxLeft, ChevronBottom } from "@winnie-ui/icons/react/solid";
 
 /* -------------------------------------------------------------------------------------------------
  * DishActionButton
@@ -29,7 +35,7 @@ export function DishActionButton() {
       <Button variant="outlined">
         <ButtonLabel>Dish Actions</ButtonLabel>
         <ButtonIcon>
-          <ChevronDown />
+          <ChevronBottom />
         </ButtonIcon>
       </Button>
       <MenuPopover>
@@ -62,7 +68,7 @@ export function MenuColorDemo() {
       <Button variant="outlined">
         <ButtonLabel>Dish Actions</ButtonLabel>
         <ButtonIcon>
-          <ChevronDown />
+          <ChevronBottom />
         </ButtonIcon>
       </Button>
       <MenuPopover>
@@ -95,27 +101,27 @@ export function MenuIconDemo() {
       <Button variant="outlined">
         <ButtonLabel>Preferences</ButtonLabel>
         <ButtonIcon>
-          <ChevronDown />
+          <ChevronBottom />
         </ButtonIcon>
       </Button>
       <MenuPopover>
         <Menu>
           <MenuItem>
             <MenuItemIcon>
-              <User />
+              <People />
             </MenuItemIcon>
             <MenuItemLabel>Account</MenuItemLabel>
           </MenuItem>
           <MenuItem>
             <MenuItemIcon>
-              <Cog />
+              <SettingsGear3 />
             </MenuItemIcon>
             <MenuItemLabel>Settings</MenuItemLabel>
           </MenuItem>
           <MenuSeparator />
           <MenuItem>
             <MenuItemIcon>
-              <Info />
+              <CircleInfo />
             </MenuItemIcon>
             <MenuItemLabel>Help center</MenuItemLabel>
           </MenuItem>
@@ -129,7 +135,7 @@ export function MenuIconDemo() {
           <MenuSeparator />
           <MenuItem>
             <MenuItemIcon>
-              <LogOut />
+              <ArrowBoxLeft />
             </MenuItemIcon>
             <MenuItemLabel>Sign out</MenuItemLabel>
           </MenuItem>
@@ -148,7 +154,7 @@ export function MenuSectionDemo() {
       <Button variant="outlined">
         <ButtonLabel>Preferences</ButtonLabel>
         <ButtonIcon>
-          <ChevronDown />
+          <ChevronBottom />
         </ButtonIcon>
       </Button>
       <MenuPopover>
@@ -159,13 +165,13 @@ export function MenuSectionDemo() {
             </MenuSectionHeader>
             <MenuItem>
               <MenuItemIcon>
-                <User />
+                <People />
               </MenuItemIcon>
               <MenuItemLabel>Account</MenuItemLabel>
             </MenuItem>
             <MenuItem>
               <MenuItemIcon>
-                <Cog />
+                <SettingsGear3 />
               </MenuItemIcon>
               <MenuItemLabel>Settings</MenuItemLabel>
             </MenuItem>
@@ -177,7 +183,7 @@ export function MenuSectionDemo() {
             </MenuSectionHeader>
             <MenuItem>
               <MenuItemIcon>
-                <Info />
+                <CircleInfo />
               </MenuItemIcon>
               <MenuItemLabel>Help center</MenuItemLabel>
             </MenuItem>
@@ -197,11 +203,11 @@ export function MenuSectionDemo() {
           <MenuSeparator />
           <MenuSection>
             <MenuSectionHeader>
-              <MenuSectionLabel>Account Actions</MenuSectionLabel>
+              <MenuSectionLabel>Actions</MenuSectionLabel>
             </MenuSectionHeader>
             <MenuItem>
               <MenuItemIcon>
-                <LogOut />
+                <ArrowBoxLeft />
               </MenuItemIcon>
               <MenuItemLabel>Sign out</MenuItemLabel>
             </MenuItem>
@@ -236,7 +242,7 @@ export function MenuIndicatorDemo() {
       <Button variant="outlined">
         <ButtonLabel>Select Pizza</ButtonLabel>
         <ButtonIcon>
-          <ChevronDown />
+          <ChevronBottom />
         </ButtonIcon>
       </Button>
       <MenuPopover>
@@ -326,7 +332,7 @@ export function MenuDescriptionColumnDemo() {
       <Button variant="outlined">
         <ButtonLabel>Permissions</ButtonLabel>
         <ButtonIcon>
-          <ChevronDown />
+          <ChevronBottom />
         </ButtonIcon>
       </Button>
       <MenuPopover>
@@ -373,7 +379,7 @@ export function MenuDescriptionRowDemo() {
       <Button variant="outlined">
         <ButtonLabel>Select People</ButtonLabel>
         <ButtonIcon>
-          <ChevronDown />
+          <ChevronBottom />
         </ButtonIcon>
       </Button>
       <MenuPopover>
@@ -420,7 +426,7 @@ export function MenuDescriptionInlineDemo() {
       <Button variant="outlined">
         <ButtonLabel>Permissions</ButtonLabel>
         <ButtonIcon>
-          <ChevronDown />
+          <ChevronBottom />
         </ButtonIcon>
       </Button>
       <MenuPopover>
@@ -456,7 +462,7 @@ export function MenuShortcutDemo() {
       <Button variant="outlined">
         <ButtonLabel>Dish Actions</ButtonLabel>
         <ButtonIcon>
-          <ChevronDown />
+          <ChevronBottom />
         </ButtonIcon>
       </Button>
       <MenuPopover>

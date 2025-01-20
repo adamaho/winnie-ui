@@ -1,7 +1,7 @@
 import { type ReactNode, useState } from "react";
 import { Radio, RadioGroup } from "react-aria-components";
 
-import { Moon, Sun } from "lucide-react";
+import { Moon, Sun } from "@winnie-ui/icons/react/solid";
 
 import { type Theme, getTheme } from "~/utils/theme";
 
@@ -51,7 +51,8 @@ export function DarkModeExample() {
         })}
       </RadioGroup>
       <div
-        className={`dme-content winnie-ui ${mode}`}
+        className={`dme-content winnie-ui`}
+        data-theme={mode}
         data-accent-color={getTheme().color}
       >
         <span className="dme-title">Sign in</span>

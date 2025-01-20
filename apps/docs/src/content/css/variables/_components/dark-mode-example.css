@@ -18,6 +18,7 @@
 
       align-items: center;
       border-radius: calc(var(--wui-border-radius-3) - var(--wui-space-2));
+      color: var(--wui-color-grey-11);
       display: flex;
       justify-content: center;
       height: var(--size);
@@ -34,6 +35,7 @@
 
       &[data-selected] {
         background: var(--wui-color-grey-5);
+        color: var(--wui-color-grey-12);
       }
 
       & > svg {
@@ -56,12 +58,12 @@
     padding-inline: var(--wui-space-6);
     width: 100%;
 
-    &.dark {
+    &[data-theme="dark"] {
       --content-background: var(--wui-color-grey-2);
       --input-background: var(--wui-color-grey-3);
     }
 
-    &.light {
+    &[data-theme="light"] {
       --content-background: var(--wui-color-white);
       --input-background: var(--wui-color-grey-2);
     }
