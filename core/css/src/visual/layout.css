@@ -124,7 +124,7 @@
         opacity: 0;
       }
 
-      .wui-layout-toggle-hover-action {
+      .wui-layout__toggle-hover-action {
         height: calc(
           var(--wui-layout-page-header-height, calc(48px * var(--wui-scale))) +
             var(--wui-layout-content-space)
