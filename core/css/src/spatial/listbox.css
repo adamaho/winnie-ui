@@ -175,7 +175,6 @@
 
         [data-slot="indicator"], [data-slot="icon"] {
           align-self: start;
-          margin-top: calc(1em * 0.2);
         }
       }
 

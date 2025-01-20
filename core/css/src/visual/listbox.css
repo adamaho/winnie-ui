@@ -5,17 +5,17 @@
     [data-component="section"] {
       [data-component="header"] {
         [data-slot="label"] {
-          color: var(--wui-listbox__section-header-label-color);
-          font-weight: var(--wui-listbox__section-header-label-font-weight);
+          color: var(--wui-listbox-section-header-label-color);
+          font-weight: var(--wui-listbox-section-header-label-font-weight);
         }
       }
     }
 
     [data-component="listbox-item"] {
-      background: var(--wui-listbox__item-background);
-      box-shadow: var(--wui-listbox__item-box-shadow);
-      border: var(--wui-listbox__item-border);
-      color: var(--wui-listbox__item-color);
+      background: var(--wui-listbox-item-background);
+      box-shadow: var(--wui-listbox-item-box-shadow);
+      border: var(--wui-listbox-item-border);
+      color: var(--wui-listbox-item-color);
       outline: none;
 
       &[data-selection-mode="single"] {
@@ -27,75 +27,58 @@
       }
 
       [data-slot="shortcut"] {
-        color: var(--wui-listbox__item-shortcut-color);
-        font-family: var(--wui-listbox__item-shortcut-font-family);
+        color: var(--wui-listbox-item-shortcut-color);
+        font-family: var(--wui-listbox-item-shortcut-font-family);
 
         & > kbd {
-          font-family: var(--wui-listbox__item-shortcut-font-family);
+          font-family: var(--wui-listbox-item-shortcut-font-family);
         }
       }
 
       &:is([data-hovered], [data-focus-visible]) {
-        background: var(
-          --wui-listbox__item-background-hovered,
-          var(--wui-listbox__item-background)
-        );
-        box-shadow: var(
-          --wui-listbox__item-box-shadow-hovered,
-          var(--wui-listbox__item-box-shadow)
-        );
-        border: var(
-          --wui-listbox__item-border-hovered,
-          var(--wui-listbox__item-border)
-        );
-        color: var(
-          --wui-listbox__item-color-hovered,
-          var(--wui-listbox__item-color)
-        );
+        background: var(--wui-listbox-item-background-hovered, var(--wui-listbox-item-background));
+        box-shadow: var(--wui-listbox-item-box-shadow-hovered, var(--wui-listbox-item-box-shadow));
+        border: var(--wui-listbox-item-border-hovered, var(--wui-listbox-item-border));
+        color: var(--wui-listbox-item-color-hovered, var(--wui-listbox-item-color));
 
         [data-slot="shortcut"] {
-          color: var(--wui-listbox__item-color-hovered);
+          color: var(--wui-listbox-item-color-hovered);
         }
       }
 
       &[data-pressed] {
-        --wui-listbox__item-background: var(
-          --wui-listbox__item-background-pressed
-        );
-        --wui-listbox__item-box-shadow: var(
-          --wui-listbox__item-box-shadow-pressed
-        );
-        --wui-listbox__item-border: var(--wui-listbox__item-border-pressed);
-        --wui-listbox__item-color: var(--wui-listbox__item-color-pressed);
+        --wui-listbox-item-background: var(--wui-listbox-item-background-pressed);
+        --wui-listbox-item-box-shadow: var(--wui-listbox-item-box-shadow-pressed);
+        --wui-listbox-item-border: var(--wui-listbox-item-border-pressed);
+        --wui-listbox-item-color: var(--wui-listbox-item-color-pressed);
 
         [data-slot="shortcut"] {
-          color: var(--wui-listbox__item-color-pressed);
+          color: var(--wui-listbox-item-color-pressed);
         }
       }
 
       &:has([data-slot="label"] + [data-slot="description"]) {
         [data-slot="label"] {
-          color: var(--wui-listbox__item-group-label-color);
-          font-weight: var(--wui-listbox__item-group-label-font-weight);
+          color: var(--wui-listbox-item-group-label-color);
+          font-weight: var(--wui-listbox-item-group-label-font-weight);
         }
 
         [data-slot="description"] {
-          color: var(--wui-listbox__item-group-description-color);
-          font-weight: var(--wui-listbox__item-group-description-font-weight);
+          color: var(--wui-listbox-item-group-description-color);
+          font-weight: var(--wui-listbox-item-group-description-font-weight);
         }
 
         &:is([data-hovered], [data-focus-visible]) {
-          [data-slot="label"],
-          [data-slot="description"] {
-            color: var(--wui-listbox__item-color-hovered);
+          [data-slot="label"], [data-slot="description"] {
+            color: var(--wui-listbox-item-color-hovered);
           }
         }
 
         &[data-pressed] {
-          color: var(--wui-listbox__item-color-pressed);
+          color: var(--wui-listbox-item-color-pressed);
 
           [data-slot="description"] {
-            color: var(--wui-listbox__item-color-pressed);
+            color: var(--wui-listbox-item-color-pressed);
           }
         }
       }
