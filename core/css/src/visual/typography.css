@@ -1,7 +1,5 @@
 @layer visual {
-  [data-component="text"],
-  [data-component="heading"],
-  [data-component="link"] {
+  [data-component="text"], [data-component="heading"], [data-component="link"] {
     &[data-contrast="low"] {
       color: var(--wui-typography-low-color);
     }
