@@ -70,7 +70,7 @@
 
     .chevron {
       transition: transform var(--wui-duration-2) var(--wui-bezier-1);
-      width: var(--wui-space-5);
+      width: var(--wui-space-4);
     }
   }
 }

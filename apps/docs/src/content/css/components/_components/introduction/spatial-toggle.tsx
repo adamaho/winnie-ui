@@ -1,15 +1,18 @@
 import { type ReactNode, useState } from "react";
 import { Radio, RadioGroup } from "react-aria-components";
 
-import { DollarSign, Palette, SquareDashed } from "lucide-react";
+import {
+  ColorPalette,
+  SquarePlaceholderDashed,
+} from "@winnie-ui/icons/react/line";
 
 import "./spatial-toggle.css";
 
 type Mode = "spatial" | "color";
 
 const MODE_ICON_MAP = {
-  spatial: <SquareDashed />,
-  color: <Palette />,
+  spatial: <SquarePlaceholderDashed />,
+  color: <ColorPalette />,
 } satisfies Record<Mode, ReactNode>;
 
 export function SpatialToggle() {
@@ -78,7 +81,9 @@ export function SpatialToggle() {
             All prices are in CAD
           </span>
           <div className="sp-hero-group" data-component="group">
-            <DollarSign data-slot="icon" />
+            <span data-slot="icon" className="sp-hero-dollar-sign">
+              $
+            </span>
             <input
               data-component="input"
               id="price"

@@ -1,8 +1,9 @@
+import { Checkmark } from "@winnie-ui/icons/react/solid";
+
 import {
   Checkbox as RadixCheckbox,
   CheckboxIndicator as RadixCheckboxIndicator,
 } from "@radix-ui/react-checkbox";
-import { Check } from "lucide-react";
 
 import "./checkbox.css";
 
@@ -11,7 +12,7 @@ export function Checkbox(props: any) {
     <label data-component="checkbox">
       <RadixCheckbox {...props} defaultChecked data-slot="indicator">
         <RadixCheckboxIndicator asChild>
-          <Check data-slot="icon" strokeWidth={3} />
+          <Checkmark data-slot="icon" />
         </RadixCheckboxIndicator>
       </RadixCheckbox>
     </label>
@@ -23,7 +24,7 @@ export function CheckboxWithLabel(props: any) {
     <label data-component="checkbox">
       <RadixCheckbox {...props} defaultChecked data-slot="indicator">
         <RadixCheckboxIndicator asChild>
-          <Check data-slot="icon" strokeWidth={3} />
+          <Checkmark data-slot="icon" />
         </RadixCheckboxIndicator>
       </RadixCheckbox>
       <span data-slot="label">Accept terms and conditions.</span>
@@ -37,7 +38,7 @@ export function CheckboxWithLabelAndDescription(props: any) {
       <label data-component="checkbox" className="label">
         <RadixCheckbox {...props} defaultChecked data-slot="indicator" id="wld">
           <RadixCheckboxIndicator asChild>
-            <Check data-slot="icon" strokeWidth={3} />
+            <Checkmark data-slot="icon" />
           </RadixCheckboxIndicator>
         </RadixCheckbox>
         <span data-slot="label">Display full names</span>

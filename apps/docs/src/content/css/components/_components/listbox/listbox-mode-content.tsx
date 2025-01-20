@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { Check } from "lucide-react";
+import { Checkmark } from "@winnie-ui/icons/react/solid";
 
 export function ListboxModeContent() {
   /**
@@ -30,7 +30,7 @@ export function ListboxModeContent() {
               setItems(newItems);
             }}
           >
-            {items.has(label) && <Check data-slot="indicator" />}
+            {items.has(label) && <Checkmark data-slot="indicator" />}
             <span data-slot="label">{label}</span>
           </li>
         );

@@ -8,15 +8,16 @@ import {
   ToggleButton,
 } from "react-aria-components";
 
+import { Heart as HeartLine } from "@winnie-ui/icons/react/line";
 import {
   FastForward,
-  Heart,
+  Heart as HeartSolid,
   Pause,
   Play,
   Rewind,
-  Volume,
-  Volume2,
-} from "lucide-react";
+  VolumeFull,
+  VolumeMinimum,
+} from "@winnie-ui/icons/react/solid";
 
 import albumCover from "~/images/album-cover.jpg";
 import { type Theme, getTheme } from "~/utils/theme";
@@ -81,7 +82,13 @@ export function RadiusExample() {
             <span className="now-playing-song-description">Fred again..</span>
           </div>
           <ToggleButton className="now-playing-favourite">
-            <Heart />
+            {({ isSelected }) => {
+              if (isSelected) {
+                return <HeartSolid />;
+              }
+
+              return <HeartLine />;
+            }}
           </ToggleButton>
         </div>
         <div className="now-playing-controls">
@@ -106,7 +113,7 @@ export function RadiusExample() {
           </span>
         </div>
         <div className="now-playing-volume">
-          <Volume className="now-playing-volume-icon" />
+          <VolumeMinimum className="now-playing-volume-icon" />
           <Slider
             defaultValue={30}
             aria-label="Adjust volume"
@@ -129,7 +136,7 @@ export function RadiusExample() {
               }}
             </SliderTrack>
           </Slider>
-          <Volume2 className="now-playing-volume-icon" />
+          <VolumeFull className="now-playing-volume-icon" />
         </div>
       </div>
     </div>

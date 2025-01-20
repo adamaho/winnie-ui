@@ -5,12 +5,13 @@ import {
   useState,
 } from "react";
 
+import { ChevronRight } from "@winnie-ui/icons/react/solid";
+
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@radix-ui/react-collapsible";
-import { ChevronRight } from "lucide-react";
 
 import type { NavigationItem } from "./types";
 

@@ -395,40 +395,6 @@ Use the `data-mode` attribute to account for dynamically rendered indicators.
   </Fragment>
 </Demo>
 
-### With Checkboxes
-
-Use the `indicator` slot inside a listbox item to support selecting items with a checkbox.
-
-<Demo>
-  <ListboxWithCheckbox client:only="react" />
-  <Fragment slot="footer">
-    ```html ins=data-slot="indicator"
-    <ul data-component="listbox" data-mode="selection">
-      <li data-component="listbox-item">
-        <input type="checkbox" data-slot="indicator" />
-        <span data-component="label">Apple</span>
-      </li>
-      <li data-component="listbox-item">
-        <input type="checkbox" data-slot="indicator" />
-        <span data-component="label">Banana</span>
-      </li>
-      <li data-component="listbox-item">
-        <input type="checkbox" data-slot="indicator" />
-        <span data-component="label">Cherry</span>
-      </li>
-      <li data-component="listbox-item">
-        <input type="checkbox" data-slot="indicator" />
-        <span data-component="label">Date</span>
-      </li>
-      <li data-component="listbox-item">
-        <input type="checkbox" data-slot="indicator" />
-        <span data-component="label">Elderberry</span>
-      </li>
-    </ul>
-    ```
-  </Fragment>
-</Demo>
-
 ### Descriptions
 
 Use the `description` slot in different variations to achieve the layout that works for your use case.
