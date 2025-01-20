@@ -1,30 +1,16 @@
 @layer visual {
   [data-component="navigation"] {
-    li,
-    ul:not([data-component="navigation-group"]),
-    [data-component="disclosure"] {
+    li, ul:not([data-component="navigation-group"]), [data-component="disclosure"] {
       display: grid;
       grid-template-columns: subgrid;
       grid-column: 1 / -1;
 
       /** not expanded but has an item that is the current item in it */
-      &:not([data-expanded]):has(
-          [data-component="navigation-group"]
-            [data-component="navigation-item"][data-current]
-        ) {
+      &:not([data-expanded]):has([data-component="navigation-group"] [data-component="navigation-item"][data-current]) {
         [data-component="navigation-item"] {
-          background: var(
-            --wui-navigation__item-background-current,
-            var(--wui-navigation__item-background)
-          );
-          border: var(
-            --wui-navigation__item-border-current,
-            var(--wui-navigation__item-border)
-          );
-          color: var(
-            --wui-navigation__item-color-current,
-            var(--wui-navigation__item-color)
-          );
+          background: var(--wui-navigation-item-background-current, var(--wui-navigation-item-background));
+          border: var(--wui-navigation-item-border-current, var(--wui-navigation-item-border));
+          color: var(--wui-navigation-item-color-current, var(--wui-navigation-item-color));
         }
       }
     }
@@ -41,9 +27,7 @@
           transition-timing-function: var(--wui-bezier-1);
         }
 
-        &[data-starting-style],
-        &[data-closed],
-        &[data-ending-style] {
+        &[data-starting-style], &[data-closed], &[data-ending-style] {
           opacity: 0;
           height: 0;
         }
@@ -51,11 +35,11 @@
     }
 
     [data-component="navigation-item"] {
-      background: var(--wui-navigation__item-background);
-      border: var(--wui-navigation__item-border);
-      color: var(--wui-navigation__item-color);
+      background: var(--wui-navigation-item-background);
+      border: var(--wui-navigation-item-border);
+      color: var(--wui-navigation-item-color);
       outline: none;
-      font-weight: var(--wui-navigation__item-font-weight);
+      font-weight: var(--wui-navigation-item-font-weight);
 
       [data-slot="label"] {
         [data-component="icon"] {
@@ -64,48 +48,21 @@
       }
 
       &:is([data-hovered], :hover) {
-        background: var(
-          --wui-navigation__item-background-hovered,
-          var(--wui-navigation__item-background)
-        );
-        border: var(
-          --wui-navigation__item-border-hovered,
-          var(--wui-navigation__item-border)
-        );
-        color: var(
-          --wui-navigation__item-color-hovered,
-          var(--wui-navigation__item-color)
-        );
+        background: var(--wui-navigation-item-background-hovered, var(--wui-navigation-item-background));
+        border: var(--wui-navigation-item-border-hovered, var(--wui-navigation-item-border));
+        color: var(--wui-navigation-item-color-hovered, var(--wui-navigation-item-color));
       }
 
       &:is([data-pressed], :active) {
-        background: var(
-          --wui-navigation__item-background-pressed,
-          var(--wui-navigation__item-background)
-        );
-        border: var(
-          --wui-navigation__item-border-pressed,
-          var(--wui-navigation__item-border)
-        );
-        color: var(
-          --wui-navigation__item-color-pressed,
-          var(--wui-navigation__item-color)
-        );
+        background: var(--wui-navigation-item-background-pressed, var(--wui-navigation-item-background));
+        border: var(--wui-navigation-item-border-pressed, var(--wui-navigation-item-border));
+        color: var(--wui-navigation-item-color-pressed, var(--wui-navigation-item-color));
       }
 
       &[data-current] {
-        background: var(
-          --wui-navigation__item-background-current,
-          var(--wui-navigation__item-background)
-        );
-        border: var(
-          --wui-navigation__item-border-current,
-          var(--wui-navigation__item-border)
-        );
-        color: var(
-          --wui-navigation__item-color-current,
-          var(--wui-navigation__item-color)
-        );
+        background: var(--wui-navigation-item-background-current, var(--wui-navigation-item-background));
+        border: var(--wui-navigation-item-border-current, var(--wui-navigation-item-border));
+        color: var(--wui-navigation-item-color-current, var(--wui-navigation-item-color));
       }
 
       &[aria-expanded="true"] {
