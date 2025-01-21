@@ -223,7 +223,7 @@ type LayoutContextProps = {
   /**
    * Ref to the sidebar open button
    */
-  triggerRef: RefObject<HTMLElement | null>;
+  triggerRef: RefObject<HTMLButtonElement | null>;
 
   /**
    * Ref to the sidebar
@@ -288,7 +288,7 @@ function Layout({ children, className, ref, ...props }: LayoutProps) {
   /**
    * tracks the ref of the sidebar trigger
    */
-  const triggerRef = useRef<HTMLSpanElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
 
   /**
    * tracks the active timer to debounce the mouse leave event
@@ -402,6 +402,7 @@ function Layout({ children, className, ref, ...props }: LayoutProps) {
 
     document.body.style.cursor = "col-resize";
   }, [sidebarDragging]);
+
   return (
     <LayoutContext.Provider
       value={{
@@ -456,23 +457,6 @@ function LayoutSidebarToggle({
   const context = useLayoutContext();
 
   /**
-   * handles hover start by opening the sidebar
-   */
-  const { hoverProps } = useHover({
-    onHoverStart: () => {
-      const breakpoint = window.matchMedia(DOCKED_BREAKPOINT);
-
-      if (!breakpoint.matches) {
-        return;
-      }
-
-      if (context.sidebarState === "closed") {
-        context.setSidebarState("open");
-      }
-    },
-  });
-
-  /**
    * handles button press by docking the sidebar or closing if open
    */
   function onPress() {
@@ -498,6 +482,11 @@ function LayoutSidebarToggle({
     }
   }
 
+  /**
+   * merge the refs
+   */
+  const mergedRefs = mergeRefs(ref, context.triggerRef);
+
   return (
     <Button
       {...props}
@@ -506,7 +495,7 @@ function LayoutSidebarToggle({
       color="grey"
       variant="plain"
       onPress={onPress}
-      ref={ref}
+      ref={mergedRefs}
     >
       {context.sidebarState === "docked" ? (
         <ButtonIcon>
@@ -517,11 +506,6 @@ function LayoutSidebarToggle({
           <SidebarSimpleLeftSquareLine />
         </ButtonIcon>
       )}
-      <span
-        {...hoverProps}
-        className="wui-layout__toggle-hover-action"
-        ref={context.triggerRef}
-      />
     </Button>
   );
 }
