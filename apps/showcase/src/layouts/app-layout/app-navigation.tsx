@@ -3,6 +3,7 @@ import {
   NavigationItem,
   NavigationItemIcon,
   NavigationItemLabel,
+  useLayoutContext,
 } from "@winnie-ui/react";
 
 import {
@@ -32,8 +33,22 @@ function AppNavigationItem({ href, icon, label }: AppNavigationItemProps) {
    */
   const isCurrent = useIsCurrent({ to: href });
 
+  /**
+   * Get an instance of the layout context
+   */
+  const layoutContext = useLayoutContext();
+
+  /**
+   * Handle press event on navigation item
+   */
+  const handlePress = () => {
+    if (layoutContext.sidebarState === "open") {
+      layoutContext.setSidebarState("closed");
+    }
+  };
+
   return (
-    <NavigationItem href={href} isCurrent={isCurrent}>
+    <NavigationItem href={href} isCurrent={isCurrent} onPress={handlePress}>
       <NavigationItemIcon>{icon}</NavigationItemIcon>
       <NavigationItemLabel>{label}</NavigationItemLabel>
     </NavigationItem>

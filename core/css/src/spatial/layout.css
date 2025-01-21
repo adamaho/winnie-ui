@@ -1,7 +1,7 @@
 @layer spatial {
   [data-component="layout"] {
     --wui-layout-sidebar-width: calc(296px * var(--wui-scale));
-    --wui-layout-content-header-height: calc(48px * var(--wui-scale));
+    --wui-layout-content-header-height: calc(56px * var(--wui-scale));
     --wui-layout-content-space: var(--wui-space-5);
 
     display: flex;
@@ -18,11 +18,14 @@
       height: 100%;
       left: calc(-1 * var(--wui-layout-sidebar-width));
       padding: var(--wui-layout-content-space);
-      padding-right: 0;
       position: fixed;
       top: 0;
       width: var(--wui-layout-sidebar-width);
       z-index: 96;
+
+      &[data-state="docked"] {
+        padding-right: 0;
+      }
 
       &[data-state="open"] {
         height: 100%;
@@ -95,7 +98,7 @@
         }
 
         &[data-state="closed"] {
-          left: calc(-1 * var(--wui-layout-sidebar-width));
+          left: calc((-1 * var(--wui-layout-sidebar-width)) + (var(--wui-layout-content-space) / 2));
           top: calc(var(--wui-layout-content-header-height) + var(--wui-layout-content-space));
         }
 

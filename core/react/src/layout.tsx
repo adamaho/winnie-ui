@@ -311,7 +311,11 @@ function Layout({ children, className, ref, ...props }: LayoutProps) {
         return;
       }
 
-      if (e.clientX <= 16 && sidebarState === "closed") {
+      /**
+       * TODO: dont use raw numbers here, use the `var(--wui-layout-content-header-height)` and `layout space`
+       * variables if possible
+       */
+      if (e.clientX <= 16 && e.clientY >= 56 && sidebarState === "closed") {
         return setSidebarState("open");
       }
 
@@ -736,6 +740,8 @@ export {
   LayoutContent,
   LayoutSidebarToggle,
   LayoutSidebarResizeHandle,
+  useLayoutContext,
+  LayoutContext,
 };
 export type {
   LayoutProps,
@@ -745,4 +751,5 @@ export type {
   LayoutContentChildrenProps,
   LayoutSidebarToggleProps,
   LayoutSidebarResizeHandleProps,
+  LayoutContextProps,
 };

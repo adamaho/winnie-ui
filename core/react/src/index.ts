@@ -19,6 +19,8 @@ export {
   LayoutContent,
   LayoutSidebarToggle,
   LayoutSidebarResizeHandle,
+  LayoutContext,
+  useLayoutContext,
 } from "./layout";
 export { Link } from "./typography/link";
 export {
@@ -84,6 +86,7 @@ export type {
   LayoutContentProps,
   LayoutSidebarToggleProps,
   LayoutSidebarResizeHandleProps,
+  LayoutContextProps,
 } from "./layout";
 export type { LinkProps } from "./typography/link";
 export type {

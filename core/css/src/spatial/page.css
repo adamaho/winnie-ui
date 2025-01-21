@@ -1,7 +1,5 @@
 @layer spatial {
   [data-component="page"] {
-    --wui-page-inline-space: calc(var(--wui-space-9) + var(--wui-space-4));
-
     border-radius: 0px;
     display: flex;
     flex-direction: column;
@@ -14,8 +12,8 @@
     [data-slot="header"] {
       align-items: center;
       display: grid;
-      height: var(--wui-page-header-height, calc(56px * var(--wui-scale)));
-      padding-inline: var(--wui-page-inline-space);
+      height: var(--wui-layout-content-header-height, calc(56px * var(--wui-scale)));
+      padding-left: calc(var(--wui-space-9) + var(--wui-space-4)); 
       width: 100%;
     }
 
