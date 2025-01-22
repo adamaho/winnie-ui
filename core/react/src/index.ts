@@ -2,6 +2,13 @@
  * Components
  */
 export {
+  Breadcrumbs,
+  Breadcrumb,
+  BreadcrumbLink,
+  BreadcrumbLabel,
+  BreadcrumbIcon,
+} from "./breadcrumbs";
+export {
   Button,
   ButtonLabel,
   ButtonIcon,
@@ -64,6 +71,13 @@ export { TooltipProvider, Tooltip, TooltipLabel } from "./tooltip";
 /**
  * Types
  */
+export type {
+  BreadcrumbsProps,
+  BreadcrumbProps,
+  BreadcrumbLinkProps,
+  BreadcrumbLabelProps,
+  BreadcrumbIconProps,
+} from "./breadcrumbs";
 export type {
   ButtonProps,
   ButtonLabelProps,
