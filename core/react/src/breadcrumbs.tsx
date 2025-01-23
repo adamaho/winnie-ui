@@ -16,6 +16,8 @@ import {
   type LinkProps as AriaLinkProps,
 } from "react-aria-components";
 
+import { ChevronRight } from "@winnie-ui/icons/react/solid";
+
 import clsx from "clsx";
 
 /* -------------------------------------------------------------------------------------------------
@@ -26,12 +28,20 @@ type BreadcrumbsProps<T> = AriaBreadcrumbsProps<T> & {
    * Ref to breadcrumbselement
    */
   ref?: ForwardedRef<ComponentRef<typeof AriaBreadcrumbs>>;
+
+  /**
+   * Size of the breadcrumbs
+   *
+   * @default "md"
+   */
+  size?: "sm" | "md" | "lg";
 };
 
 function Breadcrumbs<T extends object>({
   children,
   className,
   ref,
+  size = "md",
   ...props
 }: BreadcrumbsProps<T>) {
   return (
@@ -39,6 +49,8 @@ function Breadcrumbs<T extends object>({
       {...props}
       className={clsx("wui-breadcrumbs", className)}
       data-component="breadcrumbs"
+      data-slot="breadcrumbs"
+      data-size={size}
       ref={ref}
     >
       {children}
@@ -54,9 +66,22 @@ type BreadcrumbProps = AriaBreadcrumbProps & {
    * Ref to breadcrumb element
    */
   ref?: ForwardedRef<ComponentRef<typeof AriaBreadcrumb>>;
+
+  /**
+   * Separator type
+   *
+   * @default "chevron"
+   */
+  separator?: "chevron" | "slash";
 };
 
-function Breadcrumb({ children, className, ref, ...props }: BreadcrumbProps) {
+function Breadcrumb({
+  children,
+  className,
+  ref,
+  separator = "chevron",
+  ...props
+}: BreadcrumbProps) {
   return (
     <AriaBreadcrumb
       {...props}
@@ -64,7 +89,17 @@ function Breadcrumb({ children, className, ref, ...props }: BreadcrumbProps) {
       data-component="breadcrumb"
       ref={ref}
     >
-      {children}
+      <>
+        {children}
+        {separator === "slash" && (
+          <span aria-hidden="true" data-slot="separator">
+            /
+          </span>
+        )}
+        {separator === "chevron" && (
+          <ChevronRight aria-hidden="true" data-slot="separator" />
+        )}
+      </>
     </AriaBreadcrumb>
   );
 }
@@ -89,7 +124,7 @@ function BreadcrumbLink({
     <AriaLink
       {...props}
       className={clsx("wui-breadcrumb__link", className)}
-      data-component="breadcrumb-link"
+      data-slot="link"
       ref={ref}
     >
       {children}

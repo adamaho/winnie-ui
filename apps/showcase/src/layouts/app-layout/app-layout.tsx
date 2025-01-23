@@ -8,8 +8,6 @@ import {
   LayoutSidebarResizeHandle,
   LayoutSidebarToggle,
   Page,
-  PageContent,
-  PageHeader,
   Tooltip,
   TooltipLabel,
   TooltipProvider,
@@ -32,19 +30,17 @@ function AppLayout(props: PropsWithChildren) {
         {({ sidebarState }) => {
           return (
             <Page>
-              <PageHeader>
-                <TooltipProvider closeDelay={1000}>
-                  <LayoutSidebarToggle />
-                  <Tooltip>
-                    <TooltipLabel>
-                      {sidebarState === "docked"
-                        ? "Close sidebar"
-                        : "Expand sidebar"}
-                    </TooltipLabel>
-                  </Tooltip>
-                </TooltipProvider>
-              </PageHeader>
-              <PageContent>{props.children}</PageContent>
+              <TooltipProvider closeDelay={1000}>
+                <LayoutSidebarToggle />
+                <Tooltip>
+                  <TooltipLabel>
+                    {sidebarState === "docked"
+                      ? "Close sidebar"
+                      : "Expand sidebar"}
+                  </TooltipLabel>
+                </Tooltip>
+              </TooltipProvider>
+              {props.children}
             </Page>
           );
         }}

@@ -3,7 +3,7 @@
 @import "@winnie-ui/css/base";
 @import "@winnie-ui/css/spatial";
 @import "@winnie-ui/css/visual";
-@import "tailwindcss/utilities" layer(utilities);
+@import "tailwindcss" layer(utilities);
 
 @layer utilities {
   @theme {
