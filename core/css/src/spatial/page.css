@@ -22,7 +22,6 @@
         grid-template-columns: 1px auto 1fr;
 
         &::after {
-          background: red;
           content: "";
           height: calc(var(--wui-page-header-height) - var(--wui-space-8));
           width: 1px;
