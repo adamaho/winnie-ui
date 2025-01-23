@@ -1,0 +1,105 @@
+@layer spatial {
+  [data-component="breadcrumbs"] {
+    display: flex;
+
+    [data-component="breadcrumb"] {
+      align-items: center;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      user-select: none;
+      outline: none;
+
+      &:last-child {
+        [data-slot="separator"] {
+          display: none;
+        }
+      }
+
+      [data-slot="link"] {
+        align-items: center;
+        display: grid;
+        grid-template-columns: subgrid;
+        grid-column: 1 / -2;
+        outline: none;
+      }
+
+      [data-slot="separator"] {
+        grid-column-start: 3;
+        font-size: 1em;
+        min-width: 1em;
+        text-align: center;
+
+        &:where(svg) {
+          min-height: 0.9em;
+          height: 0.9em;
+          width: 0.9em;
+        }
+      }
+
+      [data-slot="label"] {
+        grid-column-start: 2;
+      }
+
+      [data-slot="icon"] {
+        font-size: 1em;
+        grid-column-start: 1;
+        height: 1em;
+        width: 1em;
+      }
+    }
+
+    &[data-size="sm"] {
+      [data-component="breadcrumb"] {
+        font-size: var(--wui-font-size-1);
+
+        [data-slot="icon"] {
+          margin-right: var(--wui-space-2);
+        }
+
+        [data-slot="separator"] {
+          margin-inline: var(--wui-space-2);
+        }
+
+        [data-slot="label"] {
+          font-size: var(--wui-font-size-1);
+        }
+      }
+    }
+
+    &[data-size="md"] {
+      [data-component="breadcrumb"] {
+        font-size: var(--wui-font-size-2);
+
+        [data-slot="icon"] {
+          margin-right: var(--wui-space-3);
+        }
+
+        [data-slot="separator"] {
+          margin-inline: var(--wui-space-3);
+        }
+
+        [data-slot="label"] {
+          font-size: var(--wui-font-size-2);
+        }
+      }
+    }
+
+    &[data-size="lg"] {
+      [data-component="breadcrumb"] {
+        font-size: var(--wui-font-size-3);
+
+        [data-slot="icon"] {
+          margin-right: var(--wui-space-3);
+        }
+
+        [data-slot="separator"] {
+          margin-inline: var(--wui-space-3);
+        }
+
+        [data-slot="label"] {
+          font-size: var(--wui-font-size-3);
+        }
+      }
+    }
+  }
+}

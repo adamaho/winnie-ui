@@ -59,7 +59,7 @@ function PageHeader({ children, className, ref, ...props }: PageHeaderProps) {
     <header
       {...props}
       className={clsx("wui-page__header", className)}
-      data-slot="header"
+      data-component="header"
       ref={ref}
     >
       {children}
@@ -82,7 +82,7 @@ function PageContent({ children, className, ref, ...props }: PageContentProps) {
     <div
       {...props}
       className={clsx("wui-page__content", className)}
-      data-slot="content"
+      data-component="content"
       ref={ref}
     >
       {children}

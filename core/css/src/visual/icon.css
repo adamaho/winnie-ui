@@ -1,5 +1,5 @@
 @layer visual {
-  [data-component="icon"]:not([data-slot="indicator"], [data-slot="icon"]) {
+  [data-component="icon"]:not([data-slot="indicator"], [data-slot="icon"], [data-slot="separator"]) {
     &[data-contrast="low"] {
       color: var(--wui-icon-low-color);
     }
