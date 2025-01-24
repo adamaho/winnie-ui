@@ -2,7 +2,7 @@
   [data-component="layout"] {
     --wui-layout-sidebar-width: calc(296px * var(--wui-scale));
     --wui-layout-content-header-height: calc(56px * var(--wui-scale));
-    --wui-layout-content-space: var(--wui-space-5);
+    --wui-layout-content-space: var(--wui-space-4);
 
     display: flex;
     flex-direction: column;

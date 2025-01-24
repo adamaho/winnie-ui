@@ -63,14 +63,14 @@ const { color, level } = Astro.props;
     }
   }
 
-  .color-row-content:not(.dark) {
+  .color-row-content:not([data-theme="dark"]) {
     .color-chip {
       --block-secondary-background: var(--wui-color-white);
       --block-background: var(--wui-color-grey-2);
     }
   }
 
-  .color-row-content.dark {
+  .color-row-content[data-theme="dark"] {
     .color-chip {
       .color-chip-demo {
         --block-secondary-background: var(--wui-color-grey-1);

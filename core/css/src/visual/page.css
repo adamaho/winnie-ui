@@ -7,5 +7,10 @@
       border: var(--wui-page-border);
       box-shadow: var(--wui-page-box-shadow);
     }
+
+    [data-component="header"] {
+      background: var(--wui-page-header-background);
+      border-bottom: var(--wui-page-header-border-bottom);
+    }
   }
 }

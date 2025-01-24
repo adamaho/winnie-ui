@@ -64,7 +64,7 @@ export {
   NavigationDisclosureContent,
 } from "./navigation";
 export { RouterProvider } from "./router-provider";
-export { Page, PageHeader, PageContent } from "./page";
+export { Page, PageHeader, PageHeaderActions, PageContent } from "./page";
 export { Text } from "./typography/text";
 export { TooltipProvider, Tooltip, TooltipLabel } from "./tooltip";
 
@@ -125,6 +125,12 @@ export type {
   Selection,
 } from "./menu";
 export type {
+  PageProps,
+  PageHeaderProps,
+  PageHeaderActionsProps,
+  PageContentProps,
+} from "./page";
+export type {
   NavigationProps,
   NavigationItemProps,
   NavigationItemIconProps,
@@ -136,7 +142,6 @@ export type {
   NavigationDisclosureTriggerLabelProps,
   NavigationDisclosureContentProps,
 } from "./navigation";
-export type { PageProps, PageHeaderProps, PageContentProps } from "./page";
 export type { TextProps } from "./typography/text";
 export type { TypographyProps } from "./typography/props";
 export type {

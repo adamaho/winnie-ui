@@ -45,6 +45,7 @@
 
         [data-slot="label"] {
           color: var(--wui-breadcrumb-label-color-current);
+          font-weight: var(--wui-font-weight-medium);
         }
 
         [data-slot="icon"] {

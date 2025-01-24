@@ -28,7 +28,11 @@ const colorsAlpha = [
   <span class="color-row-label"
     >{color} Alpha {mode === "dark" ? "Dark" : ""}</span
   >
-  <ul class={`color-row-content not-content ${mode}`} data-accent-color={color}>
+  <ul
+    class={`color-row-content not-content`}
+    data-theme={mode}
+    data-accent-color={color}
+  >
     {
       colorsAlpha.map((level) => {
         return <ColorChip color={color} level={level} />;

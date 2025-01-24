@@ -68,6 +68,8 @@
       --wui-button-plain-border-color: transparent;
       --wui-button-plain-box-shadow: none;
       --wui-button-plain-color: var(--wui-color-accent-11);
+      --wui-button-plain-color-hovered: var(--wui-color-accent-12);
+      --wui-button-plain-color-pressed: var(--wui-color-accent-12);
       --wui-button-plain-background-hovered: var(--wui-color-accent-a3);
       --wui-button-plain-background-pressed: var(--wui-color-accent-a4);
       --wui-button-plain-color-disabled: var(--wui-color-grey-a9);
@@ -236,7 +238,11 @@
     [data-component="page"] {
       --wui-page-background: var(--wui-color-white);
       --wui-page-border: var(--wui-border-width-1) solid var(--wui-color-grey-5);
-      --wui-page-box-shadow: var(--wui-shadow-3);
+      --wui-page-box-shadow: var(--wui-shadow-1);
+
+      [data-component="header"] {
+        --wui-page-header-border-bottom: var(--wui-border-width-1) solid var(--wui-color-grey-3);
+      }
     }
 
     [data-component="popover"] {
@@ -279,7 +285,11 @@
     [data-component="page"] {
       --wui-page-background: var(--wui-color-grey-1);
       --wui-page-border: var(--wui-border-width-1) solid var(--wui-color-grey-3);
-      --wui-page-box-shadow: var(--wui-shadow-3);
+      --wui-page-box-shadow: var(--wui-shadow-1);
+
+      [data-component="header"] {
+        --wui-page-header-border-bottom: var(--wui-border-width-1) solid var(--wui-color-grey-3);
+      }
     }
 
     [data-component="popover"] {

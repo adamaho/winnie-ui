@@ -12,6 +12,7 @@ import {
   ForkKnife,
   HomeDoor,
   LayoutGrid2,
+  Tactics1,
 } from "@winnie-ui/icons/react/solid";
 
 import { ReactNode, ToOptions } from "@tanstack/react-router";
@@ -61,15 +62,11 @@ function AppNavigationItem({ href, icon, label }: AppNavigationItemProps) {
 export function AppNavigation() {
   return (
     <Navigation>
-      <AppNavigationItem href="/home" icon={<HomeDoor />} label="Home" />
-      <AppNavigationItem href="/dishes" icon={<ForkKnife />} label="Dishes" />
-      <AppNavigationItem href="/drinks" icon={<Cocktail />} label="Drinks" />
       <AppNavigationItem
-        href="/sections"
-        icon={<BooleanGroupSubtract />}
-        label="Sections"
+        href="/sessions"
+        icon={<Tactics1 />}
+        label="Sessions"
       />
-      <AppNavigationItem href="/menus" icon={<LayoutGrid2 />} label="Menus" />
     </Navigation>
   );
 }

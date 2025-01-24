@@ -69,6 +69,33 @@ function PageHeader({ children, className, ref, ...props }: PageHeaderProps) {
 }
 
 /* -------------------------------------------------------------------------------------------------
+ * PageHeaderActions
+ * -----------------------------------------------------------------------------------------------*/
+type PageHeaderActionsProps = ComponentPropsWithoutRef<"div"> & {
+  /**
+   * Ref to span element
+   */
+  ref?: ForwardedRef<ComponentRef<"div">>;
+};
+function PageHeaderActions({
+  children,
+  className,
+  ref,
+  ...props
+}: PageHeaderActionsProps) {
+  return (
+    <div
+      {...props}
+      className={clsx("wui-page__header-actions", className)}
+      data-slot="actions"
+      ref={ref}
+    >
+      {children}
+    </div>
+  );
+}
+
+/* -------------------------------------------------------------------------------------------------
  * PageContent
  * -----------------------------------------------------------------------------------------------*/
 type PageContentProps = ComponentPropsWithoutRef<"div"> & {
@@ -91,5 +118,10 @@ function PageContent({ children, className, ref, ...props }: PageContentProps) {
   );
 }
 
-export { Page, PageHeader, PageContent };
-export type { PageProps, PageHeaderProps, PageContentProps };
+export { Page, PageHeader, PageHeaderActions, PageContent };
+export type {
+  PageProps,
+  PageHeaderProps,
+  PageHeaderActionsProps,
+  PageContentProps,
+};

@@ -14,7 +14,11 @@ const colors = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
 
 <div class="color-row">
   <span class="color-row-label">{color} {mode === "dark" ? "Dark" : ""}</span>
-  <ul class={`color-row-content not-content ${mode}`} data-accent-color={color}>
+  <ul
+    class={`color-row-content not-content`}
+    data-theme={mode}
+    data-accent-color={color}
+  >
     {
       colors.map((level) => {
         return <ColorChip color={color} level={level} />;
