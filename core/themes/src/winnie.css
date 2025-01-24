@@ -1,8 +1,25 @@
 @layer skin {
   [data-skin="winnie"] {
     /* -------------------------------------------------------------------------------------------------
-    * Button
-    * -----------------------------------------------------------------------------------------------*/
+     * Breadcrumbs 
+     * -----------------------------------------------------------------------------------------------*/
+    [data-component="breadcrumbs"] {
+      --wui-breadcrumb-label-color: var(--wui-color-grey-11);
+      --wui-breadcrumb-label-color-hovered: var(--wui-color-grey-12);
+      --wui-breadcrumb-label-color-pressed: var(--wui-color-grey-12);
+      --wui-breadcrumb-label-color-current: var(--wui-color-grey-12);
+      --wui-breadcrumb-label-color-disabled: var(--wui-color-grey-10);
+      --wui-breadcrumb-icon-color: var(--wui-color-grey-11);
+      --wui-breadcrumb-icon-color-hovered: var(--wui-color-grey-12);
+      --wui-breadcrumb-icon-color-pressed: var(--wui-color-grey-12);
+      --wui-breadcrumb-icon-color-current: var(--wui-color-grey-12);
+      --wui-breadcrumb-icon-color-disabled: var(--wui-color-grey-10);
+      --wui-breadcrumb-separator-color: var(--wui-color-grey-10);
+    }
+
+    /* -------------------------------------------------------------------------------------------------
+     * Button
+     * -----------------------------------------------------------------------------------------------*/
     [data-component="button"] {
       --wui-button-font-weight: var(--wui-font-weight-medium);
 

@@ -62,6 +62,7 @@ function PageHeader({ children, className, ref, ...props }: PageHeaderProps) {
       data-component="header"
       ref={ref}
     >
+      <span aria-hidden="true" data-component="separator" />
       {children}
     </header>
   );

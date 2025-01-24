@@ -11,6 +11,7 @@
 
     [data-component="header"] {
       --wui-page-header-height: var(--wui-layout-content-header-height, calc(56px * var(--wui-scale)));
+
       align-items: center;
       display: grid;
       grid-template-columns: auto 1fr;
@@ -21,11 +22,15 @@
       &:has([data-slot="breadcrumbs"]) {
         grid-template-columns: 1px auto 1fr;
 
-        &::after {
-          content: "";
-          height: calc(var(--wui-page-header-height) - var(--wui-space-8));
-          width: 1px;
+        & > [data-component="separator"] {
+          display: inline-block;
         }
+      }
+
+      & > [data-component="separator"] {
+        display: none;
+        height: calc(var(--wui-page-header-height) - var(--wui-space-7));
+        width: 1px;
       }
 
 

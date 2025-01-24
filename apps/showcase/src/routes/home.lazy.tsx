@@ -30,7 +30,9 @@ function RouteComponent() {
             </BreadcrumbLink>
           </Breadcrumb>
           <Breadcrumb>
-            <BreadcrumbLabel>Menus</BreadcrumbLabel>
+            <BreadcrumbLink>
+              <BreadcrumbLabel>Menus</BreadcrumbLabel>
+            </BreadcrumbLink>
           </Breadcrumb>
         </Breadcrumbs>
       </PageHeader>

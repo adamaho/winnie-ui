@@ -1,0 +1,68 @@
+@layer visual {
+  [data-component="breadcrumbs"] {
+    [data-component="breadcrumb"] {
+      background: var(--wui-breadcrumb-background);
+      cursor: var(--wui-cursor-linkable, default);
+
+      [data-slot="label"] {
+        color: var(--wui-breadcrumb-label-color);
+      }
+
+      [data-slot="icon"] {
+        color: var(--wui-breadcrumb-icon-color);
+      }
+
+      [data-slot="separator"] {
+        color: var(--wui-breadcrumb-separator-color);
+      }
+
+      &:is([data-hovered], :hover, &:has([data-slot="link"]:is([data-hovered], :hover))):not([data-disabled], [aria-disabled="true"], &:has([data-slot="link"]:is([data-disabled], [aria-disabled="true"]))) {
+        background: var(--wui-breadcrumb-background-hovered);
+
+        [data-slot="label"] {
+          color: var(--wui-breadcrumb-label-color-hovered);
+        }
+
+        [data-slot="icon"] {
+          color: var(--wui-breadcrumb-icon-color-hovered);
+        }
+      }
+      
+      &:is([data-pressed], :active, &:has([data-slot="link"]:is([data-pressed], :active))):not([data-disabled], [aria-disabled="true"], &:has([data-slot="link"]:is([data-disabled], [aria-disabled="true"]))) {
+        background: var(--wui-breadcrumb-background-pressed);
+
+        [data-slot="label"] {
+          color: var(--wui-breadcrumb-label-color-pressed);
+        }
+
+        [data-slot="icon"] {
+          color: var(--wui-breadcrumb-icon-color-pressed);
+        }
+      }
+
+      &:is([data-current="true"], [aria-current="true"]) {
+        background: var(--wui-breadcrumb-background-current);
+
+        [data-slot="label"] {
+          color: var(--wui-breadcrumb-label-color-current);
+        }
+
+        [data-slot="icon"] {
+          color: var(--wui-breadcrumb-icon-color-current);
+        }
+      }
+
+      &:is([data-disabled="true"], [aria-disabled="true"]):not([data-current], [aria-current="true"]) {
+        background: var(--wui-breadcrumb-background-disabled);
+
+        [data-slot="label"] {
+          color: var(--wui-breadcrumb-label-color-disabled);
+        }
+
+        [data-slot="icon"] {
+          color: var(--wui-breadcrumb-icon-color-disabled);
+        }
+      }
+    }
+  }
+}
