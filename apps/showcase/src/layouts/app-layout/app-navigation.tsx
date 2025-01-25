@@ -6,14 +6,7 @@ import {
   useLayoutContext,
 } from "@winnie-ui/react";
 
-import {
-  BooleanGroupSubtract,
-  Cocktail,
-  ForkKnife,
-  HomeDoor,
-  LayoutGrid2,
-  Tactics1,
-} from "@winnie-ui/icons/react/solid";
+import { Tactics1 } from "@winnie-ui/icons/react/solid";
 
 import { ReactNode, ToOptions } from "@tanstack/react-router";
 
