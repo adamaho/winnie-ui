@@ -1,4 +1,23 @@
 @layer visual {
   [data-component="overlay"] {
+    background: var(--wui-overlay-background);
+    opacity: var(--wui-overlay-opacity);
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition: display, opacity;
+      transition-duration: var(--wui-duration-3);
+      transition-timing-function: ease-in-out;
+    }
+
+    &[data-entering],
+    &[data-exiting] {
+      opacity: var(--wui-overlay-opacity-starting-style);
+    }
+  }
+
+  @starting-style {
+    [data-component="overlay"] {
+      opacity: var(--wui-overlay-opacity-starting-style);
+    }
   }
 }

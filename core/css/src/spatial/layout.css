@@ -8,7 +8,7 @@
     flex-direction: column;
     min-height: 100svh;
 
-    [data-slot="mask"] {
+    [data-slot="overlay"] {
       inset: 0;
       position: fixed;
       z-index: 95;

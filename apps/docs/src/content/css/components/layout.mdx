@@ -12,7 +12,7 @@ import "~/demos/layout.css";
 <Demo>
   <div className="layout-demo-container">
     <div data-component="layout" className="layout-demo">
-      <div data-slot="mask" className="layout-demo-mask" />
+      <div data-slot="overlay" className="layout-demo-mask" />
       <nav
         data-slot="sidebar"
         className="layout-demo-sidebar"
@@ -46,7 +46,7 @@ Attach the appropriate `data-component` and `data-slot` attributes in the struct
 
 ```html
 <div data-component="layout">
-  <div data-slot="mask"></div>
+  <div data-slot="overlay"></div>
   <nav data-slot="sidebar"></nav>
   <main data-slot="content"></main>
 </div>
@@ -71,7 +71,7 @@ Set `data-state` to `docked` in order to persist the sidebar in the layout.
 <Demo>
   <div className="layout-demo-container">
     <div data-component="layout" className="layout-demo">
-      <div data-slot="mask" className="layout-demo-mask" />
+      <div data-slot="overlay" className="layout-demo-mask" />
       <nav
         data-slot="sidebar"
         className="layout-demo-sidebar"
@@ -97,7 +97,7 @@ Set `data-state` to `open` to allow the user to interact with the sidebar while 
 <Demo>
   <div className="layout-demo-container">
     <div data-component="layout" className="layout-demo">
-      <div data-slot="mask" className="layout-demo-mask" />
+      <div data-slot="overlay" className="layout-demo-mask" />
       <nav
         data-slot="sidebar"
         className="layout-demo-sidebar"
@@ -109,7 +109,7 @@ Set `data-state` to `open` to allow the user to interact with the sidebar while 
   <Fragment slot="footer">
     ```html ins=data-state="open"
     <div data-component="layout">
-      <div data-slot="mask"></div>
+      <div data-slot="overlay"></div>
       <nav data-slot="sidebar" data-state="open"></nav>
       <main data-slot="content"></main>
     </div>
@@ -124,7 +124,7 @@ Set `data-state` to `closed` to remove either undock the sidebar or remove it fr
 <Demo>
   <div className="layout-demo-container">
     <div data-component="layout" className="layout-demo">
-      <div data-slot="mask" className="layout-demo-mask" />
+      <div data-slot="overlay" className="layout-demo-mask" />
       <nav
         data-slot="sidebar"
         className="layout-demo-sidebar"
@@ -136,7 +136,7 @@ Set `data-state` to `closed` to remove either undock the sidebar or remove it fr
   <Fragment slot="footer">
     ```html ins=data-state="closed"
     <div data-component="layout">
-      <div data-slot="mask"></div>
+      <div data-slot="overlay"></div>
       <nav data-slot="sidebar" data-state="closed"></nav>
       <main data-slot="content"></main>
     </div>

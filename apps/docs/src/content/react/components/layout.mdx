@@ -12,7 +12,7 @@ import "~/demos/layout.css";
 <Demo>
   <div className="layout-demo-container">
     <div data-component="layout" className="layout-demo">
-      <div data-slot="mask" className="layout-demo-mask" />
+      <div data-slot="overlay" className="layout-demo-mask" />
       <nav
         data-slot="sidebar"
         className="layout-demo-sidebar"
@@ -25,7 +25,7 @@ import "~/demos/layout.css";
   <Fragment slot="footer">
     ```tsx
     <Layout>
-      <LayoutMask />
+      <LayoutOverlay />
       <LayoutSidebar>
         <LayoutSidebarResizeHandle />
       </LayoutSidebar>
@@ -42,7 +42,7 @@ Import all of the parts of the layout.
 ```tsx
 import {
   Layout,
-  LayoutMask,
+  LayoutOverlay,
   LayoutSidebar,
   LayoutSidebarToggle,
   LayoutSidebarResizeHandle
@@ -56,7 +56,7 @@ Arrange the components in the structure below.
 
 ```tsx
 <Layout>
-  <LayoutMask />
+  <LayoutOverlay />
   <LayoutSidebar>
     <LayoutSidebarResizeHandle />
   </LayoutSidebar>
@@ -77,7 +77,7 @@ The `docked` state occurs when the screen width is greater than 768px and the us
 <Demo>
   <div className="layout-demo-container">
     <div data-component="layout" className="layout-demo">
-      <div data-slot="mask" className="layout-demo-mask" />
+      <div data-slot="overlay" className="layout-demo-mask" />
       <nav
         data-slot="sidebar"
         className="layout-demo-sidebar"
@@ -95,7 +95,7 @@ Allows the user to interact with the sidebar while it overlays the `LayoutConten
 <Demo>
   <div className="layout-demo-container">
     <div data-component="layout" className="layout-demo">
-      <div data-slot="mask" className="layout-demo-mask" />
+      <div data-slot="overlay" className="layout-demo-mask" />
       <nav
         data-slot="sidebar"
         className="layout-demo-sidebar"
@@ -113,7 +113,7 @@ Closes the `Sidebar` and hides it from the user.
 <Demo>
   <div className="layout-demo-container">
     <div data-component="layout" className="layout-demo">
-      <div data-slot="mask" className="layout-demo-mask" />
+      <div data-slot="overlay" className="layout-demo-mask" />
       <nav
         data-slot="sidebar"
         className="layout-demo-sidebar"

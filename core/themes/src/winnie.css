@@ -118,8 +118,6 @@
     [data-component="layout"] {
       --wui-layout-resize-handle-opacity-dragging: 1;
       --wui-layout-resize-handle-border-radius: var(--wui-border-radius-round);
-      --wui-layout-mask-opacity-start: 0;
-      --wui-layout-mask-opacity-end: 1;
     }
 
     /* -------------------------------------------------------------------------------------------------
@@ -188,12 +186,6 @@
     }
 
     /* -------------------------------------------------------------------------------------------------
-     * Tooltip 
-     * -----------------------------------------------------------------------------------------------*/
-    [data-component="tooltip"] {
-    }
-
-    /* -------------------------------------------------------------------------------------------------
      * Typography
      * -----------------------------------------------------------------------------------------------*/
     [data-component="text"],
@@ -214,6 +206,9 @@
     }
   }
 
+  /* -------------------------------------------------------------------------------------------------
+  * Light 
+  * -----------------------------------------------------------------------------------------------*/
   [data-skin="winnie"]:where([data-theme="light"]) {
     [data-component="checkbox"] {
       --wui-checkbox-indicator-background: var(--wui-color-white);
@@ -222,9 +217,6 @@
 
     [data-component="layout"] {
       --wui-layout-background: var(--wui-color-grey-3);
-      --wui-layout-mask-background: var(--wui-color-black-a2);
-      --wui-layout-mask-opacity-start: 0;
-      --wui-layout-mask-opacity-end: 1;
       --wui-layout-sidebar-background-open-xs: var(--wui-color-white);
       --wui-layout-sidebar-open-background: var(--wui-color-white);
       --wui-layout-sidebar-open-border-color: var(--wui-color-grey-6);
@@ -233,6 +225,12 @@
       --wui-layout-sidebar-border-right-open: var(--wui-border-width-1) solid var(--wui-color-grey-6);
       --wui-layout-sidebar-border-open-lg: var(--wui-border-width-1) solid var(--wui-color-grey-6);
       --wui-layout-resize-handle-background: var(--wui-color-grey-9);
+    }
+
+    [data-component="overlay"] {
+      --wui-overlay-background: var(--wui-color-black-a2);
+      --wui-overlay-opacity-starting-style: 0;
+      --wui-overlay-opacity: 1;
     }
 
     [data-component="page"] {
@@ -263,6 +261,9 @@
     }
   }
 
+  /* -------------------------------------------------------------------------------------------------
+  * Dark 
+  * -----------------------------------------------------------------------------------------------*/
   [data-skin="winnie"]:where([data-theme="dark"]) {
     [data-component="checkbox"] {
       --wui-checkbox-indicator-background: var(--wui-color-grey-3);
@@ -272,7 +273,6 @@
 
     [data-component="layout"] {
       --wui-layout-background: var(--wui-color-black);
-      --wui-layout-mask-background: var(--wui-color-black-a4);
       --wui-layout-sidebar-background-open-xs: var(--wui-color-white);
       --wui-layout-sidebar-background-open: var(--wui-color-black);
       --wui-layout-sidebar-box-shadow-open: var(--wui-shadow-4);
@@ -280,6 +280,12 @@
       --wui-layout-sidebar-border-right-open: var(--wui-border-width-1) solid var(--wui-color-grey-3);
       --wui-layout-sidebar-border-open-lg: var(--wui-border-width-1) solid var(--wui-color-grey-3);
       --wui-layout-resize-handle-background: var(--wui-color-grey-7);
+    }
+
+    [data-component="overlay"] {
+      --wui-overlay-background: var(--wui-color-black-a4);
+      --wui-overlay-opacity-starting-style: 0;
+      --wui-overlay-opacity: 1;
     }
 
     [data-component="page"] {

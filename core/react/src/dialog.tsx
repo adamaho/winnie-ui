@@ -1,4 +1,8 @@
-import { ComponentPropsWithRef, ComponentRef, ForwardedRef } from "react";
+import {
+  type ComponentPropsWithRef,
+  type ComponentRef,
+  type ForwardedRef,
+} from "react";
 import {
   Dialog as AriaDialog,
   type DialogProps as AriaDialogProps,

@@ -648,16 +648,16 @@ function LayoutSidebar({
 }
 
 /* -------------------------------------------------------------------------------------------------
- * LayoutMask
+ * LayoutOverlay
  * -----------------------------------------------------------------------------------------------*/
-type LayoutMaskProps = ComponentPropsWithoutRef<"div"> & {
+type LayoutOverlayProps = ComponentPropsWithoutRef<"div"> & {
   /**
-   * Ref to mask element
+   * Ref to overlay element
    */
   ref?: ForwardedRef<ComponentRef<"div">>;
 };
 
-function LayoutMask({ className, ref, ...props }: LayoutMaskProps) {
+function LayoutOverlay({ className, ref, ...props }: LayoutOverlayProps) {
   /**
    * subscribe to app layout context
    */
@@ -684,8 +684,9 @@ function LayoutMask({ className, ref, ...props }: LayoutMaskProps) {
   return (
     <div
       {...mergedProps}
-      className={clsx(className, "wui-layout__mask")}
-      data-slot="mask"
+      className={clsx(className, "wui-layout__overlay")}
+      data-component="overlay"
+      data-slot="overlay"
       ref={ref}
     />
   );
@@ -702,7 +703,7 @@ type LayoutContentProps = Omit<ComponentPropsWithoutRef<"main">, "children"> & {
   children?: ReactNode | ((props: LayoutContentChildrenProps) => ReactNode);
 
   /**
-   * Ref to mask element
+   * Ref to content element
    */
   ref?: ForwardedRef<ComponentRef<"main">>;
 };
@@ -735,7 +736,7 @@ function LayoutContent({
 
 export {
   Layout,
-  LayoutMask,
+  LayoutOverlay,
   LayoutSidebar,
   LayoutContent,
   LayoutSidebarToggle,
@@ -745,7 +746,7 @@ export {
 };
 export type {
   LayoutProps,
-  LayoutMaskProps,
+  LayoutOverlayProps,
   LayoutSidebarProps,
   LayoutContentProps,
   LayoutContentChildrenProps,

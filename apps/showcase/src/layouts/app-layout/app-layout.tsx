@@ -3,7 +3,7 @@ import type { PropsWithChildren } from "react";
 import {
   Layout,
   LayoutContent,
-  LayoutMask,
+  LayoutOverlay,
   LayoutSidebar,
   LayoutSidebarResizeHandle,
   LayoutSidebarToggle,
@@ -21,7 +21,7 @@ import { AppNavigation } from "./app-navigation";
 function AppLayout(props: PropsWithChildren) {
   return (
     <Layout>
-      <LayoutMask />
+      <LayoutOverlay />
       <LayoutSidebar>
         <AppNavigation />
         <LayoutSidebarResizeHandle />

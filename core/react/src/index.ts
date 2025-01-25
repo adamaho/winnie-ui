@@ -28,7 +28,7 @@ export { FieldError } from "./field-error";
 export { Heading } from "./typography/heading";
 export {
   Layout,
-  LayoutMask,
+  LayoutOverlay,
   LayoutSidebar,
   LayoutContent,
   LayoutSidebarToggle,
@@ -109,7 +109,7 @@ export type { FieldErrorProps } from "./field-error";
 export type { HeadingProps } from "./typography/heading";
 export type {
   LayoutProps,
-  LayoutMaskProps,
+  LayoutOverlayProps,
   LayoutSidebarProps,
   LayoutContentProps,
   LayoutSidebarToggleProps,

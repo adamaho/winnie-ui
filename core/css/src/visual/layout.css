@@ -2,21 +2,6 @@
   [data-component="layout"] {
     background: var(--wui-layout-background);
 
-    [data-slot="mask"] {
-      background: var(--wui-layout-mask-background);
-      opacity: var(--wui-layout-mask-opacity-end);
-
-      @media (prefers-reduced-motion: no-preference) {
-        transition: display, opacity;
-        transition-duration: var(--wui-duration-3);
-        transition-timing-function: ease-in-out;
-      }
-
-      @starting-style {
-        opacity: var(--wui-layout-mask-opacity-start);
-      }
-    }
-
     [data-slot="sidebar"] {
       background: transparent;
       box-shadow: none;
