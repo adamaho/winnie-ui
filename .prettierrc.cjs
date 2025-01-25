@@ -24,5 +24,11 @@ module.exports = {
         parser: "astro",
       },
     },
+    {
+      files: ["*.css"],
+      options: {
+        printWidth: 300,
+      },
+    },
   ],
 };

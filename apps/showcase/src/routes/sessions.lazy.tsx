@@ -2,6 +2,11 @@ import {
   Button,
   ButtonIcon,
   ButtonLabel,
+  Dialog,
+  DialogClose,
+  DialogDescription,
+  DialogProvider,
+  DialogTitle,
   PageContent,
   PageHeader,
   PageHeaderActions,
@@ -20,12 +25,21 @@ function RouteComponent() {
     <>
       <PageHeader>
         <PageHeaderActions>
-          <Button>
-            <ButtonIcon>
-              <Plus />
-            </ButtonIcon>
-            <ButtonLabel>New Session</ButtonLabel>
-          </Button>
+          <DialogProvider>
+            <Button>
+              <ButtonIcon>
+                <Plus />
+              </ButtonIcon>
+              <ButtonLabel>New Session</ButtonLabel>
+            </Button>
+            <Dialog>
+              <DialogTitle>New Session</DialogTitle>
+              <DialogDescription>Create a new session to</DialogDescription>
+              <form>
+                <input />
+              </form>
+            </Dialog>
+          </DialogProvider>
         </PageHeaderActions>
       </PageHeader>
       <PageContent>Content</PageContent>

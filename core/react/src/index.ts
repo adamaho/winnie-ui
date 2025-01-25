@@ -16,6 +16,13 @@ export {
   ButtonContext,
 } from "./button";
 export { Checkbox, CheckboxField, CheckboxLabel } from "./checkbox";
+export {
+  DialogProvider,
+  Dialog,
+  DialogTitle,
+  DialogDescription,
+  DialogClose,
+} from "./dialog";
 export { FieldDescription } from "./field-description";
 export { FieldError } from "./field-error";
 export { Heading } from "./typography/heading";
@@ -90,6 +97,13 @@ export type {
   CheckboxFieldProps,
   CheckboxLabelProps,
 } from "./checkbox";
+export type {
+  DialogProviderProps,
+  DialogProps,
+  DialogTitleProps,
+  DialogDescriptionProps,
+  DialogCloseProps,
+} from "./dialog";
 export type { FieldDescriptionProps } from "./field-description";
 export type { FieldErrorProps } from "./field-error";
 export type { HeadingProps } from "./typography/heading";

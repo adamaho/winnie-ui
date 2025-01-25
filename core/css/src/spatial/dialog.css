@@ -1,0 +1,35 @@
+@layer spatial {
+  [data-component="dialog"] {
+    border-radius: min(var(--wui-radius-4), 16px);
+    position: relative;
+    outline: none;
+    width: 100%;
+
+    [data-slot="title"] {
+      font-size: var(--wui-font-size-4);
+      letter-spacing: var(--wui-letter-spacing-9);
+    }
+
+    [data-slot="description"] {
+      font-size: var(--wui-font-size-3);
+    }
+
+    [data-slot="close"] {
+      position: absolute;
+      top: var(--wui-space-2);
+      right: var(--wui-space-2);
+    }
+
+    &[data-width="sm"] {
+      max-width: 50ch;
+    }
+
+    &[data-width="md"] {
+      max-width: 60ch;
+    }
+
+    &[data-width="lg"] {
+      max-width: 70ch;
+    }
+  }
+}

@@ -2,25 +2,30 @@ import { type Row, Zero, createSchema } from "@rocicorp/zero";
 
 import { createTableSchema } from "@rocicorp/zero";
 
-const userSchema = createTableSchema({
-  tableName: "user",
+/* -------------------------------------------------------------------------------------------------
+ * Schema
+ * -----------------------------------------------------------------------------------------------*/
+const sessionsSchema = createTableSchema({
+  tableName: "sessions",
   columns: {
-    id: "string",
-    name: "string",
+    sessionId: "string",
+    duration: "number",
+    stake: "number",
+    win: "number",
   },
-  primaryKey: "id",
+  primaryKey: "sessionId",
 });
 
 const schema = createSchema({
   version: 1,
   tables: {
-    user: userSchema,
+    sessions: sessionsSchema,
   },
 });
 
-export type Schema = typeof schema;
-export type User = Row<typeof schema.tables.user>;
-
+/* -------------------------------------------------------------------------------------------------
+ * Zero
+ * -----------------------------------------------------------------------------------------------*/
 export const zero = new Zero({
   userID: "winnie",
   schema,
@@ -28,3 +33,6 @@ export const zero = new Zero({
   // the schema. Switch to 'idb' for local-persistence.
   kvStore: "mem",
 });
+
+export type Schema = typeof schema;
+export type Session = Row<typeof schema.tables.sessions>;

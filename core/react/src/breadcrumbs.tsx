@@ -37,6 +37,26 @@ type BreadcrumbsProps<T> = AriaBreadcrumbsProps<T> & {
   size?: "sm" | "md" | "lg";
 };
 
+/**
+ * # Breadcrumbs
+ * Provides user navigation context in an application.
+ *
+ * ## Anatomy
+ * Arrange the components in the structure below.
+ *
+ * ```tsx
+ * <Breadcrumbs>
+ *  <Breadcrumb>
+ *    <BreadcrumbLink>
+ *      <BreadcrumbIcon />
+ *      <BreadcrumbLabel />
+ *    </BreadcrumbLink>
+ *  </Breadcrumb>
+ * </Breadcrumbs>
+ * ```
+ *
+ * See {@link https://winnie-ui.com/react/docs/components/breadcrumbs Documentation} for examples.
+ */
 function Breadcrumbs<T extends object>({
   children,
   className,
