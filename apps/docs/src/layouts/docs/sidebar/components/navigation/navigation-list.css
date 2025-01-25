@@ -39,10 +39,7 @@
       padding-left: var(--wui-space-5);
     }
 
-    &:is(
-        [data-current="true"],
-        [data-current="true"][data-collapsible-trigger="true"]
-      ) {
+    &:is([data-current="true"], [data-current="true"][data-collapsible-trigger="true"]) {
       color: var(--wui-color-grey-12);
     }
 

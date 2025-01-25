@@ -69,7 +69,8 @@
         }
 
         &:is([data-hovered], [data-focus-visible]) {
-          [data-slot="label"], [data-slot="description"] {
+          [data-slot="label"],
+          [data-slot="description"] {
             color: var(--wui-listbox-item-color-hovered);
           }
         }

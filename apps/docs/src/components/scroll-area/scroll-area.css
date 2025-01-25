@@ -12,15 +12,7 @@
       height: 100%;
       overscroll-behavior: contain;
       overflow: auto;
-      mask-image: linear-gradient(
-        to bottom,
-        var(--wui-mask-invisible) 0%,
-        var(--wui-mask-ease) calc(var(--wui-scroll-padding) / 2),
-        var(--wui-mask-visible) var(--wui-scroll-padding),
-        var(--wui-mask-visible) calc(100% - var(--wui-scroll-padding)),
-        var(--wui-mask-ease) calc(100% - calc(var(--wui-scroll-padding) / 2)),
-        var(--wui-mask-invisible) 100%
-      );
+      mask-image: linear-gradient(to bottom, var(--wui-mask-invisible) 0%, var(--wui-mask-ease) calc(var(--wui-scroll-padding) / 2), var(--wui-mask-visible) var(--wui-scroll-padding), var(--wui-mask-visible) calc(100% - var(--wui-scroll-padding)), var(--wui-mask-ease) calc(100% - calc(var(--wui-scroll-padding) / 2)), var(--wui-mask-invisible) 100%);
       width: 100%;
 
       .wui-scroll-area-content {
@@ -38,15 +30,7 @@
       width: 100%;
       overscroll-behavior: contain;
       overflow: auto;
-      mask-image: linear-gradient(
-        to right,
-        var(--wui-mask-invisible) 0%,
-        var(--wui-mask-ease) calc(var(--wui-scroll-padding) / 2),
-        var(--wui-mask-visible) var(--wui-scroll-padding),
-        var(--wui-mask-visible) calc(100% - var(--wui-scroll-padding)),
-        var(--wui-mask-ease) calc(100% - calc(var(--wui-scroll-padding) / 2)),
-        var(--wui-mask-invisible) 100%
-      );
+      mask-image: linear-gradient(to right, var(--wui-mask-invisible) 0%, var(--wui-mask-ease) calc(var(--wui-scroll-padding) / 2), var(--wui-mask-visible) var(--wui-scroll-padding), var(--wui-mask-visible) calc(100% - var(--wui-scroll-padding)), var(--wui-mask-ease) calc(100% - calc(var(--wui-scroll-padding) / 2)), var(--wui-mask-invisible) 100%);
       width: 100%;
 
       .wui-scroll-area-content {

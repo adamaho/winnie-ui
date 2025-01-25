@@ -70,11 +70,7 @@
 
       .ace-content-example {
         align-items: center;
-        background: linear-gradient(
-          to bottom right,
-          var(--wui-color-accent-9),
-          var(--wui-color-accent-7)
-        );
+        background: linear-gradient(to bottom right, var(--wui-color-accent-9), var(--wui-color-accent-7));
         border: var(--wui-border-width-1) solid var(--wui-color-accent-4);
         border-radius: min(var(--wui-border-radius-3), 15px);
         display: flex;

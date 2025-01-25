@@ -1,6 +1,8 @@
 @layer visual {
   [data-component="navigation"] {
-    li, ul:not([data-component="navigation-group"]), [data-component="disclosure"] {
+    li,
+    ul:not([data-component="navigation-group"]),
+    [data-component="disclosure"] {
       display: grid;
       grid-template-columns: subgrid;
       grid-column: 1 / -1;
@@ -27,7 +29,9 @@
           transition-timing-function: var(--wui-bezier-1);
         }
 
-        &[data-starting-style], &[data-closed], &[data-ending-style] {
+        &[data-starting-style],
+        &[data-closed],
+        &[data-ending-style] {
           opacity: 0;
           height: 0;
         }

@@ -1,5 +1,6 @@
 @layer base {
-  :root, [data-theme="light"] {
+  :root,
+  [data-theme="light"] {
     --wui-color-blue-1: #fcfdff;
     --wui-color-blue-2: #f5f9ff;
     --wui-color-blue-3: #eaf2ff;
@@ -31,7 +32,8 @@
 
   @supports (color: color(display-p3 1 1 1)) {
     @media (color-gamut: p3) {
-      :root, [data-theme="light"] {
+      :root,
+      [data-theme="light"] {
         --wui-color-blue-1: oklch(99.3% 0.003 259.8);
         --wui-color-blue-2: oklch(98.2% 0.01 259.8);
         --wui-color-blue-3: oklch(96% 0.02 259.8);

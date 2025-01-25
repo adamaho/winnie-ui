@@ -6,32 +6,20 @@
     text-decoration: var(--wui-link-text-decoration);
 
     &[data-hovered] {
-      text-decoration: var(
-        --wui-link-text-decoration-hovered,
-        var(--wui-link-text-decoration)
-      );
+      text-decoration: var(--wui-link-text-decoration-hovered, var(--wui-link-text-decoration));
     }
 
     &[data-pressed] {
-      text-decoration: var(
-        --wui-link-text-decoration-pressed,
-        var(--wui-link-text-decoration)
-      );
+      text-decoration: var(--wui-link-text-decoration-pressed, var(--wui-link-text-decoration));
     }
 
     &[data-current] {
-      text-decoration: var(
-        --wui-link-text-decoration-current,
-        var(--wui-link-text-decoration)
-      );
+      text-decoration: var(--wui-link-text-decoration-current, var(--wui-link-text-decoration));
     }
 
     &[data-disabled] {
       color: var(--wui-typography-normal-color);
-      text-decoration: var(
-        --wui-link-text-decoration-disabled,
-        var(--wui-link-text-decoration)
-      );
+      text-decoration: var(--wui-link-text-decoration-disabled, var(--wui-link-text-decoration));
     }
   }
 }

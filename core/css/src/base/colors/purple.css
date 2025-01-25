@@ -1,5 +1,6 @@
 @layer base {
-  :root, [data-theme="light"] {
+  :root,
+  [data-theme="light"] {
     --wui-color-purple-1: #fdfcff;
     --wui-color-purple-2: #f9f8ff;
     --wui-color-purple-3: #f2efff;
@@ -31,7 +32,8 @@
 
   @supports (color: color(display-p3 1 1 1)) {
     @media (color-gamut: p3) {
-      :root, [data-theme="light"] {
+      :root,
+      [data-theme="light"] {
         --wui-color-purple-1: oklch(99.3% 0.004 292.7);
         --wui-color-purple-2: oklch(98.3% 0.011 292.7);
         --wui-color-purple-3: oklch(96.1% 0.026 292.7);

@@ -1,5 +1,6 @@
 @layer base {
-  :root, [data-theme="light"] {
+  :root,
+  [data-theme="light"] {
     --wui-color-yellow-1: #fefdf9;
     --wui-color-yellow-2: #fffae7;
     --wui-color-yellow-3: #fff4d7;
@@ -31,7 +32,8 @@
 
   @supports (color: color(display-p3 1 1 1)) {
     @media (color-gamut: p3) {
-      :root, [data-theme="light"] {
+      :root,
+      [data-theme="light"] {
         --wui-color-yellow-1: oklch(99.3% 0.005 86.05);
         --wui-color-yellow-2: oklch(98.7% 0.029 86.05);
         --wui-color-yellow-3: oklch(97.2% 0.09 86.05);

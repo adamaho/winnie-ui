@@ -38,8 +38,7 @@
   }
 }
 
-:root[data-theme="light"][data-code-theme="github-light"]
-  .expressive-code:not([data-code-theme="github-dark"]) {
+:root[data-theme="light"][data-code-theme="github-light"] .expressive-code:not([data-code-theme="github-dark"]) {
   --wui-ec-background: var(--wui-color-grey-2);
   --wui-ec-border-color: var(--wui-color-grey-5);
 
@@ -61,8 +60,7 @@
   --ec-tm-markBrdCol: var(--wui-color-accent-a8);
 }
 
-:root[data-theme="dark"][data-code-theme="github-dark"]
-  .expressive-code:not([data-code-theme="github-light"]) {
+:root[data-theme="dark"][data-code-theme="github-dark"] .expressive-code:not([data-code-theme="github-light"]) {
   --wui-ec-background: var(--wui-color-grey-2);
   --wui-ec-border-color: var(--wui-color-grey-5);
 

@@ -1,5 +1,6 @@
 @layer base {
-  :root, [data-theme="light"] {
+  :root,
+  [data-theme="light"] {
     --wui-color-pink-1: #fffcfd;
     --wui-color-pink-2: #fef7f9;
     --wui-color-pink-3: #ffe9f1;
@@ -31,7 +32,8 @@
 
   @supports (color: color(display-p3 1 1 1)) {
     @media (color-gamut: p3) {
-      :root, [data-theme="light"] {
+      :root,
+      [data-theme="light"] {
         --wui-color-pink-1: oklch(99.4% 0.003 354.3);
         --wui-color-pink-2: oklch(98.2% 0.008 354.3);
         --wui-color-pink-3: oklch(95.4% 0.026 354.3);

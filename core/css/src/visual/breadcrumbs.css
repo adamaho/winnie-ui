@@ -27,7 +27,7 @@
           color: var(--wui-breadcrumb-icon-color-hovered);
         }
       }
-      
+
       &:is([data-pressed], :active, &:has([data-slot="link"]:is([data-pressed], :active))):not([data-disabled], [aria-disabled="true"], &:has([data-slot="link"]:is([data-disabled], [aria-disabled="true"]))) {
         background: var(--wui-breadcrumb-background-pressed);
 

@@ -38,11 +38,7 @@
     --padding-inline: var(--wui-space-5);
 
     aspect-ratio: 9 / 16;
-    background: linear-gradient(
-      to bottom,
-      var(--now-playing-background-1) 40%,
-      var(--wui-color-accent-2)
-    );
+    background: linear-gradient(to bottom, var(--now-playing-background-1) 40%, var(--wui-color-accent-2));
     border: var(--wui-border-width-1) solid var(--wui-color-grey-5);
     border-radius: min(var(--wui-border-radius-7), var(--max-radius));
     box-shadow: var(--wui-shadow-2);
@@ -60,10 +56,7 @@
 
       .now-playing-cover {
         aspect-ratio: 1 / 1;
-        border-radius: min(
-          calc(var(--wui-border-radius-7) - var(--wui-space-4)),
-          calc(var(--max-radius) - var(--wui-space-4))
-        );
+        border-radius: min(calc(var(--wui-border-radius-7) - var(--wui-space-4)), calc(var(--max-radius) - var(--wui-space-4)));
         height: 100%;
         width: 100%;
       }

@@ -16,7 +16,7 @@
       display: grid;
       grid-template-columns: 1fr auto;
       height: var(--wui-page-header-height);
-      padding-left: calc(var(--wui-space-9) + var(--wui-space-3)); 
+      padding-left: calc(var(--wui-space-9) + var(--wui-space-3));
       padding-right: var(--wui-space-4);
       width: 100%;
 

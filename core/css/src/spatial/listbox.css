@@ -173,7 +173,8 @@
         height: auto;
         padding: var(--wui-listbox-item-space, var(--wui-listbox-item-md-space));
 
-        [data-slot="indicator"], [data-slot="icon"] {
+        [data-slot="indicator"],
+        [data-slot="icon"] {
           align-self: start;
         }
       }

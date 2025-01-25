@@ -27,7 +27,7 @@ module.exports = {
     {
       files: ["*.css"],
       options: {
-        printWidth: 300,
+        printWidth: 1000,
       },
     },
   ],
