@@ -1,23 +1,57 @@
 @layer spatial {
   [data-component="dialog"] {
-    border-radius: min(var(--wui-radius-4), 16px);
+    --wui-dialog-space: var(--wui-space-4);
+    --wui-dialog-content-space: var(--wui-space-7);
+    --wui-dialog-header-height: calc(18px * var(--wui-scale) + var(--wui-dialog-space) * 2);
+    --wui-dialog-footer-height: calc(32px * var(--wui-scale) + var(--wui-dialog-space) * 2);
+
+    border-radius: min(var(--wui-border-radius-4), 16px);
     position: relative;
     outline: none;
     width: 100%;
 
+    [data-component="header"] {
+      height: var(--wui-dialog-header-height);
+    }
+
     [data-slot="title"] {
       font-size: var(--wui-font-size-4);
       letter-spacing: var(--wui-letter-spacing-9);
+      line-height: 1;
+      padding-inline: var(--wui-dialog-content-space);
     }
 
     [data-slot="description"] {
       font-size: var(--wui-font-size-3);
+      padding-inline: var(--wui-dialog-content-space);
     }
 
     [data-slot="close"] {
       position: absolute;
-      top: var(--wui-space-2);
-      right: var(--wui-space-2);
+      top: var(--wui-dialog-space);
+      right: var(--wui-dialog-space);
+    }
+
+    [data-component="content"] {
+      padding: var(--wui-dialog-content-space);
+    }
+
+    [data-component="footer"] {
+      align-items: center;
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      height: var(--wui-dialog-footer-height);
+      margin-top: var(--wui-dialog-content-space);
+      padding-inline: var(--wui-dialog-space);
+
+      [data-slot="cancel"] {
+        grid-column: 2;
+      }
+
+      [data-slot="action"] {
+        grid-column: 3;
+        margin-left: var(--wui-space-3);
+      }
     }
 
     &[data-width="sm"] {
@@ -30,6 +64,23 @@
 
     &[data-width="lg"] {
       max-width: 70ch;
+    }
+
+    &:not([data-component="header"]) {
+      padding-top: var(--wui-dialog-content-space);
+    }
+
+    &:has([data-component="content"]) {
+      [data-component="footer"] {
+        margin-top: 0;
+      }
+    }
+
+    /* title description */
+    &:has([data-slot="title"] + [data-slot="description"]) {
+      [data-slot="description"] {
+        margin-top: var(--wui-space-3);
+      }
     }
   }
 }

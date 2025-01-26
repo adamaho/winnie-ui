@@ -67,7 +67,7 @@
       left: var(--wui-space-4);
       top: var(--wui-space-4);
 
-      @media (min-width: 768px) {
+      @media (min-width: 1024px) {
         left: var(--wui-space-4);
         top: var(--wui-space-4);
       }
@@ -81,7 +81,7 @@
       width: 100%;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       [data-slot="sidebar"] {
         &[data-state="docked"] {
           left: 0;

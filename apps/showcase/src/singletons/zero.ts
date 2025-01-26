@@ -12,6 +12,7 @@ const sessionsSchema = createTableSchema({
     duration: "number",
     stake: "number",
     win: "number",
+    notes: "string",
   },
   primaryKey: "sessionId",
 });

@@ -4,7 +4,9 @@ import {
   ButtonLabel,
   Dialog,
   DialogClose,
+  DialogContent,
   DialogDescription,
+  DialogFooter,
   DialogProvider,
   DialogTitle,
   PageContent,
@@ -32,11 +34,33 @@ function RouteComponent() {
               </ButtonIcon>
               <ButtonLabel>New Session</ButtonLabel>
             </Button>
-            <Dialog>
+            <Dialog width="sm">
               <DialogTitle>New Session</DialogTitle>
-              <DialogDescription>Create a new session to</DialogDescription>
+              <DialogDescription>
+                Create a new session to start a new conversation.
+              </DialogDescription>
+              <DialogClose />
               <form>
-                <input />
+                <DialogContent>Content</DialogContent>
+                <DialogFooter>
+                  {(state) => {
+                    return (
+                      <>
+                        <Button
+                          color="grey"
+                          variant="outlined"
+                          data-slot="cancel"
+                          onPress={state.close}
+                        >
+                          <ButtonLabel>Cancel</ButtonLabel>
+                        </Button>
+                        <Button data-slot="action" onPress={state.close}>
+                          <ButtonLabel>Save</ButtonLabel>
+                        </Button>
+                      </>
+                    );
+                  }}
+                </DialogFooter>
               </form>
             </Dialog>
           </DialogProvider>

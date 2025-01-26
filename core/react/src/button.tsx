@@ -39,6 +39,13 @@ type WinnieButtonProps = {
     | "grey";
 
   /**
+   * Changes the slot of the button
+   *
+   * @default undefined
+   */
+  "data-slot"?: string;
+
+  /**
    * Changes the size of the button
    *
    * @default undefined
@@ -112,7 +119,7 @@ function Button({
       <AriaButton
         {...props}
         className={clsx("wui-button", className)}
-        data-slot={props.slot}
+        data-slot={props["data-slot"]}
         data-accent-color={color}
         data-component="button"
         data-radius={radius}

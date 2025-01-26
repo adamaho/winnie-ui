@@ -19,9 +19,12 @@ export { Checkbox, CheckboxField, CheckboxLabel } from "./checkbox";
 export {
   DialogProvider,
   Dialog,
+  DialogHeader,
   DialogTitle,
   DialogDescription,
+  DialogContent,
   DialogClose,
+  DialogFooter,
 } from "./dialog";
 export { FieldDescription } from "./field-description";
 export { FieldError } from "./field-error";
@@ -100,9 +103,12 @@ export type {
 export type {
   DialogProviderProps,
   DialogProps,
+  DialogHeaderProps,
   DialogTitleProps,
   DialogDescriptionProps,
+  DialogContentProps,
   DialogCloseProps,
+  DialogFooterProps,
 } from "./dialog";
 export type { FieldDescriptionProps } from "./field-description";
 export type { FieldErrorProps } from "./field-error";

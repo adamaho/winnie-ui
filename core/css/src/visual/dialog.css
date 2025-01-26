@@ -1,0 +1,47 @@
+@layer visual {
+  [data-component="dialog"] {
+    background: var(--wui-dialog-background);
+    border: var(--wui-dialog-border);
+    box-shadow: var(--wui-dialog-box-shadow);
+    opacity: var(--wui-dialog-opacity);
+    transform: var(--wui-dialog-transform);
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition: transform, opacity;
+      transition-duration: var(--wui-dialog-transition-duration);
+      transition-timing-function: var(--wui-dialog-transition-timing-function);
+    }
+
+    [data-component="header"] {
+      border-bottom: var(--wui-dialog-header-border);
+    }
+
+    [data-slot="title"] {
+      color: var(--wui-dialog-title-color);
+      font-weight: var(--wui-dialog-title-font-weight);
+    }
+
+    [data-slot="description"] {
+      color: var(--wui-dialog-description-color);
+      font-weight: var(--wui-dialog-description-font-weight);
+    }
+
+    [data-component="content"] {
+      padding-inline: var(--wui-dialog-content-space);
+    }
+
+    [data-component="footer"] {
+      border-top: var(--wui-dialog-footer-border);
+    }
+  }
+
+  [data-component="modal"] {
+    &[data-entering],
+    &[data-exiting] {
+      [data-component="dialog"] {
+        opacity: var(--wui-dialog-opacity-starting-style);
+        transform: var(--wui-dialog-transform-starting-style);
+      }
+    }
+  }
+}

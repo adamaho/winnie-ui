@@ -11,7 +11,7 @@
     --wui-button-lg-font-size: var(--wui-font-size-3);
 
     /* height */
-    --wui-button-sm-height: calc(24px * var(--wui-scale));
+    --wui-button-sm-height: calc(26px * var(--wui-scale));
     --wui-button-md-height: calc(32px * var(--wui-scale));
     --wui-button-lg-height: calc(40px * var(--wui-scale));
 
@@ -35,6 +35,7 @@
     font-size: var(--wui-button-font-size, var(--wui-button-md-font-size));
     gap: var(--wui-button-space, var(--wui-button-md-space));
     height: var(--wui-button-height, var(--wui-button-md-height));
+    max-width: min-content;
     min-width: max-content;
     flex-shrink: 0;
     padding-inline: var(--wui-button-space, var(--wui-button-md-space));
@@ -98,6 +99,7 @@
       grid-template-columns: 1fr;
       height: var(--wui-button-height, var(--wui-button-md-height));
       justify-items: center;
+      max-width: initial;
       padding: 0;
       width: var(--wui-button-height, var(--wui-button-md-height));
     }
@@ -127,6 +129,7 @@
     }
 
     &[data-width="full"] {
+      max-width: initial;
       grid-template-columns: repeat(3, auto);
       width: 100%;
     }

@@ -6,23 +6,23 @@ documentation:
     {
       label: Link,
       link: https://react-spectrum.adobe.com/react-aria/Link.html,
-      icon: "react-aria"
+      icon: "react-aria",
     },
     {
       label: Collapsible,
       link: https://base-ui.com/react/components/collapsible,
-      icon: base-ui
+      icon: base-ui,
     },
   ]
 ---
 
 import {
-  NavigationDemo,
-  NavigationIconDemo,
-  NavigationGroupDemo,
-  NavigationDisclosureDemo,
   NavigationActionDemo,
-  NavigationCurrentDemo
+  NavigationCurrentDemo,
+  NavigationDemo,
+  NavigationDisclosureDemo,
+  NavigationGroupDemo,
+  NavigationIconDemo,
 } from "~/demos/navigation";
 
 import Demo from "~/components/demo/demo.astro";
@@ -119,7 +119,7 @@ Add an icon with the `NavigationItemIcon` slot component as a child of the `Navi
 <Demo>
   <NavigationIconDemo client:load />
   <Fragment slot="footer">
-    ```tsx mark={3-5}
+    ```tsx mark={3 - 5}
     <Navigation>
       <NavigationItem>
         <NavigationItemIcon>
@@ -140,7 +140,7 @@ Add a group with the `NavigationGroup` component.
 <Demo>
   <NavigationGroupDemo client:load />
   <Fragment slot="footer">
-    ```tsx mark={6-16}
+    ```tsx mark={6 - 16}
     <Navigation>
       ...
       <NavigationItem>
@@ -169,7 +169,7 @@ Add a disclosure using the `NavigationDisclosure` components.
 <Demo>
   <NavigationDisclosureDemo client:load />
   <Fragment slot="footer">
-    ```tsx mark={3-20}
+    ```tsx mark={3 - 20}
     <Navigation>
       ...
       <NavigationDisclosure>
@@ -202,7 +202,7 @@ Add actions to as a child to `NavigationItem` or `NavigationDisclosureTrigger` c
 <Demo>
   <NavigationActionDemo client:load />
   <Fragment slot="footer">
-    ```tsx mark={8-24}
+    ```tsx mark={8 - 24}
     <Navigation>
       ...
       <NavigationDisclosure>
@@ -211,7 +211,7 @@ Add actions to as a child to `NavigationItem` or `NavigationDisclosureTrigger` c
             Locations
           </NavigationDisclosureTriggerLabel>
           <MenuProvider>
-            <Button color="grey" variant="plain" slot="action" size="sm">
+            <Button color="grey" variant="plain" data-slot="action" size="sm">
               <ButtonIcon>
                 <DotGrid1x3Horizontal />
               </ButtonIcon>
@@ -246,8 +246,8 @@ Use the `isCurrent` prop to inform the user which navigation item represents the
     <Navigation>
       ...
       <NavigationItem isCurrent>
-      	<NavigationItemIcon>
-       		<Cocktail />
+        <NavigationItemIcon>
+          <Cocktail />
         </NavigationItemIcon>
         <NavigationItemLabel>Drinks</NavigationItemLabel>
       </NavigationItem>
@@ -266,12 +266,12 @@ Refer to Base UI [documentation](https://base-ui.com/react/components/collapsibl
 
 Refer to React Aria Components [documentation](https://react-spectrum.adobe.com/react-aria/Link.html#props) for more details about the other props and events available on NavigationItem.
 
-| Prop        | Type      | Default     |
-| ----------- | --------- | ----------- |
-| `isCurrent` | `boolean` | `false`     |
+| Prop        | Type      | Default |
+| ----------- | --------- | ------- |
+| `isCurrent` | `boolean` | `false` |
 
-| Selector             | Description                                              |
-| -------------------- | -------------------------------------------------------- |
+| Selector             | Description                                                         |
+| -------------------- | ------------------------------------------------------------------- |
 | `data-hovered`       | When the navigation item is hovered with mouse                      |
 | `data-pressed`       | When the navigation item is pressed                                 |
 | `data-focused`       | When the navigation item is focused with either a keyboard or mouse |

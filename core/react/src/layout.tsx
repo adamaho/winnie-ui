@@ -26,7 +26,7 @@ import { Button, ButtonIcon } from "./button";
 /* -------------------------------------------------------------------------------------------------
  * Constants
  * -----------------------------------------------------------------------------------------------*/
-const DOCKED_BREAKPOINT = "(min-width: 768px)";
+const DOCKED_BREAKPOINT = "(min-width: 1024px)";
 const MIN_SIDEBAR_WIDTH = 220;
 const DEFAULT_SIDEBAR_WIDTH = 296;
 const MAX_SIDEBAR_WIDTH = 320;
@@ -495,7 +495,7 @@ function LayoutSidebarToggle({
     <Button
       {...props}
       className={clsx(className, "wui-layout__sidebar-toggle")}
-      slot="toggle"
+      data-slot="toggle"
       color="grey"
       variant="plain"
       onPress={onPress}

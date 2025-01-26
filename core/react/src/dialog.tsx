@@ -2,6 +2,8 @@ import {
   type ComponentPropsWithRef,
   type ComponentRef,
   type ForwardedRef,
+  ReactNode,
+  useContext,
 } from "react";
 import {
   Dialog as AriaDialog,
@@ -13,6 +15,7 @@ import {
   Modal as AriaModal,
   ModalOverlay as AriaModalOverlay,
   type ModalOverlayProps,
+  OverlayTriggerStateContext,
 } from "react-aria-components";
 
 import { CrossLarge } from "@winnie-ui/icons/react/line";
@@ -105,6 +108,34 @@ function Dialog({
 }
 
 /* -------------------------------------------------------------------------------------------------
+ * DialogHeader
+ * -----------------------------------------------------------------------------------------------*/
+type DialogHeaderProps = ComponentPropsWithRef<"header"> & {
+  /**
+   * Ref to header element
+   */
+  ref?: ForwardedRef<ComponentRef<"header">>;
+};
+
+function DialogHeader({
+  className,
+  children,
+  ref,
+  ...props
+}: DialogHeaderProps) {
+  return (
+    <header
+      {...props}
+      className={clsx("wui-dialog__header", className)}
+      data-component="header"
+      ref={ref}
+    >
+      {children}
+    </header>
+  );
+}
+
+/* -------------------------------------------------------------------------------------------------
  * DialogTitle
  * -----------------------------------------------------------------------------------------------*/
 type DialogTitleProps = AriaHeadingProps & {
@@ -157,22 +188,45 @@ function DialogDescription({
 }
 
 /* -------------------------------------------------------------------------------------------------
+ * DialogContent
+ * -----------------------------------------------------------------------------------------------*/
+type DialogContentProps = ComponentPropsWithRef<"div"> & {
+  /**
+   * Ref to content element
+   */
+  ref?: ForwardedRef<ComponentRef<"div">>;
+};
+
+function DialogContent({
+  className,
+  children,
+  ref,
+  ...props
+}: DialogContentProps) {
+  return (
+    <div
+      {...props}
+      className={clsx("wui-dialog__content", className)}
+      data-component="content"
+      ref={ref}
+    >
+      {children}
+    </div>
+  );
+}
+
+/* -------------------------------------------------------------------------------------------------
  * DialogClose
  * -----------------------------------------------------------------------------------------------*/
 type DialogCloseProps = ButtonProps;
 
-function DialogClose({
-  className,
-  children,
-  ref,
-  slot = "close",
-  ...props
-}: DialogCloseProps) {
+function DialogClose({ className, children, ref, ...props }: DialogCloseProps) {
   return (
     <Button
       {...props}
       className={clsx("wui-dialog__close", className)}
-      slot={slot}
+      data-slot="close"
+      slot="close"
       color="grey"
       size="sm"
       variant="soft"
@@ -188,12 +242,62 @@ function DialogClose({
 /* -------------------------------------------------------------------------------------------------
  * DialogFooter
  * -----------------------------------------------------------------------------------------------*/
+type DialogFooterRenderProps = {
+  close: () => void;
+};
 
-export { DialogProvider, Dialog, DialogTitle, DialogDescription, DialogClose };
+type DialogFooterProps = Omit<ComponentPropsWithRef<"footer">, "children"> & {
+  /**
+   * Children of the footer
+   */
+  children?: ReactNode | ((props: DialogFooterRenderProps) => ReactNode);
+
+  /**
+   * Ref to footer element
+   */
+  ref?: ForwardedRef<ComponentRef<"footer">>;
+};
+
+function DialogFooter({
+  className,
+  children,
+  ref,
+  ...props
+}: DialogFooterProps) {
+  /**
+   * Get an instance of dialog state
+   */
+  const { close } = useContext(OverlayTriggerStateContext)!;
+
+  return (
+    <footer
+      {...props}
+      className={clsx("wui-dialog__footer", className)}
+      data-component="footer"
+      ref={ref}
+    >
+      {typeof children === "function" ? children({ close }) : children}
+    </footer>
+  );
+}
+
+export {
+  DialogProvider,
+  Dialog,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogContent,
+  DialogClose,
+  DialogFooter,
+};
 export type {
   DialogProviderProps,
   DialogProps,
+  DialogHeaderProps,
   DialogTitleProps,
   DialogDescriptionProps,
+  DialogContentProps,
   DialogCloseProps,
+  DialogFooterProps,
 };
