@@ -79,7 +79,7 @@
     /* title description */
     &:has([data-slot="title"] + [data-slot="description"]) {
       [data-slot="description"] {
-        margin-top: var(--wui-space-3);
+        margin-top: var(--wui-space-5);
       }
     }
   }

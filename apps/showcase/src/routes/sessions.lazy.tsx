@@ -3,7 +3,6 @@ import {
   ButtonIcon,
   ButtonLabel,
   Dialog,
-  DialogClose,
   DialogContent,
   DialogDescription,
   DialogFooter,
@@ -28,7 +27,7 @@ function RouteComponent() {
       <PageHeader>
         <PageHeaderActions>
           <DialogProvider>
-            <Button>
+            <Button variant="solid">
               <ButtonIcon>
                 <Plus />
               </ButtonIcon>
@@ -37,9 +36,9 @@ function RouteComponent() {
             <Dialog width="sm">
               <DialogTitle>New Session</DialogTitle>
               <DialogDescription>
-                Create a new session to start a new conversation.
+                Track your daily poker sessions and monitor your progress over
+                time.
               </DialogDescription>
-              <DialogClose />
               <form>
                 <DialogContent>Content</DialogContent>
                 <DialogFooter>
