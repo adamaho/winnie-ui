@@ -16,7 +16,7 @@
     min-height: 0;
     width: 100%;
 
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       --wui-layout-sidebar-width: 120px;
     }
 
@@ -47,7 +47,7 @@
         box-shadow: var(--wui-shadow-3);
         top: 0;
 
-        @media (min-width: 768px) {
+        @media (min-width: 1024px) {
           border: var(--wui-border-width-1) solid var(--wui-color-grey-5);
           height: calc(100% - var(--wui-space-6));
           top: var(--wui-space-6);

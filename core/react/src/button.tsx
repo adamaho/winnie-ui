@@ -164,6 +164,62 @@ function ButtonLabel({
 }
 
 /* -------------------------------------------------------------------------------------------------
+ * ButtonShortcut
+ * -----------------------------------------------------------------------------------------------*/
+type ButtonShortcutProps = ComponentPropsWithoutRef<"kbd"> & {
+  /**
+   * Ref to kbd element
+   */
+  ref?: ForwardedRef<ComponentRef<"kbd">>;
+};
+
+function ButtonShortcut({
+  className,
+  children,
+  ref,
+  ...props
+}: PropsWithChildren<ButtonShortcutProps>) {
+  return (
+    <kbd
+      {...props}
+      className={clsx("wui-button__shortcut", className)}
+      data-slot="shortcut"
+      ref={ref}
+    >
+      {children}
+    </kbd>
+  );
+}
+
+/* -------------------------------------------------------------------------------------------------
+ * ButtonKbd
+ * -----------------------------------------------------------------------------------------------*/
+type ButtonKbdProps = ComponentPropsWithoutRef<"kbd"> & {
+  /**
+   * Ref to kbd element
+   */
+  ref?: ForwardedRef<ComponentRef<"kbd">>;
+};
+
+function ButtonKbd({
+  className,
+  children,
+  ref,
+  ...props
+}: PropsWithChildren<ButtonKbdProps>) {
+  return (
+    <kbd
+      {...props}
+      className={clsx("wui-button__Kbd", className)}
+      data-component="kbd"
+      ref={ref}
+    >
+      {children}
+    </kbd>
+  );
+}
+
+/* -------------------------------------------------------------------------------------------------
  * ButtonPending
  * -----------------------------------------------------------------------------------------------*/
 type ButtonPendingProps = ComponentPropsWithoutRef<"span"> & {
@@ -230,11 +286,21 @@ const ButtonIcon = ({
   );
 };
 
-export { Button, ButtonLabel, ButtonIcon, ButtonPending, ButtonContext };
+export {
+  Button,
+  ButtonLabel,
+  ButtonIcon,
+  ButtonPending,
+  ButtonShortcut,
+  ButtonKbd,
+  ButtonContext,
+};
 export type {
   ButtonProps,
   ButtonLabelProps,
   ButtonIconProps,
   ButtonPendingProps,
+  ButtonShortcutProps,
+  ButtonKbdProps,
   WinnieButtonProps,
 };

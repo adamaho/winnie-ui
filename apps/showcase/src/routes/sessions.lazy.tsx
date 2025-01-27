@@ -1,7 +1,9 @@
 import {
   Button,
   ButtonIcon,
+  ButtonKbd,
   ButtonLabel,
+  ButtonShortcut,
   Dialog,
   DialogContent,
   DialogDescription,
@@ -27,11 +29,14 @@ function RouteComponent() {
       <PageHeader>
         <PageHeaderActions>
           <DialogProvider>
-            <Button variant="solid">
+            <Button variant="outlined" color="grey">
               <ButtonIcon>
                 <Plus />
               </ButtonIcon>
               <ButtonLabel>New Session</ButtonLabel>
+              <ButtonShortcut>
+                <ButtonKbd>C</ButtonKbd>
+              </ButtonShortcut>
             </Button>
             <Dialog width="sm">
               <DialogTitle>New Session</DialogTitle>
@@ -40,7 +45,7 @@ function RouteComponent() {
                 time.
               </DialogDescription>
               <form>
-                <DialogContent>Content</DialogContent>
+                <DialogContent></DialogContent>
                 <DialogFooter>
                   {(state) => {
                     return (
@@ -54,7 +59,10 @@ function RouteComponent() {
                           <ButtonLabel>Cancel</ButtonLabel>
                         </Button>
                         <Button data-slot="action" onPress={state.close}>
-                          <ButtonLabel>Save</ButtonLabel>
+                          <ButtonLabel>Create session</ButtonLabel>
+                          <ButtonShortcut>
+                            <ButtonKbd>⮐</ButtonKbd>
+                          </ButtonShortcut>
                         </Button>
                       </>
                     );
@@ -65,7 +73,7 @@ function RouteComponent() {
           </DialogProvider>
         </PageHeaderActions>
       </PageHeader>
-      <PageContent>Content</PageContent>
+      <PageContent></PageContent>
     </>
   );
 }

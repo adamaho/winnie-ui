@@ -5,7 +5,7 @@
     flex-direction: column;
     flex: 1;
 
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       border-radius: min(var(--wui-border-radius-3), 18px);
     }
 

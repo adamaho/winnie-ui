@@ -58,7 +58,7 @@
   width: 100%;
   z-index: 3;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     max-height: 85dvh;
     min-width: 250px;
     max-width: 600px;

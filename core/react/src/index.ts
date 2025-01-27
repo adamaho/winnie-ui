@@ -13,6 +13,8 @@ export {
   ButtonLabel,
   ButtonIcon,
   ButtonPending,
+  ButtonShortcut,
+  ButtonKbd,
   ButtonContext,
 } from "./button";
 export { Checkbox, CheckboxField, CheckboxLabel } from "./checkbox";
@@ -93,6 +95,8 @@ export type {
   ButtonLabelProps,
   ButtonIconProps,
   ButtonPendingProps,
+  ButtonShortcutProps,
+  ButtonKbdProps,
   WinnieButtonProps,
 } from "./button";
 export type {

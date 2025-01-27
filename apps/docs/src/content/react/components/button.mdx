@@ -18,6 +18,7 @@ import {
   ButtonRadiusDemo,
   ButtonColorDemo,
   ButtonIconOnlyDemo,
+  ButtonShortcutDemo,
   ButtonDisabledDemo,
   ButtonPendingDemo,
   ButtonWidthDemo,
@@ -49,6 +50,8 @@ import {
   ButtonIcon,
   ButtonLabel,
   ButtonPending,
+  ButtonShortcut,
+  ButtonKbd
 } from "@winnie-ui/react";
 ```
 
@@ -60,6 +63,9 @@ Arrange the components in the structure below.
 <Button>
   <ButtonIcon />
   <ButtonLabel />
+  <ButtonShortcut>
+    <ButtonKbd />
+  </ButtonShortcut>
   <ButtonPending />
 </Button>
 ```
@@ -125,7 +131,7 @@ Add an icon with the `ButtonIcon` slot component as a child of the button.
 <Demo>
   <NewDishButton client:load />
   <Fragment slot="footer">
-    ```tsx {2 - 4}
+    ```tsx {2-4}
     <Button>
       <ButtonIcon>
         <Utensils />
@@ -143,11 +149,29 @@ Create an icon button by only passing an icon with the `ButtonIcon` slot compone
 <Demo>
   <ButtonIconOnlyDemo client:load />
   <Fragment slot="footer">
-    ```tsx {2 - 4}
+    ```tsx {2-4}
     <Button>
       <ButtonIcon>
         <Utensils />
       </ButtonIcon>
+    </Button>
+    ```
+  </Fragment>
+</Demo>
+
+### Shortcuts 
+
+Add shortcut identifiers to your button using the `ButtonShortcut` component slot and `ButtonKbd` component. 
+
+<Demo>
+  <ButtonShortcutDemo client:load />
+  <Fragment slot="footer">
+    ```tsx {3-5}
+    <Button>
+      ...
+      <ButtonShortcut>
+        <ButtonKbd>C</ButtonKbd>
+      </ButtonShortcut> 
     </Button>
     ```
   </Fragment>
@@ -173,7 +197,7 @@ If a child of the button is rendered with the `ButtonPending` slot component, an
 <Demo>
   <ButtonPendingDemo client:load />
   <Fragment slot="footer">
-    ```tsx {3 - 5} ins=isPending
+    ```tsx {3-5} ins=isPending
     <Button isPending>
       ...
       <ButtonPending>

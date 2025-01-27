@@ -3,7 +3,7 @@
     background: var(--wui-page-background);
     position: relative;
 
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       border: var(--wui-page-border);
       box-shadow: var(--wui-page-box-shadow);
     }

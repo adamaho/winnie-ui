@@ -11,7 +11,7 @@
         border-right: var(--wui-layout-sidebar-border-right-open);
         box-shadow: var(--wui-layout-sidebar-box-shadow-open);
 
-        @media (min-width: 768px) {
+        @media (min-width: 1024px) {
           border: var(--wui-layout-sidebar-border-open-lg);
         }
       }

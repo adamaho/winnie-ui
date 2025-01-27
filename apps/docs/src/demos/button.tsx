@@ -2,11 +2,18 @@ import {
   Button,
   ButtonContext,
   ButtonIcon,
+  ButtonKbd,
   ButtonLabel,
   ButtonPending,
+  ButtonShortcut,
 } from "@winnie-ui/react";
 
-import { ForkKnife, Loader, SettingsGear3 } from "@winnie-ui/icons/react/solid";
+import {
+  ForkKnife,
+  Loader,
+  Plus,
+  SettingsGear3,
+} from "@winnie-ui/icons/react/solid";
 
 /* -------------------------------------------------------------------------------------------------
  * NewDishButton
@@ -151,6 +158,58 @@ export function ButtonColorDemo() {
       </Button>
       <Button variant="soft" color="grey">
         <ButtonLabel>Edit Dish</ButtonLabel>
+      </Button>
+    </div>
+  );
+}
+
+/* -------------------------------------------------------------------------------------------------
+ * ButtonShortcutDemo
+ * -----------------------------------------------------------------------------------------------*/
+export function ButtonShortcutDemo() {
+  return (
+    <div
+      style={{
+        display: "flex",
+        alignItems: "flex-start",
+        gap: "var(--wui-space-4)",
+      }}
+    >
+      <Button>
+        <ButtonIcon>
+          <Plus />
+        </ButtonIcon>
+        <ButtonLabel>New Dish</ButtonLabel>
+        <ButtonShortcut>
+          <ButtonKbd>C</ButtonKbd>
+        </ButtonShortcut>
+      </Button>
+      <Button variant="soft">
+        <ButtonIcon>
+          <Plus />
+        </ButtonIcon>
+        <ButtonLabel>New Dish</ButtonLabel>
+        <ButtonShortcut>
+          <ButtonKbd>C</ButtonKbd>
+        </ButtonShortcut>
+      </Button>
+      <Button variant="outlined">
+        <ButtonIcon>
+          <Plus />
+        </ButtonIcon>
+        <ButtonLabel>New Dish</ButtonLabel>
+        <ButtonShortcut>
+          <ButtonKbd>C</ButtonKbd>
+        </ButtonShortcut>
+      </Button>
+      <Button variant="plain">
+        <ButtonIcon>
+          <Plus />
+        </ButtonIcon>
+        <ButtonLabel>New Dish</ButtonLabel>
+        <ButtonShortcut>
+          <ButtonKbd>C</ButtonKbd>
+        </ButtonShortcut>
       </Button>
     </div>
   );
