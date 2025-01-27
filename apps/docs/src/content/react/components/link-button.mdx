@@ -12,6 +12,7 @@ import {
   LinkButtonRadiusDemo,
   LinkButtonColorDemo,
   LinkButtonIconOnlyDemo,
+  LinkButtonShortcutDemo,
   LinkButtonDisabledDemo,
   LinkButtonWidthDemo,
 } from "~/demos/link-button";
@@ -144,6 +145,26 @@ Create an icon button by only passing an icon with the `LinkButtonIcon` slot com
     ```
   </Fragment>
 </Demo>
+
+### Shortcuts 
+
+Add shortcut identifiers to your button using the `LinkButtonShortcut` component slot and `LinkButtonKbd` component. 
+
+<Demo>
+  <LinkButtonShortcutDemo client:load />
+  <Fragment slot="footer">
+    ```tsx {3-5}
+    <LinkButton>
+      ...
+      <LinkButtonShortcut>
+        <LinkButtonKbd>C</LinkButtonKbd>
+      </LinkButtonShortcut> 
+    </LinkButton>
+    ```
+  </Fragment>
+</Demo>
+
+
 
 ### Disabled
 

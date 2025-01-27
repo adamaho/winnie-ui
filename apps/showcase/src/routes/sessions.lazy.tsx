@@ -57,10 +57,14 @@ function RouteComponent() {
                           onPress={state.close}
                         >
                           <ButtonLabel>Cancel</ButtonLabel>
+                          <ButtonShortcut>
+                            <ButtonKbd>Esc</ButtonKbd>
+                          </ButtonShortcut>
                         </Button>
                         <Button data-slot="action" onPress={state.close}>
                           <ButtonLabel>Create session</ButtonLabel>
                           <ButtonShortcut>
+                            <ButtonKbd>⌘</ButtonKbd>
                             <ButtonKbd>⮐</ButtonKbd>
                           </ButtonShortcut>
                         </Button>

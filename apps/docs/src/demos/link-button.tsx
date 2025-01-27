@@ -2,10 +2,12 @@ import {
   LinkButton,
   LinkButtonContext,
   LinkButtonIcon,
+  LinkButtonKbd,
   LinkButtonLabel,
+  LinkButtonShortcut,
 } from "@winnie-ui/react";
 
-import { ForkKnife, SettingsGear3 } from "@winnie-ui/icons/react/solid";
+import { ForkKnife, Plus, SettingsGear3 } from "@winnie-ui/icons/react/solid";
 
 /* -------------------------------------------------------------------------------------------------
  * NewDishLinkButton
@@ -150,6 +152,58 @@ export function LinkButtonColorDemo() {
       </LinkButton>
       <LinkButton variant="soft" color="grey">
         <LinkButtonLabel>Edit Dish</LinkButtonLabel>
+      </LinkButton>
+    </div>
+  );
+}
+
+/* -------------------------------------------------------------------------------------------------
+ * LinkButtonShortcutDemo
+ * -----------------------------------------------------------------------------------------------*/
+export function LinkButtonShortcutDemo() {
+  return (
+    <div
+      style={{
+        display: "flex",
+        alignItems: "flex-start",
+        gap: "var(--wui-space-4)",
+      }}
+    >
+      <LinkButton>
+        <LinkButtonIcon>
+          <Plus />
+        </LinkButtonIcon>
+        <LinkButtonLabel>New Dish</LinkButtonLabel>
+        <LinkButtonShortcut>
+          <LinkButtonKbd>C</LinkButtonKbd>
+        </LinkButtonShortcut>
+      </LinkButton>
+      <LinkButton variant="soft">
+        <LinkButtonIcon>
+          <Plus />
+        </LinkButtonIcon>
+        <LinkButtonLabel>New Dish</LinkButtonLabel>
+        <LinkButtonShortcut>
+          <LinkButtonKbd>C</LinkButtonKbd>
+        </LinkButtonShortcut>
+      </LinkButton>
+      <LinkButton variant="outlined">
+        <LinkButtonIcon>
+          <Plus />
+        </LinkButtonIcon>
+        <LinkButtonLabel>New Dish</LinkButtonLabel>
+        <LinkButtonShortcut>
+          <LinkButtonKbd>C</LinkButtonKbd>
+        </LinkButtonShortcut>
+      </LinkButton>
+      <LinkButton variant="plain">
+        <LinkButtonIcon>
+          <Plus />
+        </LinkButtonIcon>
+        <LinkButtonLabel>New Dish</LinkButtonLabel>
+        <LinkButtonShortcut>
+          <LinkButtonKbd>C</LinkButtonKbd>
+        </LinkButtonShortcut>
       </LinkButton>
     </div>
   );

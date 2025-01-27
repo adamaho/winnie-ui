@@ -102,6 +102,62 @@ function LinkButtonLabel({
 }
 
 /* -------------------------------------------------------------------------------------------------
+ * LinkButtonShortcut
+ * -----------------------------------------------------------------------------------------------*/
+type LinkButtonShortcutProps = ComponentPropsWithoutRef<"kbd"> & {
+  /**
+   * Ref to kbd element
+   */
+  ref?: ForwardedRef<ComponentRef<"kbd">>;
+};
+
+function LinkButtonShortcut({
+  className,
+  children,
+  ref,
+  ...props
+}: PropsWithChildren<LinkButtonShortcutProps>) {
+  return (
+    <kbd
+      {...props}
+      className={clsx("wui-link-button__shortcut", className)}
+      data-slot="shortcut"
+      ref={ref}
+    >
+      {children}
+    </kbd>
+  );
+}
+
+/* -------------------------------------------------------------------------------------------------
+ * LinkButtonKbd
+ * -----------------------------------------------------------------------------------------------*/
+type LinkButtonKbdProps = ComponentPropsWithoutRef<"kbd"> & {
+  /**
+   * Ref to kbd element
+   */
+  ref?: ForwardedRef<ComponentRef<"kbd">>;
+};
+
+function LinkButtonKbd({
+  className,
+  children,
+  ref,
+  ...props
+}: PropsWithChildren<LinkButtonKbdProps>) {
+  return (
+    <kbd
+      {...props}
+      className={clsx("wui-link-button__kbd", className)}
+      data-component="kbd"
+      ref={ref}
+    >
+      {children}
+    </kbd>
+  );
+}
+
+/* -------------------------------------------------------------------------------------------------
  * LinkButtonIcon
  * -----------------------------------------------------------------------------------------------*/
 type LinkButtonIconProps = {
@@ -132,5 +188,18 @@ const LinkButtonIcon = ({
   );
 };
 
-export { LinkButton, LinkButtonLabel, LinkButtonIcon, LinkButtonContext };
-export type { LinkButtonProps, LinkButtonLabelProps, LinkButtonIconProps };
+export {
+  LinkButton,
+  LinkButtonLabel,
+  LinkButtonIcon,
+  LinkButtonShortcut,
+  LinkButtonKbd,
+  LinkButtonContext,
+};
+export type {
+  LinkButtonProps,
+  LinkButtonLabelProps,
+  LinkButtonIconProps,
+  LinkButtonShortcutProps,
+  LinkButtonKbdProps,
+};

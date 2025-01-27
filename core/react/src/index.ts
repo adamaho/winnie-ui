@@ -46,6 +46,8 @@ export {
   LinkButton,
   LinkButtonLabel,
   LinkButtonIcon,
+  LinkButtonShortcut,
+  LinkButtonKbd,
   LinkButtonContext,
 } from "./link-button";
 export {
@@ -131,6 +133,8 @@ export type {
   LinkButtonProps,
   LinkButtonLabelProps,
   LinkButtonIconProps,
+  LinkButtonShortcutProps,
+  LinkButtonKbdProps,
 } from "./link-button";
 export type {
   MenuProviderProps,
