@@ -10,9 +10,12 @@ import {
   DialogFooter,
   DialogProvider,
   DialogTitle,
+  FieldLabel,
   PageContent,
   PageHeader,
   PageHeaderActions,
+  TextArea,
+  TextAreaField,
 } from "@winnie-ui/react";
 
 import { Plus } from "@winnie-ui/icons/react/solid";
@@ -45,7 +48,12 @@ function RouteComponent() {
                 time.
               </DialogDescription>
               <form>
-                <DialogContent></DialogContent>
+                <DialogContent>
+                  <TextAreaField>
+                    <FieldLabel>Notes</FieldLabel>
+                    <TextArea />
+                  </TextAreaField>
+                </DialogContent>
                 <DialogFooter>
                   {(state) => {
                     return (

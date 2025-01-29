@@ -30,6 +30,7 @@ export {
 } from "./dialog";
 export { FieldDescription } from "./field-description";
 export { FieldError } from "./field-error";
+export { FieldLabel } from "./field-label";
 export { Heading } from "./typography/heading";
 export {
   Layout,
@@ -80,6 +81,7 @@ export {
 export { RouterProvider } from "./router-provider";
 export { Page, PageHeader, PageHeaderActions, PageContent } from "./page";
 export { Text } from "./typography/text";
+export { TextAreaField, TextArea } from "./textarea-field";
 export { TooltipProvider, Tooltip, TooltipLabel } from "./tooltip";
 
 /**
@@ -118,6 +120,7 @@ export type {
 } from "./dialog";
 export type { FieldDescriptionProps } from "./field-description";
 export type { FieldErrorProps } from "./field-error";
+export type { FieldLabelProps } from "./field-label";
 export type { HeadingProps } from "./typography/heading";
 export type {
   LayoutProps,
@@ -171,6 +174,7 @@ export type {
   NavigationDisclosureContentProps,
 } from "./navigation";
 export type { TextProps } from "./typography/text";
+export type { TextAreaFieldProps, TextAreaProps } from "./textarea-field";
 export type { TypographyProps } from "./typography/props";
 export type {
   TooltipProviderProps,

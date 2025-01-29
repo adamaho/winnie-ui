@@ -28,8 +28,8 @@ import { Button, ButtonIcon } from "./button";
  * -----------------------------------------------------------------------------------------------*/
 const DOCKED_BREAKPOINT = "(min-width: 1024px)";
 const MIN_SIDEBAR_WIDTH = 220;
-const DEFAULT_SIDEBAR_WIDTH = 296;
-const MAX_SIDEBAR_WIDTH = 320;
+const DEFAULT_SIDEBAR_WIDTH = 220;
+const MAX_SIDEBAR_WIDTH = 296;
 
 /* -------------------------------------------------------------------------------------------------
  * Utilities

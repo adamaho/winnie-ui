@@ -22,7 +22,7 @@
     }
 
     /* label control */
-    &:has([data-slot="label"] + :is([data-component="group"], [data-component="input"])) {
+    &:has([data-slot="label"] + [data-slot="control"]) {
       [data-slot="label"] {
         margin-bottom: var(--wui-space-4);
       }
@@ -36,28 +36,28 @@
     }
 
     /* description control */
-    &:has([data-slot="description"] + :is([data-component="group"], [data-component="input"])) {
+    &:has([data-slot="description"] + [data-slot="control"]) {
       [data-slot="description"] {
         margin-bottom: var(--wui-space-4);
       }
     }
 
     /* control description */
-    &:has(:is([data-component="group"], [data-component="input"]) + [data-slot="description"]) {
+    &:has([data-slot="control"] + [data-slot="description"]) {
       [data-slot="description"] {
         margin-top: var(--wui-space-4);
       }
     }
 
     /* control description error */
-    &:has(:is([data-component="group"], [data-component="input"]) + [data-slot="error"]) {
+    &:has([data-slot="control"] + [data-slot="error"]) {
       [data-slot="error"] {
         margin-top: var(--wui-space-4);
       }
     }
 
     /* control error */
-    &:has(:is([data-component="group"], [data-component="input"]) + [data-slot="description"] + [data-slot="error"]) {
+    &:has([data-slot="control"] + [data-slot="description"] + [data-slot="error"]) {
       [data-slot="error"] {
         margin-top: var(--wui-space-4);
       }

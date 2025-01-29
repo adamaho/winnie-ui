@@ -17,14 +17,14 @@ type FieldDescriptionProps = AriaTextProps & {
 };
 
 /**
- * # Description
+ * # FieldDescription
  * Displays additional information about a form field.
  *
  * ## Anatomy
  * Arrange the components in the structure below.
  *
  * ```tsx
- * <Description />
+ * <FieldDescription />
  * ```
  */
 function FieldDescription({

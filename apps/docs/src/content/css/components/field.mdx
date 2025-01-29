@@ -14,7 +14,7 @@ import FieldError from "./_components/field/field-error.astro";
     <div data-component="field">
       <label data-slot="label">Shipping details</label>
       <span data-slot="description">Where should we put your package?</span>
-      <input data-component="input" />
+      <input data-component="input" data-slot="control" />
       <span data-slot="error">Required field shipping details missing</span>
     </div>
     ```
@@ -37,7 +37,7 @@ Attach the appropriate component and slot attributes in the structure below.
 <div data-component="field">
   <label data-slot="label" />
   <span data-slot="description" />
-  <!-- control component -->
+  <input data-slot="control" />
   <span data-slot="error" />
 </div>
 ```

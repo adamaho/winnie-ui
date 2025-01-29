@@ -17,14 +17,14 @@ type FieldErrorProps = AriaTextProps & {
 };
 
 /**
- * # Error
+ * # FieldError
  * Displays an error message for a form field.
  *
  * ## Anatomy
  * Arrange the components in the structure below.
  *
  * ```tsx
- * <Error />
+ * <FieldError />
  * ```
  */
 function FieldError({ children, className, ref, ...props }: FieldErrorProps) {

@@ -55,15 +55,15 @@
     }
 
     &[data-width="sm"] {
-      max-width: 50ch;
+      width: 50ch;
     }
 
     &[data-width="md"] {
-      max-width: 60ch;
+      width: 60ch;
     }
 
     &[data-width="lg"] {
-      max-width: 70ch;
+      width: 70ch;
     }
 
     &:not([data-component="header"]) {
