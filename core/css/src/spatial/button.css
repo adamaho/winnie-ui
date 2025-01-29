@@ -2,8 +2,8 @@
   [data-component="button"] {
     /* border radius */
     --wui-button-sm-border-radius: var(--wui-border-radius-2);
-    --wui-button-md-border-radius: var(--wui-border-radius-2);
-    --wui-button-lg-border-radius: var(--wui-border-radius-3);
+    --wui-button-md-border-radius: var(--wui-border-radius-3);
+    --wui-button-lg-border-radius: var(--wui-border-radius-4);
     --wui-button-kbd-sm-border-radius: var(--wui-border-radius-2);
     --wui-button-kbd-md-border-radius: var(--wui-border-radius-2);
     --wui-button-kbd-lg-border-radius: var(--wui-border-radius-3);

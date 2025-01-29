@@ -230,6 +230,15 @@
     }
 
     /* -------------------------------------------------------------------------------------------------
+     * Textarea 
+     * -----------------------------------------------------------------------------------------------*/
+    [data-component="textarea"] {
+      --wui-textarea-color: var(--wui-color-grey-12);
+      --wui-textarea-placeholder-color: var(--wui-color-grey-10);
+      overflow: hidden;
+    }
+
+    /* -------------------------------------------------------------------------------------------------
      * Typography
      * -----------------------------------------------------------------------------------------------*/
     [data-component="text"],
@@ -301,6 +310,12 @@
 
     [data-component="separator"] {
       --wui-separator-background: var(--wui-color-grey-5);
+    }
+
+    [data-component="textarea"] {
+      --wui-textarea-background: var(--wui-color-white);
+      --wui-textarea-border: var(--wui-border-width-1) solid var(--wui-color-grey-4);
+      --wui-textarea-box-shadow: var(--wui-shadow-1);
     }
 
     [data-component="tooltip"] {
@@ -382,6 +397,12 @@
 
     [data-component="separator"] {
       --wui-separator-background: var(--wui-color-grey-5);
+    }
+
+    [data-component="textarea"] {
+      --wui-textarea-background: var(--wui-color-grey-3);
+      --wui-textarea-border: var(--wui-border-width-1) solid var(--wui-color-grey-5);
+      --wui-textarea-box-shadow: var(--wui-shadow-1);
     }
 
     [data-component="tooltip"] {

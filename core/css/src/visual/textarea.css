@@ -1,0 +1,48 @@
+@layer visual {
+  [data-component="textarea"] {
+    background: var(--wui-textarea-background);
+    border: var(--wui-textarea-border);
+    box-shadow: var(--wui-textarea-box-shadow);
+    color: var(--wui-textarea-color);
+    outline: none;
+
+    &::placeholder {
+      color: var(--wui-textarea-placeholder-color);
+    }
+
+    &:is([data-hovered], :hover) {
+      background: var(--wui-textarea-background-hovered, var(--wui-textarea-background));
+      border: var(--wui-textarea-border-hovered, var(--wui-textarea-border));
+      box-shadow: var(--wui-textarea-box-shadow-hovered, var(--wui-textarea-box-shadow));
+      color: var(--wui-textarea-color-hovered, var(--wui-textarea-color));
+    }
+
+    &:is([data-pressed], :active) {
+      background: var(--wui-textarea-background-pressed, var(--wui-textarea-background));
+      border: var(--wui-textarea-border-pressed, var(--wui-textarea-border));
+      box-shadow: var(--wui-textarea-box-shadow-pressed, var(--wui-textarea-box-shadow));
+      color: var(--wui-textarea-color-pressed, var(--wui-textarea-color));
+    }
+
+    &:is([data-focused], :focus) {
+      background: var(--wui-textarea-background-focused, var(--wui-textarea-background));
+      border: var(--wui-textarea-border-focused, var(--wui-textarea-border));
+      box-shadow: var(--wui-textarea-box-shadow-focused, var(--wui-textarea-box-shadow));
+      color: var(--wui-textarea-color-focused, var(--wui-textarea-color));
+    }
+
+    &:is([data-disabled], [aria-disabled="true"]) {
+      background: var(--wui-textarea-background-disabled, var(--wui-textarea-background));
+      border: var(--wui-textarea-border-disabled, var(--wui-textarea-border));
+      box-shadow: var(--wui-textarea-box-shadow-disabled, var(--wui-textarea-box-shadow));
+      color: var(--wui-textarea-color-disabled, var(--wui-textarea-color));
+    }
+
+    &:is([data-invalid], :invalid):not([data-disabled], [aria-disabled="true"]) {
+      background: var(--wui-textarea-background-invalid, var(--wui-textarea-background));
+      border: var(--wui-textarea-border-invalid, var(--wui-textarea-border));
+      box-shadow: var(--wui-textarea-box-shadow-invalid, var(--wui-textarea-box-shadow));
+      color: var(--wui-textarea-color-invalid, var(--wui-textarea-color));
+    }
+  }
+}
