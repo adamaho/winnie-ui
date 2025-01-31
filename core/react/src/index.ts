@@ -78,6 +78,12 @@ export {
   NavigationDisclosureTriggerLabel,
   NavigationDisclosureContent,
 } from "./navigation";
+export {
+  NumberField,
+  NumberGroup,
+  NumberStepper,
+  NumberInput,
+} from "./number-field";
 export { RouterProvider } from "./router-provider";
 export { Page, PageHeader, PageHeaderActions, PageContent } from "./page";
 export { Text } from "./typography/text";
@@ -173,6 +179,12 @@ export type {
   NavigationDisclosureTriggerLabelProps,
   NavigationDisclosureContentProps,
 } from "./navigation";
+export type {
+  NumberFieldProps,
+  NumberInputProps,
+  NumberGroupProps,
+  NumberStepperProps,
+} from "./number-field";
 export type { TextProps } from "./typography/text";
 export type { TextAreaFieldProps, TextAreaProps } from "./textarea-field";
 export type { TypographyProps } from "./typography/props";

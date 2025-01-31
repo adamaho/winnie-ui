@@ -1,27 +1,28 @@
-import { type Row, Zero, createSchema } from "@rocicorp/zero";
-
-import { createTableSchema } from "@rocicorp/zero";
+import {
+  type Row,
+  Zero,
+  createSchema,
+  number,
+  string,
+  table,
+} from "@rocicorp/zero";
 
 /* -------------------------------------------------------------------------------------------------
  * Schema
  * -----------------------------------------------------------------------------------------------*/
-const sessionsSchema = createTableSchema({
-  tableName: "sessions",
-  columns: {
-    sessionId: "string",
-    duration: "number",
-    stake: "number",
-    win: "number",
-    notes: "string",
-  },
-  primaryKey: "sessionId",
-});
+const sessions = table("sessions")
+  .columns({
+    id: string(),
+    sessionId: string(),
+    duration: number(),
+    stake: number(),
+    win: number(),
+    notes: string(),
+  })
+  .primaryKey("sessionId");
 
-const schema = createSchema({
-  version: 1,
-  tables: {
-    sessions: sessionsSchema,
-  },
+const schema = createSchema(1, {
+  tables: [sessions],
 });
 
 /* -------------------------------------------------------------------------------------------------

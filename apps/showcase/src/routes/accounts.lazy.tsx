@@ -26,7 +26,7 @@ import { Plus } from "@winnie-ui/icons/react/solid";
 
 import { createLazyFileRoute } from "@tanstack/react-router";
 
-export const Route = createLazyFileRoute("/sessions")({
+export const Route = createLazyFileRoute("/accounts")({
   component: RouteComponent,
 });
 
@@ -40,13 +40,13 @@ function RouteComponent() {
               <ButtonIcon>
                 <Plus />
               </ButtonIcon>
-              <ButtonLabel>New Session</ButtonLabel>
+              <ButtonLabel>New Account</ButtonLabel>
               <ButtonShortcut>
                 <ButtonKbd>N</ButtonKbd>
               </ButtonShortcut>
             </Button>
             <Dialog width="sm">
-              <DialogTitle>New Session</DialogTitle>
+              <DialogTitle>New Account</DialogTitle>
               <DialogDescription>
                 Track your daily poker sessions and monitor your progress over
                 time.

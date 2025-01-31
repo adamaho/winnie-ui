@@ -79,7 +79,7 @@ Wrap the input in an element with the `data-component="group"` attribute define 
   If you are just importing the input styles, you will need to also import the group styles for this to work.
 
 ```css
-@import "@winnie-ui/css/spatial/group";
+@import "@winnie-ui/css/spatial/input-group";
 ```
 
 </Aside>
@@ -88,8 +88,8 @@ Wrap the input in an element with the `data-component="group"` attribute define 
   <InputIcon />
   <Fragment slot="footer">
     ```tsx ins=data-slot="icon"
-    <div data-component="group">
-      <input data-component="input" data-slot="control" />
+    <div data-component="input-group">
+      <input data-component="input" data-slot="input" />
       <i class="chevron-up-down" data-slot="icon"></i>
     </div>
     ```
