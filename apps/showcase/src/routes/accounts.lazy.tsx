@@ -26,6 +26,8 @@ import { Plus } from "@winnie-ui/icons/react/solid";
 
 import { createLazyFileRoute } from "@tanstack/react-router";
 
+import { CreateAccountDialog } from "~/components/create-account-dialog";
+
 export const Route = createLazyFileRoute("/accounts")({
   component: RouteComponent,
 });
@@ -45,54 +47,7 @@ function RouteComponent() {
                 <ButtonKbd>N</ButtonKbd>
               </ButtonShortcut>
             </Button>
-            <Dialog width="sm">
-              <DialogTitle>New Account</DialogTitle>
-              <DialogDescription>
-                Track your daily poker sessions and monitor your progress over
-                time.
-              </DialogDescription>
-              <form>
-                <DialogContent>
-                  <TextAreaField>
-                    <FieldLabel>Notes</FieldLabel>
-                    <TextArea />
-                  </TextAreaField>
-                  <NumberField>
-                    <FieldLabel>Stake</FieldLabel>
-                    <NumberGroup>
-                      <NumberInput />
-                      <NumberStepper />
-                    </NumberGroup>
-                  </NumberField>
-                </DialogContent>
-                <DialogFooter>
-                  {(state) => {
-                    return (
-                      <>
-                        <Button
-                          color="grey"
-                          variant="outlined"
-                          data-slot="cancel"
-                          onPress={state.close}
-                        >
-                          <ButtonLabel>Cancel</ButtonLabel>
-                          <ButtonShortcut>
-                            <ButtonKbd>Esc</ButtonKbd>
-                          </ButtonShortcut>
-                        </Button>
-                        <Button data-slot="action" onPress={state.close}>
-                          <ButtonLabel>Create session</ButtonLabel>
-                          <ButtonShortcut>
-                            <ButtonKbd>⌘</ButtonKbd>
-                            <ButtonKbd>⮐</ButtonKbd>
-                          </ButtonShortcut>
-                        </Button>
-                      </>
-                    );
-                  }}
-                </DialogFooter>
-              </form>
-            </Dialog>
+            <CreateAccountDialog />
           </DialogProvider>
         </PageHeaderActions>
       </PageHeader>

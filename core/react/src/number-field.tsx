@@ -114,11 +114,11 @@ function NumberStepper({ className, ref, ...props }: NumberStepperProps) {
       data-slot="action"
       className={clsx("wui-stepper", className)}
     >
-      <Button data-slot="increment" slot="increment">
-        <ChevronTopSmall />
+      <Button data-component="step" slot="increment">
+        <ChevronTopSmall data-slot="icon" />
       </Button>
-      <Button data-slot="decrement" slot="decrement">
-        <ChevronBottomSmall />
+      <Button data-component="step" slot="decrement">
+        <ChevronBottomSmall data-slot="icon" />
       </Button>
     </div>
   );

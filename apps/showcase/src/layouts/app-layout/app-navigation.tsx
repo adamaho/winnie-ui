@@ -16,11 +16,10 @@ import {
   useLayoutContext,
 } from "@winnie-ui/react";
 
-import { Dollar, Plus } from "@winnie-ui/icons/react/solid";
+import { Dollar } from "@winnie-ui/icons/react/solid";
 
 import { ReactNode, ToOptions } from "@tanstack/react-router";
 
-import { CreateAccountDialog } from "~/components/create-account-dialog";
 import { useIsCurrent } from "~/hooks/use-is-current";
 
 /* -------------------------------------------------------------------------------------------------
@@ -101,20 +100,7 @@ function AppNavigationItem({ href, icon, label }: AppNavigationItemProps) {
 export function AppNavigation() {
   return (
     <Navigation>
-      <AppNavigationDisclosure
-        icon={<Dollar />}
-        label="Account"
-        action={
-          <DialogProvider>
-            <Button color="grey" variant="plain" data-slot="action" size="sm">
-              <ButtonIcon>
-                <Plus />
-              </ButtonIcon>
-            </Button>
-            <CreateAccountDialog />
-          </DialogProvider>
-        }
-      ></AppNavigationDisclosure>
+      <AppNavigationItem icon={<Dollar />} label="Accounts" href="/accounts" />
     </Navigation>
   );
 }

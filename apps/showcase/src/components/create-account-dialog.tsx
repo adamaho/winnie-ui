@@ -23,7 +23,7 @@ export function CreateAccountDialog() {
         Track your daily poker sessions and monitor your balance over time.
       </DialogDescription>
       <form>
-        <DialogContent>
+        <DialogContent className="flex flex-col gap-6">
           <NumberField>
             <FieldLabel>Website</FieldLabel>
             <NumberGroup>
@@ -36,10 +36,15 @@ export function CreateAccountDialog() {
               <NumberInput />
             </NumberGroup>
           </NumberField>
-          <NumberField>
+          <NumberField
+            formatOptions={{
+              style: "currency",
+              currency: "USD",
+            }}
+          >
             <FieldLabel>Balance</FieldLabel>
-            <NumberGroup size="lg">
-              <NumberInput />
+            <NumberGroup className="max-w-[50%]">
+              <NumberInput placeholder="$0" />
               <NumberStepper />
             </NumberGroup>
           </NumberField>

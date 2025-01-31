@@ -1,0 +1,12 @@
+@layer spatial {
+  [data-component="stepper"] {
+    [data-slot="increment"] {
+      border-bottom: var(--wui-stepper-separator-border);
+    }
+
+    [data-component="step"] {
+      background: var(--wui-stepper-step-background);
+      color: var(--wui-stepper-step-color);
+    }
+  }
+}
