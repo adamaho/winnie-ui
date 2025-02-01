@@ -12,6 +12,8 @@ description: Trigger an event, action or operation.
 #   ]
 ---
 
+import Button from "~/demos/css/button.astro";
+
 import Demo from "~/components/demo/demo.astro";
 
 import {
@@ -24,7 +26,7 @@ import {
 } from "~/demos/react/button";
 
 <Demo>
-  <NewDishButton client:load/>
+  <Button />
   <Fragment slot="footer">
     ```tsx
     <button data-component="button">
@@ -52,6 +54,9 @@ Attach the appropriate `data` attributes in the structure below.
   <i data-slot="icon"></i>
   <span data-slot="label"></span>
   <span data-slot="pending"></span>
+  <kbd data-slot="shortcut">
+    <kbd data-component="kbd" />
+  </kbd>
 </button>
 ```
 
@@ -64,15 +69,9 @@ Use the `data-size` attribute to change the size.
 <Demo>
   <ButtonSizeDemo client:load />
   <Fragment slot="footer">
-    ```tsx ins=data-size="sm" ins=data-size="md" ins=data-size="lg"
-    <button data-component="button" data-size="sm">
+    ```tsx ins=data-size="<size>"
+    <button data-component="button" data-size="<size>">
       <span data-slot="label">Edit Dish</span>
-    </button>
-    <button data-component="button" data-size="md">
-      <span data-slot="slot">Edit Dish</span>
-    </button>
-    <button data-component="button" data-size="lg">
-      <span data-slot="slot">Edit Dish</span>
     </button>
     ```
   </Fragment>
