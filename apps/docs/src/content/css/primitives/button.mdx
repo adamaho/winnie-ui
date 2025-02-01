@@ -216,12 +216,46 @@ Use the `data-width` attribute to modify the overall width of the button.
 
 ## Reference
 
-Below is a list of the available `data-` attributes available for Button.
+### button 
+
+Groups all of the parts of the button together.
 
 | Attribute      | Value                                                                                           |
 | -------------- | ----------------------------------------------------------------------------------------------- |
 | `data-color`   | `"red" \| "orange" \| "yellow" \| "green" \| "blue" \| "purple" \| "pink" \| "grey" \| "brand"` |
-| `data-radius`  | `"none" \| "sm" \| "md" \| "lg" \| "round"`                                                     |
+| `data-radius`  | `"none" \| "1" \| "2" \| "3" \| "round"`                                                        |
 | `data-size`    | `"1" \| "2" \| "3"`                                                                             |
 | `data-variant` | `"1" \| "2" \| "3" \| "4"`                                                                      |
 | `data-width`   | `"full"`                                                                                        |
+
+
+| Modifier   | Description                                         | 
+| ---------- | --------------------------------------------------- |
+| `hovered`  | When the button is hovered with a mouse             | 
+| `pressed`  | When the button is pressed with a mouse or keyboard |  
+| `disabled` | When the button prevents user interaction           | 
+
+
+| Variable                                                 |
+| -------------------------------------------------------- |
+| `--wui-button-<data-variant>-background-<?modifier>`     |
+| `--wui-button-<data-variant>-border-<?modifier>`         |
+| `--wui-button-<data-variant>-box-shadow-<?modifier>`     |
+| `--wui-button-<data-variant>-color-<?modifier>`          |
+
+### kbd
+
+Single key in the `shortcut` slot.
+
+| Modifier   | Description                                         | 
+| ---------- | --------------------------------------------------- |
+| `disabled` | When the button prevents user interaction           | 
+
+| Variable                                                     |
+| ------------------------------------------------------------ |
+| `--wui-button-kbd-<data-variant>-background-<?modifier>`     |
+| `--wui-button-kbd-<data-variant>-border-<?modifier>`         |
+| `--wui-button-kbd-<data-variant>-box-shadow-<?modifier>`     |
+| `--wui-button-kbd-<data-variant>-color-<?modifier>`          |
+
+
