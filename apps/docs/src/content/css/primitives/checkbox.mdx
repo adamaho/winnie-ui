@@ -48,19 +48,19 @@ Use the `data-size` attribute to change the size.
 
 <Demo>
   <div class="row">
-    <Checkbox client:load data-size="sm" />
-    <Checkbox client:load data-size="md" />
-    <Checkbox client:load data-size="lg" />
+    <Checkbox client:load data-size="1" />
+    <Checkbox client:load data-size="2" />
+    <Checkbox client:load data-size="3" />
   </div>
   <Fragment slot="footer">
-    ```tsx ins=data-size="sm" ins=data-size="md" ins=data-size="lg"
-    <button data-component="checkbox" data-size="sm">
+    ```tsx ins=data-size="1" ins=data-size="2" ins=data-size="3"
+    <button data-component="checkbox" data-size="1">
       <i data-slot="indicator" class="check"></i>
     </button>
-    <button data-component="checkbox" data-size="md">
+    <button data-component="checkbox" data-size="2">
       <i data-slot="indicator" class="check"></i>
     </button>
-    <button data-component="checkbox" data-size="lg">
+    <button data-component="checkbox" data-size="3">
       <i data-slot="indicator" class="check"></i>
     </button>
     ```
@@ -74,18 +74,18 @@ Use the `data-radius` attribute to change the radius.
 <Demo>
   <div class="row">
     <Checkbox client:load data-radius="none" />
-    <Checkbox client:load data-radius="sm" />
-    <Checkbox client:load data-radius="lg" />
+    <Checkbox client:load data-radius="1" />
+    <Checkbox client:load data-radius="3" />
   </div>
   <Fragment slot="footer">
-    ```tsx ins=data-radius="none" ins=data-radius="sm" ins=data-radius="lg"
+    ```tsx ins=data-radius="none" ins=data-radius="1" ins=data-radius="3"
     <button data-component="checkbox" data-radius="none">
       <i data-slot="indicator" class="check"></i>
     </button>
-    <button data-component="checkbox" data-radius="sm">
+    <button data-component="checkbox" data-radius="1">
       <i data-slot="indicator" class="check"></i>
     </button>
-    <button data-component="checkbox" data-radius="lg">
+    <button data-component="checkbox" data-radius="3">
       <i data-slot="indicator" class="check"></i>
     </button>
     ```
@@ -137,5 +137,5 @@ Below is a list of the available `data-` attributes available for Checkbox.
 
 | Attribute     | Value                            |
 | ------------- | -------------------------------- |
-| `data-radius` | `"none" \| "sm" \| "md" \| "lg"` |
-| `data-size`   | `"sm" \| "md" \| "lg"`           |
+| `data-radius` | `"none" \| "1" \| "2" \| "3"` |
+| `data-size`   | `"1" \| "2" \| "3"`           |

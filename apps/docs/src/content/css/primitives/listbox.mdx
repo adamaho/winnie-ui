@@ -101,14 +101,14 @@ Use the `data-size` attribute to change the size.
 <Demo>
   <ListboxSize />
   <Fragment slot="footer">
-    ```html ins=data-size="sm" ins=data-size="md" ins=data-size="lg"
-    <ul data-component="listbox" data-size="sm">
+    ```html ins=data-size="1" ins=data-size="2" ins=data-size="3"
+    <ul data-component="listbox" data-size="1">
       ...
     </ul>
-    <ul data-component="listbox" data-size="md">
+    <ul data-component="listbox" data-size="2">
       ...
     </ul>
-    <ul data-component="listbox" data-size="lg">
+    <ul data-component="listbox" data-size="3">
       ...
     </ul>
     ```
@@ -122,11 +122,11 @@ Use the `data-radius` attribute to change the size.
 <Demo>
   <ListboxRadius />
   <Fragment slot="footer">
-    ```html ins=data-radius="none" ins=data-radius="md" ins=data-radius="round"
+    ```html ins=data-radius="none" ins=data-radius="2" ins=data-radius="round"
     <ul data-component="listbox" data-radius="none">
       ...
     </ul>
-    <ul data-component="listbox" data-radius="md">
+    <ul data-component="listbox" data-radius="2">
       ...
     </ul>
     <ul data-component="listbox" data-radius="round">
@@ -631,5 +631,5 @@ Below is a list of the available listbox `data-` attributes that are available.
 | Attribute     | Value                                       |
 | ------------- | ------------------------------------------- |
 | `data-mode`   | `"selection"`                               |
-| `data-radius` | `"none" \| "sm" \| "md" \| "lg" \| "round"` |
-| `data-size`   | `"sm" \| "md" \| "lg"`                      |
+| `data-radius` | `"none" \| "1" \| "2" \| "3" \| "round"` |
+| `data-size`   | `"1" \| "2" \| "3"`                      |

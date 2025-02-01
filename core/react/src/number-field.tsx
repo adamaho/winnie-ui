@@ -73,14 +73,14 @@ type NumberGroupProps = AriaGroupProps & {
   /**
    * Changes the size of the input
    */
-  size?: "sm" | "md" | "lg";
+  size?: "1" | "2" | "3";
 };
 
 function NumberGroup({
   children,
   className,
   ref,
-  size = "md",
+  size = "2",
   ...props
 }: NumberGroupProps) {
   return (

@@ -50,7 +50,7 @@ type WinnieButtonProps = {
    *
    * @default undefined
    */
-  radius?: "none" | "sm" | "md" | "lg" | "round";
+  radius?: "none" | "1" | "2" | "3" | "round";
 
   /**
    * Ref to button element
@@ -60,7 +60,7 @@ type WinnieButtonProps = {
   /**
    * Changes the size of the button
    *
-   * @default "md"
+   * @default "2"
    */
   size?: "1" | "2" | "3";
 

@@ -17,7 +17,7 @@ import {
 
 export function CreateAccountDialog() {
   return (
-    <Dialog width="sm" data-placement="center">
+    <Dialog width="1" data-placement="center">
       <DialogTitle>New Account</DialogTitle>
       <DialogDescription>
         Track your daily poker sessions and monitor your balance over time.

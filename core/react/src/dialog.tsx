@@ -75,7 +75,7 @@ type DialogProps = AriaDialogProps & {
   /**
    * Modifies the width of the dialog
    */
-  width?: "sm" | "md" | "lg";
+  width?: "1" | "2" | "3";
 };
 function Dialog({
   className,
@@ -83,7 +83,7 @@ function Dialog({
   isDismissible,
   isKeyboardDismissDisabled,
   ref,
-  width = "md",
+  width = "2",
   ...props
 }: DialogProps) {
   return (
@@ -228,7 +228,7 @@ function DialogClose({ className, children, ref, ...props }: DialogCloseProps) {
       data-slot="close"
       slot="close"
       color="grey"
-      size="sm"
+      size="1"
       variant="soft"
       ref={ref}
     >

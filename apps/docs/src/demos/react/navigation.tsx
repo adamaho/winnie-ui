@@ -232,7 +232,7 @@ export function NavigationActionDemo() {
         </NavigationItemIcon>
         <NavigationItemLabel>Menus</NavigationItemLabel>
         <MenuProvider>
-          <Button color="grey" variant="plain" data-slot="action" size="sm">
+          <Button color="grey" variant="plain" data-slot="action" size="1">
             <ButtonIcon>
               <DotGrid1x3Horizontal />
             </ButtonIcon>
@@ -258,7 +258,7 @@ export function NavigationActionDemo() {
             Locations
           </NavigationDisclosureTriggerLabel>
           <MenuProvider>
-            <Button color="grey" variant="plain" data-slot="action" size="sm">
+            <Button color="grey" variant="plain" data-slot="action" size="1">
               <ButtonIcon>
                 <DotGrid1x3Horizontal />
               </ButtonIcon>

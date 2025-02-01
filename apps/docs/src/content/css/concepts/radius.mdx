@@ -11,12 +11,12 @@ Corner radius drastically changes the feel of an application. Larger radius' mak
 
 Winnie allows you to adjust the corner radius of elements using the `data-radius` attribute. This means that any elements styled using the `--wui-radius-<value>` variables will react to changes in this attribute.
 
-```tsx title="root.tsx" ins="class="winnie-ui"" ins="data-radius="md""
+```tsx title="root.tsx" ins="class="winnie-ui"" ins="data-radius="2""
 export default function Root() {
   return (
     <html>
       <head></head>
-      <body class="winnie-ui" data-radius="md">
+      <body class="winnie-ui" data-radius="2">
         <App />
       </body>
     </html>
@@ -31,9 +31,9 @@ The implementation uses a radius factor, similar to [Scaling Factor](/concepts/s
 | Radius | Factor |
 | ------ | ------ |
 | none   | 0      |
-| sm     | 0.75   |
-| md     | 1.00   |
-| lg     | 1.5    |
+| 1      | 0.75   |
+| 2      | 1.00   |
+| 3      | 1.5    |
 | round  | 9999   |
 
 Corner radius variables can be applied to the `border-radius` property in css.
