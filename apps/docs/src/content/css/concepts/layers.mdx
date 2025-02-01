@@ -71,12 +71,43 @@ The base layer is where most of the tokens and base styles are applied. This inc
 
 ## Spatial
 
-The spatial layer is reserved for styles that pertain to design system components like buttons, selects and inputs that only have layout relatived styles applied. For more information on how to use spatial styles, see the components [Introduction](/css/docs/components/introduction).
+The spatial layer is reserved for styles that pertain to design system components like buttons, selects and inputs that only have layout relatived styles applied. For more information on how to use spatial styles.
 
 ```css title="button.css"
 @layer spatial {
   .[data-component="button"] {
     padding: var(--wui-space-3);
+  }
+}
+```
+
+## Visual
+
+The visual layer applies styles to the more popular properties in css. These are things like `background`, `color`, `box-shadow`, etc. It also handles any of the pseudo states like `:hover`, `:active`, etc. Each property is available through a css variable that you can apply in the `skin` layer.
+
+```css
+@layer visual {
+  [data-component="button"] {
+    &[data-variant="1"] {
+      background: var(--wui-button-1-background, var(--wui-button-background));
+
+      &:hover {
+        background: var(--wui-button-1-background-hovered, var(--wui-button-background-hovered));
+      }
+    }
+  }
+}
+```
+
+## Skin
+
+Finally, the `skin` layer allows you to apply styles to a primitive via the css variables defined on the `visual` layer. This typically happens in your application or design system. If you wish to use the predefined skin made by us you are more then welcome to import it from:
+
+```css
+@layer skin {
+  [data-component="button"] {
+    --wui-button-1-background: var(--wui-color-accent-9);
+    --wui-button-1-background-hovered: var(--wui-color-accent-10);
   }
 }
 ```
