@@ -1,18 +1,27 @@
 ---
 title: button
 description: Trigger an event, action or operation.
-# documentation:
-#   [
-#     { label: Button, link: /react/docs/components/button, icon: react },
-#     {
-#       label: LinkButton,
-#       link: /react/docs/components/link-button,
-#       icon: react,
-#     },
-#   ]
+documentation:
+  [
+    { label: Button, link: /react/docs/components/button, icon: react },
+    {
+      label: LinkButton,
+      link: /react/docs/components/link-button,
+      icon: react,
+    },
+  ]
 ---
 
 import Button from "~/demos/css/button.astro";
+import ButtonSize from "~/demos/css/button-size.astro";
+import ButtonVariant from "~/demos/css/button-variant.astro";
+import ButtonRadius from "~/demos/css/button-radius.astro";
+import ButtonColor from "~/demos/css/button-color.astro";
+import ButtonWithIcon from "~/demos/css/button-with-icon.astro";
+import ButtonIconOnly from "~/demos/css/button-icon-only.astro";
+import ButtonShortcuts from "~/demos/css/button-shortcuts.astro";
+import ButtonPending from "~/demos/css/button-pending.astro";
+import ButtonFullWidth from "~/demos/css/button-full-width.astro";
 
 import Demo from "~/components/demo/demo.astro";
 
@@ -20,7 +29,6 @@ import {
   ButtonIconOnlyDemo,
   ButtonPendingDemo,
   ButtonRadiusDemo,
-  ButtonSizeDemo,
   ButtonWidthDemo,
   NewDishButton,
 } from "~/demos/react/button";
@@ -43,6 +51,7 @@ Import just the button styles.
 
 ```css
 @import "@winnie-ui/css/spatial/button";
+@import "@winnie-ui/css/visual/button";
 ```
 
 ## Anatomy
@@ -67,10 +76,25 @@ Attach the appropriate `data` attributes in the structure below.
 Use the `data-size` attribute to change the size.
 
 <Demo>
-  <ButtonSizeDemo client:load />
+  <ButtonSize />
   <Fragment slot="footer">
     ```tsx ins=data-size="<size>"
     <button data-component="button" data-size="<size>">
+      <span data-slot="label">Edit Dish</span>
+    </button>
+    ```
+  </Fragment>
+</Demo>
+
+### Variant 
+
+Use the `data-variant` attribute to change look of the button.
+
+<Demo>
+  <ButtonVariant />
+  <Fragment slot="footer">
+    ```tsx ins=data-variant="<variant>"
+    <button data-component="button" data-variant="<variant>">
       <span data-slot="label">Edit Dish</span>
     </button>
     ```
@@ -82,17 +106,26 @@ Use the `data-size` attribute to change the size.
 Use the `data-radius` attribute to change the radius.
 
 <Demo>
-  <ButtonRadiusDemo client:load />
+  <ButtonRadius />
   <Fragment slot="footer">
-    ```tsx ins=data-radius="none" ins=data-radius="md" ins=data-radius="round"
-    <button data-component="button" data-radius="none">
-      <span data-slot="slot">Edit Dish</span>
+    ```tsx ins=data-radius="<radius>"
+    <button data-component="button" data-radius="<radius>">
+      <span data-slot="label">Edit Dish</span>
     </button>
-    <button data-component="button" data-radius="md">
-      <span data-slot="slot">Edit Dish</span>
-    </button>
-    <button data-component="button" data-radius="round">
-      <span data-slot="slot">Edit Dish</span>
+    ```
+  </Fragment>
+</Demo>
+
+### Color
+
+Use the `data-accent-color` attribute to modify the color of the button. By default the button will inherit the accent color from the closest parent that specifies the `data-accent-color` attribute.
+
+<Demo>
+  <ButtonColor />
+  <Fragment slot="footer">
+    ```tsx ins=data-accent-color="<color>"
+    <button data-component="button" data-accent-color="<color>">
+      <span data-slot="label">Edit Dish</span>
     </button>
     ```
   </Fragment>
@@ -103,9 +136,9 @@ Use the `data-radius` attribute to change the radius.
 Add an icon with the `icon` slot attribute as a child of the button.
 
 <Demo>
-  <NewDishButton client:load/>
+  <ButtonWithIcon />
   <Fragment slot="footer">
-    ```tsx
+    ```tsx ins=data-slot="icon" 
     <button data-component="button">
       <i class="fork-knife" data-slot="icon"></i>
       <span data-component="text">New Dish</span>
@@ -119,11 +152,29 @@ Add an icon with the `icon` slot attribute as a child of the button.
 Create an icon button by only passing an icon with the `icon` slot attribute as a child of the button.
 
 <Demo>
-  <ButtonIconOnlyDemo client:load/>
+  <ButtonIconOnly />
   <Fragment slot="footer">
-    ```tsx
+    ```tsx ins=data-slot="icon"
     <button data-component="button">
-      <i class="plus" data-slot="icon"></i>
+      <i class="fork-knife" data-slot="icon"></i>
+    <button>
+    ```
+  </Fragment>
+</Demo>
+
+### Shortcuts 
+
+Add shortcut identifiers to your button using the `shortcut` slot and the `kbd` component. These shortcuts typically only apply to users on screens larger than 768px, so we hide them for any viewport width smaller than that. 
+
+<Demo>
+  <ButtonShortcuts />
+  <Fragment slot="footer">
+    ```tsx ins=data-slot="shortcut" ins=data-component="kbd"
+    <button data-component="button">
+      ...
+      <kbd data-slot="shortcut">
+        <kbd data-component="kbd">E</kbd>
+      </kbd>
     <button>
     ```
   </Fragment>
@@ -134,14 +185,14 @@ Create an icon button by only passing an icon with the `icon` slot attribute as 
 If a child of the button is rendered with the `pending` attribute, any text and icons rendered in the button will be hidden and the `pending` slot will be rendered.
 
 <Demo>
-  <ButtonPendingDemo client:load />
+  <ButtonPending />
   <Fragment slot="footer">
-    ```tsx ins=data-slot="pending"
+    ```tsx mark={2-4} 
     <button data-component="button">
       <span data-slot="pending">
         <i class="loader"></i>
       </span>
-      <span data-slot="label">New Issue</span>
+      <span data-slot="label">Edit Dish</span>
     </button>
     ```
   </Fragment>
@@ -152,12 +203,12 @@ If a child of the button is rendered with the `pending` attribute, any text and 
 Use the `data-width` attribute to modify the overall width of the button.
 
 <Demo>
-  <ButtonWidthDemo client:load />
+  <ButtonFullWidth />
   <Fragment slot="footer">
     ```tsx ins=data-width="full"
     <button data-component="button" data-width="full">
-      <span data-slot="slot">Log in</span>
-      <i class="arrow-right" data-slot="icon"></i>
+      <i class="fork-knife" data-slot="icon"></i>
+      <span data-slot="slot">New Dish</span>
     </button>
     ```
   </Fragment>
@@ -167,8 +218,10 @@ Use the `data-width` attribute to modify the overall width of the button.
 
 Below is a list of the available `data-` attributes available for Button.
 
-| Attribute     | Value                                       |
-| ------------- | ------------------------------------------- |
-| `data-radius` | `"none" \| "sm" \| "md" \| "lg" \| "round"` |
-| `data-size`   | `"sm" \| "md" \| "lg"`                      |
-| `data-width`  | `"full"`                                    |
+| Attribute      | Value                                                                                           |
+| -------------- | ----------------------------------------------------------------------------------------------- |
+| `data-color`   | `"red" \| "orange" \| "yellow" \| "green" \| "blue" \| "purple" \| "pink" \| "grey" \| "brand"` |
+| `data-radius`  | `"none" \| "sm" \| "md" \| "lg" \| "round"`                                                     |
+| `data-size`    | `"1" \| "2" \| "3"`                                                                             |
+| `data-variant` | `"1" \| "2" \| "3" \| "4"`                                                                      |
+| `data-width`   | `"full"`                                                                                        |

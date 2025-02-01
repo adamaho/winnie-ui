@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@astrojs/check": "0.9.4",
-    "@astrojs/mdx": "4.0.7",
+    "@astrojs/mdx": "4.0.8",
     "@astrojs/react": "4.2.0",
     "@fontsource/geist-mono": "5.1.1",
     "@fontsource/inter": "5.1.1",
@@ -29,11 +29,12 @@
     "@radix-ui/react-dialog": "1.1.5",
     "@radix-ui/react-scroll-area": "1.2.2",
     "@react-aria/utils": "3.27.0",
-    "@winnie-ui/css": "workspace:*",
+    "@tailwindcss/vite": "^4.0.3",
+    "@winnie-ui/tailwind": "workspace:*",
     "@winnie-ui/icons": "workspace:*",
     "@winnie-ui/react": "workspace:*",
     "@winnie-ui/themes": "workspace:*",
-    "astro": "5.1.10",
+    "astro": "5.2.3",
     "astro-expressive-code": "0.40.1",
     "clsx": "2.1.1",
     "cmdk": "1.0.4",
@@ -42,17 +43,18 @@
     "react-aria": "3.37.0",
     "react-aria-components": "1.6.0",
     "react-dom": "19.0.0",
-    "recharts": "2.15.1"
+    "recharts": "2.15.1",
+    "tailwindcss": "^4.0.3"
   },
   "devDependencies": {
-    "@tanstack/router-devtools": "1.98.1",
-    "@tanstack/router-plugin": "1.98.1",
+    "@tanstack/router-devtools": "1.98.4",
+    "@tanstack/router-plugin": "1.98.6",
     "@types/flexsearch": "0.7.6",
     "@types/react": "19.0.8",
     "@types/react-dom": "19.0.3",
     "astro-sst": "2.45.2",
     "rimraf": "6.0.1",
-    "sst": "3.6.27",
+    "sst": "3.7.1",
     "typescript": "5.7.3"
   }
 }

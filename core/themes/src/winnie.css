@@ -78,28 +78,28 @@
         --wui-button-kbd-font-family: var(--wui-font-family-sans);
 
         /* Solid */
-        --wui-button-kbd-solid-background: var(--wui-color-black-a3);
-        --wui-button-kbd-solid-background-disabled: var(--wui-color-black-a1);
-        --wui-button-kbd-solid-border: var(--wui-border-width-1) solid var(--wui-color-black-a2);
-        --wui-button-kbd-solid-border-disabled: var(--wui-border-width-1) solid var(--wui-color-black-a1);
+        --wui-button-kbd-1-background: var(--wui-color-black-a3);
+        --wui-button-kbd-1-background-disabled: var(--wui-color-black-a1);
+        --wui-button-kbd-1-border: var(--wui-border-width-1) solid var(--wui-color-black-a2);
+        --wui-button-kbd-1-border-disabled: var(--wui-border-width-1) solid var(--wui-color-black-a1);
 
         /* Soft */
-        --wui-button-kbd-soft-background: var(--wui-color-accent-a4);
-        --wui-button-kbd-soft-background-disabled: transparent;
-        --wui-button-kbd-soft-border-disabled: var(--wui-border-width-1) solid var(--wui-color-black-a2);
+        --wui-button-kbd-2-background: var(--wui-color-accent-a4);
+        --wui-button-kbd-2-background-disabled: transparent;
+        --wui-button-kbd-2-border-disabled: var(--wui-border-width-1) solid var(--wui-color-black-a2);
 
         /* Outlined */
-        --wui-button-kbd-outlined-background: var(--wui-color-accent-a3);
-        --wui-button-kbd-outlined-background-disabled: var(--wui-color-accent-a3);
-        --wui-button-kbd-outlined-background-disabled: transparent;
-        --wui-button-kbd-outlined-box-shadow-disabled: transparent;
-        --wui-button-kbd-outlined-border: var(--wui-border-width-1) solid var(--wui-color-accent-a5);
-        --wui-button-kbd-outlined-border-disabled: var(--wui-border-width-1) solid var(--wui-color-black-a1);
+        --wui-button-kbd-3-background: var(--wui-color-accent-a3);
+        --wui-button-kbd-3-background-disabled: var(--wui-color-accent-a3);
+        --wui-button-kbd-3-background-disabled: transparent;
+        --wui-button-kbd-3-box-shadow-disabled: transparent;
+        --wui-button-kbd-3-border: var(--wui-border-width-1) solid var(--wui-color-accent-a5);
+        --wui-button-kbd-3-border-disabled: var(--wui-border-width-1) solid var(--wui-color-black-a1);
 
         /* Plain */
-        --wui-button-kbd-plain-background: var(--wui-color-accent-a4);
-        --wui-button-kbd-plain-background-disabled: transparent;
-        --wui-button-kbd-plain-border-disabled: var(--wui-border-width-1) solid var(--wui-color-black-a2);
+        --wui-button-kbd-4-background: var(--wui-color-accent-a4);
+        --wui-button-kbd-4-background-disabled: transparent;
+        --wui-button-kbd-4-border-disabled: var(--wui-border-width-1) solid var(--wui-color-black-a2);
       }
     }
 
