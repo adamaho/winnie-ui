@@ -7,9 +7,9 @@ import "./radius-picker.css";
 function RadiusPicker() {
   const radii = [
     { value: "none", label: "None" },
-    { value: "sm", label: "Small" },
-    { value: "md", label: "Medium" },
-    { value: "lg", label: "Large" },
+    { value: "1", label: "Small" },
+    { value: "2", label: "Medium" },
+    { value: "3", label: "Large" },
     { value: "round", label: "Round" },
   ] satisfies { value: Theme["radius"]; label: string }[];
 

@@ -45,7 +45,7 @@ function RouteComponent() {
                 <ButtonKbd>N</ButtonKbd>
               </ButtonShortcut>
             </Button>
-            <Dialog width="sm">
+            <Dialog width="1">
               <DialogTitle>New Session</DialogTitle>
               <DialogDescription>
                 Track your daily poker sessions and monitor your progress over

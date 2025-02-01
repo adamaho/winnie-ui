@@ -32,9 +32,9 @@ type BreadcrumbsProps<T> = AriaBreadcrumbsProps<T> & {
   /**
    * Size of the breadcrumbs
    *
-   * @default "md"
+   * @default "2"
    */
-  size?: "sm" | "md" | "lg";
+  size?: "1" | "2" | "3";
 };
 
 /**
@@ -61,7 +61,7 @@ function Breadcrumbs<T extends object>({
   children,
   className,
   ref,
-  size = "md",
+  size = "2",
   ...props
 }: BreadcrumbsProps<T>) {
   return (

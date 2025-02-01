@@ -43,7 +43,7 @@
       justify-content: center;
       width: var(--wui-checkbox-indicator-size, var(--wui-checkbox-indicator-md-size));
 
-      &[data-size="sm"] {
+      &[data-size="1"] {
         --wui-checkbox-indicator-border-radius: var(--wui-checkbox-indicator-sm-border-radius);
         --wui-checkbox-indicator-font-size: var(--wui-checkbox-indicator-sm-font-size);
         --wui-checkbox-indicator-size: var(--wui-checkbox-indicator-sm-size);
@@ -51,7 +51,7 @@
         --wui-checkbox-indicator-space: var(--wui-checkbox-indicator-sm-space);
       }
 
-      &[data-size="md"] {
+      &[data-size="2"] {
         --wui-checkbox-indicator-border-radius: var(--wui-checkbox-indicator-md-border-radius);
         --wui-checkbox-indicator-font-size: var(--wui-checkbox-indicator-md-font-size);
         --wui-checkbox-indicator-size: var(--wui-checkbox-indicator-md-size);
@@ -59,7 +59,7 @@
         --wui-checkbox-indicator-space: var(--wui-checkbox-indicator-md-space);
       }
 
-      &[data-size="lg"] {
+      &[data-size="3"] {
         --wui-checkbox-indicator-border-radius: var(--wui-checkbox-indicator-lg-border-radius);
         --wui-checkbox-indicator-font-size: var(--wui-checkbox-indicator-lg-font-size);
         --wui-checkbox-indicator-size: var(--wui-checkbox-indicator-lg-size);

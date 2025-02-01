@@ -54,15 +54,15 @@
       }
     }
 
-    &[data-width="sm"] {
+    &[data-width="1"] {
       width: 50ch;
     }
 
-    &[data-width="md"] {
+    &[data-width="2"] {
       width: 60ch;
     }
 
-    &[data-width="lg"] {
+    &[data-width="3"] {
       width: 70ch;
     }
 

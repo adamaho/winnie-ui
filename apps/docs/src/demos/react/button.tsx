@@ -54,13 +54,13 @@ export function ButtonSizeDemo() {
         gap: "var(--wui-space-4)",
       }}
     >
-      <Button size="sm" variant="soft">
+      <Button size="1" variant="soft">
         <ButtonLabel>Edit Dish</ButtonLabel>
       </Button>
-      <Button size="md" variant="soft">
+      <Button size="2" variant="soft">
         <ButtonLabel>Edit Dish</ButtonLabel>
       </Button>
-      <Button size="lg" variant="soft">
+      <Button size="3" variant="soft">
         <ButtonLabel>Edit Dish</ButtonLabel>
       </Button>
     </div>
@@ -110,7 +110,7 @@ export function ButtonRadiusDemo() {
       <Button variant="soft" radius="none">
         <ButtonLabel>Edit Dish</ButtonLabel>
       </Button>
-      <Button variant="soft" radius="lg">
+      <Button variant="soft" radius="3">
         <ButtonLabel>Edit Dish</ButtonLabel>
       </Button>
       <Button variant="soft" radius="round">

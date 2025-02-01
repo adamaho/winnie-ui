@@ -56,7 +56,7 @@ Use the `data-radius` attribute to change the radius of the tooltip.
   </div>
   <div
     data-component="tooltip"
-    data-radius="md"
+    data-radius="2"
     class="tooltip-demo"
     style={{ marginRight: "var(--wui-space-3)" }}
   >
@@ -66,11 +66,11 @@ Use the `data-radius` attribute to change the radius of the tooltip.
     <span data-slot="label">View Dish</span>
   </div>
   <Fragment slot="footer">
-    ```html ins=data-radius="none" ins=data-radius="md" ins=data-radius="round"
+    ```html ins=data-radius="none" ins=data-radius="2" ins=data-radius="round"
     <div data-component="tooltip" data-radius="none">
       <span data-slot="label">View Dish</span>
     </div>
-    <div data-component="tooltip" data-radius="md">
+    <div data-component="tooltip" data-radius="2">
       <span data-slot="label">View Dish</span>
     </div>
     <div data-component="tooltip" data-radius="round">
@@ -135,4 +135,4 @@ Below is a list of the available tooltip `data-` attributes that are available.
 
 | Attribute     | Value                                       |
 | ------------- | ------------------------------------------- |
-| `data-radius` | `"none" \| "sm" \| "md" \| "lg" \| "round"` |
+| `data-radius` | `"none" \| "1" \| "2" \| "3" \| "round"` |

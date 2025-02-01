@@ -48,13 +48,13 @@ export function LinkButtonSizeDemo() {
         gap: "var(--wui-space-4)",
       }}
     >
-      <LinkButton size="sm" variant="soft">
+      <LinkButton size="1" variant="soft">
         <LinkButtonLabel>Edit Dish</LinkButtonLabel>
       </LinkButton>
-      <LinkButton size="md" variant="soft">
+      <LinkButton size="2" variant="soft">
         <LinkButtonLabel>Edit Dish</LinkButtonLabel>
       </LinkButton>
-      <LinkButton size="lg" variant="soft">
+      <LinkButton size="3" variant="soft">
         <LinkButtonLabel>Edit Dish</LinkButtonLabel>
       </LinkButton>
     </div>
@@ -104,7 +104,7 @@ export function LinkButtonRadiusDemo() {
       <LinkButton variant="soft" radius="none">
         <LinkButtonLabel>Edit Dish</LinkButtonLabel>
       </LinkButton>
-      <LinkButton variant="soft" radius="lg">
+      <LinkButton variant="soft" radius="3">
         <LinkButtonLabel>Edit Dish</LinkButtonLabel>
       </LinkButton>
       <LinkButton variant="soft" radius="round">

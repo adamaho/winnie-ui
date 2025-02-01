@@ -48,10 +48,10 @@ Use the `data-size` attribute to change the size.
 <Demo>
   <InputSize />
   <Fragment slot="footer">
-    ```tsx ins=data-size="sm" ins=data-size="md" ins=data-size="lg"
-    <input data-component="input" data-size="sm" />
-    <input data-component="input" data-size="md" />
-    <input data-component="input" data-size="lg" />
+    ```tsx ins=data-size="1" ins=data-size="2" ins=data-size="3"
+    <input data-component="input" data-size="1" />
+    <input data-component="input" data-size="2" />
+    <input data-component="input" data-size="3" />
     ```
   </Fragment>
 </Demo>
@@ -63,9 +63,9 @@ Use the `data-radius` attribute to change the size.
 <Demo>
   <InputRadius />
   <Fragment slot="footer">
-    ```tsx ins=data-radius="none" ins=data-radius="md" ins=data-radius="round"
+    ```tsx ins=data-radius="none" ins=data-radius="2" ins=data-radius="round"
     <input data-component="input" data-radius="none" />
-    <input data-component="input" data-radius="md" />
+    <input data-component="input" data-radius="2" />
     <input data-component="input" data-radius="round" />
     ```
   </Fragment>
@@ -102,5 +102,5 @@ Below is a list of the available input `data-` attributes available for input.
 
 | Attribute     | Value                                       |
 | ------------- | ------------------------------------------- |
-| `data-radius` | `"none" \| "sm" \| "md" \| "lg" \| "round"` |
-| `data-size`   | `"sm" \| "md" \| "lg"`                      |
+| `data-radius` | `"none" \| "1" \| "2" \| "3" \| "round"` |
+| `data-size`   | `"1" \| "2" \| "3"`                      |

@@ -50,9 +50,9 @@ type CheckboxProps = AriaCheckboxProps & {
   /**
    * Changes the size of the checkbox
    *
-   * @default "md"
+   * @default "2"
    */
-  size?: "sm" | "md" | "lg";
+  size?: "1" | "2" | "3";
 };
 
 /**
@@ -74,7 +74,7 @@ function Checkbox({
   className,
   children,
   ref,
-  size = "md",
+  size = "2",
   ...props
 }: CheckboxProps) {
   return (

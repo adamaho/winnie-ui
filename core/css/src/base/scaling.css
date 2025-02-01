@@ -32,15 +32,15 @@
     --wui-radius-factor: 0;
   }
 
-  [data-radius="sm"] {
+  [data-radius="1"] {
     --wui-radius-factor: 0.75;
   }
 
-  [data-radius="md"] {
+  [data-radius="2"] {
     --wui-radius-factor: 1;
   }
 
-  [data-radius="lg"] {
+  [data-radius="3"] {
     --wui-radius-factor: 1.5;
   }
 
