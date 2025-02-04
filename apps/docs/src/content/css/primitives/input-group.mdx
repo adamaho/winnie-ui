@@ -1,0 +1,236 @@
+---
+title: input-group
+description: Captures user input.
+---
+
+import Demo from "~/components/demo/demo.astro";
+
+import InputGroupDisabled from "~/demos/css/input-group-disabled.astro";
+import InputGroupInvalid from "~/demos/css/input-group-invalid.astro";
+import InputGroupRadius from "~/demos/css/input-group-radius.astro";
+import InputGroupSize from "~/demos/css/input-group-size.astro";
+import InputGroupWithAction from "~/demos/css/input-group-with-action.astro";
+import InputGroupWithCap from "~/demos/css/input-group-with-cap.astro";
+import InputGroupWithIcon from "~/demos/css/input-group-with-icon.astro";
+import InputGroupWithShortcut from "~/demos/css/input-group-with-shortcut.astro";
+import InputGroup from "~/demos/css/input-group.astro";
+
+<Demo>
+  <InputGroup />
+  <Fragment slot="footer">
+    ```tsx
+    <div data-component="input-group">
+      <i class="search" data-slot="icon"></i>
+      <input data-component="input" data-slot="input" />
+    </div>
+    ```
+  </Fragment>
+</Demo>
+
+## Import
+
+Import just the input-group styles.
+
+```css
+@import "@winnie-ui/css/spatial/input-group";
+@import "@winnie-ui/css/visual/input-group";
+```
+
+## Anatomy
+
+Attach the appropriate `data` attributes in the structure below.
+
+```tsx
+<div data-component="input-group">
+  <span data-slot="action" />
+  <i data-slot="icon" />
+  <element data-slot="input" />
+  <i data-slot="icon" />
+  <kbd data-slot="shortcut" />
+  <span data-slot="action" />
+</div>
+```
+
+## Examples
+
+### Size
+
+Use the `data-size` attribute to change the size.
+
+<Demo>
+  <InputGroupSize />
+  <Fragment slot="footer">
+    ```tsx ins=data-size="<size>"
+    <div data-component="input-group" data-size="<size>">
+      <input data-slot="input" data-component="input" />
+    </div>
+    ```
+  </Fragment>
+</Demo>
+
+### Radius
+
+Use the `data-radius` attribute to change the radius.
+
+<Demo>
+  <InputGroupRadius />
+  <Fragment slot="footer">
+    ```tsx ins=data-radius="<radius>"
+    <div data-component="input-group" data-radius="<radius>">
+      <input data-slot="input" data-component="input" />
+    </div>
+    ```
+  </Fragment>
+</Demo>
+
+### Icon
+
+Use the `icon` slot attribute to place an icon at the beginning or end of the input group.
+
+<Demo>
+  <InputGroupWithIcon />
+  <Fragment slot="footer">
+    ```tsx ins=data-slot="icon"
+    <div data-component="input-group">
+      <i class="search" data-slot="icon"></i>
+      <input data-slot="input" data-component="input" />
+    </div>
+    <div data-component="input-group">
+      <input data-slot="input" data-component="input" />
+      <i class="chevron-up-down" data-slot="icon"></i>
+    </div>
+    ```
+  </Fragment>
+</Demo>
+
+### Cap
+
+Use the `cap` slot attribute to place content at the beginning or end of the input group. The cap acts a placeholder for any content you wish to put into it. It is up to you to style that content appropriately.
+
+<Demo>
+  <InputGroupWithCap />
+  <Fragment slot="footer">
+    ```tsx ins=data-slot="cap"
+    <div data-component="input-group">
+      <span data-slot="cap">https://</span>
+      <input data-slot="input" data-component="input" />
+    </div>
+    <div data-component="input-group">
+      <input data-slot="input" data-component="input" />
+      <span data-slot="cap">.winnie-ui.com</span>
+    </div>
+    ```
+  </Fragment>
+</Demo>
+
+### Action
+
+Use the `action` slot attribute to place an action at the end of the input group.
+
+<Demo>
+  <InputGroupWithAction />
+  <Fragment slot="footer">
+    ```tsx ins=data-slot="action"
+    <div data-component="input-group">
+      <input data-slot="input" data-component="input" />
+      <button data-slot="action" data-component="button" data-size="sm">
+        <i class="cross"></i>
+      </button>
+    </div>
+    ```
+  </Fragment>
+</Demo>
+
+### Shortcut
+
+Use the `shortcut` slot attribute with the `kbd` component to place a shortcut at the end of the input group. These shortcuts typically only apply to users on screens larger than 768px, so we hide them for any viewport width smaller than that.
+
+<Demo>
+  <InputGroupWithShortcut />
+  <Fragment slot="footer">
+    ```tsx ins=data-slot="shortcut"
+    <div data-component="input-group">
+      <input data-slot="input" data-component="input" />
+      <kbd data-slot="shortcut">
+        <kbd data-component="kbd">⌘</kbd>
+        <kbd data-component="kbd">K</kbd>
+      </kbd>
+    </div>
+    ```
+  </Fragment>
+</Demo>
+
+### Disabled
+
+Use the `disabled` attribute to prevent user interaction.
+
+<Demo>
+  <InputGroupDisabled />
+  <Fragment slot="footer">
+    ```tsx ins=disabled
+    <div data-component="input-group">
+      <i class="search" data-slot="icon"></i>
+      <input data-slot="input" data-component="input" disabled />
+      <kbd data-slot="shortcut">
+        <kbd data-component="kbd">/</kbd>
+      </kbd>
+    </div>
+    ```
+  </Fragment>
+</Demo>
+
+### Invalid
+
+Input group will respect the `:invalid` selector when it is used in a form. Use the `data-invalid` attribute to manually control the invalid state of the `input-group`.
+
+<Demo>
+  <InputGroupInvalid />
+  <Fragment slot="footer">
+    ```tsx ins=data-invalid="true"
+    <div data-component="input-group">
+      <input data-slot="input" data-component="input" data-invalid="true" />
+    </div>
+    ```
+  </Fragment>
+</Demo>
+
+## Reference
+
+### input-group
+
+Groups all of the parts of the input-group together.
+
+| Attribute     | Value                                       |
+| ------------- | ------------------------------------------- |
+| `data-radius` | `"none" \| "sm" \| "md" \| "lg" \| "round"` |
+| `data-size`   | `"sm" \| "md" \| "lg"`                      |
+
+| Modifier   | Description                                              |
+| ---------- | -------------------------------------------------------- |
+| `hovered`  | When the input-group is hovered with a mouse             |
+| `pressed`  | When the input-group is pressed with a mouse or keyboard |
+| `disabled` | When the input-group prevents user interaction           |
+| `invalid`  | When the input-group is in an invalid state in a form    |
+
+| Variable                                          |
+| ------------------------------------------------- |
+| `--wui-input-group-background-<?modifier>`        |
+| `--wui-input-group-border-<?modifier>`            |
+| `--wui-input-group-box-shadow-<?modifier>`        |
+| `--wui-input-group-color-<?modifier>`             |
+| `--wui-input-group-placeholder-color-<?modifier>` |
+
+### kbd
+
+Single key in the `shortcut` slot.
+
+| Modifier   | Description                                    |
+| ---------- | ---------------------------------------------- |
+| `disabled` | When the input-group prevents user interaction |
+
+| Variable                                       |
+| ---------------------------------------------- |
+| `--wui-input-group-kbd-background-<?modifier>` |
+| `--wui-input-group-kbd-border-<?modifier>`     |
+| `--wui-input-group-kbd-box-shadow-<?modifier>` |
+| `--wui-input-group-kbd-color-<?modifier>`      |

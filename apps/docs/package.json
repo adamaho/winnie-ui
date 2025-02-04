@@ -30,6 +30,7 @@
     "@radix-ui/react-scroll-area": "1.2.2",
     "@react-aria/utils": "3.27.0",
     "@tailwindcss/vite": "^4.0.3",
+    "@winnie-ui/css": "workspace:*",
     "@winnie-ui/tailwind": "workspace:*",
     "@winnie-ui/icons": "workspace:*",
     "@winnie-ui/react": "workspace:*",

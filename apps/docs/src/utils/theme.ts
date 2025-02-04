@@ -10,7 +10,7 @@ export type Theme = {
     | "purple"
     | "pink"
     | "brand";
-  radius: "none" | "1" | "2" | "3" | "round";
+  radius: "none" | "sm" | "md" | "lg" | "round";
   scale: "90%" | "95%" | "100%" | "105%" | "110%";
   mode: "light" | "dark";
 };
@@ -23,7 +23,7 @@ export type ThemeSelectors =
 
 export const defaultTheme = {
   color: "orange",
-  radius: "3",
+  radius: "lg",
   scale: "90%",
   mode: "light",
 } satisfies Theme;

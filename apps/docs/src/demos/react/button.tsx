@@ -34,7 +34,7 @@ export function NewDishButton() {
  * -----------------------------------------------------------------------------------------------*/
 export function ButtonIconOnlyDemo() {
   return (
-    <Button variant="outlined">
+    <Button variant="3">
       <ButtonIcon>
         <SettingsGear3 />
       </ButtonIcon>
@@ -54,13 +54,13 @@ export function ButtonSizeDemo() {
         gap: "var(--wui-space-4)",
       }}
     >
-      <Button size="1" variant="soft">
+      <Button size="1" variant="2">
         <ButtonLabel>Edit Dish</ButtonLabel>
       </Button>
-      <Button size="2" variant="soft">
+      <Button size="2" variant="2">
         <ButtonLabel>Edit Dish</ButtonLabel>
       </Button>
-      <Button size="3" variant="soft">
+      <Button size="3" variant="2">
         <ButtonLabel>Edit Dish</ButtonLabel>
       </Button>
     </div>
@@ -79,16 +79,16 @@ export function ButtonVariantDemo() {
         gap: "var(--wui-space-4)",
       }}
     >
-      <Button variant="solid">
+      <Button variant="1">
         <ButtonLabel>Edit Dish</ButtonLabel>
       </Button>
-      <Button variant="soft">
+      <Button variant="2">
         <ButtonLabel>Edit Dish</ButtonLabel>
       </Button>
-      <Button variant="outlined">
+      <Button variant="3">
         <ButtonLabel>Edit Dish</ButtonLabel>
       </Button>
-      <Button variant="plain">
+      <Button variant="4">
         <ButtonLabel>Edit Dish</ButtonLabel>
       </Button>
     </div>
@@ -107,13 +107,13 @@ export function ButtonRadiusDemo() {
         gap: "var(--wui-space-4)",
       }}
     >
-      <Button variant="soft" radius="none">
+      <Button variant="2" radius="none">
         <ButtonLabel>Edit Dish</ButtonLabel>
       </Button>
-      <Button variant="soft" radius="3">
+      <Button variant="2" radius="3">
         <ButtonLabel>Edit Dish</ButtonLabel>
       </Button>
-      <Button variant="soft" radius="round">
+      <Button variant="2" radius="round">
         <ButtonLabel>Edit Dish</ButtonLabel>
       </Button>
     </div>
@@ -132,31 +132,31 @@ export function ButtonColorDemo() {
         gap: "var(--wui-space-4)",
       }}
     >
-      <Button variant="soft">
+      <Button variant="2">
         <ButtonLabel>Edit Dish</ButtonLabel>
       </Button>
-      <Button variant="soft" color="red">
+      <Button variant="2" color="red">
         <ButtonLabel>Edit Dish</ButtonLabel>
       </Button>
-      <Button variant="soft" color="orange">
+      <Button variant="2" color="orange">
         <ButtonLabel>Edit Dish</ButtonLabel>
       </Button>
-      <Button variant="soft" color="yellow">
+      <Button variant="2" color="yellow">
         <ButtonLabel>Edit Dish</ButtonLabel>
       </Button>
-      <Button variant="soft" color="green">
+      <Button variant="2" color="green">
         <ButtonLabel>Edit Dish</ButtonLabel>
       </Button>
-      <Button variant="soft" color="blue">
+      <Button variant="2" color="blue">
         <ButtonLabel>Edit Dish</ButtonLabel>
       </Button>
-      <Button variant="soft" color="purple">
+      <Button variant="2" color="purple">
         <ButtonLabel>Edit Dish</ButtonLabel>
       </Button>
-      <Button variant="soft" color="pink">
+      <Button variant="2" color="pink">
         <ButtonLabel>Edit Dish</ButtonLabel>
       </Button>
-      <Button variant="soft" color="grey">
+      <Button variant="2" color="grey">
         <ButtonLabel>Edit Dish</ButtonLabel>
       </Button>
     </div>
@@ -184,7 +184,7 @@ export function ButtonShortcutDemo() {
           <ButtonKbd>C</ButtonKbd>
         </ButtonShortcut>
       </Button>
-      <Button variant="soft">
+      <Button variant="2">
         <ButtonIcon>
           <Plus />
         </ButtonIcon>
@@ -193,7 +193,7 @@ export function ButtonShortcutDemo() {
           <ButtonKbd>C</ButtonKbd>
         </ButtonShortcut>
       </Button>
-      <Button variant="outlined">
+      <Button variant="3">
         <ButtonIcon>
           <Plus />
         </ButtonIcon>
@@ -202,7 +202,7 @@ export function ButtonShortcutDemo() {
           <ButtonKbd>C</ButtonKbd>
         </ButtonShortcut>
       </Button>
-      <Button variant="plain">
+      <Button variant="4">
         <ButtonIcon>
           <Plus />
         </ButtonIcon>
@@ -228,16 +228,16 @@ export function ButtonDisabledDemo() {
       }}
     >
       <ButtonContext.Provider value={{ isDisabled: true }}>
-        <Button variant="solid">
+        <Button variant="1">
           <ButtonLabel>Edit Dish</ButtonLabel>
         </Button>
-        <Button variant="soft">
+        <Button variant="2">
           <ButtonLabel>Edit Dish</ButtonLabel>
         </Button>
-        <Button variant="outlined">
+        <Button variant="3">
           <ButtonLabel>Edit Dish</ButtonLabel>
         </Button>
-        <Button variant="plain">
+        <Button variant="4">
           <ButtonLabel>Edit Dish</ButtonLabel>
         </Button>
       </ButtonContext.Provider>

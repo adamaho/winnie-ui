@@ -101,14 +101,14 @@ Use the `data-size` attribute to change the size.
 <Demo>
   <ListboxSize />
   <Fragment slot="footer">
-    ```html ins=data-size="1" ins=data-size="2" ins=data-size="3"
-    <ul data-component="listbox" data-size="1">
+    ```html ins=data-size="sm" ins=data-size="md" ins=data-size="lg"
+    <ul data-component="listbox" data-size="sm">
       ...
     </ul>
-    <ul data-component="listbox" data-size="2">
+    <ul data-component="listbox" data-size="md">
       ...
     </ul>
-    <ul data-component="listbox" data-size="3">
+    <ul data-component="listbox" data-size="lg">
       ...
     </ul>
     ```
@@ -628,8 +628,8 @@ Use the `shortcut` slot as a child of the list item to show a keyboard shortcut.
 
 Below is a list of the available listbox `data-` attributes that are available.
 
-| Attribute     | Value                                       |
-| ------------- | ------------------------------------------- |
-| `data-mode`   | `"selection"`                               |
+| Attribute     | Value                                    |
+| ------------- | ---------------------------------------- |
+| `data-mode`   | `"selection"`                            |
 | `data-radius` | `"none" \| "1" \| "2" \| "3" \| "round"` |
 | `data-size`   | `"1" \| "2" \| "3"`                      |

@@ -59,7 +59,7 @@
       }
     }
 
-    &[data-size="1"] {
+    &[data-size="sm"] {
       --wui-tooltip-border-radius: var(--wui-tooltip-sm-border-radius);
       --wui-tooltip-font-size: var(--wui-tooltip-sm-font-size);
       --wui-tooltip-line-height: var(--wui-tooltip-sm-line-height);
@@ -67,7 +67,7 @@
       --wui-tooltip-space: var(--wui-tooltip-sm-space);
     }
 
-    &[data-size="2"] {
+    &[data-size="md"] {
       --wui-tooltip-border-radius: var(--wui-tooltip-md-border-radius);
       --wui-tooltip-font-size: var(--wui-tooltip-md-font-size);
       --wui-tooltip-line-height: var(--wui-tooltip-md-line-height);
@@ -75,7 +75,7 @@
       --wui-tooltip-space: var(--wui-tooltip-md-space);
     }
 
-    &[data-size="3"] {
+    &[data-size="lg"] {
       --wui-tooltip-border-radius: var(--wui-tooltip-lg-border-radius);
       --wui-tooltip-font-size: var(--wui-tooltip-lg-font-size);
       --wui-tooltip-line-height: var(--wui-tooltip-lg-line-height);

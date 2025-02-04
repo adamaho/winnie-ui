@@ -48,7 +48,7 @@
       }
     }
 
-    &[data-size="1"] {
+    &[data-size="sm"] {
       [data-component="breadcrumb"] {
         font-size: var(--wui-font-size-1);
 
@@ -66,7 +66,7 @@
       }
     }
 
-    &[data-size="2"] {
+    &[data-size="md"] {
       [data-component="breadcrumb"] {
         font-size: var(--wui-font-size-2);
 
@@ -84,7 +84,7 @@
       }
     }
 
-    &[data-size="3"] {
+    &[data-size="lg"] {
       [data-component="breadcrumb"] {
         font-size: var(--wui-font-size-3);
 

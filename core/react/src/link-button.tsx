@@ -50,8 +50,8 @@ function LinkButton({
   children,
   color = undefined,
   radius = undefined,
-  size = "2",
-  variant = "solid",
+  size = "md",
+  variant = "1",
   width = "auto",
   ref,
   ...props

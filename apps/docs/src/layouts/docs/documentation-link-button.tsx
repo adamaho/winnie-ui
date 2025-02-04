@@ -61,7 +61,7 @@ export function DocumentationLinkButton({
   return (
     <LinkButton
       color="grey"
-      size="1"
+      size="sm"
       variant="2"
       href={link}
       target="_blank"

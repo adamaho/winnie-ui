@@ -1,0 +1,21 @@
+---
+import { MagnifyingGlass, CrossLarge } from "@winnie-ui/icons/react/line";
+---
+
+<div data-component="input-group">
+  <MagnifyingGlass data-slot="icon" />
+  <input
+    data-component="input"
+    data-slot="input"
+    placeholder="Search dishes..."
+  />
+  <button
+    data-component="button"
+    data-slot="action"
+    data-variant="4"
+    data-accent-color="grey"
+    data-size="sm"
+  >
+    <CrossLarge data-slot="icon" />
+  </button>
+</div>

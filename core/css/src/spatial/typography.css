@@ -14,17 +14,17 @@
       text-align: right;
     }
 
-    &[data-size="1"] {
+    &[data-size="sm"] {
       font-size: var(--wui-font-size-1);
       line-height: var(--wui-line-height-1);
     }
 
-    &[data-size="2"] {
+    &[data-size="md"] {
       font-size: var(--wui-font-size-2);
       line-height: var(--wui-line-height-2);
     }
 
-    &[data-size="3"] {
+    &[data-size="lg"] {
       font-size: var(--wui-font-size-3);
       line-height: var(--wui-line-height-3);
     }

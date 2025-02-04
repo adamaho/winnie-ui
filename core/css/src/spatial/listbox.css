@@ -40,7 +40,7 @@
       --wui-listbox-grid-columns: minmax(calc(var(--wui-listbox-item-font-size, var(--wui-listbox-item-md-font-size)) + var(--wui-listbox-item-space, var(--wui-listbox-item-md-space)) + var(--wui-listbox-item-space, var(--wui-listbox-item-md-space))), auto) auto 1fr auto auto;
     }
 
-    &[data-size="1"] {
+    &[data-size="sm"] {
       --wui-listbox-item-border-radius: var(--wui-listbox-item-sm-border-radius);
       --wui-listbox-item-font-size: var(--wui-listbox-item-sm-font-size);
       --wui-listbox-header-font-size: var(--wui-listbox-header-sm-font-size);
@@ -50,7 +50,7 @@
       --wui-listbox-item-space: var(--wui-listbox-item-sm-space);
     }
 
-    &[data-size="2"] {
+    &[data-size="md"] {
       --wui-listbox-item-border-radius: var(--wui-listbox-item-md-border-radius);
       --wui-listbox-item-font-size: var(--wui-listbox-item-md-font-size);
       --wui-listbox-header-font-size: var(--wui-listbox-header-md-font-size);
@@ -60,7 +60,7 @@
       --wui-listbox-item-space: var(--wui-listbox-item-md-space);
     }
 
-    &[data-size="3"] {
+    &[data-size="lg"] {
       --wui-listbox-item-border-radius: var(--wui-listbox-item-lg-border-radius);
       --wui-listbox-item-font-size: var(--wui-listbox-item-lg-font-size);
       --wui-listbox-header-font-size: var(--wui-listbox-header-lg-font-size);

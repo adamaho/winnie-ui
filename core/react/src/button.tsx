@@ -60,9 +60,9 @@ type WinnieButtonProps = {
   /**
    * Changes the size of the button
    *
-   * @default "2"
+   * @default "md"
    */
-  size?: "1" | "2" | "3";
+  size?: "sm" | "md" | "lg";
 
   /**
    * Changes the look of the button
@@ -103,7 +103,7 @@ function Button({
   children,
   color = undefined,
   radius = undefined,
-  size = "2",
+  size = "md",
   variant = "1",
   width = "auto",
   ref,

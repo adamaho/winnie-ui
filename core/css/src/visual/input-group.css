@@ -6,8 +6,27 @@
     color: var(--wui-input-group-color);
     outline: none;
 
-    &::placeholder {
+    [data-slot="input"]::placeholder {
       color: var(--wui-input-group-placeholder-color);
+    }
+
+    [data-slot="cap"] {
+      &:first-child {
+        border-right: var(--wui-input-group-border);
+      }
+
+      &:last-child {
+        border-left: var(--wui-input-group-border);
+      }
+    }
+
+    [data-component="kbd"] {
+      background: var(--wui-input-group-kbd-background);
+      border: var(--wui-input-group-kbd-border);
+      box-shadow: var(--wui-input-group-kbd-box-shadow);
+      color: var(--wui-input-group-kbd-color);
+      font-family: var(--wui-input-group-kbd-font-family);
+      font-weight: var(--wui-input-group-kbd-font-weight);
     }
 
     &:is([data-hovered], :hover) {
@@ -15,6 +34,10 @@
       border: var(--wui-input-group-border-hovered, var(--wui-input-group-border));
       box-shadow: var(--wui-input-group-box-shadow-hovered, var(--wui-input-group-box-shadow));
       color: var(--wui-input-group-color-hovered, var(--wui-input-group-color));
+
+      [data-slot="input"]::placeholder {
+        color: var(--wui-input-group-placeholder-color-hovered, var(--wui-input-group-placeholder-color));
+      }
     }
 
     &:is([data-pressed], :active) {
@@ -22,36 +45,38 @@
       border: var(--wui-input-group-border-pressed, var(--wui-input-group-border));
       box-shadow: var(--wui-input-group-box-shadow-pressed, var(--wui-input-group-box-shadow));
       color: var(--wui-input-group-color-pressed, var(--wui-input-group-color));
+
+      [data-slot="input"]::placeholder {
+        color: var(--wui-input-group-placeholder-color-pressed, var(--wui-input-group-placeholder-color));
+      }
     }
 
-    &:is([data-focused], :focus, [data-focus-within], :focus-within) {
-      background: var(--wui-input-group-background-focused, var(--wui-input-group-background));
-      border: var(--wui-input-group-border-focused, var(--wui-input-group-border));
-      box-shadow: var(--wui-input-group-box-shadow-focused, var(--wui-input-group-box-shadow));
-      color: var(--wui-input-group-color-focused, var(--wui-input-group-color));
-    }
-
-    &:is([data-disabled], [aria-disabled="true"]) {
+    &:has([data-slot="input"]:is([data-disabled], [aria-disabled="true"], :disabled)) {
       background: var(--wui-input-group-background-disabled, var(--wui-input-group-background));
       border: var(--wui-input-group-border-disabled, var(--wui-input-group-border));
       box-shadow: var(--wui-input-group-box-shadow-disabled, var(--wui-input-group-box-shadow));
       color: var(--wui-input-group-color-disabled, var(--wui-input-group-color));
+
+      [data-component="kbd"] {
+        background: var(--wui-input-group-kbd-background-disabled, var(--wui-input-group-kbd-background));
+        border: var(--wui-input-group-kbd-border-disabled, var(--wui-input-group-kbd-border));
+        box-shadow: var(--wui-input-group-kbd-box-shadow-disabled, var(--wui-input-group-kbd-box-shadow));
+        color: var(--wui-input-group-kbd-color-disabled, var(--wui-input-group-kbd-color));
+      }
+
+      [data-slot="input"]::placeholder {
+        color: var(--wui-input-group-placeholder-color-disabled, var(--wui-input-group-placeholder-color));
+      }
     }
 
-    &:is([data-invalid], :invalid):not([data-disabled], [aria-disabled="true"]) {
+    &:has([data-slot="input"]:is([data-invalid], :invalid):not([data-disabled], [aria-disabled="true"], :disabled)) {
       background: var(--wui-input-group-background-invalid, var(--wui-input-group-background));
       border: var(--wui-input-group-border-invalid, var(--wui-input-group-border));
       box-shadow: var(--wui-input-group-box-shadow-invalid, var(--wui-input-group-box-shadow));
       color: var(--wui-input-group-color-invalid, var(--wui-input-group-color));
-    }
 
-    [data-slot="action"] {
-      &:first-child {
-        border-right: var(--wui-input-group-border);
-      }
-
-      &:last-child {
-        border-left: var(--wui-input-group-border);
+      [data-slot="input"]::placeholder {
+        color: var(--wui-input-group-placeholder-color-invalid, var(--wui-input-group-placeholder-color));
       }
     }
   }
