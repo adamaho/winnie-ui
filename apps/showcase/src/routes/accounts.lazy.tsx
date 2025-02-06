@@ -4,22 +4,10 @@ import {
   ButtonKbd,
   ButtonLabel,
   ButtonShortcut,
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
   DialogProvider,
-  DialogTitle,
-  FieldLabel,
-  NumberField,
-  NumberGroup,
-  NumberInput,
-  NumberStepper,
   PageContent,
   PageHeader,
   PageHeaderActions,
-  TextArea,
-  TextAreaField,
 } from "@winnie-ui/react";
 
 import { Plus } from "@winnie-ui/icons/react/solid";
@@ -38,7 +26,7 @@ function RouteComponent() {
       <PageHeader>
         <PageHeaderActions>
           <DialogProvider>
-            <Button variant="outlined" color="grey">
+            <Button variant="3" color="grey">
               <ButtonIcon>
                 <Plus />
               </ButtonIcon>

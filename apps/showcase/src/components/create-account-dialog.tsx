@@ -55,7 +55,7 @@ export function CreateAccountDialog() {
               <>
                 <Button
                   color="grey"
-                  variant="outlined"
+                  variant="3"
                   data-slot="cancel"
                   onPress={state.close}
                 >

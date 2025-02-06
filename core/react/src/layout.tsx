@@ -497,7 +497,7 @@ function LayoutSidebarToggle({
       className={clsx(className, "wui-layout__sidebar-toggle")}
       data-slot="toggle"
       color="grey"
-      variant="plain"
+      variant="4"
       onPress={onPress}
       ref={mergedRefs}
     >

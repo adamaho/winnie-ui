@@ -23,9 +23,9 @@ export function CheckboxDemo() {
 export function CheckboxSizeDemo() {
   return (
     <div style={{ display: "flex", gap: "var(--wui-space-4)" }}>
-      <Checkbox size="1" defaultSelected />
-      <Checkbox size="2" defaultSelected />
-      <Checkbox size="3" defaultSelected />
+      <Checkbox size="sm" defaultSelected />
+      <Checkbox size="md" defaultSelected />
+      <Checkbox size="lg" defaultSelected />
     </div>
   );
 }

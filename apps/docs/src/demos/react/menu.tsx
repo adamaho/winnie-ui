@@ -32,7 +32,7 @@ import { ArrowBoxLeft, ChevronBottom } from "@winnie-ui/icons/react/solid";
 export function DishActionButton() {
   return (
     <MenuProvider>
-      <Button variant="outlined">
+      <Button variant="3">
         <ButtonLabel>Dish Actions</ButtonLabel>
         <ButtonIcon>
           <ChevronBottom />
@@ -65,7 +65,7 @@ export function DishActionButton() {
 export function MenuColorDemo() {
   return (
     <MenuProvider>
-      <Button variant="outlined">
+      <Button variant="3">
         <ButtonLabel>Dish Actions</ButtonLabel>
         <ButtonIcon>
           <ChevronBottom />
@@ -98,7 +98,7 @@ export function MenuColorDemo() {
 export function MenuIconDemo() {
   return (
     <MenuProvider>
-      <Button variant="outlined">
+      <Button variant="3">
         <ButtonLabel>Preferences</ButtonLabel>
         <ButtonIcon>
           <ChevronBottom />
@@ -151,7 +151,7 @@ export function MenuIconDemo() {
 export function MenuSectionDemo() {
   return (
     <MenuProvider>
-      <Button variant="outlined">
+      <Button variant="3">
         <ButtonLabel>Preferences</ButtonLabel>
         <ButtonIcon>
           <ChevronBottom />
@@ -239,7 +239,7 @@ export function MenuIndicatorDemo() {
 
   return (
     <MenuProvider>
-      <Button variant="outlined">
+      <Button variant="3">
         <ButtonLabel>Select Pizza</ButtonLabel>
         <ButtonIcon>
           <ChevronBottom />
@@ -329,7 +329,7 @@ export function MenuDescriptionColumnDemo() {
 
   return (
     <MenuProvider>
-      <Button variant="outlined">
+      <Button variant="3">
         <ButtonLabel>Permissions</ButtonLabel>
         <ButtonIcon>
           <ChevronBottom />
@@ -376,7 +376,7 @@ export function MenuDescriptionRowDemo() {
 
   return (
     <MenuProvider>
-      <Button variant="outlined">
+      <Button variant="3">
         <ButtonLabel>Select People</ButtonLabel>
         <ButtonIcon>
           <ChevronBottom />
@@ -423,7 +423,7 @@ export function MenuDescriptionInlineDemo() {
 
   return (
     <MenuProvider>
-      <Button variant="outlined">
+      <Button variant="3">
         <ButtonLabel>Permissions</ButtonLabel>
         <ButtonIcon>
           <ChevronBottom />
@@ -459,7 +459,7 @@ export function MenuDescriptionInlineDemo() {
 export function MenuShortcutDemo() {
   return (
     <MenuProvider>
-      <Button variant="outlined">
+      <Button variant="3">
         <ButtonLabel>Dish Actions</ButtonLabel>
         <ButtonIcon>
           <ChevronBottom />

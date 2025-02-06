@@ -229,7 +229,7 @@ export default function Page() {
           <Container position="relative">
             <Flex direction="column" align="center" mb="7">
               <Flex asChild align="center" gap="1" mb="3">
-                <Link asChild size="2" color="gray" ml="-2">
+                <Link asChild size="md" color="gray" ml="-2">
                   <NextLink href="/colors">
                     <ArrowLeftIcon />
                     Radix Colors
@@ -272,7 +272,7 @@ export default function Page() {
               >
                 <Flex direction="column">
                   <Flex mb="1">
-                    <Text as="label" htmlFor="accent" size="1" color="gray">
+                    <Text as="label" htmlFor="accent" size="sm" color="gray">
                       Accent
                     </Text>
                   </Flex>
@@ -285,7 +285,7 @@ export default function Page() {
 
                 <Flex direction="column">
                   <Flex justify="between" mb="1">
-                    <Text as="label" htmlFor="gray" size="1" color="gray">
+                    <Text as="label" htmlFor="gray" size="sm" color="gray">
                       Gray
                     </Text>
                   </Flex>
@@ -298,7 +298,7 @@ export default function Page() {
 
                 <Flex direction="column">
                   <Flex mb="1">
-                    <Text as="label" htmlFor="bg" size="1" color="gray">
+                    <Text as="label" htmlFor="bg" size="sm" color="gray">
                       Background
                     </Text>
                   </Flex>
@@ -565,7 +565,7 @@ export const Preview = ({
               </TextField.Slot>
             </TextField.Root>
           </Box>
-          <Button size="2">Submit</Button>
+          <Button size="md">Submit</Button>
         </Flex>
 
         <Callout.Root>
@@ -613,7 +613,7 @@ export const Preview = ({
           justify={{ initial: "center", sm: "between" }}
           gap="4"
         >
-          <Badge radius="full" variant="soft">
+          <Badge radius="full" variant="2">
             Fully-featured
           </Badge>
           <Badge radius="full" variant="surface">
@@ -634,12 +634,12 @@ export const Preview = ({
               <StarIcon />
             </Flex>
           </IconButton>
-          <IconButton variant="solid">
+          <IconButton variant="1">
             <Flex align="center" justify="center" width="4" height="4">
               <BookmarkIcon />
             </Flex>
           </IconButton>
-          <IconButton variant="soft">
+          <IconButton variant="2">
             <Flex align="center" justify="center" width="4" height="4">
               <AccessibilityIcon />
             </Flex>
@@ -654,12 +654,12 @@ export const Preview = ({
               <Share2Icon />
             </Flex>
           </IconButton>
-          <Switch size="1" ml="2" />
-          <Switch size="1" defaultChecked />
+          <Switch size="sm" ml="2" />
+          <Switch size="sm" defaultChecked />
         </Flex>
 
         <Flex direction="column" gap="4">
-          <Card asChild variant="classic" size="2">
+          <Card asChild variant="classic" size="md">
             <a href="#" onClick={(e) => e.preventDefault()}>
               <Flex align="center" gap="3">
                 <Avatar
@@ -668,11 +668,11 @@ export const Preview = ({
                   fallback="V"
                 />
                 <Box>
-                  <Text as="div" weight="medium" size="3">
+                  <Text as="div" weight="medium" size="lg">
                     Emily Adams
                   </Text>
 
-                  <Text as="div" color="gray" size="2">
+                  <Text as="div" color="gray" size="md">
                     emily.adams@example.com
                   </Text>
                 </Box>
@@ -680,7 +680,7 @@ export const Preview = ({
             </a>
           </Card>
 
-          <Card asChild variant="surface" size="2">
+          <Card asChild variant="surface" size="md">
             <a href="#" onClick={(e) => e.preventDefault()}>
               <Flex align="center" gap="3">
                 <Avatar
@@ -689,11 +689,11 @@ export const Preview = ({
                   fallback="V"
                 />
                 <Box>
-                  <Text as="div" weight="medium" size="3">
+                  <Text as="div" weight="medium" size="lg">
                     Emily Adams
                   </Text>
 
-                  <Text as="div" color="gray" size="2">
+                  <Text as="div" color="gray" size="md">
                     emily.adams@example.com
                   </Text>
                 </Box>
@@ -706,7 +706,7 @@ export const Preview = ({
       <Flex gap="6" direction="column" width="100%" maxWidth="400px" mx="auto">
         <Flex mt="-2" mx="auto">
           <Tabs.Root defaultValue="colors" activationMode="manual">
-            <Tabs.List size="2">
+            <Tabs.List size="md">
               <Tabs.Trigger value="themes">Themes</Tabs.Trigger>
               <Tabs.Trigger value="primitives">Primitives</Tabs.Trigger>
               <Tabs.Trigger value="icons">Icons</Tabs.Trigger>
@@ -719,26 +719,26 @@ export const Preview = ({
           <Flex gap="3">
             <Avatar
               radius="full"
-              variant="solid"
+              variant="1"
               src={getPeopleForColor("gray")[6].image}
               fallback="V"
             />
             <Avatar
               radius="full"
-              variant="solid"
+              variant="1"
               src={getPeopleForColor("gray")[2].image}
               fallback="V"
             />
-            <Avatar radius="full" variant="solid" fallback="V" />
-            <Avatar radius="full" variant="solid" fallback="BG" />
+            <Avatar radius="full" variant="1" fallback="V" />
+            <Avatar radius="full" variant="1" fallback="BG" />
             <Avatar
               radius="full"
-              variant="solid"
+              variant="1"
               fallback={<AvatarIconFallback />}
             />
             <Avatar
               radius="full"
-              variant="solid"
+              variant="1"
               fallback={<AvatarIconFallback />}
               highContrast
             />
@@ -747,26 +747,26 @@ export const Preview = ({
           <Flex gap="3">
             <Avatar
               radius="full"
-              variant="soft"
+              variant="2"
               src={getPeopleForColor("gray")[0].image}
               fallback="V"
             />
             <Avatar
               radius="full"
-              variant="soft"
+              variant="2"
               src={getPeopleForColor("gray")[1].image}
               fallback="V"
             />
-            <Avatar radius="full" variant="soft" fallback="V" />
-            <Avatar radius="full" variant="soft" fallback="BG" />
+            <Avatar radius="full" variant="2" fallback="V" />
+            <Avatar radius="full" variant="2" fallback="BG" />
             <Avatar
               radius="full"
-              variant="soft"
+              variant="2"
               fallback={<AvatarIconFallback />}
             />
             <Avatar
               radius="full"
-              variant="soft"
+              variant="2"
               fallback={<AvatarIconFallback />}
               highContrast
             />
@@ -823,7 +823,7 @@ export const Preview = ({
               </IconButton>
             </Tooltip>
 
-            <Separator size="1" orientation="vertical" />
+            <Separator size="sm" orientation="vertical" />
 
             <Tooltip content="Frame">
               <IconButton variant="ghost" highContrast color="gray">
@@ -854,7 +854,7 @@ export const Preview = ({
               </IconButton>
             </Tooltip>
 
-            <Separator size="1" orientation="vertical" />
+            <Separator size="sm" orientation="vertical" />
 
             <Tooltip content="Text">
               <IconButton variant="ghost" highContrast color="gray">
@@ -878,7 +878,7 @@ export const Preview = ({
               </IconButton>
             </Tooltip>
 
-            <Separator size="1" orientation="vertical" />
+            <Separator size="sm" orientation="vertical" />
 
             <Tooltip content="Scissors">
               <IconButton variant="ghost" highContrast color="gray">
@@ -899,7 +899,7 @@ export const Preview = ({
           <DropdownMenu.Root>
             <DropdownMenu.Trigger>
               <Box flexGrow="1" asChild>
-                <Button size="2" variant="surface" color="gray" highContrast>
+                <Button size="md" variant="surface" color="gray" highContrast>
                   Actions
                   <DropdownMenu.TriggerIcon />
                 </Button>
@@ -979,7 +979,7 @@ export const Preview = ({
                       <Text
                         htmlFor="example-name"
                         as="label"
-                        size="2"
+                        size="md"
                         weight="medium"
                         mb="1"
                         trim="start"
@@ -998,7 +998,7 @@ export const Preview = ({
                       <Text
                         htmlFor="example-email"
                         as="label"
-                        size="2"
+                        size="md"
                         weight="medium"
                         mb="1"
                       >
@@ -1016,7 +1016,7 @@ export const Preview = ({
                       <Text
                         htmlFor="example-password"
                         as="label"
-                        size="2"
+                        size="md"
                         weight="medium"
                         mb="1"
                       >
@@ -1039,7 +1039,7 @@ export const Preview = ({
                     <Button>Create account</Button>
                     <Flex align="center" gap="3">
                       <Separator size="4" />
-                      <Text color="gray" size="1">
+                      <Text color="gray" size="sm">
                         OR
                       </Text>
                       <Separator size="4" />
@@ -1073,7 +1073,7 @@ const ToDoList = ({ items, onItemsChange }: ToDoList) => {
   return (
     <Flex gap="2" direction="column">
       {items.map((item) => (
-        <Text as="label" size="2" key={item.id}>
+        <Text as="label" size="md" key={item.id}>
           <Flex gap="2">
             <Checkbox
               checked={item.completed}
@@ -1189,7 +1189,7 @@ const LinksExample = ({ highContrast = false }) => (
               }}
             />
           </Inset>
-          <Text as="p" size="2" style={{ maxWidth: 250 }}>
+          <Text as="p" size="md" style={{ maxWidth: 250 }}>
             <Strong>Graphic design</Strong> is a profession and applied art
             whose activity consists in projecting visual communications intended
             to transmit specific messages to people.
@@ -1226,7 +1226,7 @@ const LinksExample = ({ highContrast = false }) => (
               }}
             />
           </Inset>
-          <Text as="p" size="2" style={{ maxWidth: 250 }}>
+          <Text as="p" size="md" style={{ maxWidth: 250 }}>
             In the industrial design field of human–computer interaction, a{" "}
             <Strong>user interface</Strong> is the space where interactions
             between humans and machines occur.
@@ -1261,7 +1261,7 @@ const LinksExample = ({ highContrast = false }) => (
               }}
             />
           </Inset>
-          <Text as="p" size="2" style={{ maxWidth: 250 }}>
+          <Text as="p" size="md" style={{ maxWidth: 250 }}>
             A <Strong>typeface</Strong> or <Strong>font family</Strong> is a
             design of letters, numbers and other symbols, to be used in printing
             or for electronic display. There are thousands of different
@@ -1299,7 +1299,7 @@ const LinksExample = ({ highContrast = false }) => (
               }}
             />
           </Inset>
-          <Text as="p" size="2" style={{ maxWidth: 250 }}>
+          <Text as="p" size="md" style={{ maxWidth: 250 }}>
             The <Strong>Apple Macintosh</Strong>—later rebranded as the{" "}
             <Strong>Macintosh 128K</Strong>—was the first successful mass-market
             all-in-one desktop personal computer with a graphical user

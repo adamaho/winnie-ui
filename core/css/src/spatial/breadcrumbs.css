@@ -1,11 +1,27 @@
 @layer spatial {
   [data-component="breadcrumbs"] {
+    /* font-size */
+    --wui-breadcrumbs-sm-font-size: var(--wui-font-size-1);
+    --wui-breadcrumbs-md-font-size: var(--wui-font-size-2);
+    --wui-breadcrumbs-lg-font-size: var(--wui-font-size-3);
+
+    /* space */
+    --wui-breadcrumbs-sm-space: var(--wui-space-2);
+    --wui-breadcrumbs-md-space: var(--wui-space-3);
+    --wui-breadcrumbs-lg-space: var(--wui-space-3);
+
+    /* icon size */
+    --wui-breadcrumbs-sm-icon-size: 1em;
+    --wui-breadcrumbs-md-icon-size: 1em;
+    --wui-breadcrumbs-lg-icon-size: 1em;
+
     display: flex;
 
     [data-component="breadcrumb"] {
       align-items: center;
       display: grid;
       grid-template-columns: auto 1fr auto;
+      font-size: var(--wui-breadcrumbs-font-size, var(--wui-breadcrumbs-md-font-size));
       user-select: none;
       outline: none;
 
@@ -19,87 +35,51 @@
         align-items: center;
         display: grid;
         grid-template-columns: subgrid;
-        grid-column: 1 / -2;
+        grid-column: 1 / -1;
         outline: none;
       }
 
       [data-slot="separator"] {
         grid-column-start: 3;
-        font-size: 1em;
-        min-width: 1em;
+        font-size: var(--wui-breadcrumbs-icon-size, var(--wui-breadcrumbs-md-icon-size));
+        margin-inline: var(--wui-breadcrumbs-space, var(--wui-breadcrumbs-md-space));
+        min-width: var(--wui-breadcrumbs-icon-size, var(--wui-breadcrumbs-md-icon-size));
         text-align: center;
 
         &:where(svg) {
-          min-height: 0.9em;
-          height: 0.9em;
-          width: 0.9em;
+          min-height: calc(0.9 * var(--wui-breadcrumbs-icon-size, var(--wui-breadcrumbs-md-icon-size)));
+          height: calc(0.9 * var(--wui-breadcrumbs-icon-size, var(--wui-breadcrumbs-md-icon-size)));
+          width: calc(0.9 * var(--wui-breadcrumbs-icon-size, var(--wui-breadcrumbs-md-icon-size)));
         }
       }
 
       [data-slot="label"] {
+        font-size: var(--wui-breadcrumbs-font-size, var(--wui-breadcrumbs-md-font-size));
         grid-column-start: 2;
       }
 
       [data-slot="icon"] {
-        font-size: 1em;
+        font-size: var(--wui-breadcrumbs-icon-size, var(--wui-breadcrumbs-md-icon-size));
         grid-column-start: 1;
-        height: 1em;
-        width: 1em;
+        height: var(--wui-breadcrumbs-icon-size, var(--wui-breadcrumbs-md-icon-size));
+        margin-right: var(--wui-breadcrumbs-space, var(--wui-breadcrumbs-md-space));
+        width: var(--wui-breadcrumbs-icon-size, var(--wui-breadcrumbs-md-icon-size));
       }
     }
 
     &[data-size="sm"] {
-      [data-component="breadcrumb"] {
-        font-size: var(--wui-font-size-1);
-
-        [data-slot="icon"] {
-          margin-right: var(--wui-space-2);
-        }
-
-        [data-slot="separator"] {
-          margin-inline: var(--wui-space-2);
-        }
-
-        [data-slot="label"] {
-          font-size: var(--wui-font-size-1);
-        }
-      }
+      --wui-breadcrumbs-font-size: var(--wui-breadcrumbs-sm-font-size);
+      --wui-breadcrumbs-space: var(--wui-breadcrumbs-sm-space);
     }
 
     &[data-size="md"] {
-      [data-component="breadcrumb"] {
-        font-size: var(--wui-font-size-2);
-
-        [data-slot="icon"] {
-          margin-right: var(--wui-space-3);
-        }
-
-        [data-slot="separator"] {
-          margin-inline: var(--wui-space-3);
-        }
-
-        [data-slot="label"] {
-          font-size: var(--wui-font-size-2);
-        }
-      }
+      --wui-breadcrumbs-font-size: var(--wui-breadcrumbs-md-font-size);
+      --wui-breadcrumbs-space: var(--wui-breadcrumbs-md-space);
     }
 
     &[data-size="lg"] {
-      [data-component="breadcrumb"] {
-        font-size: var(--wui-font-size-3);
-
-        [data-slot="icon"] {
-          margin-right: var(--wui-space-3);
-        }
-
-        [data-slot="separator"] {
-          margin-inline: var(--wui-space-3);
-        }
-
-        [data-slot="label"] {
-          font-size: var(--wui-font-size-3);
-        }
-      }
+      --wui-breadcrumbs-font-size: var(--wui-breadcrumbs-lg-font-size);
+      --wui-breadcrumbs-space: var(--wui-breadcrumbs-lg-space);
     }
   }
 }

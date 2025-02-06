@@ -36,7 +36,7 @@ function RouteComponent() {
       <PageHeader>
         <PageHeaderActions>
           <DialogProvider>
-            <Button variant="outlined" color="grey">
+            <Button variant="3" color="grey">
               <ButtonIcon>
                 <Plus />
               </ButtonIcon>
@@ -71,7 +71,7 @@ function RouteComponent() {
                       <>
                         <Button
                           color="grey"
-                          variant="outlined"
+                          variant="3"
                           data-slot="cancel"
                           onPress={state.close}
                         >

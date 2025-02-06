@@ -1,0 +1,194 @@
+---
+title: breadcrumbs
+description: A hierarchy of links to the current page in an application.
+---
+
+import Demo from "~/components/demo/demo.astro";
+
+import BreadcrumbsCurrent from "~/demos/css/breadcrumbs-current.astro";
+import BreadcrumbsDisabled from "~/demos/css/breadcrumbs-disabled.astro";
+import BreadcrumbsSize from "~/demos/css/breadcrumbs-size.astro";
+import BreadcrumbsWithIcon from "~/demos/css/breadcrumbs-with-icon.astro";
+import BreadcrumbsWithLink from "~/demos/css/breadcrumbs-with-link.astro";
+import Breadcrumbs from "~/demos/css/breadcrumbs.astro";
+
+<Demo>
+  <Breadcrumbs />
+  <Fragment slot="footer">
+    ```tsx
+    <ol data-component="breadcrumbs">
+      <li data-component="breadcrumb">
+        <span data-slot="label">Home</span>
+        <span data-slot="separator">/</span>
+      </li>
+      <li data-component="breadcrumb">
+        <span data-slot="label">Dishes</span>
+        <span data-slot="separator">/</span>
+      </li>
+      <li data-component="breadcrumb">
+        <span data-slot="label">Margherita Pizza</span>
+      </li>
+    </ol>
+    ```
+  </Fragment>
+</Demo>
+
+## Import
+
+Import just the breadcrumbs styles.
+
+```css
+@import "@winnie-ui/css/spatial/breadcrumbs";
+@import "@winnie-ui/css/visual/breadcrumbs";
+```
+
+## Anatomy
+
+Attach the appropriate `data` attributes in the structure below.
+
+```html
+<ol data-component="breadcrumbs">
+  <li data-component="breadcrumb">
+    <a data-slot="link">
+      <i data-slot="icon" />
+      <span data-slot="label" />
+    </a>
+    <span data-slot="separator" />
+  </li>
+  <li data-component="breadcrumb">
+    <i data-slot="icon" />
+    <span data-slot="label" />
+    <span data-slot="separator" />
+  </li>
+</ol>
+```
+
+## Examples
+
+### Size
+
+Use the `data-size` attribute to change the size.
+
+<Demo>
+  <BreadcrumbsSize />
+  <Fragment slot="footer">
+    ```tsx ins=data-size="<size>"
+    <ol data-component="breadcrumbs" data-size="<size>">
+      ... 
+    </ol>
+    ```
+  </Fragment>
+</Demo>
+
+### With Links
+
+Use the `link` slot with an anchor tag to turn a breadcrumb into a link.
+
+<Demo>
+  <BreadcrumbsWithLink />
+  <Fragment slot="footer">
+    ```tsx ins=data-slot="link"
+    <ol data-component="breadcrumbs">
+      ...
+      <li data-component="breadcrumb">
+        <a data-slot="link">
+          <span data-slot="label">Dishes</span>
+          <span data-slot="separator">/</span>
+        </a>
+      </li>
+      ...
+    </ol>
+    ```
+  </Fragment>
+</Demo>
+
+### Icon
+
+Use the `icon` slot to add an icon before the label of the breadcrumb.
+
+<Demo>
+  <BreadcrumbsWithIcon />
+  <Fragment slot="footer">
+    ```tsx ins=data-slot="icon"
+    <ol data-component="breadcrumbs">
+      <li data-component="breadcrumb">
+        <i class="home" data-slot="icon"></i>
+        <span data-slot="label">Home</span>
+        <span data-slot="separator">/</span>
+      </li>
+      ...
+    </ol>
+    ```
+  </Fragment>
+</Demo>
+
+### Current
+
+Use the `data-current` or `aria-current` attributes to identify the current pages' breadcrumb.
+
+<Demo>
+  <BreadcrumbsCurrent />
+  <Fragment slot="footer">
+    ```tsx ins=data-current="true"
+    <ol data-component="breadcrumbs">
+      <li data-component="breadcrumb" data-current="true">
+        <span data-slot="label">Margherita Pizza</span>
+      </li>
+      ...
+    </ol>
+    ```
+  </Fragment>
+</Demo>
+
+### Disabled
+
+Use the `data-disabled` or `aria-disabled` attributes to mark a breadcrumb as disabled.
+
+<Demo>
+  <BreadcrumbsDisabled />
+  <Fragment slot="footer">
+    ```tsx ins=data-disabled="true"
+    <ol data-component="breadcrumbs">
+      ...
+      <li data-component="breadcrumb" data-disabled="true">
+        <span data-slot="label">Dishes</span>
+        <span data-slot="separator">/</span>
+      </li>
+      ...
+    </ol>
+    ```
+  </Fragment>
+</Demo>
+
+## Reference
+
+### breadcrumbs
+
+Groups all of the `breadcrumb`'s together.
+
+| Attribute   | Value                  |
+| ----------- | ---------------------- |
+| `data-size` | `"sm" \| "md" \| "lg"` |
+
+### breadcrumb
+
+Groups all of the parts of the breadcrumb together.
+
+| Attribute       | Value     |
+| --------------- | --------- |
+| `data-disabled` | `boolean` |
+| `data-current`  | `boolean` |
+
+| Modifier   | Description                                                        |
+| ---------- | ------------------------------------------------------------------ |
+| `hovered`  | When the breadcrumb is hovered with a mouse                        |
+| `pressed`  | When the breadcrumb is pressed with a mouse or keyboard            |
+| `disabled` | When the breadcrumb prevents user interaction                      |
+| `current`  | When the breadcrumb represents the current page in the application |
+
+| Variable                                   |
+| ------------------------------------------ |
+| `--wui-breadcrumb-background-<?modifier>`  |
+| `--wui-breadcrumb-label-color-<?modifier>` |
+| `--wui-breadcrumb-icon-color-<?modifier>`  |
+| `--wui-breadcrumb-separator-color`         |

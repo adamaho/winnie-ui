@@ -54,13 +54,13 @@ export function ButtonSizeDemo() {
         gap: "var(--wui-space-4)",
       }}
     >
-      <Button size="1" variant="2">
+      <Button size="sm" variant="2">
         <ButtonLabel>Edit Dish</ButtonLabel>
       </Button>
-      <Button size="2" variant="2">
+      <Button size="md" variant="2">
         <ButtonLabel>Edit Dish</ButtonLabel>
       </Button>
-      <Button size="3" variant="2">
+      <Button size="lg" variant="2">
         <ButtonLabel>Edit Dish</ButtonLabel>
       </Button>
     </div>

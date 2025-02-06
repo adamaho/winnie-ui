@@ -40,7 +40,7 @@
         }
       }
 
-      &:is([data-current="true"], [aria-current="true"]) {
+      &:is([data-current], [aria-current="true"], [aria-current="page"]) {
         background: var(--wui-breadcrumb-background-current);
 
         [data-slot="label"] {
@@ -53,7 +53,7 @@
         }
       }
 
-      &:is([data-disabled="true"], [aria-disabled="true"]):not([data-current], [aria-current="true"]) {
+      &:is([data-disabled="true"], [aria-disabled="true"]):not([data-current], [aria-current="true"], [aria-current="page"]) {
         background: var(--wui-breadcrumb-background-disabled);
 
         [data-slot="label"] {

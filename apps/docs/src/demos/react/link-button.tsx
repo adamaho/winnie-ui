@@ -28,7 +28,7 @@ export function NewDishLinkButton() {
  * -----------------------------------------------------------------------------------------------*/
 export function LinkButtonIconOnlyDemo() {
   return (
-    <LinkButton variant="outlined">
+    <LinkButton variant="3">
       <LinkButtonIcon>
         <SettingsGear3 />
       </LinkButtonIcon>
@@ -48,13 +48,13 @@ export function LinkButtonSizeDemo() {
         gap: "var(--wui-space-4)",
       }}
     >
-      <LinkButton size="1" variant="soft">
+      <LinkButton size="sm" variant="2">
         <LinkButtonLabel>Edit Dish</LinkButtonLabel>
       </LinkButton>
-      <LinkButton size="2" variant="soft">
+      <LinkButton size="md" variant="2">
         <LinkButtonLabel>Edit Dish</LinkButtonLabel>
       </LinkButton>
-      <LinkButton size="3" variant="soft">
+      <LinkButton size="lg" variant="2">
         <LinkButtonLabel>Edit Dish</LinkButtonLabel>
       </LinkButton>
     </div>
@@ -73,16 +73,16 @@ export function LinkButtonVariantDemo() {
         gap: "var(--wui-space-4)",
       }}
     >
-      <LinkButton variant="solid">
+      <LinkButton variant="1">
         <LinkButtonLabel>Edit Dish</LinkButtonLabel>
       </LinkButton>
-      <LinkButton variant="soft">
+      <LinkButton variant="2">
         <LinkButtonLabel>Edit Dish</LinkButtonLabel>
       </LinkButton>
-      <LinkButton variant="outlined">
+      <LinkButton variant="3">
         <LinkButtonLabel>Edit Dish</LinkButtonLabel>
       </LinkButton>
-      <LinkButton variant="plain">
+      <LinkButton variant="4">
         <LinkButtonLabel>Edit Dish</LinkButtonLabel>
       </LinkButton>
     </div>
@@ -101,13 +101,13 @@ export function LinkButtonRadiusDemo() {
         gap: "var(--wui-space-4)",
       }}
     >
-      <LinkButton variant="soft" radius="none">
+      <LinkButton variant="2" radius="none">
         <LinkButtonLabel>Edit Dish</LinkButtonLabel>
       </LinkButton>
-      <LinkButton variant="soft" radius="3">
+      <LinkButton variant="2" radius="3">
         <LinkButtonLabel>Edit Dish</LinkButtonLabel>
       </LinkButton>
-      <LinkButton variant="soft" radius="round">
+      <LinkButton variant="2" radius="round">
         <LinkButtonLabel>Edit Dish</LinkButtonLabel>
       </LinkButton>
     </div>
@@ -126,31 +126,31 @@ export function LinkButtonColorDemo() {
         gap: "var(--wui-space-4)",
       }}
     >
-      <LinkButton variant="soft">
+      <LinkButton variant="2">
         <LinkButtonLabel>Edit Dish</LinkButtonLabel>
       </LinkButton>
-      <LinkButton variant="soft" color="red">
+      <LinkButton variant="2" color="red">
         <LinkButtonLabel>Edit Dish</LinkButtonLabel>
       </LinkButton>
-      <LinkButton variant="soft" color="orange">
+      <LinkButton variant="2" color="orange">
         <LinkButtonLabel>Edit Dish</LinkButtonLabel>
       </LinkButton>
-      <LinkButton variant="soft" color="yellow">
+      <LinkButton variant="2" color="yellow">
         <LinkButtonLabel>Edit Dish</LinkButtonLabel>
       </LinkButton>
-      <LinkButton variant="soft" color="green">
+      <LinkButton variant="2" color="green">
         <LinkButtonLabel>Edit Dish</LinkButtonLabel>
       </LinkButton>
-      <LinkButton variant="soft" color="blue">
+      <LinkButton variant="2" color="blue">
         <LinkButtonLabel>Edit Dish</LinkButtonLabel>
       </LinkButton>
-      <LinkButton variant="soft" color="purple">
+      <LinkButton variant="2" color="purple">
         <LinkButtonLabel>Edit Dish</LinkButtonLabel>
       </LinkButton>
-      <LinkButton variant="soft" color="pink">
+      <LinkButton variant="2" color="pink">
         <LinkButtonLabel>Edit Dish</LinkButtonLabel>
       </LinkButton>
-      <LinkButton variant="soft" color="grey">
+      <LinkButton variant="2" color="grey">
         <LinkButtonLabel>Edit Dish</LinkButtonLabel>
       </LinkButton>
     </div>
@@ -178,7 +178,7 @@ export function LinkButtonShortcutDemo() {
           <LinkButtonKbd>C</LinkButtonKbd>
         </LinkButtonShortcut>
       </LinkButton>
-      <LinkButton variant="soft">
+      <LinkButton variant="2">
         <LinkButtonIcon>
           <Plus />
         </LinkButtonIcon>
@@ -187,7 +187,7 @@ export function LinkButtonShortcutDemo() {
           <LinkButtonKbd>C</LinkButtonKbd>
         </LinkButtonShortcut>
       </LinkButton>
-      <LinkButton variant="outlined">
+      <LinkButton variant="3">
         <LinkButtonIcon>
           <Plus />
         </LinkButtonIcon>
@@ -196,7 +196,7 @@ export function LinkButtonShortcutDemo() {
           <LinkButtonKbd>C</LinkButtonKbd>
         </LinkButtonShortcut>
       </LinkButton>
-      <LinkButton variant="plain">
+      <LinkButton variant="4">
         <LinkButtonIcon>
           <Plus />
         </LinkButtonIcon>
@@ -222,16 +222,16 @@ export function LinkButtonDisabledDemo() {
       }}
     >
       <LinkButtonContext.Provider value={{ isDisabled: true }}>
-        <LinkButton variant="solid">
+        <LinkButton variant="1">
           <LinkButtonLabel>Edit Dish</LinkButtonLabel>
         </LinkButton>
-        <LinkButton variant="soft">
+        <LinkButton variant="2">
           <LinkButtonLabel>Edit Dish</LinkButtonLabel>
         </LinkButton>
-        <LinkButton variant="outlined">
+        <LinkButton variant="3">
           <LinkButtonLabel>Edit Dish</LinkButtonLabel>
         </LinkButton>
-        <LinkButton variant="plain">
+        <LinkButton variant="4">
           <LinkButtonLabel>Edit Dish</LinkButtonLabel>
         </LinkButton>
       </LinkButtonContext.Provider>

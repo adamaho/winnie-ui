@@ -228,8 +228,8 @@ function DialogClose({ className, children, ref, ...props }: DialogCloseProps) {
       data-slot="close"
       slot="close"
       color="grey"
-      size="1"
-      variant="soft"
+      size="sm"
+      variant="2"
       ref={ref}
     >
       <ButtonIcon>

@@ -2,18 +2,24 @@
 title: Menu
 description: Displays a list of actions for a user to take.
 documentation:
-  [{ label: Menu, link: https://react-spectrum.adobe.com/react-aria/Menu.html, icon: react-aria }]
+  [
+    {
+      label: Menu,
+      link: https://react-spectrum.adobe.com/react-aria/Menu.html,
+      icon: react-aria,
+    },
+  ]
 ---
 
 import {
   DishActionButton,
   MenuColorDemo,
-  MenuIconDemo,
-  MenuSectionDemo,
-  MenuIndicatorDemo,
   MenuDescriptionColumnDemo,
-  MenuDescriptionRowDemo,
   MenuDescriptionInlineDemo,
+  MenuDescriptionRowDemo,
+  MenuIconDemo,
+  MenuIndicatorDemo,
+  MenuSectionDemo,
   MenuShortcutDemo,
 } from "~/demos/react/menu";
 
@@ -24,7 +30,7 @@ import Demo from "~/components/demo/demo.astro";
   <Fragment slot="footer">
     ```tsx
     <MenuProvider>
-      <Button variant="outlined">
+      <Button variant="3">
         <ButtonLabel>Actions</ButtonLabel>
         <ButtonIcon>
           <ChevronDown />
@@ -57,15 +63,15 @@ Import all of the parts of the menu.
 
 ```tsx
 import {
-  MenuProvider,
-  MenuPopover,
   Menu,
-  MenuSeparator,
   MenuItem,
-  MenuItemGroup,
-  MenuItemLabel,
   MenuItemDescription,
+  MenuItemGroup,
   MenuItemIcon,
+  MenuItemLabel,
+  MenuPopover,
+  MenuProvider,
+  MenuSeparator,
 } from "@winnie-ui/react";
 ```
 
@@ -122,7 +128,7 @@ Add an icon with the `MenuItemIcon` slot component as a child of the `MenuItem`.
 <Demo>
   <MenuIconDemo client:load />
   <Fragment slot="footer">
-    ```tsx mark={4-6}
+    ```tsx mark={4 - 6}
     <MenuProvider>
       ...
       <MenuItem>
@@ -143,7 +149,7 @@ Add a section using the `MenuSection`, `MenuHeader` and `MenuSeparator` componen
 <Demo>
   <MenuSectionDemo client:load />
   <Fragment slot="footer">
-    ```tsx mark={3-6,19}
+    ```tsx mark={(3 - 6, 19)}
     <MenuProvider>
       ...
       <MenuSection>
@@ -214,7 +220,7 @@ You can create a column layout using the `MenuItemGroup` component and placing t
 <Demo>
   <MenuDescriptionColumnDemo client:only="react" />
   <Fragment slot="footer">
-    ```tsx mark={8-11}
+    ```tsx mark={8 - 11}
     <MenuProvider>
       ...
       <Menu
@@ -270,7 +276,7 @@ Finally, if you prefer to inline all descriptions, youp can skip the `MenuItemGr
 <Demo>
   <MenuDescriptionInlineDemo client:only="react" />
   <Fragment slot="footer">
-    ```tsx mark={9-10}
+    ```tsx mark={9 - 10}
     <MenuProvider>
       ...
       <Menu
@@ -296,7 +302,7 @@ Use the `MenuItemShortcut` component as a child to `MenuItem` to show a keyboard
 <Demo>
   <MenuShortcutDemo client:load />
   <Fragment slot="footer">
-    ```tsx mark={6-9}
+    ```tsx mark={6 - 9}
     <MenuProvider>
       ...
       <Menu>
