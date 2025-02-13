@@ -19,30 +19,42 @@
       font-weight: var(--wui-checkbox-label-font-weight);
     }
 
-    &:is([data-hovered], :hover):not([aria-disabled="true"], [data-disabled]) {
+    &:is([data-hovered], :hover):not([aria-disabled="true"], [data-disabled], [data-invalid="true"], :invalid) {
       [data-slot="indicator"] {
         background: var(--wui-checkbox-indicator-background-hovered, var(--wui-checkbox-indicator-background));
         border: var(--wui-checkbox-indicator-border-hovered, var(--wui-checkbox-indicator-border));
         box-shadow: var(--wui-checkbox-indicator-box-shadow-hovered, var(--wui-checkbox-indicator-box-shadow));
         color: var(--wui-checkbox-indicator-color-hovered, var(--wui-checkbox-indicator-color));
       }
+
+      [data-slot="label"] {
+        color: var(--wui-checkbox-label-color-hovered, var(--wui-checkbox-label-color));
+      }
     }
 
-    &:is([data-pressed], :active):not([aria-disabled="true"], [data-disabled]) {
+    &:is([data-pressed], :active):not([aria-disabled="true"], [data-disabled], [data-invalid="true"], :invalid) {
       [data-slot="indicator"] {
         background: var(--wui-checkbox-indicator-background-pressed, var(--wui-checkbox-indicator-background));
         border: var(--wui-checkbox-indicator-border-pressed, var(--wui-checkbox-indicator-border));
         box-shadow: var(--wui-checkbox-indicator-box-shadow-pressed, var(--wui-checkbox-indicator-box-shadow));
         color: var(--wui-checkbox-indicator-color-pressed, var(--wui-checkbox-indicator-color));
       }
+
+      [data-slot="label"] {
+        color: var(--wui-checkbox-label-color-pressed, var(--wui-checkbox-label-color));
+      }
     }
 
-    &:is([data-checked], [data-selected]):not([aria-disabled="true"], [data-disabled]) {
+    &:is([data-checked], [data-selected]):not([aria-disabled="true"], [data-disabled], [data-invalid="true"], :invalid) {
       [data-slot="indicator"] {
         background: var(--wui-checkbox-indicator-background-selected, var(--wui-checkbox-indicator-background));
         border: var(--wui-checkbox-indicator-border-selected, var(--wui-checkbox-indicator-border));
         box-shadow: var(--wui-checkbox-indicator-box-shadow-selected, var(--wui-checkbox-indicator-box-shadow));
         color: var(--wui-checkbox-indicator-color-selected, var(--wui-checkbox-indicator-color));
+      }
+
+      [data-slot="label"] {
+        color: var(--wui-checkbox-label-color-selected, var(--wui-checkbox-label-color));
       }
     }
 
@@ -55,7 +67,7 @@
       }
 
       [data-slot="label"] {
-        color: var(--wui-checkbox-label-color-disabled);
+        color: var(--wui-checkbox-label-color-disabled, var(--wui-checkbox-label-color));
       }
     }
 
@@ -68,7 +80,16 @@
       }
     }
 
-    &:is([data-selected], [data-checked])[data-invalid] {
+    &:is([data-invalid], :invalid) {
+      [data-slot="indicator"] {
+        background: var(--wui-checkbox-indicator-background-invalid, var(--wui-checkbox-indicator-background));
+        border: var(--wui-checkbox-indicator-border-invalid, var(--wui-checkbox-indicator-border));
+        box-shadow: var(--wui-checkbox-indicator-box-shadow-invalid, var(--wui-checkbox-indicator-box-shadow));
+        color: var(--wui-checkbox-indicator-color-invalid, var(--wui-checkbox-indicator-color));
+      }
+    }
+
+    &:is([data-selected], [data-checked]):is([data-invalid], :invalid) {
       [data-slot="indicator"] {
         background: var(--wui-checkbox-indicator-background-selected-invalid, var(--wui-checkbox-indicator-background-selected));
         border: var(--wui-checkbox-indicator-border-selected-invalid, var(--wui-checkbox-indicator-border-selected));

@@ -5,19 +5,25 @@ description: Captures binary user input.
 
 import Demo from "~/components/demo/demo.astro";
 
-import {
-  Checkbox,
-  CheckboxWithLabel,
-  CheckboxWithLabelAndDescription,
-} from "./_components/checkbox/checkbox";
+import CheckboxColor from "~/demos/css/checkbox-color.astro";
+import CheckboxDisabled from "~/demos/css/checkbox-disabled.astro";
+import CheckboxInvalid from "~/demos/css/checkbox-invalid.astro";
+import CheckboxRadius from "~/demos/css/checkbox-radius.astro";
+import CheckboxSelected from "~/demos/css/checkbox-selected.astro";
+import CheckboxSize from "~/demos/css/checkbox-size.astro";
+import CheckboxWithDescription from "~/demos/css/checkbox-with-description.astro";
+import CheckboxWithLabel from "~/demos/css/checkbox-with-label.astro";
+import Checkbox from "~/demos/css/checkbox.astro";
 
 <Demo>
-  <Checkbox client:load />
+  <Checkbox />
   <Fragment slot="footer">
     ```tsx
-    <button data-component="checkbox">
-      <i data-slot="indicator" class="check"></i>
-    </button>
+    <label data-component="checkbox" data-selected="true">
+      <button data-component="indicator">
+        <i data-slot="indicator" class="check"></i>
+      </button>
+    </label>
     ```
   </Fragment>
 </Demo>
@@ -28,11 +34,12 @@ Import just the checkbox styles.
 
 ```css
 @import "@winnie-ui/css/spatial/checkbox";
+@import "@winnie-ui/css/visual/checkbox";
 ```
 
 ## Anatomy
 
-Attach the appropriate `data-component` attributes in the structure below.
+Attach the appropriate `data` attributes in the structure below.
 
 ```html
 <button data-component="checkbox">
@@ -47,22 +54,14 @@ Attach the appropriate `data-component` attributes in the structure below.
 Use the `data-size` attribute to change the size.
 
 <Demo>
-  <div class="row">
-    <Checkbox client:load data-size="sm" />
-    <Checkbox client:load data-size="md" />
-    <Checkbox client:load data-size="lg" />
-  </div>
+  <CheckboxSize />
   <Fragment slot="footer">
-    ```tsx ins=data-size="sm" ins=data-size="md" ins=data-size="lg"
-    <button data-component="checkbox" data-size="sm">
-      <i data-slot="indicator" class="check"></i>
-    </button>
-    <button data-component="checkbox" data-size="md">
-      <i data-slot="indicator" class="check"></i>
-    </button>
-    <button data-component="checkbox" data-size="lg">
-      <i data-slot="indicator" class="check"></i>
-    </button>
+    ```tsx ins=data-size="<size>"
+    <label data-component="checkbox" data-size="<size>">
+      <button data-slot="indicator">
+        <i data-slot="icon" class="check"></i>
+      </button>
+    </label>
     ```
   </Fragment>
 </Demo>
@@ -72,70 +71,153 @@ Use the `data-size` attribute to change the size.
 Use the `data-radius` attribute to change the radius.
 
 <Demo>
-  <div class="row">
-    <Checkbox client:load data-radius="none" />
-    <Checkbox client:load data-radius="md" />
-    <Checkbox client:load data-radius="round" />
-  </div>
+  <CheckboxRadius />
   <Fragment slot="footer">
-    ```tsx ins=data-radius="none" ins=data-radius="1" ins=data-radius="3"
-    <button data-component="checkbox" data-radius="none">
-      <i data-slot="indicator" class="check"></i>
-    </button>
-    <button data-component="checkbox" data-radius="1">
-      <i data-slot="indicator" class="check"></i>
-    </button>
-    <button data-component="checkbox" data-radius="3">
-      <i data-slot="indicator" class="check"></i>
-    </button>
+    ```tsx ins=data-radius="<radius>"
+    <label data-component="checkbox" data-radius="<radius>">
+      <button data-slot="indicator">
+        <i data-slot="icon" class="check"></i>
+      </button>
+    </label>
     ```
   </Fragment>
 </Demo>
 
-### With Label
+### Color
 
-Use the `field` component and `label` slot to add a label beside the checkbox.
+Use the `data-accent-color` attribute to change the color.
 
 <Demo>
-  <CheckboxWithLabel client:load />
+  <CheckboxColor />
   <Fragment slot="footer">
-    ```tsx ins=data-slot="label"
-    <div data-component="field">
-      <button data-component="checkbox">
-        <i data-slot="indicator" class="check"></i>
+    ```tsx ins=data-accent-color="<color>"
+    <label data-component="checkbox" data-accent-color="<color>">
+      <button data-slot="indicator">
+        <i data-slot="icon" class="check"></i>
       </button>
-      <label data-slot="label">Accept terms and conditions.</label>
-    </div>
+    </label>
     ```
   </Fragment>
 </Demo>
 
-### With Description
+### Selected
 
-Use the `field` component and `label` and `description` slots beside the checkbox.
+Use the `data-selected` attribute to indicate that the checkbox is checked.
 
 <Demo>
-  <CheckboxWithLabelAndDescription client:load />
+  <CheckboxSelected />
   <Fragment slot="footer">
-    ```tsx ins=data-slot="label" ins=data-slot="description"
-    <div data-component="field">
-      <button data-component="checkbox">
-        <i data-slot="indicator" class="check"></i>
+    ```tsx ins=data-selected="true"
+    <label data-component="checkbox" data-selected="true">
+      <button data-slot="indicator">
+        <i data-slot="icon" class="check"></i>
       </button>
-      <label data-slot="label">Display full names</label>
+    </label>
+    ```
+  </Fragment>
+</Demo>
+
+### Label
+
+Add a label with the `label` slot attribute as a child of the checkbox.
+
+<Demo>
+  <CheckboxWithLabel />
+  <Fragment slot="footer">
+    ```tsx mark={5}
+    <label data-component="checkbox" data-selected="true">
+      <button data-slot="indicator">
+        <i data-slot="icon" class="check"></i>
+      </button>
+      <span data-slot="label">Pineapple</span>
+    </label>
+    ```
+  </Fragment>
+</Demo>
+
+### Description
+
+Add a `field` component with the `description` slot attribute as a child to add a description.
+
+<Demo>
+  <CheckboxWithDescription />
+  <Fragment slot="footer">
+    ```tsx mark={8} mark={9} mark={10} ins=data-component="field"
+    <div data-component="field">
+      <label data-component="checkbox" data-selected="true">
+        <button data-slot="indicator">
+          <i data-slot="icon" class="check"></i>
+        </button>
+        <span data-slot="label">Pineapple</span>
+      </label>
       <span data-slot="description">
-        Show full names of users instead of shorter usernames.
+        Yes, I am sure I want pineapple on my pizza
       </span>
     </div>
     ```
   </Fragment>
 </Demo>
 
+### Disabled
+
+Use the `data-disabled` attribute to set the disabled state of checkbox.
+
+<Demo>
+  <CheckboxDisabled />
+  <Fragment slot="footer">
+    ```tsx ins=data-disabled="true"
+    <label data-component="checkbox" data-disabled="true">
+      <button data-slot="indicator"></button>
+      <span data-slot="label">Pineapple</span>
+    </label>
+    ```
+  </Fragment>
+</Demo>
+
+### Invalid
+
+Checkbox will respect the `:invalid` selector when it is used in a form. Use the `data-invalid` attribute to manually control the invalid state of the `checkbox`.
+
+<Demo>
+  <CheckboxInvalid />
+  <Fragment slot="footer">
+    ```tsx ins=data-invalid="true"
+    <label data-component="checkbox" data-invalid="true">
+      <button data-slot="indicator"></button>
+      <span data-slot="label">Pineapple</span>
+    </label>
+    ```
+  </Fragment>
+</Demo>
+
 ## Reference
 
-Below is a list of the available `data-` attributes available for Checkbox.
+### checkbox
 
-| Attribute     | Value                         |
-| ------------- | ----------------------------- |
-| `data-radius` | `"none" \| "1" \| "2" \| "3"` |
-| `data-size`   | `"1" \| "2" \| "3"`           |
+Groups all of the parts of the checkbox together.
+
+| Attribute           | Value                                                                                           |
+| ------------------- | ----------------------------------------------------------------------------------------------- |
+| `data-accent-color` | `"red" \| "orange" \| "yellow" \| "green" \| "blue" \| "purple" \| "pink" \| "grey" \| "brand"` |
+| `data-radius`       | `"none" \| "sm" \| "md" \| "lg" \| "round"`                                                     |
+| `data-size`         | `"sm" \| "md" \| "lg"`                                                                          |
+
+| Modifier            | Description                                                |
+| ------------------- | ---------------------------------------------------------- |
+| `hovered`           | When the checkbox is hovered with a mouse                  |
+| `pressed`           | When the checkbox is pressed with a mouse or keyboard      |
+| `disabled`          | When the checkbox prevents user interaction                |
+| `invalid`           | When the checkbox is in an invalid state in a form         |
+| `selected`          | When the checkbox is selected. Otherwise known as checked. |
+| `selected-disabled` | When the checkbox is selected and disabled.                |
+| `selected-disabled` | When the checkbox is selected and invalid.                 |
+
+| Variable                                            |
+| --------------------------------------------------- |
+| `--wui-checkbox-indicator-background-<?modifier>`   |
+| `--wui-checkbox-indicator-border-<?modifier>`       |
+| `--wui-checkbox-indicator-box-shadow-<?modifier>`   |
+| `--wui-checkbox-indicator-color-<?modifier>`        |
+| `--wui-checkbox-label-color-<?modifier>`            |
+| `--wui-checkbox-label-font-weight`                  |
+| `--wui-checkbox-label-font-weight-with-description` |

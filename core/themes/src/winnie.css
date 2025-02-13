@@ -117,6 +117,7 @@
         --wui-checkbox-indicator-color-disabled: var(--wui-color-grey-9);
         --wui-checkbox-indicator-border-selected: var(--wui-border-width-1) solid var(--wui-color-accent-9);
         --wui-checkbox-indicator-border-selected-invalid: var(--wui-border-width-1) solid var(--wui-color-red-9);
+        --wui-checkbox-indicator-border-invalid: var(--wui-border-width-1) solid var(--wui-color-red-9);
         --wui-checkbox-indicator-box-shadow: var(--wui-shadow-1);
       }
 

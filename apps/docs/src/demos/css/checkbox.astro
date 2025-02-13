@@ -1,0 +1,14 @@
+---
+import { Checkmark } from "@winnie-ui/icons/react/solid";
+---
+
+<div class="flex items-center gap-4">
+  <label data-component="checkbox">
+    <button data-slot="indicator"></button>
+  </label>
+  <label data-component="checkbox" data-selected="true">
+    <button data-slot="indicator">
+      <Checkmark data-slot="icon" />
+    </button>
+  </label>
+</div>

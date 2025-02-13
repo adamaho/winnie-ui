@@ -13,8 +13,8 @@
   },
   "dependencies": {
     "@fontsource/inter": "5.1.1",
-    "@rocicorp/zero": "0.13.2025013101",
-    "@tanstack/react-router": "1.98.4",
+    "@rocicorp/zero": "0.14.2025021202",
+    "@tanstack/react-router": "1.102.5",
     "@winnie-ui/icons": "workspace:*",
     "@winnie-ui/react": "workspace:*",
     "@winnie-ui/tailwind": "workspace:*",
@@ -24,18 +24,18 @@
     "react-dom": "19.0.0"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "4.0.2",
-    "@tanstack/router-devtools": "1.98.4",
-    "@tanstack/router-plugin": "1.98.6",
+    "@tailwindcss/vite": "4.0.6",
+    "@tanstack/router-devtools": "1.102.5",
+    "@tanstack/router-plugin": "1.102.6",
     "@types/aws-lambda": "8.10.147",
     "@types/react": "19.0.8",
     "@types/react-dom": "19.0.3",
-    "@vitejs/plugin-react-swc": "3.7.2",
-    "globals": "15.14.0",
-    "sst": "3.7.1",
-    "tailwindcss": "4.0.2",
+    "@vitejs/plugin-react-swc": "3.8.0",
+    "globals": "15.15.0",
+    "sst": "3.8.8",
+    "tailwindcss": "4.0.6",
     "typescript": "5.7.3",
-    "vite": "6.0.11",
+    "vite": "6.1.0",
     "vite-tsconfig-paths": "5.1.4"
   }
 }
