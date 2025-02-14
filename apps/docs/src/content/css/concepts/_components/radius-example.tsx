@@ -24,7 +24,7 @@ import { type Theme, getTheme } from "~/utils/theme";
 
 import "./radius-example.css";
 
-const RADIUS = ["none", "1", "2", "3", "round"];
+const RADIUS = ["none", "sm", "md", "lg", "round"];
 
 export function RadiusExample() {
   /**
