@@ -3,15 +3,35 @@
   [data-component="heading"],
   [data-component="link"] {
     &[data-contrast="low"] {
-      color: var(--wui-typography-low-color);
+      color: var(--wui-color-accent-10);
     }
 
     &[data-contrast="normal"] {
-      color: var(--wui-typography-normal-color);
+      color: var(--wui-color-accent-11);
     }
 
     &[data-contrast="high"] {
-      color: var(--wui-typography-high-color);
+      color: var(--wui-color-accent-12);
+    }
+
+    &[data-weight="normal"] {
+      font-weight: var(--wui-font-weight-normal);
+    }
+
+    &[data-weight="medium"] {
+      font-weight: var(--wui-font-weight-medium);
+    }
+
+    &[data-weight="semibold"] {
+      font-weight: var(--wui-font-weight-semibold);
+    }
+
+    &[data-weight="bold"] {
+      font-weight: var(--wui-font-weight-bold);
+    }
+
+    &[data-weight="extrabold"] {
+      font-weight: var(--wui-font-weight-extrabold);
     }
   }
 

@@ -1,0 +1,129 @@
+---
+title: heading
+description: Foundational heading primitive.
+---
+
+import Demo from "~/components/demo/demo.astro";
+
+import HeadingAlign from "~/demos/css/heading-align.astro";
+import HeadingColor from "~/demos/css/heading-color.astro";
+import HeadingContrast from "~/demos/css/heading-contrast.astro";
+import HeadingSize from "~/demos/css/heading-size.astro";
+import HeadingWeight from "~/demos/css/heading-weight.astro";
+import Heading from "~/demos/css/heading.astro";
+
+<Demo>
+  <Heading />
+  <Fragment slot="footer">
+    ```tsx
+    <h2 data-component="heading" data-size="5" data-weight="medium">
+      Margherita Pizza
+    </h2>
+    ```
+  </Fragment>
+</Demo>
+
+## Import
+
+Import just the breadcrumbs styles.
+
+```css
+@import "@winnie-ui/css/spatial/typography";
+@import "@winnie-ui/css/visual/typography";
+```
+
+## Anatomy
+
+Attach the appropriate `data` attributes in the structure below.
+
+```html
+<h1 data-component="heading" />
+```
+
+## Examples
+
+### Size
+
+Use the `data-size` attribute to change the size.
+
+<Demo>
+  <HeadingSize />
+  <Fragment slot="footer">
+    ```tsx ins=data-size="<size>"
+    <h2 data-component="heading" data-size="<size>">
+      Margherita Pizza
+    </h2>
+    ```
+  </Fragment>
+</Demo>
+
+### Color
+
+Use the `data-accent-color` attribute to change the color.
+
+<Demo>
+  <HeadingColor />
+  <Fragment slot="footer">
+    ```tsx ins=data-accent-color="<color>"
+    <h2 data-component="heading" data-accent-color="<color>">
+      Margherita Pizza
+    </h2>
+    ```
+  </Fragment>
+</Demo>
+
+### Contrast
+
+Use the `data-contrast` attribute to change the contrast.
+
+<Demo>
+  <HeadingContrast />
+  <Fragment slot="footer">
+    ```tsx ins=data-contrast="<contrast>"
+    <h2 data-component="heading" data-contrast="<contrast>">
+      Margherita Pizza
+    </h2>
+    ```
+  </Fragment>
+</Demo>
+
+### Weight
+
+Use the `data-weight` attribute to change the weight.
+
+<Demo>
+  <HeadingWeight />
+  <Fragment slot="footer">
+    ```tsx ins=data-weight="<weight>"
+    <h2 data-component="heading" data-weight="<weight>">
+      Margherita Pizza
+    </h2>
+    ```
+  </Fragment>
+</Demo>
+
+### Alignment
+
+Use the `data-align` attribute to change the alignment.
+
+<Demo>
+  <HeadingAlign />
+  <Fragment slot="footer">
+    ```tsx ins=data-align="<align>"
+    <h2 data-component="heading" data-align="<align>">
+      Margherita Pizza
+    </h2>
+    ```
+  </Fragment>
+</Demo>
+
+## Reference
+
+### heading
+
+Represents the heading element.
+
+| Variable                       |
+| ------------------------------ |
+| `--wui-heading-font-weight`    |
+| `--wui-heading-letter-spacing` |

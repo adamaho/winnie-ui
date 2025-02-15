@@ -55,7 +55,7 @@ The base layer is where most of the tokens and base styles are applied. This inc
     --wui-font-weight-normal: 400;
     --wui-font-weight-medium: 500;
     --wui-font-weight-bold: 700;
-    --wui-font-weight-extra-bold: 800;
+    --wui-font-weight-extrabold: 800;
 
     --wui-letter-spacing-1: 0.0025em;
     --wui-letter-spacing-2: 0em;
@@ -92,7 +92,10 @@ The visual layer applies styles to the more popular properties in css. These are
       background: var(--wui-button-1-background, var(--wui-button-background));
 
       &:hover {
-        background: var(--wui-button-1-background-hovered, var(--wui-button-background-hovered));
+        background: var(
+          --wui-button-1-background-hovered,
+          var(--wui-button-background-hovered)
+        );
       }
     }
   }

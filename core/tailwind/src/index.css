@@ -363,7 +363,7 @@
     --font-weight-medium: var(--wui-font-weight-medium);
     --font-weight-semibold: var(--wui-font-weight-semibold);
     --font-weight-bold: var(--wui-font-weight-bold);
-    --font-weight-extra-bold: var(--wui-font-weight-extra-bold);
+    --font-weight-extra-bold: var(--wui-font-weight-extrabold);
 
     /* inner shadow */
     --inset-shadow-1: var(--wui-shadow-inner-1);
