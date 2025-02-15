@@ -5,11 +5,11 @@
     letter-spacing: var(--wui-link-letter-spacing);
     text-decoration: var(--wui-link-text-decoration);
 
-    &[data-hovered] {
+    &:is([data-hovered], :hover):not([data-disabled]) {
       text-decoration: var(--wui-link-text-decoration-hovered, var(--wui-link-text-decoration));
     }
 
-    &[data-pressed] {
+    &:is([data-pressed], :active):not([data-disabled]) {
       text-decoration: var(--wui-link-text-decoration-pressed, var(--wui-link-text-decoration));
     }
 
@@ -18,7 +18,7 @@
     }
 
     &[data-disabled] {
-      color: var(--wui-typography-normal-color);
+      color: var(--wui-link-color-disabled, var(--wui-color-accent-10));
       text-decoration: var(--wui-link-text-decoration-disabled, var(--wui-link-text-decoration));
     }
   }

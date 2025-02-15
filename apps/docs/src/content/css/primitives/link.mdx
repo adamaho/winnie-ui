@@ -1,24 +1,25 @@
 ---
-title: text
-description: Foundational text primitive.
+title: link
+description: Navigates a user between pages.
 ---
 
 import Demo from "~/components/demo/demo.astro";
 
-import TextAlign from "~/demos/css/text-align.astro";
-import TextColor from "~/demos/css/text-color.astro";
-import TextContrast from "~/demos/css/text-contrast.astro";
-import TextSize from "~/demos/css/text-size.astro";
-import TextWeight from "~/demos/css/text-weight.astro";
-import Text from "~/demos/css/text.astro";
+import LinkAlign from "~/demos/css/link-align.astro";
+import LinkColor from "~/demos/css/link-color.astro";
+import LinkContrast from "~/demos/css/link-contrast.astro";
+import LinkDisabled from "~/demos/css/link-disabled.astro";
+import LinkSize from "~/demos/css/link-size.astro";
+import LinkWeight from "~/demos/css/link-weight.astro";
+import Link from "~/demos/css/link.astro";
 
 <Demo>
-  <Text />
+  <Link />
   <Fragment slot="footer">
     ```tsx
-    <span data-component="text" data-size="3">
-      Thin crust pizza topped with melting mozzarella and basil
-    </span>
+    <a data-component="link" data-size="3">
+      View Pizza
+    </a>
     ```
   </Fragment>
 </Demo>
@@ -29,6 +30,7 @@ Import just the breadcrumbs styles.
 
 ```css
 @import "@winnie-ui/css/spatial/typography";
+@import "@winnie-ui/css/visual/link";
 @import "@winnie-ui/css/visual/typography";
 ```
 
@@ -37,7 +39,7 @@ Import just the breadcrumbs styles.
 Attach the appropriate `data` attributes in the structure below.
 
 ```html
-<span data-component="text" />
+<a data-component="link" />
 ```
 
 ## Examples
@@ -47,14 +49,13 @@ Attach the appropriate `data` attributes in the structure below.
 Use the `data-size` attribute to change the size.
 
 <Demo>
-  <TextSize />
+  <LinkSize />
   <Fragment slot="footer">
     ```tsx ins=data-size="<size>"
-    <span data-component="text" data-size="<size>">
-      Thin crust pizza topped with melting mozzarella and basil
-    </span>
+    <a data-component="link" data-size="<size>">
+      View Pizza 
+    </a>
     ```
-
   </Fragment>
 </Demo>
 
@@ -63,14 +64,13 @@ Use the `data-size` attribute to change the size.
 Use the `data-accent-color` attribute to change the color.
 
 <Demo>
-  <TextColor />
+  <LinkColor />
   <Fragment slot="footer">
     ```tsx ins=data-accent-color="<color>"
-    <span data-component="text" data-accent-color="<color>">
-      Thin crust pizza topped with melting mozzarella and basil
-    </span>
+    <a data-component="link" data-accent-color="<color>">
+      View Pizza 
+    </a>
     ```
-
   </Fragment>
 </Demo>
 
@@ -79,14 +79,13 @@ Use the `data-accent-color` attribute to change the color.
 Use the `data-contrast` attribute to change the contrast.
 
 <Demo>
-  <TextContrast />
+  <LinkContrast />
   <Fragment slot="footer">
     ```tsx ins=data-contrast="<contrast>"
-    <span data-component="text" data-contrast="<contrast>">
-      Thin crust pizza topped with melting mozzarella and basil
-    </span>
+    <a data-component="link" data-contrast="<contrast>">
+        View Pizza 
+    </a>
     ```
-
   </Fragment>
 </Demo>
 
@@ -95,14 +94,13 @@ Use the `data-contrast` attribute to change the contrast.
 Use the `data-weight` attribute to change the weight.
 
 <Demo>
-  <TextWeight />
+  <LinkWeight />
   <Fragment slot="footer">
     ```tsx ins=data-weight="<weight>"
-    <span data-component="text" data-weight="<weight>">
-      Thin crust pizza topped with melting mozzarella and basil
-    </span>
+    <a data-component="link" data-weight="<weight>">
+      View Pizza 
+    </a>
     ```
-
   </Fragment>
 </Demo>
 
@@ -111,22 +109,36 @@ Use the `data-weight` attribute to change the weight.
 Use the `data-align` attribute to change the alignment.
 
 <Demo>
-  <TextAlign />
+  <LinkAlign />
   <Fragment slot="footer">
     ```tsx ins=data-align="<align>"
-    <span data-component="text" data-align="<align>">
-      Thin crust pizza topped with melting mozzarella and basil
-    </span>
+    <a data-component="link" data-align="<align>">
+      View Pizza 
+    </a>
     ```
+  </Fragment>
+</Demo>
 
+### Disabled
+
+Use the `data-disabled` attribute to disable the link.
+
+<Demo>
+  <LinkDisabled />
+  <Fragment slot="footer">
+    ```tsx ins=data-disabled="true"
+    <a data-component="link" data-disabled="true">
+      View Pizza
+    </a>
+    ```
   </Fragment>
 </Demo>
 
 ## Reference
 
-### text
+### link
 
-Represents the text element.
+Represents the link element.
 
 | Attribute           | Value                                                                                           |
 | ------------------- | ----------------------------------------------------------------------------------------------- |
@@ -136,7 +148,15 @@ Represents the text element.
 | `data-size`         | `"1" \| "2" \| "3" \| "4" \| "5" \| "6" \| "7" \| "8" \| "9"`                                   |
 | `data-weight`       | `"normal" \| "medium" \| "semibold" \| "bold" \| "extrabold"`                                   |
 
-| Variable                    |
-| --------------------------- |
-| `--wui-text-font-family`    |
-| `--wui-text-letter-spacing` |
+| Modifier  | Description                                       |
+| --------- | ------------------------------------------------- |
+| `hovered` | When the link is hovered with a mouse             |
+| `pressed` | When the link is pressed with a mouse or keyboard |
+| `current` | When the link represents the current page         |
+
+| Variable                                 |
+| ---------------------------------------- |
+| `--wui-link-color-disabled`              |
+| `--wui-link-font-family`                 |
+| `--wui-link-letter-spacing`              |
+| `--wui-link-text-decoration-<?modifier>` |

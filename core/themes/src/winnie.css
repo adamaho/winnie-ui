@@ -194,6 +194,7 @@
      * -----------------------------------------------------------------------------------------------*/
     [data-component="link"] {
       --wui-link-text-decoration-hovered: underline solid var(--wui-color-accent-a7);
+      --wui-link-color-disabled: var(--wui-color-accent-9);
     }
 
     /* -------------------------------------------------------------------------------------------------
