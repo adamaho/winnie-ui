@@ -1,0 +1,134 @@
+---
+title: text
+description: Foundational text primitive.
+---
+
+import Demo from "~/components/demo/demo.astro";
+
+import TextAlign from "~/demos/css/text-align.astro";
+import TextColor from "~/demos/css/text-color.astro";
+import TextContrast from "~/demos/css/text-contrast.astro";
+import TextSize from "~/demos/css/text-size.astro";
+import TextWeight from "~/demos/css/text-weight.astro";
+import Text from "~/demos/css/text.astro";
+
+<Demo>
+  <Text />
+  <Fragment slot="footer">
+    ```tsx
+    <span data-component="text" data-size="3">
+      Thin crust pizza topped with melting mozzarella and basil
+    </span>
+    ```
+  </Fragment>
+</Demo>
+
+## Import
+
+Import just the breadcrumbs styles.
+
+```css
+@import "@winnie-ui/css/spatial/typography";
+@import "@winnie-ui/css/visual/typography";
+```
+
+## Anatomy
+
+Attach the appropriate `data` attributes in the structure below.
+
+```html
+<span data-component="text" />
+```
+
+## Examples
+
+### Size
+
+Use the `data-size` attribute to change the size.
+
+<Demo>
+  <TextSize />
+  <Fragment slot="footer">
+    ```tsx ins=data-size="<size>"
+    <span data-component="text" data-size="<size>">
+      Thin crust pizza topped with melting mozzarella and basil
+    </span>
+    ```
+
+  </Fragment>
+</Demo>
+
+### Color
+
+Use the `data-accent-color` attribute to change the color.
+
+<Demo>
+  <TextColor />
+  <Fragment slot="footer">
+    ```tsx ins=data-accent-color="<color>"
+    <span data-component="text" data-accent-color="<color>">
+      Thin crust pizza topped with melting mozzarella and basil
+    </span>
+    ```
+
+  </Fragment>
+</Demo>
+
+### Contrast
+
+Use the `data-contrast` attribute to change the contrast.
+
+<Demo>
+  <TextContrast />
+  <Fragment slot="footer">
+    ```tsx ins=data-contrast="<contrast>"
+    <span data-component="text" data-contrast="<contrast>">
+      Thin crust pizza topped with melting mozzarella and basil
+    </span>
+    ```
+
+  </Fragment>
+</Demo>
+
+### Weight
+
+Use the `data-weight` attribute to change the weight.
+
+<Demo>
+  <TextWeight />
+  <Fragment slot="footer">
+    ```tsx ins=data-weight="<weight>"
+    <span data-component="text" data-weight="<weight>">
+      Thin crust pizza topped with melting mozzarella and basil
+    </span>
+    ```
+
+  </Fragment>
+</Demo>
+
+### Alignment
+
+Use the `data-align` attribute to change the alignment.
+
+<Demo>
+  <TextAlign />
+  <Fragment slot="footer">
+    ```tsx ins=data-align="<align>"
+    <span data-component="text" data-align="<align>">
+      Thin crust pizza topped with melting mozzarella and basil
+    </span>
+    ```
+
+  </Fragment>
+</Demo>
+
+## Reference
+
+### text
+
+Represents the text element.
+
+| Variable                    |
+| --------------------------- |
+| `--wui-text-font-weight`    |
+| `--wui-text-letter-spacing` |
