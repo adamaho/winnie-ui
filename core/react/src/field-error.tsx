@@ -32,7 +32,7 @@ function FieldError({ children, className, ref, ...props }: FieldErrorProps) {
     <AriaText
       {...props}
       data-component="error"
-      data-slot="error"
+      data-slot="validation"
       className={clsx("wui-error", className)}
       ref={ref}
     >

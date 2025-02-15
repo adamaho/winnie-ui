@@ -1,21 +1,24 @@
 ---
 title: Field
-description: Represents an item in a form.
+description: Labelling and validation for form controls.
 ---
 
 import Demo from "~/components/demo/demo.astro";
 
-import FieldError from "./_components/field/field-error.astro";
+import FieldWithDescription from "~/demos/css/field-with-description.astro";
+import FieldWithTrailingDescription from "~/demos/css/field-with-trailing-description.astro";
+import FieldWithValidation from "~/demos/css/field-with-validation.astro";
+import Field from "~/demos/css/field.astro";
 
 <Demo>
-  <FieldError />
+  <Field />
   <Fragment slot="footer">
     ```tsx
     <div data-component="field">
-      <label data-slot="label">Shipping details</label>
-      <span data-slot="description">Where should we put your package?</span>
-      <input data-component="input" data-slot="control" />
-      <span data-slot="error">Required field shipping details missing</span>
+      <label data-slot="label">Dish Name</label>
+      <div data-component="input-group" data-slot="control">
+        <input data-component="input" data-slot="input" />
+      </div>
     </div>
     ```
   </Fragment>
@@ -23,21 +26,98 @@ import FieldError from "./_components/field/field-error.astro";
 
 ## Import
 
-Import only the field styles.
+Import just the field styles.
 
 ```css
 @import "@winnie-ui/css/spatial/field";
+@import "@winnie-ui/css/visual/field";
 ```
 
 ## Anatomy
 
-Attach the appropriate component and slot attributes in the structure below.
+Attach the appropriate `data` attributes in the structure below.
 
 ```html
 <div data-component="field">
   <label data-slot="label" />
   <span data-slot="description" />
   <input data-slot="control" />
-  <span data-slot="error" />
+  <span data-slot="validation" />
 </div>
 ```
+
+### Description
+
+Add a description with the `description` slot attribute as a child of the field.
+
+<Demo>
+  <FieldWithDescription />
+  <Fragment slot="footer">
+    ```tsx mark={3} mark={4} mark={5}
+    <div data-component="field">
+      <label data-slot="label">Dish Name</label>
+      <span data-slot="description">
+        Provide a mouth-watering name for your dish.
+      </span>
+      <div data-component="input-group" data-slot="control">
+        <input data-component="input" data-slot="input" />
+      </div>
+    </div>
+    ```
+  </Fragment>
+</Demo>
+
+#### Trailing
+
+Place the `description` slot after the `control` slot to place it below the control.
+
+<Demo>
+  <FieldWithTrailingDescription />
+  <Fragment slot="footer">
+    ```tsx mark={6} mark={7} mark={8}
+    <div data-component="field">
+      <label data-slot="label">Dish Name</label>
+      <div data-component="input-group" data-slot="control">
+        <input data-component="input" data-slot="input" />
+      </div>
+      <span data-slot="description">
+        Provide a mouth-watering name for your dish.
+      </span>
+    </div>
+    ```
+  </Fragment>
+</Demo>
+
+### Validation
+
+Add a validation message with the `validation` slot attribute as a child of the field.
+
+<Demo>
+  <FieldWithValidation />
+  <Fragment slot="footer">
+    ```tsx mark={6}
+    <div data-component="field">
+      <label data-slot="label">Dish Name</label>
+      <div data-component="input-group" data-slot="control">
+        <input data-component="input" data-slot="input" />
+      </div>
+      <span data-slot="validation">Oops, don't forget to add a name.</span>
+    </div>
+    ```
+  </Fragment>
+</Demo>
+
+## Reference
+
+### field
+
+Groups all of the parts of the field together.
+
+| Variable                              |
+| ------------------------------------- |
+| `--wui-field-label-color`             |
+| `--wui-field-label-font-weight`       |
+| `--wui-field-description-color`       |
+| `--wui-field-description-font-weight` |
+| `--wui-field-validation-color`        |
+| `--wui-field-validation-font-weight`  |

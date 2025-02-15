@@ -10,7 +10,7 @@
       font-weight: var(--wui-field-description-font-weight);
     }
 
-    [data-slot="error"] {
+    [data-slot="validation"] {
       color: var(--wui-field-error-color);
       font-weight: var(--wui-field-error-font-weight);
     }
