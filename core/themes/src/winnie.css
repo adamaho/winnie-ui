@@ -235,6 +235,7 @@
         --wui-navigation-item-background-current: var(--wui-color-grey-a3);
         --wui-navigation-item-color: var(--wui-color-grey-11);
         --wui-navigation-item-color-current: var(--wui-color-grey-12);
+        --wui-navigation-item-color-disabled: var(--wui-color-grey-9);
         --wui-navigation-item-font-weight: var(--wui-font-weight-medium);
       }
     }

@@ -1,0 +1,72 @@
+---
+import {
+  Cocktail,
+  ForkKnife,
+  HomeDoor,
+  LayoutGrid2,
+  Store1,
+  DotGrid1x3Horizontal,
+} from "@winnie-ui/icons/react/solid";
+---
+
+<ul
+  class="not-content bg-grey-1 border-grey-4 max-w-[250px] rounded-[min(var(--wui-border-radius-3),18px)] border p-2"
+  data-component="navigation"
+>
+  <li>
+    <a data-component="navigation-item">
+      <HomeDoor data-slot="icon" />
+      <span data-slot="label">Home</span>
+    </a>
+  </li>
+  <li>
+    <a data-component="navigation-item">
+      <ForkKnife data-slot="icon" />
+      <span data-slot="label">Dishes</span>
+    </a>
+  </li>
+  <li>
+    <a data-component="navigation-item">
+      <Cocktail data-slot="icon" />
+      <span data-slot="label">Drinks</span>
+    </a>
+  </li>
+  <li>
+    <a data-component="navigation-item">
+      <LayoutGrid2 data-slot="icon" />
+      <span data-slot="label">Menus</span>
+    </a>
+  </li>
+  <li>
+    <a data-component="navigation-item">
+      <Store1 data-slot="icon" />
+      <span data-slot="label">Locations</span>
+      <button
+        data-component="button"
+        data-size="sm"
+        data-variant="4"
+        data-slot="action"
+        data-accent-color="grey"
+      >
+        <DotGrid1x3Horizontal data-slot="icon" />
+      </button>
+    </a>
+    <ul class="not-content" data-component="navigation-group">
+      <li>
+        <a data-component="navigation-item">
+          <span data-slot="label">Cambridge</span>
+        </a>
+      </li>
+      <li>
+        <a data-component="navigation-item">
+          <span data-slot="label">Kitchener</span>
+        </a>
+      </li>
+      <li>
+        <a data-component="navigation-item">
+          <span data-slot="label">Waterloo</span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>

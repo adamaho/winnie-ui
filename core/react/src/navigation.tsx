@@ -90,7 +90,7 @@ function NavigationDisclosure({
     <BaseUICollapsible.Root
       {...props}
       className={clsx("wui-navigation__disclosure")}
-      data-component="disclosure"
+      data-component="navigation-disclosure"
       ref={ref}
     >
       {children}

@@ -1,0 +1,45 @@
+---
+import {
+  Cocktail,
+  ForkKnife,
+  HomeDoor,
+  LayoutGrid2,
+  Store1,
+} from "@winnie-ui/icons/react/solid";
+---
+
+<ul
+  class="not-content bg-grey-1 border-grey-4 max-w-[250px] rounded-[min(var(--wui-border-radius-3),18px)] border p-2"
+  data-component="navigation"
+>
+  <li>
+    <a data-component="navigation-item">
+      <HomeDoor data-slot="icon" />
+      <span data-slot="label">Home</span>
+    </a>
+  </li>
+  <li>
+    <a data-component="navigation-item">
+      <ForkKnife data-slot="icon" />
+      <span data-slot="label">Dishes</span>
+    </a>
+  </li>
+  <li>
+    <a data-component="navigation-item" data-disabled="true">
+      <Cocktail data-slot="icon" />
+      <span data-slot="label">Drinks</span>
+    </a>
+  </li>
+  <li>
+    <a data-component="navigation-item">
+      <LayoutGrid2 data-slot="icon" />
+      <span data-slot="label">Menus</span>
+    </a>
+  </li>
+  <li>
+    <a data-component="navigation-item">
+      <Store1 data-slot="icon" />
+      <span data-slot="label">Locations</span>
+    </a>
+  </li>
+</ul>

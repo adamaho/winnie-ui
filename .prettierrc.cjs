@@ -1,5 +1,9 @@
 module.exports = {
-  plugins: ["prettier-plugin-astro", "@trivago/prettier-plugin-sort-imports"],
+  plugins: [
+    "prettier-plugin-astro",
+    "@trivago/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss",
+  ],
   importOrder: [
     "^react", // React imports
     "^@winnie-ui/react", // Winnie UI imports

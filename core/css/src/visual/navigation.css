@@ -1,12 +1,6 @@
 @layer visual {
   [data-component="navigation"] {
-    li,
-    ul:not([data-component="navigation-group"]),
-    [data-component="disclosure"] {
-      display: grid;
-      grid-template-columns: subgrid;
-      grid-column: 1 / -1;
-
+    li {
       /** not expanded but has an item that is the current item in it */
       &:not([data-expanded]):has([data-component="navigation-group"] [data-component="navigation-item"][data-current]) {
         [data-component="navigation-item"] {
@@ -17,7 +11,8 @@
       }
     }
 
-    [data-component="disclosure"] {
+    /* This is too specific to a react implementation */
+    /* [data-component="disclosure"] {
       [data-component="navigation-group"] {
         height: var(--collapsible-panel-height);
         opacity: 1;
@@ -35,8 +30,8 @@
           opacity: 0;
           height: 0;
         }
-      }
-    }
+      } 
+    } */
 
     [data-component="navigation-item"] {
       background: var(--wui-navigation-item-background);
@@ -51,22 +46,28 @@
         }
       }
 
-      &:is([data-hovered], :hover) {
+      &:is([data-hovered], :hover):not([data-disabled], [aria-disabled="true"]) {
         background: var(--wui-navigation-item-background-hovered, var(--wui-navigation-item-background));
         border: var(--wui-navigation-item-border-hovered, var(--wui-navigation-item-border));
         color: var(--wui-navigation-item-color-hovered, var(--wui-navigation-item-color));
       }
 
-      &:is([data-pressed], :active) {
+      &:is([data-pressed], :active):not([data-disabled], [aria-disabled="true"]) {
         background: var(--wui-navigation-item-background-pressed, var(--wui-navigation-item-background));
         border: var(--wui-navigation-item-border-pressed, var(--wui-navigation-item-border));
         color: var(--wui-navigation-item-color-pressed, var(--wui-navigation-item-color));
       }
 
-      &[data-current] {
+      &:is([data-current], [aria-current="true"], [aria-current="page"]):not([data-disabled], [aria-disabled="true"]) {
         background: var(--wui-navigation-item-background-current, var(--wui-navigation-item-background));
         border: var(--wui-navigation-item-border-current, var(--wui-navigation-item-border));
         color: var(--wui-navigation-item-color-current, var(--wui-navigation-item-color));
+      }
+
+      &:is([data-disabled], [aria-disabled="true"]) {
+        background: var(--wui-navigation-item-background-disabled, var(--wui-navigation-item-background));
+        border: var(--wui-navigation-item-border-disabled, var(--wui-navigation-item-border));
+        color: var(--wui-navigation-item-color-disabled, var(--wui-navigation-item-color));
       }
 
       &[aria-expanded="true"] {

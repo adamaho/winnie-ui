@@ -1,0 +1,285 @@
+---
+title: navigation
+description: Provides users the ability to navigate an application.
+---
+
+import Demo from "~/components/demo/demo.astro";
+import Aside from "~/components/markdown/aside.astro";
+
+import NavigationCurrent from "~/demos/css/navigation-current.astro";
+import NavigationDisabled from "~/demos/css/navigation-disabled.astro";
+import NavigationRadius from "~/demos/css/navigation-radius.astro";
+import NavigationWithAction from "~/demos/css/navigation-with-action.astro";
+import NavigationWithGroup from "~/demos/css/navigation-with-group.astro";
+import NavigationWithIcon from "~/demos/css/navigation-with-icon.astro";
+import Navigation from "~/demos/css/navigation.astro";
+
+<Demo>
+  <Navigation />
+  <Fragment slot="footer">
+    ```tsx
+    <ul data-component="navigation">
+      <li>
+        <a data-component="navigation-item">
+          <span data-slot="label">Home</span>
+        </a>
+      </li>
+      <li>
+        <a data-component="navigation-item">
+          <span data-slot="label">Dishes</span>
+        </a>
+      </li>
+      <li>
+        <a data-component="navigation-item">
+          <span data-slot="label">Drinks</span>
+        </a>
+      </li>
+      <li>
+        <a data-component="navigation-item">
+          <span data-slot="label">Menus</span>
+        </a>
+      </li>
+    </ul>
+    ```
+  </Fragment>
+</Demo>
+
+## Import
+
+Import just the navigation styles.
+
+```css
+@import "@winnie-ui/css/spatial/navigation";
+@import "@winnie-ui/css/visual/navigation";
+```
+
+## Anatomy
+
+Attach the appropriate `data` attributes in the structure below.
+
+```html
+<ul data-component="navigation">
+  <li>
+    <a data-component="navigation-item">
+      <i data-slot="icon" />
+      <span data-slot="label" />
+    </a>
+  </li>
+  <ul data-component="navigation-group">
+    <li>
+      <a data-component="navigation-item">
+        <i data-slot="icon" />
+        <span data-slot="label" />
+        <button data-slot="action" />
+      </a>
+    </li>
+  </ul>
+  <li>
+    <div data-component="navigation-item">
+      <i data-slot="icon" />
+      <span data-slot="label" />
+      <button data-slot="action" />
+    </div>
+    <ul data-component="navigation-group">
+      <li>
+        <a data-component="navigation-item">
+          <i data-slot="icon" />
+          <span data-slot="label" />
+          <button data-slot="action" />
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+```
+
+## Examples
+
+### Radius
+
+Use the `data-radius` attribute to change the radius.
+
+<Demo>
+  <NavigationRadius />
+  <Fragment slot="footer">
+    ```tsx ins=data-radius="<radius>"
+    <ul data-component="navigation">
+      <li data-component="navigation-item" data-radius="<radius>">
+        <span data-slot="label">Home</span>
+      </li>
+      ...
+    </ul>
+    ```
+  </Fragment>
+</Demo>
+
+### Icon
+
+Add an icon with the `icon` slot attribute as a child of the navigation item.
+
+<Demo>
+  <NavigationWithIcon />
+  <Fragment slot="footer">
+    ```tsx mark={3}
+    <ul data-component="navigation">
+      <li>
+        <a data-component="navigation-item" data-radius="<radius>">
+          <i class="home" data-slot="icon"></i>
+          <span data-slot="label">Home</span>
+        </a>
+      </li>
+      ...
+    </ul>
+    ```
+  </Fragment>
+</Demo>
+
+### Action
+
+Add an action with the `action` slot attribute as a child of the navigation item.
+
+<Demo>
+  <NavigationWithAction />
+  <Fragment slot="footer">
+    ```tsx ins=data-slot="action"
+    <ul data-component="navigation">
+      <li>
+        <a data-component="navigation-item">
+          <i class="location" data-slot="icon"></i>
+          <span data-slot="label">Locations</span>
+          <button
+            data-component="button"
+            data-size="sm"
+            data-variant="4"
+            data-slot="action"
+            data-accent-color="grey"
+          >
+            <i class="dot-horizontal" data-slot="icon"></i>
+          </button>
+        </a>
+      </li>
+      ...
+    </ul>
+    ```
+  </Fragment>
+</Demo>
+
+### Group
+
+Add a group with the `navigation-group` component.
+
+<Demo>
+  <NavigationWithGroup />
+  <Fragment slot="footer">
+    ```tsx ins=data-component="navigation-group"
+    <ul data-component="navigation">
+      ...
+      <li>
+        <a data-component="navigation-item">
+          <i class="store" data-slot="icon"></i>
+          <span data-slot="label">
+            Locations
+            <i class="triangle-down" aria-hidden="true"></i>
+          </span>
+          <button
+            data-component="button"
+            data-size="sm"
+            data-variant="4"
+            data-slot="action"
+            data-accent-color="grey"
+          >
+            <i class="dot-horizontal" data-slot="icon"></i>
+          </button>
+        </a>
+        <ul data-component="navigation-group">
+          <li>
+            <a data-component="navigation-item">
+              <span data-slot="label">Cambridge</span>
+            </a>
+          </li>
+          <li>
+            <a data-component="navigation-item">
+              <span data-slot="label">Kitchener</span>
+            </a>
+          </li>
+          <li>
+            <a data-component="navigation-item">
+              <span data-slot="label">Waterloo</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    ```
+  </Fragment>
+</Demo>
+
+### Disabled
+
+Use the `data-disabled` or `aria-disabled` attributes to mark a navigation item as disabled.
+
+<Demo>
+  <NavigationDisabled />
+  <Fragment slot="footer">
+    ```tsx ins=data-disabled="true"
+    <ul data-component="navigation">
+      ...
+      <li>
+        <a data-component="navigation-item" data-disabled="true">
+          <i class="cocktail" data-slot="icon"></i>
+          <span data-slot="label">Drinks</span>
+        </a>
+      </li>
+      ...
+    </ul>
+    ```
+  </Fragment>
+</Demo>
+
+### Current
+
+Use the `data-current` or `aria-current` attributes to identify the current pages' navigation item.
+
+<Demo>
+  <NavigationCurrent />
+  <Fragment slot="footer">
+    ```tsx ins=data-current="true"
+    <ul data-component="navigation">
+      ...
+      <li>
+        <a data-component="navigation-item" data-current="true">
+          <i class="cocktail" data-slot="icon"></i>
+          <span data-slot="label">Drinks</span>
+        </a>
+      </li>
+      ...
+    </ul>
+    ```
+  </Fragment>
+</Demo>
+
+## Reference
+
+### navigation-item
+
+Groups all of the parts of the item together.
+
+| Attribute       | Value                                       |
+| --------------- | ------------------------------------------- |
+| `data-radius`   | `"none" \| "sm" \| "md" \| "lg" \| "round"` |
+| `data-disabled` | `boolean`                                   |
+| `data-current`  | `boolean`                                   |
+
+| Modifier   | Description                                                             |
+| ---------- | ----------------------------------------------------------------------- |
+| `hovered`  | When the navigation item is hovered with a mouse                        |
+| `pressed`  | When the navigation item is pressed with a mouse or keyboard            |
+| `disabled` | When the navigation item prevents user interaction                      |
+| `current`  | When the navigation item represents the current page in the application |
+
+| Variable                                       |
+| ---------------------------------------------- |
+| `--wui-navigation-item-background-<?modifier>` |
+| `--wui-navigation-item-border-<?modifier>`     |
+| `--wui-navigation-item-color-<?modifier>`      |
+| `--wui-navigation-item-font-weight`            |
