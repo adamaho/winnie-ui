@@ -114,14 +114,17 @@ Groups all of the parts of the layout together.
 | ------------ | -------------------------------- |
 | `data-state` | `"docked" \| "open" \| "closed"` |
 
-| Modifier  | Description                                                                    |
-| --------- | ------------------------------------------------------------------------------ |
-| `open`    | When the sidebar is in the open state and the screen width is less than 1024px |
-| `open-lg` | When the sidebar is in the open state and the screen width is more than 1024px |
+| Modifier | Description                           |
+| -------- | ------------------------------------- |
+| `open`   | When the sidebar is in the open state |
 
-| Variable                                        |
-| ----------------------------------------------- |
-| `--wui-layout-sidebar-background-<?modifier>`   |
-| `--wui-layout-sidebar-border-right-<?modifier>` |
-| `--wui-layout-sidebar-box-shadow-<?modifier>`   |
-| `--wui-layout-content-background`               |
+| Breakpoint | Screen Width |
+| ---------- | ------------ |
+| `lg`       | 1024px       |
+
+| Variable                                                      |
+| ------------------------------------------------------------- |
+| `--wui-layout-sidebar-background-<?modifier>-<?breakpoint>`   |
+| `--wui-layout-sidebar-border-right-<?modifier>-<?breakpoint>` |
+| `--wui-layout-sidebar-box-shadow-<?modifier>-<?breakpoint>`   |
+| `--wui-layout-content-background`                             |
