@@ -1,19 +1,26 @@
 export { AlignmentLeft } from "./alignment-left";
+export { CircleDashed } from "./circle-dashed";
 export { CircleInfo } from "./circle-info";
 export { CirclePlaceholderOn } from "./circle-placeholder-on";
 export { ColorPalette } from "./color-palette";
 export { ColorSwatch } from "./color-swatch";
 export { CrossLarge } from "./cross-large";
+export { Duplicate } from "./duplicate";
 export { FocusSquare } from "./focus-square";
 export { Heart } from "./heart";
 export { HomeDoor } from "./home-door";
 export { LayersThree } from "./layers-three";
 export { MagnifyingGlass } from "./magnifying-glass";
 export { Moon } from "./moon";
+export { Pencil } from "./pencil";
 export { People } from "./people";
 export { SettingsGear3 } from "./settings-gear-3";
 export { SettingsSliderHor } from "./settings-slider-hor";
+export { ShareArrowDown } from "./share-arrow-down";
 export { SidebarSimpleLeftSquare } from "./sidebar-simple-left-square";
 export { SquarePlaceholderDashed } from "./square-placeholder-dashed";
+export { SquarePlus } from "./square-plus";
+export { Tag } from "./tag";
+export { TrashCanSimple } from "./trash-can-simple";
 
 export type { IconProps } from "../utilities/create-icon";

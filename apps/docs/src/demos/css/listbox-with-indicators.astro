@@ -1,0 +1,132 @@
+---
+import {} from "@winnie-ui/icons/react/line";
+import { Checkmark } from "@winnie-ui/icons/react/solid";
+---
+
+<div class="flex items-start gap-4">
+  <ul
+    data-component="listbox"
+    class="not-content dark:bg-grey-2 border-grey-4 dark:border-grey-5 shadow-2 max-w-[100px] rounded-[min(var(--wui-border-radius-3),18px)] border bg-white p-2"
+  >
+    <li data-component="listbox-item" class="group">
+      <span
+        class="rounded-round h-2 w-2 bg-[var(--wui-listbox-item-color)] group-hover:bg-[var(--wui-listbox-item-color-hovered)]"
+        data-slot="indicator"></span>
+      <span data-slot="label">Pepperoni</span>
+    </li>
+    <li data-component="listbox-item" class="group">
+      <span
+        class="rounded-round h-2 w-2 bg-[var(--wui-listbox-item-color)] group-hover:bg-[var(--wui-listbox-item-color-hovered)]"
+        data-slot="indicator"></span>
+      <span data-slot="label">Sausage</span>
+    </li>
+    <li data-component="listbox-item">
+      <span data-slot="label">Ham</span>
+    </li>
+    <div data-component="separator"></div>
+    <li data-component="listbox-item">
+      <span data-slot="label">Green Pepper</span>
+    </li>
+    <li data-component="listbox-item">
+      <span data-slot="label">Olives</span>
+    </li>
+    <li data-component="listbox-item" class="group">
+      <span
+        class="rounded-round h-2 w-2 bg-[var(--wui-listbox-item-color)] group-hover:bg-[var(--wui-listbox-item-color-hovered)]"
+        data-slot="indicator"></span>
+      <span data-slot="label">Pineapple</span>
+    </li>
+  </ul>
+
+  <ul
+    data-component="listbox"
+    class="not-content dark:bg-grey-2 border-grey-4 dark:border-grey-5 shadow-2 max-w-[100px] rounded-[min(var(--wui-border-radius-3),18px)] border bg-white p-2"
+  >
+    <li data-component="listbox-item">
+      <Checkmark data-slot="indicator" />
+      <span data-slot="label">Pepperoni</span>
+    </li>
+    <li data-component="listbox-item">
+      <Checkmark data-slot="indicator" />
+      <span data-slot="label">Sausage</span>
+    </li>
+    <li data-component="listbox-item">
+      <span data-slot="label">Ham</span>
+    </li>
+    <div data-component="separator"></div>
+    <li data-component="listbox-item">
+      <span data-slot="label">Green Pepper</span>
+    </li>
+    <li data-component="listbox-item">
+      <span data-slot="label">Olives</span>
+    </li>
+    <li data-component="listbox-item">
+      <Checkmark data-slot="indicator" />
+      <span data-slot="label">Pineapple</span>
+    </li>
+  </ul>
+
+  <ul
+    data-component="listbox"
+    class="not-content dark:bg-grey-2 border-grey-4 dark:border-grey-5 shadow-2 max-w-[100px] rounded-[min(var(--wui-border-radius-3),18px)] border bg-white p-2"
+  >
+    <li data-component="listbox-item">
+      <label
+        data-component="checkbox"
+        data-slot="indicator"
+        data-size="sm"
+        data-selected="true"
+      >
+        <button data-slot="indicator">
+          <Checkmark data-slot="icon" />
+        </button>
+      </label>
+      <span data-slot="label">Pepperoni</span>
+    </li>
+    <li data-component="listbox-item">
+      <label
+        data-component="checkbox"
+        data-slot="indicator"
+        data-size="sm"
+        data-selected="true"
+      >
+        <button data-slot="indicator">
+          <Checkmark data-slot="icon" />
+        </button>
+      </label>
+      <span data-slot="label">Sausage</span>
+    </li>
+    <li data-component="listbox-item">
+      <label data-component="checkbox" data-slot="indicator" data-size="sm">
+        <button data-slot="indicator"> </button>
+      </label>
+      <span data-slot="label">Ham</span>
+    </li>
+    <div data-component="separator"></div>
+    <li data-component="listbox-item">
+      <label data-component="checkbox" data-slot="indicator" data-size="sm">
+        <button data-slot="indicator"> </button>
+      </label>
+      <span data-slot="label">Green Pepper</span>
+    </li>
+    <li data-component="listbox-item">
+      <label data-component="checkbox" data-slot="indicator" data-size="sm">
+        <button data-slot="indicator"> </button>
+      </label>
+      <span data-slot="label">Olives</span>
+    </li>
+    <li data-component="listbox-item">
+      <label
+        data-component="checkbox"
+        data-slot="indicator"
+        data-size="sm"
+        data-selected="true"
+      >
+        <button data-slot="indicator">
+          <Checkmark data-slot="icon" />
+        </button>
+      </label>
+      <span data-slot="label">Pineapple</span>
+    </li>
+  </ul>
+</div>

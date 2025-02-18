@@ -1,0 +1,57 @@
+---
+import {
+  CircleDashed,
+  Duplicate,
+  Pencil,
+  ShareArrowDown,
+  SquarePlus,
+  Tag,
+  TrashCanSimple,
+} from "@winnie-ui/icons/react/line";
+---
+
+<ul
+  data-component="listbox"
+  class="not-content dark:bg-grey-2 border-grey-4 dark:border-grey-5 shadow-2 max-w-[100px] rounded-[min(var(--wui-border-radius-3),18px)] border bg-white p-2"
+>
+  <section data-component="listbox-section">
+    <header data-component="listbox-header">
+      <span data-slot="label">Manage</span>
+    </header>
+    <li data-component="listbox-item">
+      <CircleDashed data-slot="icon" />
+      <span data-slot="label">Status</span>
+    </li>
+    <li data-component="listbox-item">
+      <SquarePlus data-slot="icon" />
+      <span data-slot="label">Group</span>
+    </li>
+    <li data-component="listbox-item">
+      <Tag data-slot="icon" />
+      <span data-slot="label">Labels</span>
+    </li>
+  </section>
+  <div data-component="separator"></div>
+  <section data-component="listbox-section">
+    <header data-component="listbox-header">
+      <span data-slot="label">Actions</span>
+    </header>
+    <li data-component="listbox-item">
+      <Pencil data-slot="icon" />
+      <span data-slot="label">Edit</span>
+    </li>
+    <li data-component="listbox-item">
+      <Duplicate data-slot="icon" />
+      <span data-slot="label">Duplicate</span>
+    </li>
+    <li data-component="listbox-item">
+      <ShareArrowDown data-slot="icon" />
+      <span data-slot="label">Share</span>
+    </li>
+  </section>
+  <div data-component="separator"></div>
+  <li data-component="listbox-item" data-accent-color="red">
+    <TrashCanSimple data-slot="icon" />
+    <span data-slot="label">Delete</span>
+  </li>
+</ul>

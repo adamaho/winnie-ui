@@ -10,6 +10,7 @@ export { ChevronBottomSmall } from "./chevron-bottom-small";
 export { ChevronTopSmall } from "./chevron-top-small";
 export { ChevronGrabberVertical } from "./chevron-grabber-vertical";
 export { Circle } from "./circle";
+export { CircleDotted } from "./circle-dotted";
 export { CircleInfo } from "./circle-info";
 export { Cocktail } from "./cocktail";
 export { ColorSwatch } from "./color-swatch";

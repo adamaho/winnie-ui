@@ -70,12 +70,12 @@
       --wui-listbox-item-space: var(--wui-listbox-item-lg-space);
     }
 
-    [data-component="section"] {
+    [data-component="listbox-section"] {
       display: grid;
       grid-template-columns: subgrid;
       grid-column: 1 / -1;
 
-      [data-component="header"] {
+      [data-component="listbox-header"] {
         align-items: center;
         grid-column-start: 3;
         display: grid;
@@ -105,9 +105,12 @@
       padding-inline: var(--wui-listbox-item-space, var(--wui-listbox-item-md-space));
       user-select: none;
 
-      [data-slot="indicator"] {
-        height: var(--wui-listbox-item-icon-size, var(--wui-listbox-item-md-icon-size));
+      & > [data-slot="indicator"] {
         grid-column-start: 1;
+      }
+
+      & > [data-slot="indicator"]:not([data-component="checkbox"]) {
+        height: var(--wui-listbox-item-icon-size, var(--wui-listbox-item-md-icon-size));
         width: var(--wui-listbox-item-icon-size, var(--wui-listbox-item-md-icon-size));
         font-size: 1em;
       }
@@ -119,7 +122,7 @@
         line-height: 1;
       }
 
-      [data-component="group"] {
+      [data-component="listbox-group"] {
         align-items: flex-start;
         display: flex;
         flex-direction: column;
@@ -163,13 +166,13 @@
         }
       }
 
-      &:not(:has([data-component="group"])):has([data-slot="label"] + [data-slot="description"]) {
+      &:not(:has([data-component="listbox-group"])):has([data-slot="label"] + [data-slot="description"]) {
         [data-slot="description"] {
           margin-left: var(--wui-listbox-item-space, var(--wui-listbox-item-md-space));
         }
       }
 
-      &:has([data-component="group"]:not([data-orientation="row"])) {
+      &:has([data-component="listbox-group"]:not([data-orientation="row"])) {
         height: auto;
         padding: var(--wui-listbox-item-space, var(--wui-listbox-item-md-space));
 
@@ -179,7 +182,7 @@
         }
       }
 
-      &:has([data-slot="icon"] + [data-slot="label"], [data-slot="icon"] + [data-component="group"]) {
+      &:has([data-slot="icon"] + [data-slot="label"], [data-slot="icon"] + [data-component="listbox-group"]) {
         [data-slot="icon"] {
           margin-right: var(--wui-listbox-item-space, var(--wui-listbox-item-md-space));
         }
@@ -188,7 +191,7 @@
 
     &:not([data-mode="selection"], [data-selection-mode], &:has([data-selection-mode])) {
       [data-component="listbox-item"] {
-        &:has([data-slot="indicator"] + [data-slot="icon"], [data-slot="indicator"] + [data-slot="label"], [data-slot="indicator"] + [data-component="group"]) {
+        &:has([data-slot="indicator"] + [data-slot="icon"], [data-slot="indicator"] + [data-slot="label"], [data-slot="indicator"] + [data-component="listbox-group"]) {
           & > [data-slot="indicator"] {
             margin-right: var(--wui-listbox-item-space, var(--wui-listbox-item-md-space));
           }

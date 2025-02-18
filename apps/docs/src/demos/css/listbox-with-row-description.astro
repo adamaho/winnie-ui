@@ -1,0 +1,26 @@
+<ul
+  data-component="listbox"
+  class="not-content dark:bg-grey-2 border-grey-4 dark:border-grey-5 shadow-2 max-w-[120px] rounded-[min(var(--wui-border-radius-3),18px)] border bg-white p-2"
+>
+  <li data-component="listbox-item" class="group">
+    <span
+      class="rounded-round h-2 w-2 bg-[var(--wui-listbox-item-color)] group-hover:bg-[var(--wui-listbox-item-color-hovered)]"
+      data-slot="indicator"></span>
+    <div data-component="listbox-group" data-orientation="row">
+      <span data-slot="label">Read</span>
+      <span data-slot="description">Read only</span>
+    </div>
+  </li>
+  <li data-component="listbox-item">
+    <div data-component="listbox-group" data-orientation="row">
+      <span data-slot="label">Write</span>
+      <span data-slot="description">Read and write only</span>
+    </div>
+  </li>
+  <li data-component="listbox-item">
+    <div data-component="listbox-group" data-orientation="row">
+      <span data-slot="label">Admin</span>
+      <span data-slot="description">Full access</span>
+    </div>
+  </li>
+</ul>

@@ -1,0 +1,44 @@
+---
+import {
+  Duplicate,
+  Pencil,
+  ShareArrowDown,
+  TrashCanSimple,
+} from "@winnie-ui/icons/react/line";
+---
+
+<ul
+  data-component="listbox"
+  class="not-content dark:bg-grey-2 border-grey-4 dark:border-grey-5 shadow-2 max-w-[100px] rounded-[min(var(--wui-border-radius-3),18px)] border bg-white p-2"
+>
+  <li data-component="listbox-item">
+    <Pencil data-slot="icon" />
+    <span data-slot="label">Edit</span>
+    <kbd data-slot="shortcut">
+      <kbd data-component="kbd">E</kbd>
+    </kbd>
+  </li>
+  <li data-component="listbox-item">
+    <Duplicate data-slot="icon" />
+    <span data-slot="label">Duplicate</span>
+    <kbd data-slot="shortcut">
+      <kbd data-component="kbd">D</kbd>
+    </kbd>
+  </li>
+  <li data-component="listbox-item">
+    <ShareArrowDown data-slot="icon" />
+    <span data-slot="label">Share</span>
+    <kbd data-slot="shortcut">
+      <kbd data-component="kbd">S</kbd>
+    </kbd>
+  </li>
+  <span data-component="separator"></span>
+  <li data-component="listbox-item" data-accent-color="red">
+    <TrashCanSimple data-slot="icon" />
+    <span data-slot="label">Delete</span>
+    <kbd data-slot="shortcut">
+      <kbd data-component="kbd">⌘</kbd>
+      <kbd data-component="kbd">D</kbd>
+    </kbd>
+  </li>
+</ul>

@@ -214,6 +214,7 @@
       --wui-listbox-item-background-pressed: var(--wui-color-accent-10);
       --wui-listbox-item-color-hovered: var(--wui-color-accent-contrast);
       --wui-listbox-item-color-pressed: var(--wui-color-accent-contrast);
+      --wui-listbox-item-color-disabled: var(--wui-color-grey-10);
       --wui-listbox-item-group-label-color: var(--wui-color-grey-12);
       --wui-listbox-item-group-label-font-weight: var(--wui-font-weight-medium);
       --wui-listbox-item-group-label-color: var(--wui-color-grey-12);
