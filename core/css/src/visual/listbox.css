@@ -61,7 +61,7 @@
         }
       }
 
-      &:is([data-disabled="true"], [aria-disabled="true"]) {
+      &:is([data-disabled], [aria-disabled="true"]) {
         --wui-listbox-item-background: var(--wui-listbox-item-background-disabled);
         --wui-listbox-item-box-shadow: var(--wui-listbox-item-box-shadow-disabled);
         --wui-listbox-item-border: var(--wui-listbox-item-border-disabled);
@@ -99,6 +99,13 @@
 
           [data-slot="description"] {
             color: var(--wui-listbox-item-color-pressed);
+          }
+        }
+
+        &:is([data-disabled], [aria-disabled="true"]) {
+          [data-slot="label"],
+          [data-slot="description"] {
+            color: var(--wui-listbox-item-color-disabled);
           }
         }
       }
