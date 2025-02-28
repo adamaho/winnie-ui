@@ -1,0 +1,94 @@
+---
+title: icon
+description: Foundational icon primitive.
+---
+
+import Demo from "~/components/demo/demo.astro";
+
+import IconColor from "~/demos/css/icon-color.astro";
+import IconContrast from "~/demos/css/icon-contrast.astro";
+import IconSize from "~/demos/css/icon-size.astro";
+import Icon from "~/demos/css/icon.astro";
+
+<Demo>
+  <Icon />
+  <Fragment slot="footer">
+    ```tsx
+    <i data-component="icon" class="home"></i>
+    ```
+  </Fragment>
+</Demo>
+
+## Import
+
+Import just the icon styles.
+
+```css
+@import "@winnie-ui/css/spatial/icon";
+@import "@winnie-ui/css/visual/icon";
+```
+
+## Anatomy
+
+Attach the appropriate `data` attributes in the structure below.
+
+```html
+<i data-component="icon"></i>
+```
+
+## Examples
+
+### Size
+
+Use the `data-size` attribute to change the size.
+
+<Demo>
+  <IconSize />
+  <Fragment slot="footer">
+    ```tsx ins=data-size="<size>"
+    <i data-component="icon" class="home" data-size="<size>"></i>
+    ```
+  </Fragment>
+</Demo>
+
+### Color
+
+Use the `data-accent-color` attribute to change the color.
+
+<Demo>
+  <IconColor />
+  <Fragment slot="footer">
+    ```tsx ins=data-accent-color="<color>"
+    <i data-component="icon" class="home" data-accent-color="<color>"></i>
+    ```
+  </Fragment>
+</Demo>
+
+### Contrast
+
+Use the `data-contrast` attribute to change the contrast.
+
+<Demo>
+  <IconContrast />
+  <Fragment slot="footer">
+    ```tsx ins=data-contrast="<contrast>"
+    <i data-component="icon" class="home" data-contrast="<contrast>"></i>
+    ```
+  </Fragment>
+</Demo>
+
+## Reference
+
+### icon
+
+Represents the icon element.
+
+| Attribute           | Value                                                                                           |
+| ------------------- | ----------------------------------------------------------------------------------------------- |
+| `data-accent-color` | `"red" \| "orange" \| "yellow" \| "green" \| "blue" \| "purple" \| "pink" \| "grey" \| "brand"` |
+| `data-contrast`     | `"low" \| "normal" \| "high"`                                                                   |
+| `data-size`         | `"1" \| "2" \| "3" \| "4" \| "5" \| "6" \| "7" \| "8" \| "9"`                                   |
+
+| Variable                           |
+| ---------------------------------- |
+| `--wui-icon-<data-contrast>-color` |
