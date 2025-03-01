@@ -36,6 +36,9 @@ jobs:
       - name: install dependencies
         run: pnpm install
 
+      - name: print pnpm version
+        run: pnpm --version
+
       - name: build
         run: pnpm build
 
