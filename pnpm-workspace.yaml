@@ -1,4 +1,12 @@
 packages:
-  - "apps/*"
-  - "core/*"
-  - "tools/*"
+  - apps/*
+  - core/*
+  - tools/*
+onlyBuiltDependencies:
+  - lightningcss-cli
+ignoredBuiltDependencies:
+  - "@rocicorp/zero-sqlite3"
+  - "@swc/core"
+  - esbuild
+  - protobufjs
+  - sharp
