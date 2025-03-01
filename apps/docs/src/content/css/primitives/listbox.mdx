@@ -29,10 +29,6 @@ import ListboxWithSeparator from "~/demos/css/listbox-with-separator.astro";
 import ListboxWithShortcut from "~/demos/css/listbox-with-shortcut.astro";
 import Listbox from "~/demos/css/listbox.astro";
 
-import { ListboxWithCheckbox } from "./_components/listbox/listbox-with-checkbox";
-
-import "./_components/listbox/listbox-demo.css";
-
 <Demo>
   <Listbox />
   <Fragment slot="footer">
@@ -373,6 +369,7 @@ Groups all of the parts of the listbox item together.
 | Attribute           | Value                                                                                           |
 | ------------------- | ----------------------------------------------------------------------------------------------- |
 | `data-accent-color` | `"red" \| "orange" \| "yellow" \| "green" \| "blue" \| "purple" \| "pink" \| "grey" \| "brand"` |
+| `data-disabled`     | `boolean`                                                                                       |
 | `data-radius`       | `"none" \| "sm" \| "md" \| "lg" \| "round"`                                                     |
 | `data-size`         | `"sm" \| "md" \| "lg"`                                                                          |
 
