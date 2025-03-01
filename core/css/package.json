@@ -128,7 +128,7 @@
     "package.json"
   ],
   "scripts": {
-    "build": "rimraf dist && concurrently pnpm:dist:* -m 25",
+    "build": "rimraf dist && concurrently pnpm:dist:* -m 10",
     "format:check": "biome format ./src --no-errors-on-unmatched",
     "format:write": "biome format ./src --write --no-errors-on-unmatched",
     "dist:all": "lightningcss src/index.css -o dist/index.min.css --minify --bundle --targets 'last 2 versions'",
