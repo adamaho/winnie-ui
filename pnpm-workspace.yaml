@@ -4,9 +4,9 @@ packages:
   - tools/*
 onlyBuiltDependencies:
   - lightningcss-cli
-ignoredBuiltDependencies:
-  - "@rocicorp/zero-sqlite3"
   - "@swc/core"
   - esbuild
+ignoredBuiltDependencies:
+  - "@rocicorp/zero-sqlite3"
   - protobufjs
   - sharp
