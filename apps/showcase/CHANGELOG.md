@@ -1,5 +1,15 @@
 # showcase
 
+## 0.0.5
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @winnie-ui/tailwind@0.0.27
+  - @winnie-ui/themes@0.0.27
+  - @winnie-ui/react@0.0.27
+  - @winnie-ui/icons@0.0.27
+
 ## 0.0.4
 
 ### Patch Changes
