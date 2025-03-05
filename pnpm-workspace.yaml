@@ -6,7 +6,6 @@ onlyBuiltDependencies:
   - lightningcss-cli
   - "@swc/core"
   - esbuild
-ignoredBuiltDependencies:
   - "@rocicorp/zero-sqlite3"
   - protobufjs
   - sharp

@@ -6,6 +6,7 @@ description: An interactive element that opens on top of the page content.
 import Demo from "~/components/demo/demo.astro";
 
 import DialogSize from "~/demos/css/dialog-size.astro";
+import DialogWithContent from "~/demos/css/dialog-with-content.astro";
 import DialogWithHeader from "~/demos/css/dialog-with-header.astro";
 import Dialog from "~/demos/css/dialog.astro";
 
@@ -87,14 +88,14 @@ Use the `data-size` attribute to change the size.
 
 ### Header
 
-Use the `header` component to add a header to the dialog.
+Use the `dialog-header` component to add a header to the dialog.
 
 <Demo>
   <DialogWithHeader />
   <Fragment slot="footer">
     ```tsx mark={2}
     <dialog data-component="dialog">
-      <header data-component="header">...</header>
+      <header data-component="dialog-header">...</header>
       ...
     </dialog>
     ```
@@ -102,6 +103,23 @@ Use the `header` component to add a header to the dialog.
 </Demo>
 
 ### Content
+
+Use the `dialog-content` component to add content, like a form, to the dialog.
+
+<Demo>
+  <DialogWithContent />
+  <Fragment slot="footer">
+    ```tsx mark={2}
+    <dialog data-component="dialog">
+      ...
+      <div data-component="dialog-content">...</header>
+      ...
+    </dialog>
+    ```
+  </Fragment>
+</Demo>
+
+### Footer
 
 ### Close
 

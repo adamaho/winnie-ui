@@ -20,11 +20,7 @@
       font-weight: var(--wui-dialog-description-font-weight);
     }
 
-    [data-component="content"] {
-      padding-inline: var(--wui-dialog-content-space);
-    }
-
-    [data-component="footer"] {
+    [data-component="dialog-footer"] {
       border-top: var(--wui-dialog-footer-border);
     }
   }
