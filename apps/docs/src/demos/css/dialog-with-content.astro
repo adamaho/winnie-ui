@@ -14,12 +14,16 @@
       </li>
     </ol>
   </header>
-  <div data-component="dialog-content">
+  <div data-component="dialog-content" class="flex flex-col gap-6">
     <div data-component="field">
       <label data-slot="label">Name</label>
       <div data-component="input-group" data-slot="control">
         <input data-component="input" data-slot="input" />
       </div>
+    </div>
+    <div data-component="field">
+      <label data-slot="label">Description</label>
+      <textarea data-component="textarea" data-slot="control"></textarea>
     </div>
   </div>
   <footer data-component="dialog-footer">
