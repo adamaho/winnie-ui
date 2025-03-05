@@ -6,13 +6,7 @@
     opacity: var(--wui-dialog-opacity);
     transform: var(--wui-dialog-transform);
 
-    @media (prefers-reduced-motion: no-preference) {
-      transition: transform, opacity;
-      transition-duration: var(--wui-dialog-transition-duration);
-      transition-timing-function: var(--wui-dialog-transition-timing-function);
-    }
-
-    [data-component="header"] {
+    [data-component="dialog-header"] {
       border-bottom: var(--wui-dialog-header-border);
     }
 
@@ -32,16 +26,6 @@
 
     [data-component="footer"] {
       border-top: var(--wui-dialog-footer-border);
-    }
-  }
-
-  [data-component="modal"] {
-    &[data-entering],
-    &[data-exiting] {
-      [data-component="dialog"] {
-        opacity: var(--wui-dialog-opacity-starting-style);
-        transform: var(--wui-dialog-transform-starting-style);
-      }
     }
   }
 }

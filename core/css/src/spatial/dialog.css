@@ -10,8 +10,12 @@
     outline: none;
     width: 100%;
 
-    [data-component="header"] {
+    [data-component="dialog-header"] {
+      align-items: center;
+      display: flex;
       height: var(--wui-dialog-header-height);
+      padding-inline: var(--wui-dialog-space);
+      margin-bottom: var(--wui-space-5);
     }
 
     [data-slot="title"] {
@@ -54,19 +58,19 @@
       }
     }
 
-    &[data-width="1"] {
+    &[data-size="1"] {
       width: 50ch;
     }
 
-    &[data-width="2"] {
+    &[data-size="2"] {
       width: 60ch;
     }
 
-    &[data-width="3"] {
+    &[data-size="3"] {
       width: 70ch;
     }
 
-    &:not([data-component="header"]) {
+    &:not(:has([data-component="dialog-header"])) {
       padding-top: var(--wui-dialog-content-space);
     }
 

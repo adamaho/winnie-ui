@@ -15,7 +15,7 @@ importers:
         version: 2.28.1
       "@trivago/prettier-plugin-sort-imports":
         specifier: 5.2.2
-        version: 5.2.2(prettier@3.5.2)(svelte@5.20.1)
+        version: 5.2.2(prettier@3.5.3)(svelte@5.20.1)
       husky:
         specifier: 9.1.7
         version: 9.1.7
@@ -23,14 +23,14 @@ importers:
         specifier: 15.4.3
         version: 15.4.3
       prettier:
-        specifier: 3.5.2
-        version: 3.5.2
+        specifier: 3.5.3
+        version: 3.5.3
       prettier-plugin-astro:
         specifier: 0.14.1
         version: 0.14.1
       prettier-plugin-tailwindcss:
         specifier: 0.6.11
-        version: 0.6.11(@trivago/prettier-plugin-sort-imports@5.2.2(prettier@3.5.2)(svelte@5.20.1))(prettier-plugin-astro@0.14.1)(prettier@3.5.2)
+        version: 0.6.11(@trivago/prettier-plugin-sort-imports@5.2.2(prettier@3.5.3)(svelte@5.20.1))(prettier-plugin-astro@0.14.1)(prettier@3.5.3)
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
@@ -42,7 +42,7 @@ importers:
     dependencies:
       "@astrojs/check":
         specifier: 0.9.4
-        version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.5.2)(typescript@5.8.2)
+        version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.5.3)(typescript@5.8.2)
       "@astrojs/mdx":
         specifier: 4.1.0
         version: 4.1.0(astro@5.4.1(@types/node@22.13.8)(aws4fetch@1.0.20)(jiti@2.4.2)(lightningcss@1.29.1)(rollup@4.34.9)(tsx@4.19.3)(typescript@5.8.2)(yaml@2.7.0))
@@ -123,11 +123,11 @@ importers:
         version: 4.0.9
     devDependencies:
       "@tanstack/router-devtools":
-        specifier: 1.112.6
-        version: 1.112.6(@tanstack/react-router@1.112.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(csstype@3.1.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: 1.112.7
+        version: 1.112.7(@tanstack/react-router@1.112.7(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(csstype@3.1.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       "@tanstack/router-plugin":
-        specifier: 1.112.3
-        version: 1.112.3(@tanstack/react-router@1.112.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(vite@6.2.0(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.29.1)(tsx@4.19.3)(yaml@2.7.0))
+        specifier: 1.112.7
+        version: 1.112.7(@tanstack/react-router@1.112.7(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(vite@6.2.0(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.29.1)(tsx@4.19.3)(yaml@2.7.0))
       "@types/flexsearch":
         specifier: 0.7.6
         version: 0.7.6
@@ -138,14 +138,14 @@ importers:
         specifier: 19.0.4
         version: 19.0.4(@types/react@19.0.10)
       astro-sst:
-        specifier: 2.45.2
-        version: 2.45.2
+        specifier: 3.0.2
+        version: 3.0.2
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
       sst:
-        specifier: 3.9.21
-        version: 3.9.21
+        specifier: 3.9.23
+        version: 3.9.23
       typescript:
         specifier: 5.8.2
         version: 5.8.2
@@ -159,8 +159,8 @@ importers:
         specifier: 0.16.2025022800
         version: 0.16.2025022800
       "@tanstack/react-router":
-        specifier: 1.112.0
-        version: 1.112.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: 1.112.7
+        version: 1.112.7(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       "@winnie-ui/icons":
         specifier: workspace:*
         version: link:../../core/icons
@@ -187,11 +187,11 @@ importers:
         specifier: 4.0.9
         version: 4.0.9(vite@6.2.0(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.29.1)(tsx@4.19.3)(yaml@2.7.0))
       "@tanstack/router-devtools":
-        specifier: 1.112.6
-        version: 1.112.6(@tanstack/react-router@1.112.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(csstype@3.1.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: 1.112.7
+        version: 1.112.7(@tanstack/react-router@1.112.7(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(csstype@3.1.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       "@tanstack/router-plugin":
-        specifier: 1.112.3
-        version: 1.112.3(@tanstack/react-router@1.112.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(vite@6.2.0(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.29.1)(tsx@4.19.3)(yaml@2.7.0))
+        specifier: 1.112.7
+        version: 1.112.7(@tanstack/react-router@1.112.7(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(vite@6.2.0(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.29.1)(tsx@4.19.3)(yaml@2.7.0))
       "@types/aws-lambda":
         specifier: 8.10.147
         version: 8.10.147
@@ -208,8 +208,8 @@ importers:
         specifier: 16.0.0
         version: 16.0.0
       sst:
-        specifier: 3.9.21
-        version: 3.9.21
+        specifier: 3.9.23
+        version: 3.9.23
       tailwindcss:
         specifier: 4.0.9
         version: 4.0.9
@@ -431,13 +431,6 @@ packages:
         integrity: sha512-wxhSKRfKugLwLlr4OFfcqovk+LIFtKwLyGPqMsv+9/ibqqnW3Gv7tBhtKEb0gAyUAC4G9BTVQeQahqnQAhd6IQ==,
       }
     engines: { node: ^18.17.1 || ^20.3.0 || >=22.0.0 }
-
-  "@astrojs/webapi@3.0.0":
-    resolution:
-      {
-        integrity: sha512-+/Wruju2Ho99z0jI8zxMFGBkKKG97RzR/srSaColejUDrczkAjR3HjULKTVfDdIpvtvFZLyl7OMBmHKQazfeZg==,
-      }
-    deprecated: This package is not used by Astro any more and is no longer maintained. In Astro 3.0 polyfills are part of a core module.
 
   "@astrojs/yaml2ts@0.2.2":
     resolution:
@@ -1121,13 +1114,6 @@ packages:
       {
         integrity: sha512-Rkiu/8wIjpsf46Rr+Fitd3HRP+VsxUFDDeag0hs9L0ksfnwx2g7SPQQTFL0E8Qv+rfXzQOxBJnjUB9ITUDjfWQ==,
       }
-
-  "@fastify/busboy@2.1.1":
-    resolution:
-      {
-        integrity: sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==,
-      }
-    engines: { node: ">=14" }
 
   "@fastify/cors@10.1.0":
     resolution:
@@ -3597,10 +3583,10 @@ packages:
       }
     engines: { node: ">=12" }
 
-  "@tanstack/react-router@1.112.0":
+  "@tanstack/react-router@1.112.7":
     resolution:
       {
-        integrity: sha512-05WEtCy9NNLfaQKJUdLjFz/g8FBTeWO9C1LbZasEXAyA2u+TkR/bBbH/VV/roaFvWC8Nn7o3urbZT1CxPtuvXw==,
+        integrity: sha512-udThbvP01cXMvMUK5OPayxuR7ib5AtFL2VnbZSnnKS/dHGsk8KRS+qmkyqZBuuOxRkkF2MC3+BdPj2UTZ4UNjQ==,
       }
     engines: { node: ">=12" }
     peerDependencies:
@@ -3623,14 +3609,14 @@ packages:
       }
     engines: { node: ">=12" }
 
-  "@tanstack/router-devtools@1.112.6":
+  "@tanstack/router-devtools@1.112.7":
     resolution:
       {
-        integrity: sha512-OhLZsDnrItA+8BiVdmyyWB2VgQyoCZAjSRshQJpbZdeAV69OvT2rqN2TtiLJsbSAJWmqL4/UcY/13DI9Iv+k3Q==,
+        integrity: sha512-37qpVzYK4JEg/i0CvnbKI2G+OyWai9yLyvnm8UIc9f2yDzVZKJ1qEpnRXhuLdGCL8dmsf7PjhAPmw46YnD3fHQ==,
       }
     engines: { node: ">=12" }
     peerDependencies:
-      "@tanstack/react-router": ^1.112.0
+      "@tanstack/react-router": ^1.112.7
       csstype: ^3.0.10
       react: ">=18.0.0 || >=19.0.0"
       react-dom: ">=18.0.0 || >=19.0.0"
@@ -3638,27 +3624,27 @@ packages:
       csstype:
         optional: true
 
-  "@tanstack/router-generator@1.112.3":
+  "@tanstack/router-generator@1.112.7":
     resolution:
       {
-        integrity: sha512-RUT+O/j7YIjbemVJjkP4qM8MYaaOltKYhyp9VGtcWxWGS8U2QDwC9UsskjBVOj7QV7aq3UcnExicABwK/AMCCQ==,
+        integrity: sha512-2BlV64vej9T+NnjUEX42BOEKpCnC2dUtfxr9Xz0sQk43fMWtNe+2b1jzPzJZWlu8RjaQ5OK22hL+p7GSpph3Kw==,
       }
     engines: { node: ">=12" }
     peerDependencies:
-      "@tanstack/react-router": ^1.112.0
+      "@tanstack/react-router": ^1.112.7
     peerDependenciesMeta:
       "@tanstack/react-router":
         optional: true
 
-  "@tanstack/router-plugin@1.112.3":
+  "@tanstack/router-plugin@1.112.7":
     resolution:
       {
-        integrity: sha512-XhKXFoJ7eajqghAPwHXfggyB8khopr5yVXiYQRiL+9Gek2q5M8N4z9+Uh2MM31KjTuiaJ72lZpUgT5FDj1m6Tg==,
+        integrity: sha512-9m5UfLSWd5T2jOG9O0BWd1WkChalYfkO/zZjnQ+JoyvixbqTUmkXWkbNtMrZSfM/lNQO4HiftPMMflLSGWMrWg==,
       }
     engines: { node: ">=12" }
     peerDependencies:
       "@rsbuild/core": ">=1.0.2"
-      "@tanstack/react-router": ^1.112.0
+      "@tanstack/react-router": ^1.112.7
       vite: ">=5.0.0 || >=6.0.0"
       vite-plugin-solid: ^2.11.2
       webpack: ">=5.92.0"
@@ -4158,10 +4144,10 @@ packages:
     peerDependencies:
       astro: ^4.0.0-beta || ^5.0.0-beta || ^3.3.0
 
-  astro-sst@2.45.2:
+  astro-sst@3.0.2:
     resolution:
       {
-        integrity: sha512-Zrrip/9VP5kvoQJ+Kj2tJA1h7mQ3ShAsfKXMqVcz8vqMqCsFjEZPLHDu8zYTGMr3WOX8r3vzY6u5nOeaKFg8ZQ==,
+        integrity: sha512-jnCNcIGvHEUwmpddb8Hhb8WX0E2d/IGF/DlS06rpraPW7ykieRgB4wLPTdF2v4JLI3BuOBacHzP5cpGpcnvN+A==,
       }
 
   astro@5.4.1:
@@ -4884,10 +4870,10 @@ packages:
         integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==,
       }
 
-  electron-to-chromium@1.5.109:
+  electron-to-chromium@1.5.111:
     resolution:
       {
-        integrity: sha512-AidaH9JETVRr9DIPGfp1kAarm/W6hRJTPuCnkF+2MqhF4KaAgRIcBc8nvjk+YMXZhwfISof/7WG29eS4iGxQLQ==,
+        integrity: sha512-vJyJlO95wQRAw6K2ZGF/8nol7AcbCOnp8S6H91mwOOBbXoS9seDBYxCTPYAFsvXLxl3lc0jLXXe9GLxC4nXVog==,
       }
 
   emmet@2.4.11:
@@ -7298,10 +7284,10 @@ packages:
     engines: { node: ">=10.13.0" }
     hasBin: true
 
-  prettier@3.5.2:
+  prettier@3.5.3:
     resolution:
       {
-        integrity: sha512-lc6npv5PH7hVqozBR7lkBNOGXV9vMwROAPlumdBkX0wTbbzPu/U1hk5yL8p2pt4Xoc+2mkT8t/sow2YrV/M5qg==,
+        integrity: sha512-QQtaxnoDJeAkDvDKWCLiwIXkTgRhwYDEQCghU9Z6q03iyek/rxRh/2lC3HB7P8sWT2xC/y5JDctPLBIGzHKbhw==,
       }
     engines: { node: ">=14" }
     hasBin: true
@@ -8025,50 +8011,50 @@ packages:
         integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==,
       }
 
-  sst-darwin-arm64@3.9.21:
+  sst-darwin-arm64@3.9.23:
     resolution:
       {
-        integrity: sha512-FHGg+BBg8tcxILIdOgpGddmXefFfwLEbRbQ6aSs7A1v5hL9IAQPLowEWV3sY6D1WlwzyePn72AyYhojPyCJhWA==,
+        integrity: sha512-pGauM2ep7/9cjlxNcLumHqoicpXv6Mdn9UEI0eCKwfMTt0Attdnr6L9xCWHuBD+VVG0jSVcpU3qfn2wu1ycDhQ==,
       }
     cpu: [arm64]
     os: [darwin]
 
-  sst-darwin-x64@3.9.21:
+  sst-darwin-x64@3.9.23:
     resolution:
       {
-        integrity: sha512-RiXtKNcQeZa3tpuHYe5DzydYYpxmv6bMWxHjRQb9Jw851XCw4dH9g0Ju7c9xgKahiSIxn6AswwreUnhDDaYOBA==,
+        integrity: sha512-q00Dn4cX06SOwYeDlwi9priTgSGe1kpPbBE2xT5ZJTm2DbL/DmezT5unUNov6ac6PM2DoN2GRqJLPOHvqrsJBg==,
       }
     cpu: [x64]
     os: [darwin]
 
-  sst-linux-arm64@3.9.21:
+  sst-linux-arm64@3.9.23:
     resolution:
       {
-        integrity: sha512-BtwDqYkWpP1Yrx82LPFsRjU9bDmtxZwkdtj10BSh0GsQXay5S5nrjo18UyW/1o+dt5rfWBgyr5/pyNUeCim8hw==,
+        integrity: sha512-fXGA7M9UDzxqkMAxzyfoXr5gif+ti4+dbLzsgBP1EPT4fQcspqLpCIffcLnLcLf7xtPgZXCsufFNqtQupraE9g==,
       }
     cpu: [arm64]
     os: [linux]
 
-  sst-linux-x64@3.9.21:
+  sst-linux-x64@3.9.23:
     resolution:
       {
-        integrity: sha512-KYCLPWZ8WealZqE310jw+pHA9sA0HxFy7b2+jqaHlPxadn0e287W2Ma2cOFe4rw0LqSsjW0jcnkHI+RBuU1XWw==,
+        integrity: sha512-Es+0ifiHrrm4jNNV0nXqwSAUWIIaIUf+Zr3fHXdPg7v8jDZcqyw1SplRVe37PDMaLU/sqRM/jDs7p5M1Ucqmsg==,
       }
     cpu: [x64]
     os: [linux]
 
-  sst-linux-x86@3.9.21:
+  sst-linux-x86@3.9.23:
     resolution:
       {
-        integrity: sha512-hCD1Fbv+TsOsD2Z3YQtF5O2SfYhYBrfWvtYQfTF0jlLYu5mfvnQajEf1W43N5xzd2y3jNbBy0fahXa4XJ6U+sg==,
+        integrity: sha512-q8YKnTHuPBnpJDS+3GGe1/8gvoGk0pPJhDByO3VMBjbtGK710MiwyV87Qk43ArCwxrFSwgVJ4CevLReuLT80Jg==,
       }
     cpu: [x86]
     os: [linux]
 
-  sst@3.9.21:
+  sst@3.9.23:
     resolution:
       {
-        integrity: sha512-tX3/ASEKbPiTWFVyMQ49jUS/mPFlA2wdcBliMLBxyWHs4iLz2xWaQ6pmgBsqnASveIWicwIaXJ14aMfKJ/I7MQ==,
+        integrity: sha512-G+6MlYgyND6BtafQYNzsSLGGVp09mk7TsvARI7/lC6HhQFxr46H3Yc2T7qOZM5e0lBNA30bFuqYV3Yj8GZYrOQ==,
       }
     hasBin: true
 
@@ -8480,13 +8466,6 @@ packages:
       {
         integrity: sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg==,
       }
-
-  undici@5.28.4:
-    resolution:
-      {
-        integrity: sha512-72RFADWFqKmUb2hmmvNODKL3p9hcB6Gt2DOQMis1SEBaV6a4MH8soBvzg+95CYhCKPFedut2JY9bMfrDl9D23g==,
-      }
-    engines: { node: ">=14.0" }
 
   unified@11.0.5:
     resolution:
@@ -9198,9 +9177,9 @@ snapshots:
       "@jridgewell/gen-mapping": 0.3.8
       "@jridgewell/trace-mapping": 0.3.25
 
-  "@astrojs/check@0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.5.2)(typescript@5.8.2)":
+  "@astrojs/check@0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.5.3)(typescript@5.8.2)":
     dependencies:
-      "@astrojs/language-server": 2.15.4(prettier-plugin-astro@0.14.1)(prettier@3.5.2)(typescript@5.8.2)
+      "@astrojs/language-server": 2.15.4(prettier-plugin-astro@0.14.1)(prettier@3.5.3)(typescript@5.8.2)
       chokidar: 4.0.1
       kleur: 4.1.5
       typescript: 5.8.2
@@ -9215,7 +9194,7 @@ snapshots:
 
   "@astrojs/internal-helpers@0.6.0": {}
 
-  "@astrojs/language-server@2.15.4(prettier-plugin-astro@0.14.1)(prettier@3.5.2)(typescript@5.8.2)":
+  "@astrojs/language-server@2.15.4(prettier-plugin-astro@0.14.1)(prettier@3.5.3)(typescript@5.8.2)":
     dependencies:
       "@astrojs/compiler": 2.10.3
       "@astrojs/yaml2ts": 0.2.2
@@ -9229,14 +9208,14 @@ snapshots:
       volar-service-css: 0.0.62(@volar/language-service@2.4.8)
       volar-service-emmet: 0.0.62(@volar/language-service@2.4.8)
       volar-service-html: 0.0.62(@volar/language-service@2.4.8)
-      volar-service-prettier: 0.0.62(@volar/language-service@2.4.8)(prettier@3.5.2)
+      volar-service-prettier: 0.0.62(@volar/language-service@2.4.8)(prettier@3.5.3)
       volar-service-typescript: 0.0.62(@volar/language-service@2.4.8)
       volar-service-typescript-twoslash-queries: 0.0.62(@volar/language-service@2.4.8)
       volar-service-yaml: 0.0.62(@volar/language-service@2.4.8)
       vscode-html-languageservice: 5.3.1
       vscode-uri: 3.0.8
     optionalDependencies:
-      prettier: 3.5.2
+      prettier: 3.5.3
       prettier-plugin-astro: 0.14.1
     transitivePeerDependencies:
       - typescript
@@ -9324,10 +9303,6 @@ snapshots:
       which-pm-runs: 1.1.0
     transitivePeerDependencies:
       - supports-color
-
-  "@astrojs/webapi@3.0.0":
-    dependencies:
-      undici: 5.28.4
 
   "@astrojs/yaml2ts@0.2.2":
     dependencies:
@@ -9813,8 +9788,6 @@ snapshots:
       ajv: 8.17.1
       ajv-formats: 3.0.1(ajv@8.17.1)
       fast-uri: 3.0.6
-
-  "@fastify/busboy@2.1.1": {}
 
   "@fastify/cors@10.1.0":
     dependencies:
@@ -11876,7 +11849,7 @@ snapshots:
 
   "@tanstack/history@1.99.13": {}
 
-  "@tanstack/react-router@1.112.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)":
+  "@tanstack/react-router@1.112.7(react-dom@19.0.0(react@19.0.0))(react@19.0.0)":
     dependencies:
       "@tanstack/history": 1.99.13
       "@tanstack/react-store": 0.7.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -11899,9 +11872,9 @@ snapshots:
       "@tanstack/history": 1.99.13
       "@tanstack/store": 0.7.0
 
-  "@tanstack/router-devtools@1.112.6(@tanstack/react-router@1.112.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(csstype@3.1.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)":
+  "@tanstack/router-devtools@1.112.7(@tanstack/react-router@1.112.7(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(csstype@3.1.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)":
     dependencies:
-      "@tanstack/react-router": 1.112.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      "@tanstack/react-router": 1.112.7(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       clsx: 2.1.1
       goober: 2.1.16(csstype@3.1.3)
       react: 19.0.0
@@ -11909,16 +11882,16 @@ snapshots:
     optionalDependencies:
       csstype: 3.1.3
 
-  "@tanstack/router-generator@1.112.3(@tanstack/react-router@1.112.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))":
+  "@tanstack/router-generator@1.112.7(@tanstack/react-router@1.112.7(react-dom@19.0.0(react@19.0.0))(react@19.0.0))":
     dependencies:
       "@tanstack/virtual-file-routes": 1.99.0
-      prettier: 3.5.2
+      prettier: 3.5.3
       tsx: 4.19.3
       zod: 3.24.2
     optionalDependencies:
-      "@tanstack/react-router": 1.112.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      "@tanstack/react-router": 1.112.7(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
 
-  "@tanstack/router-plugin@1.112.3(@tanstack/react-router@1.112.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(vite@6.2.0(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.29.1)(tsx@4.19.3)(yaml@2.7.0))":
+  "@tanstack/router-plugin@1.112.7(@tanstack/react-router@1.112.7(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(vite@6.2.0(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.29.1)(tsx@4.19.3)(yaml@2.7.0))":
     dependencies:
       "@babel/core": 7.26.9
       "@babel/plugin-syntax-jsx": 7.25.9(@babel/core@7.26.9)
@@ -11927,7 +11900,7 @@ snapshots:
       "@babel/traverse": 7.26.9
       "@babel/types": 7.26.9
       "@tanstack/router-core": 1.112.0
-      "@tanstack/router-generator": 1.112.3(@tanstack/react-router@1.112.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))
+      "@tanstack/router-generator": 1.112.7(@tanstack/react-router@1.112.7(react-dom@19.0.0(react@19.0.0))(react@19.0.0))
       "@tanstack/router-utils": 1.102.2
       "@tanstack/virtual-file-routes": 1.99.0
       "@types/babel__core": 7.20.5
@@ -11938,7 +11911,7 @@ snapshots:
       unplugin: 2.2.0
       zod: 3.24.2
     optionalDependencies:
-      "@tanstack/react-router": 1.112.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      "@tanstack/react-router": 1.112.7(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       vite: 6.2.0(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.29.1)(tsx@4.19.3)(yaml@2.7.0)
     transitivePeerDependencies:
       - supports-color
@@ -11954,7 +11927,7 @@ snapshots:
 
   "@tanstack/virtual-file-routes@1.99.0": {}
 
-  "@trivago/prettier-plugin-sort-imports@5.2.2(prettier@3.5.2)(svelte@5.20.1)":
+  "@trivago/prettier-plugin-sort-imports@5.2.2(prettier@3.5.3)(svelte@5.20.1)":
     dependencies:
       "@babel/generator": 7.26.5
       "@babel/parser": 7.26.7
@@ -11962,7 +11935,7 @@ snapshots:
       "@babel/types": 7.26.7
       javascript-natural-sort: 0.7.1
       lodash: 4.17.21
-      prettier: 3.5.2
+      prettier: 3.5.3
     optionalDependencies:
       svelte: 5.20.1
     transitivePeerDependencies:
@@ -12219,9 +12192,8 @@ snapshots:
       astro: 5.4.1(@types/node@22.13.8)(aws4fetch@1.0.20)(jiti@2.4.2)(lightningcss@1.29.1)(rollup@4.34.9)(tsx@4.19.3)(typescript@5.8.2)(yaml@2.7.0)
       rehype-expressive-code: 0.40.2
 
-  astro-sst@2.45.2:
+  astro-sst@3.0.2:
     dependencies:
-      "@astrojs/webapi": 3.0.0
       set-cookie-parser: 2.7.1
 
   astro@5.4.1(@types/node@22.13.8)(aws4fetch@1.0.20)(jiti@2.4.2)(lightningcss@1.29.1)(rollup@4.34.9)(tsx@4.19.3)(typescript@5.8.2)(yaml@2.7.0):
@@ -12391,7 +12363,7 @@ snapshots:
   browserslist@4.24.4:
     dependencies:
       caniuse-lite: 1.0.30001701
-      electron-to-chromium: 1.5.109
+      electron-to-chromium: 1.5.111
       node-releases: 2.0.19
       update-browserslist-db: 1.1.3(browserslist@4.24.4)
 
@@ -12682,7 +12654,7 @@ snapshots:
 
   eastasianwidth@0.2.0: {}
 
-  electron-to-chromium@1.5.109: {}
+  electron-to-chromium@1.5.111: {}
 
   emmet@2.4.11:
     dependencies:
@@ -14303,14 +14275,14 @@ snapshots:
   prettier-plugin-astro@0.14.1:
     dependencies:
       "@astrojs/compiler": 2.10.3
-      prettier: 3.5.2
+      prettier: 3.5.3
       sass-formatter: 0.7.9
 
-  prettier-plugin-tailwindcss@0.6.11(@trivago/prettier-plugin-sort-imports@5.2.2(prettier@3.5.2)(svelte@5.20.1))(prettier-plugin-astro@0.14.1)(prettier@3.5.2):
+  prettier-plugin-tailwindcss@0.6.11(@trivago/prettier-plugin-sort-imports@5.2.2(prettier@3.5.3)(svelte@5.20.1))(prettier-plugin-astro@0.14.1)(prettier@3.5.3):
     dependencies:
-      prettier: 3.5.2
+      prettier: 3.5.3
     optionalDependencies:
-      "@trivago/prettier-plugin-sort-imports": 5.2.2(prettier@3.5.2)(svelte@5.20.1)
+      "@trivago/prettier-plugin-sort-imports": 5.2.2(prettier@3.5.3)(svelte@5.20.1)
       prettier-plugin-astro: 0.14.1
 
   prettier@2.8.7:
@@ -14318,7 +14290,7 @@ snapshots:
 
   prettier@2.8.8: {}
 
-  prettier@3.5.2: {}
+  prettier@3.5.3: {}
 
   prismjs@1.29.0: {}
 
@@ -14933,32 +14905,32 @@ snapshots:
 
   sprintf-js@1.0.3: {}
 
-  sst-darwin-arm64@3.9.21:
+  sst-darwin-arm64@3.9.23:
     optional: true
 
-  sst-darwin-x64@3.9.21:
+  sst-darwin-x64@3.9.23:
     optional: true
 
-  sst-linux-arm64@3.9.21:
+  sst-linux-arm64@3.9.23:
     optional: true
 
-  sst-linux-x64@3.9.21:
+  sst-linux-x64@3.9.23:
     optional: true
 
-  sst-linux-x86@3.9.21:
+  sst-linux-x86@3.9.23:
     optional: true
 
-  sst@3.9.21:
+  sst@3.9.23:
     dependencies:
       aws4fetch: 1.0.20
       jose: 5.2.3
       openid-client: 5.6.4
     optionalDependencies:
-      sst-darwin-arm64: 3.9.21
-      sst-darwin-x64: 3.9.21
-      sst-linux-arm64: 3.9.21
-      sst-linux-x64: 3.9.21
-      sst-linux-x86: 3.9.21
+      sst-darwin-arm64: 3.9.23
+      sst-darwin-x64: 3.9.23
+      sst-linux-arm64: 3.9.23
+      sst-linux-x64: 3.9.23
+      sst-linux-x86: 3.9.23
 
   stream-shift@1.0.3: {}
 
@@ -15172,10 +15144,6 @@ snapshots:
 
   undici-types@6.20.0: {}
 
-  undici@5.28.4:
-    dependencies:
-      "@fastify/busboy": 2.1.1
-
   unified@11.0.5:
     dependencies:
       "@types/unist": 3.0.3
@@ -15370,12 +15338,12 @@ snapshots:
     optionalDependencies:
       "@volar/language-service": 2.4.8
 
-  volar-service-prettier@0.0.62(@volar/language-service@2.4.8)(prettier@3.5.2):
+  volar-service-prettier@0.0.62(@volar/language-service@2.4.8)(prettier@3.5.3):
     dependencies:
       vscode-uri: 3.0.8
     optionalDependencies:
       "@volar/language-service": 2.4.8
-      prettier: 3.5.2
+      prettier: 3.5.3
 
   volar-service-typescript-twoslash-queries@0.0.62(@volar/language-service@2.4.8):
     dependencies:
