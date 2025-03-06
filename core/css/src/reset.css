@@ -68,7 +68,8 @@
     margin: 0;
   }
 
-  input {
+  input,
+  textarea {
     appearance: none;
     background: transparent;
     border: none;

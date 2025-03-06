@@ -2,7 +2,7 @@
   [data-component="textarea"] {
     --wui-textarea-border-radius: min(var(--wui-border-radius-3), 12px);
     --wui-textarea-font-size: var(--wui-font-size-2);
-    --wui-textarea-space: var(--wui-space-4);
+    --wui-textarea-space: var(--wui-space-3);
 
     border-radius: var(--wui-textarea-border-radius);
     font-size: var(--wui-textarea-font-size);
@@ -13,6 +13,10 @@
 
     &:is([data-disabled], [aria-disabled="true"], :disabled) {
       resize: none;
+    }
+
+    @supports (field-sizing: content) {
+      field-sizing: content;
     }
   }
 }

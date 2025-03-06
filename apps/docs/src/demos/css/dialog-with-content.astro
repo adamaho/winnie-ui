@@ -1,4 +1,4 @@
-<div data-component="dialog" class="shadow-none" data-size="1">
+<div data-component="dialog" class="shadow-none" data-size="sm">
   <header data-component="dialog-header">
     <ol data-component="breadcrumbs">
       <li data-component="breadcrumb">
@@ -23,7 +23,10 @@
     </div>
     <div data-component="field">
       <label data-slot="label">Description</label>
-      <textarea data-component="textarea" data-slot="control"></textarea>
+      <textarea
+        data-component="textarea"
+        data-slot="control"
+        class="min-h-[75px]"></textarea>
     </div>
   </div>
   <footer data-component="dialog-footer">

@@ -188,7 +188,7 @@
     "dist:visual-typography": "lightningcss src/visual/typography.css -o dist/visual/typography.min.css --minify --bundle --targets 'last 2 versions'",
     "dist:layer": "lightningcss src/layer.css -o dist/layer.min.css --minify --bundle --targets 'last 2 versions'",
     "dist:reset": "lightningcss src/reset.css -o dist/reset.min.css --minify --bundle --targets 'last 2 versions'",
-    "clean": "rimraf node_modules",
+    "clean": "rimraf node_modules .dist",
     "stylelint": "stylelint \"src/**/*.css\""
   },
   "devDependencies": {

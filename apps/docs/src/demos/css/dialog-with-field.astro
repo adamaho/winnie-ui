@@ -1,3 +1,7 @@
+---
+import { CrossLarge } from "@winnie-ui/icons/react/line";
+---
+
 <div data-component="dialog" class="shadow-none" data-size="sm">
   <header data-component="dialog-header">
     <ol data-component="breadcrumbs">
@@ -13,7 +17,21 @@
         <span data-slot="label">New Dish</span>
       </li>
     </ol>
+    <button
+      data-component="button"
+      data-size="sm"
+      data-accent-color="grey"
+      data-variant="4"
+      data-slot="close"
+    >
+      <CrossLarge data-slot="icon" />
+    </button>
   </header>
+  <input data-slot="title" placeholder="Dish name" />
+  <textarea
+    data-slot="description"
+    placeholder="Add description..."
+    class="min-h-[75px]"></textarea>
   <footer data-component="dialog-footer">
     <button
       data-component="button"

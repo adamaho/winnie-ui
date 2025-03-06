@@ -1,8 +1,3 @@
-@import "@winnie-ui/css/layer";
-@import "@winnie-ui/css/reset";
-@import "@winnie-ui/css/base";
-@import "@winnie-ui/css/spatial";
-@import "@winnie-ui/css/visual";
 @import "tailwindcss/theme.css" layer(base);
 @import "tailwindcss/utilities.css" layer(utilities);
 

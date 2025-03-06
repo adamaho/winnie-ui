@@ -1,17 +1,27 @@
+---
+import { CrossLarge } from "@winnie-ui/icons/react/line";
+---
+
 <div data-component="dialog" class="shadow-none" data-size="sm">
-  <span data-slot="title">Delete Dish</span>
+  <header data-component="dialog-header">
+    <button
+      data-component="button"
+      data-size="sm"
+      data-accent-color="grey"
+      data-variant="4"
+      data-slot="close"
+    >
+      <CrossLarge data-slot="icon" />
+    </button>
+  </header>
+  <div data-slot="title">Delete Dish</div>
   <p data-slot="description">
     Are you sure you want to delete <span class="font-semibold"
       >Margarita Pizza</span
     >?
   </p>
+
   <footer data-component="dialog-footer">
-    <button
-      data-component="button"
-      data-slot="cancel"
-      data-accent-color="grey"
-      data-variant="4">Cancel</button
-    >
     <button
       data-component="button"
       data-slot="action"

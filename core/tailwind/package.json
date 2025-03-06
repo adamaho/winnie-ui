@@ -13,14 +13,10 @@
     "package.json"
   ],
   "scripts": {
-    "clean": "rimraf node_modules",
-    "format:check": "biome format ./src --no-errors-on-unmatched",
-    "format:write": "biome format ./src --write --no-errors-on-unmatched"
+    "clean": "rimraf node_modules"
   },
   "peerDependencies": {
-    "tailwindcss": "4.0.0"
-  },
-  "dependencies": {
+    "tailwindcss": "4.0.0",
     "@winnie-ui/css": "workspace:*"
   },
   "devDependencies": {

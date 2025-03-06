@@ -6,7 +6,9 @@ description: An interactive element that opens on top of the page content.
 import Demo from "~/components/demo/demo.astro";
 
 import DialogSize from "~/demos/css/dialog-size.astro";
+import DialogWithClose from "~/demos/css/dialog-with-close.astro";
 import DialogWithContent from "~/demos/css/dialog-with-content.astro";
+import DialogWithField from "~/demos/css/dialog-with-field.astro";
 import DialogWithHeader from "~/demos/css/dialog-with-header.astro";
 import Dialog from "~/demos/css/dialog.astro";
 
@@ -14,7 +16,7 @@ import Dialog from "~/demos/css/dialog.astro";
   <Dialog />
   <Fragment slot="footer">
     ```tsx
-    <dialog data-component="dialog" data-size="1">
+    <dialog data-component="dialog" data-size="sm">
       <h3 data-slot="title">Delete Dish</h3>
       <p data-slot="description">
         Are you sure you want to delete Margarita Pizza?
@@ -57,10 +59,11 @@ Attach the appropriate `data` attributes in the structure below.
 
 ```html
 <dialog data-component="dialog">
-  <header data-component="header" />
+  <header data-component="header">
+    <button data-slot="close" />
+  </header>
   <h3 data-slot="title" />
   <p data-slot="description" />
-  <button data-slot="close" />
   <div data-component="content" />
   <footer data-component="footer">
     <button data-slot="cancel" />
@@ -102,6 +105,27 @@ Use the `dialog-header` component to add a header to the dialog.
   </Fragment>
 </Demo>
 
+### Close
+
+Use the `close` slot component to add a close button to the top right of the dialog.
+
+<Demo>
+  <DialogWithClose />
+  <Fragment slot="footer">
+    ```tsx mark={4} mark={5} mark={6}
+    <dialog data-component="dialog">
+      <header>
+        ...
+        <button data-component="button" data-slot="close">
+          <i class="x"></i>
+        </button>
+      </header>
+      ...
+    </dialog>
+    ```
+  </Fragment>
+</Demo>
+
 ### Content
 
 Use the `dialog-content` component to add content, like a form, to the dialog.
@@ -119,8 +143,43 @@ Use the `dialog-content` component to add content, like a form, to the dialog.
   </Fragment>
 </Demo>
 
-### Footer
+### Fields
 
-### Close
+Use fields like `input` and `textarea` as the `title` and `description` slots.
 
-### Input as Title
+<Demo>
+  <DialogWithField />
+  <Fragment slot="footer">
+    ```tsx mark={3} mark={4}
+    <dialog data-component="dialog">
+      ...
+      <input data-slot="title" />
+      <textarea data-slot="description" />
+      ...
+    </dialog>
+    ```
+  </Fragment>
+</Demo>
+
+## Reference
+
+### dialog
+
+Groups all of the parts of the dialog together.
+
+| Attribute   | Value                  |
+| ----------- | ---------------------- |
+| `data-size` | `"sm" \| "md" \| "lg"` |
+
+| Variable                               |
+| -------------------------------------- |
+| `--wui-dialog-background`              |
+| `--wui-dialog-border`                  |
+| `--wui-dialog-box-shadow`              |
+| `--wui-dialog-color`                   |
+| `--wui-dialog-header-border-bottom`    |
+| `--wui-dialog-title-color`             |
+| `--wui-dialog-title-font-weight`       |
+| `--wui-dialog-description-color`       |
+| `--wui-dialog-description-font-weight` |
+| `--wui-dialog-footer-border-top`       |

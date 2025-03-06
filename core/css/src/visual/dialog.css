@@ -7,7 +7,7 @@
     transform: var(--wui-dialog-transform);
 
     [data-component="dialog-header"] {
-      border-bottom: var(--wui-dialog-header-border);
+      border-bottom: var(--wui-dialog-header-border-bottom);
     }
 
     [data-slot="title"] {
@@ -18,10 +18,15 @@
     [data-slot="description"] {
       color: var(--wui-dialog-description-color);
       font-weight: var(--wui-dialog-description-font-weight);
+
+      &:is(textarea) {
+        color: var(--wui-dialog-title-color);
+        resize: none;
+      }
     }
 
     [data-component="dialog-footer"] {
-      border-top: var(--wui-dialog-footer-border);
+      border-top: var(--wui-dialog-footer-border-top);
     }
   }
 }
