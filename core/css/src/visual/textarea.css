@@ -3,6 +3,7 @@
     background: var(--wui-textarea-background);
     border: var(--wui-textarea-border);
     box-shadow: var(--wui-textarea-box-shadow);
+    font-family: inherit;
     color: var(--wui-textarea-color);
     outline: none;
 
@@ -24,21 +25,14 @@
       color: var(--wui-textarea-color-pressed, var(--wui-textarea-color));
     }
 
-    &:is([data-focused], :focus) {
-      background: var(--wui-textarea-background-focused, var(--wui-textarea-background));
-      border: var(--wui-textarea-border-focused, var(--wui-textarea-border));
-      box-shadow: var(--wui-textarea-box-shadow-focused, var(--wui-textarea-box-shadow));
-      color: var(--wui-textarea-color-focused, var(--wui-textarea-color));
-    }
-
-    &:is([data-disabled], [aria-disabled="true"]) {
+    &:is([data-disabled], [aria-disabled="true"], :disabled) {
       background: var(--wui-textarea-background-disabled, var(--wui-textarea-background));
       border: var(--wui-textarea-border-disabled, var(--wui-textarea-border));
       box-shadow: var(--wui-textarea-box-shadow-disabled, var(--wui-textarea-box-shadow));
       color: var(--wui-textarea-color-disabled, var(--wui-textarea-color));
     }
 
-    &:is([data-invalid], :invalid):not([data-disabled], [aria-disabled="true"]) {
+    &:is([data-invalid], :invalid):not([data-disabled], [aria-disabled="true"], :disabled) {
       background: var(--wui-textarea-background-invalid, var(--wui-textarea-background));
       border: var(--wui-textarea-border-invalid, var(--wui-textarea-border));
       box-shadow: var(--wui-textarea-box-shadow-invalid, var(--wui-textarea-box-shadow));

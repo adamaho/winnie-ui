@@ -1,0 +1,28 @@
+<div data-component="dialog" class="shadow-none" data-size="1">
+  <header data-component="dialog-header">
+    <ol data-component="breadcrumbs">
+      <li data-component="breadcrumb">
+        <span data-slot="label">Home</span>
+        <span data-slot="separator">/</span>
+      </li>
+      <li data-component="breadcrumb">
+        <span data-slot="label">Dishes</span>
+        <span data-slot="separator">/</span>
+      </li>
+      <li data-component="breadcrumb" data-current="true">
+        <span data-slot="label">New Dish</span>
+      </li>
+    </ol>
+  </header>
+  <footer data-component="dialog-footer">
+    <button
+      data-component="button"
+      data-slot="cancel"
+      data-accent-color="grey"
+      data-variant="4">Cancel</button
+    >
+    <button data-component="button" data-slot="action" data-variant="1"
+      >Create Dish</button
+    >
+  </footer>
+</div>

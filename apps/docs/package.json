@@ -11,8 +11,6 @@
     "dev:sst": "sst dev",
     "deploy:production": "sst deploy --stage=production",
     "deploy:staging": "sst deploy --stage=staging",
-    "format:check": "biome format ./src --no-errors-on-unmatched",
-    "format:write": "biome format ./src --write --no-errors-on-unmatched",
     "remove:production": "sst remove --stage=staging",
     "remove:staging": "sst remove --stage=staging",
     "preview": "astro preview",
@@ -35,7 +33,7 @@
     "@winnie-ui/react": "workspace:*",
     "@winnie-ui/tailwind": "workspace:*",
     "@winnie-ui/themes": "workspace:*",
-    "astro": "5.4.1",
+    "astro": "5.4.2",
     "astro-expressive-code": "0.40.2",
     "clsx": "2.1.1",
     "cmdk": "1.0.4",
@@ -48,14 +46,14 @@
     "tailwindcss": "^4.0.9"
   },
   "devDependencies": {
-    "@tanstack/router-devtools": "1.112.6",
-    "@tanstack/router-plugin": "1.112.3",
+    "@tanstack/router-devtools": "1.112.13",
+    "@tanstack/router-plugin": "1.112.13",
     "@types/flexsearch": "0.7.6",
     "@types/react": "19.0.10",
     "@types/react-dom": "19.0.4",
-    "astro-sst": "2.45.2",
+    "astro-sst": "3.0.4",
     "rimraf": "6.0.1",
-    "sst": "3.9.21",
+    "sst": "3.9.26",
     "typescript": "5.8.2"
   }
 }

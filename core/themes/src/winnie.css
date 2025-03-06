@@ -253,14 +253,20 @@
      * -----------------------------------------------------------------------------------------------*/
     [data-component="textarea"] {
       --wui-textarea-color: var(--wui-color-grey-12);
+      --wui-textarea-border-invalid: var(--wui-border-width-1) solid var(--wui-color-red-9);
       --wui-textarea-placeholder-color: var(--wui-color-grey-10);
-      overflow: hidden;
     }
 
+    /* -------------------------------------------------------------------------------------------------
+     * Text 
+     * -----------------------------------------------------------------------------------------------*/
     [data-component="text"] {
       --wui-heading-font-family: var(--wui-font-family-sans);
     }
 
+    /* -------------------------------------------------------------------------------------------------
+     * Heading 
+     * -----------------------------------------------------------------------------------------------*/
     [data-component="heading"] {
       --wui-heading-font-family: var(--wui-font-family-sans);
       --wui-heading-letter-spacing: var(--wui-letter-spacing-9);
@@ -278,6 +284,7 @@
 
     [data-component="dialog"] {
       --wui-dialog-background: var(--wui-color-white);
+      --wui-dialog-border: var(--wui-border-width-1) solid var(--wui-color-grey-4);
       --wui-dialog-box-shadow: var(--wui-shadow-5);
       --wui-dialog-footer-border: var(--wui-border-width-1) solid var(--wui-color-grey-4);
     }
@@ -338,6 +345,7 @@
 
     [data-component="textarea"] {
       --wui-textarea-background: var(--wui-color-white);
+      --wui-textarea-background-disabled: var(--wui-color-grey-3);
       --wui-textarea-border: var(--wui-border-width-1) solid var(--wui-color-grey-4);
       --wui-textarea-box-shadow: var(--wui-shadow-1);
     }
@@ -443,7 +451,9 @@
 
     [data-component="textarea"] {
       --wui-textarea-background: var(--wui-color-grey-3);
-      --wui-textarea-border: var(--wui-border-width-1) solid var(--wui-color-grey-5);
+      --wui-textarea-background-disabled: var(--wui-color-grey-3);
+      --wui-textarea-border: var(--wui-border-width-1) solid var(--wui-color-grey-6);
+      --wui-textarea-border-disabled: var(--wui-border-width-1) solid var(--wui-color-grey-3);
       --wui-textarea-box-shadow: var(--wui-shadow-1);
     }
 

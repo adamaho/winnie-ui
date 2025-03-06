@@ -1,0 +1,126 @@
+---
+title: Dialog
+description: An interactive element that opens on top of the page content.
+---
+
+import Demo from "~/components/demo/demo.astro";
+
+import DialogSize from "~/demos/css/dialog-size.astro";
+import DialogWithContent from "~/demos/css/dialog-with-content.astro";
+import DialogWithHeader from "~/demos/css/dialog-with-header.astro";
+import Dialog from "~/demos/css/dialog.astro";
+
+<Demo>
+  <Dialog />
+  <Fragment slot="footer">
+    ```tsx
+    <dialog data-component="dialog" data-size="1">
+      <h3 data-slot="title">Delete Dish</h3>
+      <p data-slot="description">
+        Are you sure you want to delete Margarita Pizza?
+      </p>
+      <footer data-component="footer">
+        <button
+          data-component="button"
+          data-slot="cancel"
+          data-accent-color="grey"
+          data-variant="4"
+        >
+          Cancel
+        </button>
+        <button
+          data-component="button"
+          data-slot="action"
+          data-accent-color="red"
+          data-variant="1"
+        >
+          Delete
+        </button>
+      </footer>
+    </dialog>
+    ```
+  </Fragment>
+</Demo>
+
+## Import
+
+Import just the dialog styles.
+
+```css
+@import "@winnie-ui/css/spatial/dialog";
+@import "@winnie-ui/css/visual/dialog";
+```
+
+## Anatomy
+
+Attach the appropriate `data` attributes in the structure below.
+
+```html
+<dialog data-component="dialog">
+  <header data-component="header" />
+  <h3 data-slot="title" />
+  <p data-slot="description" />
+  <button data-slot="close" />
+  <div data-component="content" />
+  <footer data-component="footer">
+    <button data-slot="cancel" />
+    <button data-slot="action" />
+  </footer>
+</dialog>
+```
+
+## Examples
+
+### Size
+
+Use the `data-size` attribute to change the max width of the dialog.
+
+<Demo>
+  <DialogSize />
+  <Fragment slot="footer">
+    ```tsx ins=data-size="<size>"
+    <dialog data-component="dialog" data-size="<size>">
+      ...
+    </dialog>
+    ```
+  </Fragment>
+</Demo>
+
+### Header
+
+Use the `dialog-header` component to add a header to the dialog.
+
+<Demo>
+  <DialogWithHeader />
+  <Fragment slot="footer">
+    ```tsx mark={2}
+    <dialog data-component="dialog">
+      <header data-component="dialog-header">...</header>
+      ...
+    </dialog>
+    ```
+  </Fragment>
+</Demo>
+
+### Content
+
+Use the `dialog-content` component to add content, like a form, to the dialog.
+
+<Demo>
+  <DialogWithContent />
+  <Fragment slot="footer">
+    ```tsx mark={3}
+    <dialog data-component="dialog">
+      ...
+      <div data-component="dialog-content">...</header>
+      ...
+    </dialog>
+    ```
+  </Fragment>
+</Demo>
+
+### Footer
+
+### Close
+
+### Input as Title
