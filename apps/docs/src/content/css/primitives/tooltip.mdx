@@ -1,16 +1,18 @@
 ---
-title: Tooltip
+title: tooltip
 description: A helpful description of an element when hovered or focused.
 ---
 
 import Demo from "~/components/demo/demo.astro";
 
-import "./_components/tooltip/tooltip.css";
+import TooltipMultiline from "~/demos/css/tooltip-multiline.astro";
+import TooltipRadius from "~/demos/css/tooltip-radius.astro";
+import TooltipShortcut from "~/demos/css/tooltip-shortcut.astro";
+import TooltipSize from "~/demos/css/tooltip-size.astro";
+import Tooltip from "~/demos/css/tooltip.astro";
 
 <Demo>
-  <div data-component="tooltip" class="tooltip-demo">
-    <span data-slot="label">New Dish</span>
-  </div>
+  <Tooltip />
   <Fragment slot="footer">
     ```html
     <div data-component="tooltip">
@@ -26,6 +28,7 @@ Import just the tooltip styles.
 
 ```css
 @import "@winnie-ui/css/spatial/tooltip";
+@import "@winnie-ui/css/visual/tooltip";
 ```
 
 ## Anatomy
@@ -41,39 +44,30 @@ Attach the appropriate `data` attributes in the structure below.
 
 ## Examples
 
+### Size
+
+Use the `data-size` attribute to change the size of the tooltip.
+
+<Demo>
+  <TooltipSize />
+  <Fragment slot="footer">
+    ```html ins=data-size="<size>"
+    <div data-component="tooltip" data-size="<size>">
+      <span data-slot="label">View Dish</span>
+    </div>
+    ```
+  </Fragment>
+</Demo>
+
 ### Radius
 
 Use the `data-radius` attribute to change the radius of the tooltip.
 
 <Demo>
-  <div
-    data-component="tooltip"
-    data-radius="none"
-    class="tooltip-demo"
-    style={{ marginRight: "var(--wui-space-3)" }}
-  >
-    <span data-slot="label">View Dish</span>
-  </div>
-  <div
-    data-component="tooltip"
-    data-radius="2"
-    class="tooltip-demo"
-    style={{ marginRight: "var(--wui-space-3)" }}
-  >
-    <span data-slot="label">View Dish</span>
-  </div>
-  <div data-component="tooltip" data-radius="round" class="tooltip-demo">
-    <span data-slot="label">View Dish</span>
-  </div>
+  <TooltipRadius />
   <Fragment slot="footer">
-    ```html ins=data-radius="none" ins=data-radius="2" ins=data-radius="round"
-    <div data-component="tooltip" data-radius="none">
-      <span data-slot="label">View Dish</span>
-    </div>
-    <div data-component="tooltip" data-radius="2">
-      <span data-slot="label">View Dish</span>
-    </div>
-    <div data-component="tooltip" data-radius="round">
+    ```html ins=data-radius="<radius>"
+    <div data-component="tooltip" data-radius="<radius>">
       <span data-slot="label">View Dish</span>
     </div>
     ```
@@ -85,20 +79,14 @@ Use the `data-radius` attribute to change the radius of the tooltip.
 Use the `shortcut` slot as a child of the tooltip to show a keyboard shortcut.
 
 <Demo>
-  <div data-component="tooltip" class="tooltip-demo">
-    <span data-slot="label">Delete Dish</span>
-    <kbd data-slot="shortcut">
-      <kbd>⌘</kbd>
-      <kbd>D</kbd>
-    </kbd>
-  </div>
+  <TooltipShortcut />
   <Fragment slot="footer">
     ```html ins=data-slot="shortcut"
     <div data-component="tooltip">
       <span data-slot="label">Delete Dish</span>
       <kbd data-slot="shortcut">
-        <kbd>⌘</kbd>
-        <kbd>D</kbd>
+        <kbd data-component="kbd">⌘</kbd>
+        <kbd data-component="kbd">D</kbd>
       </kbd>
     </div>
     ```
@@ -110,12 +98,7 @@ Use the `shortcut` slot as a child of the tooltip to show a keyboard shortcut.
 While long tooltips are supported by Winnie, we do not recommend them as a UI practice. Ideally, tooltips are short, descriptive text used to describe the intent of an action or subject.
 
 <Demo>
-  <div data-component="tooltip" class="tooltip-demo">
-    <span data-slot="label">
-      Today's Special: Grilled Lemon Herb Chicken with seasonal vegetables.
-      Served with a side of garlic mashed potatoes. Click to view the full menu!
-    </span>
-  </div>
+  <TooltipMultiline />
   <Fragment slot="footer">
     ```html
     <div data-component="tooltip">
@@ -133,6 +116,16 @@ While long tooltips are supported by Winnie, we do not recommend them as a UI pr
 
 Below is a list of the available tooltip `data-` attributes that are available.
 
-| Attribute     | Value                                       |
-| ------------- | ------------------------------------------- |
+| Attribute     | Value                                    |
+| ------------- | ---------------------------------------- |
 | `data-radius` | `"none" \| "1" \| "2" \| "3" \| "round"` |
+| `data-size`   | `"sm" \| "md" \| "lg"`                   |
+
+| Variable                             |
+| ------------------------------------ |
+| `--wui-tooltip-background`           |
+| `--wui-tooltip-border`               |
+| `--wui-tooltip-box-shadow`           |
+| `--wui-tooltip-color`                |
+| `--wui-tooltip-shortcut-color`       |
+| `--wui-tooltip-shortcut-font-family` |

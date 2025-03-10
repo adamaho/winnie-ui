@@ -2,7 +2,7 @@
   [data-component="tooltip"] {
     /* border radius */
     --wui-tooltip-sm-border-radius: var(--wui-border-radius-2);
-    --wui-tooltip-md-border-radius: var(--wui-border-radius-3);
+    --wui-tooltip-md-border-radius: var(--wui-border-radius-2);
     --wui-tooltip-lg-border-radius: var(--wui-border-radius-3);
 
     /* font size */
@@ -50,11 +50,11 @@
       text-align: center;
       text-transform: capitalize;
 
-      &:has(> kbd) {
+      &:has(> [data-component="kbd"]) {
         display: flex;
       }
 
-      & > kbd {
+      & > [data-component="kbd"] {
         min-width: 2ch;
       }
     }

@@ -4,5 +4,14 @@
     border: var(--wui-tooltip-border);
     box-shadow: var(--wui-tooltip-box-shadow);
     color: var(--wui-tooltip-color);
+
+    [data-slot="shortcut"] {
+      color: var(--wui-tooltip-shortcut-color);
+      font-family: var(--wui-tooltip-shortcut-font-family);
+
+      [data-component="kbd"] {
+        font-family: var(--wui-tooltip-shortcut-font-family);
+      }
+    }
   }
 }
