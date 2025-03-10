@@ -28,7 +28,7 @@
         }
 
         [data-slot="actions"] {
-          grid-start-column: 4;
+          grid-column-start: 4;
         }
       }
 
@@ -41,14 +41,13 @@
       [data-slot="actions"] {
         align-self: center;
         display: flex;
-        grid-start-column: 2;
+        grid-column-start: 2;
         gap: var(--wui-space-3);
         justify-content: flex-end;
       }
 
       [data-slot="breadcrumbs"] {
-        grid-start-column: 1;
-        margin-left: var(--wui-space-6);
+        grid-column-start: 1;
       }
     }
 

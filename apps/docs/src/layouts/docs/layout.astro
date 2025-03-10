@@ -29,22 +29,15 @@ const {
 <BaseLayout>
   <BaseHead slot="head" title={title} description={description} />
   <Sidebar collection={collection} slug={slug} navigation={navigation} />
-  <div class="wui-docs-layout-content-container">
-    <Content
-      title={title}
-      description={description}
-      documentation={documentation}
-      headings={headings}
-    >
-      <slot />
-    </Content>
-  </div>
+  <Content
+    title={title}
+    description={description}
+    documentation={documentation}
+    headings={headings}
+    collection={collection}
+    slug={slug}
+    navigation={navigation}
+  >
+    <slot />
+  </Content>
 </BaseLayout>
-
-<style>
-  .wui-docs-layout-content-container {
-    display: flex;
-    min-height: 100dvh;
-    gap: var(--wui-space-4);
-  }
-</style>

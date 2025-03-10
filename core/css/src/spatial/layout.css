@@ -116,13 +116,13 @@
 
       &:has([data-slot="sidebar"][data-state="docked"]) {
         & > [data-slot="content"] {
-          padding-left: calc(var(--wui-layout-sidebar-width) + var(--wui-layout-content-space));
+          padding-left: calc(var(--wui-layout-sidebar-width));
         }
       }
 
       &:has([data-slot="sidebar"]:not([data-state="open"], [data-state="closed"])) {
         & > [data-slot="content"] {
-          padding-left: calc(var(--wui-layout-sidebar-width) + var(--wui-layout-content-space));
+          padding-left: calc(var(--wui-layout-sidebar-width));
         }
       }
     }
