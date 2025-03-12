@@ -18,7 +18,12 @@ const COLLECTION_TITLE_MAP = {
 } satisfies Record<CollectionKey, string>;
 ---
 
-<nav class="wui-docs-sidebar" transition:animate="none" data-slot="sidebar">
+<nav
+  class="wui-docs-sidebar"
+  transition:animate="none"
+  data-component="layout-sidebar"
+  id="docs-sidebar"
+>
   <div class="wui-docs-sidebar-header">
     <div class="wui-logo-container">
       <div class="wui-logo">
@@ -46,7 +51,6 @@ const COLLECTION_TITLE_MAP = {
   .wui-docs-sidebar {
     flex-direction: column;
     display: flex;
-    z-index: 1;
 
     .wui-docs-sidebar-header {
       display: flex;

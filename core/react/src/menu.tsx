@@ -425,7 +425,7 @@ function MenuSectionHeader({
   return (
     <AriaHeader
       {...props}
-      data-component="header"
+      data-component="page-header"
       className={clsx(className, "wui-menu__section-header")}
       ref={ref}
     >

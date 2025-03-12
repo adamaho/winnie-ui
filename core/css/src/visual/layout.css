@@ -2,7 +2,7 @@
   [data-component="layout"] {
     background: var(--wui-layout-background);
 
-    [data-slot="sidebar"] {
+    [data-component="layout-sidebar"] {
       background: transparent;
       box-shadow: none;
 
@@ -54,7 +54,7 @@
       } */
     }
 
-    [data-slot="content"] {
+    [data-component="layout-content"] {
       background: var(--wui-layout-content-background);
 
       /* TODO: What to do with motion */
@@ -84,7 +84,7 @@
       }
     } */
 
-    /* &:has([data-slot="sidebar"]:is([data-state="open"], [data-state="closed"])) {
+    /* &:has([data-component="layout-sidebar"]:is([data-state="open"], [data-state="closed"])) {
       [data-component="resize-handle"] {
         display: none;
       }

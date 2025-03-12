@@ -17,8 +17,8 @@ import "~/demos/css/layout.css";
   <Fragment slot="footer">
     ```html
     <div data-component="layout">
-      <nav data-slot="sidebar"></nav>
-      <main data-slot="content"></main>
+      <nav data-component="layout-sidebar"></nav>
+      <main data-component="layout-content"></main>
     </div>
     ```
   </Fragment>
@@ -34,13 +34,13 @@ Import just the layout styles.
 
 ## Anatomy
 
-Attach the appropriate `data-component` and `data-slot` attributes in the structure below.
+Attach the appropriate `data-component` attributes in the structure below.
 
 ```html
 <div data-component="layout">
-  <div data-slot="overlay" />
-  <nav data-slot="sidebar" />
-  <main data-slot="content" />
+  <div data-component="layout-overlay" />
+  <nav data-component="layout-sidebar" />
+  <main data-component="layout-content" />
 </div>
 ```
 
@@ -48,7 +48,7 @@ Attach the appropriate `data-component` and `data-slot` attributes in the struct
 
 ### State
 
-The `sidebar` slot supports a `data-state` attribute that allows you to adjust the behaviour of the sidebar in the layout.
+The `sidebar` component supports a `data-state` attribute that allows you to adjust the behaviour of the sidebar in the layout.
 
 Layout uses a breakpoint of 768px to determine when to hide and close the sidebar. Due to a limitation in css, we do not provide an easy way to overrite this since we cannot use variables in media queries. So, this means that when the sidebar is `docked` it will close when the screen width becomes less than 768px.
 
@@ -63,8 +63,8 @@ Set `data-state` to `docked` in order to persist the sidebar in the layout.
   <Fragment slot="footer">
     ```html ins=data-state="docked"
     <div data-component="layout">
-      <nav data-slot="sidebar" data-state="docked"></nav>
-      <main data-slot="content"></main>
+      <nav data-component="layout-sidebar" data-state="docked"></nav>
+      <main data-component="layout-content"></main>
     </div>
     ```
   </Fragment>
@@ -79,9 +79,9 @@ Set `data-state` to `open` to allow the user to interact with the sidebar while 
   <Fragment slot="footer">
     ```html ins=data-state="open"
     <div data-component="layout">
-      <div data-slot="overlay"></div>
-      <nav data-slot="sidebar" data-state="open"></nav>
-      <main data-slot="content"></main>
+      <div data-component="layout-overlay"></div>
+      <nav data-component="layout-sidebar" data-state="open"></nav>
+      <main data-component="layout-content"></main>
     </div>
     ```
   </Fragment>
@@ -96,9 +96,9 @@ Set `data-state` to `closed` to remove either undock the sidebar or remove it fr
   <Fragment slot="footer">
     ```html ins=data-state="closed"
     <div data-component="layout">
-      <div data-slot="overlay"></div>
-      <nav data-slot="sidebar" data-state="closed"></nav>
-      <main data-slot="content"></main>
+      <div data-component="layout-overlay"></div>
+      <nav data-component="layout-sidebar" data-state="closed"></nav>
+      <main data-component="layout-content"></main>
     </div>
     ```
   </Fragment>

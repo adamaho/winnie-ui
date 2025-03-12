@@ -127,7 +127,7 @@ function DialogHeader({
     <header
       {...props}
       className={clsx("wui-dialog__header", className)}
-      data-component="header"
+      data-component="page-header"
       ref={ref}
     >
       {children}
@@ -207,7 +207,7 @@ function DialogContent({
     <div
       {...props}
       className={clsx("wui-dialog__content", className)}
-      data-component="content"
+      data-component="layout-content"
       ref={ref}
     >
       {children}

@@ -12,13 +12,16 @@ import "~/demos/css/layout.css";
 <Demo>
   <div className="layout-demo-container">
     <div data-component="layout" className="layout-demo">
-      <div data-slot="overlay" className="layout-demo-mask" />
+      <div data-component="layout-overlay" className="layout-demo-mask" />
       <nav
-        data-slot="sidebar"
+        data-component="layout-sidebar"
         className="layout-demo-sidebar"
         data-state="docked"
       ></nav>
-      <main data-slot="content" className="layout-demo-content"></main>
+      <main
+        data-component="layout-content"
+        className="layout-demo-content"
+      ></main>
     </div>
     <ShowcaseLinkButton client:load />
   </div>
@@ -77,13 +80,16 @@ The `docked` state occurs when the screen width is greater than 768px and the us
 <Demo>
   <div className="layout-demo-container">
     <div data-component="layout" className="layout-demo">
-      <div data-slot="overlay" className="layout-demo-mask" />
+      <div data-component="layout-overlay" className="layout-demo-mask" />
       <nav
-        data-slot="sidebar"
+        data-component="layout-sidebar"
         className="layout-demo-sidebar"
         data-state="docked"
       ></nav>
-      <main data-slot="content" className="layout-demo-content"></main>
+      <main
+        data-component="layout-content"
+        className="layout-demo-content"
+      ></main>
     </div>
   </div>
 </Demo>
@@ -95,13 +101,16 @@ Allows the user to interact with the sidebar while it overlays the `LayoutConten
 <Demo>
   <div className="layout-demo-container">
     <div data-component="layout" className="layout-demo">
-      <div data-slot="overlay" className="layout-demo-mask" />
+      <div data-component="layout-overlay" className="layout-demo-mask" />
       <nav
-        data-slot="sidebar"
+        data-component="layout-sidebar"
         className="layout-demo-sidebar"
         data-state="open"
       ></nav>
-      <main data-slot="content" className="layout-demo-content"></main>
+      <main
+        data-component="layout-content"
+        className="layout-demo-content"
+      ></main>
     </div>
   </div>
 </Demo>
@@ -113,13 +122,16 @@ Closes the `Sidebar` and hides it from the user.
 <Demo>
   <div className="layout-demo-container">
     <div data-component="layout" className="layout-demo">
-      <div data-slot="overlay" className="layout-demo-mask" />
+      <div data-component="layout-overlay" className="layout-demo-mask" />
       <nav
-        data-slot="sidebar"
+        data-component="layout-sidebar"
         className="layout-demo-sidebar"
         data-state="closed"
       ></nav>
-      <main data-slot="content" className="layout-demo-content"></main>
+      <main
+        data-component="layout-content"
+        className="layout-demo-content"
+      ></main>
     </div>
   </div>
 </Demo>

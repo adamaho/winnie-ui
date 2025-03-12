@@ -9,7 +9,7 @@
       border-radius: min(var(--wui-border-radius-3), 18px);
     }
 
-    [data-component="header"] {
+    [data-component="page-header"] {
       --wui-page-header-height: var(--wui-layout-content-header-height, calc(56px * var(--wui-scale)));
 
       align-items: center;
@@ -51,7 +51,7 @@
       }
     }
 
-    [data-component="content"] {
+    [data-component="page-content"] {
       flex: 1;
     }
   }

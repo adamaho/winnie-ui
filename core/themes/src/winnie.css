@@ -335,7 +335,7 @@
       --wui-page-border: var(--wui-border-width-1) solid var(--wui-color-grey-5);
       --wui-page-box-shadow: var(--wui-shadow-1);
 
-      [data-component="header"] {
+      [data-component="page-header"] {
         --wui-page-header-border-bottom: var(--wui-border-width-1) solid var(--wui-color-grey-3);
       }
     }
@@ -441,7 +441,7 @@
       --wui-page-border: var(--wui-border-width-1) solid var(--wui-color-grey-3);
       --wui-page-box-shadow: var(--wui-shadow-1);
 
-      [data-component="header"] {
+      [data-component="page-header"] {
         --wui-page-header-border-bottom: var(--wui-border-width-1) solid var(--wui-color-grey-3);
       }
     }
