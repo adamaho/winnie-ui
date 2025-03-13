@@ -3,6 +3,8 @@ import type { CollectionKey } from "astro:content";
 import { Actions } from "./components/actions";
 import { Navigation } from "./components/navigation/navigation";
 import type { NavigationItem } from "./components/navigation/types";
+import Logo from "../logo.astro";
+import { Search } from "./components/search";
 
 export type Props = {
   collection: CollectionKey;
@@ -11,11 +13,6 @@ export type Props = {
 };
 
 const { collection, navigation, slug } = Astro.props;
-
-const COLLECTION_TITLE_MAP = {
-  css: "CSS",
-  react: "React",
-} satisfies Record<CollectionKey, string>;
 ---
 
 <nav
@@ -25,19 +22,13 @@ const COLLECTION_TITLE_MAP = {
   id="docs-sidebar"
 >
   <div class="wui-docs-sidebar-header">
-    <div class="wui-logo-container">
-      <div class="wui-logo">
-        <a class="wui-logo-company" href="/css">Winnie</a>
-        <span class="wui-logo-separator"></span>
-        <span class="wui-logo-app">{COLLECTION_TITLE_MAP[collection]}</span>
-      </div>
-      <a class="wui-logo-self-promo" href="https://adamaho.com" target="_blank">
-        by Adam Aho
-      </a>
-    </div>
+    <Logo collection={collection} />
     <div class="wui-docs-sidebar-actions">
       <Actions client:only="react" transition:persist collection={collection} />
     </div>
+  </div>
+  <div class="mt-6 hidden w-full lg:block">
+    <Search client:only="react" transition:persist collection={collection} />
   </div>
   <Navigation
     client:only="react"
@@ -60,37 +51,6 @@ const COLLECTION_TITLE_MAP = {
         flex-direction: column;
         flex: 1;
         gap: var(--wui-space-2);
-
-        .wui-logo {
-          align-items: center;
-          display: flex;
-          gap: var(--wui-space-4);
-
-          .wui-logo-company {
-            color: var(--wui-color-grey-12);
-            letter-spacing: var(--wui-letter-spacing-9);
-            font-size: var(--wui-font-size-3);
-            font-weight: var(--wui-font-weight-medium);
-            margin-bottom: 2px;
-          }
-
-          .wui-logo-separator {
-            background: var(--wui-color-grey-8);
-            height: var(--wui-space-5);
-            transform: rotate(20deg);
-            width: 1px;
-          }
-
-          .wui-logo-app {
-            color: var(--wui-color-grey-11);
-            font-size: var(--wui-font-size-3);
-          }
-        }
-
-        .wui-logo-self-promo {
-          color: var(--wui-color-grey-11);
-          font-size: var(--wui-font-size-1);
-        }
       }
 
       .wui-docs-sidebar-actions {

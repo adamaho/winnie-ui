@@ -13,9 +13,16 @@ const { headings } = Astro.props;
 {
   headings.length > 0 && (
     <nav class="toc">
-      <div class="toc-header">
-        <AlignmentLeft color="grey" />
-        <h2 class="toc-title">On this page</h2>
+      <div class="mb-5 flex items-center gap-3">
+        <AlignmentLeft color="grey" size="3" />
+        <h2
+          data-component="heading"
+          data-size="2"
+          data-weight="normal"
+          data-accent-color="grey"
+        >
+          On this page
+        </h2>
       </div>
       <ul class="toc-list">
         {headings.map((heading) => {
@@ -36,24 +43,6 @@ const { headings } = Astro.props;
 
 <style>
   .toc {
-    .toc-header {
-      align-items: center;
-      display: flex;
-      color: var(--wui-color-grey-11);
-      gap: var(--wui-space-3);
-      margin-bottom: var(--wui-space-5);
-
-      .toc-title {
-        font-size: var(--wui-font-size-2);
-        font-weight: var(--wui-font-weight-normal);
-      }
-
-      & > svg {
-        height: var(--wui-font-size-3);
-        width: var(--wui-font-size-3);
-      }
-    }
-
     .toc-list {
       position: relative;
       padding-inline: var(--wui-space-6);

@@ -1,7 +1,7 @@
 ---
 import type { MarkdownHeading } from "astro";
 
-import TableOfContents from "./toc/toc.astro";
+import TableOfContents from "./toc.astro";
 
 import type { CollectionKey } from "astro:content";
 
@@ -9,8 +9,10 @@ import { type DocsSchema } from "~/content.config";
 import { DocumentationLinkButton } from "./documentation-link-button";
 import { BarsThree } from "@winnie-ui/icons/react/solid";
 import type { NavigationItem } from "./sidebar/components/navigation/types";
+import Logo from "./logo.astro";
+import { Actions } from "./sidebar/components/actions";
 
-type Props = {
+export type Props = {
   title: string;
   description: string;
   documentation?: DocsSchema["documentation"];
@@ -62,6 +64,14 @@ for (const section of navigation) {
   });
 </script>
 
+<header
+  class="dark:bg-grey-1 flex items-center justify-between bg-white px-6 py-4 lg:hidden"
+>
+  <Logo collection={collection} />
+  <div data-slot="actions">
+    <Actions />
+  </div>
+</header>
 <main data-component="layout-content">
   <div data-component="page">
     <header data-component="page-header" class="relative lg:hidden">
