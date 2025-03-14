@@ -15,8 +15,6 @@ export const Actions = ({ collection }: ActionsProps) => {
    */
   const isMobile = useMediaQuery("(max-width: 1024px)");
 
-  console.log(isMobile);
-
   return (
     <>
       {isMobile && <SearchCommandMenu collection={collection} />}

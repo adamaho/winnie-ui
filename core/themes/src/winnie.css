@@ -442,6 +442,7 @@
       --wui-page-box-shadow: var(--wui-shadow-1);
 
       [data-component="page-header"] {
+        --wui-page-header-background: var(--wui-color-grey-1);
         --wui-page-header-border-bottom: var(--wui-border-width-1) solid var(--wui-color-grey-3);
       }
     }

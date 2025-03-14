@@ -15,6 +15,16 @@ export type Props = {
 const { collection, navigation, slug } = Astro.props;
 ---
 
+<script>
+  import { layoutStore } from "../store";
+
+  layoutStore.store.subscribe(() => {
+    document
+      .getElementById("docs-sidebar")
+      ?.setAttribute("data-state", layoutStore.store.state.sidebarState);
+  });
+</script>
+
 <nav
   class="wui-docs-sidebar"
   transition:animate="none"

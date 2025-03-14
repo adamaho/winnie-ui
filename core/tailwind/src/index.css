@@ -1,8 +1,9 @@
 @import "tailwindcss/theme.css" layer(base);
 @import "tailwindcss/utilities.css" layer(utilities);
 
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 @layer utilities {
-  @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
   @theme {
     --blur: 8px;
 

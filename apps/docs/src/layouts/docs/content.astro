@@ -9,7 +9,6 @@ import { type DocsSchema } from "~/content.config";
 import { DocumentationLinkButton } from "./documentation-link-button";
 import { BarsThree } from "@winnie-ui/icons/react/solid";
 import type { NavigationItem } from "./sidebar/components/navigation/types";
-import Logo from "./logo.astro";
 import { Actions } from "./sidebar/components/actions";
 
 export type Props = {
@@ -50,31 +49,24 @@ for (const section of navigation) {
 ---
 
 <script>
+  import { layoutStore } from "./store";
+
   const sidebarToggle = document.querySelector(
     "#docs-menu-toggle",
   ) as HTMLInputElement;
 
   sidebarToggle?.addEventListener("change", (e) => {
-    const sidebar = document.querySelector("#docs-sidebar");
     if ((e.currentTarget as HTMLInputElement)?.checked) {
-      sidebar?.setAttribute("data-state", "open");
+      layoutStore.setLayoutSidebarState("open");
     } else {
-      sidebar?.setAttribute("data-state", "closed");
+      layoutStore.setLayoutSidebarState("closed");
     }
   });
 </script>
 
-<header
-  class="dark:bg-grey-1 flex items-center justify-between bg-white px-6 py-4 lg:hidden"
->
-  <Logo collection={collection} />
-  <div data-slot="actions">
-    <Actions />
-  </div>
-</header>
 <main data-component="layout-content">
   <div data-component="page">
-    <header data-component="page-header" class="relative lg:hidden">
+    <header data-component="page-header" class="sticky top-0 z-10 lg:hidden">
       <input type="checkbox" id="docs-menu-toggle" class="absolute" />
       <label
         data-component="button"
@@ -96,9 +88,12 @@ for (const section of navigation) {
           <span data-slot="separator">/</span>
         </li>
       </ol>
+      <div data-slot="actions" class="flex items-center gap-2">
+        <Actions collection={collection} client:load />
+      </div>
     </header>
     <div
-      class="relative flex flex-row items-start px-6 py-[calc(var(--wui-space-9)+var(--wui-space-5))] pb-7 lg:py-8"
+      class="flex flex-row items-start px-6 py-[calc(var(--wui-space-9)+var(--wui-space-5))] pb-7 lg:py-8"
       data-component="layout-content"
     >
       <article class="mx-auto w-full max-w-[70ch]">
