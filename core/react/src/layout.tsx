@@ -636,7 +636,7 @@ function LayoutSidebar({
   return (
     <nav
       {...props}
-      data-slot="sidebar"
+      data-component="layout-sidebar"
       className={clsx(className, "wui-layout__sidebar")}
       data-state={context.sidebarState}
       data-sidebar-dragging={context.sidebarDragging}
@@ -723,7 +723,7 @@ function LayoutContent({
     <main
       {...props}
       className={clsx(className, "wui-layout__content")}
-      data-slot="content"
+      data-component="layout-content"
       data-sidebar-dragging={context.sidebarDragging}
       ref={ref}
     >

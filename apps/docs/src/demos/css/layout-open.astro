@@ -1,5 +1,10 @@
 <div data-component="layout" class="layout-demo">
-  <div data-slot="overlay" class="layout-demo-mask"></div>
-  <nav data-slot="sidebar" class="layout-demo-sidebar" data-state="open"></nav>
-  <main data-slot="content" class="layout-demo-content"></main>
+  <div data-component="layout-overlay" class="layout-demo-mask"></div>
+  <nav
+    data-component="layout-sidebar"
+    class="layout-demo-sidebar"
+    data-state="open"
+  >
+  </nav>
+  <main data-component="layout-content" class="layout-demo-content"></main>
 </div>

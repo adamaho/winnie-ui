@@ -8,7 +8,7 @@
       box-shadow: var(--wui-page-box-shadow);
     }
 
-    [data-component="header"] {
+    [data-component="page-header"] {
       background: var(--wui-page-header-background);
       border-bottom: var(--wui-page-header-border-bottom);
     }

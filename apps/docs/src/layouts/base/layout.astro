@@ -1,8 +1,16 @@
-<html lang="en" data-skin="winnie">
+<html
+  lang="en"
+  data-skin="winnie"
+  data-accent-color="orange"
+  data-radius="md"
+  data-scale="100%"
+  data-theme="light"
+  data-code-theme="githut-light"
+>
   <head>
     <slot name="head" />
   </head>
-  <body class="wui-layout">
+  <body data-component="layout">
     <slot />
   </body>
 </html>
@@ -20,8 +28,8 @@ Intentionally setting this script inline with a IIFE to prevent a flash of unsty
     if (themeJSON == null) {
       theme = {
         color: "orange",
-        radius: "3",
-        scale: "90%",
+        radius: "md",
+        scale: "95%",
         mode: "light",
       };
     } else {
@@ -53,33 +61,3 @@ I am listening to the `after-swap` event and setting the attributes
 
   document.addEventListener("astro:after-swap", setThemeAfterSwap);
 </script>
-
-<style>
-  .wui-layout {
-    --wui-docs-layout-background: var(--wui-color-white);
-    --wui-docs-layout-sidebar-width: calc(296px * var(--wui-scale));
-
-    background: var(--wui-docs-layout-background);
-    overscroll-behavior-y: none;
-  }
-
-  :global(:is([data-theme="light"])) {
-    .wui-layout {
-      --wui-docs-layout-background: var(--wui-color-white);
-
-      @media (min-width: 1024px) {
-        --wui-docs-layout-background: var(--wui-color-grey-1);
-      }
-    }
-  }
-
-  :global(:is([data-theme="dark"])) {
-    .wui-layout {
-      --wui-docs-layout-background: var(--wui-color-grey-1);
-
-      @media (min-width: 1024px) {
-        --wui-docs-layout-background: var(--wui-color-black);
-      }
-    }
-  }
-</style>

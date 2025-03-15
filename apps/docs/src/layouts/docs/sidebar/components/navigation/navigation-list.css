@@ -2,7 +2,6 @@
   list-style: none;
 
   &[data-level="0"] {
-    padding-left: var(--wui-space-5);
     padding-right: var(--wui-sidebar-inline-padding);
   }
 

@@ -7,11 +7,20 @@ type SearchProps = {
   collection: CollectionKey;
 };
 
-export const Search = ({ collection }: SearchProps) => {
+export const SearchDesktop = ({ collection }: SearchProps) => {
   /**
-   * Computes if the current breakpoint is less than 768px
+   * Computes if the current breakpoint is less than 1024px
    */
-  const isMobile = useMediaQuery("(max-width: 768px)");
+  const isMobile = useMediaQuery("(max-width: 1024px)");
 
   return !isMobile ? <SearchCommandMenu collection={collection} /> : null;
+};
+
+export const SearchMobile = ({ collection }: SearchProps) => {
+  /**
+   * Computes if the current breakpoint is less than 1024px
+   */
+  const isMobile = useMediaQuery("(max-width: 1024px)");
+
+  return isMobile ? <SearchCommandMenu collection={collection} /> : null;
 };

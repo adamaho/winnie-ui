@@ -56,6 +56,7 @@
       [data-slot="label"] {
         font-size: var(--wui-breadcrumbs-font-size, var(--wui-breadcrumbs-md-font-size));
         grid-column-start: 2;
+        white-space: nowrap;
       }
 
       [data-slot="icon"] {

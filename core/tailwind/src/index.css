@@ -1,6 +1,8 @@
 @import "tailwindcss/theme.css" layer(base);
 @import "tailwindcss/utilities.css" layer(utilities);
 
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 @layer utilities {
   @theme {
     --blur: 8px;
@@ -344,15 +346,15 @@
     --default-mono-font-family: var(--wui-font-family-mono);
 
     /* font-size */
-    --font-size-1: var(--wui-font-size-1);
-    --font-size-2: var(--wui-font-size-2);
-    --font-size-3: var(--wui-font-size-3);
-    --font-size-4: var(--wui-font-size-4);
-    --font-size-5: var(--wui-font-size-5);
-    --font-size-6: var(--wui-font-size-6);
-    --font-size-7: var(--wui-font-size-7);
-    --font-size-8: var(--wui-font-size-8);
-    --font-size-9: var(--wui-font-size-9);
+    --text-1: var(--wui-font-size-1);
+    --text-2: var(--wui-font-size-2);
+    --text-3: var(--wui-font-size-3);
+    --text-4: var(--wui-font-size-4);
+    --text-5: var(--wui-font-size-5);
+    --text-6: var(--wui-font-size-6);
+    --text-7: var(--wui-font-size-7);
+    --text-8: var(--wui-font-size-8);
+    --text-9: var(--wui-font-size-9);
 
     /* font-weight */
     --font-weight-normal: var(--wui-font-weight-normal);
@@ -380,14 +382,15 @@
     --letter-spacing-9: var(--wui-letter-spacing-9);
 
     /* line-height */
-    --line-height-1: var(--wui-line-height-1);
-    --line-height-2: var(--wui-line-height-2);
-    --line-height-1: var(--wui-line-height-1);
-    --line-height-2: var(--wui-line-height-2);
-    --line-height-1: var(--wui-line-height-1);
-    --line-height-2: var(--wui-line-height-2);
-    --line-height-1: var(--wui-line-height-1);
-    --line-height-2: var(--wui-line-height-2);
+    --text-1-line-height-1: var(--wui-line-height-1);
+    --text-2-line-height-2: var(--wui-line-height-2);
+    --text-3-line-height-3: var(--wui-line-height-3);
+    --text-4-line-height-4: var(--wui-line-height-4);
+    --text-5-line-height-5: var(--wui-line-height-5);
+    --text-6-line-height-6: var(--wui-line-height-6);
+    --text-7-line-height-7: var(--wui-line-height-7);
+    --text-8-line-height-8: var(--wui-line-height-8);
+    --text-8-line-height-9: var(--wui-line-height-9);
 
     /* radius */
     --radius-1: var(--wui-border-radius-1);

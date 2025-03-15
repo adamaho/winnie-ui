@@ -1,0 +1,46 @@
+---
+import type { CollectionKey } from "astro:content";
+
+export type Props = {
+  collection: CollectionKey;
+};
+
+const { collection } = Astro.props;
+
+const COLLECTION_TITLE_MAP = {
+  css: "CSS",
+  react: "React",
+} satisfies Record<CollectionKey, string>;
+---
+
+<div class="flex items-center gap-4">
+  <a
+    data-component="text"
+    data-accent-color="grey"
+    data-size="3"
+    data-weight="medium"
+    data-contrast="high"
+    href="/css">Winnie</a
+  >
+  <span class="wui-logo-separator"></span>
+  <span class="wui-logo-app">{COLLECTION_TITLE_MAP[collection]}</span>
+</div>
+
+<style>
+  .wui-logo-separator {
+    background: var(--wui-color-grey-8);
+    height: var(--wui-space-5);
+    transform: rotate(20deg);
+    width: 1px;
+  }
+
+  .wui-logo-app {
+    color: var(--wui-color-grey-11);
+    font-size: var(--wui-font-size-3);
+  }
+
+  .wui-logo-self-promo {
+    color: var(--wui-color-grey-11);
+    font-size: var(--wui-font-size-1);
+  }
+</style>

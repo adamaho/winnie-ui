@@ -9,11 +9,6 @@ html:has(#docs-menu-toggle:checked) {
   width: 100%;
 }
 
-html,
-body {
-  background: var(--wui-site-background);
-}
-
 @layer base {
   :root,
   .light,

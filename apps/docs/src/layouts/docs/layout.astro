@@ -5,6 +5,7 @@ import type { CollectionKey } from "astro:content";
 import type { MarkdownHeading } from "astro";
 import BaseHead from "~/layouts/base/base-head.astro";
 import BaseLayout from "../base/layout.astro";
+import Header from "./header.astro";
 import Content from "./content.astro";
 import Sidebar from "./sidebar/sidebar.astro";
 import type { Props as SidebarProps } from "./sidebar/sidebar.astro";
@@ -28,23 +29,18 @@ const {
 
 <BaseLayout>
   <BaseHead slot="head" title={title} description={description} />
+  <Header collection={collection} />
   <Sidebar collection={collection} slug={slug} navigation={navigation} />
-  <div class="wui-docs-layout-content-container">
-    <Content
-      title={title}
-      description={description}
-      documentation={documentation}
-      headings={headings}
-    >
-      <slot />
-    </Content>
-  </div>
+  <Content
+    title={title}
+    description={description}
+    documentation={documentation}
+    headings={headings}
+    collection={collection}
+    slug={slug}
+    navigation={navigation}
+    transition:animate="none"
+  >
+    <slot />
+  </Content>
 </BaseLayout>
-
-<style>
-  .wui-docs-layout-content-container {
-    display: flex;
-    min-height: 100dvh;
-    gap: var(--wui-space-4);
-  }
-</style>

@@ -11,9 +11,9 @@ type ActionsProps = {
 
 export const Actions = ({ collection }: ActionsProps) => {
   /**
-   * Computes if the current breakpoint is less than 768px
+   * Computes if the current breakpoint is less than 1024px
    */
-  const isMobile = useMediaQuery("(max-width: 768px)");
+  const isMobile = useMediaQuery("(max-width: 1024px)");
 
   return (
     <>
