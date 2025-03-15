@@ -316,6 +316,7 @@
       --wui-layout-background: var(--wui-color-grey-2);
       --wui-layout-header-background: var(--wui-color-white);
       --wui-layout-header-border-bottom: var(--wui-border-width-1) solid var(--wui-color-grey-3);
+      --wui-layout-sidebar-background: var(--wui-color-white);
       --wui-layout-sidebar-background-open-xs: var(--wui-color-white);
       --wui-layout-sidebar-open-background: var(--wui-color-white);
       --wui-layout-sidebar-open-border-color: var(--wui-color-grey-6);

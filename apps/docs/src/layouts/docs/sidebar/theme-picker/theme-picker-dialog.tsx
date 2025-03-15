@@ -22,28 +22,41 @@ function ThemePickerDialog() {
   return (
     <Dialog>
       <DialogTrigger
-        className="theme-picker-modal-trigger"
+        data-component="button"
+        data-accent-color="grey"
+        data-size="md"
+        data-variant="4"
         aria-label="Customize Theme"
       >
-        <SettingsSliderHor />
+        <SettingsSliderHor data-slot="icon" />
       </DialogTrigger>
       <DialogPortal>
         <DialogOverlay className="theme-picker-modal-overlay" />
-        <DialogContent className="theme-picker-modal wui-scrollbar">
-          <div className="theme-picker-dialog-header">
-            <DialogTitle className="theme-picker-dialog-title" slot="title">
-              Customize Theme
-            </DialogTitle>
-            <DialogDescription className="theme-picker-dialog-description">
-              Change the vibes of your docs
-            </DialogDescription>
-          </div>
-          <div className="theme-picker-dialog-content">
+        <DialogContent
+          data-component="dialog"
+          data-size="sm"
+          className="theme-picker-modal wui-scrollbar"
+        >
+          <header data-component="dialog-header">
+            <DialogClose
+              data-component="button"
+              data-accent-color="grey"
+              data-size="md"
+              data-variant="4"
+              data-slot="close"
+            >
+              <CrossLarge data-slot="icon" />
+            </DialogClose>
+          </header>
+          <DialogTitle data-slot="title" slot="title">
+            Customize Theme
+          </DialogTitle>
+          <DialogDescription data-slot="description">
+            Change the vibes of your docs
+          </DialogDescription>
+          <div data-component="dialog-content">
             <ThemePicker />
           </div>
-          <DialogClose className="theme-picker-dialog-close">
-            <CrossLarge />
-          </DialogClose>
         </DialogContent>
       </DialogPortal>
     </Dialog>

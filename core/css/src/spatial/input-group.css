@@ -15,9 +15,9 @@
     --wui-input-group-kbd-sm-border-radius: var(--wui-border-radius-2);
     --wui-input-group-kbd-md-border-radius: var(--wui-border-radius-2);
     --wui-input-group-kbd-lg-border-radius: var(--wui-border-radius-3);
-    --wui-input-group-kbd-sm-border-radius-max: calc(8px * var(--wui-scale));
-    --wui-input-group-kbd-md-border-radius-max: calc(8px * var(--wui-scale));
-    --wui-input-group-kbd-lg-border-radius-max: calc(8px * var(--wui-scale));
+    --wui-input-group-kbd-sm-border-radius-max: var(--wui-border-radius-round);
+    --wui-input-group-kbd-md-border-radius-max: var(--wui-border-radius-round);
+    --wui-input-group-kbd-lg-border-radius-max: var(--wui-border-radius-round);
 
     /* height */
     --wui-input-group-action-sm-height: calc(22px * var(--wui-scale));

@@ -18,7 +18,7 @@
     }
 
     [data-slot="title"] {
-      font-size: var(--wui-font-size-3);
+      font-size: var(--wui-font-size-4);
       letter-spacing: var(--wui-letter-spacing-9);
       line-height: 1;
       padding-inline: var(--wui-dialog-space);
@@ -37,6 +37,7 @@
 
     [data-component="dialog-content"] {
       padding: var(--wui-dialog-space);
+      overflow: auto;
     }
 
     [data-component="dialog-footer"] {
@@ -90,6 +91,12 @@
     &:has([data-slot="title"] + [data-slot="description"]) {
       [data-slot="description"] {
         margin-top: var(--wui-space-3);
+      }
+    }
+
+    &:not(:has([data-component="dialog-header"] > *:not([data-slot="close"]))) {
+      [data-slot="title"] {
+        margin-top: calc(-36px * var(--wui-scale));
       }
     }
   }
