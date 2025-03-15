@@ -24,15 +24,29 @@ const { headings } = Astro.props;
           On this page
         </h2>
       </div>
-      <ul class="toc-list">
+      <ul class="before:bg-grey-6 relative px-6 before:absolute before:left-0 before:top-0 before:h-full before:w-[1px] before:content-['']">
         {headings.map((heading) => {
           if (heading.depth > 3) {
             return null;
           }
 
           return (
-            <li class="toc-list-item" data-level={heading.depth}>
-              <a href={`#${heading.slug}`}>{heading.text}</a>
+            <li
+              class="nowrap group flex h-[calc(34px*var(--wui-scale))] items-center data-[level=3]:pl-3"
+              data-accent-color="red"
+              data-level={heading.depth}
+            >
+              <a
+                data-component="text"
+                data-weight="medium"
+                data-accent-color="grey"
+                data-size="2"
+                data-contrast="normal"
+                class="group-hover:text-grey-12"
+                href={`#${heading.slug}`}
+              >
+                {heading.text}
+              </a>
             </li>
           );
         })}
@@ -40,45 +54,3 @@ const { headings } = Astro.props;
     </nav>
   )
 }
-
-<style>
-  .toc {
-    .toc-list {
-      position: relative;
-      padding-inline: var(--wui-space-6);
-
-      &:before {
-        background: var(--wui-color-grey-6);
-        content: "";
-        left: 0;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        width: 1px;
-      }
-
-      .toc-list-item {
-        align-items: center;
-        display: flex;
-        font-size: var(--wui-font-size-2);
-        font-weight: var(--wui-font-weight-medium);
-        height: calc(34px * var(--wui-scale));
-        white-space: nowrap;
-
-        &[data-level="3"] {
-          padding-left: var(--wui-space-4);
-        }
-
-        a {
-          color: var(--wui-color-grey-11);
-        }
-
-        &:hover {
-          a {
-            color: var(--wui-color-grey-12);
-          }
-        }
-      }
-    }
-  }
-</style>
