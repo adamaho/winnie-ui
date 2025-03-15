@@ -22,25 +22,12 @@ const COLLECTION_TITLE_MAP = {
     data-contrast="high"
     href="/css">Winnie</a
   >
-  <span class="wui-logo-separator"></span>
-  <span class="wui-logo-app">{COLLECTION_TITLE_MAP[collection]}</span>
+  <span class="bg-grey-8 width-[1px] h-[var(--wui-space-5)] rotate-[20deg]"
+  ></span>
+  <span
+    data-component="text"
+    data-accent-color="grey"
+    data-contrast="normal"
+    data-size="3">{COLLECTION_TITLE_MAP[collection]}</span
+  >
 </div>
-
-<style>
-  .wui-logo-separator {
-    background: var(--wui-color-grey-8);
-    height: var(--wui-space-5);
-    transform: rotate(20deg);
-    width: 1px;
-  }
-
-  .wui-logo-app {
-    color: var(--wui-color-grey-11);
-    font-size: var(--wui-font-size-3);
-  }
-
-  .wui-logo-self-promo {
-    color: var(--wui-color-grey-11);
-    font-size: var(--wui-font-size-1);
-  }
-</style>
