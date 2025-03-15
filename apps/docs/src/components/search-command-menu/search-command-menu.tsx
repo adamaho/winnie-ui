@@ -1,6 +1,11 @@
-import { useCallback, useEffect, useRef, useState } from "react";
 import {
-  Button,
+  type PropsWithChildren,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
+import {
   Dialog,
   DialogTrigger,
   Modal,
@@ -23,7 +28,10 @@ type SearchCommandMenuProps = {
   collection: CollectionKey;
 };
 
-export function SearchCommandMenu({ collection }: SearchCommandMenuProps) {
+export function SearchCommandMenu({
+  children,
+  collection,
+}: PropsWithChildren<SearchCommandMenuProps>) {
   /**
    * creates a new flexsearch index
    */
@@ -187,13 +195,7 @@ export function SearchCommandMenu({ collection }: SearchCommandMenuProps) {
 
   return (
     <DialogTrigger isOpen={open} onOpenChange={handleOnOpenChange}>
-      <Button className="search-trigger">
-        <div className="search-trigger-text-container">
-          <MagnifyingGlass />
-          <span className="search-trigger-text">Search docs...</span>
-        </div>
-        <kbd className="search-trigger-kbd">/</kbd>
-      </Button>
+      {children}
       <ModalOverlay className="search-modal-overlay" isDismissable>
         <Modal className="search-modal">
           <Dialog className="search-dialog">

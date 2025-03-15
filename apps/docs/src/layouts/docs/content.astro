@@ -5,30 +5,20 @@ import TableOfContents from "./toc.astro";
 
 import type { CollectionKey } from "astro:content";
 
-import { type DocsSchema } from "~/content.config";
-import { DocumentationLinkButton } from "./documentation-link-button";
 import { BarsThree, ChevronRight } from "@winnie-ui/icons/react/solid";
-import type { NavigationItem } from "./sidebar/components/navigation/types";
+import type { NavigationItem } from "./sidebar/navigation/types";
 
 export type Props = {
   title: string;
   description: string;
-  documentation?: DocsSchema["documentation"];
   headings: MarkdownHeading[];
   collection: CollectionKey;
   navigation: NavigationItem[];
   slug: string;
 };
 
-const {
-  title,
-  description,
-  documentation,
-  headings,
-  navigation,
-  collection,
-  slug,
-} = Astro.props;
+const { title, description, headings, navigation, collection, slug } =
+  Astro.props;
 
 let sectionTitle = "Unknown Section";
 let pageTitle = "Unknown Title";
@@ -95,15 +85,6 @@ for (const section of navigation) {
           >
             {description}
           </p>
-          {
-            documentation && (
-              <div class="mt-5 flex items-center gap-3">
-                {documentation?.map((doc) => {
-                  return <DocumentationLinkButton {...doc} client:load />;
-                })}
-              </div>
-            )
-          }
         </div>
         <div class="wui-markdown-content">
           <slot />

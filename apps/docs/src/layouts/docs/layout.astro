@@ -7,8 +7,7 @@ import BaseHead from "~/layouts/base/base-head.astro";
 import BaseLayout from "../base/layout.astro";
 import Header from "./header.astro";
 import Content from "./content.astro";
-import Sidebar from "./sidebar/sidebar.astro";
-import type { Props as SidebarProps } from "./sidebar/sidebar.astro";
+import Sidebar, { type Props as SidebarProps } from "./sidebar.astro";
 
 type Props = CollectionEntry<"css">["data"] & {
   collection: CollectionKey;

@@ -1,10 +1,10 @@
 ---
 import type { CollectionKey } from "astro:content";
-import { Navigation } from "./components/navigation/navigation";
-import type { NavigationItem } from "./components/navigation/types";
-import Logo from "../logo.astro";
-import { SearchDesktop } from "./components/search";
-import { ThemePickerDialog } from "./components/theme-picker/theme-picker-dialog";
+import { Navigation } from "./sidebar/navigation/navigation";
+import type { NavigationItem } from "./sidebar/navigation/types";
+import Logo from "./logo.astro";
+import { SearchDesktop } from "./sidebar/search";
+import { ThemePickerDialog } from "./sidebar/theme-picker/theme-picker-dialog";
 
 export type Props = {
   collection: CollectionKey;
