@@ -68,7 +68,7 @@ export function Navigation(props: NavigationProps) {
   }, [handleAfterPreparation, handleBeforePreparation]);
 
   return (
-    <ScrollArea className="wui-navigation" viewportRef={viewportRef}>
+    <ScrollArea className="wui-navigation pr-4" viewportRef={viewportRef}>
       <NavigationList items={props.items} slug={props.slug} />
     </ScrollArea>
   );

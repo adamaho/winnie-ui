@@ -1,10 +1,10 @@
 ---
 import type { CollectionKey } from "astro:content";
-import { Actions } from "./components/actions";
 import { Navigation } from "./components/navigation/navigation";
 import type { NavigationItem } from "./components/navigation/types";
 import Logo from "../logo.astro";
-import { Search } from "./components/search";
+import { SearchDesktop } from "./components/search";
+import { ThemePickerDialog } from "./components/theme-picker/theme-picker-dialog";
 
 export type Props = {
   collection: CollectionKey;
@@ -15,37 +15,25 @@ export type Props = {
 const { collection, navigation, slug } = Astro.props;
 ---
 
-<script>
-  import { layoutStore } from "../store";
-
-  layoutStore.store.subscribe(() => {
-    document
-      .getElementById("docs-sidebar")
-      ?.setAttribute("data-state", layoutStore.store.state.sidebarState);
-  });
-</script>
-
 <nav
-  class="wui-docs-sidebar"
+  class="wui-docs-sidebar pt-0 lg:pt-4"
   transition:animate="none"
   data-component="layout-sidebar"
+  data-state="docked"
   id="docs-sidebar"
 >
-  <div class="wui-docs-sidebar-header">
+  <div class="wui-docs-sidebar-header hidden justify-between pr-4 lg:flex">
     <Logo collection={collection} />
-    <div class="wui-docs-sidebar-actions">
-      <Actions client:only="react" transition:persist collection={collection} />
-    </div>
+    <ThemePickerDialog client:load />
   </div>
-  <div class="mt-6 hidden w-full lg:block">
-    <Search client:only="react" transition:persist collection={collection} />
+  <div class="hidden w-full pr-4 lg:block">
+    <SearchDesktop
+      client:only="react"
+      transition:persist
+      collection={collection}
+    />
   </div>
-  <Navigation
-    client:only="react"
-    transition:persist
-    items={navigation}
-    slug={slug}
-  />
+  <Navigation client:load transition:persist items={navigation} slug={slug} />
 </nav>
 
 <style>
@@ -53,37 +41,24 @@ const { collection, navigation, slug } = Astro.props;
     flex-direction: column;
     display: flex;
 
-    .wui-docs-sidebar-header {
+    .wui-logo-container {
       display: flex;
-
-      .wui-logo-container {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        gap: var(--wui-space-2);
-      }
-
-      .wui-docs-sidebar-actions {
-        align-items: center;
-        display: flex;
-        gap: var(--wui-space-2);
-
-        .wui-docs-sidebar-search-action {
-          display: block;
-
-          @media (min-width: 1024px) {
-            display: none;
-          }
-        }
-      }
+      flex-direction: column;
+      flex: 1;
+      gap: var(--wui-space-2);
     }
 
-    .wui-navigation {
-      display: none;
-      user-select: none;
+    .wui-docs-sidebar-actions {
+      align-items: center;
+      display: flex;
+      gap: var(--wui-space-2);
 
-      @media (min-width: 1024px) {
+      .wui-docs-sidebar-search-action {
         display: block;
+
+        @media (min-width: 1024px) {
+          display: none;
+        }
       }
     }
   }

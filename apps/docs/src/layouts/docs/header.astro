@@ -1,0 +1,24 @@
+---
+import type { CollectionKey } from "astro:content";
+import Logo from "./logo.astro";
+import { ThemePickerDialog } from "./sidebar/components/theme-picker/theme-picker-dialog";
+import { SearchMobile } from "./sidebar/components/search";
+
+type Props = {
+  collection: CollectionKey;
+};
+
+const { collection } = Astro.props;
+---
+
+<header data-component="layout-header" class="flex justify-between lg:hidden">
+  <Logo collection={collection} />
+  <div class="flex items-center gap-2">
+    <SearchMobile
+      client:only="react"
+      transition:persist
+      collection={collection}
+    />
+    <ThemePickerDialog client:load />
+  </div>
+</header>

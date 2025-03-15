@@ -5,6 +5,7 @@ import type { CollectionKey } from "astro:content";
 import type { MarkdownHeading } from "astro";
 import BaseHead from "~/layouts/base/base-head.astro";
 import BaseLayout from "../base/layout.astro";
+import Header from "./header.astro";
 import Content from "./content.astro";
 import Sidebar from "./sidebar/sidebar.astro";
 import type { Props as SidebarProps } from "./sidebar/sidebar.astro";
@@ -28,6 +29,7 @@ const {
 
 <BaseLayout>
   <BaseHead slot="head" title={title} description={description} />
+  <Header collection={collection} />
   <Sidebar collection={collection} slug={slug} navigation={navigation} />
   <Content
     title={title}
@@ -37,6 +39,7 @@ const {
     collection={collection}
     slug={slug}
     navigation={navigation}
+    transition:animate="none"
   >
     <slot />
   </Content>

@@ -13,22 +13,17 @@ const COLLECTION_TITLE_MAP = {
 } satisfies Record<CollectionKey, string>;
 ---
 
-<div class="flex flex-1 flex-col gap-2">
-  <div class="flex items-center gap-4">
-    <a
-      data-component="text"
-      data-accent-color="grey"
-      data-size="3"
-      data-weight="medium"
-      data-contrast="high"
-      href="/css">Winnie</a
-    >
-    <span class="wui-logo-separator"></span>
-    <span class="wui-logo-app">{COLLECTION_TITLE_MAP[collection]}</span>
-  </div>
-  <a class="wui-logo-self-promo" href="https://adamaho.com" target="_blank">
-    by Adam Aho
-  </a>
+<div class="flex items-center gap-4">
+  <a
+    data-component="text"
+    data-accent-color="grey"
+    data-size="3"
+    data-weight="medium"
+    data-contrast="high"
+    href="/css">Winnie</a
+  >
+  <span class="wui-logo-separator"></span>
+  <span class="wui-logo-app">{COLLECTION_TITLE_MAP[collection]}</span>
 </div>
 
 <style>

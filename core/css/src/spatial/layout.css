@@ -2,11 +2,18 @@
   [data-component="layout"] {
     --wui-layout-sidebar-width: calc(296px * var(--wui-scale));
     --wui-layout-content-header-height: calc(56px * var(--wui-scale));
+    --wui-layout-header-height: calc(56px * var(--wui-scale));
     --wui-layout-content-space: var(--wui-space-4);
 
     display: flex;
     flex-direction: column;
     min-height: 100svh;
+
+    [data-component="layout-header"] {
+      align-items: center;
+      height: var(--wui-layout-header-height);
+      padding-inline: var(--wui-space-6);
+    }
 
     [data-component="layout-overlay"] {
       inset: 0;
@@ -38,42 +45,9 @@
         left: calc(-1 * var(--wui-layout-sidebar-width));
         top: 0;
       }
-
-      [data-component="resize-handle"] {
-        --wui-layout-resize-handle-width: calc(2px * var(--wui-scale));
-
-        cursor: col-resize;
-        height: calc(100% - var(--wui-layout-content-space) * 2 - var(--wui-space-4) * 2);
-        margin-inline: calc(-1 * var(--wui-space-3));
-        outline: none;
-        padding-inline: var(--wui-space-3);
-        position: absolute;
-        right: calc(-1 * (var(--wui-layout-resize-handle-width) / 2) - var(--wui-space-3));
-        top: 50%;
-        transform: translateY(-50%);
-
-        [data-slot="thumb"] {
-          border-radius: var(--wui-layout-resize-handle-border-radius);
-          display: block;
-          height: 100%;
-          width: var(--wui-layout-resize-handle-width);
-        }
-      }
     }
 
-    [data-slot="toggle"] {
-      isolation: revert;
-      position: absolute;
-      left: var(--wui-space-4);
-      top: var(--wui-space-4);
-
-      @media (min-width: 1024px) {
-        left: var(--wui-space-4);
-        top: var(--wui-space-4);
-      }
-    }
-
-    & > [data-component="layout-content"] {
+    [data-component="layout-content"] {
       display: flex;
       flex-direction: column;
       flex: 1;
@@ -123,6 +97,17 @@
       &:has([data-component="layout-sidebar"]:not([data-state="open"], [data-state="closed"])) {
         & > [data-component="layout-content"] {
           padding-left: calc(var(--wui-layout-sidebar-width));
+        }
+      }
+    }
+
+    @media (max-width: 1024px) {
+      &:has([data-slot="layout-toggle"]:checked) {
+        [data-component="layout-sidebar"] {
+          top: calc(var(--wui-layout-header-height) + var(--wui-layout-content-header-height));
+          height: calc(100% - calc(var(--wui-layout-header-height) + var(--wui-layout-content-header-height)));
+          left: 0;
+          width: 100%;
         }
       }
     }

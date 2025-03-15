@@ -18,6 +18,8 @@
       height: var(--wui-page-header-height);
       padding-left: calc(var(--wui-space-9) + var(--wui-space-3));
       padding-right: var(--wui-space-6);
+      position: sticky;
+      top: 0;
       width: 100%;
 
       &:has([data-slot="breadcrumbs"]) {

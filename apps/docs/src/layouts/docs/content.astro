@@ -7,9 +7,8 @@ import type { CollectionKey } from "astro:content";
 
 import { type DocsSchema } from "~/content.config";
 import { DocumentationLinkButton } from "./documentation-link-button";
-import { BarsThree } from "@winnie-ui/icons/react/solid";
+import { BarsThree, ChevronRight } from "@winnie-ui/icons/react/solid";
 import type { NavigationItem } from "./sidebar/components/navigation/types";
-import { Actions } from "./sidebar/components/actions";
 
 export type Props = {
   title: string;
@@ -48,26 +47,15 @@ for (const section of navigation) {
 }
 ---
 
-<script>
-  import { layoutStore } from "./store";
-
-  const sidebarToggle = document.querySelector(
-    "#docs-menu-toggle",
-  ) as HTMLInputElement;
-
-  sidebarToggle?.addEventListener("change", (e) => {
-    if ((e.currentTarget as HTMLInputElement)?.checked) {
-      layoutStore.setLayoutSidebarState("open");
-    } else {
-      layoutStore.setLayoutSidebarState("closed");
-    }
-  });
-</script>
-
 <main data-component="layout-content">
   <div data-component="page">
     <header data-component="page-header" class="sticky top-0 z-10 lg:hidden">
-      <input type="checkbox" id="docs-menu-toggle" class="absolute" />
+      <input
+        type="checkbox"
+        id="docs-menu-toggle"
+        class="absolute"
+        data-slot="layout-toggle"
+      />
       <label
         data-component="button"
         data-variant="4"
@@ -81,24 +69,23 @@ for (const section of navigation) {
       <ol data-component="breadcrumbs" data-slot="breadcrumbs">
         <li data-component="breadcrumb">
           <span data-slot="label">{sectionTitle}</span>
-          <span data-slot="separator">/</span>
+          <ChevronRight data-slot="separator" />
         </li>
         <li data-component="breadcrumb">
           <span data-slot="label">{pageTitle}</span>
-          <span data-slot="separator">/</span>
+          <ChevronRight data-slot="separator" />
         </li>
       </ol>
-      <div data-slot="actions" class="flex items-center gap-2">
-        <Actions collection={collection} client:load />
-      </div>
     </header>
     <div
       class="flex flex-row items-start px-6 py-[calc(var(--wui-space-9)+var(--wui-space-5))] pb-7 lg:py-8"
       data-component="layout-content"
     >
-      <article class="mx-auto w-full max-w-[70ch]">
+      <article class="mx-auto w-full max-w-[70ch]" transition:animate="none">
         <div class="mb-9">
-          <h1 data-component="heading" data-size="8">{title}</h1>
+          <h1 data-component="heading" data-size="7" data-weight="semibold">
+            {title}
+          </h1>
           <p
             data-component="text"
             data-size="4"

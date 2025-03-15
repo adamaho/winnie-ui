@@ -2,8 +2,13 @@
   [data-component="layout"] {
     background: var(--wui-layout-background);
 
+    [data-component="layout-header"] {
+      background: var(--wui-layout-header-background);
+      border-bottom: var(--wui-layout-header-border-bottom);
+    }
+
     [data-component="layout-sidebar"] {
-      background: transparent;
+      background: var(--wui-layout-sidebar-background);
       box-shadow: none;
 
       &:is([data-state="open"], [data-state="closed"]) {
@@ -18,76 +23,17 @@
         }
       }
 
-      /* TODO: what to do with motion */
-      /* @media (prefers-reduced-motion: no-preference) {
-        transition-property: background, box-shadow, left, top, height;
-        transition-duration: var(--wui-duration-4);
-        transition-timing-function: var(--wui-bezier-1);
-        will-change: background, left, top, height;
-      } */
-
-      /* TODO: This is too specific */
-      /* [data-component="resize-handle"] {
-        [data-slot="thumb"] {
-          background: var(--wui-layout-resize-handle-background);
-          border-radius: var(--wui-layout-resize-handle-border-radius);
-          display: block;
-          opacity: 0;
-
-          @media (prefers-reduced-motion: no-preference) {
-            transition-property: opacity;
-            transition-delay: var(--wui-duration-2);
-            transition-duration: var(--wui-duration-4);
-            transition-timing-function: var(--wui-bezier-1);
-          }
-        }
-
-        &:is([data-hovered], [data-sidebar-dragging]) {
-          [data-slot="thumb"] {
-            opacity: var(--wui-layout-resize-handle-opacity-dragging);
-          }
-        }
-
-        @media (max-width: 768px) {
-          display: none;
-        }
-      } */
+      @media (min-width: 1024px) {
+        background: var(--wui-layout-sidebar-background-lg);
+      }
     }
 
     [data-component="layout-content"] {
       background: var(--wui-layout-content-background);
-
-      /* TODO: What to do with motion */
-      /* @media (prefers-reduced-motion: no-preference) {
-        &:not([data-sidebar-dragging="true"]) {
-          transition-property: padding-left;
-          transition-duration: var(--wui-duration-4);
-          transition-timing-function: var(--wui-bezier-1);
-          will-change: padding-left;
-        }
-      } */
     }
 
-    /* TODO: remove because this is too specific */
-    /* [data-slot="toggle"] {
-      width: var(--wui-button-height, var(--wui-button-md-height));
-
-      @media (prefers-reduced-motion: no-preference) {
-        transition: display, opacity;
-        transition-delay: var(--wui-duration-2);
-        transition-duration: var(--wui-duration-3);
-        transition-timing-function: ease-in-out;
-      }
-
-      @starting-style {
-        opacity: 0;
-      }
-    } */
-
-    /* &:has([data-component="layout-sidebar"]:is([data-state="open"], [data-state="closed"])) {
-      [data-component="resize-handle"] {
-        display: none;
-      }
-    } */
+    [data-component="layout-overlay"] {
+      background: var(--wui-layout-overlay-background);
+    }
   }
 }
