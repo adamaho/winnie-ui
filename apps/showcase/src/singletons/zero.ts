@@ -21,7 +21,7 @@ const sessions = table("sessions")
   })
   .primaryKey("sessionId");
 
-const schema = createSchema(1, {
+const schema = createSchema({
   tables: [sessions],
 });
 
