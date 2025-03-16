@@ -7,9 +7,9 @@
     --wui-button-kbd-sm-border-radius: var(--wui-border-radius-2);
     --wui-button-kbd-md-border-radius: var(--wui-border-radius-2);
     --wui-button-kbd-lg-border-radius: var(--wui-border-radius-3);
-    --wui-button-kbd-sm-border-radius-max: calc(8px * var(--wui-scale));
-    --wui-button-kbd-md-border-radius-max: calc(8px * var(--wui-scale));
-    --wui-button-kbd-lg-border-radius-max: calc(8px * var(--wui-scale));
+    --wui-button-kbd-sm-border-radius-max: var(--wui-border-radius-round);
+    --wui-button-kbd-md-border-radius-max: var(--wui-border-radius-round);
+    --wui-button-kbd-lg-border-radius-max: var(--wui-border-radius-round);
 
     /* font size */
     --wui-button-sm-font-size: var(--wui-font-size-1);
@@ -28,9 +28,9 @@
     --wui-button-kbd-lg-height: calc(var(--wui-button-lg-height) - var(--wui-space-4));
 
     /* icon size */
-    --wui-button-sm-icon-size: 1em;
-    --wui-button-md-icon-size: 1em;
-    --wui-button-lg-icon-size: 1em;
+    --wui-button-sm-icon-size: 1.1em;
+    --wui-button-md-icon-size: 1.1em;
+    --wui-button-lg-icon-size: 1.1em;
 
     /* space */
     --wui-button-sm-space: var(--wui-space-3);
