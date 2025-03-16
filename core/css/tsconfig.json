@@ -1,5 +1,5 @@
 {
-  "extends": "@winnie-ui/tsconfig/base.json",
-  "include": ["script"],
+  "extends": "@winnie-ui/tsconfig/bun.json",
+  "include": ["scripts"],
   "exclude": ["node_modules"]
 }

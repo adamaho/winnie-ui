@@ -57,8 +57,4 @@ async function buildCss({
   }
 }
 
-buildCss({
-  inDir: "../../core/css/src",
-  outDir: "../../core/css/dist",
-  targets: "last 2 versions",
-}).catch((error) => console.log(error));
+export { buildCss };

@@ -13,7 +13,6 @@
     }
   },
   "scripts": {
-    "build": "bun ./src/build.ts",
     "clean": "rimraf node_modules"
   },
   "dependencies": {
@@ -22,6 +21,7 @@
   },
   "devDependencies": {
     "@winnie-ui/tsconfig": "workspace:*",
+    "@types/bun": "1.2.5",
     "rimraf": "6.0.1"
   }
 }
