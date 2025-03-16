@@ -5,8 +5,9 @@ import TableOfContents from "./toc.astro";
 
 import type { CollectionKey } from "astro:content";
 
-import { BarsThree, ChevronRight } from "@winnie-ui/icons/react/solid";
+import { ChevronRight } from "@winnie-ui/icons/react/solid";
 import type { NavigationItem } from "./sidebar/navigation/types";
+import Toggle from "./toggle.astro";
 
 export type Props = {
   title: string;
@@ -39,23 +40,11 @@ for (const section of navigation) {
 
 <main data-component="layout-content">
   <div data-component="page">
-    <header data-component="page-header" class="sticky top-0 z-10 lg:hidden">
-      <input
-        type="checkbox"
-        id="docs-menu-toggle"
-        class="absolute"
-        data-slot="layout-toggle"
-      />
-      <label
-        data-component="button"
-        data-variant="4"
-        data-accent-color="grey"
-        for="docs-menu-toggle"
-        aria-label="Toggle Navigation Menu"
-        class="absolute left-[var(--wui-space-4)] flex items-center justify-center"
-      >
-        <BarsThree data-slot="icon" />
-      </label>
+    <header
+      data-component="page-header"
+      class="sticky top-[var(--wui-layout-header-height)] z-10 lg:hidden"
+    >
+      <Toggle />
       <ol data-component="breadcrumbs" data-slot="breadcrumbs">
         <li data-component="breadcrumb">
           <span data-slot="label">{sectionTitle}</span>

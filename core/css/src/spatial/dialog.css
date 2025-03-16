@@ -94,6 +94,13 @@
       }
     }
 
+    /* description content */
+    &:has([data-slot="description"] + [data-component="dialog-content"]) {
+      [data-slot="description"] {
+        margin-bottom: var(--wui-space-6);
+      }
+    }
+
     &:not(:has([data-component="dialog-header"] > *:not([data-slot="close"]))) {
       [data-slot="title"] {
         margin-top: calc(-36px * var(--wui-scale));

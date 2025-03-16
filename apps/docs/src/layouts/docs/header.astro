@@ -11,7 +11,10 @@ type Props = {
 const { collection } = Astro.props;
 ---
 
-<header data-component="layout-header" class="flex justify-between lg:hidden">
+<header
+  data-component="layout-header"
+  class="sticky top-0 z-10 flex justify-between lg:hidden"
+>
   <Logo collection={collection} />
   <div class="flex items-center gap-2">
     <SearchMobile

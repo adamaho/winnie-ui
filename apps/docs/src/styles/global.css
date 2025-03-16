@@ -2,8 +2,8 @@
 
 @layer markdown;
 
-html:has(#docs-menu-toggle:checked) {
-  overflow-y: scroll;
+html:has([data-component="layout-sidebar"][data-state="open"][data-variant="2"]) {
+  overflow-y: hidden;
   position: fixed;
   top: 0;
   width: 100%;

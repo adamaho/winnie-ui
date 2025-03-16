@@ -16,6 +16,11 @@
         border-right: var(--wui-layout-sidebar-border-right-open);
         box-shadow: var(--wui-layout-sidebar-box-shadow-open);
 
+        &[data-variant="2"] {
+          box-shadow: none;
+          border-right: none;
+        }
+
         @media (min-width: 1024px) {
           background: var(--wui-layout-sidebar-background-open-lg);
           border-right: var(--wui-layout-sidebar-border-right-open-lg);

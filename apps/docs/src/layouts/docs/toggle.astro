@@ -1,0 +1,48 @@
+---
+import { BarsThree } from "@winnie-ui/icons/react/solid";
+---
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const maxScreenWidth = window.matchMedia("(min-width: 1024px)");
+    const toggle = document.querySelector(
+      "[data-slot=layout-toggle]",
+    )! as HTMLInputElement;
+
+    const sidebar = document.querySelector(
+      "[data-component=layout-sidebar]",
+    )! as HTMLDivElement;
+
+    /**
+     * set the sidebar state
+     */
+    toggle.addEventListener("click", () => {
+      console.log("Asdf");
+      if (sidebar.getAttribute("data-state") === "docked") {
+        sidebar.setAttribute("data-state", "open");
+      } else {
+        sidebar.setAttribute("data-state", "docked");
+      }
+    });
+
+    /**
+     * reset the sidebar state when the breakpoint changes
+     */
+    maxScreenWidth.addEventListener("change", (e) => {
+      if (e.matches) {
+        sidebar.setAttribute("data-state", "docked");
+      }
+    });
+  });
+</script>
+
+<button
+  data-component="button"
+  data-variant="4"
+  data-accent-color="grey"
+  aria-label="Toggle Navigation Menu"
+  data-slot="layout-toggle"
+  class="absolute left-[var(--wui-space-4)] flex items-center justify-center"
+>
+  <BarsThree data-slot="icon" />
+</button>
