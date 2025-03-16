@@ -92,7 +92,7 @@
         "vite-tsconfig-paths": "5.1.4",
       },
     },
-    "core/css": {
+    "libs/css": {
       "name": "@winnie-ui/css",
       "version": "0.0.27",
       "devDependencies": {
@@ -101,7 +101,7 @@
         "rimraf": "6.0.1",
       },
     },
-    "core/icons": {
+    "libs/icons": {
       "name": "@winnie-ui/icons",
       "version": "0.0.27",
       "dependencies": {
@@ -121,7 +121,7 @@
         "react-dom": "^19.0.0",
       },
     },
-    "core/react": {
+    "libs/react": {
       "name": "@winnie-ui/react",
       "version": "0.0.27",
       "dependencies": {
@@ -147,7 +147,7 @@
         "react-dom": "^19.0.0",
       },
     },
-    "core/tailwind": {
+    "libs/tailwind": {
       "name": "@winnie-ui/tailwind",
       "version": "0.0.27",
       "devDependencies": {
@@ -158,7 +158,7 @@
         "tailwindcss": "^4",
       },
     },
-    "core/themes": {
+    "libs/themes": {
       "name": "@winnie-ui/themes",
       "version": "0.0.27",
       "devDependencies": {
@@ -1071,17 +1071,17 @@
 
     "@vscode/l10n": ["@vscode/l10n@0.0.18", "", {}, "sha512-KYSIHVmslkaCDyw013pphY+d7x1qV8IZupYfeIfzNA+nsaWHbn5uPuQRvdRFsa9zFzGeudPuoGoZ1Op4jrJXIQ=="],
 
-    "@winnie-ui/css": ["@winnie-ui/css@workspace:core/css"],
+    "@winnie-ui/css": ["@winnie-ui/css@workspace:libs/css"],
 
-    "@winnie-ui/icons": ["@winnie-ui/icons@workspace:core/icons"],
+    "@winnie-ui/icons": ["@winnie-ui/icons@workspace:libs/icons"],
 
     "@winnie-ui/lightning": ["@winnie-ui/lightning@workspace:tools/lightning"],
 
-    "@winnie-ui/react": ["@winnie-ui/react@workspace:core/react"],
+    "@winnie-ui/react": ["@winnie-ui/react@workspace:libs/react"],
 
-    "@winnie-ui/tailwind": ["@winnie-ui/tailwind@workspace:core/tailwind"],
+    "@winnie-ui/tailwind": ["@winnie-ui/tailwind@workspace:libs/tailwind"],
 
-    "@winnie-ui/themes": ["@winnie-ui/themes@workspace:core/themes"],
+    "@winnie-ui/themes": ["@winnie-ui/themes@workspace:libs/themes"],
 
     "@winnie-ui/tsconfig": ["@winnie-ui/tsconfig@workspace:tools/tsconfig"],
 
