@@ -1,0 +1,27 @@
+{
+  "name": "@winnie-ui/lightning",
+  "version": "0.0.1",
+  "description": "Build script for a css files",
+  "author": "Adam Aho",
+  "private": true,
+  "exports": {
+    ".": {
+      "import": {
+        "default": "./src/index.ts",
+        "types": "./src/index.ts"
+      }
+    }
+  },
+  "scripts": {
+    "build": "bun ./src/build.ts",
+    "clean": "rimraf node_modules"
+  },
+  "dependencies": {
+    "browserslist": "4.24.4",
+    "lightningcss": "1.29.3"
+  },
+  "devDependencies": {
+    "@winnie-ui/tsconfig": "workspace:*",
+    "rimraf": "6.0.1"
+  }
+}

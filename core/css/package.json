@@ -129,6 +129,7 @@
     "package.json"
   ],
   "scripts": {
+    "foo": "rimraf dist && bun ./scripts/build.ts",
     "build": "rimraf dist && concurrently pnpm:dist:* -m 10",
     "format:check": "biome format ./src --no-errors-on-unmatched",
     "format:write": "biome format ./src --write --no-errors-on-unmatched",
@@ -193,6 +194,8 @@
     "stylelint": "stylelint \"src/**/*.css\""
   },
   "devDependencies": {
+    "@winnie-ui/tsconfig": "workspace:*",
+    "@winnie-ui/lightning": "workspace:*",
     "concurrently": "9.1.2",
     "lightningcss": "1.29.3",
     "lightningcss-cli": "1.29.3",

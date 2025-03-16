@@ -1,5 +1,5 @@
 {
-  "name": "@winnie-ui/ts-config",
+  "name": "@winnie-ui/tsconfig",
   "version": "0.0.1",
   "description": "Shared tsconfigs for winnie-ui",
   "author": "Adam Aho",

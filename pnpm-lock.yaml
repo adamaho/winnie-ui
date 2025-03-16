@@ -225,6 +225,12 @@ importers:
 
   core/css:
     devDependencies:
+      "@winnie-ui/lightning":
+        specifier: workspace:*
+        version: link:../../tools/lightning
+      "@winnie-ui/tsconfig":
+        specifier: workspace:*
+        version: link:../../tools/tsconfig
       concurrently:
         specifier: 9.1.2
         version: 9.1.2
@@ -250,7 +256,7 @@ importers:
       "@types/react-dom":
         specifier: 19.0.4
         version: 19.0.4(@types/react@19.0.10)
-      "@winnie-ui/ts-config":
+      "@winnie-ui/tsconfig":
         specifier: workspace:*
         version: link:../../tools/tsconfig
       react:
@@ -296,7 +302,7 @@ importers:
       "@types/react-dom":
         specifier: 19.0.4
         version: 19.0.4(@types/react@19.0.10)
-      "@winnie-ui/ts-config":
+      "@winnie-ui/tsconfig":
         specifier: workspace:*
         version: link:../../tools/tsconfig
       react:
@@ -331,6 +337,22 @@ importers:
         specifier: workspace:*
         version: link:../css
     devDependencies:
+      rimraf:
+        specifier: 6.0.1
+        version: 6.0.1
+
+  tools/lightning:
+    dependencies:
+      browserslist:
+        specifier: 4.24.4
+        version: 4.24.4
+      lightningcss:
+        specifier: 1.29.3
+        version: 1.29.3
+    devDependencies:
+      "@winnie-ui/tsconfig":
+        specifier: workspace:*
+        version: link:../tsconfig
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
