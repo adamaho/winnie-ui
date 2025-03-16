@@ -27,12 +27,12 @@
   },
   "dependencies": {
     "@base-ui-components/react": "1.0.0-alpha.6",
-    "@react-aria/utils": "3.27.0",
+    "@react-aria/utils": "3.28.1",
     "@react-stately/utils": "3.10.5",
     "@winnie-ui/icons": "workspace:*",
     "clsx": "2.1.1",
-    "react-aria": "3.37.0",
-    "react-aria-components": "1.6.0"
+    "react-aria": "3.38.1",
+    "react-aria-components": "1.7.1"
   },
   "devDependencies": {
     "@types/react": "19.0.10",

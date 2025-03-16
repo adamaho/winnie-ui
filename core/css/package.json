@@ -194,8 +194,8 @@
   },
   "devDependencies": {
     "concurrently": "9.1.2",
-    "lightningcss": "1.29.1",
-    "lightningcss-cli": "1.29.1",
+    "lightningcss": "1.29.3",
+    "lightningcss-cli": "1.29.3",
     "rimraf": "6.0.1"
   }
 }
