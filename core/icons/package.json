@@ -24,9 +24,7 @@
     }
   },
   "scripts": {
-    "clean": "rimraf node_modules",
-    "format:check": "biome format ./src --no-errors-on-unmatched",
-    "format:write": "biome format ./src --write --no-errors-on-unmatched"
+    "clean": "rimraf node_modules"
   },
   "peerDependencies": {
     "react": "^19.0.0",

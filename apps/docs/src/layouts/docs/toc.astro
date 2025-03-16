@@ -24,7 +24,7 @@ const { headings } = Astro.props;
           On this page
         </h2>
       </div>
-      <ul class="before:bg-grey-6 relative px-6 before:absolute before:left-0 before:top-0 before:h-full before:w-[1px] before:content-['']">
+      <ul class="before:bg-grey-6 relative px-6 before:absolute before:top-0 before:left-0 before:h-full before:w-[1px] before:content-['']">
         {headings.map((heading) => {
           if (heading.depth > 3) {
             return null;
