@@ -14,7 +14,6 @@ function getExcerpt(text: string, searchTerm: string, limit = 1) {
   let matches = 0;
   let match: RegExpExecArray | null;
 
-  // biome-ignore lint/suspicious/noAssignInExpressions: TODO: remove when monorepos are supported
   while ((match = regex.exec(text)) !== null && matches < limit) {
     indexes.push(match.index);
     matches++;
