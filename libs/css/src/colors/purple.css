@@ -21,6 +21,23 @@
     --wui-color-purple-14: color-mix(in oklch, oklch(from var(--wui-color-purple-base) 0.4 c h), black 65%);
   }
 
+  [data-theme="dark"] {
+    --wui-color-purple-1: color-mix(in oklch, oklch(from var(--wui-color-purple-base) 0.45 c h), black 60%);
+    --wui-color-purple-2: color-mix(in oklch, oklch(from var(--wui-color-purple-base) 0.45 c h), black 65%);
+    --wui-color-purple-3: color-mix(in oklch, oklch(from var(--wui-color-purple-base) 0.4 c h), black 74%);
+    --wui-color-purple-4: color-mix(in oklch, oklch(from var(--wui-color-purple-base) 0.55 c h), black 58%);
+    --wui-color-purple-5: color-mix(in oklch, oklch(from var(--wui-color-purple-base) 0.58 c h), black 53%);
+    --wui-color-purple-6: color-mix(in oklch, oklch(from var(--wui-color-purple-base) 0.44 c h), black 33%);
+    --wui-color-purple-7: color-mix(in oklch, oklch(from var(--wui-color-purple-base) 0.44 c h), black 23%);
+    --wui-color-purple-8: color-mix(in oklch, oklch(from var(--wui-color-purple-base) 0.44 c h), black 13%);
+    --wui-color-purple-9: oklch(from var(--wui-color-purple-base) 0.44 c h);
+    --wui-color-purple-10: color-mix(in oklch, oklch(from var(--wui-color-purple-base) 0.46 c h), white 8%);
+    --wui-color-purple-11: color-mix(in oklch, oklch(from var(--wui-color-purple-base) 0.49 c h), white 11%);
+    --wui-color-purple-12: color-mix(in oklch, oklch(from var(--wui-color-purple-base) 0.49 c h), white 30%);
+    --wui-color-purple-13: color-mix(in oklch, oklch(from var(--wui-color-purple-base) 0.55 c h), white 57%);
+    --wui-color-purple-14: color-mix(in oklch, oklch(from var(--wui-color-purple-base) 0.6 c h), white 76%);
+  }
+
   [data-accent-color="purple"] {
     --wui-color-accent-1: var(--wui-color-purple-1);
     --wui-color-accent-2: var(--wui-color-purple-2);
