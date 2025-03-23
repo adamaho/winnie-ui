@@ -9,7 +9,7 @@ html:has([data-component="layout-sidebar"][data-state="open"][data-variant="2"])
   width: 100%;
 }
 
-@layer base {
+/* @layer base {
   :root,
   .light,
   .light-theme,
@@ -153,4 +153,4 @@ html:has([data-component="layout-sidebar"][data-state="open"][data-variant="2"])
       }
     }
   }
-}
+} */

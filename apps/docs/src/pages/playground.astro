@@ -3,228 +3,201 @@ import BaseLayout from "../layouts/base/layout.astro";
 import BaseHead from "../layouts/base/base-head.astro";
 ---
 
-<script>
-  import { clampChroma } from "culori";
-  const foo = clampChroma(
-    { mode: "oklch", l: 0.314, c: 0.4, h: 115.7 },
-    "oklch",
-  );
-
-  console.log(foo);
-</script>
-
 <BaseLayout>
   <BaseHead slot="head" />
-  <div class="root flex h-dvh flex-col items-center justify-center gap-2 p-9">
-    <div
-      class="flex"
-      style={{ "--base-color": "color(display-p3 0.42 0.724 0.649)" }}
-    >
+  <div
+    class="root flex h-dvh flex-col items-center justify-center gap-2 p-9"
+    data-theme="dark"
+  >
+    <div class="flex gap-3" data-accent-color="red">
       {
         new Array(14).fill(0).map((_, i) => {
           return (
-            <div class="color h-[60px] w-[60px] shrink-0" data-color={i + 1} />
+            <div
+              class="color rounded-2 h-[60px] w-[60px] shrink-0"
+              data-color={i + 1}
+            />
           );
         })
       }
     </div>
-    <!-- <div class="flex" style={{ "--base-color": "#F76B15" }}>
+    <div class="flex gap-3" data-accent-color="orange">
       {
         new Array(14).fill(0).map((_, i) => {
           return (
-            <div class="color h-[60px] w-[60px] shrink-0" data-color={i + 1} />
+            <div
+              class="color rounded-2 h-[60px] w-[60px] shrink-0"
+              data-color={i + 1}
+            />
           );
         })
       }
     </div>
-    <div class="flex" style={{ "--base-color": "#FFC53D" }}>
+    <div class="flex gap-3" data-accent-color="yellow">
       {
         new Array(14).fill(0).map((_, i) => {
           return (
-            <div class="color h-[60px] w-[60px] shrink-0" data-color={i + 1} />
+            <div
+              class="color rounded-2 h-[60px] w-[60px] shrink-0"
+              data-color={i + 1}
+            />
           );
         })
       }
     </div>
-    <div class="flex" style={{ "--base-color": "oklch(0.768 0.233 130.85)" }}>
+    <div class="flex gap-3" data-accent-color="green">
       {
         new Array(14).fill(0).map((_, i) => {
           return (
-            <div class="color h-[60px] w-[60px] shrink-0" data-color={i + 1} />
+            <div
+              class="color rounded-2 h-[60px] w-[60px] shrink-0"
+              data-color={i + 1}
+            />
           );
         })
       }
     </div>
-    <div class="flex" style={{ "--base-color": "#30A46C" }}>
+    <div class="flex gap-3" data-accent-color="lime">
       {
         new Array(14).fill(0).map((_, i) => {
           return (
-            <div class="color h-[60px] w-[60px] shrink-0" data-color={i + 1} />
+            <div
+              class="color rounded-2 h-[60px] w-[60px] shrink-0"
+              data-color={i + 1}
+            />
           );
         })
       }
     </div>
-    <div class="flex" style={{ "--base-color": "#4CBBA5" }}>
+    <div class="flex gap-3" data-accent-color="blue">
       {
         new Array(14).fill(0).map((_, i) => {
           return (
-            <div class="color h-[60px] w-[60px] shrink-0" data-color={i + 1} />
+            <div
+              class="color rounded-2 h-[60px] w-[60px] shrink-0"
+              data-color={i + 1}
+            />
           );
         })
       }
     </div>
-    <div class="flex" style={{ "--base-color": "#0090FF" }}>
+    <div class="flex gap-3" data-accent-color="purple">
       {
         new Array(14).fill(0).map((_, i) => {
           return (
-            <div class="color h-[60px] w-[60px] shrink-0" data-color={i + 1} />
+            <div
+              class="color rounded-2 h-[60px] w-[60px] shrink-0"
+              data-color={i + 1}
+            />
           );
         })
       }
     </div>
-    <div class="flex" style={{ "--base-color": "#60B3D7" }}>
+    <div class="flex gap-3" data-accent-color="pink">
       {
         new Array(14).fill(0).map((_, i) => {
           return (
-            <div class="color h-[60px] w-[60px] shrink-0" data-color={i + 1} />
+            <div
+              class="color rounded-2 h-[60px] w-[60px] shrink-0"
+              data-color={i + 1}
+            />
           );
         })
       }
     </div>
-    <div class="flex" style={{ "--base-color": "#D6409F" }}>
+    <div class="flex gap-3" data-accent-color="grey">
       {
         new Array(14).fill(0).map((_, i) => {
           return (
-            <div class="color h-[60px] w-[60px] shrink-0" data-color={i + 1} />
+            <div
+              class="color rounded-2 h-[60px] w-[60px] shrink-0"
+              data-color={i + 1}
+            />
           );
         })
       }
     </div>
-    <div class="flex" style={{ "--base-color": "#8D8D8D" }}>
+    <div class="flex gap-3" data-accent-color="brown">
       {
         new Array(14).fill(0).map((_, i) => {
           return (
-            <div class="color h-[60px] w-[60px] shrink-0" data-color={i + 1} />
+            <div
+              class="color rounded-2 h-[60px] w-[60px] shrink-0"
+              data-color={i + 1}
+            />
           );
         })
       }
     </div>
-    <div class="flex" style={{ "--base-color": "#AD7F58" }}>
-      {
-        new Array(14).fill(0).map((_, i) => {
-          return (
-            <div class="color h-[60px] w-[60px] shrink-0" data-color={i + 1} />
-          );
-        })
-      }
-    </div> -->
   </div>
 </BaseLayout>
 
 <style>
   .color {
     &[data-color="1"] {
-      /* overlay - layer-2 */
-      background: color-mix(
-        in oklch,
-        oklch(from var(--base-color) 1 c h),
-        white 95%
-      );
+      background: var(--wui-color-accent-1);
+      border: 1px solid var(--wui-color-accent-3);
     }
 
-    /* site - layer-1 */
     &[data-color="2"] {
-      background: color-mix(
-        in oklch,
-        oklch(from var(--base-color) 0.96 c h),
-        white 88%
-      );
+      background: var(--wui-color-accent-2);
+      border: 1px solid var(--wui-color-accent-3);
     }
 
-    /* sidebar - layer-0 */
     &[data-color="3"] {
-      background: color-mix(
-        in oklch,
-        oklch(from var(--base-color) 0.9 c h),
-        white 80%
-      );
+      background: var(--wui-color-accent-3);
+      border: 1px solid var(--wui-color-accent-4);
     }
 
     &[data-color="4"] {
-      background: color-mix(
-        in oklch,
-        oklch(from var(--base-color) 0.78 c h),
-        white 74%
-      );
+      background: var(--wui-color-accent-4);
+      border: 1px solid var(--wui-color-accent-5);
     }
 
     &[data-color="5"] {
-      background: color-mix(
-        in oklch,
-        oklch(from var(--base-color) 0.7 c h),
-        white 60%
-      );
+      background: var(--wui-color-accent-5);
+      border: 1px solid var(--wui-color-accent-6);
     }
 
-    /* border - border-2 */
     &[data-color="6"] {
-      background: color-mix(
-        in oklch,
-        oklch(from var(--base-color) 0.7 c h),
-        white 40%
-      );
+      background: var(--wui-color-accent-6);
+      border: 1px solid var(--wui-color-accent-7);
     }
 
     &[data-color="7"] {
-      background: color-mix(
-        in oklch,
-        oklch(from var(--base-color) 0.7 c h),
-        white 30%
-      );
+      background: var(--wui-color-accent-7);
+      border: 1px solid var(--wui-color-accent-8);
     }
 
     &[data-color="8"] {
-      background: color-mix(
-        in oklch,
-        oklch(from var(--base-color) 0.7 c h),
-        white 20%
-      );
+      background: var(--wui-color-accent-8);
+      border: 1px solid var(--wui-color-accent-9);
     }
 
     &[data-color="9"] {
-      background: oklch(from var(--base-color) 0.68 c h);
+      background: var(--wui-color-accent-9);
+      border: 1px solid var(--wui-color-accent-10);
     }
 
     &[data-color="10"] {
-      background: oklch(from var(--base-color) 0.6 c h);
+      background: var(--wui-color-accent-10);
+      border: 1px solid var(--wui-color-accent-11);
     }
 
     &[data-color="11"] {
-      background: oklch(from var(--base-color) 0.54 c h);
+      background: var(--wui-color-accent-11);
     }
 
     &[data-color="12"] {
-      background: color-mix(
-        in oklch,
-        oklch(from var(--base-color) 0.49 c h),
-        black 20%
-      );
+      background: var(--wui-color-accent-12);
     }
 
     &[data-color="13"] {
-      background: color-mix(
-        in oklch,
-        oklch(from var(--base-color) 0.4 c h),
-        black 40%
-      );
+      background: var(--wui-color-accent-13);
     }
 
     &[data-color="14"] {
-      background: color-mix(
-        in oklch,
-        oklch(from var(--base-color) 0.4 c h),
-        black 65%
-      );
+      background: var(--wui-color-accent-14);
     }
   }
 </style>

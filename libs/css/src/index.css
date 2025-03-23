@@ -1,5 +1,6 @@
 @import "./layer.css";
 @import "./reset.css";
 @import "./base/index.css";
+@import "./colors/index.css";
 @import "./spatial/index.css";
 @import "./visual/index.css";
