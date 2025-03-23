@@ -22,20 +22,20 @@
   }
 
   [data-theme="dark"] {
-    --wui-color-yellow-1: color-mix(in oklch, oklch(from var(--wui-color-yellow-base) 0.45 c h), black 60%);
-    --wui-color-yellow-2: color-mix(in oklch, oklch(from var(--wui-color-yellow-base) 0.45 c h), black 65%);
-    --wui-color-yellow-3: color-mix(in oklch, oklch(from var(--wui-color-yellow-base) 0.4 c h), black 74%);
-    --wui-color-yellow-4: color-mix(in oklch, oklch(from var(--wui-color-yellow-base) 0.55 c h), black 58%);
-    --wui-color-yellow-5: color-mix(in oklch, oklch(from var(--wui-color-yellow-base) 0.58 c h), black 53%);
-    --wui-color-yellow-6: color-mix(in oklch, oklch(from var(--wui-color-yellow-base) 0.44 c h), black 33%);
-    --wui-color-yellow-7: color-mix(in oklch, oklch(from var(--wui-color-yellow-base) 0.44 c h), black 23%);
-    --wui-color-yellow-8: color-mix(in oklch, oklch(from var(--wui-color-yellow-base) 0.44 c h), black 13%);
-    --wui-color-yellow-9: oklch(from var(--wui-color-yellow-base) 0.44 c h);
-    --wui-color-yellow-10: color-mix(in oklch, oklch(from var(--wui-color-yellow-base) 0.46 c h), white 8%);
-    --wui-color-yellow-11: color-mix(in oklch, oklch(from var(--wui-color-yellow-base) 0.49 c h), white 11%);
-    --wui-color-yellow-12: color-mix(in oklch, oklch(from var(--wui-color-yellow-base) 0.49 c h), white 30%);
-    --wui-color-yellow-13: color-mix(in oklch, oklch(from var(--wui-color-yellow-base) 0.55 c h), white 57%);
-    --wui-color-yellow-14: color-mix(in oklch, oklch(from var(--wui-color-yellow-base) 0.6 c h), white 76%);
+    --wui-color-yellow-1: color-mix(in oklch, oklch(from var(--wui-color-yellow-base) 0.66 c clamp(85, h, 115)), black 60%);
+    --wui-color-yellow-2: color-mix(in oklch, oklch(from var(--wui-color-yellow-base) 0.66 c clamp(85, h, 115)), black 65%);
+    --wui-color-yellow-3: color-mix(in oklch, oklch(from var(--wui-color-yellow-base) 0.48 c clamp(85, h, 115)), black 74%);
+    --wui-color-yellow-4: color-mix(in oklch, oklch(from var(--wui-color-yellow-base) 0.66 c clamp(85, h, 115)), black 58%);
+    --wui-color-yellow-5: color-mix(in oklch, oklch(from var(--wui-color-yellow-base) 0.66 c clamp(85, h, 115)), black 53%);
+    --wui-color-yellow-6: color-mix(in oklch, oklch(from var(--wui-color-yellow-base) 0.66 c clamp(85, h, 115)), black 33%);
+    --wui-color-yellow-7: color-mix(in oklch, oklch(from var(--wui-color-yellow-base) 0.66 c clamp(85, h, 115)), black 23%);
+    --wui-color-yellow-8: color-mix(in oklch, oklch(from var(--wui-color-yellow-base) 0.66 c clamp(85, h, 115)), black 13%);
+    --wui-color-yellow-9: oklch(from var(--wui-color-yellow-base) 0.66 c clamp(85, h, 115));
+    --wui-color-yellow-10: color-mix(in oklch, oklch(from var(--wui-color-yellow-base) 0.66 c clamp(85, h, 115)), white 8%);
+    --wui-color-yellow-11: color-mix(in oklch, oklch(from var(--wui-color-yellow-base) 0.66 c clamp(85, h, 115)), white 11%);
+    --wui-color-yellow-12: color-mix(in oklch, oklch(from var(--wui-color-yellow-base) 0.66 c clamp(85, h, 115)), white 30%);
+    --wui-color-yellow-13: color-mix(in oklch, oklch(from var(--wui-color-yellow-base) 0.66 c clamp(85, h, 115)), white 57%);
+    --wui-color-yellow-14: color-mix(in oklch, oklch(from var(--wui-color-yellow-base) 0.66 c clamp(85, h, 115)), white 76%);
   }
 
   [data-accent-color="yellow"] {
