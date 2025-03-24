@@ -43,7 +43,7 @@
     "react-aria-components": "1.7.1",
     "react-dom": "19.0.0",
     "recharts": "2.15.1",
-    "tailwindcss": "^4.0.14"
+    "tailwindcss": "4.0.15"
   },
   "devDependencies": {
     "@tanstack/router-devtools": "1.114.22",

@@ -20,8 +20,8 @@
     "lightningcss": "1.29.3"
   },
   "devDependencies": {
-    "@winnie-ui/tsconfig": "workspace:*",
     "@types/bun": "1.2.5",
+    "@winnie-ui/tsconfig": "workspace:*",
     "rimraf": "6.0.1"
   }
 }

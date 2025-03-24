@@ -133,8 +133,8 @@
     "clean": "rimraf node_modules .dist"
   },
   "devDependencies": {
-    "@winnie-ui/tsconfig": "workspace:*",
     "@winnie-ui/lightning": "workspace:*",
+    "@winnie-ui/tsconfig": "workspace:*",
     "rimraf": "6.0.1"
   }
 }
