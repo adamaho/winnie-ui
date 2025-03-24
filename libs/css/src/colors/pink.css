@@ -10,32 +10,32 @@
     --wui-color-pink-3: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.9 c h), white 80%);
     --wui-color-pink-4: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.78 c h), white 74%);
     --wui-color-pink-5: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.74 c h), white 60%);
-    --wui-color-pink-6: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.7 c h), white 40%);
-    --wui-color-pink-7: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.7 c h), white 30%);
-    --wui-color-pink-8: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.7 c h), white 20%);
-    --wui-color-pink-9: oklch(from var(--wui-color-pink-base) 0.68 c h);
-    --wui-color-pink-10: oklch(from var(--wui-color-pink-base) 0.6 c h);
-    --wui-color-pink-11: oklch(from var(--wui-color-pink-base) 0.54 c h);
-    --wui-color-pink-12: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.49 c h), black 20%);
+    --wui-color-pink-6: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.6 c h), white 50%);
+    --wui-color-pink-7: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.6 c h), white 25%);
+    --wui-color-pink-8: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.6 c h), white 10%);
+    --wui-color-pink-9: oklch(from var(--wui-color-pink-base) 0.6 c h);
+    --wui-color-pink-10: oklch(from var(--wui-color-pink-base) 0.54 c h);
+    --wui-color-pink-11: oklch(from var(--wui-color-pink-base) 0.44 c h);
+    --wui-color-pink-12: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.47 c h), black 20%);
     --wui-color-pink-13: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.4 c h), black 40%);
     --wui-color-pink-14: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.4 c h), black 65%);
   }
 
   [data-theme="dark"] {
-    --wui-color-pink-1: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.45 c h), black 60%);
-    --wui-color-pink-2: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.45 c h), black 65%);
-    --wui-color-pink-3: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.4 c h), black 74%);
-    --wui-color-pink-4: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.55 c h), black 58%);
-    --wui-color-pink-5: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.58 c h), black 53%);
-    --wui-color-pink-6: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.44 c h), black 33%);
-    --wui-color-pink-7: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.44 c h), black 23%);
-    --wui-color-pink-8: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.44 c h), black 13%);
-    --wui-color-pink-9: oklch(from var(--wui-color-pink-base) 0.44 c h);
-    --wui-color-pink-10: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.46 c h), white 8%);
-    --wui-color-pink-11: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.49 c h), white 11%);
-    --wui-color-pink-12: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.49 c h), white 30%);
-    --wui-color-pink-13: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.55 c h), white 57%);
-    --wui-color-pink-14: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.6 c h), white 76%);
+    --wui-color-pink-1: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.7 c h), black 83%);
+    --wui-color-pink-2: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.7 c h), black 78%);
+    --wui-color-pink-3: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.7 c h), black 72%);
+    --wui-color-pink-4: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.7 c h), black 65%);
+    --wui-color-pink-5: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.7 c h), black 58%);
+    --wui-color-pink-6: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.7 c h), black 48%);
+    --wui-color-pink-7: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.7 c h), black 30%);
+    --wui-color-pink-8: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.7 c h), black 20%);
+    --wui-color-pink-9: oklch(from var(--wui-color-pink-base) 0.6 c h);
+    --wui-color-pink-10: oklch(from var(--wui-color-pink-base) 0.66 c h);
+    --wui-color-pink-11: oklch(from var(--wui-color-pink-base) 0.75 c h);
+    --wui-color-pink-12: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.78 c h), white 30%);
+    --wui-color-pink-13: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.78 c h), white 50%);
+    --wui-color-pink-14: color-mix(in oklch, oklch(from var(--wui-color-pink-base) 0.78 c h), white 75%);
   }
 
   [data-accent-color="pink"] {
