@@ -33,9 +33,9 @@
     --wui-color-lime-9: oklch(from var(--wui-color-lime-base) 0.6 c h);
     --wui-color-lime-10: oklch(from var(--wui-color-lime-base) 0.66 c h);
     --wui-color-lime-11: oklch(from var(--wui-color-lime-base) 0.75 c h);
-    --wui-color-lime-12: color-mix(in oklch, oklch(from var(--wui-color-lime-base) 0.78 c h), white 30%);
-    --wui-color-lime-13: color-mix(in oklch, oklch(from var(--wui-color-lime-base) 0.78 c h), white 50%);
-    --wui-color-lime-14: color-mix(in oklch, oklch(from var(--wui-color-lime-base) 0.78 c h), white 75%);
+    --wui-color-lime-12: color-mix(in oklch, oklch(from var(--wui-color-lime-base) 0.78 0.027 h), white 10%);
+    --wui-color-lime-13: color-mix(in oklch, oklch(from var(--wui-color-lime-base) 0.78 0.027 h), white 60%);
+    --wui-color-lime-14: color-mix(in oklch, oklch(from var(--wui-color-lime-base) 0.78 0.027 h), white 95%);
   }
 
   [data-accent-color="lime"] {

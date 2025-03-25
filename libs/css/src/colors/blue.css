@@ -32,9 +32,9 @@
     --wui-color-blue-9: oklch(from var(--wui-color-blue-base) 0.6 c h);
     --wui-color-blue-10: oklch(from var(--wui-color-blue-base) 0.66 c h);
     --wui-color-blue-11: oklch(from var(--wui-color-blue-base) 0.75 c h);
-    --wui-color-blue-12: color-mix(in oklch, oklch(from var(--wui-color-blue-base) 0.78 c h), white 30%);
-    --wui-color-blue-13: color-mix(in oklch, oklch(from var(--wui-color-blue-base) 0.78 c h), white 50%);
-    --wui-color-blue-14: color-mix(in oklch, oklch(from var(--wui-color-blue-base) 0.78 c h), white 75%);
+    --wui-color-blue-12: color-mix(in oklch, oklch(from var(--wui-color-blue-base) 0.78 0.03 h), white 10%);
+    --wui-color-blue-13: color-mix(in oklch, oklch(from var(--wui-color-blue-base) 0.78 0.027 h), white 60%);
+    --wui-color-blue-14: color-mix(in oklch, oklch(from var(--wui-color-blue-base) 0.78 0.027 h), white 95%);
   }
 
   [data-accent-color="blue"] {

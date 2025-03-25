@@ -9,7 +9,7 @@
     align-items: center;
     border-radius: var(--wui-border-radius-3);
     cursor: default;
-    color: var(--wui-color-grey-11);
+    color: var(--wui-color-accent-12);
     display: flex;
     font-size: var(--wui-font-size-2);
     font-weight: var(--wui-font-weight-medium);
@@ -27,7 +27,7 @@
     }
 
     &[data-state="open"] {
-      color: var(--wui-color-grey-12);
+      color: var(--wui-color-grey-14);
 
       .chevron {
         transform: rotate(90deg);
@@ -39,11 +39,11 @@
     }
 
     &:is([data-current="true"], [data-current="true"][data-collapsible-trigger="true"]) {
-      color: var(--wui-color-grey-12);
+      color: var(--wui-color-grey-14);
     }
 
     &[data-current="true"]:not([data-collapsible-trigger="true"]) {
-      background: var(--wui-color-grey-a3);
+      background: var(--wui-color-accent-3);
     }
 
     .label {
@@ -82,7 +82,7 @@
 :where([data-theme="light"]) {
   .navigation-list {
     .navigation-list-item {
-      --list-item-background-hover: var(--wui-color-grey-a3);
+      --list-item-background-hover: var(--wui-color-accent-2);
     }
   }
 }
@@ -90,7 +90,7 @@
 :where([data-theme="dark"]) {
   .navigation-list {
     .navigation-list-item {
-      --list-item-background-hover: var(--wui-color-grey-a3);
+      --list-item-background-hover: var(--wui-color-accent-3);
     }
   }
 }
