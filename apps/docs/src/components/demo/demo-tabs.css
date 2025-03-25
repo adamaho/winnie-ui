@@ -1,7 +1,7 @@
 .wui-demo-tabs {
   .wui-demo-tab-list {
     background: var(--demo-code-background);
-    border-bottom: var(--wui-border-width-1) solid var(--wui-color-grey-5);
+    border-bottom: var(--wui-border-width-1) solid var(--wui-color-accent-5);
     align-items: center;
     display: flex;
     gap: var(--wui-space-2);

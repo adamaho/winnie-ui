@@ -22,11 +22,11 @@
   }
 
   [data-theme="dark"] {
-    --wui-color-brown-1: color-mix(in oklch, oklch(from var(--wui-color-brown-base) 0.7 c h), black 83%);
-    --wui-color-brown-2: color-mix(in oklch, oklch(from var(--wui-color-brown-base) 0.7 c h), black 78%);
-    --wui-color-brown-3: color-mix(in oklch, oklch(from var(--wui-color-brown-base) 0.7 c h), black 72%);
-    --wui-color-brown-4: color-mix(in oklch, oklch(from var(--wui-color-brown-base) 0.7 c h), black 65%);
-    --wui-color-brown-5: color-mix(in oklch, oklch(from var(--wui-color-brown-base) 0.7 c h), black 58%);
+    --wui-color-brown-1: color-mix(in oklch, oklch(from var(--wui-color-brown-base) 0.7 0.02 h), black 77%); /* app background */
+    --wui-color-brown-2: color-mix(in oklch, oklch(from var(--wui-color-brown-base) 0.7 0.02 h), black 72%); /* layer 1 background */
+    --wui-color-brown-3: color-mix(in oklch, oklch(from var(--wui-color-brown-base) 0.7 0.02 h), black 68%); /* layer 2 background border for 1 */
+    --wui-color-brown-4: color-mix(in oklch, oklch(from var(--wui-color-brown-base) 0.7 0.02 h), black 63%); /* layer 3 background border for 2 */
+    --wui-color-brown-5: color-mix(in oklch, oklch(from var(--wui-color-brown-base) 0.7 0.02 h), black 58%); /* layer 4 background border for 3 */
     --wui-color-brown-6: color-mix(in oklch, oklch(from var(--wui-color-brown-base) 0.7 c h), black 48%);
     --wui-color-brown-7: color-mix(in oklch, oklch(from var(--wui-color-brown-base) 0.7 c h), black 38%);
     --wui-color-brown-8: color-mix(in oklch, oklch(from var(--wui-color-brown-base) 0.7 c h), black 25%);

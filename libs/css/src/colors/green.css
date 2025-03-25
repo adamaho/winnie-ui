@@ -22,11 +22,11 @@
   }
 
   [data-theme="dark"] {
-    --wui-color-green-1: color-mix(in oklch, oklch(from var(--wui-color-green-base) 0.7 c h), black 83%);
-    --wui-color-green-2: color-mix(in oklch, oklch(from var(--wui-color-green-base) 0.7 c h), black 78%);
-    --wui-color-green-3: color-mix(in oklch, oklch(from var(--wui-color-green-base) 0.7 c h), black 72%);
-    --wui-color-green-4: color-mix(in oklch, oklch(from var(--wui-color-green-base) 0.7 c h), black 65%);
-    --wui-color-green-5: color-mix(in oklch, oklch(from var(--wui-color-green-base) 0.7 c h), black 58%);
+    --wui-color-green-1: color-mix(in oklch, oklch(from var(--wui-color-green-base) 0.7 0.02 h), black 77%); /* app background */
+    --wui-color-green-2: color-mix(in oklch, oklch(from var(--wui-color-green-base) 0.7 0.02 h), black 72%); /* layer 1 background */
+    --wui-color-green-3: color-mix(in oklch, oklch(from var(--wui-color-green-base) 0.7 0.02 h), black 68%); /* layer 2 background border for 1 */
+    --wui-color-green-4: color-mix(in oklch, oklch(from var(--wui-color-green-base) 0.7 0.02 h), black 63%); /* layer 3 background border for 2 */
+    --wui-color-green-5: color-mix(in oklch, oklch(from var(--wui-color-green-base) 0.7 0.02 h), black 58%); /* layer 4 background border for 3 */
     --wui-color-green-6: color-mix(in oklch, oklch(from var(--wui-color-green-base) 0.7 c h), black 48%);
     --wui-color-green-7: color-mix(in oklch, oklch(from var(--wui-color-green-base) 0.7 c h), black 38%);
     --wui-color-green-8: color-mix(in oklch, oklch(from var(--wui-color-green-base) 0.7 c h), black 25%);

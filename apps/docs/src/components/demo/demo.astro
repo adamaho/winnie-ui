@@ -57,7 +57,7 @@ const { showThemeSelector = false } = Astro.props;
 <style>
   .demo {
     --border-radius: min(var(--wui-border-radius-3), 15px);
-    --border-color: var(--wui-color-grey-5);
+    --border-color: var(--wui-color-accent-4);
 
     border: var(--wui-border-width-1) solid var(--border-color);
     border-radius: var(--border-radius);
@@ -96,6 +96,9 @@ const { showThemeSelector = false } = Astro.props;
 
       .expressive-code {
         margin: 0;
+        .frame {
+          box-shadow: none;
+        }
         pre {
           background: var(--demo-code-background);
           border: none;
@@ -122,11 +125,11 @@ const { showThemeSelector = false } = Astro.props;
   :global(:where([data-theme="dark"])) {
     .demo {
       .demo-content {
-        --demo-content-background: var(--wui-color-grey-1);
+        --demo-content-background: var(--wui-color-accent-3);
       }
 
       .demo-footer {
-        --demo-code-background: var(--wui-color-grey-2);
+        --demo-code-background: var(--wui-color-accent-3);
       }
     }
   }

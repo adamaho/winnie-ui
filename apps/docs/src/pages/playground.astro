@@ -8,7 +8,8 @@ import BaseHead from "../layouts/base/base-head.astro";
   <div
     class="root flex h-dvh flex-col items-center justify-center gap-5 p-9"
     data-theme="dark"
-    style={{ background: "black" }}
+    data-accent-color="red"
+    style={{ background: "var(--wui-color-accent-1)" }}
   >
     <div class="flex gap-5" data-accent-color="red">
       {
@@ -18,13 +19,13 @@ import BaseHead from "../layouts/base/base-head.astro";
               class="color rounded-2 text-5 flex h-[60px] w-[60px] shrink-0 items-center justify-center font-medium"
               data-color={i + 1}
             >
-              {i + 1}
+              {/* {i + 1} */}
             </div>
           );
         })
       }
     </div>
-    <div class="flex gap-5" data-accent-color="orange">
+    <!-- <div class="flex gap-5" data-accent-color="orange">
       {
         new Array(14).fill(0).map((_, i) => {
           return (
@@ -32,7 +33,7 @@ import BaseHead from "../layouts/base/base-head.astro";
               class="color rounded-2 text-5 flex h-[60px] w-[60px] shrink-0 items-center justify-center font-medium"
               data-color={i + 1}
             >
-              {i + 1}
+              {/* {i + 1} */}
             </div>
           );
         })
@@ -46,7 +47,7 @@ import BaseHead from "../layouts/base/base-head.astro";
               class="color rounded-2 text-5 flex h-[60px] w-[60px] shrink-0 items-center justify-center font-medium"
               data-color={i + 1}
             >
-              {i + 1}
+              {/* {i + 1} */}
             </div>
           );
         })
@@ -60,7 +61,7 @@ import BaseHead from "../layouts/base/base-head.astro";
               class="color rounded-2 text-5 flex h-[60px] w-[60px] shrink-0 items-center justify-center font-medium"
               data-color={i + 1}
             >
-              {i + 1}
+              {/* {i + 1} */}
             </div>
           );
         })
@@ -74,7 +75,7 @@ import BaseHead from "../layouts/base/base-head.astro";
               class="color rounded-2 text-5 flex h-[60px] w-[60px] shrink-0 items-center justify-center font-medium"
               data-color={i + 1}
             >
-              {i + 1}
+              {/* {i + 1} */}
             </div>
           );
         })
@@ -88,7 +89,7 @@ import BaseHead from "../layouts/base/base-head.astro";
               class="color rounded-2 text-5 flex h-[60px] w-[60px] shrink-0 items-center justify-center font-medium"
               data-color={i + 1}
             >
-              {i + 1}
+              {/* {i + 1} */}
             </div>
           );
         })
@@ -102,7 +103,7 @@ import BaseHead from "../layouts/base/base-head.astro";
               class="color rounded-2 text-5 flex h-[60px] w-[60px] shrink-0 items-center justify-center font-medium"
               data-color={i + 1}
             >
-              {i + 1}
+              {/* {i + 1} */}
             </div>
           );
         })
@@ -116,7 +117,7 @@ import BaseHead from "../layouts/base/base-head.astro";
               class="color rounded-2 text-5 flex h-[60px] w-[60px] shrink-0 items-center justify-center font-medium"
               data-color={i + 1}
             >
-              {i + 1}
+              {/* {i + 1} */}
             </div>
           );
         })
@@ -130,7 +131,7 @@ import BaseHead from "../layouts/base/base-head.astro";
               class="color rounded-2 text-5 flex h-[60px] w-[60px] shrink-0 items-center justify-center font-medium"
               data-color={i + 1}
             >
-              {i + 1}
+              {/* {i + 1} */}
             </div>
           );
         })
@@ -144,12 +145,12 @@ import BaseHead from "../layouts/base/base-head.astro";
               class="color rounded-2 text-5 flex h-[60px] w-[60px] shrink-0 items-center justify-center font-medium"
               data-color={i + 1}
             >
-              {i + 1}
+              {/* {i + 1} */}
             </div>
           );
         })
       }
-    </div>
+    </div> -->
   </div>
 </BaseLayout>
 
@@ -157,57 +158,57 @@ import BaseHead from "../layouts/base/base-head.astro";
   .color {
     &[data-color="1"] {
       background: var(--wui-color-accent-1);
-      /* border: 1px solid var(--wui-color-accent-2); */
+      border: 1px solid var(--wui-color-accent-2);
     }
 
     &[data-color="2"] {
       background: var(--wui-color-accent-2);
-      /* border: 1px solid var(--wui-color-accent-3); */
+      border: 1px solid var(--wui-color-accent-3);
     }
 
     &[data-color="3"] {
       background: var(--wui-color-accent-3);
-      /* border: 1px solid var(--wui-color-accent-4); */
+      border: 1px solid var(--wui-color-accent-4);
     }
 
     &[data-color="4"] {
       background: var(--wui-color-accent-4);
-      /* border: 1px solid var(--wui-color-accent-5); */
+      border: 1px solid var(--wui-color-accent-5);
     }
 
     &[data-color="5"] {
       background: var(--wui-color-accent-5);
-      /* border: 1px solid var(--wui-color-accent-6); */
+      border: 1px solid var(--wui-color-accent-6);
     }
 
     &[data-color="6"] {
       background: var(--wui-color-accent-6);
-      /* border: 1px solid var(--wui-color-accent-7); */
+      border: 1px solid var(--wui-color-accent-7);
     }
 
     &[data-color="7"] {
       background: var(--wui-color-accent-7);
-      /* border: 1px solid var(--wui-color-accent-8); */
+      border: 1px solid var(--wui-color-accent-8);
     }
 
     &[data-color="8"] {
       background: var(--wui-color-accent-8);
-      /* border: 1px solid var(--wui-color-accent-9); */
+      border: 1px solid var(--wui-color-accent-9);
     }
 
     &[data-color="9"] {
       background: var(--wui-color-accent-9);
-      /* border: 1px solid var(--wui-color-accent-10); */
+      border: 1px solid var(--wui-color-accent-10);
     }
 
     &[data-color="10"] {
       background: var(--wui-color-accent-10);
-      /* border: 1px solid var(--wui-color-accent-11); */
+      border: 1px solid var(--wui-color-accent-11);
     }
 
     &[data-color="11"] {
       background: var(--wui-color-accent-11);
-      /* border: 1px solid var(--wui-color-accent-12); */
+      border: 1px solid var(--wui-color-accent-12);
     }
 
     &[data-color="12"] {
