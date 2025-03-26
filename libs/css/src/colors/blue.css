@@ -22,19 +22,19 @@
   }
 
   [data-theme="dark"] {
-    --wui-color-blue-1: color-mix(in oklch, oklch(from var(--wui-color-blue-base) 0.7 0.02 h), black 75%); /* app background */
-    --wui-color-blue-2: color-mix(in oklch, oklch(from var(--wui-color-blue-base) 0.7 0.02 h), black 72%); /* layer 1 background */
-    --wui-color-blue-3: color-mix(in oklch, oklch(from var(--wui-color-blue-base) 0.7 0.02 h), black 68%); /* layer 2 background border for 1 */
-    --wui-color-blue-4: color-mix(in oklch, oklch(from var(--wui-color-blue-base) 0.7 0.02 h), black 63%); /* layer 3 background border for 2 */
-    --wui-color-blue-5: color-mix(in oklch, oklch(from var(--wui-color-blue-base) 0.7 0.02 h), black 58%); /* layer 4 background border for 3 */
+    --wui-color-blue-1: color-mix(in oklch, oklch(from var(--wui-color-blue-base) 0.7 0.06 h), black 76%); /* app background */
+    --wui-color-blue-2: color-mix(in oklch, oklch(from var(--wui-color-blue-base) 0.7 0.06 h), black 72%); /* layer 1 background */
+    --wui-color-blue-3: color-mix(in oklch, oklch(from var(--wui-color-blue-base) 0.7 0.06 h), black 68%); /* layer 2 background border for 1 */
+    --wui-color-blue-4: color-mix(in oklch, oklch(from var(--wui-color-blue-base) 0.7 0.06 h), black 63%); /* layer 3 background border for 2 */
+    --wui-color-blue-5: color-mix(in oklch, oklch(from var(--wui-color-blue-base) 0.7 0.06 h), black 58%); /* layer 4 background border for 3 */
     --wui-color-blue-7: color-mix(in oklch, oklch(from var(--wui-color-blue-base) 0.7 c h), black 38%);
     --wui-color-blue-8: color-mix(in oklch, oklch(from var(--wui-color-blue-base) 0.7 c h), black 25%);
     --wui-color-blue-9: oklch(from var(--wui-color-blue-base) 0.6 c h);
     --wui-color-blue-10: oklch(from var(--wui-color-blue-base) 0.66 c h);
     --wui-color-blue-11: oklch(from var(--wui-color-blue-base) 0.75 c h);
     --wui-color-blue-12: color-mix(in oklch, oklch(from var(--wui-color-blue-base) 0.78 0.03 h), white 10%);
-    --wui-color-blue-13: color-mix(in oklch, oklch(from var(--wui-color-blue-base) 0.78 0.027 h), white 60%);
-    --wui-color-blue-14: color-mix(in oklch, oklch(from var(--wui-color-blue-base) 0.78 0.027 h), white 95%);
+    --wui-color-blue-13: color-mix(in oklch, oklch(from var(--wui-color-blue-base) 0.78 0.02 h), white 80%);
+    --wui-color-blue-14: color-mix(in oklch, oklch(from var(--wui-color-blue-base) 0.78 0.02 h), white 95%);
   }
 
   [data-accent-color="blue"] {

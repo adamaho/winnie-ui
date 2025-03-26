@@ -33,8 +33,8 @@
     --wui-color-brown-9: oklch(from var(--wui-color-brown-base) 0.6 c h);
     --wui-color-brown-10: oklch(from var(--wui-color-brown-base) 0.66 c h);
     --wui-color-brown-11: oklch(from var(--wui-color-brown-base) 0.75 c h);
-    --wui-color-brown-12: color-mix(in oklch, oklch(from var(--wui-color-brown-base) 0.78 0.027 h), white 10%);
-    --wui-color-brown-13: color-mix(in oklch, oklch(from var(--wui-color-brown-base) 0.78 0.027 h), white 60%);
+    --wui-color-brown-12: color-mix(in oklch, oklch(from var(--wui-color-brown-base) 0.78 0.027 h), white 50%);
+    --wui-color-brown-13: color-mix(in oklch, oklch(from var(--wui-color-brown-base) 0.78 0.027 h), white 80%);
     --wui-color-brown-14: color-mix(in oklch, oklch(from var(--wui-color-brown-base) 0.78 0.027 h), white 95%);
   }
 
