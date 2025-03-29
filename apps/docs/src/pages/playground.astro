@@ -8,74 +8,18 @@ import BaseHead from "../layouts/base/base-head.astro";
   <div
     class="root flex h-dvh flex-col items-center justify-center gap-5 p-9"
     data-theme="dark"
-    data-accent-color="red"
-    style={{ background: "var(--wui-color-accent-1)" }}
+    data-accent-color="blue"
+    style={{ background: "var(--wui-color-grey-1)" }}
   >
-    <div class="flex gap-5" data-accent-color="red">
+    <div class="flex gap-5" data-accent-color="blue">
       {
-        new Array(14).fill(0).map((_, i) => {
+        new Array(12).fill(0).map((_, i) => {
           return (
             <div
               class="color rounded-2 text-5 flex h-[60px] w-[60px] shrink-0 items-center justify-center font-medium"
               data-color={i + 1}
             >
-              {/* {i + 1} */}
-            </div>
-          );
-        })
-      }
-    </div>
-    <!-- <div class="flex gap-5" data-accent-color="orange">
-      {
-        new Array(14).fill(0).map((_, i) => {
-          return (
-            <div
-              class="color rounded-2 text-5 flex h-[60px] w-[60px] shrink-0 items-center justify-center font-medium"
-              data-color={i + 1}
-            >
-              {/* {i + 1} */}
-            </div>
-          );
-        })
-      }
-    </div>
-    <div class="flex gap-5" data-accent-color="yellow">
-      {
-        new Array(14).fill(0).map((_, i) => {
-          return (
-            <div
-              class="color rounded-2 text-5 flex h-[60px] w-[60px] shrink-0 items-center justify-center font-medium"
-              data-color={i + 1}
-            >
-              {/* {i + 1} */}
-            </div>
-          );
-        })
-      }
-    </div>
-    <div class="flex gap-5" data-accent-color="green">
-      {
-        new Array(14).fill(0).map((_, i) => {
-          return (
-            <div
-              class="color rounded-2 text-5 flex h-[60px] w-[60px] shrink-0 items-center justify-center font-medium"
-              data-color={i + 1}
-            >
-              {/* {i + 1} */}
-            </div>
-          );
-        })
-      }
-    </div>
-    <div class="flex gap-5" data-accent-color="lime">
-      {
-        new Array(14).fill(0).map((_, i) => {
-          return (
-            <div
-              class="color rounded-2 text-5 flex h-[60px] w-[60px] shrink-0 items-center justify-center font-medium"
-              data-color={i + 1}
-            >
-              {/* {i + 1} */}
+              {i + 1}
             </div>
           );
         })
@@ -83,78 +27,38 @@ import BaseHead from "../layouts/base/base-head.astro";
     </div>
     <div class="flex gap-5" data-accent-color="blue">
       {
-        new Array(14).fill(0).map((_, i) => {
+        new Array(12).fill(0).map((_, i) => {
           return (
             <div
-              class="color rounded-2 text-5 flex h-[60px] w-[60px] shrink-0 items-center justify-center font-medium"
+              class="color grey rounded-2 text-5 flex h-[60px] w-[60px] shrink-0 items-center justify-center font-medium"
               data-color={i + 1}
             >
-              {/* {i + 1} */}
+              {i + 1}
             </div>
           );
         })
       }
     </div>
-    <div class="flex gap-5" data-accent-color="purple">
-      {
-        new Array(14).fill(0).map((_, i) => {
-          return (
-            <div
-              class="color rounded-2 text-5 flex h-[60px] w-[60px] shrink-0 items-center justify-center font-medium"
-              data-color={i + 1}
-            >
-              {/* {i + 1} */}
-            </div>
-          );
-        })
-      }
-    </div>
-    <div class="flex gap-5" data-accent-color="pink">
-      {
-        new Array(14).fill(0).map((_, i) => {
-          return (
-            <div
-              class="color rounded-2 text-5 flex h-[60px] w-[60px] shrink-0 items-center justify-center font-medium"
-              data-color={i + 1}
-            >
-              {/* {i + 1} */}
-            </div>
-          );
-        })
-      }
-    </div>
-    <div class="flex gap-5" data-accent-color="grey">
-      {
-        new Array(14).fill(0).map((_, i) => {
-          return (
-            <div
-              class="color rounded-2 text-5 flex h-[60px] w-[60px] shrink-0 items-center justify-center font-medium"
-              data-color={i + 1}
-            >
-              {/* {i + 1} */}
-            </div>
-          );
-        })
-      }
-    </div>
-    <div class="flex gap-5" data-accent-color="brown">
-      {
-        new Array(14).fill(0).map((_, i) => {
-          return (
-            <div
-              class="color rounded-2 text-5 flex h-[60px] w-[60px] shrink-0 items-center justify-center font-medium"
-              data-color={i + 1}
-            >
-              {/* {i + 1} */}
-            </div>
-          );
-        })
-      }
-    </div> -->
   </div>
 </BaseLayout>
 
 <style>
+  @property --wui-c {
+    syntax: "*";
+    inherits: false;
+    initial-value: calc(c * 0.1);
+  }
+
+  @property --wui-dark-mix {
+    syntax: "*";
+    inherits: false;
+    initial-value: calc(l * 100%);
+  }
+
+  .binary {
+    background: oklch(from red l var(--wui-c) h);
+  }
+
   .color {
     &[data-color="1"] {
       background: var(--wui-color-accent-1);
@@ -183,7 +87,6 @@ import BaseHead from "../layouts/base/base-head.astro";
 
     &[data-color="6"] {
       background: var(--wui-color-accent-6);
-      border: 1px solid var(--wui-color-accent-7);
     }
 
     &[data-color="7"] {
@@ -198,7 +101,6 @@ import BaseHead from "../layouts/base/base-head.astro";
 
     &[data-color="9"] {
       background: var(--wui-color-accent-9);
-      border: 1px solid var(--wui-color-accent-10);
     }
 
     &[data-color="10"] {
@@ -221,6 +123,73 @@ import BaseHead from "../layouts/base/base-head.astro";
 
     &[data-color="14"] {
       background: var(--wui-color-accent-14);
+    }
+  }
+
+  .grey {
+    &[data-color="1"] {
+      background: var(--wui-color-grey-1);
+      border: 1px solid var(--wui-color-grey-2);
+    }
+
+    &[data-color="2"] {
+      background: var(--wui-color-grey-2);
+      border: 1px solid var(--wui-color-grey-3);
+    }
+
+    &[data-color="3"] {
+      background: var(--wui-color-grey-3);
+      border: 1px solid var(--wui-color-grey-4);
+    }
+
+    &[data-color="4"] {
+      background: var(--wui-color-grey-4);
+      border: 1px solid var(--wui-color-grey-5);
+    }
+
+    &[data-color="5"] {
+      background: var(--wui-color-grey-5);
+      border: 1px solid var(--wui-color-grey-6);
+    }
+
+    &[data-color="6"] {
+      background: var(--wui-color-grey-6);
+    }
+
+    &[data-color="7"] {
+      background: var(--wui-color-grey-7);
+      border: 1px solid var(--wui-color-grey-8);
+    }
+
+    &[data-color="8"] {
+      background: var(--wui-color-grey-8);
+      border: 1px solid var(--wui-color-grey-9);
+    }
+
+    &[data-color="9"] {
+      background: var(--wui-color-grey-9);
+    }
+
+    &[data-color="10"] {
+      background: var(--wui-color-grey-10);
+      border: 1px solid var(--wui-color-grey-11);
+    }
+
+    &[data-color="11"] {
+      background: var(--wui-color-grey-11);
+      border: 1px solid var(--wui-color-grey-12);
+    }
+
+    &[data-color="12"] {
+      background: var(--wui-color-grey-12);
+    }
+
+    &[data-color="13"] {
+      background: var(--wui-color-grey-13);
+    }
+
+    &[data-color="14"] {
+      background: var(--wui-color-grey-14);
     }
   }
 </style>

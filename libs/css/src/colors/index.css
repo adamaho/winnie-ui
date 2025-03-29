@@ -6,5 +6,46 @@
 @import "./blue.css";
 @import "./purple.css";
 @import "./pink.css";
-@import "./grey.css";
 @import "./brown.css";
+
+@layer color {
+  [data-accent-color="red"] {
+    --wui-hue-base: var(--wui-hue-red);
+  }
+
+  [data-accent-color="orange"] {
+    --wui-hue-base: var(--wui-hue-orange);
+  }
+
+  [data-accent-color="yellow"] {
+    --wui-hue-base: var(--wui-hue-yellow);
+  }
+
+  [data-accent-color="green"] {
+    --wui-hue-base: var(--wui-hue-green);
+  }
+
+  [data-accent-color="lime"] {
+    --wui-hue-base: var(--wui-hue-lime);
+  }
+
+  [data-accent-color="blue"] {
+    --wui-hue-base: var(--wui-hue-blue);
+  }
+
+  [data-accent-color="purple"] {
+    --wui-hue-base: var(--wui-hue-purple);
+  }
+
+  [data-accent-color="pink"] {
+    --wui-hue-base: var(--wui-hue-pink);
+  }
+
+  [data-accent-color="grey"] {
+    --wui-hue-base: var(--wui-hue-grey);
+  }
+
+  [data-accent-color="brown"] {
+    --wui-hue-base: var(--wui-hue-brown);
+  }
+}
