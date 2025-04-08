@@ -1,41 +1,38 @@
 @layer colors {
   :root {
-    --wui-color-lime-base: oklch(0.648 0.2 131.684);
-  }
-
-  :root,
-  [data-theme="light"] {
-    --wui-color-lime-1: color-mix(in oklch, oklch(from var(--wui-color-lime-base) 1 c h), white 95%);
-    --wui-color-lime-2: color-mix(in oklch, oklch(from var(--wui-color-lime-base) 0.96 c h), white 88%);
-    --wui-color-lime-3: color-mix(in oklch, oklch(from var(--wui-color-lime-base) 0.9 c h), white 80%);
-    --wui-color-lime-4: color-mix(in oklch, oklch(from var(--wui-color-lime-base) 0.78 c h), white 74%);
-    --wui-color-lime-5: color-mix(in oklch, oklch(from var(--wui-color-lime-base) 0.74 c h), white 60%);
-    --wui-color-lime-6: color-mix(in oklch, oklch(from var(--wui-color-lime-base) 0.6 c h), white 50%);
-    --wui-color-lime-7: color-mix(in oklch, oklch(from var(--wui-color-lime-base) 0.6 c h), white 25%);
-    --wui-color-lime-8: color-mix(in oklch, oklch(from var(--wui-color-lime-base) 0.6 c h), white 10%);
-    --wui-color-lime-9: oklch(from var(--wui-color-lime-base) 0.6 c h);
-    --wui-color-lime-10: oklch(from var(--wui-color-lime-base) 0.54 c h);
-    --wui-color-lime-11: oklch(from var(--wui-color-lime-base) 0.44 c h);
-    --wui-color-lime-12: color-mix(in oklch, oklch(from var(--wui-color-lime-base) 0.47 c h), black 20%);
-    --wui-color-lime-13: color-mix(in oklch, oklch(from var(--wui-color-lime-base) 0.4 c h), black 40%);
-    --wui-color-lime-14: color-mix(in oklch, oklch(from var(--wui-color-lime-base) 0.4 c h), black 65%);
+    --wui-hue-lime: 115.235;
   }
 
   [data-theme="dark"] {
-    --wui-color-lime-1: color-mix(in oklch, oklch(from var(--wui-color-lime-base) 0.7 0.02 h), black 77%); /* app background */
-    --wui-color-lime-2: color-mix(in oklch, oklch(from var(--wui-color-lime-base) 0.7 0.02 h), black 72%); /* layer 1 background */
-    --wui-color-lime-3: color-mix(in oklch, oklch(from var(--wui-color-lime-base) 0.7 0.02 h), black 68%); /* layer 2 background border for 1 */
-    --wui-color-lime-4: color-mix(in oklch, oklch(from var(--wui-color-lime-base) 0.7 0.02 h), black 63%); /* layer 3 background border for 2 */
-    --wui-color-lime-5: color-mix(in oklch, oklch(from var(--wui-color-lime-base) 0.7 0.02 h), black 58%); /* layer 4 background border for 3 */
-    --wui-color-lime-6: color-mix(in oklch, oklch(from var(--wui-color-lime-base) 0.7 c h), black 48%);
-    --wui-color-lime-7: color-mix(in oklch, oklch(from var(--wui-color-lime-base) 0.7 c h), black 38%);
-    --wui-color-lime-8: color-mix(in oklch, oklch(from var(--wui-color-lime-base) 0.7 c h), black 25%);
-    --wui-color-lime-9: oklch(from var(--wui-color-lime-base) 0.6 c h);
-    --wui-color-lime-10: oklch(from var(--wui-color-lime-base) 0.66 c h);
-    --wui-color-lime-11: oklch(from var(--wui-color-lime-base) 0.75 c h);
-    --wui-color-lime-12: color-mix(in oklch, oklch(from var(--wui-color-lime-base) 0.78 0.027 h), white 10%);
-    --wui-color-lime-13: color-mix(in oklch, oklch(from var(--wui-color-lime-base) 0.78 0.027 h), white 60%);
-    --wui-color-lime-14: color-mix(in oklch, oklch(from var(--wui-color-lime-base) 0.78 0.027 h), white 95%);
+    --wui-color-lime-1: color-mix(in oklch, oklch(0.7 0.23 var(--wui-hue-lime)), black 76%);
+    --wui-color-lime-2: color-mix(in oklch, oklch(0.7 0.23 var(--wui-hue-lime)), black 72%);
+    --wui-color-lime-3: color-mix(in oklch, oklch(0.7 0.23 var(--wui-hue-lime)), black 68%);
+    --wui-color-lime-4: color-mix(in oklch, oklch(0.7 0.23 var(--wui-hue-lime)), black 63%);
+    --wui-color-lime-5: color-mix(in oklch, oklch(0.7 0.23 var(--wui-hue-lime)), black 58%);
+    --wui-color-lime-6: color-mix(in oklch, oklch(0.7 0.23 var(--wui-hue-lime)), black 50%);
+    --wui-color-lime-7: color-mix(in oklch, oklch(0.84 0.33 var(--wui-hue-lime)), black 0%);
+    --wui-color-lime-8: color-mix(in oklch, oklch(0.84 0.33 var(--wui-hue-lime)), black 10%);
+    --wui-color-lime-9: color-mix(in oklch, oklch(0.84 0.33 var(--wui-hue-lime)), black 16%);
+    --wui-color-lime-10: color-mix(in oklch, oklch(0.78 0.23 var(--wui-hue-lime)), white 26%);
+    --wui-color-lime-11: color-mix(in oklch, oklch(0.78 0.23 var(--wui-hue-lime)), white 60%);
+    --wui-color-lime-12: color-mix(in oklch, oklch(0.78 0.23 var(--wui-hue-lime)), white 95%);
+
+    --wui-color-lime-contrast: black;
+
+    --wui-color-lime-grey-1: color-mix(in oklch, oklch(0.7 0.04 var(--wui-hue-lime)), black 76%);
+    --wui-color-lime-grey-2: color-mix(in oklch, oklch(0.7 0.04 var(--wui-hue-lime)), black 72%);
+    --wui-color-lime-grey-3: color-mix(in oklch, oklch(0.7 0.04 var(--wui-hue-lime)), black 68%);
+    --wui-color-lime-grey-4: color-mix(in oklch, oklch(0.7 0.04 var(--wui-hue-lime)), black 63%);
+    --wui-color-lime-grey-5: color-mix(in oklch, oklch(0.7 0.04 var(--wui-hue-lime)), black 58%);
+    --wui-color-lime-grey-6: color-mix(in oklch, oklch(0.7 0.04 var(--wui-hue-lime)), black 50%);
+    --wui-color-lime-grey-7: color-mix(in oklch, oklch(0.63 0.04 var(--wui-hue-lime)), black 10%);
+    --wui-color-lime-grey-8: color-mix(in oklch, oklch(0.63 0.04 var(--wui-hue-lime)), black 15%);
+    --wui-color-lime-grey-9: color-mix(in oklch, oklch(0.63 0.04 var(--wui-hue-lime)), black 20%);
+    --wui-color-lime-grey-10: color-mix(in oklch, oklch(0.78 0.03 var(--wui-hue-lime)), white 10%);
+    --wui-color-lime-grey-11: color-mix(in oklch, oklch(0.78 0.02 var(--wui-hue-lime)), white 60%);
+    --wui-color-lime-grey-12: color-mix(in oklch, oklch(0.78 0.02 var(--wui-hue-lime)), white 95%);
+
+    --wui-color-lime-grey-contrast: white;
   }
 
   [data-accent-color="lime"] {
@@ -51,7 +48,22 @@
     --wui-color-accent-10: var(--wui-color-lime-10);
     --wui-color-accent-11: var(--wui-color-lime-11);
     --wui-color-accent-12: var(--wui-color-lime-12);
-    --wui-color-accent-13: var(--wui-color-lime-13);
-    --wui-color-accent-14: var(--wui-color-lime-14);
+
+    --wui-color-accent-contrast: var(--wui-color-lime-contrast);
+
+    --wui-color-accent-grey-1: var(--wui-color-lime-grey-1);
+    --wui-color-accent-grey-2: var(--wui-color-lime-grey-2);
+    --wui-color-accent-grey-3: var(--wui-color-lime-grey-3);
+    --wui-color-accent-grey-4: var(--wui-color-lime-grey-4);
+    --wui-color-accent-grey-5: var(--wui-color-lime-grey-5);
+    --wui-color-accent-grey-6: var(--wui-color-lime-grey-6);
+    --wui-color-accent-grey-7: var(--wui-color-lime-grey-7);
+    --wui-color-accent-grey-8: var(--wui-color-lime-grey-8);
+    --wui-color-accent-grey-9: var(--wui-color-lime-grey-9);
+    --wui-color-accent-grey-10: var(--wui-color-lime-grey-10);
+    --wui-color-accent-grey-11: var(--wui-color-lime-grey-11);
+    --wui-color-accent-grey-12: var(--wui-color-lime-grey-12);
+
+    --wui-color-accent-grey-contrast: var(--wui-color-lime-grey-contrast);
   }
 }
