@@ -17,6 +17,8 @@
     --wui-color-blue-11: color-mix(in oklch, oklch(0.78 0.23 var(--wui-hue-blue)), white 60%);
     --wui-color-blue-12: color-mix(in oklch, oklch(0.78 0.23 var(--wui-hue-blue)), white 95%);
 
+    --wui-color-blue-contrast: white;
+
     --wui-color-blue-grey-1: color-mix(in oklch, oklch(0.7 0.07 var(--wui-hue-blue)), black 76%);
     --wui-color-blue-grey-2: color-mix(in oklch, oklch(0.7 0.07 var(--wui-hue-blue)), black 72%);
     --wui-color-blue-grey-3: color-mix(in oklch, oklch(0.7 0.07 var(--wui-hue-blue)), black 68%);
@@ -29,6 +31,8 @@
     --wui-color-blue-grey-10: color-mix(in oklch, oklch(0.78 0.03 var(--wui-hue-blue)), white 10%);
     --wui-color-blue-grey-11: color-mix(in oklch, oklch(0.78 0.02 var(--wui-hue-blue)), white 60%);
     --wui-color-blue-grey-12: color-mix(in oklch, oklch(0.78 0.02 var(--wui-hue-blue)), white 95%);
+
+    --wui-color-blue-grey-contrast: white;
   }
 
   [data-accent-color="blue"] {
@@ -45,17 +49,21 @@
     --wui-color-accent-11: var(--wui-color-blue-11);
     --wui-color-accent-12: var(--wui-color-blue-12);
 
-    --wui-color-grey-1: var(--wui-color-blue-grey-1);
-    --wui-color-grey-2: var(--wui-color-blue-grey-2);
-    --wui-color-grey-3: var(--wui-color-blue-grey-3);
-    --wui-color-grey-4: var(--wui-color-blue-grey-4);
-    --wui-color-grey-5: var(--wui-color-blue-grey-5);
-    --wui-color-grey-6: var(--wui-color-blue-grey-6);
-    --wui-color-grey-7: var(--wui-color-blue-grey-7);
-    --wui-color-grey-8: var(--wui-color-blue-grey-8);
-    --wui-color-grey-9: var(--wui-color-blue-grey-9);
-    --wui-color-grey-10: var(--wui-color-blue-grey-10);
-    --wui-color-grey-11: var(--wui-color-blue-grey-11);
-    --wui-color-grey-12: var(--wui-color-blue-grey-12);
+    --wui-color-accent-contrast: var(--wui-color-blue-contrast);
+
+    --wui-color-accent-grey-1: var(--wui-color-blue-grey-1);
+    --wui-color-accent-grey-2: var(--wui-color-blue-grey-2);
+    --wui-color-accent-grey-3: var(--wui-color-blue-grey-3);
+    --wui-color-accent-grey-4: var(--wui-color-blue-grey-4);
+    --wui-color-accent-grey-5: var(--wui-color-blue-grey-5);
+    --wui-color-accent-grey-6: var(--wui-color-blue-grey-6);
+    --wui-color-accent-grey-7: var(--wui-color-blue-grey-7);
+    --wui-color-accent-grey-8: var(--wui-color-blue-grey-8);
+    --wui-color-accent-grey-9: var(--wui-color-blue-grey-9);
+    --wui-color-accent-grey-10: var(--wui-color-blue-grey-10);
+    --wui-color-accent-grey-11: var(--wui-color-blue-grey-11);
+    --wui-color-accent-grey-12: var(--wui-color-blue-grey-12);
+
+    --wui-color-accent-grey-contrast: var(--wui-color-blue-grey-contrast);
   }
 }

@@ -1,41 +1,38 @@
 @layer colors {
   :root {
-    --wui-color-red-base: oklch(0.637 0.237 25.331);
-  }
-
-  :root,
-  [data-theme="light"] {
-    --wui-color-red-1: color-mix(in oklch, oklch(from var(--wui-color-red-base) 1 c h), white 95%);
-    --wui-color-red-2: color-mix(in oklch, oklch(from var(--wui-color-red-base) 0.96 c h), white 88%);
-    --wui-color-red-3: color-mix(in oklch, oklch(from var(--wui-color-red-base) 0.9 c h), white 80%);
-    --wui-color-red-4: color-mix(in oklch, oklch(from var(--wui-color-red-base) 0.78 c h), white 74%);
-    --wui-color-red-5: color-mix(in oklch, oklch(from var(--wui-color-red-base) 0.74 c h), white 60%);
-    --wui-color-red-6: color-mix(in oklch, oklch(from var(--wui-color-red-base) 0.6 c h), white 50%);
-    --wui-color-red-7: color-mix(in oklch, oklch(from var(--wui-color-red-base) 0.6 c h), white 25%);
-    --wui-color-red-8: color-mix(in oklch, oklch(from var(--wui-color-red-base) 0.6 c h), white 10%);
-    --wui-color-red-9: oklch(from var(--wui-color-red-base) 0.6 c h);
-    --wui-color-red-10: oklch(from var(--wui-color-red-base) 0.54 c h);
-    --wui-color-red-11: oklch(from var(--wui-color-red-base) 0.44 c h);
-    --wui-color-red-12: color-mix(in oklch, oklch(from var(--wui-color-red-base) 0.47 c h), black 20%);
-    --wui-color-red-13: color-mix(in oklch, oklch(from var(--wui-color-red-base) 0.4 c h), black 40%);
-    --wui-color-red-14: color-mix(in oklch, oklch(from var(--wui-color-red-base) 0.4 c h), black 65%);
+    --wui-hue-red: 27.235;
   }
 
   [data-theme="dark"] {
-    --wui-color-red-1: color-mix(in oklch, oklch(from var(--wui-color-red-base) 0.7 0.05 h), black 76%); /* app background */
-    --wui-color-red-2: color-mix(in oklch, oklch(from var(--wui-color-red-base) 0.7 0.05 h), black 72%); /* layer 1 background */
-    --wui-color-red-3: color-mix(in oklch, oklch(from var(--wui-color-red-base) 0.7 0.05 h), black 68%); /* layer 2 background border for 1 */
-    --wui-color-red-4: color-mix(in oklch, oklch(from var(--wui-color-red-base) 0.7 0.05 h), black 63%); /* layer 3 background border for 2 */
-    --wui-color-red-5: color-mix(in oklch, oklch(from var(--wui-color-red-base) 0.7 0.05 h), black 58%); /* layer 4 background border for 3 */
-    --wui-color-red-6: color-mix(in oklch, oklch(from var(--wui-color-red-base) 0.7 c h), black 48%);
-    --wui-color-red-7: color-mix(in oklch, oklch(from var(--wui-color-red-base) 0.7 c h), black 38%);
-    --wui-color-red-8: color-mix(in oklch, oklch(from var(--wui-color-red-base) 0.7 c h), black 25%);
-    --wui-color-red-9: oklch(from var(--wui-color-red-base) 0.6 c h);
-    --wui-color-red-10: oklch(from var(--wui-color-red-base) 0.66 c h);
-    --wui-color-red-11: oklch(from var(--wui-color-red-base) 0.75 c h);
-    --wui-color-red-12: color-mix(in oklch, oklch(from var(--wui-color-red-base) 0.78 0.02 h), white 10%);
-    --wui-color-red-13: color-mix(in oklch, oklch(from var(--wui-color-red-base) 0.78 0.02 h), white 80%);
-    --wui-color-red-14: color-mix(in oklch, oklch(from var(--wui-color-red-base) 0.78 0.02 h), white 95%);
+    --wui-color-red-1: color-mix(in oklch, oklch(0.7 0.23 var(--wui-hue-red)), black 76%);
+    --wui-color-red-2: color-mix(in oklch, oklch(0.7 0.23 var(--wui-hue-red)), black 72%);
+    --wui-color-red-3: color-mix(in oklch, oklch(0.7 0.23 var(--wui-hue-red)), black 68%);
+    --wui-color-red-4: color-mix(in oklch, oklch(0.7 0.23 var(--wui-hue-red)), black 63%);
+    --wui-color-red-5: color-mix(in oklch, oklch(0.7 0.23 var(--wui-hue-red)), black 58%);
+    --wui-color-red-6: color-mix(in oklch, oklch(0.7 0.23 var(--wui-hue-red)), black 50%);
+    --wui-color-red-7: color-mix(in oklch, oklch(0.63 0.23 var(--wui-hue-red)), black 10%);
+    --wui-color-red-8: color-mix(in oklch, oklch(0.63 0.23 var(--wui-hue-red)), black 15%);
+    --wui-color-red-9: color-mix(in oklch, oklch(0.63 0.23 var(--wui-hue-red)), black 20%);
+    --wui-color-red-10: color-mix(in oklch, oklch(0.78 0.23 var(--wui-hue-red)), white 26%);
+    --wui-color-red-11: color-mix(in oklch, oklch(0.78 0.23 var(--wui-hue-red)), white 60%);
+    --wui-color-red-12: color-mix(in oklch, oklch(0.78 0.23 var(--wui-hue-red)), white 95%);
+
+    --wui-color-red-contrast: white;
+
+    --wui-color-red-grey-1: color-mix(in oklch, oklch(0.7 0.04 var(--wui-hue-red)), black 76%);
+    --wui-color-red-grey-2: color-mix(in oklch, oklch(0.7 0.04 var(--wui-hue-red)), black 72%);
+    --wui-color-red-grey-3: color-mix(in oklch, oklch(0.7 0.04 var(--wui-hue-red)), black 68%);
+    --wui-color-red-grey-4: color-mix(in oklch, oklch(0.7 0.04 var(--wui-hue-red)), black 63%);
+    --wui-color-red-grey-5: color-mix(in oklch, oklch(0.7 0.04 var(--wui-hue-red)), black 58%);
+    --wui-color-red-grey-6: color-mix(in oklch, oklch(0.7 0.04 var(--wui-hue-red)), black 50%);
+    --wui-color-red-grey-7: color-mix(in oklch, oklch(0.63 0.04 var(--wui-hue-red)), black 10%);
+    --wui-color-red-grey-8: color-mix(in oklch, oklch(0.63 0.04 var(--wui-hue-red)), black 15%);
+    --wui-color-red-grey-9: color-mix(in oklch, oklch(0.63 0.04 var(--wui-hue-red)), black 20%);
+    --wui-color-red-grey-10: color-mix(in oklch, oklch(0.78 0.03 var(--wui-hue-red)), white 10%);
+    --wui-color-red-grey-11: color-mix(in oklch, oklch(0.78 0.02 var(--wui-hue-red)), white 60%);
+    --wui-color-red-grey-12: color-mix(in oklch, oklch(0.78 0.02 var(--wui-hue-red)), white 95%);
+
+    --wui-color-red-grey-contrast: white;
   }
 
   [data-accent-color="red"] {
@@ -51,7 +48,22 @@
     --wui-color-accent-10: var(--wui-color-red-10);
     --wui-color-accent-11: var(--wui-color-red-11);
     --wui-color-accent-12: var(--wui-color-red-12);
-    --wui-color-accent-13: var(--wui-color-red-13);
-    --wui-color-accent-14: var(--wui-color-red-14);
+
+    --wui-color-accent-contrast: var(--wui-color-red-contrast);
+
+    --wui-color-accent-grey-1: var(--wui-color-red-grey-1);
+    --wui-color-accent-grey-2: var(--wui-color-red-grey-2);
+    --wui-color-accent-grey-3: var(--wui-color-red-grey-3);
+    --wui-color-accent-grey-4: var(--wui-color-red-grey-4);
+    --wui-color-accent-grey-5: var(--wui-color-red-grey-5);
+    --wui-color-accent-grey-6: var(--wui-color-red-grey-6);
+    --wui-color-accent-grey-7: var(--wui-color-red-grey-7);
+    --wui-color-accent-grey-8: var(--wui-color-red-grey-8);
+    --wui-color-accent-grey-9: var(--wui-color-red-grey-9);
+    --wui-color-accent-grey-10: var(--wui-color-red-grey-10);
+    --wui-color-accent-grey-11: var(--wui-color-red-grey-11);
+    --wui-color-accent-grey-12: var(--wui-color-red-grey-12);
+
+    --wui-color-accent-grey-contrast: var(--wui-color-red-grey-contrast);
   }
 }
