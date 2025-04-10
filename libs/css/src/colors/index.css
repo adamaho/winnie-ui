@@ -3,6 +3,7 @@
 @import "./yellow.css";
 @import "./green.css";
 @import "./lime.css";
+@import "./cyan.css";
 @import "./blue.css";
 @import "./purple.css";
 @import "./pink.css";
@@ -27,6 +28,10 @@
 
   [data-accent-color="lime"] {
     --wui-hue-base: var(--wui-hue-lime);
+  }
+
+  [data-accent-color="cyan"] {
+    --wui-hue-base: var(--wui-hue-cyan);
   }
 
   [data-accent-color="blue"] {
