@@ -19,15 +19,15 @@
 
     --wui-color-blue-contrast: white;
 
-    --wui-color-blue-grey-1: color-mix(in oklch, oklch(0.7 0.07 var(--wui-hue-blue)), black 76%);
-    --wui-color-blue-grey-2: color-mix(in oklch, oklch(0.7 0.07 var(--wui-hue-blue)), black 72%);
-    --wui-color-blue-grey-3: color-mix(in oklch, oklch(0.7 0.07 var(--wui-hue-blue)), black 68%);
-    --wui-color-blue-grey-4: color-mix(in oklch, oklch(0.7 0.07 var(--wui-hue-blue)), black 63%);
-    --wui-color-blue-grey-5: color-mix(in oklch, oklch(0.7 0.07 var(--wui-hue-blue)), black 58%);
-    --wui-color-blue-grey-6: color-mix(in oklch, oklch(0.7 0.07 var(--wui-hue-blue)), black 50%);
-    --wui-color-blue-grey-7: color-mix(in oklch, oklch(0.63 0.07 var(--wui-hue-blue)), black 10%);
-    --wui-color-blue-grey-8: color-mix(in oklch, oklch(0.63 0.07 var(--wui-hue-blue)), black 15%);
-    --wui-color-blue-grey-9: color-mix(in oklch, oklch(0.63 0.07 var(--wui-hue-blue)), black 20%);
+    --wui-color-blue-grey-1: color-mix(in oklch, oklch(0.7 0.05 var(--wui-hue-blue)), black 76%);
+    --wui-color-blue-grey-2: color-mix(in oklch, oklch(0.7 0.05 var(--wui-hue-blue)), black 72%);
+    --wui-color-blue-grey-3: color-mix(in oklch, oklch(0.7 0.05 var(--wui-hue-blue)), black 68%);
+    --wui-color-blue-grey-4: color-mix(in oklch, oklch(0.7 0.05 var(--wui-hue-blue)), black 63%);
+    --wui-color-blue-grey-5: color-mix(in oklch, oklch(0.7 0.05 var(--wui-hue-blue)), black 58%);
+    --wui-color-blue-grey-6: color-mix(in oklch, oklch(0.7 0.05 var(--wui-hue-blue)), black 50%);
+    --wui-color-blue-grey-7: color-mix(in oklch, oklch(0.63 0.05 var(--wui-hue-blue)), black 10%);
+    --wui-color-blue-grey-8: color-mix(in oklch, oklch(0.63 0.05 var(--wui-hue-blue)), black 15%);
+    --wui-color-blue-grey-9: color-mix(in oklch, oklch(0.63 0.05 var(--wui-hue-blue)), black 20%);
     --wui-color-blue-grey-10: color-mix(in oklch, oklch(0.78 0.03 var(--wui-hue-blue)), white 10%);
     --wui-color-blue-grey-11: color-mix(in oklch, oklch(0.78 0.02 var(--wui-hue-blue)), white 60%);
     --wui-color-blue-grey-12: color-mix(in oklch, oklch(0.78 0.02 var(--wui-hue-blue)), white 95%);
