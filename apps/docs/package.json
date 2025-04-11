@@ -29,6 +29,7 @@
     "@react-aria/utils": "3.28.1",
     "@tailwindcss/vite": "4.0.14",
     "@winnie-ui/css": "workspace:*",
+    "@winnie-ui/colors": "workspace:*",
     "@winnie-ui/icons": "workspace:*",
     "@winnie-ui/react": "workspace:*",
     "@winnie-ui/tailwind": "workspace:*",

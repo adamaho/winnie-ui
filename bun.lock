@@ -31,6 +31,7 @@
         "@radix-ui/react-scroll-area": "1.2.3",
         "@react-aria/utils": "3.28.1",
         "@tailwindcss/vite": "4.0.14",
+        "@winnie-ui/colors": "workspace:*",
         "@winnie-ui/css": "workspace:*",
         "@winnie-ui/icons": "workspace:*",
         "@winnie-ui/react": "workspace:*",
@@ -90,6 +91,15 @@
         "typescript": "5.8.2",
         "vite": "6.2.2",
         "vite-tsconfig-paths": "5.1.4",
+      },
+    },
+    "libs/colors": {
+      "name": "@winnie-ui/colors",
+      "version": "0.0.1",
+      "devDependencies": {
+        "@winnie-ui/lightning": "workspace:*",
+        "@winnie-ui/tsconfig": "workspace:*",
+        "rimraf": "6.0.1",
       },
     },
     "libs/css": {
@@ -1070,6 +1080,8 @@
     "@vscode/emmet-helper": ["@vscode/emmet-helper@2.11.0", "", { "dependencies": { "emmet": "^2.4.3", "jsonc-parser": "^2.3.0", "vscode-languageserver-textdocument": "^1.0.1", "vscode-languageserver-types": "^3.15.1", "vscode-uri": "^3.0.8" } }, "sha512-QLxjQR3imPZPQltfbWRnHU6JecWTF1QSWhx3GAKQpslx7y3Dp6sIIXhKjiUJ/BR9FX8PVthjr9PD6pNwOJfAzw=="],
 
     "@vscode/l10n": ["@vscode/l10n@0.0.18", "", {}, "sha512-KYSIHVmslkaCDyw013pphY+d7x1qV8IZupYfeIfzNA+nsaWHbn5uPuQRvdRFsa9zFzGeudPuoGoZ1Op4jrJXIQ=="],
+
+    "@winnie-ui/colors": ["@winnie-ui/colors@workspace:libs/colors"],
 
     "@winnie-ui/css": ["@winnie-ui/css@workspace:libs/css"],
 

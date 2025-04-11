@@ -8,10 +8,10 @@ import BaseHead from "../layouts/base/base-head.astro";
   <div
     class="root flex h-dvh flex-col items-center justify-center gap-5 p-9"
     data-theme="dark"
-    data-accent-color="cyan"
+    data-accent-color="red"
     style={{ background: "var(--wui-color-accent-grey-1)" }}
   >
-    <div class="flex gap-5">
+    <div class="flex gap-5" data-accent-color="red">
       {
         new Array(12).fill(0).map((_, i) => {
           return (
@@ -25,7 +25,7 @@ import BaseHead from "../layouts/base/base-head.astro";
         })
       }
     </div>
-    <div class="flex gap-5">
+    <div class="flex gap-5" data-accent-color="red">
       {
         new Array(12).fill(0).map((_, i) => {
           return (
