@@ -6,35 +6,342 @@ import BaseHead from "../layouts/base/base-head.astro";
 <BaseLayout>
   <BaseHead slot="head" />
   <div
-    class="root flex h-dvh flex-col items-center justify-center gap-5 p-9"
+    class="root flex h-dvh flex-col items-center gap-2 p-9"
     data-theme="dark"
-    data-accent-color="red"
-    style={{ background: "var(--wui-color-accent-grey-1)" }}
+    data-accent-color="lime"
   >
-    <div class="flex gap-5" data-accent-color="red">
+    <div class="flex gap-2" data-accent-color="red">
       {
         new Array(12).fill(0).map((_, i) => {
           return (
             <div
-              class="color rounded-2 text-5 flex h-[60px] w-[60px] shrink-0 items-center justify-center font-medium"
+              class="color text-5 flex h-[50px] w-[60px] shrink-0 items-center justify-center font-medium"
               data-color={i + 1}
-            >
-              {i + 1}
-            </div>
+            />
           );
         })
       }
     </div>
-    <div class="flex gap-5" data-accent-color="red">
+    <div class="flex gap-2" data-accent-color="red">
       {
         new Array(12).fill(0).map((_, i) => {
           return (
             <div
-              class="color grey rounded-2 text-5 flex h-[60px] w-[60px] shrink-0 items-center justify-center font-medium"
+              class="color grey text-5 flex h-[50px] w-[60px] shrink-0 items-center justify-center font-medium"
               data-color={i + 1}
-            >
-              {i + 1}
-            </div>
+            />
+          );
+        })
+      }
+    </div>
+    <div class="flex gap-2" data-accent-color="orange">
+      {
+        new Array(12).fill(0).map((_, i) => {
+          return (
+            <div
+              class="color text-5 flex h-[50px] w-[60px] shrink-0 items-center justify-center font-medium"
+              data-color={i + 1}
+            />
+          );
+        })
+      }
+    </div>
+    <div class="flex gap-2" data-accent-color="orange">
+      {
+        new Array(12).fill(0).map((_, i) => {
+          return (
+            <div
+              class="color grey text-5 flex h-[50px] w-[60px] shrink-0 items-center justify-center font-medium"
+              data-color={i + 1}
+            />
+          );
+        })
+      }
+    </div>
+    <div class="flex gap-2" data-accent-color="yellow">
+      {
+        new Array(12).fill(0).map((_, i) => {
+          return (
+            <div
+              class="color text-5 flex h-[50px] w-[60px] shrink-0 items-center justify-center font-medium"
+              data-color={i + 1}
+            />
+          );
+        })
+      }
+    </div>
+    <div class="flex gap-2" data-accent-color="yellow">
+      {
+        new Array(12).fill(0).map((_, i) => {
+          return (
+            <div
+              class="color grey text-5 flex h-[50px] w-[60px] shrink-0 items-center justify-center font-medium"
+              data-color={i + 1}
+            />
+          );
+        })
+      }
+    </div>
+    <div class="flex gap-2" data-accent-color="amber">
+      {
+        new Array(12).fill(0).map((_, i) => {
+          return (
+            <div
+              class="color text-5 flex h-[50px] w-[60px] shrink-0 items-center justify-center font-medium"
+              data-color={i + 1}
+            />
+          );
+        })
+      }
+    </div>
+    <div class="flex gap-2" data-accent-color="amber">
+      {
+        new Array(12).fill(0).map((_, i) => {
+          return (
+            <div
+              class="color grey text-5 flex h-[50px] w-[60px] shrink-0 items-center justify-center font-medium"
+              data-color={i + 1}
+            />
+          );
+        })
+      }
+    </div>
+    <div class="flex gap-2" data-accent-color="lime">
+      {
+        new Array(12).fill(0).map((_, i) => {
+          return (
+            <div
+              class="color text-5 flex h-[50px] w-[60px] shrink-0 items-center justify-center font-medium"
+              data-color={i + 1}
+            />
+          );
+        })
+      }
+    </div>
+    <div class="flex gap-2" data-accent-color="lime">
+      {
+        new Array(12).fill(0).map((_, i) => {
+          return (
+            <div
+              class="color grey text-5 flex h-[50px] w-[60px] shrink-0 items-center justify-center font-medium"
+              data-color={i + 1}
+            />
+          );
+        })
+      }
+    </div>
+    <div class="flex gap-2" data-accent-color="green">
+      {
+        new Array(12).fill(0).map((_, i) => {
+          return (
+            <div
+              class="color text-5 flex h-[50px] w-[60px] shrink-0 items-center justify-center font-medium"
+              data-color={i + 1}
+            />
+          );
+        })
+      }
+    </div>
+    <div class="flex gap-2" data-accent-color="lime">
+      {
+        new Array(12).fill(0).map((_, i) => {
+          return (
+            <div
+              class="color grey text-5 flex h-[50px] w-[60px] shrink-0 items-center justify-center font-medium"
+              data-color={i + 1}
+            />
+          );
+        })
+      }
+    </div>
+    <div class="flex gap-2" data-accent-color="forest">
+      {
+        new Array(12).fill(0).map((_, i) => {
+          return (
+            <div
+              class="color text-5 flex h-[50px] w-[60px] shrink-0 items-center justify-center font-medium"
+              data-color={i + 1}
+            />
+          );
+        })
+      }
+    </div>
+    <div class="flex gap-2" data-accent-color="forest">
+      {
+        new Array(12).fill(0).map((_, i) => {
+          return (
+            <div
+              class="color grey text-5 flex h-[50px] w-[60px] shrink-0 items-center justify-center font-medium"
+              data-color={i + 1}
+            />
+          );
+        })
+      }
+    </div>
+    <div class="flex gap-2" data-accent-color="sky">
+      {
+        new Array(12).fill(0).map((_, i) => {
+          return (
+            <div
+              class="color text-5 flex h-[50px] w-[60px] shrink-0 items-center justify-center font-medium"
+              data-color={i + 1}
+            />
+          );
+        })
+      }
+    </div>
+    <div class="flex gap-2" data-accent-color="sky">
+      {
+        new Array(12).fill(0).map((_, i) => {
+          return (
+            <div
+              class="color grey text-5 flex h-[50px] w-[60px] shrink-0 items-center justify-center font-medium"
+              data-color={i + 1}
+            />
+          );
+        })
+      }
+    </div>
+    <div class="flex gap-2" data-accent-color="blue">
+      {
+        new Array(12).fill(0).map((_, i) => {
+          return (
+            <div
+              class="color text-5 flex h-[50px] w-[60px] shrink-0 items-center justify-center font-medium"
+              data-color={i + 1}
+            />
+          );
+        })
+      }
+    </div>
+    <div class="flex gap-2" data-accent-color="blue">
+      {
+        new Array(12).fill(0).map((_, i) => {
+          return (
+            <div
+              class="color grey text-5 flex h-[50px] w-[60px] shrink-0 items-center justify-center font-medium"
+              data-color={i + 1}
+            />
+          );
+        })
+      }
+    </div>
+    <div class="flex gap-2" data-accent-color="indigo">
+      {
+        new Array(12).fill(0).map((_, i) => {
+          return (
+            <div
+              class="color text-5 flex h-[50px] w-[60px] shrink-0 items-center justify-center font-medium"
+              data-color={i + 1}
+            />
+          );
+        })
+      }
+    </div>
+    <div class="flex gap-2" data-accent-color="indigo">
+      {
+        new Array(12).fill(0).map((_, i) => {
+          return (
+            <div
+              class="color grey text-5 flex h-[50px] w-[60px] shrink-0 items-center justify-center font-medium"
+              data-color={i + 1}
+            />
+          );
+        })
+      }
+    </div>
+    <div class="flex gap-2" data-accent-color="purple">
+      {
+        new Array(12).fill(0).map((_, i) => {
+          return (
+            <div
+              class="color text-5 flex h-[50px] w-[60px] shrink-0 items-center justify-center font-medium"
+              data-color={i + 1}
+            />
+          );
+        })
+      }
+    </div>
+    <div class="flex gap-2" data-accent-color="purple">
+      {
+        new Array(12).fill(0).map((_, i) => {
+          return (
+            <div
+              class="color grey text-5 flex h-[50px] w-[60px] shrink-0 items-center justify-center font-medium"
+              data-color={i + 1}
+            />
+          );
+        })
+      }
+    </div>
+    <div class="flex gap-2" data-accent-color="fuchsia">
+      {
+        new Array(12).fill(0).map((_, i) => {
+          return (
+            <div
+              class="color text-5 flex h-[50px] w-[60px] shrink-0 items-center justify-center font-medium"
+              data-color={i + 1}
+            />
+          );
+        })
+      }
+    </div>
+    <div class="flex gap-2" data-accent-color="fuchsia">
+      {
+        new Array(12).fill(0).map((_, i) => {
+          return (
+            <div
+              class="color grey text-5 flex h-[50px] w-[60px] shrink-0 items-center justify-center font-medium"
+              data-color={i + 1}
+            />
+          );
+        })
+      }
+    </div>
+    <div class="flex gap-2" data-accent-color="pink">
+      {
+        new Array(12).fill(0).map((_, i) => {
+          return (
+            <div
+              class="color text-5 flex h-[50px] w-[60px] shrink-0 items-center justify-center font-medium"
+              data-color={i + 1}
+            />
+          );
+        })
+      }
+    </div>
+    <div class="flex gap-2" data-accent-color="pink">
+      {
+        new Array(12).fill(0).map((_, i) => {
+          return (
+            <div
+              class="color grey text-5 flex h-[50px] w-[60px] shrink-0 items-center justify-center font-medium"
+              data-color={i + 1}
+            />
+          );
+        })
+      }
+    </div>
+    <div class="flex gap-2" data-accent-color="brown">
+      {
+        new Array(12).fill(0).map((_, i) => {
+          return (
+            <div
+              class="color text-5 flex h-[50px] w-[60px] shrink-0 items-center justify-center font-medium"
+              data-color={i + 1}
+            />
+          );
+        })
+      }
+    </div>
+    <div class="flex gap-2" data-accent-color="brown">
+      {
+        new Array(12).fill(0).map((_, i) => {
+          return (
+            <div
+              class="color grey text-5 flex h-[50px] w-[60px] shrink-0 items-center justify-center font-medium"
+              data-color={i + 1}
+            />
           );
         })
       }
@@ -108,24 +415,14 @@ import BaseHead from "../layouts/base/base-head.astro";
 
     &[data-color="10"] {
       background: var(--wui-color-accent-10);
-      border: 1px solid var(--wui-color-accent-11);
     }
 
     &[data-color="11"] {
       background: var(--wui-color-accent-11);
-      border: 1px solid var(--wui-color-accent-12);
     }
 
     &[data-color="12"] {
       background: var(--wui-color-accent-12);
-    }
-
-    &[data-color="13"] {
-      background: var(--wui-color-accent-13);
-    }
-
-    &[data-color="14"] {
-      background: var(--wui-color-accent-14);
     }
   }
 
@@ -178,12 +475,10 @@ import BaseHead from "../layouts/base/base-head.astro";
 
     &[data-color="10"] {
       background: var(--wui-color-accent-grey-10);
-      border: 1px solid var(--wui-color-accent-grey-11);
     }
 
     &[data-color="11"] {
       background: var(--wui-color-accent-grey-11);
-      border: 1px solid var(--wui-color-accent-grey-12);
     }
 
     &[data-color="12"] {

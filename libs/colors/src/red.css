@@ -10,9 +10,9 @@
     --wui-color-red-4: color-mix(in oklch, oklch(0.7 0.23 var(--wui-hue-red)), black 63%);
     --wui-color-red-5: color-mix(in oklch, oklch(0.7 0.23 var(--wui-hue-red)), black 58%);
     --wui-color-red-6: color-mix(in oklch, oklch(0.7 0.23 var(--wui-hue-red)), black 50%);
-    --wui-color-red-7: color-mix(in oklch, oklch(0.63 0.23 var(--wui-hue-red)), black 10%);
-    --wui-color-red-8: color-mix(in oklch, oklch(0.63 0.23 var(--wui-hue-red)), black 15%);
-    --wui-color-red-9: color-mix(in oklch, oklch(0.63 0.23 var(--wui-hue-red)), black 20%);
+    --wui-color-red-7: color-mix(in oklch, oklch(0.7 0.28 var(--wui-hue-red)), black 10%);
+    --wui-color-red-8: color-mix(in oklch, oklch(0.7 0.28 var(--wui-hue-red)), black 15%);
+    --wui-color-red-9: color-mix(in oklch, oklch(0.7 0.28 var(--wui-hue-red)), black 20%);
     --wui-color-red-10: color-mix(in oklch, oklch(0.78 0.23 var(--wui-hue-red)), white 26%);
     --wui-color-red-11: color-mix(in oklch, oklch(0.78 0.23 var(--wui-hue-red)), white 60%);
     --wui-color-red-12: color-mix(in oklch, oklch(0.78 0.23 var(--wui-hue-red)), white 95%);

@@ -1,11 +1,15 @@
 @import "./red.css";
 @import "./orange.css";
+@import "./amber.css";
 @import "./yellow.css";
-@import "./green.css";
 @import "./lime.css";
-@import "./cyan.css";
+@import "./green.css";
+@import "./forest.css";
+@import "./sky.css";
 @import "./blue.css";
+@import "./indigo.css";
 @import "./purple.css";
+@import "./fuchsia.css";
 @import "./pink.css";
 @import "./brown.css";
 
@@ -18,28 +22,44 @@
     --wui-hue-base: var(--wui-hue-orange);
   }
 
-  [data-accent-color="yellow"] {
-    --wui-hue-base: var(--wui-hue-yellow);
+  [data-accent-color="amber"] {
+    --wui-hue-base: var(--wui-hue-amber);
   }
 
-  [data-accent-color="green"] {
-    --wui-hue-base: var(--wui-hue-green);
+  [data-accent-color="yellow"] {
+    --wui-hue-base: var(--wui-hue-yellow);
   }
 
   [data-accent-color="lime"] {
     --wui-hue-base: var(--wui-hue-lime);
   }
 
-  [data-accent-color="cyan"] {
-    --wui-hue-base: var(--wui-hue-cyan);
+  [data-accent-color="green"] {
+    --wui-hue-base: var(--wui-hue-green);
+  }
+
+  [data-accent-color="forest"] {
+    --wui-hue-base: var(--wui-hue-forest);
+  }
+
+  [data-accent-color="sky"] {
+    --wui-hue-base: var(--wui-hue-sky);
   }
 
   [data-accent-color="blue"] {
     --wui-hue-base: var(--wui-hue-blue);
   }
 
+  [data-accent-color="indigo"] {
+    --wui-hue-base: var(--wui-hue-indigo);
+  }
+
   [data-accent-color="purple"] {
     --wui-hue-base: var(--wui-hue-purple);
+  }
+
+  [data-accent-color="fuchsia"] {
+    --wui-hue-base: var(--wui-hue-fuchsia);
   }
 
   [data-accent-color="pink"] {

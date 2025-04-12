@@ -1,0 +1,14 @@
+---
+import BaseLayout from "../../layouts/base/layout.astro";
+import BaseHead from "../../layouts/base/base-head.astro";
+
+export const prerender = true;
+---
+
+<BaseLayout>
+  <BaseHead
+    slot="head"
+    title="Winnie Colors"
+    description="Beautifully crafted color system for building applications."
+  />
+</BaseLayout>

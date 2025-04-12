@@ -1,6 +1,6 @@
 @layer colors {
   :root {
-    --wui-hue-lime: 115.235;
+    --wui-hue-lime: 130.235;
   }
 
   [data-theme="dark"] {
@@ -10,9 +10,9 @@
     --wui-color-lime-4: color-mix(in oklch, oklch(0.7 0.23 var(--wui-hue-lime)), black 63%);
     --wui-color-lime-5: color-mix(in oklch, oklch(0.7 0.23 var(--wui-hue-lime)), black 58%);
     --wui-color-lime-6: color-mix(in oklch, oklch(0.7 0.23 var(--wui-hue-lime)), black 50%);
-    --wui-color-lime-7: color-mix(in oklch, oklch(0.84 0.33 var(--wui-hue-lime)), black 0%);
-    --wui-color-lime-8: color-mix(in oklch, oklch(0.84 0.33 var(--wui-hue-lime)), black 10%);
-    --wui-color-lime-9: color-mix(in oklch, oklch(0.84 0.33 var(--wui-hue-lime)), black 16%);
+    --wui-color-lime-7: color-mix(in oklch, oklch(0.9 0.33 var(--wui-hue-lime)), black 0%);
+    --wui-color-lime-8: color-mix(in oklch, oklch(0.9 0.33 var(--wui-hue-lime)), black 10%);
+    --wui-color-lime-9: color-mix(in oklch, oklch(0.9 0.33 var(--wui-hue-lime)), black 16%);
     --wui-color-lime-10: color-mix(in oklch, oklch(0.78 0.23 var(--wui-hue-lime)), white 26%);
     --wui-color-lime-11: color-mix(in oklch, oklch(0.78 0.23 var(--wui-hue-lime)), white 60%);
     --wui-color-lime-12: color-mix(in oklch, oklch(0.78 0.23 var(--wui-hue-lime)), white 95%);
