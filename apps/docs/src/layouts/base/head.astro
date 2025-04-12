@@ -17,6 +17,7 @@ interface Props {
   title: string;
   description: string;
   image?: string;
+  slot: "head";
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
