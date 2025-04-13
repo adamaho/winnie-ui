@@ -1,0 +1,91 @@
+<div class="colors">
+  {
+    new Array(12).fill(0).map((_, i) => {
+      return (
+        <span class="color" data-color={i + 1}>
+          {i + 1}
+        </span>
+      );
+    })
+  }
+</div>
+
+<style>
+  .colors {
+    display: grid;
+    grid-template-row: repeat(12, 1fr);
+    gap: var(--wui-space-1);
+    height: 100svh;
+    margin: var(--wui-space-1);
+
+    .color {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      width: calc(32px * var(--wui-scale));
+      transition-property: width;
+      transition-duration: var(--wui-duration-1);
+      transition-timing-function: linear(0, 0.5 50%, 0.75 80%, 1);
+
+      &:hover {
+        width: 90px;
+      }
+
+      :hover + & {
+        width: 60px;
+      }
+
+      &:has(+ :hover) {
+        width: 60px;
+      }
+
+      &[data-color="1"] {
+        background: var(--wui-color-accent-1);
+      }
+
+      &[data-color="2"] {
+        background: var(--wui-color-accent-2);
+      }
+
+      &[data-color="3"] {
+        background: var(--wui-color-accent-3);
+      }
+
+      &[data-color="4"] {
+        background: var(--wui-color-accent-4);
+      }
+
+      &[data-color="5"] {
+        background: var(--wui-color-accent-5);
+      }
+
+      &[data-color="6"] {
+        background: var(--wui-color-accent-6);
+      }
+
+      &[data-color="7"] {
+        background: var(--wui-color-accent-7);
+      }
+
+      &[data-color="8"] {
+        background: var(--wui-color-accent-8);
+      }
+
+      &[data-color="9"] {
+        background: var(--wui-color-accent-9);
+      }
+
+      &[data-color="10"] {
+        background: var(--wui-color-accent-10);
+      }
+
+      &[data-color="11"] {
+        background: var(--wui-color-accent-11);
+      }
+
+      &[data-color="12"] {
+        background: var(--wui-color-accent-12);
+      }
+    }
+  }
+</style>
