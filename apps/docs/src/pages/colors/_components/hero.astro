@@ -1,13 +1,28 @@
 <div class="hero">
-  <h1 data-component="heading" data-size="9" data-weight="normal">
-    Winnie Colors
-  </h1>
+  <h1>A beautifully crafted color system for building applications.</h1>
+  <p>asdfasdfasdfasdfasdfasdf</p>
 </div>
 
 <style>
   .hero {
-    [data-component="heading"] {
-      color: var(--wui-color-accent-11);
+    max-width: 65ch;
+
+    h1,
+    p {
+      font-weight: var(--wui-font-weight-normal);
+    }
+
+    h1 {
+      color: var(--wui-color-accent-grey-12);
+      font-family: var(--wui-font-family-serif);
+      font-size: var(--wui-font-size-9);
+      line-height: var(--wui-line-height-9);
+    }
+
+    p {
+      font-family: var(--wui-font-family-sans);
+      font-size: var(--wui-font-size-5);
+      color: var(--wui-color-accent-grey-10);
     }
   }
 </style>

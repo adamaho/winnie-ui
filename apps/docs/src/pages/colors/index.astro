@@ -1,7 +1,7 @@
 ---
 import ColorsLayout from "../../layouts/colors/layout.astro";
 
-import Accents from "./_components/accents.astro";
+import { Accents } from "./_components/accents";
 import Hero from "./_components/hero.astro";
 
 import "./_styles/global.css";
@@ -10,7 +10,7 @@ export const prerender = true;
 ---
 
 <ColorsLayout>
-  <Accents />
+  <Accents client:load />
   <Hero />
 
   <!-- <div>

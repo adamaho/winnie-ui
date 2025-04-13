@@ -1,0 +1,22 @@
+.accent {
+  background: var(--wui-color-accent-5);
+  height: var(--accent-height);
+  transition-property: height, background;
+  transition-duration: var(--wui-duration-1);
+  transition-timing-function: linear(0, 0.5 50%, 0.75 80%, 1);
+
+  &:is([data-hovered], [data-focus-visible], [data-pressed]) {
+    background: var(--wui-color-accent-7);
+    height: var(--max-accent-height);
+  }
+
+  [data-hovered] + & {
+    background: var(--wui-color-accent-6);
+    height: calc(var(--max-accent-height) / 2);
+  }
+
+  &:has(+ [data-hovered]) {
+    background: var(--wui-color-accent-6);
+    height: calc(var(--max-accent-height) / 2);
+  }
+}
