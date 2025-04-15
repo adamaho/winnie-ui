@@ -1,15 +1,15 @@
 ---
-import ColorsLayout from "../../layouts/colors/layout.astro";
+import ColorsLayout from "./_components/layout.astro";
 
 import { Accents } from "./_components/accents";
+import Header from "./_components/header.astro";
 import Hero from "./_components/hero.astro";
-
-import "./_styles/global.css";
 
 export const prerender = true;
 ---
 
 <ColorsLayout>
+  <Header />
   <Accents client:load />
   <Hero />
 

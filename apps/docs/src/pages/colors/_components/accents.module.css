@@ -1,13 +1,8 @@
 .accents {
-  --accent-height: calc(32px * var(--wui-scale));
-  --max-accent-height: calc(var(--accent-height) * 3);
-
   align-items: flex-start;
-  bottom: var(--wui-space-4);
   display: grid;
   gap: var(--wui-space-1);
   grid-template-columns: repeat(13, 1fr);
-  height: calc(var(--max-accent-height) + var(--wui-space-2) * 2);
   justify-content: center;
   width: 100%;
 }

@@ -23,6 +23,7 @@
     "@fontsource/geist-mono": "5.2.5",
     "@fontsource/inter": "5.2.5",
     "@fontsource/judson": "^5.2.5",
+    "@fontsource/playfair-display": "^5.2.5",
     "@radix-ui/react-checkbox": "1.1.5",
     "@radix-ui/react-collapsible": "1.1.4",
     "@radix-ui/react-dialog": "1.1.7",

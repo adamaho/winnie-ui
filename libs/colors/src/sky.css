@@ -17,7 +17,7 @@
     --wui-color-sky-11: color-mix(in oklch, oklch(0.78 0.15 var(--wui-hue-sky)), white 60%);
     --wui-color-sky-12: color-mix(in oklch, oklch(0.78 0.15 var(--wui-hue-sky)), white 95%);
 
-    --wui-color-sky-contrast: white;
+    --wui-color-sky-contrast: black;
 
     --wui-color-sky-grey-1: color-mix(in oklch, oklch(0.7 0.045 var(--wui-hue-sky)), black 76%);
     --wui-color-sky-grey-2: color-mix(in oklch, oklch(0.7 0.045 var(--wui-hue-sky)), black 72%);

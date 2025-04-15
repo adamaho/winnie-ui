@@ -17,7 +17,7 @@
     --wui-color-green-11: color-mix(in oklch, oklch(0.78 0.27 var(--wui-hue-green)), white 60%);
     --wui-color-green-12: color-mix(in oklch, oklch(0.78 0.27 var(--wui-hue-green)), white 95%);
 
-    --wui-color-green-contrast: white;
+    --wui-color-green-contrast: black;
 
     --wui-color-green-grey-1: color-mix(in oklch, oklch(0.7 0.04 var(--wui-hue-green)), black 76%);
     --wui-color-green-grey-2: color-mix(in oklch, oklch(0.7 0.04 var(--wui-hue-green)), black 72%);

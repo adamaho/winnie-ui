@@ -1,11 +1,16 @@
-<div class="hero">
-  <h1>A beautifully crafted color system for building applications.</h1>
-  <p>asdfasdfasdfasdfasdfasdf</p>
-</div>
+<section class="hero">
+  <h1>A hand-crafted color palette for building beautiful user interfaces</h1>
+  <p>An accessible color system for building beautiful user interfaces</p>
+</section>
 
 <style>
   .hero {
-    max-width: 65ch;
+    background: linear-gradient(
+      to bottom,
+      var(--wui-color-accent-grey-2),
+      var(--wui-color-accent-grey-4)
+    );
+    height: calc(100vh - var(--page-header-height) - var(--page-accent-height));
 
     h1,
     p {
@@ -13,16 +18,20 @@
     }
 
     h1 {
-      color: var(--wui-color-accent-grey-12);
+      color: var(--wui-color-accent-12);
       font-family: var(--wui-font-family-serif);
-      font-size: var(--wui-font-size-9);
-      line-height: var(--wui-line-height-9);
+      font-size: var(--wui-font-size-8);
+      font-weight: var(--wui-font-weight-bold);
+      letter-spacing: var(--wui-letter-spacing-9);
+      line-height: var(--wui-line-height-8);
     }
 
     p {
+      color: var(--wui-color-accent-grey-10);
       font-family: var(--wui-font-family-sans);
       font-size: var(--wui-font-size-5);
-      color: var(--wui-color-accent-grey-10);
+      line-height: var(--wui-line-height-5);
+      margin-top: var(--wui-space-3);
     }
   }
 </style>
