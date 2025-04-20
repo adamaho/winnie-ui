@@ -1,9 +1,8 @@
-@import "./red.css";
+/* @import "./red.css";
 @import "./orange.css";
 @import "./amber.css";
-@import "./yellow.css";
-@import "./lime.css";
-@import "./green.css";
+@import "./yellow.css"; */
+/* @import "./green.css";
 @import "./forest.css";
 @import "./sky.css";
 @import "./blue.css";
@@ -11,66 +10,32 @@
 @import "./purple.css";
 @import "./fuchsia.css";
 @import "./pink.css";
-@import "./brown.css";
+@import "./brown.css"; */
+
+@import "./dark/index.css";
 
 @layer color {
-  [data-accent-color="red"] {
-    --wui-hue-base: var(--wui-hue-red);
+  @property --w-c-c {
+    syntax: "*";
+    inherits: false;
+    initial-value: 0.2341;
   }
 
-  [data-accent-color="orange"] {
-    --wui-hue-base: var(--wui-hue-orange);
+  @property --w-c-h {
+    syntax: "*";
+    inherits: false;
+    initial-value: h;
   }
 
-  [data-accent-color="amber"] {
-    --wui-hue-base: var(--wui-hue-amber);
+  @property --w-c-l-dim {
+    syntax: "*";
+    inherits: false;
+    initial-value: 0.45;
   }
 
-  [data-accent-color="yellow"] {
-    --wui-hue-base: var(--wui-hue-yellow);
-  }
-
-  [data-accent-color="lime"] {
-    --wui-hue-base: var(--wui-hue-lime);
-  }
-
-  [data-accent-color="green"] {
-    --wui-hue-base: var(--wui-hue-green);
-  }
-
-  [data-accent-color="forest"] {
-    --wui-hue-base: var(--wui-hue-forest);
-  }
-
-  [data-accent-color="sky"] {
-    --wui-hue-base: var(--wui-hue-sky);
-  }
-
-  [data-accent-color="blue"] {
-    --wui-hue-base: var(--wui-hue-blue);
-  }
-
-  [data-accent-color="indigo"] {
-    --wui-hue-base: var(--wui-hue-indigo);
-  }
-
-  [data-accent-color="purple"] {
-    --wui-hue-base: var(--wui-hue-purple);
-  }
-
-  [data-accent-color="fuchsia"] {
-    --wui-hue-base: var(--wui-hue-fuchsia);
-  }
-
-  [data-accent-color="pink"] {
-    --wui-hue-base: var(--wui-hue-pink);
-  }
-
-  [data-accent-color="grey"] {
-    --wui-hue-base: var(--wui-hue-grey);
-  }
-
-  [data-accent-color="brown"] {
-    --wui-hue-base: var(--wui-hue-brown);
+  @property --w-c-l-bright {
+    syntax: "*";
+    inherits: false;
+    initial-value: 0.84;
   }
 }
