@@ -33,9 +33,21 @@
     initial-value: 0.45;
   }
 
+  @property --w-c-c-grey-dim {
+    syntax: "*";
+    inherits: false;
+    initial-value: 0.03;
+  }
+
   @property --w-c-l-bright {
     syntax: "*";
     inherits: false;
     initial-value: 0.84;
+  }
+
+  @property --w-c-c-grey-bright {
+    syntax: "*";
+    inherits: false;
+    initial-value: 0.047;
   }
 }
