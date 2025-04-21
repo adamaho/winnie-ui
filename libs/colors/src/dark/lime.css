@@ -1,0 +1,69 @@
+@layer color {
+  :root {
+    --w-c-h-lime: 130;
+  }
+
+  [data-theme="dark"] {
+    --w-c-lime-1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.2341 var(--w-c-h-lime)), black 80%);
+    --w-c-lime-2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.2341 var(--w-c-h-lime)), black 76%);
+    --w-c-lime-3: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.2341 var(--w-c-h-lime)), black 70%);
+    --w-c-lime-4: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.2341 var(--w-c-h-lime)), black 64%);
+    --w-c-lime-5: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.2341 var(--w-c-h-lime)), black 58%);
+    --w-c-lime-6: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.2341 var(--w-c-h-lime)), black 52%);
+    --w-c-lime-7: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.2341 var(--w-c-h-lime)), black 46%);
+    --w-c-lime-8: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.2341 var(--w-c-h-lime)), black 40%);
+    --w-c-lime-9: oklch(var(--w-c-l-bright) 0.2341 var(--w-c-h-lime));
+    --w-c-lime-10: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.2341 var(--w-c-h-lime)), white 20%);
+    --w-c-lime-11: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.2341 var(--w-c-h-lime)), white 30%);
+    --w-c-lime-12: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.2341 var(--w-c-h-lime)), white 45%);
+    --w-c-lime-13: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.2341 var(--w-c-h-lime)), white 90%);
+    --w-c-lime-contrast: black;
+
+    --w-c-lime-g1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-lime)), black 80%);
+    --w-c-lime-g2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-lime)), black 76%);
+    --w-c-lime-g3: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-lime)), black 70%);
+    --w-c-lime-g4: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-lime)), black 64%);
+    --w-c-lime-g5: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-lime)), black 58%);
+    --w-c-lime-g6: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-lime)), black 52%);
+    --w-c-lime-g7: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-lime)), black 46%);
+    --w-c-lime-g8: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-lime)), black 40%);
+    --w-c-lime-g9: oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-lime));
+    --w-c-lime-g10: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-lime)), white 20%);
+    --w-c-lime-g11: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-lime)), white 30%);
+    --w-c-lime-g12: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-lime)), white 45%);
+    --w-c-lime-g13: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-lime)), white 90%);
+    --w-c-lime-gcontrast: black;
+  }
+
+  [data-accent-color="lime"] {
+    --w-c-accent-1: var(--w-c-lime-1);
+    --w-c-accent-2: var(--w-c-lime-2);
+    --w-c-accent-3: var(--w-c-lime-3);
+    --w-c-accent-4: var(--w-c-lime-4);
+    --w-c-accent-5: var(--w-c-lime-5);
+    --w-c-accent-6: var(--w-c-lime-6);
+    --w-c-accent-7: var(--w-c-lime-7);
+    --w-c-accent-8: var(--w-c-lime-8);
+    --w-c-accent-9: var(--w-c-lime-9);
+    --w-c-accent-10: var(--w-c-lime-10);
+    --w-c-accent-11: var(--w-c-lime-11);
+    --w-c-accent-12: var(--w-c-lime-12);
+    --w-c-accent-13: var(--w-c-lime-13);
+    --w-c-accent-contrast: var(--w-c-lime-contrast);
+
+    --w-c-accent-g1: var(--w-c-lime-g1);
+    --w-c-accent-g2: var(--w-c-lime-g2);
+    --w-c-accent-g3: var(--w-c-lime-g3);
+    --w-c-accent-g4: var(--w-c-lime-g4);
+    --w-c-accent-g5: var(--w-c-lime-g5);
+    --w-c-accent-g6: var(--w-c-lime-g6);
+    --w-c-accent-g7: var(--w-c-lime-g7);
+    --w-c-accent-g8: var(--w-c-lime-g8);
+    --w-c-accent-g9: var(--w-c-lime-g9);
+    --w-c-accent-g10: var(--w-c-lime-g10);
+    --w-c-accent-g11: var(--w-c-lime-g11);
+    --w-c-accent-g12: var(--w-c-lime-g12);
+    --w-c-accent-g13: var(--w-c-lime-g13);
+    --w-c-accent-gcontrast: var(--w-c-lime-gcontrast);
+  }
+}

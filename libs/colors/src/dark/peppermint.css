@@ -1,0 +1,69 @@
+@layer color {
+  :root {
+    --w-c-h-peppermint: 150;
+  }
+
+  [data-theme="dark"] {
+    --w-c-peppermint-1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.19 var(--w-c-h-peppermint)), black 80%);
+    --w-c-peppermint-2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.19 var(--w-c-h-peppermint)), black 75%);
+    --w-c-peppermint-3: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.19 var(--w-c-h-peppermint)), black 68%);
+    --w-c-peppermint-4: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.19 var(--w-c-h-peppermint)), black 60%);
+    --w-c-peppermint-5: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.19 var(--w-c-h-peppermint)), black 54%);
+    --w-c-peppermint-6: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.19 var(--w-c-h-peppermint)), black 47%);
+    --w-c-peppermint-7: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.19 var(--w-c-h-peppermint)), black 39%);
+    --w-c-peppermint-8: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.19 var(--w-c-h-peppermint)), black 30%);
+    --w-c-peppermint-9: oklch(var(--w-c-l-bright) 0.19 var(--w-c-h-peppermint));
+    --w-c-peppermint-10: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.19 var(--w-c-h-peppermint)), white 20%);
+    --w-c-peppermint-11: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.19 var(--w-c-h-peppermint)), white 30%);
+    --w-c-peppermint-12: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.19 var(--w-c-h-peppermint)), white 45%);
+    --w-c-peppermint-13: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.19 var(--w-c-h-peppermint)), white 90%);
+    --w-c-peppermint-contrast: black;
+
+    --w-c-peppermint-g1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-peppermint)), black 80%);
+    --w-c-peppermint-g2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-peppermint)), black 75%);
+    --w-c-peppermint-g3: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-peppermint)), black 68%);
+    --w-c-peppermint-g4: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-peppermint)), black 60%);
+    --w-c-peppermint-g5: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-peppermint)), black 54%);
+    --w-c-peppermint-g6: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-peppermint)), black 47%);
+    --w-c-peppermint-g7: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-peppermint)), black 39%);
+    --w-c-peppermint-g8: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-peppermint)), black 30%);
+    --w-c-peppermint-g9: oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-peppermint));
+    --w-c-peppermint-g10: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-peppermint)), white 20%);
+    --w-c-peppermint-g11: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-peppermint)), white 30%);
+    --w-c-peppermint-g12: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-peppermint)), white 45%);
+    --w-c-peppermint-g13: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-peppermint)), white 90%);
+    --w-c-peppermint-gcontrast: black;
+  }
+
+  [data-accent-color="peppermint"] {
+    --w-c-accent-1: var(--w-c-peppermint-1);
+    --w-c-accent-2: var(--w-c-peppermint-2);
+    --w-c-accent-3: var(--w-c-peppermint-3);
+    --w-c-accent-4: var(--w-c-peppermint-4);
+    --w-c-accent-5: var(--w-c-peppermint-5);
+    --w-c-accent-6: var(--w-c-peppermint-6);
+    --w-c-accent-7: var(--w-c-peppermint-7);
+    --w-c-accent-8: var(--w-c-peppermint-8);
+    --w-c-accent-9: var(--w-c-peppermint-9);
+    --w-c-accent-10: var(--w-c-peppermint-10);
+    --w-c-accent-11: var(--w-c-peppermint-11);
+    --w-c-accent-12: var(--w-c-peppermint-12);
+    --w-c-accent-13: var(--w-c-peppermint-13);
+    --w-c-accent-contrast: var(--w-c-peppermint-contrast);
+
+    --w-c-accent-g1: var(--w-c-peppermint-g1);
+    --w-c-accent-g2: var(--w-c-peppermint-g2);
+    --w-c-accent-g3: var(--w-c-peppermint-g3);
+    --w-c-accent-g4: var(--w-c-peppermint-g4);
+    --w-c-accent-g5: var(--w-c-peppermint-g5);
+    --w-c-accent-g6: var(--w-c-peppermint-g6);
+    --w-c-accent-g7: var(--w-c-peppermint-g7);
+    --w-c-accent-g8: var(--w-c-peppermint-g8);
+    --w-c-accent-g9: var(--w-c-peppermint-g9);
+    --w-c-accent-g10: var(--w-c-peppermint-g10);
+    --w-c-accent-g11: var(--w-c-peppermint-g11);
+    --w-c-accent-g12: var(--w-c-peppermint-g12);
+    --w-c-accent-g13: var(--w-c-peppermint-g13);
+    --w-c-accent-gcontrast: var(--w-c-peppermint-gcontrast);
+  }
+}

@@ -5,7 +5,7 @@ import BaseHead from "../layouts/base/head.astro";
 
 <BaseLayout>
   <BaseHead slot="head" title="Playground" description="Place to play around" />
-  <div data-component="layout" data-accent-color="lime-dim">
+  <div data-component="layout" data-accent-color="peppermint" class="grey">
     <nav data-component="layout-sidebar"></nav>
     <main data-component="layout-content">
       <div data-component="page">
@@ -35,6 +35,19 @@ import BaseHead from "../layouts/base/head.astro";
               </footer>
             </div>
           </div>
+          <div data-component="page-block" class="black flex gap-1 p-3">
+            <span class="chip h-[50px] w-[50px]" data-accent-color="lime"
+            ></span>
+            <span class="chip h-[50px] w-[50px]" data-accent-color="grass"
+            ></span>
+            <span class="chip h-[50px] w-[50px]" data-accent-color="peppermint"
+            ></span>
+            <span class="chip h-[50px] w-[50px]" data-accent-color="pine"
+            ></span>
+            <span class="chip h-[50px] w-[50px]" data-accent-color="teal">
+            </span>
+            <span class="chip h-[50px] w-[50px]" data-accent-color="sea"></span>
+          </div>
         </div>
       </div>
     </main>
@@ -46,65 +59,145 @@ import BaseHead from "../layouts/base/head.astro";
     background: black;
   }
 
-  [data-component="layout"] {
-    background: var(--w-c-accent-g1);
+  .chip {
+    background: var(--w-c-accent-9);
+  }
 
-    [data-component="page"] {
-      background: var(--w-c-accent-g2);
-      border: 1px solid var(--w-c-accent-g3);
+  .grey {
+    &[data-component="layout"] {
+      background: var(--w-c-accent-g1);
 
-      [data-component="page-header"] {
-        border-bottom: 1px solid var(--w-c-accent-g3);
-      }
+      [data-component="page"] {
+        background: var(--w-c-accent-g2);
+        border: 1px solid var(--w-c-accent-g3);
 
-      [data-component="page-content"] {
-        padding: var(--wui-space-5);
-      }
+        [data-component="page-header"] {
+          border-bottom: 1px solid var(--w-c-accent-g3);
+        }
 
-      [data-component="page-block"] {
-        background: var(--w-c-accent-g3);
-        border: 1px solid var(--w-c-accent-g4);
-        border-radius: var(--wui-border-radius-5);
+        [data-component="page-content"] {
+          padding: var(--wui-space-5);
+        }
 
-        div {
-          background: var(--w-c-accent-g4);
-          border: 1px solid var(--w-c-accent-g5);
+        [data-component="page-block"] {
+          &.black {
+            background: black;
+          }
+
+          background: var(--w-c-accent-g3);
+          border: 1px solid var(--w-c-accent-g4);
+          border-radius: var(--wui-border-radius-5);
 
           div {
-            background: var(--w-c-accent-g5);
-            border: 1px solid var(--w-c-accent-g6);
+            background: var(--w-c-accent-g4);
+            border: 1px solid var(--w-c-accent-g5);
 
             div {
-              background: var(--w-c-accent-g6);
-              border: 1px solid var(--w-c-accent-g7);
+              background: var(--w-c-accent-g5);
+              border: 1px solid var(--w-c-accent-g6);
 
               div {
-                background: var(--w-c-accent-g7);
-                border: 1px solid var(--w-c-accent-g8);
+                background: var(--w-c-accent-g6);
+                border: 1px solid var(--w-c-accent-g7);
+
+                div {
+                  background: var(--w-c-accent-g7);
+                  border: 1px solid var(--w-c-accent-g8);
+                }
+              }
+            }
+
+            [data-component="heading"] {
+              color: var(--w-c-accent-g13);
+              letter-spacing: var(--wui-letter-spacing-9);
+            }
+
+            [data-component="text"] {
+              color: var(--w-c-accent-g12);
+            }
+
+            button {
+              background: var(--w-c-accent-9);
+              color: var(--w-c-accent-contrast);
+
+              &:hover {
+                background: var(--w-c-accent-10);
+              }
+
+              &:active {
+                background: var(--w-c-accent-11);
               }
             }
           }
+        }
+      }
+    }
+  }
 
-          [data-component="heading"] {
-            color: var(--w-c-accent-g13);
-            letter-spacing: var(--wui-letter-spacing-9);
+  .color {
+    &[data-component="layout"] {
+      background: var(--w-c-accent-1);
+
+      [data-component="page"] {
+        background: var(--w-c-accent-2);
+        border: 1px solid var(--w-c-accent-3);
+
+        [data-component="page-header"] {
+          border-bottom: 1px solid var(--w-c-accent-3);
+        }
+
+        [data-component="page-content"] {
+          padding: var(--wui-space-5);
+        }
+
+        [data-component="page-block"] {
+          &.black {
+            background: black;
           }
 
-          [data-component="text"] {
-            color: var(--w-c-accent-g12);
-          }
+          background: var(--w-c-accent-3);
+          border: 1px solid var(--w-c-accent-4);
+          border-radius: var(--wui-border-radius-5);
 
-          button {
-            background: var(--w-c-accent-9);
-            border: 1px solid var(--w-c-accent-7);
-            color: var(--w-c-accent-contrast);
+          div {
+            background: var(--w-c-accent-4);
+            border: 1px solid var(--w-c-accent-5);
 
-            &:hover {
-              background: var(--w-c-accent-10);
+            div {
+              background: var(--w-c-accent-5);
+              border: 1px solid var(--w-c-accent-6);
+
+              div {
+                background: var(--w-c-accent-6);
+                border: 1px solid var(--w-c-accent-7);
+
+                div {
+                  background: var(--w-c-accent-7);
+                  border: 1px solid var(--w-c-accent-8);
+                }
+              }
             }
 
-            &:active {
-              background: var(--w-c-accent-11);
+            [data-component="heading"] {
+              color: var(--w-c-accent-13);
+              letter-spacing: var(--wui-letter-spacing-9);
+            }
+
+            [data-component="text"] {
+              color: var(--w-c-accent-12);
+            }
+
+            button {
+              background: var(--w-c-accent-9);
+              color: var(--w-c-accent-contrast);
+
+              &:hover {
+                background: var(--w-c-accent-10);
+              }
+
+              &:active {
+                background: var(--w-c-accent-11);
+              }
             }
           }
         }
