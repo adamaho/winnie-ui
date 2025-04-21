@@ -5,7 +5,7 @@ import BaseHead from "../layouts/base/head.astro";
 
 <BaseLayout>
   <BaseHead slot="head" title="Playground" description="Place to play around" />
-  <div data-component="layout" data-accent-color="peppermint" class="grey">
+  <div data-component="layout" data-accent-color="basil" class="grey">
     <nav data-component="layout-sidebar"></nav>
     <main data-component="layout-content">
       <div data-component="page">
@@ -28,7 +28,10 @@ import BaseHead from "../layouts/base/head.astro";
               <p data-component="text" class="mb-4" data-size="3">
                 Issues are a thing that lets you track things.
               </p>
-              <footer class="flex justify-end">
+              <footer class="flex justify-end gap-4">
+                <button data-component="button" data-size="md" class="grey">
+                  <span data-slot="label">Cancel</span>
+                </button>
                 <button data-component="button" data-size="md">
                   <span data-slot="label">Create Issue</span>
                 </button>
@@ -36,17 +39,21 @@ import BaseHead from "../layouts/base/head.astro";
             </div>
           </div>
           <div data-component="page-block" class="black flex gap-1 p-3">
+            <!-- <span class="chip h-[50px] w-[50px]" data-accent-color="grass"
+            ></span>
+            <span class="chip h-[50px] w-[50px]" data-accent-color="basil"
+            ></span> -->
             <span class="chip h-[50px] w-[50px]" data-accent-color="lime"
             ></span>
-            <span class="chip h-[50px] w-[50px]" data-accent-color="grass"
+            <span class="chip h-[50px] w-[50px]" data-accent-color="olive"
             ></span>
-            <span class="chip h-[50px] w-[50px]" data-accent-color="peppermint"
+            <!-- <span class="chip h-[50px] w-[50px]" data-accent-color="peppermint"
             ></span>
             <span class="chip h-[50px] w-[50px]" data-accent-color="pine"
-            ></span>
-            <span class="chip h-[50px] w-[50px]" data-accent-color="teal">
+            ></span> -->
+            <!-- <span class="chip h-[50px] w-[50px]" data-accent-color="teal">
             </span>
-            <span class="chip h-[50px] w-[50px]" data-accent-color="sea"></span>
+            <span class="chip h-[50px] w-[50px]" data-accent-color="sea"></span> -->
           </div>
         </div>
       </div>
@@ -126,6 +133,19 @@ import BaseHead from "../layouts/base/head.astro";
 
               &:active {
                 background: var(--w-c-accent-11);
+              }
+
+              &.grey {
+                background: var(--w-c-accent-g9);
+                color: var(--w-c-accent-gcontrast);
+
+                &:hover {
+                  background: var(--w-c-accent-g10);
+                }
+
+                &:active {
+                  background: var(--w-c-accent-g11);
+                }
               }
             }
           }

@@ -1,17 +1,17 @@
 @layer color {
   :root {
-    --w-c-h-grass: 142;
+    --w-c-h-grass: 140;
   }
 
   [data-theme="dark"] {
-    --w-c-grass-1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.143 var(--w-c-h-grass)), black 80%);
-    --w-c-grass-2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.143 var(--w-c-h-grass)), black 75%);
-    --w-c-grass-3: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.143 var(--w-c-h-grass)), black 68%);
-    --w-c-grass-4: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.143 var(--w-c-h-grass)), black 60%);
-    --w-c-grass-5: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.143 var(--w-c-h-grass)), black 54%);
-    --w-c-grass-6: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.143 var(--w-c-h-grass)), black 47%);
-    --w-c-grass-7: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.143 var(--w-c-h-grass)), black 39%);
-    --w-c-grass-8: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.143 var(--w-c-h-grass)), black 30%);
+    --w-c-grass-1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.143 var(--w-c-h-grass)), black 84%);
+    --w-c-grass-2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.143 var(--w-c-h-grass)), black 80%);
+    --w-c-grass-3: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.143 var(--w-c-h-grass)), black 74%);
+    --w-c-grass-4: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.143 var(--w-c-h-grass)), black 68%);
+    --w-c-grass-5: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.143 var(--w-c-h-grass)), black 62%);
+    --w-c-grass-6: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.143 var(--w-c-h-grass)), black 56%);
+    --w-c-grass-7: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.143 var(--w-c-h-grass)), black 50%);
+    --w-c-grass-8: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.143 var(--w-c-h-grass)), black 44%);
     --w-c-grass-9: oklch(var(--w-c-l-bright) 0.143 var(--w-c-h-grass));
     --w-c-grass-10: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.143 var(--w-c-h-grass)), white 20%);
     --w-c-grass-11: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.143 var(--w-c-h-grass)), white 30%);
@@ -19,14 +19,14 @@
     --w-c-grass-13: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.143 var(--w-c-h-grass)), white 90%);
     --w-c-grass-contrast: black;
 
-    --w-c-grass-g1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-grass)), black 80%);
-    --w-c-grass-g2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-grass)), black 75%);
-    --w-c-grass-g3: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-grass)), black 68%);
-    --w-c-grass-g4: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-grass)), black 60%);
-    --w-c-grass-g5: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-grass)), black 54%);
-    --w-c-grass-g6: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-grass)), black 47%);
-    --w-c-grass-g7: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-grass)), black 39%);
-    --w-c-grass-g8: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-grass)), black 30%);
+    --w-c-grass-g1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-grass)), black 84%);
+    --w-c-grass-g2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-grass)), black 80%);
+    --w-c-grass-g3: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-grass)), black 74%);
+    --w-c-grass-g4: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-grass)), black 68%);
+    --w-c-grass-g5: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-grass)), black 62%);
+    --w-c-grass-g6: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-grass)), black 56%);
+    --w-c-grass-g7: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-grass)), black 50%);
+    --w-c-grass-g8: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-grass)), black 44%);
     --w-c-grass-g9: oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-grass));
     --w-c-grass-g10: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-grass)), white 20%);
     --w-c-grass-g11: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-grass)), white 30%);
