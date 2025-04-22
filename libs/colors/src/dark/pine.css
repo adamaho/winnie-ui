@@ -32,7 +32,7 @@
     --w-c-pine-g11: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.026 var(--w-c-h-pine)), white 15%);
     --w-c-pine-g12: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.026 var(--w-c-h-pine)), white 65%);
     --w-c-pine-g13: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.026 var(--w-c-h-pine)), white 90%);
-    --w-c-pine-gcontrast: black;
+    --w-c-pine-gcontrast: white;
   }
 
   [data-accent-color="pine"] {

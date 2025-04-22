@@ -1,9 +1,12 @@
-@import "./orange-dim.css";
-@import "./lime.css";
-@import "./olive.css";
-@import "./grass.css";
-@import "./basil.css";
-@import "./peppermint.css";
-@import "./pine.css";
-@import "./teal.css";
-@import "./sea.css";
+@import "./salmon.css"; /* 30 */
+@import "./tomato.css"; /* 30 */
+@import "./lime.css"; /* 130 */
+@import "./olive.css"; /* 130 */
+@import "./grass.css"; /* 140 */
+@import "./basil.css"; /* 140 */
+@import "./peppermint.css"; /* 150 */
+@import "./pine.css"; /* 150 */
+@import "./coast.css"; /* 170 */
+@import "./emerald.css"; /* 170 */
+@import "./cyan.css"; /* 180 */
+@import "./lagoon.css"; /* 180 */

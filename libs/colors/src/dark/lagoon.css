@@ -1,0 +1,69 @@
+@layer color {
+  :root {
+    --w-c-h-lagoon: 180;
+  }
+
+  [data-theme="dark"] {
+    --w-c-lagoon-1: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-lagoon)), black 72%);
+    --w-c-lagoon-2: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-lagoon)), black 65%);
+    --w-c-lagoon-3: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-lagoon)), black 57%);
+    --w-c-lagoon-4: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-lagoon)), black 49%);
+    --w-c-lagoon-5: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-lagoon)), black 40%);
+    --w-c-lagoon-6: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-lagoon)), black 32%);
+    --w-c-lagoon-7: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-lagoon)), black 24%);
+    --w-c-lagoon-8: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-lagoon)), black 17%);
+    --w-c-lagoon-9: oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-lagoon));
+    --w-c-lagoon-10: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-lagoon)), white 10%);
+    --w-c-lagoon-11: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-lagoon)), white 15%);
+    --w-c-lagoon-12: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-lagoon)), white 65%);
+    --w-c-lagoon-13: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-lagoon)), white 90%);
+    --w-c-lagoon-contrast: white;
+
+    --w-c-lagoon-g1: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.026 var(--w-c-h-lagoon)), black 68%);
+    --w-c-lagoon-g2: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.026 var(--w-c-h-lagoon)), black 63%);
+    --w-c-lagoon-g3: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.026 var(--w-c-h-lagoon)), black 54%);
+    --w-c-lagoon-g4: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.026 var(--w-c-h-lagoon)), black 46%);
+    --w-c-lagoon-g5: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.026 var(--w-c-h-lagoon)), black 39%);
+    --w-c-lagoon-g6: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.026 var(--w-c-h-lagoon)), black 30%);
+    --w-c-lagoon-g7: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.026 var(--w-c-h-lagoon)), black 23%);
+    --w-c-lagoon-g8: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.026 var(--w-c-h-lagoon)), black 17%);
+    --w-c-lagoon-g9: oklch(var(--w-c-l-dim) 0.026 var(--w-c-h-lagoon));
+    --w-c-lagoon-g10: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.026 var(--w-c-h-lagoon)), white 10%);
+    --w-c-lagoon-g11: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.026 var(--w-c-h-lagoon)), white 15%);
+    --w-c-lagoon-g12: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.026 var(--w-c-h-lagoon)), white 65%);
+    --w-c-lagoon-g13: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.026 var(--w-c-h-lagoon)), white 90%);
+    --w-c-lagoon-gcontrast: white;
+  }
+
+  [data-accent-color="lagoon"] {
+    --w-c-accent-1: var(--w-c-lagoon-1);
+    --w-c-accent-2: var(--w-c-lagoon-2);
+    --w-c-accent-3: var(--w-c-lagoon-3);
+    --w-c-accent-4: var(--w-c-lagoon-4);
+    --w-c-accent-5: var(--w-c-lagoon-5);
+    --w-c-accent-6: var(--w-c-lagoon-6);
+    --w-c-accent-7: var(--w-c-lagoon-7);
+    --w-c-accent-8: var(--w-c-lagoon-8);
+    --w-c-accent-9: var(--w-c-lagoon-9);
+    --w-c-accent-10: var(--w-c-lagoon-10);
+    --w-c-accent-11: var(--w-c-lagoon-11);
+    --w-c-accent-12: var(--w-c-lagoon-12);
+    --w-c-accent-13: var(--w-c-lagoon-13);
+    --w-c-accent-contrast: var(--w-c-lagoon-contrast);
+
+    --w-c-accent-g1: var(--w-c-lagoon-g1);
+    --w-c-accent-g2: var(--w-c-lagoon-g2);
+    --w-c-accent-g3: var(--w-c-lagoon-g3);
+    --w-c-accent-g4: var(--w-c-lagoon-g4);
+    --w-c-accent-g5: var(--w-c-lagoon-g5);
+    --w-c-accent-g6: var(--w-c-lagoon-g6);
+    --w-c-accent-g7: var(--w-c-lagoon-g7);
+    --w-c-accent-g8: var(--w-c-lagoon-g8);
+    --w-c-accent-g9: var(--w-c-lagoon-g9);
+    --w-c-accent-g10: var(--w-c-lagoon-g10);
+    --w-c-accent-g11: var(--w-c-lagoon-g11);
+    --w-c-accent-g12: var(--w-c-lagoon-g12);
+    --w-c-accent-g13: var(--w-c-lagoon-g13);
+    --w-c-accent-gcontrast: var(--w-c-lagoon-gcontrast);
+  }
+}
