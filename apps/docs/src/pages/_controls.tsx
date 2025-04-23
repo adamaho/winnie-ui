@@ -21,6 +21,8 @@ export function Controls() {
         "cyan",
         "lagoon",
         "sky",
+        "orchid",
+        "amethyst",
       ],
       value: "salmon",
       onChange(color) {
