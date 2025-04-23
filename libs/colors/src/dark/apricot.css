@@ -1,0 +1,69 @@
+@layer color {
+  :root {
+    --w-c-h-apricot: 70;
+  }
+
+  [data-theme="dark"] {
+    --w-c-apricot-1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.15 var(--w-c-h-apricot)), black 86%);
+    --w-c-apricot-2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.15 var(--w-c-h-apricot)), black 83%);
+    --w-c-apricot-3: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.15 var(--w-c-h-apricot)), black 76%);
+    --w-c-apricot-4: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.15 var(--w-c-h-apricot)), black 71%);
+    --w-c-apricot-5: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.15 var(--w-c-h-apricot)), black 65%);
+    --w-c-apricot-6: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.15 var(--w-c-h-apricot)), black 58%);
+    --w-c-apricot-7: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.15 var(--w-c-h-apricot)), black 53%);
+    --w-c-apricot-8: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.15 var(--w-c-h-apricot)), black 47%);
+    --w-c-apricot-9: oklch(var(--w-c-l-bright) 0.15 var(--w-c-h-apricot));
+    --w-c-apricot-10: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.15 var(--w-c-h-apricot)), white 20%);
+    --w-c-apricot-11: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.15 var(--w-c-h-apricot)), white 30%);
+    --w-c-apricot-12: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.15 var(--w-c-h-apricot)), white 45%);
+    --w-c-apricot-13: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.15 var(--w-c-h-apricot)), white 90%);
+    --w-c-apricot-contrast: black;
+
+    --w-c-apricot-g1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-apricot)), black 84%);
+    --w-c-apricot-g2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-apricot)), black 80%);
+    --w-c-apricot-g3: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-apricot)), black 74%);
+    --w-c-apricot-g4: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-apricot)), black 68%);
+    --w-c-apricot-g5: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-apricot)), black 62%);
+    --w-c-apricot-g6: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-apricot)), black 56%);
+    --w-c-apricot-g7: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-apricot)), black 50%);
+    --w-c-apricot-g8: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-apricot)), black 44%);
+    --w-c-apricot-g9: oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-apricot));
+    --w-c-apricot-g10: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-apricot)), white 30%);
+    --w-c-apricot-g11: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-apricot)), white 50%);
+    --w-c-apricot-g12: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-apricot)), white 60%);
+    --w-c-apricot-g13: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-apricot)), white 90%);
+    --w-c-apricot-gcontrast: black;
+  }
+
+  [data-accent-color="apricot"] {
+    --w-c-accent-1: var(--w-c-apricot-1);
+    --w-c-accent-2: var(--w-c-apricot-2);
+    --w-c-accent-3: var(--w-c-apricot-3);
+    --w-c-accent-4: var(--w-c-apricot-4);
+    --w-c-accent-5: var(--w-c-apricot-5);
+    --w-c-accent-6: var(--w-c-apricot-6);
+    --w-c-accent-7: var(--w-c-apricot-7);
+    --w-c-accent-8: var(--w-c-apricot-8);
+    --w-c-accent-9: var(--w-c-apricot-9);
+    --w-c-accent-10: var(--w-c-apricot-10);
+    --w-c-accent-11: var(--w-c-apricot-11);
+    --w-c-accent-12: var(--w-c-apricot-12);
+    --w-c-accent-13: var(--w-c-apricot-13);
+    --w-c-accent-contrast: var(--w-c-apricot-contrast);
+
+    --w-c-accent-g1: var(--w-c-apricot-g1);
+    --w-c-accent-g2: var(--w-c-apricot-g2);
+    --w-c-accent-g3: var(--w-c-apricot-g3);
+    --w-c-accent-g4: var(--w-c-apricot-g4);
+    --w-c-accent-g5: var(--w-c-apricot-g5);
+    --w-c-accent-g6: var(--w-c-apricot-g6);
+    --w-c-accent-g7: var(--w-c-apricot-g7);
+    --w-c-accent-g8: var(--w-c-apricot-g8);
+    --w-c-accent-g9: var(--w-c-apricot-g9);
+    --w-c-accent-g10: var(--w-c-apricot-g10);
+    --w-c-accent-g11: var(--w-c-apricot-g11);
+    --w-c-accent-g12: var(--w-c-apricot-g12);
+    --w-c-accent-g13: var(--w-c-apricot-g13);
+    --w-c-accent-gcontrast: var(--w-c-apricot-gcontrast);
+  }
+}
