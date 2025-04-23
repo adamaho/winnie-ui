@@ -19,19 +19,19 @@
     --w-c-salmon-13: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.19 var(--w-c-h-salmon)), white 90%);
     --w-c-salmon-contrast: black;
 
-    --w-c-salmon-g1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.02 var(--w-c-h-salmon)), black 84%);
-    --w-c-salmon-g2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.02 var(--w-c-h-salmon)), black 80%);
-    --w-c-salmon-g3: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.02 var(--w-c-h-salmon)), black 74%);
-    --w-c-salmon-g4: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.02 var(--w-c-h-salmon)), black 68%);
-    --w-c-salmon-g5: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.02 var(--w-c-h-salmon)), black 62%);
-    --w-c-salmon-g6: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.02 var(--w-c-h-salmon)), black 56%);
-    --w-c-salmon-g7: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.02 var(--w-c-h-salmon)), black 50%);
-    --w-c-salmon-g8: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.02 var(--w-c-h-salmon)), black 44%);
-    --w-c-salmon-g9: oklch(var(--w-c-l-bright) 0.02 var(--w-c-h-salmon));
-    --w-c-salmon-g10: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.02 var(--w-c-h-salmon)), white 20%);
-    --w-c-salmon-g11: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.02 var(--w-c-h-salmon)), white 30%);
-    --w-c-salmon-g12: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.02 var(--w-c-h-salmon)), white 45%);
-    --w-c-salmon-g13: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.02 var(--w-c-h-salmon)), white 90%);
+    --w-c-salmon-g1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.018 var(--w-c-h-salmon)), black 84%);
+    --w-c-salmon-g2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.018 var(--w-c-h-salmon)), black 80%);
+    --w-c-salmon-g3: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.018 var(--w-c-h-salmon)), black 74%);
+    --w-c-salmon-g4: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.018 var(--w-c-h-salmon)), black 68%);
+    --w-c-salmon-g5: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.018 var(--w-c-h-salmon)), black 62%);
+    --w-c-salmon-g6: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.018 var(--w-c-h-salmon)), black 56%);
+    --w-c-salmon-g7: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.018 var(--w-c-h-salmon)), black 50%);
+    --w-c-salmon-g8: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.018 var(--w-c-h-salmon)), black 44%);
+    --w-c-salmon-g9: oklch(var(--w-c-l-bright) 0.018 var(--w-c-h-salmon));
+    --w-c-salmon-g10: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.018 var(--w-c-h-salmon)), white 30%);
+    --w-c-salmon-g11: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.018 var(--w-c-h-salmon)), white 40%);
+    --w-c-salmon-g12: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.018 var(--w-c-h-salmon)), white 50%);
+    --w-c-salmon-g13: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.018 var(--w-c-h-salmon)), white 90%);
     --w-c-salmon-gcontrast: black;
   }
 

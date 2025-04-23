@@ -41,6 +41,7 @@
     "clsx": "2.1.1",
     "cmdk": "1.1.1",
     "flexsearch": "0.8.151",
+    "leva": "^0.10.0",
     "react": "19.1.0",
     "react-aria": "3.39.0",
     "react-aria-components": "1.8.0",

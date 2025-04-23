@@ -19,19 +19,19 @@
     --w-c-cyan-13: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.11 var(--w-c-h-cyan)), white 90%);
     --w-c-cyan-contrast: black;
 
-    --w-c-cyan-g1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-cyan)), black 84%);
-    --w-c-cyan-g2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-cyan)), black 80%);
-    --w-c-cyan-g3: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-cyan)), black 74%);
-    --w-c-cyan-g4: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-cyan)), black 68%);
-    --w-c-cyan-g5: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-cyan)), black 62%);
-    --w-c-cyan-g6: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-cyan)), black 56%);
-    --w-c-cyan-g7: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-cyan)), black 50%);
-    --w-c-cyan-g8: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-cyan)), black 44%);
-    --w-c-cyan-g9: oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-cyan));
-    --w-c-cyan-g10: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-cyan)), white 20%);
-    --w-c-cyan-g11: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-cyan)), white 30%);
-    --w-c-cyan-g12: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-cyan)), white 45%);
-    --w-c-cyan-g13: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.047 var(--w-c-h-cyan)), white 90%);
+    --w-c-cyan-g1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.033 var(--w-c-h-cyan)), black 84%);
+    --w-c-cyan-g2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.033 var(--w-c-h-cyan)), black 80%);
+    --w-c-cyan-g3: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.033 var(--w-c-h-cyan)), black 74%);
+    --w-c-cyan-g4: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.033 var(--w-c-h-cyan)), black 68%);
+    --w-c-cyan-g5: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.033 var(--w-c-h-cyan)), black 62%);
+    --w-c-cyan-g6: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.033 var(--w-c-h-cyan)), black 56%);
+    --w-c-cyan-g7: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.033 var(--w-c-h-cyan)), black 50%);
+    --w-c-cyan-g8: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.033 var(--w-c-h-cyan)), black 44%);
+    --w-c-cyan-g9: oklch(var(--w-c-l-bright) 0.033 var(--w-c-h-cyan));
+    --w-c-cyan-g10: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.033 var(--w-c-h-cyan)), white 20%);
+    --w-c-cyan-g11: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.033 var(--w-c-h-cyan)), white 30%);
+    --w-c-cyan-g12: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.033 var(--w-c-h-cyan)), white 45%);
+    --w-c-cyan-g13: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.033 var(--w-c-h-cyan)), white 90%);
     --w-c-cyan-gcontrast: black;
   }
 

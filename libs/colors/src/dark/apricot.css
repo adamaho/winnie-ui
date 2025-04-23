@@ -1,6 +1,6 @@
 @layer color {
   :root {
-    --w-c-h-apricot: 70;
+    --w-c-h-apricot: 75;
   }
 
   [data-theme="dark"] {

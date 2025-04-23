@@ -1,11 +1,19 @@
 ---
 import BaseLayout from "../layouts/base/layout.astro";
 import BaseHead from "../layouts/base/head.astro";
+
+import { Controls } from "./_controls";
 ---
 
 <BaseLayout>
   <BaseHead slot="head" title="Playground" description="Place to play around" />
-  <div data-component="layout" data-accent-color="apricot" class="grey">
+  <Controls client:only="react" />
+  <div
+    data-component="layout"
+    id="playground"
+    data-accent-color="mustard"
+    class="grey"
+  >
     <nav data-component="layout-sidebar"></nav>
     <main data-component="layout-content">
       <div data-component="page">
@@ -23,7 +31,7 @@ import BaseHead from "../layouts/base/head.astro";
           <div data-component="page-block" class="p-3">
             <div class="rounded-3 h-full p-5">
               <h2 data-component="heading" data-size="5" data-weight="medium">
-                Create SPiDR
+                Create Issue
               </h2>
               <p data-component="text" class="mb-4" data-size="3">
                 Issues are a thing that lets you track things.
@@ -38,23 +46,23 @@ import BaseHead from "../layouts/base/head.astro";
               </footer>
             </div>
           </div>
-          <div data-component="page-block" class="black flex gap-1 p-3">
-            <!-- <span class="chip h-[50px] w-[50px]" data-accent-color="grass"
+          <!-- <div data-component="page-block" class="black flex gap-1 p-3"> -->
+          <!-- <span class="chip h-[50px] w-[50px]" data-accent-color="grass"
             ></span>
             <span class="chip h-[50px] w-[50px]" data-accent-color="basil"
             ></span> -->
-            <span class="chip h-[50px] w-[50px]" data-accent-color="apricot"
+          <!-- <span class="chip h-[50px] w-[50px]" data-accent-color="mustard"
             ></span>
-            <span class="chip h-[50px] w-[50px]" data-accent-color="tuscon"
-            ></span>
-            <!-- <span class="chip h-[50px] w-[50px]" data-accent-color="peppermint"
+            <span class="chip h-[50px] w-[50px]" data-accent-color="caramel"
+            ></span> -->
+          <!-- <span class="chip h-[50px] w-[50px]" data-accent-color="peppermint"
             ></span>
             <span class="chip h-[50px] w-[50px]" data-accent-color="pine"
             ></span> -->
-            <!-- <span class="chip h-[50px] w-[50px]" data-accent-color="teal">
+          <!-- <span class="chip h-[50px] w-[50px]" data-accent-color="teal">
             </span>
             <span class="chip h-[50px] w-[50px]" data-accent-color="sea"></span> -->
-          </div>
+          <!-- </div> -->
         </div>
       </div>
     </main>
