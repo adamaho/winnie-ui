@@ -1,0 +1,69 @@
+@layer color {
+  :root {
+    --w-c-h-indigo: 275;
+  }
+
+  [data-theme="dark"] {
+    --w-c-indigo-1: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-indigo)), black 74%);
+    --w-c-indigo-2: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-indigo)), black 66%);
+    --w-c-indigo-3: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-indigo)), black 58%);
+    --w-c-indigo-4: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-indigo)), black 50%);
+    --w-c-indigo-5: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-indigo)), black 41%);
+    --w-c-indigo-6: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-indigo)), black 33%);
+    --w-c-indigo-7: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-indigo)), black 25%);
+    --w-c-indigo-8: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-indigo)), black 18%);
+    --w-c-indigo-9: oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-indigo));
+    --w-c-indigo-10: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-indigo)), white 5%);
+    --w-c-indigo-11: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-indigo)), white 10%);
+    --w-c-indigo-12: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-indigo)), white 65%);
+    --w-c-indigo-13: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-indigo)), white 90%);
+    --w-c-indigo-contrast: white;
+
+    --w-c-indigo-g1: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-indigo)), black 68%);
+    --w-c-indigo-g2: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-indigo)), black 63%);
+    --w-c-indigo-g3: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-indigo)), black 54%);
+    --w-c-indigo-g4: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-indigo)), black 46%);
+    --w-c-indigo-g5: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-indigo)), black 39%);
+    --w-c-indigo-g6: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-indigo)), black 30%);
+    --w-c-indigo-g7: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-indigo)), black 23%);
+    --w-c-indigo-g8: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-indigo)), black 17%);
+    --w-c-indigo-g9: oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-indigo));
+    --w-c-indigo-g10: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-indigo)), white 10%);
+    --w-c-indigo-g11: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-indigo)), white 15%);
+    --w-c-indigo-g12: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-indigo)), white 65%);
+    --w-c-indigo-g13: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-indigo)), white 90%);
+    --w-c-indigo-gcontrast: white;
+  }
+
+  [data-accent-color="indigo"] {
+    --w-c-accent-1: var(--w-c-indigo-1);
+    --w-c-accent-2: var(--w-c-indigo-2);
+    --w-c-accent-3: var(--w-c-indigo-3);
+    --w-c-accent-4: var(--w-c-indigo-4);
+    --w-c-accent-5: var(--w-c-indigo-5);
+    --w-c-accent-6: var(--w-c-indigo-6);
+    --w-c-accent-7: var(--w-c-indigo-7);
+    --w-c-accent-8: var(--w-c-indigo-8);
+    --w-c-accent-9: var(--w-c-indigo-9);
+    --w-c-accent-10: var(--w-c-indigo-10);
+    --w-c-accent-11: var(--w-c-indigo-11);
+    --w-c-accent-12: var(--w-c-indigo-12);
+    --w-c-accent-13: var(--w-c-indigo-13);
+    --w-c-accent-contrast: var(--w-c-indigo-contrast);
+
+    --w-c-accent-g1: var(--w-c-indigo-g1);
+    --w-c-accent-g2: var(--w-c-indigo-g2);
+    --w-c-accent-g3: var(--w-c-indigo-g3);
+    --w-c-accent-g4: var(--w-c-indigo-g4);
+    --w-c-accent-g5: var(--w-c-indigo-g5);
+    --w-c-accent-g6: var(--w-c-indigo-g6);
+    --w-c-accent-g7: var(--w-c-indigo-g7);
+    --w-c-accent-g8: var(--w-c-indigo-g8);
+    --w-c-accent-g9: var(--w-c-indigo-g9);
+    --w-c-accent-g10: var(--w-c-indigo-g10);
+    --w-c-accent-g11: var(--w-c-indigo-g11);
+    --w-c-accent-g12: var(--w-c-indigo-g12);
+    --w-c-accent-g13: var(--w-c-indigo-g13);
+    --w-c-accent-gcontrast: var(--w-c-indigo-gcontrast);
+  }
+}
