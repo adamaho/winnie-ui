@@ -21,6 +21,7 @@ export function Controls() {
         "cyan",
         "lagoon",
         "sky",
+        "cobalt",
         "orchid",
         "amethyst",
       ],
