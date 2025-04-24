@@ -4,14 +4,14 @@
   }
 
   [data-theme="dark"] {
-    --w-c-pine-1: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-pine)), black 62%);
-    --w-c-pine-2: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-pine)), black 55%);
-    --w-c-pine-3: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-pine)), black 46%);
-    --w-c-pine-4: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-pine)), black 38%);
-    --w-c-pine-5: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-pine)), black 32%);
-    --w-c-pine-6: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-pine)), black 24%);
-    --w-c-pine-7: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-pine)), black 14%);
-    --w-c-pine-8: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-pine)), black 3%);
+    --w-c-pine-1: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-pine)), black 68%);
+    --w-c-pine-2: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-pine)), black 62%);
+    --w-c-pine-3: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-pine)), black 54%);
+    --w-c-pine-4: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-pine)), black 46%);
+    --w-c-pine-5: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-pine)), black 39%);
+    --w-c-pine-6: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-pine)), black 30%);
+    --w-c-pine-7: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-pine)), black 23%);
+    --w-c-pine-8: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-pine)), black 17%);
     --w-c-pine-9: oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-pine));
     --w-c-pine-10: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-pine)), white 10%);
     --w-c-pine-11: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-pine)), white 15%);

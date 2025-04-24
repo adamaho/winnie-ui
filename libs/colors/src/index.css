@@ -1,26 +1,8 @@
-/* @import "./red.css";
-@import "./orange.css";
-@import "./amber.css";
-@import "./yellow.css"; */
-/* @import "./green.css";
-@import "./forest.css";
-@import "./sky.css";
-@import "./blue.css";
-@import "./indigo.css";
-@import "./purple.css";
-@import "./fuchsia.css";
-@import "./pink.css";
-@import "./brown.css"; */
+@import "./dark/index.css";
 
 @import "./dark/index.css";
 
 @layer color {
-  @property --w-c-h {
-    syntax: "*";
-    inherits: false;
-    initial-value: h;
-  }
-
   @property --w-c-l-dim {
     syntax: "*";
     inherits: false;
