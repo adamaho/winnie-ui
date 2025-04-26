@@ -1,6 +1,7 @@
 @import "./salmon.css"; /* 30 */
 @import "./tomato.css"; /* 30 */
 @import "./apricot.css"; /* 75 */
+@import "./apricot-grey.css"; /* 75 */
 @import "./tuscon.css"; /* 75 */
 @import "./sand.css"; /* 65 */
 @import "./cocoa.css"; /* 65 */
@@ -10,6 +11,7 @@
 @import "./olive.css"; /* 130 */
 @import "./grass.css"; /* 140 */
 @import "./basil.css"; /* 140 */
+@import "./basil-grey.css"; /* 140 */
 @import "./peppermint.css"; /* 150 */
 @import "./pine.css"; /* 150 */
 @import "./coast.css"; /* 170 */
@@ -24,9 +26,11 @@
 @import "./lavender.css"; /* 290 */
 @import "./orchid.css"; /* 300 */
 @import "./amethyst.css"; /* 300 */
+@import "./amethyst-grey.css"; /* 300 */
 @import "./fuchsia.css"; /* 315 */
 @import "./plum.css"; /* 315 */
 @import "./blossom.css"; /* 340 */
+@import "./blossom-grey.css"; /* 340 */
 @import "./grape.css"; /* 340 */
 @import "./coral.css"; /* 360 */
 @import "./merlot.css"; /* 360 */
