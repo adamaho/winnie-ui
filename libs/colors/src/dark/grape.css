@@ -1,0 +1,69 @@
+@layer color {
+  :root {
+    --w-c-h-grape: 340;
+  }
+
+  [data-theme="dark"] {
+    --w-c-grape-1: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-grape)), black 74%);
+    --w-c-grape-2: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-grape)), black 66%);
+    --w-c-grape-3: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-grape)), black 58%);
+    --w-c-grape-4: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-grape)), black 50%);
+    --w-c-grape-5: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-grape)), black 41%);
+    --w-c-grape-6: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-grape)), black 33%);
+    --w-c-grape-7: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-grape)), black 25%);
+    --w-c-grape-8: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-grape)), black 18%);
+    --w-c-grape-9: oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-grape));
+    --w-c-grape-10: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-grape)), white 5%);
+    --w-c-grape-11: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-grape)), white 10%);
+    --w-c-grape-12: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-grape)), white 65%);
+    --w-c-grape-13: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-grape)), white 90%);
+    --w-c-grape-contrast: white;
+
+    --w-c-grape-g1: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-grape)), black 68%);
+    --w-c-grape-g2: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-grape)), black 63%);
+    --w-c-grape-g3: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-grape)), black 54%);
+    --w-c-grape-g4: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-grape)), black 46%);
+    --w-c-grape-g5: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-grape)), black 39%);
+    --w-c-grape-g6: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-grape)), black 30%);
+    --w-c-grape-g7: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-grape)), black 23%);
+    --w-c-grape-g8: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-grape)), black 17%);
+    --w-c-grape-g9: oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-grape));
+    --w-c-grape-g10: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-grape)), white 10%);
+    --w-c-grape-g11: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-grape)), white 15%);
+    --w-c-grape-g12: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-grape)), white 65%);
+    --w-c-grape-g13: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-grape)), white 90%);
+    --w-c-grape-gcontrast: white;
+  }
+
+  [data-accent-color="grape"] {
+    --w-c-accent-1: var(--w-c-grape-1);
+    --w-c-accent-2: var(--w-c-grape-2);
+    --w-c-accent-3: var(--w-c-grape-3);
+    --w-c-accent-4: var(--w-c-grape-4);
+    --w-c-accent-5: var(--w-c-grape-5);
+    --w-c-accent-6: var(--w-c-grape-6);
+    --w-c-accent-7: var(--w-c-grape-7);
+    --w-c-accent-8: var(--w-c-grape-8);
+    --w-c-accent-9: var(--w-c-grape-9);
+    --w-c-accent-10: var(--w-c-grape-10);
+    --w-c-accent-11: var(--w-c-grape-11);
+    --w-c-accent-12: var(--w-c-grape-12);
+    --w-c-accent-13: var(--w-c-grape-13);
+    --w-c-accent-contrast: var(--w-c-grape-contrast);
+
+    --w-c-accent-g1: var(--w-c-grape-g1);
+    --w-c-accent-g2: var(--w-c-grape-g2);
+    --w-c-accent-g3: var(--w-c-grape-g3);
+    --w-c-accent-g4: var(--w-c-grape-g4);
+    --w-c-accent-g5: var(--w-c-grape-g5);
+    --w-c-accent-g6: var(--w-c-grape-g6);
+    --w-c-accent-g7: var(--w-c-grape-g7);
+    --w-c-accent-g8: var(--w-c-grape-g8);
+    --w-c-accent-g9: var(--w-c-grape-g9);
+    --w-c-accent-g10: var(--w-c-grape-g10);
+    --w-c-accent-g11: var(--w-c-grape-g11);
+    --w-c-accent-g12: var(--w-c-grape-g12);
+    --w-c-accent-g13: var(--w-c-grape-g13);
+    --w-c-accent-gcontrast: var(--w-c-grape-gcontrast);
+  }
+}

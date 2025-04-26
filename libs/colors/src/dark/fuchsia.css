@@ -1,0 +1,69 @@
+@layer color {
+  :root {
+    --w-c-h-fuchsia: 315;
+  }
+
+  [data-theme="dark"] {
+    --w-c-fuchsia-1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.19 var(--w-c-h-fuchsia)), black 87%);
+    --w-c-fuchsia-2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.19 var(--w-c-h-fuchsia)), black 83%);
+    --w-c-fuchsia-3: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.19 var(--w-c-h-fuchsia)), black 76%);
+    --w-c-fuchsia-4: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.19 var(--w-c-h-fuchsia)), black 71%);
+    --w-c-fuchsia-5: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.19 var(--w-c-h-fuchsia)), black 65%);
+    --w-c-fuchsia-6: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.19 var(--w-c-h-fuchsia)), black 58%);
+    --w-c-fuchsia-7: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.19 var(--w-c-h-fuchsia)), black 53%);
+    --w-c-fuchsia-8: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.19 var(--w-c-h-fuchsia)), black 47%);
+    --w-c-fuchsia-9: oklch(var(--w-c-l-bright) 0.19 var(--w-c-h-fuchsia));
+    --w-c-fuchsia-10: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.19 var(--w-c-h-fuchsia)), white 20%);
+    --w-c-fuchsia-11: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.19 var(--w-c-h-fuchsia)), white 30%);
+    --w-c-fuchsia-12: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.19 var(--w-c-h-fuchsia)), white 45%);
+    --w-c-fuchsia-13: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.19 var(--w-c-h-fuchsia)), white 90%);
+    --w-c-fuchsia-contrast: black;
+
+    --w-c-fuchsia-g1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.05 var(--w-c-h-fuchsia)), black 84%);
+    --w-c-fuchsia-g2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.05 var(--w-c-h-fuchsia)), black 80%);
+    --w-c-fuchsia-g3: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.05 var(--w-c-h-fuchsia)), black 74%);
+    --w-c-fuchsia-g4: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.05 var(--w-c-h-fuchsia)), black 68%);
+    --w-c-fuchsia-g5: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.05 var(--w-c-h-fuchsia)), black 62%);
+    --w-c-fuchsia-g6: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.05 var(--w-c-h-fuchsia)), black 56%);
+    --w-c-fuchsia-g7: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.05 var(--w-c-h-fuchsia)), black 50%);
+    --w-c-fuchsia-g8: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.05 var(--w-c-h-fuchsia)), black 44%);
+    --w-c-fuchsia-g9: oklch(var(--w-c-l-bright) 0.05 var(--w-c-h-fuchsia));
+    --w-c-fuchsia-g10: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.05 var(--w-c-h-fuchsia)), white 30%);
+    --w-c-fuchsia-g11: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.05 var(--w-c-h-fuchsia)), white 40%);
+    --w-c-fuchsia-g12: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.05 var(--w-c-h-fuchsia)), white 50%);
+    --w-c-fuchsia-g13: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.05 var(--w-c-h-fuchsia)), white 90%);
+    --w-c-fuchsia-gcontrast: black;
+  }
+
+  [data-accent-color="fuchsia"] {
+    --w-c-accent-1: var(--w-c-fuchsia-1);
+    --w-c-accent-2: var(--w-c-fuchsia-2);
+    --w-c-accent-3: var(--w-c-fuchsia-3);
+    --w-c-accent-4: var(--w-c-fuchsia-4);
+    --w-c-accent-5: var(--w-c-fuchsia-5);
+    --w-c-accent-6: var(--w-c-fuchsia-6);
+    --w-c-accent-7: var(--w-c-fuchsia-7);
+    --w-c-accent-8: var(--w-c-fuchsia-8);
+    --w-c-accent-9: var(--w-c-fuchsia-9);
+    --w-c-accent-10: var(--w-c-fuchsia-10);
+    --w-c-accent-11: var(--w-c-fuchsia-11);
+    --w-c-accent-12: var(--w-c-fuchsia-12);
+    --w-c-accent-13: var(--w-c-fuchsia-13);
+    --w-c-accent-contrast: var(--w-c-fuchsia-contrast);
+
+    --w-c-accent-g1: var(--w-c-fuchsia-g1);
+    --w-c-accent-g2: var(--w-c-fuchsia-g2);
+    --w-c-accent-g3: var(--w-c-fuchsia-g3);
+    --w-c-accent-g4: var(--w-c-fuchsia-g4);
+    --w-c-accent-g5: var(--w-c-fuchsia-g5);
+    --w-c-accent-g6: var(--w-c-fuchsia-g6);
+    --w-c-accent-g7: var(--w-c-fuchsia-g7);
+    --w-c-accent-g8: var(--w-c-fuchsia-g8);
+    --w-c-accent-g9: var(--w-c-fuchsia-g9);
+    --w-c-accent-g10: var(--w-c-fuchsia-g10);
+    --w-c-accent-g11: var(--w-c-fuchsia-g11);
+    --w-c-accent-g12: var(--w-c-fuchsia-g12);
+    --w-c-accent-g13: var(--w-c-fuchsia-g13);
+    --w-c-accent-gcontrast: var(--w-c-fuchsia-gcontrast);
+  }
+}

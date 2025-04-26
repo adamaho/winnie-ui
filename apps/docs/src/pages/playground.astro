@@ -46,23 +46,162 @@ import { Controls } from "./_controls";
               </footer>
             </div>
           </div>
-          <!-- <div data-component="page-block" class="black flex gap-1 p-3"> -->
-          <!-- <span class="chip h-[50px] w-[50px]" data-accent-color="grass"
-            ></span>
-            <span class="chip h-[50px] w-[50px]" data-accent-color="basil"
-            ></span> -->
-          <!-- <span class="chip h-[50px] w-[50px]" data-accent-color="mustard"
-            ></span>
-            <span class="chip h-[50px] w-[50px]" data-accent-color="caramel"
-            ></span> -->
-          <!-- <span class="chip h-[50px] w-[50px]" data-accent-color="peppermint"
-            ></span>
-            <span class="chip h-[50px] w-[50px]" data-accent-color="pine"
-            ></span> -->
-          <!-- <span class="chip h-[50px] w-[50px]" data-accent-color="teal">
-            </span>
-            <span class="chip h-[50px] w-[50px]" data-accent-color="sea"></span> -->
-          <!-- </div> -->
+          <div
+            data-component="page-block"
+            class="black flex flex-col gap-1 p-3"
+          >
+            <section class="flex items-center gap-1">
+              {
+                new Array(13).fill(0).map((_, i) => {
+                  return (
+                    <span class="chip h-[50px] w-[50px]" data-shade={i + 1} />
+                  );
+                })
+              }
+            </section>
+            <section class="flex items-center gap-1">
+              {
+                new Array(13).fill(0).map((_, i) => {
+                  return (
+                    <span
+                      class="chip grey h-[50px] w-[50px]"
+                      data-shade={i + 1}
+                    />
+                  );
+                })
+              }
+            </section>
+            <!-- <section class="grey flex items-center gap-1">
+              <span class="chip h-[50px] w-[50px]" data-accent-color="salmon"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="apricot"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="mustard"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="lime"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="grass"
+              ></span>
+              <span
+                class="chip h-[50px] w-[50px]"
+                data-accent-color="peppermint"></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="coast"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="cyan"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="sky"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="iris"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="lilac"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="orchid"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="fuchsia"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="blossom"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="coral"
+              ></span>
+            </section>
+            <section class="flex items-center gap-1">
+              <span class="chip h-[50px] w-[50px]" data-accent-color="salmon"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="apricot"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="mustard"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="lime"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="grass"
+              ></span>
+              <span
+                class="chip h-[50px] w-[50px]"
+                data-accent-color="peppermint"></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="coast"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="cyan"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="sky"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="iris"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="lilac"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="orchid"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="fuchsia"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="blossom"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="coral"
+              ></span>
+            </section>
+            <section class="flex items-center gap-1">
+              <span class="chip h-[50px] w-[50px]" data-accent-color="tomato"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="tuscon"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="caramel"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="olive"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="basil"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="pine"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="emerald"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="lagoon"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="cobalt"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="indigo"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="lavender"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="amethyst"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="plum"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="grape"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="merlot"
+              ></span>
+            </section>
+            <section class="grey flex items-center gap-1">
+              <span class="chip h-[50px] w-[50px]" data-accent-color="tomato"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="tuscon"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="caramel"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="olive"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="basil"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="pine"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="emerald"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="lagoon"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="cobalt"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="indigo"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="lavender"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="amethyst"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="plum"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="grape"
+              ></span>
+              <span class="chip h-[50px] w-[50px]" data-accent-color="merlot"
+              ></span>
+            </section> -->
+          </div>
         </div>
       </div>
     </main>
@@ -76,6 +215,112 @@ import { Controls } from "./_controls";
 
   .chip {
     background: var(--w-c-accent-9);
+
+    &[data-shade="1"] {
+      background: var(--w-c-accent-1);
+    }
+
+    &[data-shade="2"] {
+      background: var(--w-c-accent-2);
+    }
+
+    &[data-shade="3"] {
+      background: var(--w-c-accent-3);
+    }
+
+    &[data-shade="4"] {
+      background: var(--w-c-accent-4);
+    }
+
+    &[data-shade="5"] {
+      background: var(--w-c-accent-5);
+    }
+
+    &[data-shade="6"] {
+      background: var(--w-c-accent-6);
+    }
+
+    &[data-shade="7"] {
+      background: var(--w-c-accent-7);
+    }
+
+    &[data-shade="8"] {
+      background: var(--w-c-accent-8);
+    }
+
+    &[data-shade="9"] {
+      background: var(--w-c-accent-9);
+    }
+
+    &[data-shade="10"] {
+      background: var(--w-c-accent-10);
+    }
+
+    &[data-shade="11"] {
+      background: var(--w-c-accent-11);
+    }
+
+    &[data-shade="12"] {
+      background: var(--w-c-accent-12);
+    }
+
+    &[data-shade="13"] {
+      background: var(--w-c-accent-13);
+    }
+
+    &.grey {
+      &[data-shade="1"] {
+        background: var(--w-c-accent-g1);
+      }
+
+      &[data-shade="2"] {
+        background: var(--w-c-accent-g2);
+      }
+
+      &[data-shade="3"] {
+        background: var(--w-c-accent-g3);
+      }
+
+      &[data-shade="4"] {
+        background: var(--w-c-accent-g4);
+      }
+
+      &[data-shade="5"] {
+        background: var(--w-c-accent-g5);
+      }
+
+      &[data-shade="6"] {
+        background: var(--w-c-accent-g6);
+      }
+
+      &[data-shade="7"] {
+        background: var(--w-c-accent-g7);
+      }
+
+      &[data-shade="8"] {
+        background: var(--w-c-accent-g8);
+      }
+
+      &[data-shade="9"] {
+        background: var(--w-c-accent-g9);
+      }
+
+      &[data-shade="10"] {
+        background: var(--w-c-accent-g10);
+      }
+
+      &[data-shade="11"] {
+        background: var(--w-c-accent-g11);
+      }
+
+      &[data-shade="12"] {
+        background: var(--w-c-accent-g12);
+      }
+
+      &[data-shade="13"] {
+        background: var(--w-c-accent-g13);
+      }
+    }
   }
 
   .grey {
