@@ -1,0 +1,39 @@
+@layer color {
+  :root {
+    --w-c-h-lavender: 290;
+  }
+
+  [data-theme="dark"] {
+    --w-c-lavender-grey-1: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-lavender)), black 68%);
+    --w-c-lavender-grey-2: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-lavender)), black 63%);
+    --w-c-lavender-grey-3: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-lavender)), black 54%);
+    --w-c-lavender-grey-4: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-lavender)), black 46%);
+    --w-c-lavender-grey-5: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-lavender)), black 39%);
+    --w-c-lavender-grey-6: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-lavender)), black 30%);
+    --w-c-lavender-grey-7: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-lavender)), black 23%);
+    --w-c-lavender-grey-8: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-lavender)), black 17%);
+    --w-c-lavender-grey-9: oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-lavender));
+    --w-c-lavender-grey-10: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-lavender)), white 10%);
+    --w-c-lavender-grey-11: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-lavender)), white 15%);
+    --w-c-lavender-grey-12: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-lavender)), white 65%);
+    --w-c-lavender-grey-13: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-lavender)), white 90%);
+    --w-c-lavender-grey-contrast: white;
+  }
+
+  [data-accent-color="lavender"] {
+    --w-c-accent-grey-1: var(--w-c-lavender-grey-1);
+    --w-c-accent-grey-2: var(--w-c-lavender-grey-2);
+    --w-c-accent-grey-3: var(--w-c-lavender-grey-3);
+    --w-c-accent-grey-4: var(--w-c-lavender-grey-4);
+    --w-c-accent-grey-5: var(--w-c-lavender-grey-5);
+    --w-c-accent-grey-6: var(--w-c-lavender-grey-6);
+    --w-c-accent-grey-7: var(--w-c-lavender-grey-7);
+    --w-c-accent-grey-8: var(--w-c-lavender-grey-8);
+    --w-c-accent-grey-9: var(--w-c-lavender-grey-9);
+    --w-c-accent-grey-10: var(--w-c-lavender-grey-10);
+    --w-c-accent-grey-11: var(--w-c-lavender-grey-11);
+    --w-c-accent-grey-12: var(--w-c-lavender-grey-12);
+    --w-c-accent-grey-13: var(--w-c-lavender-grey-13);
+    --w-c-accent-grey-contrast: var(--w-c-lavender-grey-contrast);
+  }
+}

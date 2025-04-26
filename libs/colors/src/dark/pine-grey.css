@@ -1,0 +1,39 @@
+@layer color {
+  :root {
+    --w-c-h-pine: 150;
+  }
+
+  [data-theme="dark"] {
+    --w-c-pine-grey-1: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.026 var(--w-c-h-pine)), black 68%);
+    --w-c-pine-grey-2: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.026 var(--w-c-h-pine)), black 63%);
+    --w-c-pine-grey-3: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.026 var(--w-c-h-pine)), black 54%);
+    --w-c-pine-grey-4: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.026 var(--w-c-h-pine)), black 46%);
+    --w-c-pine-grey-5: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.026 var(--w-c-h-pine)), black 39%);
+    --w-c-pine-grey-6: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.026 var(--w-c-h-pine)), black 30%);
+    --w-c-pine-grey-7: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.026 var(--w-c-h-pine)), black 23%);
+    --w-c-pine-grey-8: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.026 var(--w-c-h-pine)), black 17%);
+    --w-c-pine-grey-9: oklch(var(--w-c-l-dim) 0.026 var(--w-c-h-pine));
+    --w-c-pine-grey-10: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.026 var(--w-c-h-pine)), white 10%);
+    --w-c-pine-grey-11: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.026 var(--w-c-h-pine)), white 15%);
+    --w-c-pine-grey-12: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.026 var(--w-c-h-pine)), white 65%);
+    --w-c-pine-grey-13: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.026 var(--w-c-h-pine)), white 90%);
+    --w-c-pine-grey-contrast: white;
+  }
+
+  [data-accent-color="pine"] {
+    --w-c-accent-grey-1: var(--w-c-pine-grey-1);
+    --w-c-accent-grey-2: var(--w-c-pine-grey-2);
+    --w-c-accent-grey-3: var(--w-c-pine-grey-3);
+    --w-c-accent-grey-4: var(--w-c-pine-grey-4);
+    --w-c-accent-grey-5: var(--w-c-pine-grey-5);
+    --w-c-accent-grey-6: var(--w-c-pine-grey-6);
+    --w-c-accent-grey-7: var(--w-c-pine-grey-7);
+    --w-c-accent-grey-8: var(--w-c-pine-grey-8);
+    --w-c-accent-grey-9: var(--w-c-pine-grey-9);
+    --w-c-accent-grey-10: var(--w-c-pine-grey-10);
+    --w-c-accent-grey-11: var(--w-c-pine-grey-11);
+    --w-c-accent-grey-12: var(--w-c-pine-grey-12);
+    --w-c-accent-grey-13: var(--w-c-pine-grey-13);
+    --w-c-accent-grey-contrast: var(--w-c-pine-grey-contrast);
+  }
+}

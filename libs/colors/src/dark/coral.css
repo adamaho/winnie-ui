@@ -18,21 +18,6 @@
     --w-c-coral-12: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.13 var(--w-c-h-coral)), white 45%);
     --w-c-coral-13: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.13 var(--w-c-h-coral)), white 90%);
     --w-c-coral-contrast: black;
-
-    --w-c-coral-g1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.018 var(--w-c-h-coral)), black 84%);
-    --w-c-coral-g2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.018 var(--w-c-h-coral)), black 80%);
-    --w-c-coral-g3: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.018 var(--w-c-h-coral)), black 74%);
-    --w-c-coral-g4: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.018 var(--w-c-h-coral)), black 68%);
-    --w-c-coral-g5: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.018 var(--w-c-h-coral)), black 62%);
-    --w-c-coral-g6: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.018 var(--w-c-h-coral)), black 56%);
-    --w-c-coral-g7: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.018 var(--w-c-h-coral)), black 50%);
-    --w-c-coral-g8: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.018 var(--w-c-h-coral)), black 44%);
-    --w-c-coral-g9: oklch(var(--w-c-l-bright) 0.018 var(--w-c-h-coral));
-    --w-c-coral-g10: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.018 var(--w-c-h-coral)), white 30%);
-    --w-c-coral-g11: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.018 var(--w-c-h-coral)), white 40%);
-    --w-c-coral-g12: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.018 var(--w-c-h-coral)), white 50%);
-    --w-c-coral-g13: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.018 var(--w-c-h-coral)), white 90%);
-    --w-c-coral-gcontrast: black;
   }
 
   [data-accent-color="coral"] {
@@ -50,20 +35,5 @@
     --w-c-accent-12: var(--w-c-coral-12);
     --w-c-accent-13: var(--w-c-coral-13);
     --w-c-accent-contrast: var(--w-c-coral-contrast);
-
-    --w-c-accent-g1: var(--w-c-coral-g1);
-    --w-c-accent-g2: var(--w-c-coral-g2);
-    --w-c-accent-g3: var(--w-c-coral-g3);
-    --w-c-accent-g4: var(--w-c-coral-g4);
-    --w-c-accent-g5: var(--w-c-coral-g5);
-    --w-c-accent-g6: var(--w-c-coral-g6);
-    --w-c-accent-g7: var(--w-c-coral-g7);
-    --w-c-accent-g8: var(--w-c-coral-g8);
-    --w-c-accent-g9: var(--w-c-coral-g9);
-    --w-c-accent-g10: var(--w-c-coral-g10);
-    --w-c-accent-g11: var(--w-c-coral-g11);
-    --w-c-accent-g12: var(--w-c-coral-g12);
-    --w-c-accent-g13: var(--w-c-coral-g13);
-    --w-c-accent-gcontrast: var(--w-c-coral-gcontrast);
   }
 }

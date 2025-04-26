@@ -1,0 +1,39 @@
+@layer color {
+  :root {
+    --w-c-h-fuchsia: 315;
+  }
+
+  [data-theme="dark"] {
+    --w-c-fuchsia-grey-1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.05 var(--w-c-h-fuchsia)), black 84%);
+    --w-c-fuchsia-grey-2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.05 var(--w-c-h-fuchsia)), black 80%);
+    --w-c-fuchsia-grey-3: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.05 var(--w-c-h-fuchsia)), black 74%);
+    --w-c-fuchsia-grey-4: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.05 var(--w-c-h-fuchsia)), black 68%);
+    --w-c-fuchsia-grey-5: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.05 var(--w-c-h-fuchsia)), black 62%);
+    --w-c-fuchsia-grey-6: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.05 var(--w-c-h-fuchsia)), black 56%);
+    --w-c-fuchsia-grey-7: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.05 var(--w-c-h-fuchsia)), black 50%);
+    --w-c-fuchsia-grey-8: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.05 var(--w-c-h-fuchsia)), black 44%);
+    --w-c-fuchsia-grey-9: oklch(var(--w-c-l-bright) 0.05 var(--w-c-h-fuchsia));
+    --w-c-fuchsia-grey-10: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.05 var(--w-c-h-fuchsia)), white 30%);
+    --w-c-fuchsia-grey-11: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.05 var(--w-c-h-fuchsia)), white 40%);
+    --w-c-fuchsia-grey-12: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.05 var(--w-c-h-fuchsia)), white 50%);
+    --w-c-fuchsia-grey-13: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.05 var(--w-c-h-fuchsia)), white 90%);
+    --w-c-fuchsia-grey-contrast: black;
+  }
+
+  [data-accent-color="fuchsia"] {
+    --w-c-accent-grey-1: var(--w-c-fuchsia-grey-1);
+    --w-c-accent-grey-2: var(--w-c-fuchsia-grey-2);
+    --w-c-accent-grey-3: var(--w-c-fuchsia-grey-3);
+    --w-c-accent-grey-4: var(--w-c-fuchsia-grey-4);
+    --w-c-accent-grey-5: var(--w-c-fuchsia-grey-5);
+    --w-c-accent-grey-6: var(--w-c-fuchsia-grey-6);
+    --w-c-accent-grey-7: var(--w-c-fuchsia-grey-7);
+    --w-c-accent-grey-8: var(--w-c-fuchsia-grey-8);
+    --w-c-accent-grey-9: var(--w-c-fuchsia-grey-9);
+    --w-c-accent-grey-10: var(--w-c-fuchsia-grey-10);
+    --w-c-accent-grey-11: var(--w-c-fuchsia-grey-11);
+    --w-c-accent-grey-12: var(--w-c-fuchsia-grey-12);
+    --w-c-accent-grey-13: var(--w-c-fuchsia-grey-13);
+    --w-c-accent-grey-contrast: var(--w-c-fuchsia-grey-contrast);
+  }
+}

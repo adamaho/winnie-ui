@@ -5,39 +5,11 @@
   "author": "Adam Aho",
   "type": "module",
   "exports": {
-    ".": "./src/index.css",
-    "./dark/red": "./src/red.css",
-    "./dark/orange": "./src/orange.css",
-    "./dark/yellow": "./src/yellow.css",
-    "./dark/amber": "./src/amber.css",
-    "./dark/lime": "./src/lime.css",
-    "./dark/green": "./src/green.css",
-    "./dark/forest": "./src/forest.css",
-    "./dark/sky": "./src/sky.css",
-    "./dark/blue": "./src/blue.css",
-    "./dark/indigo": "./src/indigo.css",
-    "./dark/purple": "./src/purple.css",
-    "./dark/fuchsia": "./src/fuchsia.css",
-    "./dark/pink": "./src/pink.css",
-    "./dark/brown": "./src/brown.css"
+    ".": "./src/index.css"
   },
   "publishConfig": {
     "exports": {
-      ".": "./dist/index.min.css",
-      "./dark/red": "./src/red.min.css",
-      "./dark/orange": "./src/orange.min.css",
-      "./dark/yellow": "./src/yellow.min.css",
-      "./dark/amber": "./src/amber.min.css",
-      "./dark/lime": "./src/lime.min.css",
-      "./dark/green": "./src/green.min.css",
-      "./dark/forest": "./src/forest.min.css",
-      "./dark/sky": "./src/sky.min.css",
-      "./dark/blue": "./src/blue.min.css",
-      "./dark/indigo": "./src/indigo.min.css",
-      "./dark/purple": "./src/purple.min.css",
-      "./dark/fuchsia": "./src/fuchsia.min.css",
-      "./dark/pink": "./src/pink.min.css",
-      "./dark/brown": "./src/brown.min.css"
+      ".": "./dist/index.min.css"
     }
   },
   "files": [

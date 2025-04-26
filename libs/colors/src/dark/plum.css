@@ -18,21 +18,6 @@
     --w-c-plum-12: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-plum)), white 65%);
     --w-c-plum-13: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-plum)), white 90%);
     --w-c-plum-contrast: white;
-
-    --w-c-plum-g1: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-plum)), black 68%);
-    --w-c-plum-g2: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-plum)), black 63%);
-    --w-c-plum-g3: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-plum)), black 54%);
-    --w-c-plum-g4: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-plum)), black 46%);
-    --w-c-plum-g5: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-plum)), black 39%);
-    --w-c-plum-g6: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-plum)), black 30%);
-    --w-c-plum-g7: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-plum)), black 23%);
-    --w-c-plum-g8: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-plum)), black 17%);
-    --w-c-plum-g9: oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-plum));
-    --w-c-plum-g10: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-plum)), white 10%);
-    --w-c-plum-g11: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-plum)), white 15%);
-    --w-c-plum-g12: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-plum)), white 65%);
-    --w-c-plum-g13: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-plum)), white 90%);
-    --w-c-plum-gcontrast: white;
   }
 
   [data-accent-color="plum"] {
@@ -50,20 +35,5 @@
     --w-c-accent-12: var(--w-c-plum-12);
     --w-c-accent-13: var(--w-c-plum-13);
     --w-c-accent-contrast: var(--w-c-plum-contrast);
-
-    --w-c-accent-g1: var(--w-c-plum-g1);
-    --w-c-accent-g2: var(--w-c-plum-g2);
-    --w-c-accent-g3: var(--w-c-plum-g3);
-    --w-c-accent-g4: var(--w-c-plum-g4);
-    --w-c-accent-g5: var(--w-c-plum-g5);
-    --w-c-accent-g6: var(--w-c-plum-g6);
-    --w-c-accent-g7: var(--w-c-plum-g7);
-    --w-c-accent-g8: var(--w-c-plum-g8);
-    --w-c-accent-g9: var(--w-c-plum-g9);
-    --w-c-accent-g10: var(--w-c-plum-g10);
-    --w-c-accent-g11: var(--w-c-plum-g11);
-    --w-c-accent-g12: var(--w-c-plum-g12);
-    --w-c-accent-g13: var(--w-c-plum-g13);
-    --w-c-accent-gcontrast: var(--w-c-plum-gcontrast);
   }
 }
