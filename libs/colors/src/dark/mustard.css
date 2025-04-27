@@ -1,8 +1,4 @@
 @layer color {
-  :root {
-    --w-c-h-mustard: 95;
-  }
-
   [data-theme="dark"] {
     --w-c-mustard-1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.15 var(--w-c-h-mustard)), black 86%);
     --w-c-mustard-2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.15 var(--w-c-h-mustard)), black 83%);

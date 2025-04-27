@@ -1,8 +1,4 @@
 @layer color {
-  :root {
-    --w-c-h-amethyst: 300;
-  }
-
   [data-theme="dark"] {
     --w-c-amethyst-grey-1: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-amethyst)), black 68%);
     --w-c-amethyst-grey-2: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-amethyst)), black 63%);

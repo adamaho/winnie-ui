@@ -1,8 +1,4 @@
 @layer color {
-  :root {
-    --w-c-h-lavender: 290;
-  }
-
   [data-theme="dark"] {
     --w-c-lavender-grey-1: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-lavender)), black 68%);
     --w-c-lavender-grey-2: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-lavender)), black 63%);

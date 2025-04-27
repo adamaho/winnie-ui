@@ -1,8 +1,4 @@
 @layer color {
-  :root {
-    --w-c-h-olive: 130;
-  }
-
   [data-theme="dark"] {
     --w-c-olive-1: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.122 var(--w-c-h-olive)), black 69%);
     --w-c-olive-2: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.122 var(--w-c-h-olive)), black 63%);

@@ -1,8 +1,4 @@
 @layer color {
-  :root {
-    --w-c-h-sand: 65;
-  }
-
   [data-theme="dark"] {
     --w-c-sand-grey-1: color-mix(in oklch, oklch(0.6 0.006 var(--w-c-h-sand)), black 80%);
     --w-c-sand-grey-2: color-mix(in oklch, oklch(0.6 0.006 var(--w-c-h-sand)), black 75%);

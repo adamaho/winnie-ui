@@ -1,8 +1,4 @@
 @layer color {
-  :root {
-    --w-c-h-grass: 140;
-  }
-
   [data-theme="dark"] {
     --w-c-grass-1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.143 var(--w-c-h-grass)), black 84%);
     --w-c-grass-2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.143 var(--w-c-h-grass)), black 80%);

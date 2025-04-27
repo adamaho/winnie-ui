@@ -1,8 +1,4 @@
 @layer color {
-  :root {
-    --w-c-h-indigo: 275;
-  }
-
   [data-theme="dark"] {
     --w-c-indigo-grey-1: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-indigo)), black 68%);
     --w-c-indigo-grey-2: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.028 var(--w-c-h-indigo)), black 63%);

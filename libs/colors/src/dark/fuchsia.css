@@ -1,8 +1,4 @@
 @layer color {
-  :root {
-    --w-c-h-fuchsia: 315;
-  }
-
   [data-theme="dark"] {
     --w-c-fuchsia-1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.19 var(--w-c-h-fuchsia)), black 87%);
     --w-c-fuchsia-2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.19 var(--w-c-h-fuchsia)), black 83%);

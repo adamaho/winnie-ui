@@ -1,8 +1,4 @@
 @layer color {
-  :root {
-    --w-c-h-pine: 150;
-  }
-
   [data-theme="dark"] {
     --w-c-pine-1: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-pine)), black 68%);
     --w-c-pine-2: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-pine)), black 62%);

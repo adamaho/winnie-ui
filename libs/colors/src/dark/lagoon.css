@@ -1,8 +1,4 @@
 @layer color {
-  :root {
-    --w-c-h-lagoon: 180;
-  }
-
   [data-theme="dark"] {
     --w-c-lagoon-1: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-lagoon)), black 72%);
     --w-c-lagoon-2: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-lagoon)), black 65%);

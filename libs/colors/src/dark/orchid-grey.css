@@ -1,8 +1,4 @@
 @layer color {
-  :root {
-    --w-c-h-orchid: 300;
-  }
-
   [data-theme="dark"] {
     --w-c-orchid-grey-1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.05 var(--w-c-h-orchid)), black 84%);
     --w-c-orchid-grey-2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.05 var(--w-c-h-orchid)), black 80%);

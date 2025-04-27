@@ -1,8 +1,4 @@
 @layer color {
-  :root {
-    --w-c-h-caramel: 95;
-  }
-
   [data-theme="dark"] {
     --w-c-caramel-grey-1: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.02 var(--w-c-h-caramel)), black 72%);
     --w-c-caramel-grey-2: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.02 var(--w-c-h-caramel)), black 65%);

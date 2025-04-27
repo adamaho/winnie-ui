@@ -1,8 +1,4 @@
 @layer color {
-  :root {
-    --w-c-h-blossom: 340;
-  }
-
   [data-theme="dark"] {
     --w-c-blossom-1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.12 var(--w-c-h-blossom)), black 87%);
     --w-c-blossom-2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.12 var(--w-c-h-blossom)), black 83%);

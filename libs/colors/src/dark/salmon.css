@@ -1,8 +1,4 @@
 @layer color {
-  :root {
-    --w-c-h-salmon: 30;
-  }
-
   [data-theme="dark"] {
     --w-c-salmon-1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.19 var(--w-c-h-salmon)), black 86%);
     --w-c-salmon-2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.19 var(--w-c-h-salmon)), black 83%);

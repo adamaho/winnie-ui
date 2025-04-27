@@ -1,8 +1,4 @@
 @layer color {
-  :root {
-    --w-c-h-cobalt: 262;
-  }
-
   [data-theme="dark"] {
     --w-c-cobalt-1: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-cobalt)), black 76%);
     --w-c-cobalt-2: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-cobalt)), black 68%);

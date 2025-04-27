@@ -1,8 +1,4 @@
 @layer color {
-  :root {
-    --w-c-h-tuscon: 75;
-  }
-
   [data-theme="dark"] {
     --w-c-tuscon-grey-1: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.02 var(--w-c-h-tuscon)), black 72%);
     --w-c-tuscon-grey-2: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.02 var(--w-c-h-tuscon)), black 65%);

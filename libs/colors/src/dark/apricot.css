@@ -1,8 +1,4 @@
 @layer color {
-  :root {
-    --w-c-h-apricot: 75;
-  }
-
   [data-theme="dark"] {
     --w-c-apricot-1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.15 var(--w-c-h-apricot)), black 86%);
     --w-c-apricot-2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.15 var(--w-c-h-apricot)), black 83%);

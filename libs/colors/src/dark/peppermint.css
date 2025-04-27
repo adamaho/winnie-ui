@@ -1,8 +1,4 @@
 @layer color {
-  :root {
-    --w-c-h-peppermint: 150;
-  }
-
   [data-theme="dark"] {
     --w-c-peppermint-1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.17 var(--w-c-h-peppermint)), black 84%);
     --w-c-peppermint-2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.17 var(--w-c-h-peppermint)), black 80%);

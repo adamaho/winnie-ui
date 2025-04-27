@@ -1,8 +1,4 @@
 @layer color {
-  :root {
-    --w-c-h-plum: 315;
-  }
-
   [data-theme="dark"] {
     --w-c-plum-1: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-plum)), black 74%);
     --w-c-plum-2: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-plum)), black 66%);

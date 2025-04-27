@@ -1,8 +1,4 @@
 @layer color {
-  :root {
-    --w-c-h-lime: 130;
-  }
-
   [data-theme="dark"] {
     --w-c-lime-1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.2341 var(--w-c-h-lime)), black 84%);
     --w-c-lime-2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.2341 var(--w-c-h-lime)), black 80%);

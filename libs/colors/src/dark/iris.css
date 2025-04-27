@@ -1,8 +1,4 @@
 @layer color {
-  :root {
-    --w-c-h-iris: 275;
-  }
-
   [data-theme="dark"] {
     --w-c-iris-1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.21 var(--w-c-h-iris)), black 87%);
     --w-c-iris-2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.21 var(--w-c-h-iris)), black 83%);

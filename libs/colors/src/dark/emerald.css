@@ -1,8 +1,4 @@
 @layer color {
-  :root {
-    --w-c-h-emerald: 170;
-  }
-
   [data-theme="dark"] {
     --w-c-emerald-1: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-emerald)), black 72%);
     --w-c-emerald-2: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.11 var(--w-c-h-emerald)), black 65%);

@@ -1,8 +1,4 @@
 @layer color {
-  :root {
-    --w-c-h-tomato: 30;
-  }
-
   [data-theme="dark"] {
     --w-c-tomato-grey-1: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.01 var(--w-c-h-tomato)), black 72%);
     --w-c-tomato-grey-2: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.01 var(--w-c-h-tomato)), black 65%);

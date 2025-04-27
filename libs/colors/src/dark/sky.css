@@ -1,8 +1,4 @@
 @layer color {
-  :root {
-    --w-c-h-sky: 262;
-  }
-
   [data-theme="dark"] {
     --w-c-sky-1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.19 var(--w-c-h-sky)), black 87%);
     --w-c-sky-2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.19 var(--w-c-h-sky)), black 83%);

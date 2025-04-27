@@ -1,8 +1,4 @@
 @layer color {
-  :root {
-    --w-c-h-cyan: 180;
-  }
-
   [data-theme="dark"] {
     --w-c-cyan-grey-1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.033 var(--w-c-h-cyan)), black 84%);
     --w-c-cyan-grey-2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.033 var(--w-c-h-cyan)), black 80%);
