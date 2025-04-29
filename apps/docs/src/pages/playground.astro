@@ -12,32 +12,47 @@ import { Controls } from "./_controls";
     data-component="layout"
     id="playground"
     data-accent-color="mustard"
+    data-shade="1"
     class="grey"
   >
     <nav data-component="layout-sidebar"></nav>
-    <main data-component="layout-content">
-      <div data-component="page">
-        <header data-component="page-header"></header>
-        <div data-component="page-content" class="flex flex-col gap-5">
-          <div data-component="page-block" class="p-5">
-            <div class="rounded-3 h-full p-5">
-              <div class="rounded-3 h-full p-5">
-                <div class="rounded-3 h-full p-5">
-                  <div class="rounded-3 h-full p-5"></div>
-                </div>
-              </div>
-            </div>
+    <main data-component="layout-content" data-layer="1">
+      <div data-component="page" data-layer="2" class="border">
+        <header data-component="page-header" class="border-b" data-layer="2">
+        </header>
+        <div data-component="page-content" class="flex flex-col gap-5 p-5">
+          <div class="p-5">
+            <h2 data-component="heading" data-weight="medium" data-size="5">
+              Two
+            </h2>
+            <p data-component="text" data-size="3" class="max-w-prose">
+              This is an example of a block with shade two. Typically used for
+              the main background of an application. Paired with the accent-5
+              border color.
+            </p>
           </div>
-          <div data-component="page-block" class="p-3">
-            <div class="rounded-3 h-full p-5">
-              <h2 data-component="heading" data-size="5" data-weight="medium">
-                Create Issue
+
+          <div data-component="page-block" class="border p-5" data-layer="3">
+            <h2 data-component="heading" data-weight="medium" data-size="5">
+              Three
+            </h2>
+            <p data-component="text" data-size="3" class="max-w-prose">
+              This is an example of a block with shade three. Typically used for
+              content level components
+            </p>
+          </div>
+          <div class="border p-3" data-layer="3">
+            <div data-component="page-block" class="border p-5" data-layer="4">
+              <h2 data-component="heading" data-weight="medium" data-size="5">
+                Four
               </h2>
-              <p data-component="text" class="mb-4" data-size="3">
-                Issues are a thing that lets you track things.
+              <p data-component="text" data-size="3" class="max-w-prose">
+                This is an example of a block with shade four. Typically used
+                for overlay components like dialogs, dropdowns, popovers, etc
               </p>
-              <footer class="flex justify-end gap-4">
-                <button data-component="button" data-size="md" class="grey">
+              <div class="mt-6 h-[50px]" data-shade="3"></div>
+              <footer class="mt-8 flex justify-end gap-4">
+                <button data-component="button" data-size="md" data-mono="true">
                   <span data-slot="label">Cancel</span>
                 </button>
                 <button data-component="button" data-size="md">
@@ -48,7 +63,8 @@ import { Controls } from "./_controls";
           </div>
           <div
             data-component="page-block"
-            class="black flex flex-col gap-1 p-3"
+            class="flex flex-col gap-1 p-3"
+            data-slot="chips"
           >
             <section class="flex items-center gap-1">
               {
@@ -66,141 +82,12 @@ import { Controls } from "./_controls";
                     <span
                       class="chip grey h-[50px] w-[50px]"
                       data-shade={i + 1}
+                      data-mono="true"
                     />
                   );
                 })
               }
             </section>
-            <!-- <section class="grey flex items-center gap-1">
-              <span class="chip h-[50px] w-[50px]" data-accent-color="salmon"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="apricot"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="mustard"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="lime"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="grass"
-              ></span>
-              <span
-                class="chip h-[50px] w-[50px]"
-                data-accent-color="peppermint"></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="coast"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="cyan"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="sky"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="iris"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="lilac"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="orchid"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="fuchsia"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="blossom"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="coral"
-              ></span>
-            </section>
-            <section class="flex items-center gap-1">
-              <span class="chip h-[50px] w-[50px]" data-accent-color="salmon"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="apricot"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="mustard"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="lime"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="grass"
-              ></span>
-              <span
-                class="chip h-[50px] w-[50px]"
-                data-accent-color="peppermint"></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="coast"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="cyan"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="sky"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="iris"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="lilac"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="orchid"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="fuchsia"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="blossom"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="coral"
-              ></span>
-            </section>
-            <section class="flex items-center gap-1">
-              <span class="chip h-[50px] w-[50px]" data-accent-color="tomato"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="tuscon"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="caramel"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="olive"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="basil"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="pine"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="emerald"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="lagoon"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="cobalt"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="indigo"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="lavender"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="amethyst"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="plum"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="grape"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="merlot"
-              ></span>
-            </section>
-            <section class="grey flex items-center gap-1">
-              <span class="chip h-[50px] w-[50px]" data-accent-color="tomato"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="tuscon"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="caramel"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="olive"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="basil"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="pine"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="emerald"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="lagoon"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="cobalt"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="indigo"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="lavender"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="amethyst"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="plum"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="grape"
-              ></span>
-              <span class="chip h-[50px] w-[50px]" data-accent-color="merlot"
-              ></span>
-            </section> -->
           </div>
         </div>
       </div>
@@ -209,285 +96,169 @@ import { Controls } from "./_controls";
 </BaseLayout>
 
 <style>
-  .root {
-    background: black;
+  [data-component="heading"] {
+    color: var(--w-c-accent-12);
   }
 
-  .chip {
+  [data-component="text"] {
+    color: var(--w-c-accent-11);
+  }
+
+  [data-component="button"] {
+    background: var(--w-c-accent-9);
+    color: var(--w-c-accent-contrast);
+
+    &[data-mono] {
+      background: var(--w-c-accent-grey-9);
+      color: var(--w-c-accent-grey-contrast);
+    }
+  }
+
+  [data-layer="1"] {
+    background: var(--w-c-layer-1, var(--w-c-accent-1));
+  }
+
+  [data-layer="2"] {
+    background: var(--w-c-layer-2, var(--w-c-accent-2));
+    border-color: var(--w-c-layer-2-border, var(--w-c-accent-5));
+  }
+
+  [data-layer="3"] {
+    background: var(--w-c-layer-3, var(--w-c-accent-3));
+    border-color: var(--w-c-layer-3-border, var(--w-c-accent-6));
+  }
+
+  [data-layer="4"] {
+    background: var(--w-c-layer-4, var(--w-c-accent-4));
+    border-color: var(--w-c-layer-4-border, var(--w-c-accent-6));
+  }
+
+  [data-shade="1"] {
+    background: var(--w-c-accent-1);
+
+    &[data-mono] {
+      background: var(--w-c-accent-grey-1);
+    }
+  }
+
+  [data-shade="2"] {
+    background: var(--w-c-accent-2);
+
+    &[data-mono="true"] {
+      background: var(--w-c-accent-grey-2);
+    }
+  }
+
+  [data-shade="3"] {
+    background: var(--w-c-accent-3);
+
+    &[data-mono="true"] {
+      background: var(--w-c-accent-grey-3);
+    }
+  }
+
+  [data-shade="4"] {
+    background: var(--w-c-accent-4);
+
+    &[data-mono="true"] {
+      background: var(--w-c-accent-grey-4);
+    }
+  }
+
+  [data-shade="5"] {
+    background: var(--w-c-accent-5);
+
+    &[data-mono="true"] {
+      background: var(--w-c-accent-grey-5);
+    }
+  }
+
+  [data-shade="6"] {
+    background: var(--w-c-accent-6);
+
+    &[data-mono="true"] {
+      background: var(--w-c-accent-grey-6);
+    }
+  }
+
+  [data-shade="7"] {
+    background: var(--w-c-accent-7);
+
+    &[data-mono="true"] {
+      background: var(--w-c-accent-grey-7);
+    }
+  }
+
+  [data-shade="8"] {
+    background: var(--w-c-accent-8);
+
+    &[data-mono="true"] {
+      background: var(--w-c-accent-grey-8);
+    }
+  }
+
+  [data-shade="9"] {
     background: var(--w-c-accent-9);
 
-    &[data-shade="1"] {
-      background: var(--w-c-accent-1);
-    }
-
-    &[data-shade="2"] {
-      background: var(--w-c-accent-2);
-    }
-
-    &[data-shade="3"] {
-      background: var(--w-c-accent-3);
-    }
-
-    &[data-shade="4"] {
-      background: var(--w-c-accent-4);
-    }
-
-    &[data-shade="5"] {
-      background: var(--w-c-accent-5);
-    }
-
-    &[data-shade="6"] {
-      background: var(--w-c-accent-6);
-    }
-
-    &[data-shade="7"] {
-      background: var(--w-c-accent-7);
-    }
-
-    &[data-shade="8"] {
-      background: var(--w-c-accent-8);
-    }
-
-    &[data-shade="9"] {
-      background: var(--w-c-accent-9);
-    }
-
-    &[data-shade="10"] {
-      background: var(--w-c-accent-10);
-    }
-
-    &[data-shade="11"] {
-      background: var(--w-c-accent-11);
-    }
-
-    &[data-shade="12"] {
-      background: var(--w-c-accent-12);
-    }
-
-    &[data-shade="13"] {
-      background: var(--w-c-accent-13);
-    }
-
-    &.grey {
-      &[data-shade="1"] {
-        background: var(--w-c-accent-grey-1);
-      }
-
-      &[data-shade="2"] {
-        background: var(--w-c-accent-grey-2);
-      }
-
-      &[data-shade="3"] {
-        background: var(--w-c-accent-grey-3);
-      }
-
-      &[data-shade="4"] {
-        background: var(--w-c-accent-grey-4);
-      }
-
-      &[data-shade="5"] {
-        background: var(--w-c-accent-grey-5);
-      }
-
-      &[data-shade="6"] {
-        background: var(--w-c-accent-grey-6);
-      }
-
-      &[data-shade="7"] {
-        background: var(--w-c-accent-grey-7);
-      }
-
-      &[data-shade="8"] {
-        background: var(--w-c-accent-grey-8);
-      }
-
-      &[data-shade="9"] {
-        background: var(--w-c-accent-grey-9);
-      }
-
-      &[data-shade="10"] {
-        background: var(--w-c-accent-grey-10);
-      }
-
-      &[data-shade="11"] {
-        background: var(--w-c-accent-grey-11);
-      }
-
-      &[data-shade="12"] {
-        background: var(--w-c-accent-grey-12);
-      }
-
-      &[data-shade="13"] {
-        background: var(--w-c-accent-grey-13);
-      }
+    &[data-mono="true"] {
+      background: var(--w-c-accent-grey-9);
     }
   }
 
-  .grey {
-    &[data-component="layout"] {
-      background: var(--w-c-accent-grey-1);
+  [data-shade="10"] {
+    background: var(--w-c-accent-10);
 
-      [data-component="page"] {
-        background: var(--w-c-accent-grey-2);
-        border: 1px solid var(--w-c-accent-grey-3);
-
-        [data-component="page-header"] {
-          border-bottom: 1px solid var(--w-c-accent-grey-3);
-        }
-
-        [data-component="page-content"] {
-          padding: var(--wui-space-5);
-        }
-
-        [data-component="page-block"] {
-          &.black {
-            background: black;
-          }
-
-          background: var(--w-c-accent-grey-3);
-          border: 1px solid var(--w-c-accent-grey-4);
-          border-radius: var(--wui-border-radius-5);
-
-          div {
-            background: var(--w-c-accent-grey-4);
-            border: 1px solid var(--w-c-accent-grey-5);
-
-            div {
-              background: var(--w-c-accent-grey-5);
-              border: 1px solid var(--w-c-accent-grey-6);
-
-              div {
-                background: var(--w-c-accent-grey-6);
-                border: 1px solid var(--w-c-accent-grey-7);
-
-                div {
-                  background: var(--w-c-accent-grey-7);
-                  border: 1px solid var(--w-c-accent-grey-8);
-                }
-              }
-            }
-
-            [data-component="heading"] {
-              color: var(--w-c-accent-grey-13);
-              letter-spacing: var(--wui-letter-spacing-9);
-            }
-
-            [data-component="text"] {
-              color: var(--w-c-accent-grey-12);
-            }
-
-            button {
-              background: var(--w-c-accent-9);
-              color: var(--w-c-accent-contrast);
-
-              &:hover {
-                background: var(--w-c-accent-10);
-              }
-
-              &:active {
-                background: var(--w-c-accent-11);
-              }
-
-              &.grey {
-                background: var(--w-c-accent-grey-9);
-                color: var(--w-c-accent-grey-contrast);
-
-                &:hover {
-                  background: var(--w-c-accent-grey-10);
-                }
-
-                &:active {
-                  background: var(--w-c-accent-grey-11);
-                }
-              }
-            }
-          }
-        }
-      }
+    &[data-mono="true"] {
+      background: var(--w-c-accent-grey-10);
     }
   }
 
-  .color {
-    &[data-component="layout"] {
-      background: var(--w-c-accent-1);
+  [data-shade="11"] {
+    background: var(--w-c-accent-11);
 
-      [data-component="page"] {
-        background: var(--w-c-accent-2);
-        border: 1px solid var(--w-c-accent-3);
-
-        [data-component="page-header"] {
-          border-bottom: 1px solid var(--w-c-accent-3);
-        }
-
-        [data-component="page-content"] {
-          padding: var(--wui-space-5);
-        }
-
-        [data-component="page-block"] {
-          &.black {
-            background: black;
-          }
-
-          background: var(--w-c-accent-3);
-          border: 1px solid var(--w-c-accent-4);
-          border-radius: var(--wui-border-radius-5);
-
-          div {
-            background: var(--w-c-accent-4);
-            border: 1px solid var(--w-c-accent-5);
-
-            div {
-              background: var(--w-c-accent-5);
-              border: 1px solid var(--w-c-accent-6);
-
-              div {
-                background: var(--w-c-accent-6);
-                border: 1px solid var(--w-c-accent-7);
-
-                div {
-                  background: var(--w-c-accent-7);
-                  border: 1px solid var(--w-c-accent-8);
-                }
-              }
-            }
-
-            [data-component="heading"] {
-              color: var(--w-c-accent-13);
-              letter-spacing: var(--wui-letter-spacing-9);
-            }
-
-            [data-component="text"] {
-              color: var(--w-c-accent-12);
-            }
-
-            button {
-              background: var(--w-c-accent-9);
-              color: var(--w-c-accent-contrast);
-
-              &:hover {
-                background: var(--w-c-accent-10);
-              }
-
-              &:active {
-                background: var(--w-c-accent-11);
-              }
-
-              &.grey {
-                background: var(--w-c-accent-grey-9);
-                color: var(--w-c-accent-grey-contrast);
-
-                &:hover {
-                  background: var(--w-c-accent-grey-10);
-                }
-
-                &:active {
-                  background: var(--w-c-accent-grey-11);
-                }
-              }
-            }
-          }
-        }
-      }
+    &[data-mono="true"] {
+      background: var(--w-c-accent-grey-11);
     }
+  }
+
+  [data-shade="12"] {
+    background: var(--w-c-accent-12);
+
+    &[data-mono="true"] {
+      background: var(--w-c-accent-grey-12);
+    }
+  }
+
+  [data-shade="13"] {
+    background: var(--w-c-accent-13);
+
+    &[data-mono="true"] {
+      background: var(--w-c-accent-grey-13);
+    }
+  }
+
+  [data-slot="chips"] {
+    background: var(--w-c-chips, black);
+  }
+
+  [data-theme="light"] {
+    --w-c-chips: white;
+
+    --w-c-layer-1: var(--w-c-accent-4);
+    --w-c-layer-2: var(--w-c-accent-3);
+    --w-c-layer-2-border: var(--w-c-accent-5);
+    --w-c-layer-3: var(--w-c-accent-2);
+
+    [data-component="layout"] {
+      --wui-layout-content-background: var(--w-c-accent-3);
+      --wui-page-background: var(--w-c-accent-1);
+    }
+  }
+
+  [data-mono="true"] {
+    --w-c-layer-1: var(--w-c-accent-grey-4);
+    --w-c-layer-2: var(--w-c-accent-grey-3);
+    --w-c-layer-2-border: var(--w-c-accent-grey-5);
+    --w-c-layer-3: var(--w-c-accent-grey-2);
   }
 </style>

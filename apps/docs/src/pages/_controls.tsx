@@ -2,6 +2,14 @@ import { useControls } from "leva";
 
 export function Controls() {
   useControls({
+    "data-theme": {
+      options: ["light", "dark"],
+      onChange(theme) {
+        const layoutRoot = document.getElementById("playground")!;
+        layoutRoot.setAttribute("data-theme", theme);
+      },
+      value: "light",
+    },
     "data-accent-color": {
       options: [
         "salmon",
@@ -37,7 +45,7 @@ export function Controls() {
         "coral",
         "merlot",
       ],
-      value: "salmon",
+      value: "amethyst",
       onChange(color) {
         const layoutRoot = document.getElementById("playground")!;
         layoutRoot.setAttribute("data-accent-color", color);
@@ -47,13 +55,7 @@ export function Controls() {
       value: false,
       onChange(value) {
         const layoutRoot = document.getElementById("playground")!;
-        if (value) {
-          layoutRoot.classList.add("grey");
-          layoutRoot.classList.remove("color");
-        } else {
-          layoutRoot.classList.add("color");
-          layoutRoot.classList.remove("grey");
-        }
+        layoutRoot.setAttribute("data-mono", value);
       },
     },
   });

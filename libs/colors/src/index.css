@@ -31,6 +31,7 @@
 @import "./coral.css"; /* 360 */
 @import "./merlot.css"; /* 360 */
 
+@import "./light/index.css";
 @import "./dark/index.css";
 
 @layer color {
