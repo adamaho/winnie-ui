@@ -36,7 +36,7 @@
     "@winnie-ui/react": "workspace:*",
     "@winnie-ui/tailwind": "workspace:*",
     "@winnie-ui/themes": "workspace:*",
-    "astro": "5.7.5",
+    "astro": "5.7.8",
     "astro-expressive-code": "0.41.2",
     "clsx": "2.1.1",
     "cmdk": "1.1.1",

@@ -34,7 +34,12 @@ const { collection, navigation, slug } = Astro.props;
       collection={collection}
     />
   </div>
-  <Navigation client:load transition:persist items={navigation} slug={slug} />
+  <Navigation
+    client:only="react"
+    transition:persist
+    items={navigation}
+    slug={slug}
+  />
 </nav>
 
 <style>
