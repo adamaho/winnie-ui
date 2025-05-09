@@ -3,62 +3,123 @@ import { openai } from "./providers/openai";
 import { generateObject } from "ai";
 import z from "zod";
 import { SYSTEM_PROMPT } from "./constants/system-prompt";
+import type { Credentials } from "google-auth-library";
 import { google } from "googleapis";
+import { getCookie, setCookie } from "hono/cookie";
 
-const oauthClient = new google.auth.OAuth2({
-  clientId: Bun.env.GOOGLE_CLIENT_ID,
-  clientSecret: Bun.env.GOOGLE_CLIENT_SECRET,
-  redirectUri: "http://localhost:3000/oauth/callback",
-});
-
-const scopes = ["https://www.googleapis.com/auth/spreadsheets"];
-
-const state = crypto.randomUUID();
-
-const authorizationUrl = oauthClient.generateAuthUrl({
-  access_type: "offline",
-  scope: scopes,
-  include_granted_scopes: true,
-  state,
-});
-
-const service = google.sheets({
-  version: "v4",
-  auth: oauthClient,
-});
-
-type Env = {
-  Variables: {
-    state: string;
-  };
+type Variables = {
+  tokens: Credentials;
 };
 
-const app = new Hono<Env>();
+const scopes = [
+  "https://www.googleapis.com/auth/spreadsheets",
+  "openid",
+  "email",
+  "profile",
+];
 
-app.get("/login", async (c) => {
-  return c.redirect(authorizationUrl);
+const app = new Hono<{ Variables: Variables }>();
+
+app.use(async (c, next) => {
+  if (c.req.path === "/login" || c.req.path === "/oauth/callback") {
+    return await next();
+  }
+
+  const email = getCookie(c, "email");
+  const file = Bun.file("tokens.json");
+  if (!(await file.exists())) return c.status(401);
+  const all = JSON.parse(await file.text());
+  const userTokens = all[email!] || null;
+
+  if (userTokens == null) {
+    return c.redirect("/login");
+  }
+
+  c.set("tokens", userTokens);
+
+  await next();
 });
 
-app.get("/oauth/callback", async (c) => {
+app.get("/login", async (c) => {
+  const state = crypto.randomUUID();
   const params = new URL(c.req.url).searchParams;
 
-  console.log(params.get("state"));
+  const oauthClient = new google.auth.OAuth2({
+    clientId: Bun.env.GOOGLE_CLIENT_ID,
+    clientSecret: Bun.env.GOOGLE_CLIENT_SECRET,
+    redirectUri: "http://localhost:3000/oauth/callback",
+  });
 
-  if (params.get("error")) {
-    console.log("Error:" + params.get("error"));
-    return c.text("error");
-  } else if (params.get("state") !== state) {
-    console.log("State mismatch. Possible CSRF attack");
-    return c.text("State mismatch. Possible CSRF attack", 400);
-  } else {
-    // Get access and refresh tokens (if access_type is offline)
-    let { tokens } = await oauthClient.getToken(params.get("code") ?? "");
-    oauthClient.setCredentials(tokens);
-    return c.redirect("/");
+  if (!params.get("code")) {
+    setCookie(c, "state", state, {
+      maxAge: 60 * 10,
+      httpOnly: true,
+      path: "/",
+      // secure: true,
+    });
+
+    const authorizationUrl = oauthClient.generateAuthUrl({
+      access_type: "offline",
+      scope: scopes,
+      include_granted_scopes: true,
+      state,
+    });
+
+    return c.redirect(authorizationUrl);
   }
 });
 
+app.get("/oauth/callback", async (c) => {
+  if (c.req.query("error")) {
+    return c.text("Authentication error", 401);
+  }
+
+  if (c.req.query("state") !== getCookie(c, "state")) {
+    return c.text("State mismatch. Possible CSRF attack", 401);
+  }
+
+  const oauthClient = new google.auth.OAuth2({
+    clientId: Bun.env.GOOGLE_CLIENT_ID,
+    clientSecret: Bun.env.GOOGLE_CLIENT_SECRET,
+    redirectUri: "http://localhost:3000/oauth/callback",
+  });
+  const { tokens } = await oauthClient.getToken(c.req.query("code")!);
+  oauthClient.setCredentials(tokens);
+
+  // write user info to db
+  const oauth2 = google.oauth2({ version: "v2", auth: oauthClient });
+  const { data } = await oauth2.userinfo.get();
+  await setCookie(c, "email", data.email!);
+
+  const file = Bun.file("tokens.json");
+  const existing = (await file.exists()) ? JSON.parse(await file.text()) : {};
+
+  if (!(data.email! in existing)) {
+    existing[data.email!] = tokens;
+    await Bun.write("tokens.json", JSON.stringify(existing, null, 2));
+  }
+
+  return c.redirect("/");
+});
+
 app.get("/", async (c) => {
+  return c.text("welcome");
+});
+
+app.get("/process-receipt", async (c) => {
+  const tokens = c.get("tokens");
+
+  const oauthClient = new google.auth.OAuth2({
+    clientId: Bun.env.GOOGLE_CLIENT_ID,
+    clientSecret: Bun.env.GOOGLE_CLIENT_SECRET,
+    redirectUri: "http://localhost:3000/oauth/callback",
+  });
+  oauthClient.setCredentials(tokens);
+
+  const sheets = google.sheets({
+    version: "v4",
+    auth: oauthClient,
+  });
   // const body = await c.req.parseBody();
 
   // if (typeof body["file"] === "string") {
@@ -108,7 +169,7 @@ app.get("/", async (c) => {
   });
 
   try {
-    const result = await service.spreadsheets.values.append({
+    const result = await sheets.spreadsheets.values.append({
       spreadsheetId: "1_KZhJju1hlpEeHpcLpYEeZVwukHTs86KejPG1iy9SWY",
       range: "A1:B1",
       valueInputOption: "USER_ENTERED",
@@ -126,7 +187,7 @@ app.get("/", async (c) => {
         }),
       },
     });
-    console.log(result);
+    console.log("updated sheet");
   } catch (err) {
     console.log(err);
     throw err;
