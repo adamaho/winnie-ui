@@ -1,0 +1,28 @@
+{
+  "name": "@winnie-ui/colors",
+  "version": "0.0.1",
+  "description": "Colors",
+  "author": "Adam Aho",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.css"
+  },
+  "publishConfig": {
+    "exports": {
+      ".": "./dist/index.min.css"
+    }
+  },
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "scripts": {
+    "build": "rimraf dist && bun ./scripts/build.ts",
+    "clean": "rimraf node_modules .dist"
+  },
+  "devDependencies": {
+    "@winnie-ui/lightning": "workspace:*",
+    "@winnie-ui/tsconfig": "workspace:*",
+    "rimraf": "6.0.1"
+  }
+}

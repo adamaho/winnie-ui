@@ -1,0 +1,49 @@
+@import "./salmon.css"; /* 30 */
+@import "./tomato.css"; /* 30 */
+@import "./apricot.css"; /* 75 */
+@import "./tuscon.css"; /* 75 */
+@import "./sand.css"; /* 65 */
+@import "./cocoa.css"; /* 65 */
+@import "./mustard.css"; /* 95 */
+@import "./caramel.css"; /* 95 */
+@import "./lime.css"; /* 130 */
+@import "./olive.css"; /* 130 */
+@import "./grass.css"; /* 140 */
+@import "./basil.css"; /* 140 */
+@import "./peppermint.css"; /* 150 */
+@import "./pine.css"; /* 150 */
+@import "./coast.css"; /* 170 */
+@import "./emerald.css"; /* 170 */
+@import "./cyan.css"; /* 180 */
+@import "./lagoon.css"; /* 180 */
+@import "./sky.css"; /* 262 */
+@import "./cobalt.css"; /* 262 */
+@import "./iris.css"; /* 275 */
+@import "./indigo.css"; /* 275 */
+@import "./lilac.css"; /* 290 */
+@import "./lavender.css"; /* 290 */
+@import "./orchid.css"; /* 300 */
+@import "./amethyst.css"; /* 300 */
+@import "./fuchsia.css"; /* 315 */
+@import "./plum.css"; /* 315 */
+@import "./blossom.css"; /* 340 */
+@import "./grape.css"; /* 340 */
+@import "./coral.css"; /* 360 */
+@import "./merlot.css"; /* 360 */
+
+@import "./light/index.css";
+@import "./dark/index.css";
+
+@layer color {
+  @property --w-c-l-dim {
+    syntax: "*";
+    inherits: false;
+    initial-value: 0.45;
+  }
+
+  @property --w-c-l-bright {
+    syntax: "*";
+    inherits: false;
+    initial-value: 0.84;
+  }
+}

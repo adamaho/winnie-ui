@@ -1,0 +1,34 @@
+@layer color {
+  [data-theme="dark"] {
+    --w-c-mustard-1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.15 var(--w-c-h-mustard)), black 86%);
+    --w-c-mustard-2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.15 var(--w-c-h-mustard)), black 83%);
+    --w-c-mustard-3: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.15 var(--w-c-h-mustard)), black 76%);
+    --w-c-mustard-4: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.15 var(--w-c-h-mustard)), black 71%);
+    --w-c-mustard-5: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.15 var(--w-c-h-mustard)), black 65%);
+    --w-c-mustard-6: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.15 var(--w-c-h-mustard)), black 58%);
+    --w-c-mustard-7: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.15 var(--w-c-h-mustard)), black 53%);
+    --w-c-mustard-8: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.15 var(--w-c-h-mustard)), black 47%);
+    --w-c-mustard-9: oklch(var(--w-c-l-bright) 0.15 var(--w-c-h-mustard));
+    --w-c-mustard-10: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.15 var(--w-c-h-mustard)), white 20%);
+    --w-c-mustard-11: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.15 var(--w-c-h-mustard)), white 30%);
+    --w-c-mustard-12: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.15 var(--w-c-h-mustard)), white 45%);
+    --w-c-mustard-13: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.15 var(--w-c-h-mustard)), white 90%);
+  }
+
+  [data-accent-color="mustard"] {
+    --w-c-accent-1: var(--w-c-mustard-1);
+    --w-c-accent-2: var(--w-c-mustard-2);
+    --w-c-accent-3: var(--w-c-mustard-3);
+    --w-c-accent-4: var(--w-c-mustard-4);
+    --w-c-accent-5: var(--w-c-mustard-5);
+    --w-c-accent-6: var(--w-c-mustard-6);
+    --w-c-accent-7: var(--w-c-mustard-7);
+    --w-c-accent-8: var(--w-c-mustard-8);
+    --w-c-accent-9: var(--w-c-mustard-9);
+    --w-c-accent-10: var(--w-c-mustard-10);
+    --w-c-accent-11: var(--w-c-mustard-11);
+    --w-c-accent-12: var(--w-c-mustard-12);
+    --w-c-accent-13: var(--w-c-mustard-13);
+    --w-c-accent-contrast: var(--w-c-mustard-contrast);
+  }
+}

@@ -16,7 +16,7 @@ export default defineConfig({
     "/css/docs": "/css/docs/start/quick-start",
   },
 
-  integrations: [expressiveCode(), mdx(), react()],
+  integrations: [react(), expressiveCode(), , mdx()],
 
   vite: {
     plugins: [tailwindcss()],

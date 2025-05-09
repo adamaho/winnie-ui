@@ -1,0 +1,35 @@
+@layer color {
+  [data-theme="dark"] {
+    --w-c-lavender-1: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-lavender)), black 74%);
+    --w-c-lavender-2: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-lavender)), black 66%);
+    --w-c-lavender-3: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-lavender)), black 58%);
+    --w-c-lavender-4: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-lavender)), black 50%);
+    --w-c-lavender-5: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-lavender)), black 41%);
+    --w-c-lavender-6: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-lavender)), black 33%);
+    --w-c-lavender-7: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-lavender)), black 25%);
+    --w-c-lavender-8: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-lavender)), black 18%);
+    --w-c-lavender-9: oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-lavender));
+    --w-c-lavender-10: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-lavender)), white 5%);
+    --w-c-lavender-11: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-lavender)), white 10%);
+    --w-c-lavender-12: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-lavender)), white 65%);
+    --w-c-lavender-13: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-lavender)), white 90%);
+    --w-c-lavender-contrast: white;
+  }
+
+  [data-accent-color="lavender"] {
+    --w-c-accent-1: var(--w-c-lavender-1);
+    --w-c-accent-2: var(--w-c-lavender-2);
+    --w-c-accent-3: var(--w-c-lavender-3);
+    --w-c-accent-4: var(--w-c-lavender-4);
+    --w-c-accent-5: var(--w-c-lavender-5);
+    --w-c-accent-6: var(--w-c-lavender-6);
+    --w-c-accent-7: var(--w-c-lavender-7);
+    --w-c-accent-8: var(--w-c-lavender-8);
+    --w-c-accent-9: var(--w-c-lavender-9);
+    --w-c-accent-10: var(--w-c-lavender-10);
+    --w-c-accent-11: var(--w-c-lavender-11);
+    --w-c-accent-12: var(--w-c-lavender-12);
+    --w-c-accent-13: var(--w-c-lavender-13);
+    --w-c-accent-contrast: var(--w-c-lavender-contrast);
+  }
+}

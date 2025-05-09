@@ -1,0 +1,35 @@
+@layer color {
+  [data-theme="dark"] {
+    --w-c-blossom-1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.12 var(--w-c-h-blossom)), black 87%);
+    --w-c-blossom-2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.12 var(--w-c-h-blossom)), black 83%);
+    --w-c-blossom-3: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.12 var(--w-c-h-blossom)), black 76%);
+    --w-c-blossom-4: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.12 var(--w-c-h-blossom)), black 71%);
+    --w-c-blossom-5: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.12 var(--w-c-h-blossom)), black 65%);
+    --w-c-blossom-6: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.12 var(--w-c-h-blossom)), black 58%);
+    --w-c-blossom-7: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.12 var(--w-c-h-blossom)), black 53%);
+    --w-c-blossom-8: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.12 var(--w-c-h-blossom)), black 47%);
+    --w-c-blossom-9: oklch(var(--w-c-l-bright) 0.12 var(--w-c-h-blossom));
+    --w-c-blossom-10: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.12 var(--w-c-h-blossom)), white 20%);
+    --w-c-blossom-11: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.12 var(--w-c-h-blossom)), white 30%);
+    --w-c-blossom-12: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.12 var(--w-c-h-blossom)), white 45%);
+    --w-c-blossom-13: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.12 var(--w-c-h-blossom)), white 90%);
+    --w-c-blossom-contrast: black;
+  }
+
+  [data-accent-color="blossom"] {
+    --w-c-accent-1: var(--w-c-blossom-1);
+    --w-c-accent-2: var(--w-c-blossom-2);
+    --w-c-accent-3: var(--w-c-blossom-3);
+    --w-c-accent-4: var(--w-c-blossom-4);
+    --w-c-accent-5: var(--w-c-blossom-5);
+    --w-c-accent-6: var(--w-c-blossom-6);
+    --w-c-accent-7: var(--w-c-blossom-7);
+    --w-c-accent-8: var(--w-c-blossom-8);
+    --w-c-accent-9: var(--w-c-blossom-9);
+    --w-c-accent-10: var(--w-c-blossom-10);
+    --w-c-accent-11: var(--w-c-blossom-11);
+    --w-c-accent-12: var(--w-c-blossom-12);
+    --w-c-accent-13: var(--w-c-blossom-13);
+    --w-c-accent-contrast: var(--w-c-blossom-contrast);
+  }
+}

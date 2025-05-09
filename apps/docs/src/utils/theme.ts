@@ -6,9 +6,11 @@ export type Theme = {
     | "orange"
     | "yellow"
     | "green"
+    | "lime"
     | "blue"
     | "purple"
     | "pink"
+    | "grey"
     | "brand";
   radius: "none" | "sm" | "md" | "lg" | "round";
   scale: "90%" | "95%" | "100%" | "105%" | "110%";

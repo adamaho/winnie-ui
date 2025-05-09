@@ -10,10 +10,11 @@ function AccentColorPicker() {
     "orange",
     "yellow",
     "green",
+    "lime",
     "blue",
     "purple",
     "pink",
-    "brand",
+    "grey",
   ] satisfies Theme["color"][];
 
   return (

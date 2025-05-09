@@ -16,6 +16,7 @@
     margin-block: var(--wui-space-7);
 
     .frame {
+      box-shadow: none;
       &.has-title {
         &:not(.is-terminal) {
           .header {
@@ -39,7 +40,7 @@
 }
 
 :root[data-theme="light"][data-code-theme="github-light"] .expressive-code:not([data-code-theme="github-dark"]) {
-  --wui-ec-background: var(--wui-color-grey-2);
+  --wui-ec-background: var(--wui-color-grey-1);
   --wui-ec-border-color: var(--wui-color-grey-5);
 
   --ec-brdCol: var(--wui-ec-border-color);
@@ -61,8 +62,8 @@
 }
 
 :root[data-theme="dark"][data-code-theme="github-dark"] .expressive-code:not([data-code-theme="github-light"]) {
-  --wui-ec-background: var(--wui-color-grey-2);
-  --wui-ec-border-color: var(--wui-color-grey-5);
+  --wui-ec-background: var(--wui-color-accent-3);
+  --wui-ec-border-color: var(--wui-color-accent-4);
 
   --ec-brdCol: var(--wui-ec-border-color);
   --ec-frm-edActTabBrdCol: var(--wui-ec-border-color);

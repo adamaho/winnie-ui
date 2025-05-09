@@ -1,0 +1,8 @@
+.accents {
+  align-items: flex-start;
+  display: grid;
+  gap: var(--wui-space-1);
+  grid-template-columns: repeat(13, 1fr);
+  justify-content: center;
+  width: 100%;
+}

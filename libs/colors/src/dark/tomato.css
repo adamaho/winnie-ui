@@ -1,0 +1,35 @@
+@layer color {
+  [data-theme="dark"] {
+    --w-c-tomato-1: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.16 var(--w-c-h-tomato)), black 80%);
+    --w-c-tomato-2: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.16 var(--w-c-h-tomato)), black 71%);
+    --w-c-tomato-3: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.16 var(--w-c-h-tomato)), black 63%);
+    --w-c-tomato-4: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.16 var(--w-c-h-tomato)), black 56%);
+    --w-c-tomato-5: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.16 var(--w-c-h-tomato)), black 50%);
+    --w-c-tomato-6: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.16 var(--w-c-h-tomato)), black 42%);
+    --w-c-tomato-7: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.16 var(--w-c-h-tomato)), black 34%);
+    --w-c-tomato-8: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.16 var(--w-c-h-tomato)), black 25%);
+    --w-c-tomato-9: oklch(var(--w-c-l-dim) 0.16 var(--w-c-h-tomato));
+    --w-c-tomato-10: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.16 var(--w-c-h-tomato)), white 6%);
+    --w-c-tomato-11: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.16 var(--w-c-h-tomato)), white 10%);
+    --w-c-tomato-12: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.16 var(--w-c-h-tomato)), white 65%);
+    --w-c-tomato-13: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.16 var(--w-c-h-tomato)), white 90%);
+    --w-c-tomato-contrast: white;
+  }
+
+  [data-accent-color="tomato"] {
+    --w-c-accent-1: var(--w-c-tomato-1);
+    --w-c-accent-2: var(--w-c-tomato-2);
+    --w-c-accent-3: var(--w-c-tomato-3);
+    --w-c-accent-4: var(--w-c-tomato-4);
+    --w-c-accent-5: var(--w-c-tomato-5);
+    --w-c-accent-6: var(--w-c-tomato-6);
+    --w-c-accent-7: var(--w-c-tomato-7);
+    --w-c-accent-8: var(--w-c-tomato-8);
+    --w-c-accent-9: var(--w-c-tomato-9);
+    --w-c-accent-10: var(--w-c-tomato-10);
+    --w-c-accent-11: var(--w-c-tomato-11);
+    --w-c-accent-12: var(--w-c-tomato-12);
+    --w-c-accent-13: var(--w-c-tomato-13);
+    --w-c-accent-contrast: var(--w-c-tomato-contrast);
+  }
+}

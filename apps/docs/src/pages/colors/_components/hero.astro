@@ -1,0 +1,39 @@
+<section class="hero">
+  <h1>Precise, hand-crafted colors for pixel-perfect products</h1>
+  <p>
+    An accessible color system for crafting modern, elegant user interfaces.
+  </p>
+</section>
+
+<style>
+  .hero {
+    background: linear-gradient(
+      to bottom,
+      var(--wui-color-accent-grey-2),
+      var(--wui-color-accent-grey-4)
+    );
+    height: calc(100vh - var(--page-header-height) - var(--page-accent-height));
+
+    h1,
+    p {
+      font-weight: var(--wui-font-weight-normal);
+    }
+
+    h1 {
+      color: var(--wui-color-accent-12);
+      font-family: var(--wui-font-family-serif);
+      font-size: var(--wui-font-size-8);
+      font-weight: var(--wui-font-weight-bold);
+      letter-spacing: var(--wui-letter-spacing-9);
+      line-height: var(--wui-line-height-8);
+    }
+
+    p {
+      color: var(--wui-color-accent-grey-10);
+      font-family: var(--wui-font-family-sans);
+      font-size: var(--wui-font-size-5);
+      line-height: var(--wui-line-height-5);
+      margin-top: var(--wui-space-3);
+    }
+  }
+</style>

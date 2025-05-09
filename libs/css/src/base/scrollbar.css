@@ -1,5 +1,5 @@
 @layer base {
-  :is(html, .winnie-ui) {
+  :is(html, body, .winnie-ui) {
     .wui-scrollbar {
       scrollbar-color: var(--wui-color-grey-6) transparent;
       scrollbar-width: thin;

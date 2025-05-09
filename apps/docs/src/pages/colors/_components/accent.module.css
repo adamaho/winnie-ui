@@ -1,0 +1,31 @@
+.accent {
+  background: var(--wui-color-accent-4);
+  height: var(--page-accent-height);
+  transition-property: background;
+  transition-duration: var(--wui-duration-1);
+  transition-timing-function: linear(0, 0.5 50%, 0.75 80%, 1);
+
+  &:is([data-hovered], [data-focus-visible], [data-pressed], [data-selected]) {
+    background: var(--wui-color-accent-7);
+  }
+
+  /* H a */
+  :is([data-hovered], [data-focus-visible]) + &:not([data-selected]) {
+    background: var(--wui-color-accent-6);
+  }
+
+  /* H a a */
+  :is([data-hovered], [data-focus-visible]) + .accent + &:not([data-selected]) {
+    background: var(--wui-color-accent-5);
+  }
+
+  /* a H */
+  &:has(+ :is([data-hovered], [data-focus-visible])):not([data-selected]) {
+    background: var(--wui-color-accent-6);
+  }
+
+  /* a a H */
+  &:has(+ .accent + :is([data-hovered], [data-focus-visible])):not([data-selected]) {
+    background: var(--wui-color-accent-5);
+  }
+}

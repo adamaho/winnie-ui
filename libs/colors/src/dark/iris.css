@@ -1,0 +1,35 @@
+@layer color {
+  [data-theme="dark"] {
+    --w-c-iris-1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.21 var(--w-c-h-iris)), black 87%);
+    --w-c-iris-2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.21 var(--w-c-h-iris)), black 83%);
+    --w-c-iris-3: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.21 var(--w-c-h-iris)), black 76%);
+    --w-c-iris-4: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.21 var(--w-c-h-iris)), black 71%);
+    --w-c-iris-5: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.21 var(--w-c-h-iris)), black 65%);
+    --w-c-iris-6: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.21 var(--w-c-h-iris)), black 58%);
+    --w-c-iris-7: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.21 var(--w-c-h-iris)), black 53%);
+    --w-c-iris-8: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.21 var(--w-c-h-iris)), black 47%);
+    --w-c-iris-9: oklch(var(--w-c-l-bright) 0.21 var(--w-c-h-iris));
+    --w-c-iris-10: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.21 var(--w-c-h-iris)), white 20%);
+    --w-c-iris-11: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.21 var(--w-c-h-iris)), white 30%);
+    --w-c-iris-12: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.21 var(--w-c-h-iris)), white 45%);
+    --w-c-iris-13: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.21 var(--w-c-h-iris)), white 90%);
+    --w-c-iris-contrast: black;
+  }
+
+  [data-accent-color="iris"] {
+    --w-c-accent-1: var(--w-c-iris-1);
+    --w-c-accent-2: var(--w-c-iris-2);
+    --w-c-accent-3: var(--w-c-iris-3);
+    --w-c-accent-4: var(--w-c-iris-4);
+    --w-c-accent-5: var(--w-c-iris-5);
+    --w-c-accent-6: var(--w-c-iris-6);
+    --w-c-accent-7: var(--w-c-iris-7);
+    --w-c-accent-8: var(--w-c-iris-8);
+    --w-c-accent-9: var(--w-c-iris-9);
+    --w-c-accent-10: var(--w-c-iris-10);
+    --w-c-accent-11: var(--w-c-iris-11);
+    --w-c-accent-12: var(--w-c-iris-12);
+    --w-c-accent-13: var(--w-c-iris-13);
+    --w-c-accent-contrast: var(--w-c-iris-contrast);
+  }
+}

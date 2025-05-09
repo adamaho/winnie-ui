@@ -1,0 +1,46 @@
+<header class="header">
+  <div data-component="logo">
+    <span data-slot="winnie">WINNIE</span>
+    <span data-slot="divider">/</span>
+    <span data-slot="lib">COLORS</span>
+  </div>
+</header>
+
+<style>
+  .header {
+    align-items: center;
+    background: var(--wui-color-accent-grey-1);
+    border-bottom: var(--wui-border-width-1) solid
+      var(--wui-color-accent-grey-5);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    height: var(--page-header-height);
+    padding-inline: var(--page-inline-padding);
+    position: sticky;
+    top: 0;
+
+    [data-component="logo"] {
+      align-items: center;
+      display: flex;
+
+      [data-slot="winnie"],
+      [data-slot="lib"] {
+        color: var(--wui-color-accent-grey-12);
+        font-style: italic;
+        font-size: var(--wui-font-size-4);
+        font-weight: var(--wui-font-weight-extrabold);
+      }
+
+      [data-slot="divider"] {
+        color: var(--wui-color-accent-grey-10);
+        font-size: var(--wui-font-size-4);
+        margin-left: var(--wui-space-3);
+        margin-right: var(--wui-space-2);
+      }
+
+      [data-slot="lib"] {
+        color: var(--wui-color-accent-10);
+      }
+    }
+  }
+</style>

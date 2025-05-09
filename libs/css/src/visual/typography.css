@@ -3,15 +3,15 @@
   [data-component="heading"],
   [data-component="link"] {
     &[data-contrast="low"] {
-      color: var(--wui-color-accent-10);
+      color: var(--wui-color-accent-12);
     }
 
     &[data-contrast="normal"] {
-      color: var(--wui-color-accent-11);
+      color: var(--wui-color-accent-13);
     }
 
     &[data-contrast="high"] {
-      color: var(--wui-color-accent-12);
+      color: var(--wui-color-accent-14);
     }
 
     &[data-weight="normal"] {

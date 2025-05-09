@@ -1,0 +1,35 @@
+@layer color {
+  [data-theme="dark"] {
+    --w-c-cyan-1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.11 var(--w-c-h-cyan)), black 84%);
+    --w-c-cyan-2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.11 var(--w-c-h-cyan)), black 80%);
+    --w-c-cyan-3: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.11 var(--w-c-h-cyan)), black 74%);
+    --w-c-cyan-4: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.11 var(--w-c-h-cyan)), black 68%);
+    --w-c-cyan-5: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.11 var(--w-c-h-cyan)), black 62%);
+    --w-c-cyan-6: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.11 var(--w-c-h-cyan)), black 56%);
+    --w-c-cyan-7: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.11 var(--w-c-h-cyan)), black 50%);
+    --w-c-cyan-8: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.11 var(--w-c-h-cyan)), black 44%);
+    --w-c-cyan-9: oklch(var(--w-c-l-bright) 0.11 var(--w-c-h-cyan));
+    --w-c-cyan-10: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.11 var(--w-c-h-cyan)), white 20%);
+    --w-c-cyan-11: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.11 var(--w-c-h-cyan)), white 30%);
+    --w-c-cyan-12: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.11 var(--w-c-h-cyan)), white 60%);
+    --w-c-cyan-13: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.11 var(--w-c-h-cyan)), white 90%);
+    --w-c-cyan-contrast: black;
+  }
+
+  [data-accent-color="cyan"] {
+    --w-c-accent-1: var(--w-c-cyan-1);
+    --w-c-accent-2: var(--w-c-cyan-2);
+    --w-c-accent-3: var(--w-c-cyan-3);
+    --w-c-accent-4: var(--w-c-cyan-4);
+    --w-c-accent-5: var(--w-c-cyan-5);
+    --w-c-accent-6: var(--w-c-cyan-6);
+    --w-c-accent-7: var(--w-c-cyan-7);
+    --w-c-accent-8: var(--w-c-cyan-8);
+    --w-c-accent-9: var(--w-c-cyan-9);
+    --w-c-accent-10: var(--w-c-cyan-10);
+    --w-c-accent-11: var(--w-c-cyan-11);
+    --w-c-accent-12: var(--w-c-cyan-12);
+    --w-c-accent-13: var(--w-c-cyan-13);
+    --w-c-accent-contrast: var(--w-c-cyan-contrast);
+  }
+}
