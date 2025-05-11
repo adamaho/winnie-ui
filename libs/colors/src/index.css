@@ -46,4 +46,8 @@
     inherits: false;
     initial-value: 0.84;
   }
+
+  :root {
+    color-scheme: light dark;
+  }
 }

@@ -6,6 +6,7 @@ import { Controls } from "./_components/_controls";
 import Chips from "./_components/chips.astro";
 import TwitterCard1 from "./_components/twitter-card-1.astro";
 import TwitterCard2 from "./_components/twitter-card-2.astro";
+import Dialog from "./dialog.astro";
 ---
 
 <BaseLayout>
@@ -19,11 +20,14 @@ import TwitterCard2 from "./_components/twitter-card-2.astro";
           class="flex flex-col items-center gap-5 p-5"
         >
           <div class="grid w-full grid-cols-1 gap-5 md:grid-cols-2">
-            <div class="demo flex h-[400px] items-center justify-center">
+            <div class="demo flex h-[400px] items-center justify-center p-5">
               <TwitterCard1 />
             </div>
-            <div class="demo flex h-[400px] items-center justify-center">
+            <div class="demo flex h-[400px] items-center justify-center p-5">
               <TwitterCard2 />
+            </div>
+            <div class="demo flex h-[400px] items-center justify-center p-5">
+              <Dialog />
             </div>
           </div>
           <Chips />
@@ -46,14 +50,14 @@ import TwitterCard2 from "./_components/twitter-card-2.astro";
     background: var(--w-c-layer-1);
 
     [data-component="page"] {
-      background: var(--w-c-layer-2);
-      border: 1px solid var(--w-c-layer-2-border-color);
+      background: var(--w-c-layer-1);
+      border: 1px solid var(--w-c-layer-1-border-color);
     }
 
     .demo {
-      background: var(--w-c-layer-3);
+      background: var(--w-c-layer-2);
       border-radius: 8px;
-      border: 1px solid var(--w-c-layer-3-border-color);
+      border: 1px solid var(--w-c-layer-2-border-color);
     }
   }
 

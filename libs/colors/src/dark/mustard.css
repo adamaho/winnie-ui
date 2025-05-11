@@ -1,13 +1,13 @@
 @layer color {
   [data-theme="dark"] {
-    --w-c-mustard-1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.18 var(--w-c-h-mustard)), black 78%);
-    --w-c-mustard-2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.18 var(--w-c-h-mustard)), black 74%);
-    --w-c-mustard-3: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.18 var(--w-c-h-mustard)), black 69%);
-    --w-c-mustard-4: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.18 var(--w-c-h-mustard)), black 65%);
-    --w-c-mustard-5: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.18 var(--w-c-h-mustard)), black 55%);
-    --w-c-mustard-6: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.18 var(--w-c-h-mustard)), black 49%);
-    --w-c-mustard-7: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.18 var(--w-c-h-mustard)), black 43%);
-    --w-c-mustard-8: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.2 var(--w-c-h-mustard)), black 38%);
+    --w-c-mustard-1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.18 var(--w-c-h-mustard)), black 81%);
+    --w-c-mustard-2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.18 var(--w-c-h-mustard)), black 77%);
+    --w-c-mustard-3: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.18 var(--w-c-h-mustard)), black 72%);
+    --w-c-mustard-4: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.18 var(--w-c-h-mustard)), black 68%);
+    --w-c-mustard-5: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.18 var(--w-c-h-mustard)), black 58%);
+    --w-c-mustard-6: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.18 var(--w-c-h-mustard)), black 52%);
+    --w-c-mustard-7: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.18 var(--w-c-h-mustard)), black 46%);
+    --w-c-mustard-8: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.2 var(--w-c-h-mustard)), black 41%);
     --w-c-mustard-9: oklch(var(--w-c-l-bright) 0.15 var(--w-c-h-mustard));
     --w-c-mustard-10: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.15 var(--w-c-h-mustard)), white 20%);
     --w-c-mustard-11: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.15 var(--w-c-h-mustard)), white 30%);
