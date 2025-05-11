@@ -41,11 +41,20 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-turbo-build-
 
-      - name: install bun
-        uses: oven-sh/setup-bun@v2
+      - name: install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+          run_install: false
+
+      - name: install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: "pnpm"
 
       - name: install
-        run: bun install
+        run: pnpm install
 
       - name: deploy ${{ matrix.app }}
         working-directory: apps/${{ matrix.app }}
