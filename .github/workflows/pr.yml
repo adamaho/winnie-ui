@@ -22,14 +22,22 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-turbo-build-
 
-      - name: install bun
-        uses: oven-sh/setup-bun@v2
+      - name: install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+
+      - name: install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: "pnpm"
 
       - name: install
-        run: bun install
+        run: pnpm install
 
       - name: build
-        run: bun run build
+        run: pnpm build
 
   format:
     runs-on: ubuntu-latest
@@ -45,11 +53,19 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-turbo-format-
 
-      - name: install bun
-        uses: oven-sh/setup-bun@v2
+      - name: install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+
+      - name: install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: "pnpm"
 
       - name: install
-        run: bun install
+        run: pnpm install
 
       - name: format
-        run: bun run format:check
+        run: pnpm format:check
