@@ -17,7 +17,7 @@
     "package.json"
   ],
   "scripts": {
-    "build": "rimraf dist && bun ./scripts/build.ts",
+    "build": "rimraf dist && pnpm tsx ./scripts/build.ts",
     "clean": "rimraf node_modules .dist"
   },
   "devDependencies": {
