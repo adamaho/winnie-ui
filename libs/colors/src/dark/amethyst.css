@@ -9,8 +9,8 @@
     --w-c-amethyst-7: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-amethyst)), black 25%);
     --w-c-amethyst-8: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-amethyst)), black 18%);
     --w-c-amethyst-9: oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-amethyst));
-    --w-c-amethyst-10: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-amethyst)), white 5%);
-    --w-c-amethyst-11: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-amethyst)), white 10%);
+    --w-c-amethyst-10: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.2 var(--w-c-h-amethyst)), white 5%);
+    --w-c-amethyst-11: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.2 var(--w-c-h-amethyst)), white 10%);
     --w-c-amethyst-12: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-amethyst)), white 65%);
     --w-c-amethyst-13: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-amethyst)), white 90%);
     --w-c-amethyst-contrast: white;

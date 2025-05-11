@@ -8,7 +8,7 @@ export function Controls() {
         const layoutRoot = document.getElementById("playground")!;
         layoutRoot.setAttribute("data-theme", theme);
       },
-      value: "light",
+      value: "dark",
     },
     "data-accent-color": {
       options: [
@@ -45,7 +45,7 @@ export function Controls() {
         "coral",
         "merlot",
       ],
-      value: "amethyst",
+      value: "mustard",
       onChange(color) {
         const layoutRoot = document.getElementById("playground")!;
         layoutRoot.setAttribute("data-accent-color", color);

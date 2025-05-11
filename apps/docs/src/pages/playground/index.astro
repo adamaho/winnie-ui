@@ -1,0 +1,99 @@
+---
+import BaseLayout from "../../layouts/base/layout.astro";
+import BaseHead from "../../layouts/base/head.astro";
+
+import { Controls } from "./_components/_controls";
+import Chips from "./_components/chips.astro";
+import TwitterCard1 from "./_components/twitter-card-1.astro";
+import TwitterCard2 from "./_components/twitter-card-2.astro";
+---
+
+<BaseLayout>
+  <BaseHead slot="head" title="Playground" description="Place to play around" />
+  <Controls client:only="react" />
+  <div data-component="layout" id="playground" data-accent-color="mustard">
+    <main data-component="layout-content">
+      <div data-component="page">
+        <div
+          data-component="page-content"
+          class="flex flex-col items-center gap-5 p-5"
+        >
+          <div class="grid w-full grid-cols-1 gap-5 md:grid-cols-2">
+            <div class="demo flex h-[400px] items-center justify-center">
+              <TwitterCard1 />
+            </div>
+            <div class="demo flex h-[400px] items-center justify-center">
+              <TwitterCard2 />
+            </div>
+          </div>
+          <Chips />
+        </div>
+      </div>
+    </main>
+  </div>
+</BaseLayout>
+
+<style>
+  [data-component="heading"] {
+    color: var(--w-c-accent-13);
+  }
+
+  [data-component="text"] {
+    color: var(--w-c-accent-12);
+  }
+
+  [data-component="layout-content"] {
+    background: var(--w-c-layer-1);
+
+    [data-component="page"] {
+      background: var(--w-c-layer-2);
+      border: 1px solid var(--w-c-layer-2-border-color);
+    }
+
+    .demo {
+      background: var(--w-c-layer-3);
+      border-radius: 8px;
+      border: 1px solid var(--w-c-layer-3-border-color);
+    }
+  }
+
+  [data-layer="1"] {
+    background: var(--w-c-layer-1);
+  }
+
+  [data-layer="2"] {
+    background: var(--w-c-layer-2, var(--w-c-accent-2));
+  }
+
+  [data-layer="3"] {
+    background: var(--w-c-layer-3, var(--w-c-accent-3));
+    border-color: var(--w-c-layer-3-border, var(--w-c-accent-6));
+  }
+
+  [data-layer="4"] {
+    background: var(--w-c-layer-4, var(--w-c-accent-4));
+    border-color: var(--w-c-layer-4-border, var(--w-c-accent-6));
+  }
+
+  [data-theme="dark"] {
+    --w-c-layer-1: var(--w-c-accent-1);
+    --w-c-layer-2: var(--w-c-accent-2);
+    --w-c-layer-2-border-color: var(--w-c-accent-3);
+    --w-c-layer-3: var(--w-c-accent-3);
+    --w-c-layer-3-border-color: var(--w-c-accent-4);
+
+    --w-c-forground-1: var(--w-c-accent-13);
+    --w-c-forground-2: var(--w-c-accent-12);
+
+    &[data-mono="true"] {
+      --w-c-layer-1: var(--w-c-accent-grey-1);
+      --w-c-layer-2: var(--w-c-accent-grey-2);
+      --w-c-layer-2-border-color: var(--w-c-accent-grey-3);
+      --w-c-layer-3: var(--w-c-accent-grey-3);
+      --w-c-layer-3-border-color: var(--w-c-accent-grey-4);
+
+      --w-c-forground-1: var(--w-c-accent-grey-13);
+      --w-c-forground-2: var(--w-c-accent-grey-12);
+    }
+  }
+</style>

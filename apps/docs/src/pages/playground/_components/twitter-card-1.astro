@@ -1,0 +1,101 @@
+---
+import { Image } from "astro:assets";
+import mountains from "~/assets/mountains.webp";
+---
+
+<!-- https://x.com/JayDwivedi_/status/1921186691684917563/photo/1 -->
+<div data-component="twitter-card">
+  <div class="image-container flex items-center justify-center">
+    <Image
+      src={mountains}
+      data-slot="image"
+      alt="mountains in the dark"
+      height={400}
+    />
+    <div class="image-mask"></div>
+  </div>
+  <div class="flex flex-col p-6">
+    <h2
+      data-component="heading"
+      data-slot="title"
+      data-size="3"
+      data-weight="bold"
+    >
+      card 1
+    </h2>
+    <p
+      class="mt-3"
+      data-component="text"
+      data-slot="description"
+      data-size="3"
+      data-weight="semibold"
+    >
+      Set up your <span class="highlight">event in minutes</span>. Name it, date
+      it, <span class="highlight">done</span>.
+    </p>
+  </div>
+</div>
+
+<style>
+  [data-component="twitter-card"] {
+    background: var(--w-c-layer-2);
+    border: 1px solid var(--w-c-layer-2-border-color);
+    border-radius: 50px;
+    box-shadow:
+      inset 0 0 0 8px var(--w-c-layer-1),
+      0px 0px 1px 2px oklch(from var(--w-c-layer-1) l c h / 25%),
+      0px 2px 2px oklch(from var(--w-c-layer-1) l c h / 30%),
+      0px 4px 4px oklch(from var(--w-c-layer-1) l c h / 25%),
+      0px 8px 8px oklch(from var(--w-c-layer-1) l c h / 20%),
+      0px 16px 16px oklch(from var(--w-c-layer-1) l c h / 15%);
+    padding: 10px;
+    position: relative;
+    width: 330px;
+
+    .image-container {
+      border-radius: 40px;
+      position: relative;
+
+      [data-slot="image"] {
+        background-position: 50% 50%;
+        box-shadow:
+          0px 2px 2px oklch(from var(--w-c-layer-1) l c h / 30%),
+          0px 8px 8px oklch(from var(--w-c-layer-1) l c h / 20%);
+        border-radius: 40px;
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      .image-mask {
+        border-radius: 40px;
+        box-shadow:
+          inset 0px 2px 2px oklch(from white l c h / 7%),
+          inset 0px 8px 8px oklch(from white l c h / 7%),
+          inset 0px 16px 16px oklch(from white l c h / 7%),
+          inset 0px -2px 2px oklch(from var(--w-c-layer-1) l c h / 20%),
+          inset 0px -8px 8px oklch(from var(--w-c-layer-1) l c h / 20%),
+          inset 0px -16px 16px oklch(from var(--w-c-layer-1) l c h / 20%);
+        height: 100%;
+        left: 0px;
+        position: absolute;
+        top: 0px;
+        width: 100%;
+      }
+    }
+
+    [data-slot="title"] {
+      color: var(--w-c-forground-2);
+      text-transform: uppercase;
+    }
+
+    [data-slot="description"] {
+      color: var(--w-c-forground-2);
+      line-height: 1.5;
+
+      .highlight {
+        color: var(--w-c-forground-1);
+      }
+    }
+  }
+</style>

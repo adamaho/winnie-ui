@@ -1,0 +1,136 @@
+<div
+  data-component="page-block"
+  class="flex flex-col gap-1 p-3"
+  data-slot="chips"
+>
+  <section class="flex items-center gap-1">
+    {
+      new Array(13).fill(0).map((_, i) => {
+        return <span class="chip h-[50px] w-[50px]" data-shade={i + 1} />;
+      })
+    }
+  </section>
+  <section class="flex items-center gap-1">
+    {
+      new Array(13).fill(0).map((_, i) => {
+        return (
+          <span
+            class="chip grey h-[50px] w-[50px]"
+            data-shade={i + 1}
+            data-mono="true"
+          />
+        );
+      })
+    }
+  </section>
+</div>
+
+<style>
+  [data-shade="1"] {
+    background: var(--w-c-accent-1);
+
+    &[data-mono] {
+      background: var(--w-c-accent-grey-1);
+    }
+  }
+
+  [data-shade="2"] {
+    background: var(--w-c-accent-2);
+
+    &[data-mono="true"] {
+      background: var(--w-c-accent-grey-2);
+    }
+  }
+
+  [data-shade="3"] {
+    background: var(--w-c-accent-3);
+
+    &[data-mono="true"] {
+      background: var(--w-c-accent-grey-3);
+    }
+  }
+
+  [data-shade="4"] {
+    background: var(--w-c-accent-4);
+
+    &[data-mono="true"] {
+      background: var(--w-c-accent-grey-4);
+    }
+  }
+
+  [data-shade="5"] {
+    background: var(--w-c-accent-5);
+
+    &[data-mono="true"] {
+      background: var(--w-c-accent-grey-5);
+    }
+  }
+
+  [data-shade="6"] {
+    background: var(--w-c-accent-6);
+
+    &[data-mono="true"] {
+      background: var(--w-c-accent-grey-6);
+    }
+  }
+
+  [data-shade="7"] {
+    background: var(--w-c-accent-7);
+
+    &[data-mono="true"] {
+      background: var(--w-c-accent-grey-7);
+    }
+  }
+
+  [data-shade="8"] {
+    background: var(--w-c-accent-8);
+
+    &[data-mono="true"] {
+      background: var(--w-c-accent-grey-8);
+    }
+  }
+
+  [data-shade="9"] {
+    background: var(--w-c-accent-9);
+
+    &[data-mono="true"] {
+      background: var(--w-c-accent-grey-9);
+    }
+  }
+
+  [data-shade="10"] {
+    background: var(--w-c-accent-10);
+
+    &[data-mono="true"] {
+      background: var(--w-c-accent-grey-10);
+    }
+  }
+
+  [data-shade="11"] {
+    background: var(--w-c-accent-11);
+
+    &[data-mono="true"] {
+      background: var(--w-c-accent-grey-11);
+    }
+  }
+
+  [data-shade="12"] {
+    background: var(--w-c-accent-12);
+
+    &[data-mono="true"] {
+      background: var(--w-c-accent-grey-12);
+    }
+  }
+
+  [data-shade="13"] {
+    background: var(--w-c-accent-13);
+
+    &[data-mono="true"] {
+      background: var(--w-c-accent-grey-13);
+    }
+  }
+
+  [data-slot="chips"] {
+    background: var(--w-c-chips, black);
+  }
+</style>
