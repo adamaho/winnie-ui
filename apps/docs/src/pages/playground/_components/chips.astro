@@ -3,14 +3,34 @@
   class="flex flex-col gap-1 p-3"
   data-slot="chips"
 >
-  <section class="flex items-center gap-1">
+  <section class="scheme-light flex items-center gap-1">
     {
       new Array(13).fill(0).map((_, i) => {
         return <span class="chip h-[50px] w-[50px]" data-shade={i + 1} />;
       })
     }
   </section>
-  <section class="flex items-center gap-1">
+  <section class="scheme-light flex items-center gap-1">
+    {
+      new Array(13).fill(0).map((_, i) => {
+        return (
+          <span
+            class="chip grey h-[50px] w-[50px]"
+            data-shade={i + 1}
+            data-mono="true"
+          />
+        );
+      })
+    }
+  </section>
+  <section class="scheme-dark flex items-center gap-1">
+    {
+      new Array(13).fill(0).map((_, i) => {
+        return <span class="chip h-[50px] w-[50px]" data-shade={i + 1} />;
+      })
+    }
+  </section>
+  <section class="scheme-dark flex items-center gap-1">
     {
       new Array(13).fill(0).map((_, i) => {
         return (

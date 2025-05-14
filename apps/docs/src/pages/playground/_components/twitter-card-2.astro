@@ -17,7 +17,7 @@ import mountains from "~/assets/mountains.webp";
         data-component="heading"
         data-slot="title"
         data-size="3"
-        data-weight="bold"
+        data-weight="extrabold"
       >
         card 1
       </h2>
@@ -36,16 +36,33 @@ import mountains from "~/assets/mountains.webp";
 </div>
 
 <style>
+  @media (prefers-color-scheme: light) {
+    [data-component="twitter-card"] {
+      --w-c-tcard-shadow:
+        0px 0px 1px 2px oklch(from black l c h / 1%),
+        0px 2px 2px oklch(from black l c h / 2%),
+        0px 4px 4px oklch(from black l c h / 2%),
+        0px 8px 8px oklch(from black l c h / 2%),
+        0px 16px 16px oklch(from black l c h / 2%);
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    [data-component="twitter-card"] {
+      --w-c-tcard-shadow:
+        0px 0px 1px 2px oklch(from black l c h / 10%),
+        0px 2px 2px oklch(from black l c h / 10%),
+        0px 4px 4px oklch(from black l c h / 15%),
+        0px 8px 8px oklch(from black l c h / 10%),
+        0px 16px 16px oklch(from black l c h / 5%);
+    }
+  }
+
   [data-component="twitter-card"] {
-    background: var(--w-c-layer-1);
-    border: 1px solid var(--w-c-layer-2-border-color);
+    background: var(--w-c-layer-2);
+    border: 1px solid oklch(from var(--w-c-layer-2-border) l c h / 90%);
     border-radius: 50px;
-    box-shadow:
-      0px 0px 1px 2px oklch(from var(--w-c-layer-1) l c h / 25%),
-      0px 2px 2px oklch(from var(--w-c-layer-1) l c h / 30%),
-      0px 4px 4px oklch(from var(--w-c-layer-1) l c h / 25%),
-      0px 8px 8px oklch(from var(--w-c-layer-1) l c h / 20%),
-      0px 16px 16px oklch(from var(--w-c-layer-1) l c h / 15%);
+    box-shadow: var(--w-c-tcard-shadow);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -59,31 +76,33 @@ import mountains from "~/assets/mountains.webp";
       padding: 8px;
       height: 100%;
       left: 0;
-      mask-image: linear-gradient(var(--w-c-layer-1) 10%, transparent 90%);
+      /* mask-image: linear-gradient(var(--w-c-layer-1) 10%, transparent 90%); */
       position: absolute;
       top: 0;
-      object-position: bottom 50px left 0;
       width: 100%;
       z-index: 0;
     }
 
     .twitter-card-content-container {
       position: relative;
+      padding: 8px;
 
       .twitter-card-content {
-        background: var(--w-c-layer-2);
-        border-radius: 40px;
+        background: var(--w-c-layer-3);
+        border-radius: 32px;
         padding-inline: 24px;
         padding-block: 24px;
 
         [data-slot="title"] {
           color: var(--w-c-forground-2);
           text-transform: uppercase;
+          letter-spacing: -0.025em;
         }
 
         [data-slot="description"] {
           color: var(--w-c-forground-2);
           line-height: 1.5;
+          letter-spacing: -0.025em;
 
           .highlight {
             color: var(--w-c-forground-1);

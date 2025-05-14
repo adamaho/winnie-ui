@@ -6,7 +6,7 @@ export function Controls() {
       options: ["light", "dark"],
       onChange(theme) {
         const layoutRoot = document.getElementById("playground")!;
-        layoutRoot.setAttribute("data-theme", theme);
+        layoutRoot.style.colorScheme = theme;
       },
       value: "dark",
     },
@@ -52,7 +52,7 @@ export function Controls() {
       },
     },
     grey: {
-      value: false,
+      value: true,
       onChange(value) {
         const layoutRoot = document.getElementById("playground")!;
         layoutRoot.setAttribute("data-mono", value);
