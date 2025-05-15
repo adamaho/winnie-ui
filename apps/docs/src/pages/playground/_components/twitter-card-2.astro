@@ -36,28 +36,6 @@ import mountains from "~/assets/mountains.webp";
 </div>
 
 <style>
-  @media (prefers-color-scheme: light) {
-    [data-component="twitter-card"] {
-      --w-c-tcard-shadow:
-        0px 0px 1px 2px oklch(from black l c h / 1%),
-        0px 2px 2px oklch(from black l c h / 2%),
-        0px 4px 4px oklch(from black l c h / 2%),
-        0px 8px 8px oklch(from black l c h / 2%),
-        0px 16px 16px oklch(from black l c h / 2%);
-    }
-  }
-
-  @media (prefers-color-scheme: dark) {
-    [data-component="twitter-card"] {
-      --w-c-tcard-shadow:
-        0px 0px 1px 2px oklch(from black l c h / 10%),
-        0px 2px 2px oklch(from black l c h / 10%),
-        0px 4px 4px oklch(from black l c h / 15%),
-        0px 8px 8px oklch(from black l c h / 10%),
-        0px 16px 16px oklch(from black l c h / 5%);
-    }
-  }
-
   [data-component="twitter-card"] {
     background: var(--w-c-layer-2);
     border: 1px solid oklch(from var(--w-c-layer-2-border) l c h / 90%);
@@ -109,6 +87,28 @@ import mountains from "~/assets/mountains.webp";
           }
         }
       }
+    }
+  }
+
+  :global([data-theme="light"]) {
+    [data-component="twitter-card"] {
+      --w-c-tcard-shadow:
+        0px 0px 1px 2px oklch(from black l c h / 1%),
+        0px 2px 2px oklch(from black l c h / 2%),
+        0px 4px 4px oklch(from black l c h / 2%),
+        0px 8px 8px oklch(from black l c h / 2%),
+        0px 16px 16px oklch(from black l c h / 2%);
+    }
+  }
+
+  :global([data-theme="dark"]) {
+    [data-component="twitter-card"] {
+      --w-c-tcard-shadow:
+        0px 0px 1px 2px oklch(from black l c h / 10%),
+        0px 2px 2px oklch(from black l c h / 10%),
+        0px 4px 4px oklch(from black l c h / 15%),
+        0px 8px 8px oklch(from black l c h / 10%),
+        0px 16px 16px oklch(from black l c h / 5%);
     }
   }
 </style>

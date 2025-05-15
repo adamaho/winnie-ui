@@ -7,6 +7,7 @@ export function Controls() {
       onChange(theme) {
         const layoutRoot = document.getElementById("playground")!;
         layoutRoot.style.colorScheme = theme;
+        layoutRoot.setAttribute("data-theme", theme);
       },
       value: "dark",
     },

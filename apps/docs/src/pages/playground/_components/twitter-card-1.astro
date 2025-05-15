@@ -4,7 +4,7 @@ import mountains from "~/assets/mountains.webp";
 ---
 
 <!-- https://x.com/JayDwivedi_/status/1921186691684917563/photo/1 -->
-<div data-component="twitter-card">
+<div data-component="twitter-card-1">
   <div class="image-container flex items-center justify-center">
     <Image
       src={mountains}
@@ -37,31 +37,7 @@ import mountains from "~/assets/mountains.webp";
 </div>
 
 <style>
-  @media (prefers-color-scheme: light) {
-    [data-component="twitter-card"] {
-      --w-c-tcard-shadow:
-        inset 0 0 0 8px var(--w-c-layer-2),
-        0px 0px 1px 2px oklch(from black l c h / 1%),
-        0px 2px 2px oklch(from black l c h / 2%),
-        0px 4px 4px oklch(from black l c h / 2%),
-        0px 8px 8px oklch(from black l c h / 2%),
-        0px 16px 16px oklch(from black l c h / 2%);
-    }
-  }
-
-  @media (prefers-color-scheme: dark) {
-    [data-component="twitter-card"] {
-      --w-c-tcard-shadow:
-        inset 0 0 0 8px var(--w-c-layer-2),
-        0px 0px 1px 2px oklch(from black l c h / 10%),
-        0px 2px 2px oklch(from black l c h / 10%),
-        0px 4px 4px oklch(from black l c h / 15%),
-        0px 8px 8px oklch(from black l c h / 10%),
-        0px 16px 16px oklch(from black l c h / 5%);
-    }
-  }
-
-  [data-component="twitter-card"] {
+  [data-component="twitter-card-1"] {
     background: var(--w-c-layer-3);
     border: 1px solid var(--w-c-layer-2-border);
     border-radius: 50px;
@@ -116,6 +92,30 @@ import mountains from "~/assets/mountains.webp";
       .highlight {
         color: var(--w-c-forground-1);
       }
+    }
+  }
+
+  :global([data-theme="light"]) {
+    [data-component="twitter-card-1"] {
+      --w-c-tcard-shadow:
+        inset 0 0 0 8px var(--w-c-layer-2),
+        0px 0px 1px 2px oklch(from black l c h / 1%),
+        0px 2px 2px oklch(from black l c h / 2%),
+        0px 4px 4px oklch(from black l c h / 2%),
+        0px 8px 8px oklch(from black l c h / 2%),
+        0px 16px 16px oklch(from black l c h / 2%);
+    }
+  }
+
+  :global([data-theme="dark"]) {
+    [data-component="twitter-card-1"] {
+      --w-c-tcard-shadow:
+        inset 0 0 0 8px var(--w-c-layer-2),
+        0px 0px 1px 2px oklch(from black l c h / 10%),
+        0px 2px 2px oklch(from black l c h / 10%),
+        0px 4px 4px oklch(from black l c h / 15%),
+        0px 8px 8px oklch(from black l c h / 10%),
+        0px 16px 16px oklch(from black l c h / 5%);
     }
   }
 </style>
