@@ -5,3 +5,4 @@ node_modules
 .zed
 .env
 *.tsbuildinfo
+tokens.json

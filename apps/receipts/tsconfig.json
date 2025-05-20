@@ -1,5 +1,5 @@
 {
-  "extends": "@tsconfig/bun/tsconfig.json",
+  "extends": "@winnie-ui/tsconfig/node.json",
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "hono/jsx"
