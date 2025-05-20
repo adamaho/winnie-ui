@@ -127,7 +127,11 @@ app.get("/oauth/callback", async (c) => {
   }
 
   if (!(data.email! in db)) {
-    db[data.email!] = tokens;
+    const curr = db[data.email!];
+    db[data.email!] = {
+      ...tokens,
+      refresh_token: tokens.refresh_token ?? curr.refresh_token,
+    };
     await writeFile("tokens.json", JSON.stringify(db, null, 2));
   }
 
