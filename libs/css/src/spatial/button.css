@@ -46,7 +46,7 @@
     display: flex;
     isolation: isolate;
     font-size: var(--wui-button-font-size, var(--wui-button-md-font-size));
-    gap: var(--wui-button-space, var(--wui-button-md-space));
+    gap: calc(var(--wui-button-space, var(--wui-button-md-space)) / 2);
     height: var(--wui-button-height, var(--wui-button-md-height));
     max-width: min-content;
     min-width: max-content;

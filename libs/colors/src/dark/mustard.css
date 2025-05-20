@@ -1,9 +1,9 @@
 @layer color {
   :root {
-    --w-c-mustard-1: light-dark(color-mix(in oklch, oklch(var(--w-c-l-bright) 0.18 var(--w-c-h-mustard)), white 77%), color-mix(in oklch, oklch(var(--w-c-l-bright) 0.18 var(--w-c-h-mustard)), black 81%));
-    --w-c-mustard-2: light-dark(color-mix(in oklch, oklch(var(--w-c-l-bright) 0.18 var(--w-c-h-mustard)), white 86%), color-mix(in oklch, oklch(var(--w-c-l-bright) 0.18 var(--w-c-h-mustard)), black 77%));
-    --w-c-mustard-3: light-dark(color-mix(in oklch, oklch(var(--w-c-l-bright) 0.18 var(--w-c-h-mustard)), white 95%), color-mix(in oklch, oklch(var(--w-c-l-bright) 0.18 var(--w-c-h-mustard)), black 72%));
-    --w-c-mustard-4: light-dark(color-mix(in oklch, oklch(var(--w-c-l-bright) 0.18 var(--w-c-h-mustard)), white 98%), color-mix(in oklch, oklch(var(--w-c-l-bright) 0.18 var(--w-c-h-mustard)), black 55%));
+    --w-c-mustard-1: light-dark(color-mix(in oklch, oklch(var(--w-c-l-bright) 0.18 var(--w-c-h-mustard)), white 77%), color-mix(in oklch, oklch(var(--w-c-l-bright) 0.18 var(--w-c-h-mustard)), black 79%));
+    --w-c-mustard-2: light-dark(color-mix(in oklch, oklch(var(--w-c-l-bright) 0.18 var(--w-c-h-mustard)), white 89%), color-mix(in oklch, oklch(var(--w-c-l-bright) 0.18 var(--w-c-h-mustard)), black 75%));
+    --w-c-mustard-3: light-dark(color-mix(in oklch, oklch(var(--w-c-l-bright) 0.18 var(--w-c-h-mustard)), white 95%), color-mix(in oklch, oklch(var(--w-c-l-bright) 0.18 var(--w-c-h-mustard)), black 70%));
+    --w-c-mustard-4: light-dark(color-mix(in oklch, oklch(var(--w-c-l-bright) 0.18 var(--w-c-h-mustard)), white 98%), color-mix(in oklch, oklch(var(--w-c-l-bright) 0.18 var(--w-c-h-mustard)), black 65%));
     --w-c-mustard-5: light-dark(color-mix(in oklch, oklch(var(--w-c-l-bright) 0.18 var(--w-c-h-mustard)), white 68%), color-mix(in oklch, oklch(var(--w-c-l-bright) 0.18 var(--w-c-h-mustard)), black 60%));
     --w-c-mustard-6: light-dark(color-mix(in oklch, oklch(var(--w-c-l-bright) 0.18 var(--w-c-h-mustard)), white 63%), color-mix(in oklch, oklch(var(--w-c-l-bright) 0.18 var(--w-c-h-mustard)), black 65%));
     --w-c-mustard-7: light-dark(color-mix(in oklch, oklch(var(--w-c-l-bright) 0.18 var(--w-c-h-mustard)), white 55%), color-mix(in oklch, oklch(var(--w-c-l-bright) 0.18 var(--w-c-h-mustard)), black 70%));

@@ -1,6 +1,6 @@
 @layer color {
-  :root {
-    --w-c-mustard-grey-1: light-dark(color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-mustard)), white 70%), color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-mustard)), black 79%));
+  [data-theme="dark"] {
+    /* --w-c-mustard-grey-1: light-dark(color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-mustard)), white 70%), color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-mustard)), black 79%));
     --w-c-mustard-grey-2: light-dark(color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-mustard)), white 85%), color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-mustard)), black 75%));
     --w-c-mustard-grey-3: light-dark(color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-mustard)), white 95%), color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-mustard)), black 70%));
     --w-c-mustard-grey-4: light-dark(color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-mustard)), white 98%), color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-mustard)), black 65%));
@@ -13,7 +13,21 @@
     --w-c-mustard-grey-11: light-dark(color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-mustard)), white 30%), color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-mustard)), white 30%));
     --w-c-mustard-grey-12: light-dark(color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-mustard)), black 35%), color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-mustard)), white 5%));
     --w-c-mustard-grey-13: light-dark(color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-mustard)), black 90%), color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-mustard)), white 90%));
-    --w-c-mustard-grey-contrast: black;
+    --w-c-mustard-grey-contrast: black; */
+
+    --w-c-mustard-grey-1: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-mustard)), black 79%);
+    --w-c-mustard-grey-2: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-mustard)), black 75%);
+    --w-c-mustard-grey-3: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-mustard)), black 70%);
+    --w-c-mustard-grey-4: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-mustard)), black 65%);
+    --w-c-mustard-grey-5: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-mustard)), black 64%);
+    --w-c-mustard-grey-6: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-mustard)), black 64%);
+    --w-c-mustard-grey-7: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-mustard)), black 67%);
+    --w-c-mustard-grey-8: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-mustard)), black 41%);
+    --w-c-mustard-grey-9: oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-mustard));
+    --w-c-mustard-grey-10: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-mustard)), white 20%);
+    --w-c-mustard-grey-11: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-mustard) white 30%));
+    --w-c-mustard-grey-12: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-mustard)), white 5%);
+    --w-c-mustard-grey-13: color-mix(in oklch, oklch(var(--w-c-l-bright) 0.028 var(--w-c-h-mustard)), white 90%);
   }
 
   [data-accent-color="mustard"] {
@@ -30,6 +44,5 @@
     --w-c-accent-grey-11: var(--w-c-mustard-grey-11);
     --w-c-accent-grey-12: var(--w-c-mustard-grey-12);
     --w-c-accent-grey-13: var(--w-c-mustard-grey-13);
-    --w-c-accent-grey-contrast: var(--w-c-mustard-grey-contrast);
   }
 }

@@ -1,0 +1,27 @@
+---
+import { Plus } from "@winnie-ui/icons/react/solid";
+---
+
+<div class="flex items-center gap-3">
+  <button data-component="button" data-variant="2"
+    ><span data-slot="label">Cancel</span></button
+  >
+  <button data-component="button" data-variant="1">
+    <Plus data-slot="icon" />
+    <span data-slot="label">Create order</span>
+  </button>
+</div>
+
+<style>
+  [data-variant="1"] {
+    background: var(--w-c-fill-primary);
+    color: var(--w-c-on-fill-primary);
+    font-weight: 500;
+  }
+
+  [data-variant="2"] {
+    background: var(--w-c-fill-secondary);
+    color: var(--w-c-on-fill-secondary);
+    font-weight: 500;
+  }
+</style>
