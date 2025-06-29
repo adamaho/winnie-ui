@@ -2,14 +2,16 @@
 import { Plus } from "@winnie-ui/icons/react/solid";
 ---
 
-<div class="flex items-center gap-3">
-  <button data-component="button" data-variant="2"
-    ><span data-slot="label">Cancel</span></button
-  >
-  <button data-component="button" data-variant="1">
-    <Plus data-slot="icon" />
-    <span data-slot="label">Create order</span>
-  </button>
+<div class="flex flex-col gap-4">
+  <div class="flex items-center gap-3">
+    <button data-component="button" data-variant="2"
+      ><span data-slot="label">Cancel</span></button
+    >
+    <button data-component="button" data-variant="1">
+      <Plus data-slot="icon" />
+      <span data-slot="label">Create order</span>
+    </button>
+  </div>
 </div>
 
 <style>
