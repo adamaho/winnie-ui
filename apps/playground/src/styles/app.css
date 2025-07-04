@@ -4,6 +4,9 @@
   html {
     color-scheme: light dark;
     height: 100vh;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   body {
@@ -18,7 +21,7 @@
 @layer winnie.typography {
   :root {
     --w-ff-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-    --w-ff-serif: "Inter", serif;
+    --w-ff-serif: "Instrument Serif", serif;
     --w-ff-mono: "Geist Mono", monospace;
 
     --w-fs-1: calc(11px * var(--w-scale, 1));

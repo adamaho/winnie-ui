@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as FontWeightRouteImport } from './routes/font-weight'
 import { Route as FontSizeRouteImport } from './routes/font-size'
+import { Route as FontFamilyRouteImport } from './routes/font-family'
 
 const FontWeightRoute = FontWeightRouteImport.update({
   id: '/font-weight',
@@ -22,29 +23,38 @@ const FontSizeRoute = FontSizeRouteImport.update({
   path: '/font-size',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FontFamilyRoute = FontFamilyRouteImport.update({
+  id: '/font-family',
+  path: '/font-family',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
+  '/font-family': typeof FontFamilyRoute
   '/font-size': typeof FontSizeRoute
   '/font-weight': typeof FontWeightRoute
 }
 export interface FileRoutesByTo {
+  '/font-family': typeof FontFamilyRoute
   '/font-size': typeof FontSizeRoute
   '/font-weight': typeof FontWeightRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
+  '/font-family': typeof FontFamilyRoute
   '/font-size': typeof FontSizeRoute
   '/font-weight': typeof FontWeightRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/font-size' | '/font-weight'
+  fullPaths: '/font-family' | '/font-size' | '/font-weight'
   fileRoutesByTo: FileRoutesByTo
-  to: '/font-size' | '/font-weight'
-  id: '__root__' | '/font-size' | '/font-weight'
+  to: '/font-family' | '/font-size' | '/font-weight'
+  id: '__root__' | '/font-family' | '/font-size' | '/font-weight'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
+  FontFamilyRoute: typeof FontFamilyRoute
   FontSizeRoute: typeof FontSizeRoute
   FontWeightRoute: typeof FontWeightRoute
 }
@@ -65,10 +75,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FontSizeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/font-family': {
+      id: '/font-family'
+      path: '/font-family'
+      fullPath: '/font-family'
+      preLoaderRoute: typeof FontFamilyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
+  FontFamilyRoute: FontFamilyRoute,
   FontSizeRoute: FontSizeRoute,
   FontWeightRoute: FontWeightRoute,
 }

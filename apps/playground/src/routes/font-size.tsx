@@ -43,13 +43,13 @@ function RouteComponent() {
             </span>
           </li>
           <li className="border-accent-5 flex items-end justify-between border-b py-2">
-            <span className="text-4 text-accent-13 leading-none">Inter</span>
+            <span className="text-5 text-accent-13 leading-none">Inter</span>
             <span className="text-1 text-accent-12 font-mono">
               w-fs-5 <span className="text-accent-11">•</span> text-5
             </span>
           </li>
           <li className="border-accent-5 flex items-end justify-between border-b py-2">
-            <span className="text-5 text-accent-13 leading-none">Inter</span>
+            <span className="text-6 text-accent-13 leading-none">Inter</span>
             <span className="text-1 text-accent-12 font-mono">
               w-fs-6 <span className="text-accent-11">•</span> text-6
             </span>
