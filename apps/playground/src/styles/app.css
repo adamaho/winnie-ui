@@ -1,0 +1,178 @@
+@import "tailwindcss" layer(winnie);
+
+@layer base {
+  html {
+    color-scheme: light dark;
+    height: 100vh;
+  }
+
+  body {
+    height: 100%;
+  }
+
+  [data-theme="dark"] {
+    color-scheme: dark;
+  }
+}
+
+@layer winnie.typography {
+  :root {
+    --w-ff-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+    --w-ff-serif: "Inter", serif;
+    --w-ff-mono: "Geist Mono", monospace;
+
+    --w-fs-1: calc(11px * var(--w-scale, 1));
+    --w-fs-2: calc(13px * var(--w-scale, 1));
+    --w-fs-3: calc(15px * var(--w-scale, 1));
+    --w-fs-4: calc(18px * var(--w-scale, 1));
+    --w-fs-5: calc(22px * var(--w-scale, 1));
+    --w-fs-6: calc(28px * var(--w-scale, 1));
+    --w-fs-7: calc(32px * var(--w-scale, 1));
+    --w-fs-8: calc(64px * var(--w-scale, 1));
+
+    --w-fw-1: 400;
+    --w-fw-2: 500;
+    --w-fw-3: 600;
+    --w-fw-4: 700;
+    --w-fw-5: 800;
+  }
+}
+
+@layer winnie.radius {
+  :root {
+    --w-br-1: calc(4px * var(--w-scale, 1) * var(--w-rf, 1));
+    --w-br-2: calc(8px * var(--w-scale, 1) * var(--w-rf, 1));
+    --w-br-3: calc(12px * var(--w-scale, 1) * var(--w-rf, 1));
+    --w-br-4: calc(16px * var(--w-scale, 1) * var(--w-rf, 1));
+    --w-br-5: calc(20px * var(--w-scale, 1) * var(--w-rf, 1));
+    --w-br-6: calc(24px * var(--w-scale, 1) * var(--w-rf, 1));
+    --w-br-7: calc(32px * var(--w-scale, 1) * var(--w-rf, 1));
+    --w-br-round: calc(9999px * var(--w-scale, 1) * var(--w-rf, 1));
+  }
+}
+
+@layer winnie.spacing {
+  :root {
+    --w-sp-1: calc(4px * var(--w-scale, 1));
+    --w-sp-2: calc(8px * var(--w-scale, 1));
+    --w-sp-3: calc(12px * var(--w-scale, 1));
+    --w-sp-4: calc(16px * var(--w-scale, 1));
+    --w-sp-5: calc(20px * var(--w-scale, 1));
+    --w-sp-6: calc(24px * var(--w-scale, 1));
+    --w-sp-7: calc(32px * var(--w-scale, 1));
+    --w-sp-8: calc(40px * var(--w-scale, 1));
+    --w-sp-9: calc(48px * var(--w-scale, 1));
+    --w-sp-10: calc(64px * var(--w-scale, 1));
+  }
+}
+
+@layer winnie.color.amethyst {
+  /* This works if the theme is inherited from a parent... */
+  [data-theme="dark"] {
+    --w-c-amethyst-1: color-mix(in oklch, oklch(0.45 0.15 300), black 68%); /* app background 1 */
+    --w-c-amethyst-2: color-mix(in oklch, oklch(0.45 0.15 300), black 63%); /* app background 2 */
+    --w-c-amethyst-3: color-mix(in oklch, oklch(0.45 0.15 300), black 56%); /* surface background 1 */
+    --w-c-amethyst-4: color-mix(in oklch, oklch(0.45 0.15 300), black 47%); /* surface background 2, surface hover */
+    --w-c-amethyst-5: color-mix(in oklch, oklch(0.45 0.15 300), black 41%); /* surface background 3, surface pressed */
+    --w-c-amethyst-6: color-mix(in oklch, oklch(0.45 0.15 300), black 39%); /* border-1, typically used on app background */
+    --w-c-amethyst-7: color-mix(in oklch, oklch(0.45 0.15 300), black 25%); /* border-2, surface border for interactive components */
+    --w-c-amethyst-8: color-mix(in oklch, oklch(0.45 0.15 300), black 18%); /* border-3, stronger border / focus rings */
+    --w-c-amethyst-9: oklch(0.45 0.15 300); /* solid-1, buttons, chips, etc */
+    --w-c-amethyst-10: color-mix(in oklch, oklch(0.45 0.2 300), white 5%); /* solid-2, button hover */
+    --w-c-amethyst-11: color-mix(in oklch, oklch(0.45 0.2 300), white 10%); /* solid-3, button pressed */
+    --w-c-amethyst-12: color-mix(in oklch, oklch(0.45 0.15 300), white 62%); /* text-subtle */
+    --w-c-amethyst-13: color-mix(in oklch, oklch(0.45 0.15 300), white 90%); /* text */
+    --w-c-amethyst-contrast: white;
+  }
+
+  [data-accent-color="amethyst"] {
+    --w-c-accent-1: var(--w-c-amethyst-1);
+    --w-c-accent-2: var(--w-c-amethyst-2);
+    --w-c-accent-3: var(--w-c-amethyst-3);
+    --w-c-accent-4: var(--w-c-amethyst-4);
+    --w-c-accent-5: var(--w-c-amethyst-5);
+    --w-c-accent-6: var(--w-c-amethyst-6);
+    --w-c-accent-7: var(--w-c-amethyst-7);
+    --w-c-accent-8: var(--w-c-amethyst-8);
+    --w-c-accent-9: var(--w-c-amethyst-9);
+    --w-c-accent-10: var(--w-c-amethyst-10);
+    --w-c-accent-11: var(--w-c-amethyst-11);
+    --w-c-accent-12: var(--w-c-amethyst-12);
+    --w-c-accent-13: var(--w-c-amethyst-13);
+    --w-c-accent-contrast: var(--w-c-amethyst-contrast);
+  }
+}
+
+@theme inline {
+  --color-accent-1: var(--w-c-accent-1);
+  --color-accent-2: var(--w-c-accent-2);
+  --color-accent-3: var(--w-c-accent-3);
+  --color-accent-4: var(--w-c-accent-4);
+  --color-accent-5: var(--w-c-accent-5);
+  --color-accent-6: var(--w-c-accent-6);
+  --color-accent-7: var(--w-c-accent-7);
+  --color-accent-8: var(--w-c-accent-8);
+  --color-accent-9: var(--w-c-accent-9);
+  --color-accent-10: var(--w-c-accent-10);
+  --color-accent-11: var(--w-c-accent-11);
+  --color-accent-12: var(--w-c-accent-12);
+  --color-accent-13: var(--w-c-accent-13);
+  --color-accent-contrast: var(--w-c-accent-contrast);
+
+  --color-amethyst-1: var(--w-c-amethyst-1);
+  --color-amethyst-2: var(--w-c-amethyst-2);
+  --color-amethyst-3: var(--w-c-amethyst-3);
+  --color-amethyst-4: var(--w-c-amethyst-4);
+  --color-amethyst-5: var(--w-c-amethyst-5);
+  --color-amethyst-6: var(--w-c-amethyst-6);
+  --color-amethyst-7: var(--w-c-amethyst-7);
+  --color-amethyst-8: var(--w-c-amethyst-8);
+  --color-amethyst-9: var(--w-c-amethyst-9);
+  --color-amethyst-10: var(--w-c-amethyst-10);
+  --color-amethyst-11: var(--w-c-amethyst-11);
+  --color-amethyst-12: var(--w-c-amethyst-12);
+  --color-amethyst-13: var(--w-c-amethyst-13);
+  --color-amethyst-contrast: var(--w-c-amethyst-contrast);
+}
+
+@theme {
+  --font-weight-1: var(--w-fw-1);
+  --font-weight-2: var(--w-fw-2);
+  --font-weight-3: var(--w-fw-3);
+  --font-weight-4: var(--w-fw-4);
+  --font-weight-5: var(--w-fw-5);
+
+  --font-sans: var(--w-ff-sans);
+  --font-serif: var(--w-ff-serif);
+  --font-mono: var(--w-ff-mono);
+
+  --radius-1: var(--w-br-1);
+  --radius-2: var(--w-br-2);
+  --radius-3: var(--w-br-3);
+  --radius-4: var(--w-br-4);
+  --radius-5: var(--w-br-5);
+  --radius-6: var(--w-br-6);
+  --radius-7: var(--w-br-7);
+  --radius-round: var(--w-br-round);
+
+  --spacing-1: var(--w-sp-1);
+  --spacing-2: var(--w-sp-2);
+  --spacing-3: var(--w-sp-3);
+  --spacing-4: var(--w-sp-4);
+  --spacing-5: var(--w-sp-5);
+  --spacing-6: var(--w-sp-6);
+  --spacing-7: var(--w-sp-7);
+  --spacing-8: var(--w-sp-8);
+  --spacing-9: var(--w-sp-9);
+  --spacing-10: var(--w-sp-10);
+
+  --text-1: var(--w-fs-1);
+  --text-2: var(--w-fs-2);
+  --text-3: var(--w-fs-3);
+  --text-4: var(--w-fs-4);
+  --text-5: var(--w-fs-5);
+  --text-6: var(--w-fs-6);
+  --text-7: var(--w-fs-7);
+  --text-8: var(--w-fs-8);
+  --text-9: var(--w-fs-9);
+}
