@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/color")({
@@ -5,26 +7,41 @@ export const Route = createFileRoute("/color")({
 });
 
 function RouteComponent() {
+  /**
+   * tracks selected color
+   */
+  const [selectedColor, setSelectedColor] = useState("amethyst");
+
+  console.log(selectedColor);
+
   return (
-    <div className="bg-accent-1 mx-auto flex h-full flex-col items-center justify-center p-2">
+    <div className="bg-accent-1 mx-auto flex h-full flex-col items-center justify-center px-5">
       <div className="w-full max-w-[70ch] pb-6 pt-10">
         <h3 className="text-6 font-1 mb-4 leading-none">Color</h3>
         <p className="text-3 text-accent-12 mb-5">
           Apply color to your elements using these helpful utilities.
         </p>
-        <ul className="bg-accent-3 border-accent-6 rounded-2 flex flex-col gap-3 border p-4">
-          <li className="border-accent-8 flex items-end justify-end border-b py-2">
+        <ul
+          className="bg-accent-3 border-accent-6 rounded-2 flex flex-col gap-3 border p-4"
+          data-accent-color={selectedColor}
+        >
+          <li className="border-accent-8 flex items-end justify-between border-b py-2">
+            <select onChange={(e) => setSelectedColor(e.target.value)}>
+              <option value="red">Red</option>
+              <option value="green">Green</option>
+              <option value="blue">Blue</option>
+              <option value="yellow">Yellow</option>
+            </select>
             <code className="text-1 text-accent-13 font-mono">
               variable <span className="text-accent-11">•</span> tailwind
             </code>
           </li>
           <li className="border-accent-5 flex items-end justify-between border-b py-2">
-            <span className="bg-accent-1 rounded-1 h-[32px] w-[32px]" />
-            <span className="text-1 text-accent-12 font-mono">
-              w-c-amethyst-1 <span className="text-accent-11">•</span>
-              &nbsp;
+            <span className="bg-accent-1 rounded-1 h-[32px] w-[32px] shrink-0" />
+            <code className="text-1 text-accent-12 shrink-0 font-mono">
+              w-c-amethyst-1 <span className="text-accent-11">•</span>&nbsp;
               <var>{"<prefix>"}</var>-1
-            </span>
+            </code>
           </li>
           <li className="border-accent-5 flex items-end justify-between border-b py-2">
             <span className="bg-accent-2 rounded-1 h-[32px] w-[32px]" />
