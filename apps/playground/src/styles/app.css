@@ -54,7 +54,7 @@
   }
 }
 
-@layer winnie.spacing {
+@layer winnie.space {
   :root {
     --w-sp-1: calc(4px * var(--w-scale, 1));
     --w-sp-2: calc(8px * var(--w-scale, 1));

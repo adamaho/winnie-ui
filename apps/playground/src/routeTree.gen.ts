@@ -9,10 +9,16 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SpaceRouteImport } from './routes/space'
 import { Route as FontWeightRouteImport } from './routes/font-weight'
 import { Route as FontSizeRouteImport } from './routes/font-size'
 import { Route as FontFamilyRouteImport } from './routes/font-family'
 
+const SpaceRoute = SpaceRouteImport.update({
+  id: '/space',
+  path: '/space',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FontWeightRoute = FontWeightRouteImport.update({
   id: '/font-weight',
   path: '/font-weight',
@@ -33,34 +39,45 @@ export interface FileRoutesByFullPath {
   '/font-family': typeof FontFamilyRoute
   '/font-size': typeof FontSizeRoute
   '/font-weight': typeof FontWeightRoute
+  '/space': typeof SpaceRoute
 }
 export interface FileRoutesByTo {
   '/font-family': typeof FontFamilyRoute
   '/font-size': typeof FontSizeRoute
   '/font-weight': typeof FontWeightRoute
+  '/space': typeof SpaceRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/font-family': typeof FontFamilyRoute
   '/font-size': typeof FontSizeRoute
   '/font-weight': typeof FontWeightRoute
+  '/space': typeof SpaceRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/font-family' | '/font-size' | '/font-weight'
+  fullPaths: '/font-family' | '/font-size' | '/font-weight' | '/space'
   fileRoutesByTo: FileRoutesByTo
-  to: '/font-family' | '/font-size' | '/font-weight'
-  id: '__root__' | '/font-family' | '/font-size' | '/font-weight'
+  to: '/font-family' | '/font-size' | '/font-weight' | '/space'
+  id: '__root__' | '/font-family' | '/font-size' | '/font-weight' | '/space'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   FontFamilyRoute: typeof FontFamilyRoute
   FontSizeRoute: typeof FontSizeRoute
   FontWeightRoute: typeof FontWeightRoute
+  SpaceRoute: typeof SpaceRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/space': {
+      id: '/space'
+      path: '/space'
+      fullPath: '/space'
+      preLoaderRoute: typeof SpaceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/font-weight': {
       id: '/font-weight'
       path: '/font-weight'
@@ -89,6 +106,7 @@ const rootRouteChildren: RootRouteChildren = {
   FontFamilyRoute: FontFamilyRoute,
   FontSizeRoute: FontSizeRoute,
   FontWeightRoute: FontWeightRoute,
+  SpaceRoute: SpaceRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
