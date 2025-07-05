@@ -1,9 +1,13 @@
-@import "tailwindcss" layer(winnie);
+@layer winnie.base, winnie.color, winnie.component, winnie.utility;
 
-@layer base {
+@import "tailwindcss/theme.css" layer(winnie.base);
+@import "tailwindcss/preflight.css" layer(winnie.base);
+@import "tailwindcss/utilities.css" layer(winnie.utility);
+
+@layer winnie.base {
   html {
     color-scheme: light dark;
-    height: 100vh;
+    min-height: 100vh;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -18,7 +22,10 @@
   }
 }
 
-@layer winnie.typography {
+/* -------------------------------------------------------------------------------------------------
+ * Base 
+ * -----------------------------------------------------------------------------------------------*/
+@layer winnie.base.typography {
   :root {
     --w-ff-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
     --w-ff-serif: "Instrument Serif", serif;
@@ -38,39 +45,51 @@
     --w-fw-3: 600;
     --w-fw-4: 700;
     --w-fw-5: 800;
+
+    --w-lh-1: calc(16px * var(--w-scale, 1));
+    --w-lh-2: calc(20px * var(--w-scale, 1));
+    --w-lh-3: calc(24px * var(--w-scale, 1));
+    --w-lh-4: calc(26px * var(--w-scale, 1));
+    --w-lh-5: calc(28px * var(--w-scale, 1));
+    --w-lh-6: calc(30px * var(--w-scale, 1));
+    --w-lh-7: calc(36px * var(--w-scale, 1));
+    --w-lh-8: calc(40px * var(--w-scale, 1));
+    --w-lh-9: calc(60px * var(--w-scale, 1));
   }
 }
 
-@layer winnie.radius {
+@layer winnie.base.radius {
   :root {
-    --w-br-1: calc(4px * var(--w-scale, 1) * var(--w-rf, 1));
-    --w-br-2: calc(8px * var(--w-scale, 1) * var(--w-rf, 1));
-    --w-br-3: calc(12px * var(--w-scale, 1) * var(--w-rf, 1));
-    --w-br-4: calc(16px * var(--w-scale, 1) * var(--w-rf, 1));
-    --w-br-5: calc(20px * var(--w-scale, 1) * var(--w-rf, 1));
-    --w-br-6: calc(24px * var(--w-scale, 1) * var(--w-rf, 1));
-    --w-br-7: calc(32px * var(--w-scale, 1) * var(--w-rf, 1));
-    --w-br-round: calc(9999px * var(--w-scale, 1) * var(--w-rf, 1));
+    --w-r-1: calc(4px * var(--w-scale, 1) * var(--w-rf, 1));
+    --w-r-2: calc(8px * var(--w-scale, 1) * var(--w-rf, 1));
+    --w-r-3: calc(12px * var(--w-scale, 1) * var(--w-rf, 1));
+    --w-r-4: calc(16px * var(--w-scale, 1) * var(--w-rf, 1));
+    --w-r-5: calc(20px * var(--w-scale, 1) * var(--w-rf, 1));
+    --w-r-6: calc(24px * var(--w-scale, 1) * var(--w-rf, 1));
+    --w-r-7: calc(32px * var(--w-scale, 1) * var(--w-rf, 1));
+    --w-r-round: calc(9999px * var(--w-scale, 1) * var(--w-rf, 1));
   }
 }
 
-@layer winnie.space {
+@layer winnie.base.space {
   :root {
-    --w-sp-1: calc(4px * var(--w-scale, 1));
-    --w-sp-2: calc(8px * var(--w-scale, 1));
-    --w-sp-3: calc(12px * var(--w-scale, 1));
-    --w-sp-4: calc(16px * var(--w-scale, 1));
-    --w-sp-5: calc(20px * var(--w-scale, 1));
-    --w-sp-6: calc(24px * var(--w-scale, 1));
-    --w-sp-7: calc(32px * var(--w-scale, 1));
-    --w-sp-8: calc(40px * var(--w-scale, 1));
-    --w-sp-9: calc(48px * var(--w-scale, 1));
-    --w-sp-10: calc(64px * var(--w-scale, 1));
+    --w-s-1: calc(4px * var(--w-scale, 1));
+    --w-s-2: calc(8px * var(--w-scale, 1));
+    --w-s-3: calc(12px * var(--w-scale, 1));
+    --w-s-4: calc(16px * var(--w-scale, 1));
+    --w-s-5: calc(20px * var(--w-scale, 1));
+    --w-s-6: calc(24px * var(--w-scale, 1));
+    --w-s-7: calc(32px * var(--w-scale, 1));
+    --w-s-8: calc(40px * var(--w-scale, 1));
+    --w-s-9: calc(48px * var(--w-scale, 1));
+    --w-s-10: calc(64px * var(--w-scale, 1));
   }
 }
 
+/* -------------------------------------------------------------------------------------------------
+ * Color 
+ * -----------------------------------------------------------------------------------------------*/
 @layer winnie.color.amethyst {
-  /* This works if the theme is inherited from a parent... */
   [data-theme="dark"] {
     --w-c-amethyst-1: color-mix(in oklch, oklch(0.45 0.15 300), black 68%); /* app background 1 */
     --w-c-amethyst-2: color-mix(in oklch, oklch(0.45 0.15 300), black 63%); /* app background 2 */
@@ -81,8 +100,8 @@
     --w-c-amethyst-7: color-mix(in oklch, oklch(0.45 0.15 300), black 25%); /* border-2, surface border for interactive components */
     --w-c-amethyst-8: color-mix(in oklch, oklch(0.45 0.15 300), black 18%); /* border-3, stronger border / focus rings */
     --w-c-amethyst-9: oklch(0.45 0.15 300); /* solid-1, buttons, chips, etc */
-    --w-c-amethyst-10: color-mix(in oklch, oklch(0.45 0.2 300), white 5%); /* solid-2, button hover */
-    --w-c-amethyst-11: color-mix(in oklch, oklch(0.45 0.2 300), white 10%); /* solid-3, button pressed */
+    --w-c-amethyst-10: color-mix(in oklch, oklch(0.45 0.2 300), white 10%); /* solid-2, button hover */
+    --w-c-amethyst-11: color-mix(in oklch, oklch(0.45 0.2 300), white 20%); /* solid-3, button pressed */
     --w-c-amethyst-12: color-mix(in oklch, oklch(0.45 0.15 300), white 62%); /* text-subtle */
     --w-c-amethyst-13: color-mix(in oklch, oklch(0.45 0.15 300), white 90%); /* text */
     --w-c-amethyst-contrast: white;
@@ -106,6 +125,50 @@
   }
 }
 
+/* -------------------------------------------------------------------------------------------------
+ * Component 
+ * -----------------------------------------------------------------------------------------------*/
+@layer winnie.component.tooltip {
+  [data-component="tooltip"] {
+    border-radius: var(--w-tooltip-br, var(--w-r-2));
+    display: inline-grid;
+    grid-template-columns: 1fr auto;
+    font-size: var(--w-tooltip-fs, var(--w-fs-1));
+    line-height: var(--w-tooltip-lh, var(--w-lh-1));
+    min-width: max-content;
+    padding-block: calc(var(--w-tooltip-s, var(--w-s-3)) / 3);
+    padding-inline: var(--w-tooltip-s, var(--w-s-3));
+    user-select: none;
+
+    [data-slot="label"] {
+      font-size: var(--w-tooltip-fs, var(--w-fs-1));
+      grid-column-start: 1;
+      max-width: var(--w-tooltip-mw, calc(200px * var(--w-scale)));
+      line-height: var(--w-tooltip-lh, var(--w-lh-1));
+    }
+
+    [data-slot="shortcut"] {
+      grid-column-start: 2;
+      justify-self: end;
+      min-width: 2ch;
+      margin-left: calc(var(--w-tooltip-s, var(--w-sp-3)));
+      text-align: center;
+      text-transform: capitalize;
+
+      &:has(> [data-component="kbd"]) {
+        display: flex;
+      }
+
+      & > [data-component="kbd"] {
+        min-width: 2ch;
+      }
+    }
+  }
+}
+
+/* -------------------------------------------------------------------------------------------------
+ * Tailwind 
+ * -----------------------------------------------------------------------------------------------*/
 @theme inline {
   --color-accent-1: var(--w-c-accent-1);
   --color-accent-2: var(--w-c-accent-2);
@@ -149,25 +212,25 @@
   --font-serif: var(--w-ff-serif);
   --font-mono: var(--w-ff-mono);
 
-  --radius-1: var(--w-br-1);
-  --radius-2: var(--w-br-2);
-  --radius-3: var(--w-br-3);
-  --radius-4: var(--w-br-4);
-  --radius-5: var(--w-br-5);
-  --radius-6: var(--w-br-6);
-  --radius-7: var(--w-br-7);
-  --radius-round: var(--w-br-round);
+  --radius-1: var(--w-r-1);
+  --radius-2: var(--w-r-2);
+  --radius-3: var(--w-r-3);
+  --radius-4: var(--w-r-4);
+  --radius-5: var(--w-r-5);
+  --radius-6: var(--w-r-6);
+  --radius-7: var(--w-r-7);
+  --radius-round: var(--w-r-round);
 
-  --spacing-1: var(--w-sp-1);
-  --spacing-2: var(--w-sp-2);
-  --spacing-3: var(--w-sp-3);
-  --spacing-4: var(--w-sp-4);
-  --spacing-5: var(--w-sp-5);
-  --spacing-6: var(--w-sp-6);
-  --spacing-7: var(--w-sp-7);
-  --spacing-8: var(--w-sp-8);
-  --spacing-9: var(--w-sp-9);
-  --spacing-10: var(--w-sp-10);
+  --spacing-1: var(--w-s-1);
+  --spacing-2: var(--w-s-2);
+  --spacing-3: var(--w-s-3);
+  --spacing-4: var(--w-s-4);
+  --spacing-5: var(--w-s-5);
+  --spacing-6: var(--w-s-6);
+  --spacing-7: var(--w-s-7);
+  --spacing-8: var(--w-s-8);
+  --spacing-9: var(--w-s-9);
+  --spacing-10: var(--w-s-10);
 
   --text-1: var(--w-fs-1);
   --text-2: var(--w-fs-2);

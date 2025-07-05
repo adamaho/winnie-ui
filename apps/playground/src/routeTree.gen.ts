@@ -13,6 +13,7 @@ import { Route as SpaceRouteImport } from './routes/space'
 import { Route as FontWeightRouteImport } from './routes/font-weight'
 import { Route as FontSizeRouteImport } from './routes/font-size'
 import { Route as FontFamilyRouteImport } from './routes/font-family'
+import { Route as ColorRouteImport } from './routes/color'
 
 const SpaceRoute = SpaceRouteImport.update({
   id: '/space',
@@ -34,14 +35,21 @@ const FontFamilyRoute = FontFamilyRouteImport.update({
   path: '/font-family',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ColorRoute = ColorRouteImport.update({
+  id: '/color',
+  path: '/color',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
+  '/color': typeof ColorRoute
   '/font-family': typeof FontFamilyRoute
   '/font-size': typeof FontSizeRoute
   '/font-weight': typeof FontWeightRoute
   '/space': typeof SpaceRoute
 }
 export interface FileRoutesByTo {
+  '/color': typeof ColorRoute
   '/font-family': typeof FontFamilyRoute
   '/font-size': typeof FontSizeRoute
   '/font-weight': typeof FontWeightRoute
@@ -49,6 +57,7 @@ export interface FileRoutesByTo {
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
+  '/color': typeof ColorRoute
   '/font-family': typeof FontFamilyRoute
   '/font-size': typeof FontSizeRoute
   '/font-weight': typeof FontWeightRoute
@@ -56,13 +65,25 @@ export interface FileRoutesById {
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/font-family' | '/font-size' | '/font-weight' | '/space'
+  fullPaths:
+    | '/color'
+    | '/font-family'
+    | '/font-size'
+    | '/font-weight'
+    | '/space'
   fileRoutesByTo: FileRoutesByTo
-  to: '/font-family' | '/font-size' | '/font-weight' | '/space'
-  id: '__root__' | '/font-family' | '/font-size' | '/font-weight' | '/space'
+  to: '/color' | '/font-family' | '/font-size' | '/font-weight' | '/space'
+  id:
+    | '__root__'
+    | '/color'
+    | '/font-family'
+    | '/font-size'
+    | '/font-weight'
+    | '/space'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
+  ColorRoute: typeof ColorRoute
   FontFamilyRoute: typeof FontFamilyRoute
   FontSizeRoute: typeof FontSizeRoute
   FontWeightRoute: typeof FontWeightRoute
@@ -99,10 +120,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FontFamilyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/color': {
+      id: '/color'
+      path: '/color'
+      fullPath: '/color'
+      preLoaderRoute: typeof ColorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
+  ColorRoute: ColorRoute,
   FontFamilyRoute: FontFamilyRoute,
   FontSizeRoute: FontSizeRoute,
   FontWeightRoute: FontWeightRoute,
