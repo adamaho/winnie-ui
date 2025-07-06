@@ -48,7 +48,11 @@ export const Route = createRootRoute({
 
 function RootDocument({ children }: { children: React.ReactNode }) {
   return (
-    <html data-theme="dark" data-accent-color="amethyst">
+    <html
+      data-theme="dark"
+      data-accent-color="amethyst"
+      className="bg-accent-1"
+    >
       <head>
         <HeadContent />
       </head>

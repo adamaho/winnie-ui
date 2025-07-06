@@ -12,8 +12,6 @@ function RouteComponent() {
    */
   const [selectedColor, setSelectedColor] = useState("amethyst");
 
-  console.log(selectedColor);
-
   return (
     <div className="bg-accent-1 mx-auto flex h-full flex-col items-center justify-center px-5">
       <div className="w-full max-w-[70ch] pb-6 pt-10">

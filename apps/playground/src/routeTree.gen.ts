@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SpaceRouteImport } from './routes/space'
+import { Route as PlaygroundRouteImport } from './routes/playground'
 import { Route as FontWeightRouteImport } from './routes/font-weight'
 import { Route as FontSizeRouteImport } from './routes/font-size'
 import { Route as FontFamilyRouteImport } from './routes/font-family'
@@ -18,6 +19,11 @@ import { Route as ColorRouteImport } from './routes/color'
 const SpaceRoute = SpaceRouteImport.update({
   id: '/space',
   path: '/space',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlaygroundRoute = PlaygroundRouteImport.update({
+  id: '/playground',
+  path: '/playground',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FontWeightRoute = FontWeightRouteImport.update({
@@ -46,6 +52,7 @@ export interface FileRoutesByFullPath {
   '/font-family': typeof FontFamilyRoute
   '/font-size': typeof FontSizeRoute
   '/font-weight': typeof FontWeightRoute
+  '/playground': typeof PlaygroundRoute
   '/space': typeof SpaceRoute
 }
 export interface FileRoutesByTo {
@@ -53,6 +60,7 @@ export interface FileRoutesByTo {
   '/font-family': typeof FontFamilyRoute
   '/font-size': typeof FontSizeRoute
   '/font-weight': typeof FontWeightRoute
+  '/playground': typeof PlaygroundRoute
   '/space': typeof SpaceRoute
 }
 export interface FileRoutesById {
@@ -61,6 +69,7 @@ export interface FileRoutesById {
   '/font-family': typeof FontFamilyRoute
   '/font-size': typeof FontSizeRoute
   '/font-weight': typeof FontWeightRoute
+  '/playground': typeof PlaygroundRoute
   '/space': typeof SpaceRoute
 }
 export interface FileRouteTypes {
@@ -70,15 +79,23 @@ export interface FileRouteTypes {
     | '/font-family'
     | '/font-size'
     | '/font-weight'
+    | '/playground'
     | '/space'
   fileRoutesByTo: FileRoutesByTo
-  to: '/color' | '/font-family' | '/font-size' | '/font-weight' | '/space'
+  to:
+    | '/color'
+    | '/font-family'
+    | '/font-size'
+    | '/font-weight'
+    | '/playground'
+    | '/space'
   id:
     | '__root__'
     | '/color'
     | '/font-family'
     | '/font-size'
     | '/font-weight'
+    | '/playground'
     | '/space'
   fileRoutesById: FileRoutesById
 }
@@ -87,6 +104,7 @@ export interface RootRouteChildren {
   FontFamilyRoute: typeof FontFamilyRoute
   FontSizeRoute: typeof FontSizeRoute
   FontWeightRoute: typeof FontWeightRoute
+  PlaygroundRoute: typeof PlaygroundRoute
   SpaceRoute: typeof SpaceRoute
 }
 
@@ -97,6 +115,13 @@ declare module '@tanstack/react-router' {
       path: '/space'
       fullPath: '/space'
       preLoaderRoute: typeof SpaceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/playground': {
+      id: '/playground'
+      path: '/playground'
+      fullPath: '/playground'
+      preLoaderRoute: typeof PlaygroundRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/font-weight': {
@@ -135,6 +160,7 @@ const rootRouteChildren: RootRouteChildren = {
   FontFamilyRoute: FontFamilyRoute,
   FontSizeRoute: FontSizeRoute,
   FontWeightRoute: FontWeightRoute,
+  PlaygroundRoute: PlaygroundRoute,
   SpaceRoute: SpaceRoute,
 }
 export const routeTree = rootRouteImport
