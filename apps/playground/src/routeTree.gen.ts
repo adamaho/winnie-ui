@@ -11,10 +11,12 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SpaceRouteImport } from './routes/space'
 import { Route as PlaygroundRouteImport } from './routes/playground'
+import { Route as LineHeightRouteImport } from './routes/line-height'
 import { Route as FontWeightRouteImport } from './routes/font-weight'
 import { Route as FontSizeRouteImport } from './routes/font-size'
 import { Route as FontFamilyRouteImport } from './routes/font-family'
 import { Route as ColorRouteImport } from './routes/color'
+import { Route as IndexRouteImport } from './routes/index'
 
 const SpaceRoute = SpaceRouteImport.update({
   id: '/space',
@@ -24,6 +26,11 @@ const SpaceRoute = SpaceRouteImport.update({
 const PlaygroundRoute = PlaygroundRouteImport.update({
   id: '/playground',
   path: '/playground',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LineHeightRoute = LineHeightRouteImport.update({
+  id: '/line-height',
+  path: '/line-height',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FontWeightRoute = FontWeightRouteImport.update({
@@ -46,64 +53,83 @@ const ColorRoute = ColorRouteImport.update({
   path: '/color',
   getParentRoute: () => rootRouteImport,
 } as any)
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
+  '/': typeof IndexRoute
   '/color': typeof ColorRoute
   '/font-family': typeof FontFamilyRoute
   '/font-size': typeof FontSizeRoute
   '/font-weight': typeof FontWeightRoute
+  '/line-height': typeof LineHeightRoute
   '/playground': typeof PlaygroundRoute
   '/space': typeof SpaceRoute
 }
 export interface FileRoutesByTo {
+  '/': typeof IndexRoute
   '/color': typeof ColorRoute
   '/font-family': typeof FontFamilyRoute
   '/font-size': typeof FontSizeRoute
   '/font-weight': typeof FontWeightRoute
+  '/line-height': typeof LineHeightRoute
   '/playground': typeof PlaygroundRoute
   '/space': typeof SpaceRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
+  '/': typeof IndexRoute
   '/color': typeof ColorRoute
   '/font-family': typeof FontFamilyRoute
   '/font-size': typeof FontSizeRoute
   '/font-weight': typeof FontWeightRoute
+  '/line-height': typeof LineHeightRoute
   '/playground': typeof PlaygroundRoute
   '/space': typeof SpaceRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
+    | '/'
     | '/color'
     | '/font-family'
     | '/font-size'
     | '/font-weight'
+    | '/line-height'
     | '/playground'
     | '/space'
   fileRoutesByTo: FileRoutesByTo
   to:
+    | '/'
     | '/color'
     | '/font-family'
     | '/font-size'
     | '/font-weight'
+    | '/line-height'
     | '/playground'
     | '/space'
   id:
     | '__root__'
+    | '/'
     | '/color'
     | '/font-family'
     | '/font-size'
     | '/font-weight'
+    | '/line-height'
     | '/playground'
     | '/space'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
+  IndexRoute: typeof IndexRoute
   ColorRoute: typeof ColorRoute
   FontFamilyRoute: typeof FontFamilyRoute
   FontSizeRoute: typeof FontSizeRoute
   FontWeightRoute: typeof FontWeightRoute
+  LineHeightRoute: typeof LineHeightRoute
   PlaygroundRoute: typeof PlaygroundRoute
   SpaceRoute: typeof SpaceRoute
 }
@@ -122,6 +148,13 @@ declare module '@tanstack/react-router' {
       path: '/playground'
       fullPath: '/playground'
       preLoaderRoute: typeof PlaygroundRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/line-height': {
+      id: '/line-height'
+      path: '/line-height'
+      fullPath: '/line-height'
+      preLoaderRoute: typeof LineHeightRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/font-weight': {
@@ -152,14 +185,23 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ColorRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
+  IndexRoute: IndexRoute,
   ColorRoute: ColorRoute,
   FontFamilyRoute: FontFamilyRoute,
   FontSizeRoute: FontSizeRoute,
   FontWeightRoute: FontWeightRoute,
+  LineHeightRoute: LineHeightRoute,
   PlaygroundRoute: PlaygroundRoute,
   SpaceRoute: SpaceRoute,
 }

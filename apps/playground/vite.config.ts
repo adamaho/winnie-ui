@@ -6,6 +6,8 @@ import tsConfigPaths from "vite-tsconfig-paths";
 export default defineConfig({
   server: {
     port: 3000,
+    host: true,
+    allowedHosts: ["winston"],
   },
   plugins: [
     tsConfigPaths({

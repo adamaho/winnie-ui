@@ -6,69 +6,161 @@ export const Route = createFileRoute("/font-size")({
 
 function RouteComponent() {
   return (
-    <div className="bg-accent-1 mx-auto flex h-full flex-col items-center justify-center p-2">
-      <div className="w-full max-w-[70ch] pt-10">
-        <h3 className="text-6 font-1 mb-4 leading-none">Font Size</h3>
-        <p className="text-3 text-accent-12 mb-5">
-          Adjust the size of your text using these helpful utilities.
-        </p>
-        <ul className="bg-accent-3 border-accent-6 rounded-2 flex flex-col gap-3 border p-4">
-          <li className="border-accent-8 flex items-end justify-end border-b py-2">
-            <code className="text-1 text-accent-12 font-mono">
-              variable <span className="text-accent-11">•</span> tailwind
-            </code>
-          </li>
-          <li className="border-accent-5 flex items-end justify-between border-b py-2">
-            <span className="text-1 text-accent-13 leading-none">Inter</span>
-            <span className="text-1 text-accent-12 font-mono">
-              w-fs-1 <span className="text-accent-11">•</span> text-1
-            </span>
-          </li>
-          <li className="border-accent-5 flex items-end justify-between border-b py-2">
-            <span className="text-2 text-accent-13 leading-none">Inter</span>
-            <span className="text-1 text-accent-12 font-mono">
-              w-fs-2 <span className="text-accent-11">•</span> text-2
-            </span>
-          </li>
-          <li className="border-accent-5 flex items-end justify-between border-b py-2">
-            <span className="text-3 text-accent-13 leading-none">Inter</span>
-            <span className="text-1 text-accent-12 font-mono">
-              w-fs-3 <span className="text-accent-11">•</span> text-3
-            </span>
-          </li>
-          <li className="border-accent-5 flex items-end justify-between border-b py-2">
-            <span className="text-4 text-accent-13 leading-none">Inter</span>
-            <span className="text-1 text-accent-12 font-mono">
-              w-fs-4 <span className="text-accent-11">•</span> text-4
-            </span>
-          </li>
-          <li className="border-accent-5 flex items-end justify-between border-b py-2">
-            <span className="text-5 text-accent-13 leading-none">Inter</span>
-            <span className="text-1 text-accent-12 font-mono">
-              w-fs-5 <span className="text-accent-11">•</span> text-5
-            </span>
-          </li>
-          <li className="border-accent-5 flex items-end justify-between border-b py-2">
-            <span className="text-6 text-accent-13 leading-none">Inter</span>
-            <span className="text-1 text-accent-12 font-mono">
-              w-fs-6 <span className="text-accent-11">•</span> text-6
-            </span>
-          </li>
-          <li className="border-accent-5 flex items-end justify-between border-b py-2">
-            <span className="text-7 text-accent-13 leading-none">Inter</span>
-            <span className="text-1 text-accent-12 font-mono">
-              w-fs-7 <span className="text-accent-11">•</span> text-7
-            </span>
-          </li>
-          <li className="border-accent-5 flex items-end justify-between border-b py-2">
-            <span className="text-8 text-accent-13 flex-1 leading-none">
-              Inter
-            </span>
-            <span className="text-1 text-accent-12 font-mono">
-              w-fs-8 <span className="text-accent-11">•</span> text-8
-            </span>
-          </li>
-        </ul>
+    <div className="bg-accent-1 mx-auto flex h-full flex-col items-center justify-center p-2 pt-10">
+      <div className="bg-accent-3 bg-accent-3 border-accent-6 rounded-2 w-full max-w-[70ch] overflow-x-auto border p-4">
+        <table className="grid table-auto grid-cols-[auto_auto_1fr]">
+          <thead className="col-span-full grid grid-cols-subgrid">
+            <tr className="border-accent-7 col-span-full grid grid-cols-subgrid border-b">
+              <th className="text-1 text-accent-13 p-2 text-left font-mono">
+                variable
+              </th>
+              <th className="text-1 text-accent-13 p-2 text-left font-mono">
+                tailwind
+              </th>
+              <th className="text-1 text-accent-13 p-2 text-left font-mono">
+                value
+              </th>
+            </tr>
+          </thead>
+          <tbody className="col-span-full grid grid-cols-subgrid">
+            <tr className="border-accent-6 col-span-full grid grid-cols-subgrid border-b">
+              <td
+                className="text-1 text-accent-12 p-2 font-mono"
+                data-accent-color="amethyst"
+              >
+                w-fs-1
+              </td>
+              <td
+                className="text-1 text-accent-12 p-2 font-mono"
+                data-accent-color="sky"
+              >
+                text-1
+              </td>
+              <td className="text-1 text-accent-12 whitespace-nowrap p-2 font-mono">
+                calc(11px * var(--w-scale, 1))
+              </td>
+            </tr>
+            <tr className="border-accent-6 col-span-full grid grid-cols-subgrid border-b">
+              <td
+                className="text-1 text-accent-12 p-2 font-mono"
+                data-accent-color="amethyst"
+              >
+                w-fs-2
+              </td>
+              <td
+                className="text-1 text-accent-12 p-2 font-mono"
+                data-accent-color="sky"
+              >
+                text-2
+              </td>
+              <td className="text-1 text-accent-12 whitespace-nowrap p-2 font-mono">
+                calc(13px * var(--w-scale, 1))
+              </td>
+            </tr>
+            <tr className="border-accent-6 col-span-full grid grid-cols-subgrid border-b">
+              <td
+                className="text-1 text-accent-12 p-2 font-mono"
+                data-accent-color="amethyst"
+              >
+                w-fs-3
+              </td>
+              <td
+                className="text-1 text-accent-12 p-2 font-mono"
+                data-accent-color="sky"
+              >
+                text-3
+              </td>
+              <td className="text-1 text-accent-12 whitespace-nowrap p-2 font-mono">
+                calc(15px * var(--w-scale, 1))
+              </td>
+            </tr>
+            <tr className="border-accent-6 col-span-full grid grid-cols-subgrid border-b">
+              <td
+                className="text-1 text-accent-12 p-2 font-mono"
+                data-accent-color="amethyst"
+              >
+                w-fs-4
+              </td>
+              <td
+                className="text-1 text-accent-12 p-2 font-mono"
+                data-accent-color="sky"
+              >
+                text-4
+              </td>
+              <td className="text-1 text-accent-12 whitespace-nowrap p-2 font-mono">
+                calc(18px * var(--w-scale, 1))
+              </td>
+            </tr>
+            <tr className="border-accent-6 col-span-full grid grid-cols-subgrid border-b">
+              <td
+                className="text-1 text-accent-12 p-2 font-mono"
+                data-accent-color="amethyst"
+              >
+                w-fs-5
+              </td>
+              <td
+                className="text-1 text-accent-12 p-2 font-mono"
+                data-accent-color="sky"
+              >
+                text-5
+              </td>
+              <td className="text-1 text-accent-12 whitespace-nowrap p-2 font-mono">
+                calc(22px * var(--w-scale, 1))
+              </td>
+            </tr>
+            <tr className="border-accent-6 col-span-full grid grid-cols-subgrid border-b">
+              <td
+                className="text-1 text-accent-12 p-2 font-mono"
+                data-accent-color="amethyst"
+              >
+                w-fs-6
+              </td>
+              <td
+                className="text-1 text-accent-12 p-2 font-mono"
+                data-accent-color="sky"
+              >
+                text-6
+              </td>
+              <td className="text-1 text-accent-12 whitespace-nowrap p-2 font-mono">
+                calc(28px * var(--w-scale, 1))
+              </td>
+            </tr>
+            <tr className="border-accent-6 col-span-full grid grid-cols-subgrid border-b">
+              <td
+                className="text-1 text-accent-12 p-2 font-mono"
+                data-accent-color="amethyst"
+              >
+                w-fs-7
+              </td>
+              <td
+                className="text-1 text-accent-12 p-2 font-mono"
+                data-accent-color="sky"
+              >
+                text-7
+              </td>
+              <td className="text-1 text-accent-12 whitespace-nowrap p-2 font-mono">
+                calc(32px * var(--w-scale, 1))
+              </td>
+            </tr>
+            <tr className="col-span-full grid grid-cols-subgrid">
+              <td
+                className="text-1 text-accent-12 p-2 font-mono"
+                data-accent-color="amethyst"
+              >
+                w-fs-8
+              </td>
+              <td
+                className="text-1 text-accent-12 p-2 font-mono"
+                data-accent-color="sky"
+              >
+                text-8
+              </td>
+              <td className="text-1 text-accent-12 whitespace-nowrap p-2 font-mono">
+                calc(64px * var(--w-scale, 1))
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   );

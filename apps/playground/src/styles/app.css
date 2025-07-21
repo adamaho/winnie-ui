@@ -90,21 +90,40 @@
  * Color 
  * -----------------------------------------------------------------------------------------------*/
 @layer winnie.color.amethyst {
+  :root {
+    --w-c-h-amethyst: 300;
+  }
+
   [data-theme="dark"] {
-    --w-c-amethyst-1: color-mix(in oklch, oklch(0.45 0.15 300), black 68%); /* app background 1 */
-    --w-c-amethyst-2: color-mix(in oklch, oklch(0.45 0.15 300), black 63%); /* app background 2 */
-    --w-c-amethyst-3: color-mix(in oklch, oklch(0.45 0.15 300), black 56%); /* surface background 1 */
-    --w-c-amethyst-4: color-mix(in oklch, oklch(0.45 0.15 300), black 47%); /* surface background 2, surface hover */
-    --w-c-amethyst-5: color-mix(in oklch, oklch(0.45 0.15 300), black 41%); /* surface background 3, surface pressed */
-    --w-c-amethyst-6: color-mix(in oklch, oklch(0.45 0.15 300), black 39%); /* border-1, typically used on app background */
-    --w-c-amethyst-7: color-mix(in oklch, oklch(0.45 0.15 300), black 25%); /* border-2, surface border for interactive components */
-    --w-c-amethyst-8: color-mix(in oklch, oklch(0.45 0.15 300), black 18%); /* border-3, stronger border / focus rings */
-    --w-c-amethyst-9: oklch(0.45 0.15 300); /* solid-1, buttons, chips, etc */
-    --w-c-amethyst-10: color-mix(in oklch, oklch(0.45 0.2 300), white 10%); /* solid-2, button hover */
-    --w-c-amethyst-11: color-mix(in oklch, oklch(0.45 0.2 300), white 20%); /* solid-3, button pressed */
-    --w-c-amethyst-12: color-mix(in oklch, oklch(0.45 0.15 300), white 62%); /* text-subtle */
-    --w-c-amethyst-13: color-mix(in oklch, oklch(0.45 0.15 300), white 90%); /* text */
+    --w-c-amethyst-1: color-mix(in oklch, oklch(0.45 0.15 var(--w-c-h-amethyst)), black 68%); /* app background 1 */
+    --w-c-amethyst-2: color-mix(in oklch, oklch(0.45 0.15 var(--w-c-h-amethyst)), black 63%); /* app background 2 */
+    --w-c-amethyst-3: color-mix(in oklch, oklch(0.45 0.15 var(--w-c-h-amethyst)), black 56%); /* surface background 1 */
+    --w-c-amethyst-4: color-mix(in oklch, oklch(0.45 0.15 var(--w-c-h-amethyst)), black 47%); /* surface background 2, surface hover */
+    --w-c-amethyst-5: color-mix(in oklch, oklch(0.45 0.15 var(--w-c-h-amethyst)), black 41%); /* surface background 3, surface pressed */
+    --w-c-amethyst-6: color-mix(in oklch, oklch(0.45 0.15 var(--w-c-h-amethyst)), black 39%); /* border-1, typically used on app background */
+    --w-c-amethyst-7: color-mix(in oklch, oklch(0.45 0.15 var(--w-c-h-amethyst)), black 25%); /* border-2, surface border for interactive components */
+    --w-c-amethyst-8: color-mix(in oklch, oklch(0.45 0.15 var(--w-c-h-amethyst)), black 18%); /* border-3, stronger border / focus rings */
+    --w-c-amethyst-9: oklch(0.45 0.15 var(--w-c-h-amethyst)); /* solid-1, buttons, chips, etc */
+    --w-c-amethyst-10: color-mix(in oklch, oklch(0.45 0.2 var(--w-c-h-amethyst)), white 10%); /* solid-2, button hover */
+    --w-c-amethyst-11: color-mix(in oklch, oklch(0.45 0.2 var(--w-c-h-amethyst)), white 20%); /* solid-3, button pressed */
+    --w-c-amethyst-12: color-mix(in oklch, oklch(0.45 0.2 var(--w-c-h-amethyst)), white 42%); /* text-subtle */
+    --w-c-amethyst-13: color-mix(in oklch, oklch(0.45 0.15 var(--w-c-h-amethyst)), white 90%); /* text */
     --w-c-amethyst-contrast: white;
+
+    --w-c-amethyst-g1: color-mix(in oklch, oklch(0.45 0.028 var(--w-c-h-amethyst)), black 68%);
+    --w-c-amethyst-g2: color-mix(in oklch, oklch(0.45 0.028 var(--w-c-h-amethyst)), black 63%);
+    --w-c-amethyst-g3: color-mix(in oklch, oklch(0.45 0.028 var(--w-c-h-amethyst)), black 56%);
+    --w-c-amethyst-g4: color-mix(in oklch, oklch(0.45 0.028 var(--w-c-h-amethyst)), black 47%);
+    --w-c-amethyst-g5: color-mix(in oklch, oklch(0.45 0.028 var(--w-c-h-amethyst)), black 41%);
+    --w-c-amethyst-g6: color-mix(in oklch, oklch(0.45 0.028 var(--w-c-h-amethyst)), black 39%);
+    --w-c-amethyst-g7: color-mix(in oklch, oklch(0.45 0.028 var(--w-c-h-amethyst)), black 25%);
+    --w-c-amethyst-g8: color-mix(in oklch, oklch(0.45 0.028 var(--w-c-h-amethyst)), black 18%);
+    --w-c-amethyst-g9: oklch(0.45 0.028 var(--w-c-h-amethyst));
+    --w-c-amethyst-g10: color-mix(in oklch, oklch(0.45 0.028 var(--w-c-h-amethyst)), white 10%);
+    --w-c-amethyst-g11: color-mix(in oklch, oklch(0.45 0.028 var(--w-c-h-amethyst)), white 20%);
+    --w-c-amethyst-g12: color-mix(in oklch, oklch(0.45 0.028 var(--w-c-h-amethyst)), white 62%);
+    --w-c-amethyst-g13: color-mix(in oklch, oklch(0.45 0.028 var(--w-c-h-amethyst)), white 90%);
+    --w-c-amethyst-gcontrast: white;
   }
 
   [data-accent-color="amethyst"] {
@@ -122,6 +141,66 @@
     --w-c-accent-12: var(--w-c-amethyst-12);
     --w-c-accent-13: var(--w-c-amethyst-13);
     --w-c-accent-contrast: var(--w-c-amethyst-contrast);
+
+    &[data-mono="true"] {
+      --w-c-accent-1: var(--w-c-amethyst-g1);
+      --w-c-accent-2: var(--w-c-amethyst-g2);
+      --w-c-accent-3: var(--w-c-amethyst-g3);
+      --w-c-accent-4: var(--w-c-amethyst-g4);
+      --w-c-accent-5: var(--w-c-amethyst-g5);
+      --w-c-accent-6: var(--w-c-amethyst-g6);
+      --w-c-accent-7: var(--w-c-amethyst-g7);
+      --w-c-accent-8: var(--w-c-amethyst-g8);
+      --w-c-accent-9: var(--w-c-amethyst-g9);
+      --w-c-accent-10: var(--w-c-amethyst-g10);
+      --w-c-accent-11: var(--w-c-amethyst-g11);
+      --w-c-accent-12: var(--w-c-amethyst-g12);
+      --w-c-accent-13: var(--w-c-amethyst-g13);
+      --w-c-accent-contrast: var(--w-c-amethyst-gcontrast);
+    }
+  }
+}
+
+@layer winnie.color.sky {
+  :root {
+    --w-c-h-sky: 262;
+  }
+
+  [data-theme="dark"] {
+    --w-c-sky-1: color-mix(in oklch, oklch(0.84 0.19 var(--w-c-h-sky)), black 87%);
+    --w-c-sky-2: color-mix(in oklch, oklch(0.84 0.19 var(--w-c-h-sky)), black 83%);
+    --w-c-sky-3: color-mix(in oklch, oklch(0.84 0.19 var(--w-c-h-sky)), black 76%);
+    --w-c-sky-4: color-mix(in oklch, oklch(0.84 0.19 var(--w-c-h-sky)), black 71%);
+    --w-c-sky-5: color-mix(in oklch, oklch(0.84 0.19 var(--w-c-h-sky)), black 65%);
+    --w-c-sky-6: color-mix(in oklch, oklch(0.84 0.19 var(--w-c-h-sky)), black 58%);
+    --w-c-sky-7: color-mix(in oklch, oklch(0.84 0.19 var(--w-c-h-sky)), black 53%);
+    --w-c-sky-8: color-mix(in oklch, oklch(0.84 0.19 var(--w-c-h-sky)), black 47%);
+    --w-c-sky-9: oklch(0.84 0.19 var(--w-c-h-sky));
+    --w-c-sky-10: color-mix(in oklch, oklch(0.84 0.19 var(--w-c-h-sky)), white 20%);
+    --w-c-sky-11: color-mix(in oklch, oklch(0.84 0.19 var(--w-c-h-sky)), white 30%);
+    --w-c-sky-12: color-mix(in oklch, oklch(0.84 0.19 var(--w-c-h-sky)), white 45%);
+    --w-c-sky-13: color-mix(in oklch, oklch(0.84 0.19 var(--w-c-h-sky)), white 90%);
+    --w-c-sky-contrast: black;
+  }
+
+  [data-accent-color="sky"] {
+    --w-c-accent-1: var(--w-c-sky-1);
+    --w-c-accent-2: var(--w-c-sky-2);
+    --w-c-accent-3: var(--w-c-sky-3);
+    --w-c-accent-4: var(--w-c-sky-4);
+    --w-c-accent-5: var(--w-c-sky-5);
+    --w-c-accent-6: var(--w-c-sky-6);
+    --w-c-accent-7: var(--w-c-sky-7);
+    --w-c-accent-8: var(--w-c-sky-8);
+    --w-c-accent-9: var(--w-c-sky-9);
+    --w-c-accent-10: var(--w-c-sky-10);
+    --w-c-accent-11: var(--w-c-sky-11);
+    --w-c-accent-12: var(--w-c-sky-12);
+    --w-c-accent-13: var(--w-c-sky-13);
+    --w-c-accent-contrast: var(--w-c-sky-contrast);
+
+    &[data-mono="true"] {
+    }
   }
 }
 
@@ -185,6 +264,21 @@
   --color-accent-13: var(--w-c-accent-13);
   --color-accent-contrast: var(--w-c-accent-contrast);
 
+  --color-accent-g1: var(--w-c-accent-g1);
+  --color-accent-g2: var(--w-c-accent-g2);
+  --color-accent-g3: var(--w-c-accent-g3);
+  --color-accent-g4: var(--w-c-accent-g4);
+  --color-accent-g5: var(--w-c-accent-g5);
+  --color-accent-g6: var(--w-c-accent-g6);
+  --color-accent-g7: var(--w-c-accent-g7);
+  --color-accent-g8: var(--w-c-accent-g8);
+  --color-accent-g9: var(--w-c-accent-g9);
+  --color-accent-g10: var(--w-c-accent-g10);
+  --color-accent-g11: var(--w-c-accent-g11);
+  --color-accent-g12: var(--w-c-accent-g12);
+  --color-accent-g13: var(--w-c-accent-g13);
+  --color-accent-gcontrast: var(--w-c-accent-gcontrast);
+
   --color-amethyst-1: var(--w-c-amethyst-1);
   --color-amethyst-2: var(--w-c-amethyst-2);
   --color-amethyst-3: var(--w-c-amethyst-3);
@@ -199,6 +293,51 @@
   --color-amethyst-12: var(--w-c-amethyst-12);
   --color-amethyst-13: var(--w-c-amethyst-13);
   --color-amethyst-contrast: var(--w-c-amethyst-contrast);
+
+  --color-amethyst-g1: var(--w-c-amethyst-g1);
+  --color-amethyst-g2: var(--w-c-amethyst-g2);
+  --color-amethyst-g3: var(--w-c-amethyst-g3);
+  --color-amethyst-g4: var(--w-c-amethyst-g4);
+  --color-amethyst-g5: var(--w-c-amethyst-g5);
+  --color-amethyst-g6: var(--w-c-amethyst-g6);
+  --color-amethyst-g7: var(--w-c-amethyst-g7);
+  --color-amethyst-g8: var(--w-c-amethyst-g8);
+  --color-amethyst-g9: var(--w-c-amethyst-g9);
+  --color-amethyst-g10: var(--w-c-amethyst-g10);
+  --color-amethyst-g11: var(--w-c-amethyst-g11);
+  --color-amethyst-g12: var(--w-c-amethyst-g12);
+  --color-amethyst-g13: var(--w-c-amethyst-g13);
+  --color-amethyst-gcontrast: var(--w-c-amethyst-gcontrast);
+
+  --color-sky-1: var(--w-c-sky-1);
+  --color-sky-2: var(--w-c-sky-2);
+  --color-sky-3: var(--w-c-sky-3);
+  --color-sky-4: var(--w-c-sky-4);
+  --color-sky-5: var(--w-c-sky-5);
+  --color-sky-6: var(--w-c-sky-6);
+  --color-sky-7: var(--w-c-sky-7);
+  --color-sky-8: var(--w-c-sky-8);
+  --color-sky-9: var(--w-c-sky-9);
+  --color-sky-10: var(--w-c-sky-10);
+  --color-sky-11: var(--w-c-sky-11);
+  --color-sky-12: var(--w-c-sky-12);
+  --color-sky-13: var(--w-c-sky-13);
+  --color-sky-contrast: var(--w-c-sky-contrast);
+
+  --color-sky-g1: var(--w-c-sky-g1);
+  --color-sky-g2: var(--w-c-sky-g2);
+  --color-sky-g3: var(--w-c-sky-g3);
+  --color-sky-g4: var(--w-c-sky-g4);
+  --color-sky-g5: var(--w-c-sky-g5);
+  --color-sky-g6: var(--w-c-sky-g6);
+  --color-sky-g7: var(--w-c-sky-g7);
+  --color-sky-g8: var(--w-c-sky-g8);
+  --color-sky-g9: var(--w-c-sky-g9);
+  --color-sky-g10: var(--w-c-sky-g10);
+  --color-sky-g11: var(--w-c-sky-g11);
+  --color-sky-g12: var(--w-c-sky-g12);
+  --color-sky-g13: var(--w-c-sky-g13);
+  --color-sky-gcontrast: var(--w-c-sky-gcontrast);
 }
 
 @theme {
@@ -211,6 +350,16 @@
   --font-sans: var(--w-ff-sans);
   --font-serif: var(--w-ff-serif);
   --font-mono: var(--w-ff-mono);
+
+  --leading-1: var(--w-lh-1);
+  --leading-2: var(--w-lh-2);
+  --leading-3: var(--w-lh-3);
+  --leading-4: var(--w-lh-4);
+  --leading-5: var(--w-lh-5);
+  --leading-6: var(--w-lh-6);
+  --leading-7: var(--w-lh-7);
+  --leading-8: var(--w-lh-8);
+  --leading-9: var(--w-lh-9);
 
   --radius-1: var(--w-r-1);
   --radius-2: var(--w-r-2);

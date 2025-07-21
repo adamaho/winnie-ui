@@ -51,6 +51,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
     <html
       data-theme="dark"
       data-accent-color="amethyst"
+      data-mono="true"
       className="bg-accent-1"
     >
       <head>
