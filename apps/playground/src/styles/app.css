@@ -160,25 +160,6 @@
     --w-c-accent-g13: var(--w-c-amethyst-g13);
     --w-c-accent-g14: var(--w-c-amethyst-g14);
     --w-c-accent-contrast: var(--w-c-amethyst-gcontrast);
-
-    &[data-mono="true"],
-    [data-mono="true"] {
-      --w-c-accent-1: var(--w-c-amethyst-g1);
-      --w-c-accent-2: var(--w-c-amethyst-g2);
-      --w-c-accent-3: var(--w-c-amethyst-g3);
-      --w-c-accent-4: var(--w-c-amethyst-g4);
-      --w-c-accent-5: var(--w-c-amethyst-g5);
-      --w-c-accent-6: var(--w-c-amethyst-g6);
-      --w-c-accent-7: var(--w-c-amethyst-g7);
-      --w-c-accent-8: var(--w-c-amethyst-g8);
-      --w-c-accent-9: var(--w-c-amethyst-g9);
-      --w-c-accent-10: var(--w-c-amethyst-g10);
-      --w-c-accent-11: var(--w-c-amethyst-g11);
-      --w-c-accent-12: var(--w-c-amethyst-g12);
-      --w-c-accent-13: var(--w-c-amethyst-g13);
-      --w-c-accent-14: var(--w-c-amethyst-g14);
-      --w-c-accent-contrast: var(--w-c-amethyst-gcontrast);
-    }
   }
 }
 
