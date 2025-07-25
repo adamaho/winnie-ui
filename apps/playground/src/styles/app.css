@@ -95,34 +95,36 @@
   }
 
   [data-theme="dark"] {
-    --w-c-amethyst-1: color-mix(in oklch, oklch(0.45 0.15 var(--w-c-h-amethyst)), black 68%); /* app background 1 */
-    --w-c-amethyst-2: color-mix(in oklch, oklch(0.45 0.15 var(--w-c-h-amethyst)), black 63%); /* app background 2 */
-    --w-c-amethyst-3: color-mix(in oklch, oklch(0.45 0.15 var(--w-c-h-amethyst)), black 56%); /* surface background 1 */
-    --w-c-amethyst-4: color-mix(in oklch, oklch(0.45 0.15 var(--w-c-h-amethyst)), black 47%); /* surface background 2, surface hover */
-    --w-c-amethyst-5: color-mix(in oklch, oklch(0.45 0.15 var(--w-c-h-amethyst)), black 41%); /* surface background 3, surface pressed */
-    --w-c-amethyst-6: color-mix(in oklch, oklch(0.45 0.15 var(--w-c-h-amethyst)), black 39%); /* border-1, typically used on app background */
-    --w-c-amethyst-7: color-mix(in oklch, oklch(0.45 0.15 var(--w-c-h-amethyst)), black 25%); /* border-2, surface border for interactive components */
-    --w-c-amethyst-8: color-mix(in oklch, oklch(0.45 0.15 var(--w-c-h-amethyst)), black 18%); /* border-3, stronger border / focus rings */
-    --w-c-amethyst-9: oklch(0.45 0.15 var(--w-c-h-amethyst)); /* solid-1, buttons, chips, etc */
-    --w-c-amethyst-10: color-mix(in oklch, oklch(0.45 0.2 var(--w-c-h-amethyst)), white 10%); /* solid-2, button hover */
-    --w-c-amethyst-11: color-mix(in oklch, oklch(0.45 0.2 var(--w-c-h-amethyst)), white 20%); /* solid-3, button pressed */
-    --w-c-amethyst-12: color-mix(in oklch, oklch(0.45 0.2 var(--w-c-h-amethyst)), white 42%); /* text-subtle */
-    --w-c-amethyst-13: color-mix(in oklch, oklch(0.45 0.15 var(--w-c-h-amethyst)), white 90%); /* text */
+    --w-c-amethyst-1: oklch(0.124 0.048 var(--w-c-h-amethyst)); /* app background 1 */
+    --w-c-amethyst-2: oklch(0.1665 0.0555 var(--w-c-h-amethyst)); /* app background 2 */
+    --w-c-amethyst-3: oklch(0.198 0.066 var(--w-c-h-amethyst)); /* surface background 1 */
+    --w-c-amethyst-4: oklch(0.2385 0.0795 var(--w-c-h-amethyst)); /* surface hover */
+    --w-c-amethyst-5: oklch(0.2655 0.0885 var(--w-c-h-amethyst)); /* surface pressed */
+    --w-c-amethyst-6: oklch(0.32 0.09 var(--w-c-h-amethyst)); /* form borders */
+    --w-c-amethyst-7: oklch(0.36 0.09 var(--w-c-h-amethyst)); /* interactive borders */
+    --w-c-amethyst-8: oklch(0.4 0.12 var(--w-c-h-amethyst)); /* focus rings */
+    --w-c-amethyst-9: oklch(0.45 0.15 var(--w-c-h-amethyst)); /* button default */
+    --w-c-amethyst-10: oklch(0.5 0.18 var(--w-c-h-amethyst)); /* button hover */
+    --w-c-amethyst-11: oklch(0.55 0.2 var(--w-c-h-amethyst)); /* button pressed */
+    --w-c-amethyst-12: oklch(0.78 0.1 var(--w-c-h-amethyst)); /* subtle text */
+    --w-c-amethyst-13: oklch(0.88 0.06 var(--w-c-h-amethyst)); /* secondary text */
+    --w-c-amethyst-14: oklch(0.95 0.01 var(--w-c-h-amethyst)); /* primary text */
     --w-c-amethyst-contrast: white;
 
-    --w-c-amethyst-g1: color-mix(in oklch, oklch(0.45 0.028 var(--w-c-h-amethyst)), black 68%);
-    --w-c-amethyst-g2: color-mix(in oklch, oklch(0.45 0.028 var(--w-c-h-amethyst)), black 63%);
-    --w-c-amethyst-g3: color-mix(in oklch, oklch(0.45 0.028 var(--w-c-h-amethyst)), black 56%);
-    --w-c-amethyst-g4: color-mix(in oklch, oklch(0.45 0.028 var(--w-c-h-amethyst)), black 47%);
-    --w-c-amethyst-g5: color-mix(in oklch, oklch(0.45 0.028 var(--w-c-h-amethyst)), black 41%);
-    --w-c-amethyst-g6: color-mix(in oklch, oklch(0.45 0.028 var(--w-c-h-amethyst)), black 39%);
-    --w-c-amethyst-g7: color-mix(in oklch, oklch(0.45 0.028 var(--w-c-h-amethyst)), black 25%);
-    --w-c-amethyst-g8: color-mix(in oklch, oklch(0.45 0.028 var(--w-c-h-amethyst)), black 18%);
-    --w-c-amethyst-g9: oklch(0.45 0.028 var(--w-c-h-amethyst));
-    --w-c-amethyst-g10: color-mix(in oklch, oklch(0.45 0.028 var(--w-c-h-amethyst)), white 10%);
-    --w-c-amethyst-g11: color-mix(in oklch, oklch(0.45 0.028 var(--w-c-h-amethyst)), white 20%);
-    --w-c-amethyst-g12: color-mix(in oklch, oklch(0.45 0.028 var(--w-c-h-amethyst)), white 62%);
-    --w-c-amethyst-g13: color-mix(in oklch, oklch(0.45 0.028 var(--w-c-h-amethyst)), white 90%);
+    --w-c-amethyst-g1: oklch(0.144 0.024 var(--w-c-h-amethyst)); /* app background 1 */
+    --w-c-amethyst-g2: oklch(0.1665 0.024 var(--w-c-h-amethyst)); /* app background 2 */
+    --w-c-amethyst-g3: oklch(0.198 0.024 var(--w-c-h-amethyst)); /* surface background 1 */
+    --w-c-amethyst-g4: oklch(0.2385 0.024 var(--w-c-h-amethyst)); /* surface hover */
+    --w-c-amethyst-g5: oklch(0.2655 0.024 var(--w-c-h-amethyst)); /* surface pressed */
+    --w-c-amethyst-g6: oklch(0.32 0.024 var(--w-c-h-amethyst)); /* form borders */
+    --w-c-amethyst-g7: oklch(0.36 0.024 var(--w-c-h-amethyst)); /* interactive borders */
+    --w-c-amethyst-g8: oklch(0.4 0.024 var(--w-c-h-amethyst)); /* focus rings */
+    --w-c-amethyst-g9: oklch(0.45 0.024 var(--w-c-h-amethyst)); /* button default */
+    --w-c-amethyst-g10: oklch(0.5 0.024 var(--w-c-h-amethyst)); /* button hover */
+    --w-c-amethyst-g11: oklch(0.55 0.024 var(--w-c-h-amethyst)); /* button pressed */
+    --w-c-amethyst-g12: oklch(0.78 0.024 var(--w-c-h-amethyst)); /* subtle text */
+    --w-c-amethyst-g13: oklch(0.88 0.024 var(--w-c-h-amethyst)); /* secondary text */
+    --w-c-amethyst-g14: oklch(0.95 0.024 var(--w-c-h-amethyst)); /* primary text */
     --w-c-amethyst-gcontrast: white;
   }
 
@@ -140,9 +142,27 @@
     --w-c-accent-11: var(--w-c-amethyst-11);
     --w-c-accent-12: var(--w-c-amethyst-12);
     --w-c-accent-13: var(--w-c-amethyst-13);
+    --w-c-accent-14: var(--w-c-amethyst-14);
     --w-c-accent-contrast: var(--w-c-amethyst-contrast);
 
-    &[data-mono="true"] {
+    --w-c-accent-g1: var(--w-c-amethyst-g1);
+    --w-c-accent-g2: var(--w-c-amethyst-g2);
+    --w-c-accent-g3: var(--w-c-amethyst-g3);
+    --w-c-accent-g4: var(--w-c-amethyst-g4);
+    --w-c-accent-g5: var(--w-c-amethyst-g5);
+    --w-c-accent-g6: var(--w-c-amethyst-g6);
+    --w-c-accent-g7: var(--w-c-amethyst-g7);
+    --w-c-accent-g8: var(--w-c-amethyst-g8);
+    --w-c-accent-g9: var(--w-c-amethyst-g9);
+    --w-c-accent-g10: var(--w-c-amethyst-g10);
+    --w-c-accent-g11: var(--w-c-amethyst-g11);
+    --w-c-accent-g12: var(--w-c-amethyst-g12);
+    --w-c-accent-g13: var(--w-c-amethyst-g13);
+    --w-c-accent-g14: var(--w-c-amethyst-g14);
+    --w-c-accent-contrast: var(--w-c-amethyst-gcontrast);
+
+    &[data-mono="true"],
+    [data-mono="true"] {
       --w-c-accent-1: var(--w-c-amethyst-g1);
       --w-c-accent-2: var(--w-c-amethyst-g2);
       --w-c-accent-3: var(--w-c-amethyst-g3);
@@ -156,50 +176,8 @@
       --w-c-accent-11: var(--w-c-amethyst-g11);
       --w-c-accent-12: var(--w-c-amethyst-g12);
       --w-c-accent-13: var(--w-c-amethyst-g13);
+      --w-c-accent-14: var(--w-c-amethyst-g14);
       --w-c-accent-contrast: var(--w-c-amethyst-gcontrast);
-    }
-  }
-}
-
-@layer winnie.color.sky {
-  :root {
-    --w-c-h-sky: 262;
-  }
-
-  [data-theme="dark"] {
-    --w-c-sky-1: color-mix(in oklch, oklch(0.84 0.19 var(--w-c-h-sky)), black 87%);
-    --w-c-sky-2: color-mix(in oklch, oklch(0.84 0.19 var(--w-c-h-sky)), black 83%);
-    --w-c-sky-3: color-mix(in oklch, oklch(0.84 0.19 var(--w-c-h-sky)), black 76%);
-    --w-c-sky-4: color-mix(in oklch, oklch(0.84 0.19 var(--w-c-h-sky)), black 71%);
-    --w-c-sky-5: color-mix(in oklch, oklch(0.84 0.19 var(--w-c-h-sky)), black 65%);
-    --w-c-sky-6: color-mix(in oklch, oklch(0.84 0.19 var(--w-c-h-sky)), black 58%);
-    --w-c-sky-7: color-mix(in oklch, oklch(0.84 0.19 var(--w-c-h-sky)), black 53%);
-    --w-c-sky-8: color-mix(in oklch, oklch(0.84 0.19 var(--w-c-h-sky)), black 47%);
-    --w-c-sky-9: oklch(0.84 0.19 var(--w-c-h-sky));
-    --w-c-sky-10: color-mix(in oklch, oklch(0.84 0.19 var(--w-c-h-sky)), white 20%);
-    --w-c-sky-11: color-mix(in oklch, oklch(0.84 0.19 var(--w-c-h-sky)), white 30%);
-    --w-c-sky-12: color-mix(in oklch, oklch(0.84 0.19 var(--w-c-h-sky)), white 45%);
-    --w-c-sky-13: color-mix(in oklch, oklch(0.84 0.19 var(--w-c-h-sky)), white 90%);
-    --w-c-sky-contrast: black;
-  }
-
-  [data-accent-color="sky"] {
-    --w-c-accent-1: var(--w-c-sky-1);
-    --w-c-accent-2: var(--w-c-sky-2);
-    --w-c-accent-3: var(--w-c-sky-3);
-    --w-c-accent-4: var(--w-c-sky-4);
-    --w-c-accent-5: var(--w-c-sky-5);
-    --w-c-accent-6: var(--w-c-sky-6);
-    --w-c-accent-7: var(--w-c-sky-7);
-    --w-c-accent-8: var(--w-c-sky-8);
-    --w-c-accent-9: var(--w-c-sky-9);
-    --w-c-accent-10: var(--w-c-sky-10);
-    --w-c-accent-11: var(--w-c-sky-11);
-    --w-c-accent-12: var(--w-c-sky-12);
-    --w-c-accent-13: var(--w-c-sky-13);
-    --w-c-accent-contrast: var(--w-c-sky-contrast);
-
-    &[data-mono="true"] {
     }
   }
 }
@@ -262,6 +240,7 @@
   --color-accent-11: var(--w-c-accent-11);
   --color-accent-12: var(--w-c-accent-12);
   --color-accent-13: var(--w-c-accent-13);
+  --color-accent-14: var(--w-c-accent-14);
   --color-accent-contrast: var(--w-c-accent-contrast);
 
   --color-accent-g1: var(--w-c-accent-g1);
@@ -277,6 +256,7 @@
   --color-accent-g11: var(--w-c-accent-g11);
   --color-accent-g12: var(--w-c-accent-g12);
   --color-accent-g13: var(--w-c-accent-g13);
+  --color-accent-g14: var(--w-c-accent-g14);
   --color-accent-gcontrast: var(--w-c-accent-gcontrast);
 
   --color-amethyst-1: var(--w-c-amethyst-1);
@@ -292,6 +272,7 @@
   --color-amethyst-11: var(--w-c-amethyst-11);
   --color-amethyst-12: var(--w-c-amethyst-12);
   --color-amethyst-13: var(--w-c-amethyst-13);
+  --color-amethyst-14: var(--w-c-amethyst-14);
   --color-amethyst-contrast: var(--w-c-amethyst-contrast);
 
   --color-amethyst-g1: var(--w-c-amethyst-g1);
@@ -307,37 +288,8 @@
   --color-amethyst-g11: var(--w-c-amethyst-g11);
   --color-amethyst-g12: var(--w-c-amethyst-g12);
   --color-amethyst-g13: var(--w-c-amethyst-g13);
+  --color-amethyst-g14: var(--w-c-amethyst-g14);
   --color-amethyst-gcontrast: var(--w-c-amethyst-gcontrast);
-
-  --color-sky-1: var(--w-c-sky-1);
-  --color-sky-2: var(--w-c-sky-2);
-  --color-sky-3: var(--w-c-sky-3);
-  --color-sky-4: var(--w-c-sky-4);
-  --color-sky-5: var(--w-c-sky-5);
-  --color-sky-6: var(--w-c-sky-6);
-  --color-sky-7: var(--w-c-sky-7);
-  --color-sky-8: var(--w-c-sky-8);
-  --color-sky-9: var(--w-c-sky-9);
-  --color-sky-10: var(--w-c-sky-10);
-  --color-sky-11: var(--w-c-sky-11);
-  --color-sky-12: var(--w-c-sky-12);
-  --color-sky-13: var(--w-c-sky-13);
-  --color-sky-contrast: var(--w-c-sky-contrast);
-
-  --color-sky-g1: var(--w-c-sky-g1);
-  --color-sky-g2: var(--w-c-sky-g2);
-  --color-sky-g3: var(--w-c-sky-g3);
-  --color-sky-g4: var(--w-c-sky-g4);
-  --color-sky-g5: var(--w-c-sky-g5);
-  --color-sky-g6: var(--w-c-sky-g6);
-  --color-sky-g7: var(--w-c-sky-g7);
-  --color-sky-g8: var(--w-c-sky-g8);
-  --color-sky-g9: var(--w-c-sky-g9);
-  --color-sky-g10: var(--w-c-sky-g10);
-  --color-sky-g11: var(--w-c-sky-g11);
-  --color-sky-g12: var(--w-c-sky-g12);
-  --color-sky-g13: var(--w-c-sky-g13);
-  --color-sky-gcontrast: var(--w-c-sky-gcontrast);
 }
 
 @theme {

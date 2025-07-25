@@ -52,7 +52,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       data-theme="dark"
       data-accent-color="amethyst"
       data-mono="true"
-      className="bg-accent-1"
+      className="bg-black"
     >
       <head>
         <HeadContent />

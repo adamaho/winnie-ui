@@ -1,7 +1,7 @@
 @layer color {
   [data-theme="dark"] {
     --w-c-amethyst-1: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-amethyst)), black 74%);
-    --w-c-amethyst-2: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-amethyst)), black 66%);
+    --w-c-amethyst-2: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-amethyst)), black 67%);
     --w-c-amethyst-3: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-amethyst)), black 58%);
     --w-c-amethyst-4: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-amethyst)), black 50%);
     --w-c-amethyst-5: color-mix(in oklch, oklch(var(--w-c-l-dim) 0.15 var(--w-c-h-amethyst)), black 41%);

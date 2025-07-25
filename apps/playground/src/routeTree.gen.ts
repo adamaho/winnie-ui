@@ -13,8 +13,8 @@ import { Route as SpaceRouteImport } from './routes/space'
 import { Route as PlaygroundRouteImport } from './routes/playground'
 import { Route as LineHeightRouteImport } from './routes/line-height'
 import { Route as FontWeightRouteImport } from './routes/font-weight'
-import { Route as FontSizeRouteImport } from './routes/font-size'
 import { Route as FontFamilyRouteImport } from './routes/font-family'
+import { Route as DemoRouteImport } from './routes/demo'
 import { Route as ColorRouteImport } from './routes/color'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -38,14 +38,14 @@ const FontWeightRoute = FontWeightRouteImport.update({
   path: '/font-weight',
   getParentRoute: () => rootRouteImport,
 } as any)
-const FontSizeRoute = FontSizeRouteImport.update({
-  id: '/font-size',
-  path: '/font-size',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const FontFamilyRoute = FontFamilyRouteImport.update({
   id: '/font-family',
   path: '/font-family',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DemoRoute = DemoRouteImport.update({
+  id: '/demo',
+  path: '/demo',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ColorRoute = ColorRouteImport.update({
@@ -62,8 +62,8 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/color': typeof ColorRoute
+  '/demo': typeof DemoRoute
   '/font-family': typeof FontFamilyRoute
-  '/font-size': typeof FontSizeRoute
   '/font-weight': typeof FontWeightRoute
   '/line-height': typeof LineHeightRoute
   '/playground': typeof PlaygroundRoute
@@ -72,8 +72,8 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/color': typeof ColorRoute
+  '/demo': typeof DemoRoute
   '/font-family': typeof FontFamilyRoute
-  '/font-size': typeof FontSizeRoute
   '/font-weight': typeof FontWeightRoute
   '/line-height': typeof LineHeightRoute
   '/playground': typeof PlaygroundRoute
@@ -83,8 +83,8 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/color': typeof ColorRoute
+  '/demo': typeof DemoRoute
   '/font-family': typeof FontFamilyRoute
-  '/font-size': typeof FontSizeRoute
   '/font-weight': typeof FontWeightRoute
   '/line-height': typeof LineHeightRoute
   '/playground': typeof PlaygroundRoute
@@ -95,8 +95,8 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/color'
+    | '/demo'
     | '/font-family'
-    | '/font-size'
     | '/font-weight'
     | '/line-height'
     | '/playground'
@@ -105,8 +105,8 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/color'
+    | '/demo'
     | '/font-family'
-    | '/font-size'
     | '/font-weight'
     | '/line-height'
     | '/playground'
@@ -115,8 +115,8 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/color'
+    | '/demo'
     | '/font-family'
-    | '/font-size'
     | '/font-weight'
     | '/line-height'
     | '/playground'
@@ -126,8 +126,8 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ColorRoute: typeof ColorRoute
+  DemoRoute: typeof DemoRoute
   FontFamilyRoute: typeof FontFamilyRoute
-  FontSizeRoute: typeof FontSizeRoute
   FontWeightRoute: typeof FontWeightRoute
   LineHeightRoute: typeof LineHeightRoute
   PlaygroundRoute: typeof PlaygroundRoute
@@ -164,18 +164,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FontWeightRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/font-size': {
-      id: '/font-size'
-      path: '/font-size'
-      fullPath: '/font-size'
-      preLoaderRoute: typeof FontSizeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/font-family': {
       id: '/font-family'
       path: '/font-family'
       fullPath: '/font-family'
       preLoaderRoute: typeof FontFamilyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/demo': {
+      id: '/demo'
+      path: '/demo'
+      fullPath: '/demo'
+      preLoaderRoute: typeof DemoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/color': {
@@ -198,8 +198,8 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ColorRoute: ColorRoute,
+  DemoRoute: DemoRoute,
   FontFamilyRoute: FontFamilyRoute,
-  FontSizeRoute: FontSizeRoute,
   FontWeightRoute: FontWeightRoute,
   LineHeightRoute: LineHeightRoute,
   PlaygroundRoute: PlaygroundRoute,
