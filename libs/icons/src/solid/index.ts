@@ -1,6 +1,7 @@
 export { ArrowBoxLeft } from "./arrow-box-left";
 export { ArrowTriangleRight } from "./arrow-triangle-right";
 export { BarsThree } from "./bars-three";
+export { Bell2 } from "./bell-2";
 export { BooleanGroupSubtract } from "./boolean-group-subtract";
 export { ChainLink4 } from "./chain-link-4";
 export { Checkmark } from "./checkmark";

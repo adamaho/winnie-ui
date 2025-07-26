@@ -1,4 +1,4 @@
-import { type ChangeEvent } from "react";
+import { Bell2, People, SettingsGear3 } from "@winnie-ui/icons/react/solid";
 
 import { createFileRoute } from "@tanstack/react-router";
 
@@ -15,86 +15,144 @@ function RouteComponent() {
     htmlEl.setAttribute("data-accent-color", color);
   };
 
+  /**
+   * Sets the monochrome attribute changing the colors just the single accent color
+   */
+  const handleSetMonochrome = () => {
+    const htmlEl = document.querySelector("html")!;
+    htmlEl.setAttribute("data-mono", "");
+    htmlEl.removeAttribute("data-greyscale");
+  };
+
+  /**
+   * Sets the greyscale attribute changing the colors just the single grey accent color
+   */
+  const handleSetGreyscale = () => {
+    const htmlEl = document.querySelector("html")!;
+    htmlEl.setAttribute("data-greyscale", "");
+    htmlEl.removeAttribute("data-mono");
+  };
+
+  /**
+   * Removes the data-mono and data-greyscale attributes
+   */
+  const handleSetMixed = () => {
+    const htmlEl = document.querySelector("html")!;
+    htmlEl.removeAttribute("data-mono");
+    htmlEl.removeAttribute("data-greyscale");
+  };
+
   return (
     <div className="grid h-full h-screen grid-rows-[54px_1fr]">
-      <header className="flex items-center justify-center gap-2"></header>
+      <header className="flex items-center justify-center gap-2">
+        <button onClick={handleSetMonochrome}>monochrome</button>
+        <button onClick={handleSetGreyscale}>greyscale</button>
+        <button onClick={handleSetMixed}>mixed</button>
+      </header>
       <main className="grid grid-cols-[auto_1fr] gap-1 p-1">
-        <div className="grid grid-cols-[auto_repeat(14,28px)] grid-rows-[repeat(2,28px)] gap-1">
-          <div
-            className="col-span-full grid grid-cols-subgrid gap-1"
-            onClick={() => handleSetAccentColor("amethyst")}
-          >
-            <span
-              className="text-1 text-accent-g12 mr-3 self-center font-mono"
-              data-mono="true"
+        <div>
+          <div className="grid grid-cols-[auto_repeat(13,28px)] grid-rows-[auto_repeat(2,28px)] gap-1">
+            <div className="col-span-full grid grid-cols-subgrid justify-items-center gap-1">
+              <span className="text-1 text-accent-g12 mr-3 font-mono"></span>
+              <span className="text-1 text-accent-g12 font-mono">1</span>
+              <span className="text-1 text-accent-g12 font-mono">2</span>
+              <span className="text-1 text-accent-g12 font-mono">3</span>
+              <span className="text-1 text-accent-g12 font-mono">4</span>
+              <span className="text-1 text-accent-g12 font-mono">5</span>
+              <span className="text-1 text-accent-g12 font-mono">6</span>
+              <span className="text-1 text-accent-g12 font-mono">7</span>
+              <span className="text-1 text-accent-g12 font-mono">8</span>
+              <span className="text-1 text-accent-g12 font-mono">9</span>
+              <span className="text-1 text-accent-g12 font-mono">10</span>
+              <span className="text-1 text-accent-g12 font-mono">11</span>
+              <span className="text-1 text-accent-g12 font-mono">12</span>
+              <span className="text-1 text-accent-g12 font-mono">13</span>
+            </div>
+            <div
+              className="col-span-full grid grid-cols-subgrid gap-1"
+              onClick={() => handleSetAccentColor("amethyst")}
             >
-              amethyst
-            </span>
-            <div className="bg-amethyst-1" />
-            <div className="bg-amethyst-2" />
-            <div className="bg-amethyst-3" />
-            <div className="bg-amethyst-4" />
-            <div className="bg-amethyst-5" />
-            <div className="bg-amethyst-6" />
-            <div className="bg-amethyst-7" />
-            <div className="bg-amethyst-8" />
-            <div className="bg-amethyst-9" />
-            <div className="bg-amethyst-10" />
-            <div className="bg-amethyst-11" />
-            <div className="bg-amethyst-12" />
-            <div className="bg-amethyst-13" />
-            <div className="bg-amethyst-14" />
-          </div>
-          <div className="col-span-full grid grid-cols-subgrid">
-            <span className="text-1 text-accent-g12 mr-3 self-center font-mono">
-              amethyst grey
-            </span>
-            <div className="bg-amethyst-g1" />
-            <div className="bg-amethyst-g2" />
-            <div className="bg-amethyst-g3" />
-            <div className="bg-amethyst-g4" />
-            <div className="bg-amethyst-g5" />
-            <div className="bg-amethyst-g6" />
-            <div className="bg-amethyst-g7" />
-            <div className="bg-amethyst-g8" />
-            <div className="bg-amethyst-g9" />
-            <div className="bg-amethyst-g10" />
-            <div className="bg-amethyst-g11" />
-            <div className="bg-amethyst-g12" />
-            <div className="bg-amethyst-g13" />
-            <div className="bg-amethyst-g14" />
+              <span
+                className="text-1 text-accent-g12 mr-3 self-center font-mono"
+                data-mono="true"
+              >
+                amethyst
+              </span>
+              <div className="bg-amethyst-1" />
+              <div className="bg-amethyst-2" />
+              <div className="bg-amethyst-3" />
+              <div className="bg-amethyst-4" />
+              <div className="bg-amethyst-5" />
+              <div className="bg-amethyst-6" />
+              <div className="bg-amethyst-7" />
+              <div className="bg-amethyst-8" />
+              <div className="bg-amethyst-9" />
+              <div className="bg-amethyst-10" />
+              <div className="bg-amethyst-11" />
+              <div className="bg-amethyst-12" />
+              <div className="bg-amethyst-13" />
+            </div>
+            <div className="col-span-full grid grid-cols-subgrid">
+              <span className="text-1 text-accent-g12 mr-3 self-center font-mono">
+                amethyst grey
+              </span>
+              <div className="bg-amethyst-g1" />
+              <div className="bg-amethyst-g2" />
+              <div className="bg-amethyst-g3" />
+              <div className="bg-amethyst-g4" />
+              <div className="bg-amethyst-g5" />
+              <div className="bg-amethyst-g6" />
+              <div className="bg-amethyst-g7" />
+              <div className="bg-amethyst-g8" />
+              <div className="bg-amethyst-g9" />
+              <div className="bg-amethyst-g10" />
+              <div className="bg-amethyst-g11" />
+              <div className="bg-amethyst-g12" />
+              <div className="bg-amethyst-g13" />
+            </div>
           </div>
         </div>
-        <div className="bg-accent-g1 border-accent-3 grid grid-rows-[54px_1fr] border">
-          <header className="bg-accent-g2 border-accent-4 flex items-center border-b px-4">
+        <div className="bg-accent-g1 border-accent-g3 grid grid-rows-[54px_1fr] border">
+          <header className="bg-accent-g2 border-accent-g4 flex items-center border-b px-4">
             <div className="flex items-center gap-1">
-              <span
-                className="bg-linear-to-br from-accent-9 to-accent-12 rounded-round mr-1 h-[24px] w-[24px]"
-                data-accent-color="amethyst"
-              />
-              <span className="text-2 text-accent-g14 font-medium">Winnie</span>
-              <span className="text-1 text-accent-g12">/</span>
-              <span className="text-2 text-accent-g13">Colors</span>
+              <span className="bg-linear-to-br from-accent-9 to-accent-12 rounded-round mr-1 h-[24px] w-[24px]" />
+              <span className="text-2 text-accent-g13 font-medium">Winnie</span>
+              <span className="text-3 text-accent-g12 mx-1">/</span>
+              <span className="text-2 text-accent-g12">Colors</span>
+            </div>
+            <div className="flex flex-1 items-center justify-end">
+              <button
+                data-component="button"
+                className="hover:bg-accent-3 active:bg-accent-4 text-accent-g12"
+              >
+                <Bell2 data-slot="icon" />
+              </button>
+              <button
+                data-component="button"
+                className="hover:bg-accent-3 active:bg-accent-4 text-accent-g12"
+              >
+                <SettingsGear3 data-slot="icon" />
+              </button>
             </div>
           </header>
           <div className="mx-auto w-full max-w-[70ch]">
             <div className="overflow-x-auto p-4">
               <table className="grid table-auto grid-cols-[auto_auto_1fr]">
                 <thead className="col-span-full grid grid-cols-subgrid">
-                  <tr className="border-accent-6 col-span-full grid grid-cols-subgrid border-b">
-                    <th className="text-1 text-accent-g14 p-3 text-left font-mono">
+                  <tr className="border-accent-g6 col-span-full grid grid-cols-subgrid border-b">
+                    <th className="text-1 text-accent-g13 p-3 text-left font-mono">
                       variable
                     </th>
-                    <th className="text-1 text-accent-g14 p-3 text-left font-mono">
+                    <th className="text-1 text-accent-g13 p-3 text-left font-mono">
                       tailwind
                     </th>
-                    <th className="text-1 text-accent-g14 p-3 text-left font-mono">
+                    <th className="text-1 text-accent-g13 p-3 text-left font-mono">
                       value
                     </th>
                   </tr>
                 </thead>
                 <tbody className="col-span-full grid grid-cols-subgrid">
-                  <tr className="border-accent-4 col-span-full grid grid-cols-subgrid border-b">
+                  <tr className="border-accent-g4 col-span-full grid grid-cols-subgrid border-b">
                     <td className="text-1 text-accent-12 p-3 font-mono">
                       w-fs-1
                     </td>
@@ -105,7 +163,7 @@ function RouteComponent() {
                       calc(11px * var(--w-scale, 1))
                     </td>
                   </tr>
-                  <tr className="border-accent-4 col-span-full grid grid-cols-subgrid border-b">
+                  <tr className="border-accent-g4 col-span-full grid grid-cols-subgrid border-b">
                     <td className="text-1 text-accent-12 p-3 font-mono">
                       w-fs-2
                     </td>
@@ -116,7 +174,7 @@ function RouteComponent() {
                       calc(13px * var(--w-scale, 1))
                     </td>
                   </tr>
-                  <tr className="border-accent-4 col-span-full grid grid-cols-subgrid border-b">
+                  <tr className="border-accent-g4 col-span-full grid grid-cols-subgrid border-b">
                     <td className="text-1 text-accent-12 p-3 font-mono">
                       w-fs-3
                     </td>
@@ -127,7 +185,7 @@ function RouteComponent() {
                       calc(15px * var(--w-scale, 1))
                     </td>
                   </tr>
-                  <tr className="border-accent-4 col-span-full grid grid-cols-subgrid border-b">
+                  <tr className="border-accent-g4 col-span-full grid grid-cols-subgrid border-b">
                     <td className="text-1 text-accent-12 p-3 font-mono">
                       w-fs-4
                     </td>
@@ -138,7 +196,7 @@ function RouteComponent() {
                       calc(18px * var(--w-scale, 1))
                     </td>
                   </tr>
-                  <tr className="border-accent-4 col-span-full grid grid-cols-subgrid border-b">
+                  <tr className="border-accent-g4 col-span-full grid grid-cols-subgrid border-b">
                     <td className="text-1 text-accent-12 p-3 font-mono">
                       w-fs-5
                     </td>
@@ -149,7 +207,7 @@ function RouteComponent() {
                       calc(22px * var(--w-scale, 1))
                     </td>
                   </tr>
-                  <tr className="border-accent-4 col-span-full grid grid-cols-subgrid border-b">
+                  <tr className="border-accent-g4 col-span-full grid grid-cols-subgrid border-b">
                     <td className="text-1 text-accent-12 p-3 font-mono">
                       w-fs-6
                     </td>
@@ -160,7 +218,7 @@ function RouteComponent() {
                       calc(28px * var(--w-scale, 1))
                     </td>
                   </tr>
-                  <tr className="border-accent-4 col-span-full grid grid-cols-subgrid border-b">
+                  <tr className="border-accent-g4 col-span-full grid grid-cols-subgrid border-b">
                     <td className="text-1 text-accent-12 p-3 font-mono">
                       w-fs-7
                     </td>
@@ -171,11 +229,8 @@ function RouteComponent() {
                       calc(32px * var(--w-scale, 1))
                     </td>
                   </tr>
-                  <tr className="border-accent-6 col-span-full grid grid-cols-subgrid border-b">
-                    <td
-                      className="text-1 text-accent-12 p-3 font-mono"
-                      data-accent-color="amethyst"
-                    >
+                  <tr className="border-accent-g6 col-span-full grid grid-cols-subgrid border-b">
+                    <td className="text-1 text-accent-12 p-3 font-mono">
                       w-fs-8
                     </td>
                     <td className="text-1 text-accent-g12 p-3 font-mono">
