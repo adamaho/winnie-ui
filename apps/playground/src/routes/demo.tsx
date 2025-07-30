@@ -1,3 +1,4 @@
+import { MagnifyingGlass } from "@winnie-ui/icons/react/line";
 import { Bell2, People, SettingsGear3 } from "@winnie-ui/icons/react/solid";
 
 import { createFileRoute } from "@tanstack/react-router";
@@ -18,9 +19,9 @@ function RouteComponent() {
   /**
    * Sets the monochrome attribute changing the colors just the single accent color
    */
-  const handleSetMonochrome = () => {
+  const handleSetChromatic = () => {
     const htmlEl = document.querySelector("html")!;
-    htmlEl.setAttribute("data-mono", "");
+    htmlEl.setAttribute("data-chromatic", "");
     htmlEl.removeAttribute("data-greyscale");
   };
 
@@ -30,7 +31,7 @@ function RouteComponent() {
   const handleSetGreyscale = () => {
     const htmlEl = document.querySelector("html")!;
     htmlEl.setAttribute("data-greyscale", "");
-    htmlEl.removeAttribute("data-mono");
+    htmlEl.removeAttribute("data-chromatic");
   };
 
   /**
@@ -38,21 +39,21 @@ function RouteComponent() {
    */
   const handleSetMixed = () => {
     const htmlEl = document.querySelector("html")!;
-    htmlEl.removeAttribute("data-mono");
+    htmlEl.removeAttribute("data-chromatic");
     htmlEl.removeAttribute("data-greyscale");
   };
 
   return (
     <div className="grid h-full h-screen grid-rows-[54px_1fr]">
       <header className="flex items-center justify-center gap-2">
-        <button onClick={handleSetMonochrome}>monochrome</button>
+        <button onClick={handleSetChromatic}>chromatic</button>
         <button onClick={handleSetGreyscale}>greyscale</button>
         <button onClick={handleSetMixed}>mixed</button>
       </header>
       <main className="grid grid-cols-[auto_1fr] gap-1 p-1">
         <div>
-          <div className="grid grid-cols-[auto_repeat(13,28px)] grid-rows-[auto_repeat(2,28px)] gap-1">
-            <div className="col-span-full grid grid-cols-subgrid justify-items-center gap-1">
+          <div className="grid grid-cols-[auto_repeat(13,28px)] grid-rows-[auto_repeat(2,28px)] gap-[2px]">
+            <div className="col-span-full grid grid-cols-subgrid justify-items-center gap-[2px]">
               <span className="text-1 text-accent-g12 mr-3 font-mono"></span>
               <span className="text-1 text-accent-g12 font-mono">1</span>
               <span className="text-1 text-accent-g12 font-mono">2</span>
@@ -69,11 +70,11 @@ function RouteComponent() {
               <span className="text-1 text-accent-g12 font-mono">13</span>
             </div>
             <div
-              className="col-span-full grid grid-cols-subgrid gap-1"
+              className="col-span-full grid grid-cols-subgrid gap-[2px]"
               onClick={() => handleSetAccentColor("amethyst")}
             >
               <span
-                className="text-1 text-accent-g12 mr-3 self-center font-mono"
+                className="text-1 text-accent-g12 mr-3 font-mono"
                 data-mono="true"
               >
                 amethyst
@@ -92,7 +93,10 @@ function RouteComponent() {
               <div className="bg-amethyst-12" />
               <div className="bg-amethyst-13" />
             </div>
-            <div className="col-span-full grid grid-cols-subgrid">
+            <div
+              className="col-span-full grid grid-cols-subgrid gap-[2px]"
+              onClick={() => handleSetAccentColor("amethyst")}
+            >
               <span className="text-1 text-accent-g12 mr-3 self-center font-mono">
                 amethyst grey
               </span>
@@ -112,28 +116,68 @@ function RouteComponent() {
             </div>
           </div>
         </div>
-        <div className="bg-accent-g1 border-accent-g3 grid grid-rows-[54px_1fr] border">
-          <header className="bg-accent-g2 border-accent-g4 flex items-center border-b px-4">
-            <div className="flex items-center gap-1">
-              <span className="bg-linear-to-br from-accent-9 to-accent-12 rounded-round mr-1 h-[24px] w-[24px]" />
-              <span className="text-2 text-accent-g13 font-medium">Winnie</span>
-              <span className="text-3 text-accent-g12 mx-1">/</span>
-              <span className="text-2 text-accent-g12">Colors</span>
+        <div className="bg-accent-g1 border-accent-g3 grid grid-rows-[100px_1fr] border">
+          <header className="bg-accent-g2 border-accent-g4 flex flex-col justify-between border-b px-3 pt-2">
+            <div className="flex items-center">
+              <div className="flex items-center gap-1">
+                <span className="bg-linear-to-br from-accent-9 to-accent-12 rounded-round mr-1 h-[24px] w-[24px]" />
+                <span className="text-2 text-accent-g13 font-medium">
+                  Winnie
+                </span>
+                <span className="text-3 text-accent-g12 mx-1">/</span>
+                <span className="text-2 text-accent-g12">Colors</span>
+              </div>
+              <div className="flex flex-1 items-center justify-end">
+                <div
+                  data-component="input-group"
+                  data-size="sm"
+                  className="border-accent-g5 bg-accent-g3 focus-within:border-accent-8 focus-within:outline-accent-8 mr-2 max-w-[200px] border focus-within:border-transparent focus-within:outline-2 focus-within:-outline-offset-2"
+                >
+                  <MagnifyingGlass data-slot="icon" />
+                  <input
+                    data-slot="input"
+                    placeholder="Search..."
+                    className="focus:outline-none"
+                  />
+                  <kbd data-slot="shortcut">
+                    <kbd
+                      data-component="kbd"
+                      className="bg-accent-g4 border-accent-g5 border font-sans"
+                    >
+                      ⌘
+                    </kbd>
+                    <kbd
+                      data-component="kbd"
+                      className="bg-accent-g4 border-accent-g5 border font-sans"
+                    >
+                      K
+                    </kbd>
+                  </kbd>
+                </div>
+                <button
+                  data-component="button"
+                  className="hover:bg-accent-g3 active:bg-accent-g4 text-accent-g12"
+                >
+                  <Bell2 data-slot="icon" />
+                </button>
+                <button
+                  data-component="button"
+                  className="hover:bg-accent-g3 active:bg-accent-g4 text-accent-g12"
+                >
+                  <SettingsGear3 data-slot="icon" />
+                </button>
+                <button
+                  data-component="button"
+                  className="hover:bg-accent-g3 active:bg-accent-g4"
+                >
+                  <div
+                    data-slot="icon"
+                    className="rounded-round bg-linear-to-br from-accent-6 to-accent-9"
+                  />
+                </button>
+              </div>
             </div>
-            <div className="flex flex-1 items-center justify-end">
-              <button
-                data-component="button"
-                className="hover:bg-accent-3 active:bg-accent-4 text-accent-g12"
-              >
-                <Bell2 data-slot="icon" />
-              </button>
-              <button
-                data-component="button"
-                className="hover:bg-accent-3 active:bg-accent-4 text-accent-g12"
-              >
-                <SettingsGear3 data-slot="icon" />
-              </button>
-            </div>
+            <div>tabs</div>
           </header>
           <div className="mx-auto w-full max-w-[70ch]">
             <div className="overflow-x-auto p-4">
