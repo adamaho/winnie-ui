@@ -125,7 +125,9 @@ function RouteComponent() {
                   Winnie
                 </span>
                 <span className="text-3 text-accent-g12 mx-1">/</span>
-                <span className="text-2 text-accent-g12">Colors</span>
+                <span className="text-2 text-accent-g12 mr-2 whitespace-nowrap">
+                  Command Center
+                </span>
               </div>
               <div className="flex flex-1 items-center justify-end">
                 <div
@@ -177,7 +179,17 @@ function RouteComponent() {
                 </button>
               </div>
             </div>
-            <div>tabs</div>
+            <div className="flex gap-5">
+              <button className="text-2 text-accent-g13 border-accent-9 border-offset-2 border-b-3 rounded-none pb-2">
+                <span data-slot="label">Dashboard</span>
+              </button>
+              <button className="text-2 text-accent-g12 pb-3">
+                <span data-slot="label">Issues</span>
+              </button>
+              <button className="text-2 text-accent-g12 pb-3">
+                <span data-slot="label">Tasks</span>
+              </button>
+            </div>
           </header>
           <div className="mx-auto w-full max-w-[70ch]">
             <div className="overflow-x-auto p-4">
