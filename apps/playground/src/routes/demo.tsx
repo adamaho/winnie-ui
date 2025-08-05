@@ -146,13 +146,7 @@ function RouteComponent() {
                       data-component="kbd"
                       className="bg-accent-g4 border-accent-g5 border font-sans"
                     >
-                      ⌘
-                    </kbd>
-                    <kbd
-                      data-component="kbd"
-                      className="bg-accent-g4 border-accent-g5 border font-sans"
-                    >
-                      K
+                      /
                     </kbd>
                   </kbd>
                 </div>
@@ -180,7 +174,7 @@ function RouteComponent() {
               </div>
             </div>
             <div className="flex gap-5">
-              <button className="text-2 text-accent-g13 border-accent-9 border-offset-2 border-b-3 rounded-none pb-2">
+              <button className="text-2 text-accent-g13 border-accent-9 rounded-none border-b-2 pb-2">
                 <span data-slot="label">Dashboard</span>
               </button>
               <button className="text-2 text-accent-g12 pb-3">
