@@ -7,6 +7,9 @@ export const Route = createFileRoute("/receipts")({
 });
 
 function RouteComponent() {
+  /**
+   * Get the users current session
+   */
   const { data: session, isPending } = useSession();
 
   if (isPending) {
@@ -32,6 +35,9 @@ function RouteComponent() {
           Login to Google
         </button>
       )}
+      <div>
+        <h1>Receipts</h1>
+      </div>
     </div>
   );
 }

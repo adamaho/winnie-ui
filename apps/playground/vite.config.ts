@@ -6,14 +6,13 @@ import tsConfigPaths from "vite-tsconfig-paths";
 export default defineConfig({
   server: {
     port: 3000,
-    host: true,
-    allowedHosts: ["development"],
+    allowedHosts: ["development.tail8b4a67.ts.net"],
   },
   plugins: [
     tsConfigPaths({
       projects: ["./tsconfig.json"],
     }),
     tailwindcss(),
-    tanstackStart(),
+    tanstackStart({ target: "node-server" }),
   ],
 });
