@@ -18,7 +18,6 @@ type Variables = {
 };
 
 type EnvVariables = {
-  GOOGLE_API_KEY: string;
   GOOGLE_CLIENT_ID: string;
   GOOGLE_CLIENT_SECRET: string;
 };

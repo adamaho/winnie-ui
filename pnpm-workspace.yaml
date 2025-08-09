@@ -1,4 +1,15 @@
 packages:
-  - "apps/*"
-  - "libs/*"
-  - "tools/*"
+  - apps/*
+  - libs/*
+  - tools/*
+
+onlyBuiltDependencies:
+  - "@parcel/watcher"
+  - "@rocicorp/zero-sqlite3"
+  - "@swc/core"
+  - "@tailwindcss/oxide"
+  - aws-sdk
+  - better-sqlite3
+  - esbuild
+  - protobufjs
+  - sharp

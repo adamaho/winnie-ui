@@ -8,8 +8,11 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
+import { createServerRootRoute } from '@tanstack/react-start/server'
+
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SpaceRouteImport } from './routes/space'
+import { Route as ReceiptsRouteImport } from './routes/receipts'
 import { Route as PlaygroundRouteImport } from './routes/playground'
 import { Route as LineHeightRouteImport } from './routes/line-height'
 import { Route as FontWeightRouteImport } from './routes/font-weight'
@@ -17,10 +20,18 @@ import { Route as FontFamilyRouteImport } from './routes/font-family'
 import { Route as DemoRouteImport } from './routes/demo'
 import { Route as ColorRouteImport } from './routes/color'
 import { Route as IndexRouteImport } from './routes/index'
+import { ServerRoute as ApiAuthSplatServerRouteImport } from './routes/api/auth/$'
+
+const rootServerRouteImport = createServerRootRoute()
 
 const SpaceRoute = SpaceRouteImport.update({
   id: '/space',
   path: '/space',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReceiptsRoute = ReceiptsRouteImport.update({
+  id: '/receipts',
+  path: '/receipts',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PlaygroundRoute = PlaygroundRouteImport.update({
@@ -58,6 +69,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiAuthSplatServerRoute = ApiAuthSplatServerRouteImport.update({
+  id: '/api/auth/$',
+  path: '/api/auth/$',
+  getParentRoute: () => rootServerRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -67,6 +83,7 @@ export interface FileRoutesByFullPath {
   '/font-weight': typeof FontWeightRoute
   '/line-height': typeof LineHeightRoute
   '/playground': typeof PlaygroundRoute
+  '/receipts': typeof ReceiptsRoute
   '/space': typeof SpaceRoute
 }
 export interface FileRoutesByTo {
@@ -77,6 +94,7 @@ export interface FileRoutesByTo {
   '/font-weight': typeof FontWeightRoute
   '/line-height': typeof LineHeightRoute
   '/playground': typeof PlaygroundRoute
+  '/receipts': typeof ReceiptsRoute
   '/space': typeof SpaceRoute
 }
 export interface FileRoutesById {
@@ -88,6 +106,7 @@ export interface FileRoutesById {
   '/font-weight': typeof FontWeightRoute
   '/line-height': typeof LineHeightRoute
   '/playground': typeof PlaygroundRoute
+  '/receipts': typeof ReceiptsRoute
   '/space': typeof SpaceRoute
 }
 export interface FileRouteTypes {
@@ -100,6 +119,7 @@ export interface FileRouteTypes {
     | '/font-weight'
     | '/line-height'
     | '/playground'
+    | '/receipts'
     | '/space'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -110,6 +130,7 @@ export interface FileRouteTypes {
     | '/font-weight'
     | '/line-height'
     | '/playground'
+    | '/receipts'
     | '/space'
   id:
     | '__root__'
@@ -120,6 +141,7 @@ export interface FileRouteTypes {
     | '/font-weight'
     | '/line-height'
     | '/playground'
+    | '/receipts'
     | '/space'
   fileRoutesById: FileRoutesById
 }
@@ -131,7 +153,29 @@ export interface RootRouteChildren {
   FontWeightRoute: typeof FontWeightRoute
   LineHeightRoute: typeof LineHeightRoute
   PlaygroundRoute: typeof PlaygroundRoute
+  ReceiptsRoute: typeof ReceiptsRoute
   SpaceRoute: typeof SpaceRoute
+}
+export interface FileServerRoutesByFullPath {
+  '/api/auth/$': typeof ApiAuthSplatServerRoute
+}
+export interface FileServerRoutesByTo {
+  '/api/auth/$': typeof ApiAuthSplatServerRoute
+}
+export interface FileServerRoutesById {
+  __root__: typeof rootServerRouteImport
+  '/api/auth/$': typeof ApiAuthSplatServerRoute
+}
+export interface FileServerRouteTypes {
+  fileServerRoutesByFullPath: FileServerRoutesByFullPath
+  fullPaths: '/api/auth/$'
+  fileServerRoutesByTo: FileServerRoutesByTo
+  to: '/api/auth/$'
+  id: '__root__' | '/api/auth/$'
+  fileServerRoutesById: FileServerRoutesById
+}
+export interface RootServerRouteChildren {
+  ApiAuthSplatServerRoute: typeof ApiAuthSplatServerRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -141,6 +185,13 @@ declare module '@tanstack/react-router' {
       path: '/space'
       fullPath: '/space'
       preLoaderRoute: typeof SpaceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/receipts': {
+      id: '/receipts'
+      path: '/receipts'
+      fullPath: '/receipts'
+      preLoaderRoute: typeof ReceiptsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/playground': {
@@ -194,6 +245,17 @@ declare module '@tanstack/react-router' {
     }
   }
 }
+declare module '@tanstack/react-start/server' {
+  interface ServerFileRoutesByPath {
+    '/api/auth/$': {
+      id: '/api/auth/$'
+      path: '/api/auth/$'
+      fullPath: '/api/auth/$'
+      preLoaderRoute: typeof ApiAuthSplatServerRouteImport
+      parentRoute: typeof rootServerRouteImport
+    }
+  }
+}
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -203,8 +265,15 @@ const rootRouteChildren: RootRouteChildren = {
   FontWeightRoute: FontWeightRoute,
   LineHeightRoute: LineHeightRoute,
   PlaygroundRoute: PlaygroundRoute,
+  ReceiptsRoute: ReceiptsRoute,
   SpaceRoute: SpaceRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+const rootServerRouteChildren: RootServerRouteChildren = {
+  ApiAuthSplatServerRoute: ApiAuthSplatServerRoute,
+}
+export const serverRouteTree = rootServerRouteImport
+  ._addFileChildren(rootServerRouteChildren)
+  ._addFileTypes<FileServerRouteTypes>()
