@@ -12,7 +12,6 @@ import { createServerRootRoute } from '@tanstack/react-start/server'
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SpaceRouteImport } from './routes/space'
-import { Route as ReceiptsRouteImport } from './routes/receipts'
 import { Route as PlaygroundRouteImport } from './routes/playground'
 import { Route as LineHeightRouteImport } from './routes/line-height'
 import { Route as FontWeightRouteImport } from './routes/font-weight'
@@ -20,6 +19,7 @@ import { Route as FontFamilyRouteImport } from './routes/font-family'
 import { Route as DemoRouteImport } from './routes/demo'
 import { Route as ColorRouteImport } from './routes/color'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as receiptsReceiptsRouteImport } from './routes/(receipts)/receipts'
 import { ServerRoute as ApiAuthSplatServerRouteImport } from './routes/api/auth/$'
 
 const rootServerRouteImport = createServerRootRoute()
@@ -27,11 +27,6 @@ const rootServerRouteImport = createServerRootRoute()
 const SpaceRoute = SpaceRouteImport.update({
   id: '/space',
   path: '/space',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ReceiptsRoute = ReceiptsRouteImport.update({
-  id: '/receipts',
-  path: '/receipts',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PlaygroundRoute = PlaygroundRouteImport.update({
@@ -69,6 +64,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const receiptsReceiptsRoute = receiptsReceiptsRouteImport.update({
+  id: '/(receipts)/receipts',
+  path: '/receipts',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiAuthSplatServerRoute = ApiAuthSplatServerRouteImport.update({
   id: '/api/auth/$',
   path: '/api/auth/$',
@@ -83,8 +83,8 @@ export interface FileRoutesByFullPath {
   '/font-weight': typeof FontWeightRoute
   '/line-height': typeof LineHeightRoute
   '/playground': typeof PlaygroundRoute
-  '/receipts': typeof ReceiptsRoute
   '/space': typeof SpaceRoute
+  '/receipts': typeof receiptsReceiptsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -94,8 +94,8 @@ export interface FileRoutesByTo {
   '/font-weight': typeof FontWeightRoute
   '/line-height': typeof LineHeightRoute
   '/playground': typeof PlaygroundRoute
-  '/receipts': typeof ReceiptsRoute
   '/space': typeof SpaceRoute
+  '/receipts': typeof receiptsReceiptsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -106,8 +106,8 @@ export interface FileRoutesById {
   '/font-weight': typeof FontWeightRoute
   '/line-height': typeof LineHeightRoute
   '/playground': typeof PlaygroundRoute
-  '/receipts': typeof ReceiptsRoute
   '/space': typeof SpaceRoute
+  '/(receipts)/receipts': typeof receiptsReceiptsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -119,8 +119,8 @@ export interface FileRouteTypes {
     | '/font-weight'
     | '/line-height'
     | '/playground'
-    | '/receipts'
     | '/space'
+    | '/receipts'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -130,8 +130,8 @@ export interface FileRouteTypes {
     | '/font-weight'
     | '/line-height'
     | '/playground'
-    | '/receipts'
     | '/space'
+    | '/receipts'
   id:
     | '__root__'
     | '/'
@@ -141,8 +141,8 @@ export interface FileRouteTypes {
     | '/font-weight'
     | '/line-height'
     | '/playground'
-    | '/receipts'
     | '/space'
+    | '/(receipts)/receipts'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -153,8 +153,8 @@ export interface RootRouteChildren {
   FontWeightRoute: typeof FontWeightRoute
   LineHeightRoute: typeof LineHeightRoute
   PlaygroundRoute: typeof PlaygroundRoute
-  ReceiptsRoute: typeof ReceiptsRoute
   SpaceRoute: typeof SpaceRoute
+  receiptsReceiptsRoute: typeof receiptsReceiptsRoute
 }
 export interface FileServerRoutesByFullPath {
   '/api/auth/$': typeof ApiAuthSplatServerRoute
@@ -185,13 +185,6 @@ declare module '@tanstack/react-router' {
       path: '/space'
       fullPath: '/space'
       preLoaderRoute: typeof SpaceRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/receipts': {
-      id: '/receipts'
-      path: '/receipts'
-      fullPath: '/receipts'
-      preLoaderRoute: typeof ReceiptsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/playground': {
@@ -243,6 +236,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/(receipts)/receipts': {
+      id: '/(receipts)/receipts'
+      path: '/receipts'
+      fullPath: '/receipts'
+      preLoaderRoute: typeof receiptsReceiptsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 declare module '@tanstack/react-start/server' {
@@ -265,8 +265,8 @@ const rootRouteChildren: RootRouteChildren = {
   FontWeightRoute: FontWeightRoute,
   LineHeightRoute: LineHeightRoute,
   PlaygroundRoute: PlaygroundRoute,
-  ReceiptsRoute: ReceiptsRoute,
   SpaceRoute: SpaceRoute,
+  receiptsReceiptsRoute: receiptsReceiptsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
