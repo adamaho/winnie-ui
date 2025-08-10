@@ -46,7 +46,7 @@ const schema = z.object({
  * @throws {redirect} Redirects to /receipts with 401 status if authentication fails
  * @returns {Promise<void>} Currently logs the spreadsheet data to console
  */
-export const processReceipt = createServerFn({ method: "POST" })
+export const processReceipts = createServerFn({ method: "POST" })
   .validator((data) => {
     if (!(data instanceof FormData)) {
       throw new Error("Invalid form data");
