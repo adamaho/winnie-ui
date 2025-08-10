@@ -11,6 +11,29 @@ import { RECEIPT_SYSTEM_PROMPT } from "~/constants/receipt-system-prompt";
 
 const spreadsheetId = "1_KZhJju1hlpEeHpcLpYEeZVwukHTs86KejPG1iy9SWY";
 
+const schema = z.object({
+  receipts: z.array(
+    z.object({
+      store: z.object({
+        name: z.string(),
+      }),
+      date: z.string(),
+      transaction: z.object({
+        items: z.array(
+          z.object({
+            name: z.string(),
+            price: z.number(),
+          }),
+        ),
+        category: z.string(),
+        subtotal: z.number(),
+        tax: z.number(),
+        total: z.number(),
+      }),
+    }),
+  ),
+});
+
 /**
  * Server function that processes receipt images using AI and integrates with Google Sheets.
  *
@@ -56,16 +79,25 @@ export const processReceipt = createServerFn({ method: "POST" })
       });
     }
 
+    /**
+     * Configure oauth client
+     */
     const oauth2Client = new google.auth.OAuth2();
     oauth2Client.setCredentials({
       access_token: accessToken,
     });
 
+    /**
+     * Set up the google sheets api instance
+     */
     const sheets = google.sheets({
       version: "v4",
       auth: oauth2Client,
     });
 
+    /**
+     * Parse the content and prepare the messages to send to openai
+     */
     const content = await Promise.all(
       receipts.map(async (r) => {
         const isImage = r.type.startsWith("image");
@@ -90,47 +122,32 @@ export const processReceipt = createServerFn({ method: "POST" })
     /**
      * Process receipts with ai
      */
-    const receiptData = await generateObject({
-      model: openai("gpt-4.1-mini", {
-        structuredOutputs: true,
-      }),
-      system: RECEIPT_SYSTEM_PROMPT,
-      schemaDescription: "A array of shopping receipt objects",
-      schema: z.object({
-        receipts: z.array(
-          z.object({
-            store: z.object({
-              name: z.string(),
-            }),
-            date: z.string(),
-            transaction: z.object({
-              items: z.array(
-                z.object({
-                  name: z.string(),
-                  price: z.number(),
-                }),
-              ),
-              category: z.string(),
-              subtotal: z.number(),
-              tax: z.number(),
-              total: z.number(),
-            }),
-          }),
-        ),
-      }),
-      messages: [
-        {
-          role: "user",
-          content,
-        },
-      ],
-    });
+    let receiptData: z.infer<typeof schema>["receipts"];
+    try {
+      const rawData = await generateObject({
+        model: openai("gpt-4.1-mini", {
+          structuredOutputs: true,
+        }),
+        system: RECEIPT_SYSTEM_PROMPT,
+        schemaDescription: "A array of shopping receipt objects",
+        schema,
+        messages: [
+          {
+            role: "user",
+            content,
+          },
+        ],
+      });
+      receiptData = rawData.object.receipts;
+    } catch (e) {
+      throw new Error("Failed to process receipt with ai");
+    }
 
     /**
      * Create the rows for the google sheet
      */
     let rows: [string, string, string, string, number][] = [];
-    for (const receipt of receiptData.object.receipts) {
+    for (const receipt of receiptData) {
       for (const { name, price } of receipt.transaction.items) {
         rows.push([
           receipt.store.name,
@@ -142,9 +159,12 @@ export const processReceipt = createServerFn({ method: "POST" })
       }
     }
 
+    /**
+     * Write the rows to the google sheet
+     */
     try {
       await sheets.spreadsheets.values.append({
-        spreadsheetId: "1_KZhJju1hlpEeHpcLpYEeZVwukHTs86KejPG1iy9SWY",
+        spreadsheetId,
         range: "A1:B1",
         valueInputOption: "USER_ENTERED",
         requestBody: {
@@ -153,6 +173,7 @@ export const processReceipt = createServerFn({ method: "POST" })
           values: rows,
         },
       });
+      console.log("Added rows to sheet", rows);
     } catch (err) {
       console.log(err);
       throw new Error("Failed to write rows to sheet");

@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import { createFileRoute } from "@tanstack/react-router";
 
 import { signIn, useSession } from "~/lib/auth-client";
@@ -10,12 +12,22 @@ export const Route = createFileRoute("/(receipts)/receipts")({
 
 function RouteComponent() {
   /**
+   * Tracks the loading state
+   */
+  const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
+
+  /**
    * Get the users current session
    */
-  const { data: session, isPending } = useSession();
+  const { isPending } = useSession();
 
   if (isPending) {
     return <div>Fetching Session</div>;
+  }
+
+  if (isLoading) {
+    return <div>Processing Receipts</div>;
   }
 
   return (
@@ -42,8 +54,19 @@ function RouteComponent() {
           onSubmit={async (event) => {
             event.preventDefault();
             const formData = new FormData(event.currentTarget);
-            console.log(formData.getAll("receipts"));
-            await processReceipt({ data: formData });
+
+            if (formData.getAll("receipts").length === 0) {
+              return;
+            }
+
+            try {
+              setIsLoading(true);
+              await processReceipt({ data: formData });
+            } catch (error) {
+              setIsError(true);
+            } finally {
+              setIsLoading(false);
+            }
           }}
         >
           <input
@@ -54,6 +77,7 @@ function RouteComponent() {
           />
           <button>Upload</button>
         </form>
+        {isError && <div>Failed to process receipts</div>}
       </div>
     </div>
   );
