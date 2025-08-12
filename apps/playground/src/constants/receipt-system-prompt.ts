@@ -21,12 +21,13 @@ The above format represents the data returned from each receipt. No matter what,
 }
 \`\`\`
 
-Guidelines:
+## Guidelines:
 - dates MUST be formatted as YYYY-MM-DD. DO NOT FUCK THIS UP! Make sure to take into account that all dates will be formatted differently on the receipts. Some will be MM/DD/YYYY, others will be YY/MM/DD. So be sure to parse the date into the correct format. All receipts will be in the year 2025 or future. So don't give me something that is in a year less than 2025.
 - Ignore payment methods, loyalty/member IDs, or unrelated barcodes unless needed to infer the store name or date.
 - Prices should be numbers (e.g., 3.99), not strings.
 - If any required information is missing or unclear, do your best to infer it and clearly mark any uncertainties in the output.
 - Assume prices are in USD unless otherwise indicated.
+- If there are no line items on the reciept, but there is a final price, set the transaction.items to be "unknown" and use the store and price as is.
 
 Your response must only include the JSON output with no explanation or commentary.
 `;

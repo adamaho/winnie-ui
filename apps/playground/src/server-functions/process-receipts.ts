@@ -178,4 +178,6 @@ export const processReceipts = createServerFn({ method: "POST" })
       console.log(err);
       throw new Error("Failed to write rows to sheet");
     }
+
+    return null;
   });

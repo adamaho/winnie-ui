@@ -1,8 +1,10 @@
 import { ChangeEvent, useCallback, useState } from "react";
 
+import { Google, ReceiptBill } from "@winnie-ui/icons/react/solid";
+
 import { createFileRoute } from "@tanstack/react-router";
 
-import { signIn, useSession } from "~/lib/auth-client";
+import { signIn, signOut, useSession } from "~/lib/auth-client";
 import { processReceipts } from "~/server-functions/process-receipts";
 
 export const Route = createFileRoute("/(receipts)/receipts")({
@@ -28,7 +30,7 @@ function RouteComponent() {
   /**
    * Get the users current session
    */
-  const { session, isPending } = useSession();
+  const { data } = useSession();
 
   /**
    * Handles the input change event and sets the files in state
@@ -37,12 +39,6 @@ function RouteComponent() {
     const formData = new FormData(e.currentTarget);
     setReceipts(formData.getAll("receipts") as File[]);
   }, []);
-
-  console.log(receipts);
-
-  if (isPending) {
-    return <div>Fetching Session</div>;
-  }
 
   return (
     <div className="bg-accent-1 grid h-screen grid-rows-[60px_1fr]">
@@ -56,21 +52,36 @@ function RouteComponent() {
             Receipts
           </span>
         </span>
-        <button
-          data-component="button"
-          data-greyscale
-          className="bg-accent-4 hover:bg-accent-5"
-          onClick={async () => {
-            await signIn.social({
-              provider: "google",
-            });
-          }}
-        >
-          <span data-slot="label">Login to Google</span>
-        </button>
+        {data?.session ? (
+          <button
+            data-component="button"
+            data-greyscale
+            className="bg-accent-4 hover:bg-accent-5"
+            onClick={async () => {
+              await signOut();
+            }}
+          >
+            <span data-slot="label">Logout</span>
+          </button>
+        ) : (
+          <button
+            data-component="button"
+            data-greyscale
+            className="bg-accent-4 hover:bg-accent-5"
+            onClick={async () => {
+              await signIn.social({
+                provider: "google",
+              });
+            }}
+          >
+            <Google data-slot="icon" />
+            <span data-slot="label">Login with Google</span>
+          </button>
+        )}
       </header>
-      <main className="mx-auto mt-9 flex w-full max-w-[65ch] flex-col items-center p-4">
-        <h1 className="text-5 text-accent-13">Receipts</h1>
+      <main className="mx-auto mt-9 flex w-full max-w-[50ch] flex-col items-center p-4">
+        <ReceiptBill className="h-8 w-8" />
+        <h1 className="text-5 text-accent-13 mt-3">Receipts</h1>
         <p
           className="text-3 text-accent-12 mt-2 text-center leading-3"
           data-greyscale
@@ -92,9 +103,11 @@ function RouteComponent() {
 
             try {
               setIsLoading(true);
+              setIsError(false);
               await processReceipts({ data: formData });
               event.currentTarget.reset();
             } catch (error) {
+              console.log("ererrorr", error);
               setIsError(true);
             } finally {
               setIsLoading(false);
@@ -128,8 +141,10 @@ function RouteComponent() {
               data-component="button"
               data-size="lg"
               data-width="full"
-              className="bg-accent-9 hover:bg-accent-10"
+              className="bg-accent-9 hover:not-[:disabled]:bg-accent-10"
+              disabled={receipts.length === 0}
             >
+              {isLoading && <span data-slot="pending">Loading</span>}
               <span data-slot="label" className="font-medium">
                 Upload receipts
               </span>
