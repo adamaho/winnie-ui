@@ -131,9 +131,13 @@ function RouteComponent() {
             tabIndex={-1}
             multiple
           />
-          <ul>
+          <ul className="mt-4">
             {receipts.map((receipt) => {
-              return <li key={receipt.name}>{receipt.name}</li>;
+              return (
+                <li className="" key={receipt.name}>
+                  {receipt.name}
+                </li>
+              );
             })}
           </ul>
           <div className="mt-4 flex items-center justify-end">
@@ -141,7 +145,7 @@ function RouteComponent() {
               data-component="button"
               data-size="lg"
               data-width="full"
-              className="bg-accent-9 hover:not-[:disabled]:bg-accent-10 group"
+              className="bg-accent-9 hover:not-[:disabled]:bg-accent-10 disabled:bg-accent-7 group"
               data-greyscale={receipts.length === 0}
               disabled={receipts.length === 0}
             >
