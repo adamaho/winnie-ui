@@ -21,7 +21,7 @@ function RouteComponent() {
    */
   const handleSetChromatic = () => {
     const htmlEl = document.querySelector("html")!;
-    htmlEl.setAttribute("data-chromatic", "");
+    htmlEl.setAttribute("data-chromatic", "true");
     htmlEl.removeAttribute("data-greyscale");
   };
 
@@ -30,7 +30,7 @@ function RouteComponent() {
    */
   const handleSetGreyscale = () => {
     const htmlEl = document.querySelector("html")!;
-    htmlEl.setAttribute("data-greyscale", "");
+    htmlEl.setAttribute("data-greyscale", "true");
     htmlEl.removeAttribute("data-chromatic");
   };
 

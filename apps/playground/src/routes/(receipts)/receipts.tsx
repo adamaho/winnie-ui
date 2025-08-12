@@ -45,17 +45,17 @@ function RouteComponent() {
       <header className="flex items-center justify-between px-4">
         <span className="flex items-center gap-1">
           <span className="text-2 text-accent-13">Goho</span>
-          <span className="text-2 text-accent-11" data-greyscale>
+          <span className="text-2 text-accent-11" data-greyscale="true">
             /
           </span>
-          <span className="text-2 text-accent-12" data-greyscale>
+          <span className="text-2 text-accent-12" data-greyscale="true">
             Receipts
           </span>
         </span>
         {data?.session ? (
           <button
             data-component="button"
-            data-greyscale
+            data-greyscale="true"
             className="bg-accent-4 hover:bg-accent-5"
             onClick={async () => {
               await signOut();
@@ -66,7 +66,7 @@ function RouteComponent() {
         ) : (
           <button
             data-component="button"
-            data-greyscale
+            data-greyscale="true"
             className="bg-accent-4 hover:bg-accent-5"
             onClick={async () => {
               await signIn.social({
@@ -84,7 +84,7 @@ function RouteComponent() {
         <h1 className="text-5 text-accent-13 mt-3">Receipts</h1>
         <p
           className="text-3 text-accent-12 mt-2 text-center leading-3"
-          data-greyscale
+          data-greyscale="true"
         >
           Take a picture of your receipts, upload them and see the magic happen
           in a google sheet.
@@ -141,11 +141,15 @@ function RouteComponent() {
               data-component="button"
               data-size="lg"
               data-width="full"
-              className="bg-accent-9 hover:not-[:disabled]:bg-accent-10"
+              className="bg-accent-9 hover:not-[:disabled]:bg-accent-10 group"
+              data-greyscale={receipts.length === 0}
               disabled={receipts.length === 0}
             >
               {isLoading && <span data-slot="pending">Loading</span>}
-              <span data-slot="label" className="font-medium">
+              <span
+                data-slot="label"
+                className="group-disabled:text-accent-12 font-medium"
+              >
                 Upload receipts
               </span>
             </button>
