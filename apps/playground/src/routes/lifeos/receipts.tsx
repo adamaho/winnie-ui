@@ -6,7 +6,7 @@ import {
   useState,
 } from "react";
 
-import { ReceiptBill } from "@winnie-ui/icons/react/solid";
+import { Loader, ReceiptBill } from "@winnie-ui/icons/react/solid";
 
 import { createFileRoute } from "@tanstack/react-router";
 
@@ -125,7 +125,11 @@ function RouteComponent() {
             data-greyscale={receipts.length === 0}
             disabled={receipts.length === 0}
           >
-            {isLoading && <span data-slot="pending">Loading</span>}
+            {isLoading && (
+              <div data-slot="pending" className="flex w-full justify-center">
+                <Loader className="animate-[spin_2s_linear_infinite]" />
+              </div>
+            )}
             <span
               data-slot="label"
               className="group-disabled:text-accent-12 font-medium"

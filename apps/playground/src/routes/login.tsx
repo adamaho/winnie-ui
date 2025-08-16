@@ -1,9 +1,8 @@
-import { Router, createFileRoute } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import * as z from "zod";
 
 import { DEFAULT_ROUTE } from "~/constants/default-route";
 import { signIn } from "~/lib/auth-client";
-import { Routes } from "~/router";
 
 /* -------------------------------------------------------------------------------------------------
  * LoginSearchParams
