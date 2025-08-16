@@ -1,7 +1,6 @@
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { reactStartCookies } from "better-auth/react-start";
-import { createAuthMiddleware } from "better-auth/api";
 
 import * as schema from "~/db/schema";
 
@@ -23,11 +22,6 @@ export const auth = betterAuth({
         "https://www.googleapis.com/auth/drive.readonly",
       ],
     },
-  },
-  hooks: {
-    after: createAuthMiddleware(async (ctx) => {
-      ctx.redirect("/receipts");
-    }),
   },
   plugins: [reactStartCookies()],
 });

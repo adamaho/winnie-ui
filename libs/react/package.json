@@ -24,21 +24,21 @@
     "react-dom": "^19.0.0"
   },
   "dependencies": {
-    "@base-ui-components/react": "1.0.0-beta.0",
-    "@react-aria/utils": "3.29.1",
-    "@react-stately/utils": "3.10.7",
+    "@base-ui-components/react": "1.0.0-beta.2",
+    "@react-aria/utils": "3.30.0",
+    "@react-stately/utils": "3.10.8",
     "@winnie-ui/icons": "workspace:*",
     "clsx": "2.1.1",
-    "react-aria": "3.41.1",
-    "react-aria-components": "1.10.1"
+    "react-aria": "3.42.0",
+    "react-aria-components": "1.11.0"
   },
   "devDependencies": {
-    "@types/react": "19.1.8",
-    "@types/react-dom": "19.1.6",
+    "@types/react": "19.1.10",
+    "@types/react-dom": "19.1.7",
     "@winnie-ui/tsconfig": "workspace:*",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
     "rimraf": "6.0.1",
-    "typescript": "5.8.3"
+    "typescript": "5.9.2"
   }
 }

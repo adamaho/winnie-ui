@@ -74,7 +74,7 @@ export const processReceipts = createServerFn({ method: "POST" })
 
     if (!accessToken) {
       throw redirect({
-        to: "/receipts",
+        to: "/lifeos/receipts",
         statusCode: 401,
       });
     }
@@ -178,6 +178,4 @@ export const processReceipts = createServerFn({ method: "POST" })
       console.log(err);
       throw new Error("Failed to write rows to sheet");
     }
-
-    return null;
   });
