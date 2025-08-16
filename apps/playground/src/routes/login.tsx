@@ -1,17 +1,28 @@
-import { createFileRoute, useParams } from "@tanstack/react-router";
+import { Router, createFileRoute } from "@tanstack/react-router";
 import * as z from "zod";
 
+import { DEFAULT_ROUTE } from "~/constants/default-route";
 import { signIn } from "~/lib/auth-client";
+import { Routes } from "~/router";
 
+/* -------------------------------------------------------------------------------------------------
+ * LoginSearchParams
+ * -----------------------------------------------------------------------------------------------*/
 const LoginSearchParams = z.object({
-  returnTo: z.string(),
+  returnTo: z.string().optional(),
 });
 
+/* -------------------------------------------------------------------------------------------------
+ * Route
+ * -----------------------------------------------------------------------------------------------*/
 export const Route = createFileRoute("/login")({
   validateSearch: LoginSearchParams,
   component: RouteComponent,
 });
 
+/* -------------------------------------------------------------------------------------------------
+ * RouteComponent
+ * -----------------------------------------------------------------------------------------------*/
 function RouteComponent() {
   /**
    * Get search params from url
@@ -22,7 +33,10 @@ function RouteComponent() {
     <div>
       <button
         onClick={() =>
-          signIn.social({ provider: "google", callbackURL: returnTo })
+          signIn.social({
+            provider: "google",
+            callbackURL: returnTo ?? DEFAULT_ROUTE,
+          })
         }
       >
         Login with Google

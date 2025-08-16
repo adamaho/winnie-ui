@@ -1,4 +1,7 @@
-import { createRouter as createTanStackRouter } from "@tanstack/react-router";
+import {
+  LinkProps,
+  createRouter as createTanStackRouter,
+} from "@tanstack/react-router";
 
 import { routeTree } from "./routeTree.gen";
 
@@ -7,7 +10,7 @@ export function createRouter() {
     routeTree,
     defaultPreload: "intent",
     scrollRestoration: true,
-    defaultNotFoundComponent: () => <div>asdf</div>,
+    defaultNotFoundComponent: () => <div>Not Found</div>,
   });
 
   return router;
@@ -18,3 +21,6 @@ declare module "@tanstack/react-router" {
     router: ReturnType<typeof createRouter>;
   }
 }
+
+export type Router = ReturnType<typeof createRouter>;
+export type Routes = LinkProps<Router>["to"];

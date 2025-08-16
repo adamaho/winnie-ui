@@ -21,6 +21,7 @@ import { Route as FontFamilyRouteImport } from './routes/font-family'
 import { Route as DemoRouteImport } from './routes/demo'
 import { Route as ColorRouteImport } from './routes/color'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as LifeosIndexRouteImport } from './routes/lifeos/index'
 import { Route as LifeosReceiptsRouteImport } from './routes/lifeos/receipts'
 import { ServerRoute as ApiAuthSplatServerRouteImport } from './routes/api/auth/$'
 
@@ -76,6 +77,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LifeosIndexRoute = LifeosIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => LifeosRoute,
+} as any)
 const LifeosReceiptsRoute = LifeosReceiptsRouteImport.update({
   id: '/receipts',
   path: '/receipts',
@@ -99,6 +105,7 @@ export interface FileRoutesByFullPath {
   '/playground': typeof PlaygroundRoute
   '/space': typeof SpaceRoute
   '/lifeos/receipts': typeof LifeosReceiptsRoute
+  '/lifeos/': typeof LifeosIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -106,12 +113,12 @@ export interface FileRoutesByTo {
   '/demo': typeof DemoRoute
   '/font-family': typeof FontFamilyRoute
   '/font-weight': typeof FontWeightRoute
-  '/lifeos': typeof LifeosRouteWithChildren
   '/line-height': typeof LineHeightRoute
   '/login': typeof LoginRoute
   '/playground': typeof PlaygroundRoute
   '/space': typeof SpaceRoute
   '/lifeos/receipts': typeof LifeosReceiptsRoute
+  '/lifeos': typeof LifeosIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -126,6 +133,7 @@ export interface FileRoutesById {
   '/playground': typeof PlaygroundRoute
   '/space': typeof SpaceRoute
   '/lifeos/receipts': typeof LifeosReceiptsRoute
+  '/lifeos/': typeof LifeosIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -141,6 +149,7 @@ export interface FileRouteTypes {
     | '/playground'
     | '/space'
     | '/lifeos/receipts'
+    | '/lifeos/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -148,12 +157,12 @@ export interface FileRouteTypes {
     | '/demo'
     | '/font-family'
     | '/font-weight'
-    | '/lifeos'
     | '/line-height'
     | '/login'
     | '/playground'
     | '/space'
     | '/lifeos/receipts'
+    | '/lifeos'
   id:
     | '__root__'
     | '/'
@@ -167,6 +176,7 @@ export interface FileRouteTypes {
     | '/playground'
     | '/space'
     | '/lifeos/receipts'
+    | '/lifeos/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -275,6 +285,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/lifeos/': {
+      id: '/lifeos/'
+      path: '/'
+      fullPath: '/lifeos/'
+      preLoaderRoute: typeof LifeosIndexRouteImport
+      parentRoute: typeof LifeosRoute
+    }
     '/lifeos/receipts': {
       id: '/lifeos/receipts'
       path: '/receipts'
@@ -298,10 +315,12 @@ declare module '@tanstack/react-start/server' {
 
 interface LifeosRouteChildren {
   LifeosReceiptsRoute: typeof LifeosReceiptsRoute
+  LifeosIndexRoute: typeof LifeosIndexRoute
 }
 
 const LifeosRouteChildren: LifeosRouteChildren = {
   LifeosReceiptsRoute: LifeosReceiptsRoute,
+  LifeosIndexRoute: LifeosIndexRoute,
 }
 
 const LifeosRouteWithChildren =

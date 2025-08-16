@@ -26,7 +26,7 @@ function RouteComponent() {
     <div className="bg-accent-1 grid h-screen grid-rows-[60px_1fr]">
       <header className="flex items-center justify-between px-4">
         <span className="flex items-center gap-1">
-          <span className="text-2 text-accent-13">Goho LifeOS</span>
+          <span className="text-2 text-accent-13">LifeOS</span>
           <span className="text-2 text-accent-11" data-greyscale="true">
             /
           </span>
