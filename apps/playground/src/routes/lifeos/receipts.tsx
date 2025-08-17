@@ -6,6 +6,7 @@ import {
   useState,
 } from "react";
 
+// import { CrossLarge } from "@winnie-ui/icons/react/line";
 import { Loader, ReceiptBill } from "@winnie-ui/icons/react/solid";
 
 import { createFileRoute } from "@tanstack/react-router";
@@ -40,10 +41,15 @@ function RouteComponent() {
   /**
    * Handles the input change event and sets the files in state
    */
-  const handleFormChange = useCallback((e: ChangeEvent<HTMLFormElement>) => {
-    const formData = new FormData(e.currentTarget);
-    setReceipts(formData.getAll("receipts") as File[]);
-  }, []);
+  const handleFileInputChange = useCallback(
+    (e: ChangeEvent<HTMLInputElement>) => {
+      if (e.target.files == null) {
+        return;
+      }
+      setReceipts(Array.from(e.target.files) || []);
+    },
+    [],
+  );
 
   /**
    * Handles the form submission
@@ -87,14 +93,13 @@ function RouteComponent() {
         encType="multipart/form-data"
         className="mt-9 flex w-full flex-col"
         ref={formRef}
-        onChange={handleFormChange}
         onSubmit={handleFormSubmit}
       >
         <label
           htmlFor="receipts"
-          className="bg-accent-2 rounded-3 border-accent-6 hover:border-accent-7 flex items-center justify-center border border-dashed p-5"
+          className="bg-accent-g2 rounded-3 border-accent-g6 hover:border-accent-g7 group flex items-center justify-center border border-dashed p-5"
         >
-          <span className="text-2 text-accent-12">
+          <span className="text-2 text-accent-g12 group-hover:text-accent-g13">
             Select receipts to upload...
           </span>
         </label>
@@ -102,16 +107,23 @@ function RouteComponent() {
           type="file"
           id="receipts"
           name="receipts"
-          accept="image/*,application/pdf"
+          accept="image/*"
           className="hidden"
+          onChange={handleFileInputChange}
           tabIndex={-1}
           multiple
         />
-        <ul className="mt-4">
+        <ul className="mt-4 flex flex-col gap-2">
           {receipts.map((receipt) => {
             return (
-              <li className="" key={receipt.name}>
-                {receipt.name}
+              <li
+                className="bg-accent-g3 rounded-2 flex items-center justify-between px-2 py-3"
+                key={receipt.name}
+              >
+                <span className="text-2 text-accent-g13">{receipt.name}</span>
+                {/* <button data-component="button" className="hover:bg-accent-g4"> */}
+                {/*   <CrossLarge data-slot="icon" /> */}
+                {/* </button> */}
               </li>
             );
           })}
@@ -121,7 +133,7 @@ function RouteComponent() {
             data-component="button"
             data-size="lg"
             data-width="full"
-            className="bg-accent-9 hover:not-[:disabled]:bg-accent-10 disabled:bg-accent-7 group"
+            className="bg-accent-9 hover:not-[:disabled]:bg-accent-10 disabled:bg-accent-5 group"
             data-greyscale={receipts.length === 0}
             disabled={receipts.length === 0}
           >
@@ -132,10 +144,18 @@ function RouteComponent() {
             )}
             <span
               data-slot="label"
-              className="group-disabled:text-accent-12 font-medium"
+              className="group-disabled:text-accent-11 font-medium"
             >
               Upload receipts
             </span>
+            <kbd data-slot="shortcut">
+              <kbd
+                data-component="kbd"
+                className="bg-accent-8 group-disabled:bg-accent-4 group-disabled:text-accent-11 rounded-1 font-sans"
+              >
+                Enter
+              </kbd>
+            </kbd>
           </button>
         </div>
         {isError && <div>Failed to process receipts</div>}

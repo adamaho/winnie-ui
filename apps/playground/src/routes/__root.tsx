@@ -1,15 +1,17 @@
 /// <reference types="vite/client" />
+import { QueryClient } from "@tanstack/react-query";
 import {
   HeadContent,
-  Link,
   Scripts,
-  createRootRoute,
+  createRootRouteWithContext,
 } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 
 import appCss from "~/styles/app.css?url";
 
-export const Route = createRootRoute({
+export const Route = createRootRouteWithContext<{
+  queryClient: QueryClient;
+}>()({
   head: () => ({
     meta: [
       {
@@ -48,12 +50,7 @@ export const Route = createRootRoute({
 
 function RootDocument({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      data-theme="dark"
-      data-accent-color="amethyst"
-      data-mono="true"
-      className="bg-black"
-    >
+    <html data-theme="dark" data-accent-color="amethyst" className="bg-black">
       <head>
         <HeadContent />
       </head>

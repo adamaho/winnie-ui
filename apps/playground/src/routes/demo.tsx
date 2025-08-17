@@ -73,10 +73,7 @@ function RouteComponent() {
               className="col-span-full grid grid-cols-subgrid gap-[2px]"
               onClick={() => handleSetAccentColor("amethyst")}
             >
-              <span
-                className="text-1 text-accent-g12 mr-3 font-mono"
-                data-mono="true"
-              >
+              <span className="text-1 text-accent-g12 mr-3 font-mono">
                 amethyst
               </span>
               <div className="bg-amethyst-1" />
@@ -120,7 +117,7 @@ function RouteComponent() {
           <header className="bg-accent-g2 border-accent-g4 flex flex-col justify-between border-b px-3 pt-2">
             <div className="flex items-center">
               <div className="flex items-center gap-1">
-                <span className="bg-linear-to-br from-accent-9 to-accent-12 rounded-round mr-1 h-[24px] w-[24px]" />
+                <span className="from-accent-9 to-accent-12 rounded-round mr-1 h-[24px] w-[24px] bg-linear-to-br" />
                 <span className="text-2 text-accent-g13 font-medium">
                   Winnie
                 </span>
@@ -168,7 +165,7 @@ function RouteComponent() {
                 >
                   <div
                     data-slot="icon"
-                    className="rounded-round bg-linear-to-br from-accent-6 to-accent-9"
+                    className="rounded-round from-accent-6 to-accent-9 bg-linear-to-br"
                   />
                 </button>
               </div>
@@ -209,7 +206,7 @@ function RouteComponent() {
                     <td className="text-1 text-accent-g12 p-3 font-mono">
                       text-1
                     </td>
-                    <td className="text-1 text-accent-g12 whitespace-nowrap p-3 font-mono">
+                    <td className="text-1 text-accent-g12 p-3 font-mono whitespace-nowrap">
                       calc(11px * var(--w-scale, 1))
                     </td>
                   </tr>
@@ -220,7 +217,7 @@ function RouteComponent() {
                     <td className="text-1 text-accent-g12 p-3 font-mono">
                       text-2
                     </td>
-                    <td className="text-1 text-accent-g12 whitespace-nowrap p-3 font-mono">
+                    <td className="text-1 text-accent-g12 p-3 font-mono whitespace-nowrap">
                       calc(13px * var(--w-scale, 1))
                     </td>
                   </tr>
@@ -231,7 +228,7 @@ function RouteComponent() {
                     <td className="text-1 text-accent-g12 p-3 font-mono">
                       text-3
                     </td>
-                    <td className="text-1 text-accent-g12 whitespace-nowrap p-3 font-mono">
+                    <td className="text-1 text-accent-g12 p-3 font-mono whitespace-nowrap">
                       calc(15px * var(--w-scale, 1))
                     </td>
                   </tr>
@@ -242,7 +239,7 @@ function RouteComponent() {
                     <td className="text-1 text-accent-g12 p-3 font-mono">
                       text-4
                     </td>
-                    <td className="text-1 text-accent-g12 whitespace-nowrap p-3 font-mono">
+                    <td className="text-1 text-accent-g12 p-3 font-mono whitespace-nowrap">
                       calc(18px * var(--w-scale, 1))
                     </td>
                   </tr>
@@ -253,7 +250,7 @@ function RouteComponent() {
                     <td className="text-1 text-accent-g12 p-3 font-mono">
                       text-5
                     </td>
-                    <td className="text-1 text-accent-g12 whitespace-nowrap p-3 font-mono">
+                    <td className="text-1 text-accent-g12 p-3 font-mono whitespace-nowrap">
                       calc(22px * var(--w-scale, 1))
                     </td>
                   </tr>
@@ -264,7 +261,7 @@ function RouteComponent() {
                     <td className="text-1 text-accent-g12 p-3 font-mono">
                       text-6
                     </td>
-                    <td className="text-1 text-accent-g12 whitespace-nowrap p-3 font-mono">
+                    <td className="text-1 text-accent-g12 p-3 font-mono whitespace-nowrap">
                       calc(28px * var(--w-scale, 1))
                     </td>
                   </tr>
@@ -275,7 +272,7 @@ function RouteComponent() {
                     <td className="text-1 text-accent-g12 p-3 font-mono">
                       text-7
                     </td>
-                    <td className="text-1 text-accent-g12 whitespace-nowrap p-3 font-mono">
+                    <td className="text-1 text-accent-g12 p-3 font-mono whitespace-nowrap">
                       calc(32px * var(--w-scale, 1))
                     </td>
                   </tr>
@@ -286,7 +283,7 @@ function RouteComponent() {
                     <td className="text-1 text-accent-g12 p-3 font-mono">
                       text-8
                     </td>
-                    <td className="text-1 text-accent-g12 whitespace-nowrap p-3 font-mono">
+                    <td className="text-1 text-accent-g12 p-3 font-mono whitespace-nowrap">
                       calc(64px * var(--w-scale, 1))
                     </td>
                   </tr>

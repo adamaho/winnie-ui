@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "@ai-sdk/openai": "^2.0.15",
+    "@tanstack/react-query": "5.85.3",
     "@tanstack/react-router": "^1.131.16",
     "@tanstack/react-router-devtools": "^1.131.16",
+    "@tanstack/react-router-ssr-query": "1.131.22",
     "@tanstack/react-start": "^1.131.16",
     "@winnie-ui/icons": "workspace:*",
     "ai": "^5.0.15",

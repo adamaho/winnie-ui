@@ -11,40 +11,18 @@
 import { createServerRootRoute } from '@tanstack/react-start/server'
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as SpaceRouteImport } from './routes/space'
-import { Route as PlaygroundRouteImport } from './routes/playground'
 import { Route as LoginRouteImport } from './routes/login'
-import { Route as LineHeightRouteImport } from './routes/line-height'
 import { Route as LifeosRouteImport } from './routes/lifeos'
-import { Route as FontWeightRouteImport } from './routes/font-weight'
-import { Route as FontFamilyRouteImport } from './routes/font-family'
 import { Route as DemoRouteImport } from './routes/demo'
-import { Route as ColorRouteImport } from './routes/color'
-import { Route as IndexRouteImport } from './routes/index'
 import { Route as LifeosIndexRouteImport } from './routes/lifeos/index'
 import { Route as LifeosReceiptsRouteImport } from './routes/lifeos/receipts'
 import { ServerRoute as ApiAuthSplatServerRouteImport } from './routes/api/auth/$'
 
 const rootServerRouteImport = createServerRootRoute()
 
-const SpaceRoute = SpaceRouteImport.update({
-  id: '/space',
-  path: '/space',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PlaygroundRoute = PlaygroundRouteImport.update({
-  id: '/playground',
-  path: '/playground',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const LoginRoute = LoginRouteImport.update({
   id: '/login',
   path: '/login',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const LineHeightRoute = LineHeightRouteImport.update({
-  id: '/line-height',
-  path: '/line-height',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LifeosRoute = LifeosRouteImport.update({
@@ -52,29 +30,9 @@ const LifeosRoute = LifeosRouteImport.update({
   path: '/lifeos',
   getParentRoute: () => rootRouteImport,
 } as any)
-const FontWeightRoute = FontWeightRouteImport.update({
-  id: '/font-weight',
-  path: '/font-weight',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const FontFamilyRoute = FontFamilyRouteImport.update({
-  id: '/font-family',
-  path: '/font-family',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const DemoRoute = DemoRouteImport.update({
   id: '/demo',
   path: '/demo',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ColorRoute = ColorRouteImport.update({
-  id: '/color',
-  path: '/color',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LifeosIndexRoute = LifeosIndexRouteImport.update({
@@ -94,102 +52,44 @@ const ApiAuthSplatServerRoute = ApiAuthSplatServerRouteImport.update({
 } as any)
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
-  '/color': typeof ColorRoute
   '/demo': typeof DemoRoute
-  '/font-family': typeof FontFamilyRoute
-  '/font-weight': typeof FontWeightRoute
   '/lifeos': typeof LifeosRouteWithChildren
-  '/line-height': typeof LineHeightRoute
   '/login': typeof LoginRoute
-  '/playground': typeof PlaygroundRoute
-  '/space': typeof SpaceRoute
   '/lifeos/receipts': typeof LifeosReceiptsRoute
   '/lifeos/': typeof LifeosIndexRoute
 }
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
-  '/color': typeof ColorRoute
   '/demo': typeof DemoRoute
-  '/font-family': typeof FontFamilyRoute
-  '/font-weight': typeof FontWeightRoute
-  '/line-height': typeof LineHeightRoute
   '/login': typeof LoginRoute
-  '/playground': typeof PlaygroundRoute
-  '/space': typeof SpaceRoute
   '/lifeos/receipts': typeof LifeosReceiptsRoute
   '/lifeos': typeof LifeosIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
-  '/': typeof IndexRoute
-  '/color': typeof ColorRoute
   '/demo': typeof DemoRoute
-  '/font-family': typeof FontFamilyRoute
-  '/font-weight': typeof FontWeightRoute
   '/lifeos': typeof LifeosRouteWithChildren
-  '/line-height': typeof LineHeightRoute
   '/login': typeof LoginRoute
-  '/playground': typeof PlaygroundRoute
-  '/space': typeof SpaceRoute
   '/lifeos/receipts': typeof LifeosReceiptsRoute
   '/lifeos/': typeof LifeosIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths:
-    | '/'
-    | '/color'
-    | '/demo'
-    | '/font-family'
-    | '/font-weight'
-    | '/lifeos'
-    | '/line-height'
-    | '/login'
-    | '/playground'
-    | '/space'
-    | '/lifeos/receipts'
-    | '/lifeos/'
+  fullPaths: '/demo' | '/lifeos' | '/login' | '/lifeos/receipts' | '/lifeos/'
   fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/color'
-    | '/demo'
-    | '/font-family'
-    | '/font-weight'
-    | '/line-height'
-    | '/login'
-    | '/playground'
-    | '/space'
-    | '/lifeos/receipts'
-    | '/lifeos'
+  to: '/demo' | '/login' | '/lifeos/receipts' | '/lifeos'
   id:
     | '__root__'
-    | '/'
-    | '/color'
     | '/demo'
-    | '/font-family'
-    | '/font-weight'
     | '/lifeos'
-    | '/line-height'
     | '/login'
-    | '/playground'
-    | '/space'
     | '/lifeos/receipts'
     | '/lifeos/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
-  ColorRoute: typeof ColorRoute
   DemoRoute: typeof DemoRoute
-  FontFamilyRoute: typeof FontFamilyRoute
-  FontWeightRoute: typeof FontWeightRoute
   LifeosRoute: typeof LifeosRouteWithChildren
-  LineHeightRoute: typeof LineHeightRoute
   LoginRoute: typeof LoginRoute
-  PlaygroundRoute: typeof PlaygroundRoute
-  SpaceRoute: typeof SpaceRoute
 }
 export interface FileServerRoutesByFullPath {
   '/api/auth/$': typeof ApiAuthSplatServerRoute
@@ -215,32 +115,11 @@ export interface RootServerRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/space': {
-      id: '/space'
-      path: '/space'
-      fullPath: '/space'
-      preLoaderRoute: typeof SpaceRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/playground': {
-      id: '/playground'
-      path: '/playground'
-      fullPath: '/playground'
-      preLoaderRoute: typeof PlaygroundRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/login': {
       id: '/login'
       path: '/login'
       fullPath: '/login'
       preLoaderRoute: typeof LoginRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/line-height': {
-      id: '/line-height'
-      path: '/line-height'
-      fullPath: '/line-height'
-      preLoaderRoute: typeof LineHeightRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/lifeos': {
@@ -250,39 +129,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LifeosRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/font-weight': {
-      id: '/font-weight'
-      path: '/font-weight'
-      fullPath: '/font-weight'
-      preLoaderRoute: typeof FontWeightRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/font-family': {
-      id: '/font-family'
-      path: '/font-family'
-      fullPath: '/font-family'
-      preLoaderRoute: typeof FontFamilyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/demo': {
       id: '/demo'
       path: '/demo'
       fullPath: '/demo'
       preLoaderRoute: typeof DemoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/color': {
-      id: '/color'
-      path: '/color'
-      fullPath: '/color'
-      preLoaderRoute: typeof ColorRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/lifeos/': {
@@ -327,16 +178,9 @@ const LifeosRouteWithChildren =
   LifeosRoute._addFileChildren(LifeosRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
-  IndexRoute: IndexRoute,
-  ColorRoute: ColorRoute,
   DemoRoute: DemoRoute,
-  FontFamilyRoute: FontFamilyRoute,
-  FontWeightRoute: FontWeightRoute,
   LifeosRoute: LifeosRouteWithChildren,
-  LineHeightRoute: LineHeightRoute,
   LoginRoute: LoginRoute,
-  PlaygroundRoute: PlaygroundRoute,
-  SpaceRoute: SpaceRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
