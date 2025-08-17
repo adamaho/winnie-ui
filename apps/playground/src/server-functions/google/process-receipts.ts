@@ -6,7 +6,7 @@ import { type FilePart, generateObject, type ImagePart } from "ai";
 import { google } from "googleapis";
 import * as z from "zod";
 
-import { auth } from "~/lib/auth";
+import { auth } from "~/utils/auth";
 import { RECEIPT_SYSTEM_PROMPT } from "~/constants/receipt-system-prompt";
 
 const spreadsheetId = "1_KZhJju1hlpEeHpcLpYEeZVwukHTs86KejPG1iy9SWY";

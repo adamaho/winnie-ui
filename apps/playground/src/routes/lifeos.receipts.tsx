@@ -11,7 +11,7 @@ import { Loader, ReceiptBill } from "@winnie-ui/icons/react/solid";
 
 import { createFileRoute } from "@tanstack/react-router";
 
-import { processReceipts } from "~/server-functions/process-receipts";
+import { processReceipts } from "~/server-functions/google/process-receipts";
 
 export const Route = createFileRoute("/lifeos/receipts")({
   component: RouteComponent,

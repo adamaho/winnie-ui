@@ -8,17 +8,13 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-import { createServerRootRoute } from '@tanstack/react-start/server'
-
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as LifeosRouteImport } from './routes/lifeos'
 import { Route as DemoRouteImport } from './routes/demo'
-import { Route as LifeosIndexRouteImport } from './routes/lifeos/index'
-import { Route as LifeosReceiptsRouteImport } from './routes/lifeos/receipts'
-import { ServerRoute as ApiAuthSplatServerRouteImport } from './routes/api/auth/$'
-
-const rootServerRouteImport = createServerRootRoute()
+import { Route as LifeosIndexRouteImport } from './routes/lifeos.index'
+import { Route as LifeosReceiptsRouteImport } from './routes/lifeos.receipts'
+import { Route as ApiAuthSplatRouteImport } from './routes/api.auth.$'
 
 const LoginRoute = LoginRouteImport.update({
   id: '/login',
@@ -45,10 +41,10 @@ const LifeosReceiptsRoute = LifeosReceiptsRouteImport.update({
   path: '/receipts',
   getParentRoute: () => LifeosRoute,
 } as any)
-const ApiAuthSplatServerRoute = ApiAuthSplatServerRouteImport.update({
+const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
   id: '/api/auth/$',
   path: '/api/auth/$',
-  getParentRoute: () => rootServerRouteImport,
+  getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
@@ -57,12 +53,14 @@ export interface FileRoutesByFullPath {
   '/login': typeof LoginRoute
   '/lifeos/receipts': typeof LifeosReceiptsRoute
   '/lifeos/': typeof LifeosIndexRoute
+  '/api/auth/$': typeof ApiAuthSplatRoute
 }
 export interface FileRoutesByTo {
   '/demo': typeof DemoRoute
   '/login': typeof LoginRoute
   '/lifeos/receipts': typeof LifeosReceiptsRoute
   '/lifeos': typeof LifeosIndexRoute
+  '/api/auth/$': typeof ApiAuthSplatRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -71,12 +69,19 @@ export interface FileRoutesById {
   '/login': typeof LoginRoute
   '/lifeos/receipts': typeof LifeosReceiptsRoute
   '/lifeos/': typeof LifeosIndexRoute
+  '/api/auth/$': typeof ApiAuthSplatRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/demo' | '/lifeos' | '/login' | '/lifeos/receipts' | '/lifeos/'
+  fullPaths:
+    | '/demo'
+    | '/lifeos'
+    | '/login'
+    | '/lifeos/receipts'
+    | '/lifeos/'
+    | '/api/auth/$'
   fileRoutesByTo: FileRoutesByTo
-  to: '/demo' | '/login' | '/lifeos/receipts' | '/lifeos'
+  to: '/demo' | '/login' | '/lifeos/receipts' | '/lifeos' | '/api/auth/$'
   id:
     | '__root__'
     | '/demo'
@@ -84,33 +89,14 @@ export interface FileRouteTypes {
     | '/login'
     | '/lifeos/receipts'
     | '/lifeos/'
+    | '/api/auth/$'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   DemoRoute: typeof DemoRoute
   LifeosRoute: typeof LifeosRouteWithChildren
   LoginRoute: typeof LoginRoute
-}
-export interface FileServerRoutesByFullPath {
-  '/api/auth/$': typeof ApiAuthSplatServerRoute
-}
-export interface FileServerRoutesByTo {
-  '/api/auth/$': typeof ApiAuthSplatServerRoute
-}
-export interface FileServerRoutesById {
-  __root__: typeof rootServerRouteImport
-  '/api/auth/$': typeof ApiAuthSplatServerRoute
-}
-export interface FileServerRouteTypes {
-  fileServerRoutesByFullPath: FileServerRoutesByFullPath
-  fullPaths: '/api/auth/$'
-  fileServerRoutesByTo: FileServerRoutesByTo
-  to: '/api/auth/$'
-  id: '__root__' | '/api/auth/$'
-  fileServerRoutesById: FileServerRoutesById
-}
-export interface RootServerRouteChildren {
-  ApiAuthSplatServerRoute: typeof ApiAuthSplatServerRoute
+  ApiAuthSplatRoute: typeof ApiAuthSplatRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -150,16 +136,12 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LifeosReceiptsRouteImport
       parentRoute: typeof LifeosRoute
     }
-  }
-}
-declare module '@tanstack/react-start/server' {
-  interface ServerFileRoutesByPath {
     '/api/auth/$': {
       id: '/api/auth/$'
       path: '/api/auth/$'
       fullPath: '/api/auth/$'
-      preLoaderRoute: typeof ApiAuthSplatServerRouteImport
-      parentRoute: typeof rootServerRouteImport
+      preLoaderRoute: typeof ApiAuthSplatRouteImport
+      parentRoute: typeof rootRouteImport
     }
   }
 }
@@ -181,13 +163,8 @@ const rootRouteChildren: RootRouteChildren = {
   DemoRoute: DemoRoute,
   LifeosRoute: LifeosRouteWithChildren,
   LoginRoute: LoginRoute,
+  ApiAuthSplatRoute: ApiAuthSplatRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-const rootServerRouteChildren: RootServerRouteChildren = {
-  ApiAuthSplatServerRoute: ApiAuthSplatServerRoute,
-}
-export const serverRouteTree = rootServerRouteImport
-  ._addFileChildren(rootServerRouteChildren)
-  ._addFileTypes<FileServerRouteTypes>()

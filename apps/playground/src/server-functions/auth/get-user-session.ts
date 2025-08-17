@@ -1,6 +1,6 @@
 import { createServerFn } from "@tanstack/react-start";
 import { getWebRequest } from "@tanstack/react-start/server";
-import { auth } from "~/lib/auth";
+import { auth } from "~/utils/auth";
 
 /**
  * Retrieves the current authenticated user session from the server.

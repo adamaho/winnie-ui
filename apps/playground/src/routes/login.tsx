@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import * as z from "zod";
 
 import { DEFAULT_ROUTE } from "~/constants/default-route";
-import { signIn } from "~/lib/auth-client";
+import { signIn } from "~/utils/auth-client";
 
 /* -------------------------------------------------------------------------------------------------
  * LoginSearchParams

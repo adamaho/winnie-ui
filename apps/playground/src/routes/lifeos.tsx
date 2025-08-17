@@ -1,8 +1,8 @@
 import { createFileRoute, redirect } from "@tanstack/react-router";
 import { Outlet } from "@tanstack/react-router";
 
-import { signOut } from "~/lib/auth-client";
-import { getSession } from "~/server-functions/get-user-session";
+import { getSession } from "~/server-functions/auth/get-user-session";
+import { signOut } from "~/utils/auth-client";
 
 /* -------------------------------------------------------------------------------------------------
  * Route
