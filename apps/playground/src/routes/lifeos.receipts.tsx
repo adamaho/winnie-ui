@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 import { Loader, ReceiptBill } from "@winnie-ui/icons/react/solid";
 
@@ -27,6 +27,11 @@ export const Route = createFileRoute("/lifeos/receipts")({
  * -----------------------------------------------------------------------------------------------*/
 function RouteComponent() {
   /**
+   * Init a ref to the form
+   */
+  const formRef = useRef<HTMLFormElement>(null);
+
+  /**
    * Init the form
    */
   const form = useForm({
@@ -45,6 +50,7 @@ function RouteComponent() {
         setIsError(false);
         await processReceipts({ data });
         form.reset();
+        formRef.current?.reset();
       } catch (error) {
         setIsError(true);
       }
@@ -69,6 +75,7 @@ function RouteComponent() {
       </p>
       <form
         encType="multipart/form-data"
+        ref={formRef}
         onSubmit={(e) => {
           e.preventDefault();
           e.stopPropagation();
