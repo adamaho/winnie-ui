@@ -358,7 +358,7 @@
     [data-slot="shortcut"] {
       align-items: center;
       display: flex;
-      gap: var(--w-s-2);
+      gap: var(--w-s-1);
       font-size: var(--w-button-kbd-fs, var(--w-button-kbd-md-fs));
       margin-right: calc(-1 * (var(--w-button-kbd-h, var(--w-button-kbd-md-h)) / 2) + (var(--w-button-h, var(--w-button-md-h)) - var(--w-button-kbd-h, var(--w-button-kbd-md-h))) / 2);
 

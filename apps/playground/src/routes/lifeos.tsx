@@ -34,7 +34,13 @@ function RouteComponent() {
             Receipts
           </span>
         </span>
-        <button onClick={() => signOut()}>Logout</button>
+        <button
+          onClick={() => signOut()}
+          data-component="button"
+          className="hover:bg-accent-g4"
+        >
+          <span data-slot="label">Logout</span>
+        </button>
       </header>
       <main className="mx-auto mt-9 flex w-full max-w-[50ch] flex-col items-center p-4">
         <Outlet />

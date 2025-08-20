@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 
+import { CrossLarge } from "@winnie-ui/icons/react/line";
 import { Loader, ReceiptBill } from "@winnie-ui/icons/react/solid";
 
 import { useForm } from "@tanstack/react-form";
@@ -101,12 +102,14 @@ function RouteComponent() {
                   id={field.name}
                   name={field.name}
                   onBlur={field.handleBlur}
+                  value=""
                   onChange={(e) => {
                     const fileList = e.target.files;
                     if (fileList == null || fileList.length === 0) return;
                     field.handleChange(Array.from(fileList));
                   }}
                   accept="image/*"
+                  capture="environment"
                   className="hidden"
                   tabIndex={-1}
                   multiple
@@ -123,8 +126,8 @@ function RouteComponent() {
           children={({ receipts, isSubmitting }) => {
             return (
               <>
-                <ul className="mt-4 flex flex-col gap-2">
-                  {form.state.values.receipts.map((receipt) => {
+                <ul className="mt-2 flex flex-col gap-2">
+                  {form.state.values.receipts.map((receipt, i) => {
                     return (
                       <li
                         className="bg-accent-g3 rounded-2 flex items-center justify-between px-2 py-3"
@@ -133,6 +136,15 @@ function RouteComponent() {
                         <span className="text-2 text-accent-g13">
                           {receipt.name}
                         </span>
+                        <button
+                          type="button"
+                          data-component="button"
+                          data-size="sm"
+                          onClick={() => form.removeFieldValue("receipts", i)}
+                          className="hover:bg-accent-g4"
+                        >
+                          <CrossLarge data-slot="icon" />
+                        </button>
                       </li>
                     );
                   })}
@@ -161,6 +173,12 @@ function RouteComponent() {
                       Upload receipts
                     </span>
                     <kbd data-slot="shortcut">
+                      <kbd
+                        data-component="kbd"
+                        className="bg-accent-8/70 group-disabled:bg-accent-4 group-disabled:text-accent-11 rounded-1 font-sans"
+                      >
+                        ⌘
+                      </kbd>
                       <kbd
                         data-component="kbd"
                         className="bg-accent-8/70 group-disabled:bg-accent-4 group-disabled:text-accent-11 rounded-1 font-sans"
