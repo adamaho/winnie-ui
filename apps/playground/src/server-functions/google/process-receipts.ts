@@ -46,8 +46,10 @@ const schema = z.object({
  * @throws {redirect} Redirects to /receipts with 401 status if authentication fails
  * @returns {Promise<void>} Currently logs the spreadsheet data to console
  */
-export const processReceipts = createServerFn({ method: "POST" })
-  .validator((data) => {
+export const processReceipts = createServerFn({
+  method: "POST",
+})
+  .validator((data: unknown) => {
     if (!(data instanceof FormData)) {
       throw new Error("Invalid form data");
     }
@@ -107,14 +109,13 @@ export const processReceipts = createServerFn({ method: "POST" })
           return {
             type: "image",
             image: buffer,
-            mimeType: r.type,
           } satisfies ImagePart;
         }
 
         return {
           type: "file",
           data: buffer,
-          mimeType: r.type,
+          mediaType: r.type,
         } satisfies FilePart;
       }),
     );
@@ -125,9 +126,12 @@ export const processReceipts = createServerFn({ method: "POST" })
     let receiptData: z.infer<typeof schema>["receipts"];
     try {
       const rawData = await generateObject({
-        model: openai("gpt-4.1-mini", {
-          structuredOutputs: true,
-        }),
+        model: openai("gpt-4.1-mini"),
+        providerOptions: {
+          openai: {
+            structuredOutputs: true,
+          },
+        },
         system: RECEIPT_SYSTEM_PROMPT,
         schemaDescription: "A array of shopping receipt objects",
         schema,
@@ -140,7 +144,7 @@ export const processReceipts = createServerFn({ method: "POST" })
       });
       receiptData = rawData.object.receipts;
     } catch (e) {
-      throw new Error("Failed to process receipt with ai");
+      throw new Error("Failed to process receipt with ai", e);
     }
 
     /**
