@@ -17,10 +17,7 @@ export const auth = betterAuth({
       clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
       accessType: "offline",
       prompt: "select_account+consent",
-      scope: [
-        "https://www.googleapis.com/auth/spreadsheets",
-        "https://www.googleapis.com/auth/drive.readonly",
-      ],
+      scope: ["https://www.googleapis.com/auth/spreadsheets"],
     },
   },
   plugins: [reactStartCookies()],

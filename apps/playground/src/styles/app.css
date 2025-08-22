@@ -150,11 +150,11 @@
 
 @layer winnie.base {
   :root {
-    --w-r-1: calc(4px * var(--w-scale, 1) * var(--w-rf, 1));
-    --w-r-2: calc(8px * var(--w-scale, 1) * var(--w-rf, 1));
-    --w-r-3: calc(12px * var(--w-scale, 1) * var(--w-rf, 1));
-    --w-r-4: calc(16px * var(--w-scale, 1) * var(--w-rf, 1));
-    --w-r-5: calc(20px * var(--w-scale, 1) * var(--w-rf, 1));
+    --w-r-1: calc(2px * var(--w-scale, 1) * var(--w-rf, 1));
+    --w-r-2: calc(4px * var(--w-scale, 1) * var(--w-rf, 1));
+    --w-r-3: calc(8px * var(--w-scale, 1) * var(--w-rf, 1));
+    --w-r-4: calc(12px * var(--w-scale, 1) * var(--w-rf, 1));
+    --w-r-5: calc(16px * var(--w-scale, 1) * var(--w-rf, 1));
     --w-r-6: calc(24px * var(--w-scale, 1) * var(--w-rf, 1));
     --w-r-7: calc(32px * var(--w-scale, 1) * var(--w-rf, 1));
     --w-r-round: calc(9999px * var(--w-scale, 1) * var(--w-rf, 1));
@@ -291,9 +291,9 @@
 @layer winnie.component {
   [data-component="button"] {
     /* border radius */
-    --w-button-sm-r: var(--w-r-2);
-    --w-button-md-r: var(--w-r-3);
-    --w-button-lg-r: var(--w-r-4);
+    --w-button-sm-r: var(--w-r-1);
+    --w-button-md-r: var(--w-r-2);
+    --w-button-lg-r: var(--w-r-3);
     --w-button-kbd-sm-r: var(--w-r-2);
     --w-button-kbd-md-r: var(--w-r-2);
     --w-button-kbd-lg-r: var(--w-r-3);

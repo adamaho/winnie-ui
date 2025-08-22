@@ -3,6 +3,7 @@ export { ArrowTriangleRight } from "./arrow-triangle-right";
 export { BarsThree } from "./bars-three";
 export { Bell2 } from "./bell-2";
 export { BooleanGroupSubtract } from "./boolean-group-subtract";
+export { Brain1 } from "./brain-1";
 export { ChainLink4 } from "./chain-link-4";
 export { Checkmark } from "./checkmark";
 export { ChevronBottom } from "./chevron-bottom";

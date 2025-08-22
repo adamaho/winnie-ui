@@ -1,4 +1,4 @@
-import { createFileRoute, redirect } from "@tanstack/react-router";
+import { createFileRoute, redirect, useNavigate } from "@tanstack/react-router";
 import { Outlet } from "@tanstack/react-router";
 
 import { getSession } from "~/server-functions/auth/get-user-session";
@@ -22,6 +22,11 @@ export const Route = createFileRoute("/lifeos")({
  * RouteComponent
  * -----------------------------------------------------------------------------------------------*/
 function RouteComponent() {
+  /**
+   * Get an instance of the navigate
+   */
+  const navigate = useNavigate();
+
   return (
     <div className="bg-accent-1 grid h-screen grid-rows-[60px_1fr]">
       <header className="flex items-center justify-between px-4">
@@ -35,7 +40,11 @@ function RouteComponent() {
           </span>
         </span>
         <button
-          onClick={() => signOut()}
+          onClick={() =>
+            signOut({
+              fetchOptions: { onSuccess: () => navigate({ to: "/login" }) },
+            })
+          }
           data-component="button"
           className="hover:bg-accent-g4"
         >
