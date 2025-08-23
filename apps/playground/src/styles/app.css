@@ -202,7 +202,7 @@
 
     --w-c-amethyst-g1: oklch(0.144 0.029 var(--w-c-h-amethyst)); /* app background 1 */
     --w-c-amethyst-g2: oklch(0.1665 0.029 var(--w-c-h-amethyst)); /* app background 2 */
-    --w-c-amethyst-g3: oklch(0.198 0.029 var(--w-c-h-amethyst)); /* surface background 1 */
+    --w-c-amethyst-g3: oklch(0.176 0.029 var(--w-c-h-amethyst)); /* surface background 1 */
     --w-c-amethyst-g4: oklch(0.2385 0.029 var(--w-c-h-amethyst)); /* surface hover */
     --w-c-amethyst-g5: oklch(0.2655 0.029 var(--w-c-h-amethyst)); /* surface pressed */
     --w-c-amethyst-g6: oklch(0.32 0.029 var(--w-c-h-amethyst)); /* form borders */

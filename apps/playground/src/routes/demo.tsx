@@ -129,7 +129,7 @@ function RouteComponent() {
               <div className="flex flex-1 items-center justify-end">
                 <div
                   data-component="input-group"
-                  data-size="sm"
+                  data-size="md"
                   className="border-accent-g5 bg-accent-g3 focus-within:border-accent-8 focus-within:outline-accent-8 mr-2 max-w-[200px] border focus-within:border-transparent focus-within:outline-2 focus-within:-outline-offset-2"
                 >
                   <MagnifyingGlass data-slot="icon" />
@@ -183,8 +183,8 @@ function RouteComponent() {
             </div>
           </header>
           <div className="mx-auto w-full max-w-[70ch]">
-            <div className="overflow-x-auto p-4">
-              <table className="grid table-auto grid-cols-[auto_auto_1fr]">
+            <div className="bg-accent-g2 border-accent-g4 rounded-4 mt-4 overflow-x-auto border p-2">
+              <table className="bg-accent-g3 border-accent-g4 rounded-3 grid table-auto grid-cols-[auto_auto_1fr] border">
                 <thead className="col-span-full grid grid-cols-subgrid">
                   <tr className="border-accent-g6 col-span-full grid grid-cols-subgrid border-b">
                     <th className="text-1 text-accent-g13 p-3 text-left font-mono">
@@ -276,7 +276,7 @@ function RouteComponent() {
                       calc(32px * var(--w-scale, 1))
                     </td>
                   </tr>
-                  <tr className="border-accent-g6 col-span-full grid grid-cols-subgrid border-b">
+                  <tr className="col-span-full grid grid-cols-subgrid">
                     <td className="text-1 text-accent-12 p-3 font-mono">
                       w-fs-8
                     </td>
